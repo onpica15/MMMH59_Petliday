@@ -4,9 +4,23 @@
 <!-- ------------------ body開始 以上誤刪 ------------------ -->
 
 <div class="container">
-  <div class="row">
-    <h1>Hello!</h1>
-  </div>
+
+  <h1 class="orange-color t-xxxl bg-color ">Hello!開始開心寫網站</h1>
+  <br>
+  <h6 class="brown-color t-xxl ">毛日FVEF31111235</h6>
+  <br>
+  <h6 class="green-color t-xl">毛日FVEF31111235</h6>
+  <br>
+  <h6 class="danger-color t-l">毛日FVEF31111235</h6>
+  <br>
+  <h6 class="text-color t-m">毛日FVEF31111235</h6>
+  <br>
+  <h6 class="text-color t-s">毛日FVEF31111235</h6>
+  <br>
+  <h6 class="text-color t-xs">毛日FVEF31111235</h6>
+
+  <button class="btn">測試</button>
+
 </div>
 
 

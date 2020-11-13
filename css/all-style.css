@@ -1,0 +1,112 @@
+/* 大家請不要動這檔案！----------------  */
+* {
+  font-family: "Roboto", "Noto Sans TC", sans-serif;
+  /* font-family: "Montserrat", "Noto Sans TC", sans-serif; */
+  font-weight: 400;
+  color: #555;
+}
+
+/* 顏色區-------------------------- */
+/* 主色 */
+.orange-color {
+  color: #ffa12c;
+}
+/* 輔色 */
+.brown-color {
+  color: #3c2e26;
+}
+.green-color {
+  color: #00907c;
+}
+/* 提醒色 */
+.danger-color {
+  color: #e03d2d;
+}
+/* 背景色 */
+.bg-color {
+  background-color: #f2eee8;
+}
+/* 文字顏色 */
+.text-color {
+  color: #555555;
+}
+.text-color {
+  color: #555555;
+}
+
+.petilday {
+  /* 漸層橘 / */
+  color: #ffb14f;
+  color: #ffc072;
+  color: #ffd096;
+  color: #ffe0b9;
+  color: #ffefdc;
+
+  /* 灰階 */
+  color: #333;
+  color: #999;
+  color: #ccc;
+  color: #eee;
+  color: #fff;
+}
+
+/* 字體區 -------------------------- */
+/* 按鈕內文統一用 */
+.btn {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-indent: 2px;
+  color: #fff;
+  padding: 1% 3%;
+  background-color: #ffa12c;
+  border-radius: 3px;
+  min-height: 44px;
+  min-width: 80px;
+  margin: 14px 18px;
+  transition: 0.2s;
+}
+.btn:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #fe8b11;
+  box-shadow: inset 5px 5px 10px rgb(255, 133, 2), inset -5px -5px 10px #ff9f39;
+}
+.btn:focus {
+  display: none;
+}
+
+.t-xxxl {
+  font-size: 32px;
+  font-weight: 600;
+}
+.t-xxl {
+  font-size: 24px;
+  font-weight: 600;
+}
+.t-xl {
+  font-size: 20px;
+  font-weight: 500;
+}
+.t-l {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.t-m {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* 一般文用 */
+.t-s {
+  font-size: 14px;
+  font-weight: 400;
+}
+/* 備注用 */
+.t-xs {
+  font-size: 12px;
+  font-weight: 400;
+}
+footer {
+  font-size: 10px;
+}
