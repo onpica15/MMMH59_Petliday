@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pro-card</title>
-    <link rel="stylesheet" href="./pro-card.css">
+    <link rel="stylesheet" href="../css/all-style.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -14,9 +14,17 @@
       .card{
           width: 296px;
           height: 300px;
+          border: none;
+          box-shadow: 1px 2px 8px rgba(200,200,200,.5);
+      }
+      .c2{
+          height: 340px;
+      }
+      .c2 .card-pic{
+        height: 235px;
       }
       .card-pic{
-          width: 296px;
+          width: 100%;
           height: 175px;
           border-radius: 3px 3px 50px 3px;
           overflow: hidden;
@@ -28,26 +36,165 @@
       .card-text h6{
           line-height: 23px;
       }
+      .rate-all{
+          letter-spacing: 0.5px;
+      }
   </style>
 </head>
 
 <body>
-    <div class="card">
-        <div class="card-pic w-100">
-            <img src="./img/prolist1_296*180.jpeg" alt="">
-        </div>
-        <div class="card-text p-3">
-            <p >一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星行程</p>
-            <div class="info d-flex justify-content-between">
-                <div class="info-left d-flex">
-                    <div class="star">star</div>
-                    <div class="rate">rate</div>
-                    <div class="rate-all">rate-all</div>
+<div class="container">
+    <div class="row align-items-center">
+        <a></a>
+        <div class="card col m-3 p-0">
+            <div class="card-pic w-100">
+                <img src="./img/prolist1_296*180.jpeg" alt="">
+            </div>
+            <div class="card-text py-3 px-4">
+                <p >一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星行程</p>
+                <div class="info d-flex justify-content-between">
+                    <div class="info-left d-flex align-items-center">
+                        <div class="star mr-2">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px"><defs><style>.cls-1{fill:#00907c;}</style></defs><g id="圖層_2" data-name="圖層 2"><g id="圖層_1-2" data-name="圖層 1"><path class="cls-1" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z"/></g></g></svg>
+                
+                        </div>
+                        <div class="rate text-gray t-m">4.9</div>
+                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                    </div>
+                    <div class="info-right pr-2 t-l orange-color">$2680</div>
                 </div>
-                <div class="info-right">right</div>
+            </div>
+        </div>
+        <div class="card col m-3 p-0">
+            <div class="card-pic w-100">
+                <img src="./img/prolist1_296*180.jpeg" alt="">
+            </div>
+            <div class="card-text py-3 px-4">
+                <p >一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星行程</p>
+                <div class="info d-flex justify-content-between">
+                    <div class="info-left d-flex align-items-center">
+                        <div class="star mr-2">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px"><defs><style>.cls-1{fill:#00907c;}</style></defs><g id="圖層_2" data-name="圖層 2"><g id="圖層_1-2" data-name="圖層 1"><path class="cls-1" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z"/></g></g></svg>
+                
+                        </div>
+                        <div class="rate text-gray t-m">4.9</div>
+                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                    </div>
+                    <div class="info-right pr-2 t-l orange-color">$2680</div>
+                </div>
+            </div>
+        </div>
+        <div class="card col m-3 p-0">
+            <div class="card-pic w-100">
+                <img src="./img/prolist1_296*180.jpeg" alt="">
+            </div>
+            <div class="card-text py-3 px-4">
+                <p >一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星行程</p>
+                <div class="info d-flex justify-content-between">
+                    <div class="info-left d-flex align-items-center">
+                        <div class="star mr-2">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px"><defs><style>.cls-1{fill:#00907c;}</style></defs><g id="圖層_2" data-name="圖層 2"><g id="圖層_1-2" data-name="圖層 1"><path class="cls-1" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z"/></g></g></svg>
+                
+                        </div>
+                        <div class="rate text-gray t-m">4.9</div>
+                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                    </div>
+                    <div class="info-right pr-2 t-l orange-color">$2680</div>
+                </div>
+            </div>
+        </div>
+        <a class="m-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.62 51.56" width="20px"><defs><style>.cls-1{fill:#3c2e26;}</style></defs><g id="圖層_2" data-name="圖層 2"><g id="圖層_1-2" data-name="圖層 1"><path class="cls-1" d="M3.5,51.56A3.5,3.5,0,0,1,1,45.62L20.25,25.78,1,5.94A3.5,3.5,0,0,1,6,1.06L27.64,23.34a3.52,3.52,0,0,1,0,4.88L6,50.5A3.51,3.51,0,0,1,3.5,51.56Z"/></g></g></svg></a>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="card c2 col m-4 p-0">
+            <div class="card-pic w-100">
+                <img src="./img/prolist1_296*180.jpeg" alt="">
+            </div>
+            <div class="card-text py-3 px-4">
+                <p >一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星行程</p>
+                <div class="info d-flex justify-content-between">
+                    <div class="info-left d-flex align-items-center">
+                        <div class="star mr-2">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px"><defs><style>.cls-1{fill:#00907c;}</style></defs><g id="圖層_2" data-name="圖層 2"><g id="圖層_1-2" data-name="圖層 1"><path class="cls-1" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z"/></g></g></svg>
+                
+                        </div>
+                        <div class="rate text-gray t-m">4.9</div>
+                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                    </div>
+                    <div class="info-right pr-2 t-l orange-color">$2680</div>
+                </div>
+            </div>
+        </div>
+        <div class="card c2 col m-4 p-0">
+            <div class="card-pic w-100">
+                <img src="./img/prolist1_296*180.jpeg" alt="">
+            </div>
+            <div class="card-text py-3 px-4">
+                <p >一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星行程</p>
+                <div class="info d-flex justify-content-between">
+                    <div class="info-left d-flex align-items-center">
+                        <div class="star mr-2">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px"><defs><style>.cls-1{fill:#00907c;}</style></defs><g id="圖層_2" data-name="圖層 2"><g id="圖層_1-2" data-name="圖層 1"><path class="cls-1" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z"/></g></g></svg>
+                
+                        </div>
+                        <div class="rate text-gray t-m">4.9</div>
+                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                    </div>
+                    <div class="info-right pr-2 t-l orange-color">$2680</div>
+                </div>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="card c2 col m-4 p-0">
+        <div class="card-pic w-100">
+            <img src="./img/prolist1_296*180.jpeg" alt="">
+        </div>
+        <div class="card-text py-3 px-4">
+            <p >一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星行程</p>
+            <div class="info d-flex justify-content-between">
+                <div class="info-left d-flex align-items-center">
+                    <div class="star mr-2">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px"><defs><style>.cls-1{fill:#00907c;}</style></defs><g id="圖層_2" data-name="圖層 2"><g id="圖層_1-2" data-name="圖層 1"><path class="cls-1" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z"/></g></g></svg>
+            
+                    </div>
+                    <div class="rate text-gray t-m">4.9</div>
+                    <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                </div>
+                <div class="info-right pr-2 t-l orange-color">$2680</div>
+            </div>
+        </div>
+        </div>
+        <div class="card c2 col m-4 p-0">
+            <div class="card-pic w-100">
+                <img src="./img/prolist1_296*180.jpeg" alt="">
+            </div>
+            <div class="card-text py-3 px-4">
+                <p >一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星行程</p>
+                <div class="info d-flex justify-content-between">
+                    <div class="info-left d-flex align-items-center">
+                        <div class="star mr-2">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px"><defs><style>.cls-1{fill:#00907c;}</style></defs><g id="圖層_2" data-name="圖層 2"><g id="圖層_1-2" data-name="圖層 1"><path class="cls-1" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z"/></g></g></svg>
+                
+                        </div>
+                        <div class="rate text-gray t-m">4.9</div>
+                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                    </div>
+                    <div class="info-right pr-2 t-l orange-color">$2680</div>
+                </div>
+            </div>
+            </div>
+    </div>
+</div>
    
 </body>
 
