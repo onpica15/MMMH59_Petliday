@@ -8,7 +8,7 @@
 
 <div class="container mt-5">
 
-  <h1 class="orange-color t-xxxl bg-color ">Hello!開始開心寫網站 range-color t-xxxl bg-color</h1>
+  <h1 class="orange-color t-xxxl bg-color ">Hello!開始開心寫網站 orange-color t-xxxl bg-color</h1>
   <br>
   <h6 class="brown-color t-xxl ">毛日 brown-color t-xxl</h6>
   <br>
