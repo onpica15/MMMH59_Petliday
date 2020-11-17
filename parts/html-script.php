@@ -1,2 +1,2 @@
-<link rel="stylesheet" href="<?= WEB_ROOT ?>bootstrap/js/bootstrap.js">
-<link rel="stylesheet" href="<?= WEB_ROOT ?>lib/jquery.js">
+<script src="<?= WEB_ROOT ?>lib/jquery.js"> </script>
+<script src="<?= WEB_ROOT ?>bootstrap/js/bootstrap.bundle.js"> </script>
