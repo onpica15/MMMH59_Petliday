@@ -3,7 +3,7 @@
 <!-- --- css 連結放下面 ----- -->
 
 
-<?php include __DIR__ . '/parts/html-navbar.php' ?>
+<?php include __DIR__ . '/../parts/html-navbar.php' ?>
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 
 <div class="container mt-5">
