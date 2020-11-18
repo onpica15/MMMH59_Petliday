@@ -2,12 +2,16 @@
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <!-- --- css 連結放下面 ----- -->
 <style>
-  body {
-    background-color: #bce2e2;
+  /* * {
+    border: solid blue 0.5px;
+  } */
+
+  #hero-polaroid {
+    background-color: #F2EEE8;
   }
 
   .polaroid-base {
-    margin: 3% auto;
+    margin: 5% auto;
     width: 90vw;
     height: 100vh;
     box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.4);
@@ -31,29 +35,29 @@
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 <!-- 拍立得section -->
-<section>
+<section id="hero-polaroid">
   <div class="polaroid-base d-flex position-relative justify-content-center">
     <div class="polaroid-figure col-10 position-absolute"></div>
   </div>
 </section>
 <section>
-<div class="logo-sentence">
-
-<img src="" alt=""></div>
+  <div class="logo-sentence">
+    <img src="img/illustration/petliday.png" alt="">
+  </div>
   <div class="container">
     <div class="row d-flex justify-content-between">
       <figure class="col-4">
-        <img src="img/index-dog1.png" alt="">
+        <img src="img/illustration/index-dog1.png" alt="">
         <h3>放鬆</h3>
         <p>最多樣的行程安排，讓飼主可以和寶貝毛孩一起在旅行中放鬆</p>
       </figure>
       <figure class="col-4">
-        <img src="img/index-dog2.png" alt="">
+        <img src="img/illustration/index-dog2.png" alt="">
         <h3>一起體驗</h3>
         <p>我們搜羅了全台最適合與狗狗一起同遊、體驗的景點與活動！</p>
       </figure>
       <figure class="col-4">
-        <img src="img/index-dog3.png" alt="">
+        <img src="img/illustration/index-dog3.png" alt="">
         <h3>放鬆</h3>
         <p>最多樣的行程安排，讓飼主可以和寶貝毛孩一起在旅行中放鬆</p>
       </figure>
