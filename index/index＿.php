@@ -5,11 +5,7 @@
   body {
     background-color: #bce2e2;
   }
-
-  header {
-    height: 10vh;
-  }
-
+ㄋ
   .polaroid-base {
     width: 100vw;
     height: 100vh;
@@ -38,12 +34,8 @@
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 <!-- 拍立得section -->
 <section>
-  <div class="container">
-    <div class="row">
-      <div class="polaroid-base d-flex position-relative justify-content-center">
-        <div class="polaroid-figure col-10 position-absolute"></div>
-      </div>
-    </div>
+  <div class="polaroid-base d-flex position-relative justify-content-center">
+    <div class="polaroid-figure col-10 position-absolute"></div>
   </div>
 </section>
 <section>
