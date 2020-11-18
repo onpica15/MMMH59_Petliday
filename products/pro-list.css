@@ -1,13 +1,49 @@
+.cls-4{fill:#fff;}
 .top-pic{
-    width: 100%;
+    width: 110%;
     overflow: hidden;
+    margin-top: 57px;
 }
 .top-pic img{
     width: 100%;
     object-fit: cover;
 }
 
-.hot{
+.al{
+    /* margin-left: -20px; */
+}
+.hot-card{
+    width: 60%;
+    height: 340px;
     background-color: #fff;
     box-shadow: 2px 2px 20px #ccc;
+    overflow: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.hot-pic{
+    width: 800px;
+    overflow: hidden;
+}
+.hot-pic img{
+    width: 100%;
+    object-fit: cover;
+}
+.hot-right{
+    margin-left: -130px;
+}
+.hot-text{
+    top: 10px;
+    left: 50px;
+}
+.hot-title{
+    letter-spacing: 2px;
+}
+.star{
+    width: 20px;
+    height: 20px;
+}
+.star img{
+    width: 100%;
+    object-fit: cover;
 }
