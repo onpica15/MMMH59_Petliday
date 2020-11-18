@@ -41,10 +41,12 @@
   </div>
 </section>
 <section>
-  <div class="logo-sentence">
-    <img src="img/illustration/petliday.png" alt="">
-  </div>
   <div class="container">
+    <div class="row  justify-item-center">
+      <div class="logo-sentence mx-auto">
+        <img src="img/illustration/petliday.png" alt="">
+      </div>
+    </div>
     <div class="row d-flex justify-content-between">
       <figure class="col-4">
         <img src="img/illustration/index-dog1.png" alt="">
