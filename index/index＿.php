@@ -8,10 +8,13 @@
 
   #hero-polaroid {
     background-color: #F2EEE8;
+    padding-top: 5vh;
+    height: 130vh;
   }
 
   .polaroid-base {
-    margin: 5% auto;
+    /* padding-top: 10vh; */
+    margin: 10vh auto;
     width: 90vw;
     height: 100vh;
     box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.4);
@@ -30,6 +33,11 @@
     background: url() no-repeat;
     background-size: cover;
   }
+
+  .petliday-wrap {
+    width: 100vw;
+    background-image: url("img/illustration/bg1.png");
+  }
 </style>
 
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
@@ -41,13 +49,13 @@
   </div>
 </section>
 <section>
-  <div class="container">
-    <div class="row  justify-item-center">
+  <div class="container petliday-wrap">
+    <div class="row  justify-item-center my-5">
       <div class="logo-sentence mx-auto">
         <img src="img/illustration/petliday.png" alt="">
       </div>
     </div>
-    <div class="row d-flex justify-content-between">
+    <div class="row d-flex justify-content-between my-5">
       <figure class="col-4">
         <img src="img/illustration/index-dog1.png" alt="">
         <h3>放鬆</h3>
