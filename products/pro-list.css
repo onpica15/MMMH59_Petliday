@@ -1,0 +1,13 @@
+.top-pic{
+    width: 100%;
+    overflow: hidden;
+}
+.top-pic img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.hot{
+    background-color: #fff;
+    box-shadow: 2px 2px 20px #ccc;
+}

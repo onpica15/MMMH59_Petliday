@@ -1,6 +1,6 @@
-<?php include __DIR__ . '/parts/config.php' ?>
-<?php include __DIR__ . '/parts/html-head.php' ?>
-<?php include __DIR__ . '/parts/html-navbar.php' ?>
+<?php include __DIR__ . '../parts/config.php' ?>
+<?php include __DIR__ . '../parts/html-head.php' ?>
+<?php include __DIR__ . '../parts/html-navbar.php' ?>
 <!-- ------------------ body開始 以上誤刪 ------------------ -->
 
 <div class="container">
