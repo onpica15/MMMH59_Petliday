@@ -2,6 +2,11 @@
   outline: 1px solid red;
 } */
 
+.navbar {
+  z-index: 100;
+  position: fixed;
+}
+
 .navbtn {
   width: 28px;
 }
