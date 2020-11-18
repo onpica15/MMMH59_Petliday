@@ -5,15 +5,13 @@
   body {
     background-color: #bce2e2;
   }
-ㄋ
+
   .polaroid-base {
-    width: 100vw;
+    margin: 3% auto;
+    width: 90vw;
     height: 100vh;
-    /* margin: 1px 0 106.7px 15.3px;
-                padding: 61.8px 22.2px 85.8px 42.8px; */
     box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.4);
     background-color: #F2F2F2;
-    ;
     transform: rotate(-2deg);
     -webkit-transform: rotate(-2deg);
     -o-transform: rotate(-2deg);
@@ -21,8 +19,8 @@
   }
 
   .polaroid-figure {
-    margin: 5% auto;
-    width: 70vw;
+    margin: 3% auto;
+    width: 90vw;
     height: 70vh;
     box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 15px 0px inset;
     background: url() no-repeat;
@@ -43,17 +41,17 @@
   <div class="container">
     <div class="row d-flex justify-content-between">
       <figure class="col-4">
-        <img src="illustrator/Group 531.png" alt="">
+        <img src="img/index-dog1.png" alt="">
         <h3>放鬆</h3>
         <p>最多樣的行程安排，讓飼主可以和寶貝毛孩一起在旅行中放鬆</p>
       </figure>
       <figure class="col-4">
-        <img src="illustrator/Group 532.png" alt="">
+        <img src="img/index-dog2.png" alt="">
         <h3>一起體驗</h3>
         <p>我們搜羅了全台最適合與狗狗一起同遊、體驗的景點與活動！</p>
       </figure>
       <figure class="col-4">
-        <img src="illustrator/Group 411.png" alt="">
+        <img src="img/index-dog3.png" alt="">
         <h3>放鬆</h3>
         <p>最多樣的行程安排，讓飼主可以和寶貝毛孩一起在旅行中放鬆</p>
       </figure>
