@@ -37,7 +37,9 @@
   </div>
 </section>
 <section>
-  <p></p>
+<div class="logo-sentence">
+
+<img src="" alt=""></div>
   <div class="container">
     <div class="row d-flex justify-content-between">
       <figure class="col-4">
