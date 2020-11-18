@@ -23,6 +23,46 @@
   <h6 class="text-gray t-xs">毛日 text-gray t-xs</h6>
 
   <button class="btn">測試 class='btn'</button>
+  <h6 class="brown-color t-xxl ">毛日 brown-color t-xxl</h6>
+  <br>
+  <h6 class="green-color t-xl">毛日 green-color t-xl</h6>
+  <br>
+  <h6 class="danger-color t-l">毛日 danger-color t-l</h6>
+  <br>
+  <h6 class="text-color t-m">毛日 text-color t-m</h6>
+  <br>
+  <h6 class="text-color t-s">毛日 text-color t-s</h6>
+  <br>
+  <h6 class="text-gray t-xs">毛日 text-gray t-xs</h6>
+
+  <button class="btn">測試 class='btn'</button>
+  <h6 class="brown-color t-xxl ">毛日 brown-color t-xxl</h6>
+  <br>
+  <h6 class="green-color t-xl">毛日 green-color t-xl</h6>
+  <br>
+  <h6 class="danger-color t-l">毛日 danger-color t-l</h6>
+  <br>
+  <h6 class="text-color t-m">毛日 text-color t-m</h6>
+  <br>
+  <h6 class="text-color t-s">毛日 text-color t-s</h6>
+  <br>
+  <h6 class="text-gray t-xs">毛日 text-gray t-xs</h6>
+
+  <button class="btn">測試 class='btn'</button>
+  <h6 class="brown-color t-xxl ">毛日 brown-color t-xxl</h6>
+  <br>
+  <h6 class="green-color t-xl">毛日 green-color t-xl</h6>
+  <br>
+  <h6 class="danger-color t-l">毛日 danger-color t-l</h6>
+  <br>
+  <h6 class="text-color t-m">毛日 text-color t-m</h6>
+  <br>
+  <h6 class="text-color t-s">毛日 text-color t-s</h6>
+  <br>
+  <h6 class="text-gray t-xs">毛日 text-gray t-xs</h6>
+
+  <button class="btn">測試 class='btn'</button>
+
 
 </div>
 

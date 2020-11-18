@@ -1,10 +1,9 @@
-<link rel="stylesheet" href="<?= WEB_ROOT ?>css/nav-style.css">
+
 </head>
 
 <body>
 
-  <header>
-
+  <header id="nav-bar">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <div class="logo-search d-flex">
