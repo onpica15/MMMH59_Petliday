@@ -74,8 +74,8 @@
                                 </div>
                             </div>
                             <div class="row justify-content-end">
-                                <button>儲存修改</button>
-                                <button>密碼更改</button>
+                                <button class="btn">儲存修改</button>
+                                <button class="btn">密碼更改</button>
 
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="pet-img">
-                                        <img src="" alt="">
+                                        <img src="./img/avatar-pet1" alt="">
                                     </div>
                                 </div>
                                 <div class="col">
@@ -105,7 +105,7 @@
                                 </div>
                             </div>
                             <div class="row justify-content-end">
-                                <button>新增寵物</button>
+                                <button class="btn">新增寵物</button>
                             </div>
                         </div>
                     </div>
