@@ -136,7 +136,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <div class="navbtn nav-user-btn">
+              <div class="navbtn nav-user-btn" data-toggle="modal" data-target="#exampleModalCenter">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274.17 264.67">
                   <g id="user-icon_2" data-name="user-icon 2">
                     <g id="user-icon_1-2" data-name="user-icon 1">
