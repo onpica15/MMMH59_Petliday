@@ -1,5 +1,11 @@
 * {
   border: solid blue 0.5px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffecd4;
+  z-index: -10;
 }
 
 #hero-polaroid {
@@ -108,4 +114,73 @@ span:before {
   fill: #49322d;
   width: 23px;
   height: 19px;
+}
+
+.tour-card figure {
+  width: 300px;
+  height: 300px;
+  clip-path: circle(50% at 50% 50%);
+  margin: 8px auto;
+  background-color: #3c2e26;
+}
+
+.tour-card h6 {
+  margin: 8px auto;
+  text-align: center;
+}
+
+.cls-3 {
+  fill: #00907c;
+}
+
+hr {
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+#class svg {
+  fill: #49322d;
+  width: 23px;
+  height: 19px;
+}
+
+.arrow {
+  fill: #49322d;
+  width: 20px;
+}
+
+.c4 {
+  height: 255px;
+  box-shadow: 1px 2px 8px rgba(200, 200, 200, 0.5);
+  position: relative;
+}
+
+.heart {
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  opacity: 0.8;
+  position: absolute;
+  border-radius: 50%;
+  padding: 6px;
+  top: 10px;
+  right: 10px;
+}
+.c4 svg {
+  vertical-align: middle;
+}
+
+.cls-5 {
+  fill: #e03d2d;
+}
+
+.card-pic img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#depth svg {
+  fill: #49322d;
+  width: 23px;
+  height: 19px;
+  clip-path: url(./img/quest-img1.jpg);
 }
