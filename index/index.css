@@ -3,10 +3,10 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   background-color: #ffecd4;
   z-index: -10;
-}
+} */
 
 #hero-polaroid {
   background-color: #f2eee8;
@@ -143,7 +143,7 @@ hr {
   height: 19px;
 }
 
-.arrow {
+/* .arrow {
   fill: #49322d;
   width: 20px;
 }
@@ -173,14 +173,81 @@ hr {
   fill: #e03d2d;
 }
 
+.c4 .card-pic {
+  width: 100%;
+  height: 175px;
+  border-radius: 3px 3px 40px 3px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
 .card-pic img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
+} */
+
+.cls-5 {
+  fill: #e03d2d;
+}
+
+.card {
+  width: 296px;
+  height: 295px;
+  border: none;
+  box-shadow: 1px 2px 8px rgba(200, 200, 200, 0.5);
+  position: relative;
+  transition: 0.5s;
+}
+
+.card .p {
+  margin-bottom: 6px;
+}
+
+.heart {
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  opacity: 0.8;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 50%;
+  padding: 6px 8.5px;
+}
+
+.card-pic {
+  width: 100%;
+  height: 175px;
+  border-radius: 3px 3px 50px 3px;
+  overflow: hidden;
+  transition: 0.5s;
 }
 
 #depth svg {
   fill: #49322d;
   width: 23px;
   height: 19px;
-  clip-path: url(./img/quest-img1.jpg);
+}
+
+.chatpic-wrap {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.chatpic-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.text-wrap {
+  top: calc(50% - 100px);
+  left: 80px;
+  width: 80%;
+}
+
+.text-wrap h6 {
+  line-height: 1.5;
 }
