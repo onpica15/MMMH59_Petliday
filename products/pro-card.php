@@ -20,10 +20,6 @@
         fill: #e03d2d;
     }
 
-    .position-absolute {
-        transition: .5s;
-    }
-
     .card {
         width: 296px;
         height: 295px;
@@ -33,7 +29,7 @@
         transition: .5s;
     }
 
-    p {
+    .card .p {
         margin-bottom: 6px;
     }
 
@@ -683,6 +679,7 @@
     <?php include __DIR__ . '/../parts/html-footer.php' ?>
     <?php include __DIR__ . '/../parts/html-script.php' ?>
     <script>
+        // hover效果 c3:三個一排/c2:兩個一排/c4:四個一排
         $('.c3').on('mouseenter', function() {
             $(this).find('.card-pic').css('height', '135px');
             $(this).find('.card-info').css({

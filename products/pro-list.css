@@ -1,4 +1,12 @@
-.cls-4{fill:#fff;}
+body{
+    background-color: #f2eee8;
+}
+
+.cls-6{fill:#fff;}
+.title p{
+    color: #3c2e26;
+    letter-spacing: 2px;
+}
 .top-pic{
     width: 110%;
     overflow: hidden;
@@ -35,6 +43,7 @@
 .hot-text{
     top: 10px;
     left: 50px;
+    padding: 40px 60px;
 }
 .hot-title{
     letter-spacing: 2px;
@@ -47,3 +56,113 @@
     width: 100%;
     object-fit: cover;
 }
+.dots li{
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    list-style: none;
+    border-radius: 50%;
+    margin: 40px 20px;
+}
+.trip-select a{
+    width: 156px;
+    height: 44px;
+    border-radius: 22px;
+    border: 1px solid #00907c;
+    color: #00907c;
+    text-align: center;
+    line-height: 44px;
+    margin: 8px;
+}
+/* prod card 公版三個一排 */
+
+    .cls-3 {
+        fill: #00907c;
+    }
+
+    /* lighr-gray */
+    .cls-4 {
+        fill: #ccc;
+    }
+
+    /* red */
+    .cls-5 {
+        fill: #e03d2d;
+    }
+
+    .card {
+        width: 296px;
+        height: 295px;
+        border: none;
+        box-shadow: 1px 2px 8px rgba(200, 200, 200, .5);
+        position: relative;
+        transition: .5s;
+    }
+
+    .card .p {
+        margin-bottom: 6px;
+    }
+
+    .heart {
+        width: 35px;
+        height: 35px;
+        background-color: #fff;
+        opacity: .8;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        border-radius: 50%;
+        padding: 6px 8.5px;
+    }
+
+    .card-pic {
+        width: 100%;
+        height: 175px;
+        border-radius: 3px 3px 50px 3px;
+        overflow: hidden;
+        transition: .5s;
+    }
+
+    .card-pic:hover {
+        /* height: 125px; */
+        /* transform: translateY(-50px); */
+    }
+    .card-pic img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-text h6 {
+        line-height: 23px;
+    }
+
+    .card-info {
+        opacity: 0;
+        height: 0;
+    }
+
+    .rate-all {
+        letter-spacing: 0.5px;
+    }
+
+    @media(max-width: 400px) {
+        .card {
+            width: 266px;
+            height: 300px;
+            border: none;
+            box-shadow: 1px 2px 8px rgba(200, 200, 200, .5);
+            position: relative;
+            margin: 20px auto !important;
+        }
+
+        .card-pic {
+            width: 100%;
+            height: 175px;
+            border-radius: 3px 3px 40px 3px;
+            overflow: hidden;
+        }
+        .arrow {
+            opacity: 0;
+            position: absolute;
+        }
+    }

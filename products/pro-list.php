@@ -10,11 +10,10 @@
 </div>
 <div class="container">
     <div class="row title">
-        <p class="">熱門行程</p>
+        <p class="t-xxl">熱門行程</p>
     </div>
 </div>
 <div class="container-fluid">
-
     <div class="row hot align-items-center justify-content-center w-100">
         <a class="arrow al">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.62 51.56" width="20px">
@@ -28,23 +27,23 @@
         </a>
         <div class="hot-card d-flex">
             <div class="hot-pic">
-                <img src="/petliday/products/img/prolist_hot1.jpg" alt="">
+                <img src="/petliday/products/img/pdlist_hot1.jpg" alt="">
             </div>
             <div class="hot-right position-relative">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 508.3 379.52" height="350px" width="476px">
                     <defs></defs>
                     <g id="圖層_1" data-name="圖層 1">
-                        <path class="cls-4" d="M50.16.55v0h-.57V16.93C44.06,96.07,0,101.7,0,191.39s44.06,99.18,49.59,175.19v13.06l200.6.45H508.3V.55Z" />
+                        <path class="cls-6" d="M50.16.55v0h-.57V16.93C44.06,96.07,0,101.7,0,191.39s44.06,99.18,49.59,175.19v13.06l200.6.45H508.3V.55Z" />
                     </g>
                 </svg>
-                <div class="hot-text position-absolute p-5">
+                <div class="hot-text position-absolute">
                     <div class="tag d-flex">
                         <p>tag1</p>
                         <p>tag2</p>
                     </div>
-                    <p class="hot-title t-xxl">標題標題標題標題標題標標題標題標題標標</p>
+                    <p class="hot-title t-xl">標題標題標題標題標題標標題標題標題標標</p>
                     <p class="hot-info">
-                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文文內文內文內文
                     </p>
                     <div class="hot-buttom d-flex justify-content-between align-items-center">
                         <div class="hot-buttom-left d-flex">
@@ -73,3 +72,190 @@
         </a>
     </div>
 </div>
+<div class="container">
+    <div class="row dots justify-content-end">
+        <ul class="d-flex mr-4">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+<div class="container trip-select">
+    <div class="row title">
+        <p class="t-xxl">行程一覽</p>
+    </div>
+    <div class="time d-flex">
+        <p>玩多久？</p>
+        <a href="">三日遊</a>
+        <a href="">二日遊</a>
+        <a href="">一日遊</a>
+        <a href="">活動</a>
+    </div>
+    <div class="area d-flex">
+        <p>去哪玩？</p>
+        <a href="">北部出發</a>
+        <a href="">中部出發</a>
+        <a href="">南部出發</a>
+        <a href="">東部出發</a>
+    </div>
+    <div class="order d-flex">
+        <form action="">
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">排序方式</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>依熱門程度</option>
+                    <option>依價錢低至高</option>
+                    <option>依價錢高至低</option>
+                </select>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- 商品卡列表 -->
+<div class="container">
+    <div class="row align-items-center">
+        <div class="card c3 col-md m-3 p-0">
+            <div class="heart">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
+                    <defs></defs>
+                    <g id="圖層_2" data-name="圖層 2">
+                        <g id="圖層_1-2" data-name="圖層 1">
+                            <path class="cls-5" d="M31.31,65A3.48,3.48,0,0,1,29,64.09C27.9,63.13,3.36,40.49.37,20.86A17,17,0,0,1,0,17.33a16.37,16.37,0,0,1,.13-2A13,13,0,0,1,1.78,9.7,17.34,17.34,0,0,1,31.32,7.07,17.33,17.33,0,0,1,60.89,9.78a12.84,12.84,0,0,1,1.6,5.38,17.22,17.22,0,0,1,.15,2.17,17.42,17.42,0,0,1-.4,3.64C59.17,40.58,34.71,63.13,33.67,64.09A3.48,3.48,0,0,1,31.31,65Zm-14-58A10.39,10.39,0,0,0,8,12.89a1.9,1.9,0,0,1-.2.37,6.13,6.13,0,0,0-.71,2.68.59.59,0,0,1,0,.14A12.15,12.15,0,0,0,7,17.33a10.74,10.74,0,0,0,.23,2.17,1.7,1.7,0,0,1,0,.22c2.07,13.93,18,30.87,24,36.92,6.08-6,21.9-22.92,24-36.84,0-.07,0-.15,0-.23a10.21,10.21,0,0,0,.26-2.24,12.11,12.11,0,0,0-.1-1.34.77.77,0,0,1,0-.15,6,6,0,0,0-.69-2.56c-.07-.11-.13-.23-.19-.34A10.31,10.31,0,0,0,35,17a3.49,3.49,0,0,1-1.56,2.79l-.16.11a3.5,3.5,0,0,1-3.93,0l-.15-.11A3.49,3.49,0,0,1,27.64,17,10.28,10.28,0,0,0,17.33,7Z" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="card-pic w-100">
+                <img src="./img/pd1.jpg" alt="">
+            </div>
+            <div class="card-text pt-3 pb-1 px-4">
+                <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
+                <div class="info d-flex justify-content-between">
+                    <div class="info-left d-flex align-items-center">
+                        <div class="star mr-2">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
+                                <defs>
+                                </defs>
+                                <g id="圖層_2" data-name="圖層 2">
+                                    <g id="圖層_1-2" data-name="圖層 1">
+                                        <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </div>
+                        <div class="rate text-gray t-m">4.9</div>
+                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                    </div>
+                    <div class="info-right pr-2 t-l orange-color">$2680</div>
+                </div>
+            </div>
+            <p class="card-info px-4 t-xs">
+                簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
+            </p>
+        </div>
+        <div class="card c3 col-md col-sm-12 m-3 p-0">
+            <div class="heart">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
+                    <defs></defs>
+                    <g id="圖層_2" data-name="圖層 2">
+                        <g id="圖層_1-2" data-name="圖層 1">
+                            <path class="cls-5" d="M31.31,65A3.48,3.48,0,0,1,29,64.09C27.9,63.13,3.36,40.49.37,20.86A17,17,0,0,1,0,17.33a16.37,16.37,0,0,1,.13-2A13,13,0,0,1,1.78,9.7,17.34,17.34,0,0,1,31.32,7.07,17.33,17.33,0,0,1,60.89,9.78a12.84,12.84,0,0,1,1.6,5.38,17.22,17.22,0,0,1,.15,2.17,17.42,17.42,0,0,1-.4,3.64C59.17,40.58,34.71,63.13,33.67,64.09A3.48,3.48,0,0,1,31.31,65Zm-14-58A10.39,10.39,0,0,0,8,12.89a1.9,1.9,0,0,1-.2.37,6.13,6.13,0,0,0-.71,2.68.59.59,0,0,1,0,.14A12.15,12.15,0,0,0,7,17.33a10.74,10.74,0,0,0,.23,2.17,1.7,1.7,0,0,1,0,.22c2.07,13.93,18,30.87,24,36.92,6.08-6,21.9-22.92,24-36.84,0-.07,0-.15,0-.23a10.21,10.21,0,0,0,.26-2.24,12.11,12.11,0,0,0-.1-1.34.77.77,0,0,1,0-.15,6,6,0,0,0-.69-2.56c-.07-.11-.13-.23-.19-.34A10.31,10.31,0,0,0,35,17a3.49,3.49,0,0,1-1.56,2.79l-.16.11a3.5,3.5,0,0,1-3.93,0l-.15-.11A3.49,3.49,0,0,1,27.64,17,10.28,10.28,0,0,0,17.33,7Z" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="card-pic w-100">
+                <img src="./img/pd1.jpg" alt="">
+            </div>
+            <div class="card-text pt-3 pb-1 px-4">
+                <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
+                <div class="info d-flex justify-content-between">
+                    <div class="info-left d-flex align-items-center">
+                        <div class="star mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
+                                <g id="圖層_2" data-name="圖層 2">
+                                    <g id="圖層_1-2" data-name="圖層 1">
+                                        <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </div>
+                        <div class="rate text-gray t-m">4.9</div>
+                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                    </div>
+                    <div class="info-right pr-2 t-l orange-color">$2680</div>
+                </div>
+            </div>
+            <p class="card-info px-4 t-xs">
+                簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
+            </p>
+        </div>
+        <div class="card c3 col-md col-sm-12 m-3 p-0">
+            <div class="heart">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
+                    <defs></defs>
+                    <g id="圖層_2" data-name="圖層 2">
+                        <g id="圖層_1-2" data-name="圖層 1">
+                            <path class="cls-5" d="M31.31,65A3.48,3.48,0,0,1,29,64.09C27.9,63.13,3.36,40.49.37,20.86A17,17,0,0,1,0,17.33a16.37,16.37,0,0,1,.13-2A13,13,0,0,1,1.78,9.7,17.34,17.34,0,0,1,31.32,7.07,17.33,17.33,0,0,1,60.89,9.78a12.84,12.84,0,0,1,1.6,5.38,17.22,17.22,0,0,1,.15,2.17,17.42,17.42,0,0,1-.4,3.64C59.17,40.58,34.71,63.13,33.67,64.09A3.48,3.48,0,0,1,31.31,65Zm-14-58A10.39,10.39,0,0,0,8,12.89a1.9,1.9,0,0,1-.2.37,6.13,6.13,0,0,0-.71,2.68.59.59,0,0,1,0,.14A12.15,12.15,0,0,0,7,17.33a10.74,10.74,0,0,0,.23,2.17,1.7,1.7,0,0,1,0,.22c2.07,13.93,18,30.87,24,36.92,6.08-6,21.9-22.92,24-36.84,0-.07,0-.15,0-.23a10.21,10.21,0,0,0,.26-2.24,12.11,12.11,0,0,0-.1-1.34.77.77,0,0,1,0-.15,6,6,0,0,0-.69-2.56c-.07-.11-.13-.23-.19-.34A10.31,10.31,0,0,0,35,17a3.49,3.49,0,0,1-1.56,2.79l-.16.11a3.5,3.5,0,0,1-3.93,0l-.15-.11A3.49,3.49,0,0,1,27.64,17,10.28,10.28,0,0,0,17.33,7Z" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="card-pic w-100">
+                <img src="./img/pd1.jpg" alt="">
+            </div>
+            <div class="card-text pt-3 pb-1 px-4">
+                <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
+                <div class="info d-flex justify-content-between">
+                    <div class="info-left d-flex align-items-center">
+                        <div class="star mr-2">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
+                                <defs></defs>
+                                <g id="圖層_2" data-name="圖層 2">
+                                    <g id="圖層_1-2" data-name="圖層 1">
+                                        <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </div>
+                        <div class="rate text-gray t-m">4.9</div>
+                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                    </div>
+                    <div class="info-right pr-2 t-l orange-color">$2680</div>
+                </div>
+            </div>
+            <p class="card-info px-4 t-xs">
+                簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- ------------------ body結束 ------------------ -->
+<?php include __DIR__ . '/../parts/html-footer.php' ?>
+<!-- ---------------js/jq 開始 ------------------ -->
+<?php include __DIR__ . '/../parts/html-script.php' ?>
+<script>
+    $('.c3').on('mouseenter', function() {
+        $(this).find('.card-pic').css('height', '135px');
+        $(this).find('.card-info').css({
+            'opacity': '1',
+            'height': '10px',
+        });
+    });
+    $('.c3').on('mouseleave', function() {
+        $(this).find('.card-pic').css('height', '175px')
+        $(this).find('.card-info').css({
+            'opacity': '0',
+            'height': '0',
+        });
+    });
+</script>
+<?php include __DIR__ . '/../parts/html-foot.php' ?>
