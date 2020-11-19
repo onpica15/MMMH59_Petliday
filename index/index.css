@@ -1,0 +1,111 @@
+* {
+  border: solid blue 0.5px;
+}
+
+#hero-polaroid {
+  background-color: #f2eee8;
+  padding-top: 5vh;
+  height: 130vh;
+}
+
+.polaroid-base {
+  /* padding-top: 10vh; */
+  margin: 10vh auto;
+  width: 90vw;
+  height: 100vh;
+  box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f2f2f2;
+  transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+}
+
+.polaroid-figure {
+  margin: 3% auto;
+  width: 90vw;
+  height: 70vh;
+  box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 15px 0px inset;
+  background: url() no-repeat;
+  background-size: cover;
+}
+
+#petliday-wrap {
+  background-image: url("img/illustration/bg1.png");
+}
+
+.petliday-fig {
+  margin: auto;
+  width: 95px;
+  height: 95px;
+}
+
+.petliday-fig img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.petliday-title {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.petliday-content {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.des-title {
+  color: #3c2e26;
+}
+
+#destination svg {
+  fill: #49322d;
+  width: 23px;
+  height: 19px;
+}
+
+span {
+  position: relative;
+  padding: 0 10px;
+}
+
+span:before {
+  content: "";
+  display: block;
+  background-color: #ffecd4;
+  width: 95%;
+  height: 15px;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  z-index: -1;
+  margin-left: 5px;
+}
+
+.des-card {
+  margin: 10px 10px;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+}
+
+.des-card h6 {
+  color: #00907c;
+  margin: 10% auto;
+}
+
+.des-card figure {
+  width: 250px;
+  height: 160px;
+  /* margin: 0 0 4.9px; */
+  border-radius: 3px;
+  margin: 8px auto;
+}
+
+#tour svg {
+  fill: #49322d;
+  width: 23px;
+  height: 19px;
+}
