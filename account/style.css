@@ -63,3 +63,8 @@
   background: #ffa12c;
   overflow: hidden;
 }
+
+.page-icon {
+  width: 15px;
+  height: 15px;
+}

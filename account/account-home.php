@@ -7,7 +7,10 @@
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 <section id="acount">
-    <div class="container ">
+    <div class="container">
+        <div class="row my-5"></div>
+    </div>
+    <div class="container">
         <div class="row ">
             <div class="col-3">
                 <h2 class="list-group-item">會員中心</h2>
@@ -38,10 +41,10 @@
                             <div class="row">
                                 <div class="col-4">
                                     <div class="member-img">
-                                        <img src="./img/avatar-pet1.jpg" alt="">
+                                        <img src="./img/avatar-1.jpg" alt="">
                                     </div>
                                     <div class="member-id">
-                                        ID:petty777
+                                        ID:pity0507
                                     </div>
                                 </div>
                                 <div class="col-8">
@@ -49,19 +52,19 @@
                                         <div class="form-group row">
                                             <label for="staticEmail" class="col-sm-2 col-form-label">姓名</label>
                                             <div class="col-sm-10">
-                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="霈霈">
+                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="黎小霈">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="staticEmail" class="col-sm-2 col-form-label">生日</label>
                                             <div class="col-sm-10">
-                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="1996/09/10">
+                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="1996/08/24">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
                                             <div class="col-sm-10">
-                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="pitypetty12@example.com">
+                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="pity0824@gmail.com">
                                             </div>
                                         </div>
                                         <!-- <div class="form-group row">
@@ -99,9 +102,14 @@
                                     </div>
 
                                 </div>
-                                <div class="col align-self-end">
-                                    <a href="">edit</a>
-                                    <a href="">remove</a>
+                                <div class="col page-icon align-self-end">
+                                    <a href="">
+                                        <img src="../icon/edit.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="../icon/trash.png" alt="">
+
+                                    </a>
                                 </div>
                             </div>
                             <div class="row justify-content-end">
