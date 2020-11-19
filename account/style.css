@@ -3,6 +3,7 @@
 }
 .img {
   width: 100%;
+  object-fit: cover;
 }
 #acount {
   width: 100%;
@@ -13,9 +14,10 @@
 }
 
 #member-list {
-  min-height: 476px;
+  min-height: 300px;
   background-color: #fff;
   border-radius: 3px 30px 3px 3px;
+  box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.5);
 }
 .line {
   width: 1rem;
@@ -28,7 +30,6 @@
   width: 200px;
   height: 200px;
   overflow: hidden;
-  object-fit: cover;
 
   border-radius: 50%;
   background-color: #ccc;
@@ -45,6 +46,7 @@
   min-height: 700px;
   background-color: #fff;
   border-radius: 3px 30px 3px 3px;
+  box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.5);
 }
 
 .list-group-item.active {
@@ -57,14 +59,12 @@
 .pet-img {
   width: 200px;
   height: 200px;
-  object-fit: cover;
-
   border-radius: 1.5rem;
   background: #ffa12c;
   overflow: hidden;
 }
 
-.page-icon {
-  width: 15px;
-  height: 15px;
+#page-icon .a {
+  width: 10px;
+  height: 10px;
 }
