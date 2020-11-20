@@ -1,6 +1,7 @@
 * {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
+
 body {
   background-color: #f2eee8;
 }
@@ -11,6 +12,7 @@ body {
   background-color: rgb(255, 255, 255);
   border-radius: 3px 30px 3px 3px;
   padding: 20px;
+  margin: 10px 0px;
 }
 
 .prod-img {
