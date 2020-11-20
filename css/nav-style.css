@@ -99,15 +99,26 @@ svg#search-btn {
 .nav-m {
   display: none;
 }
+.only-m {
+  display: none;
+}
 
 /* --------------------------------------- */
 @media (max-width: 991.98px) {
   .nav-pc {
     display: none;
   }
+  .only-pc {
+    display: none;
+  }
+
   .nav-m {
     display: block;
   }
+  .only-m {
+    display: block;
+  }
+
   .search-input-m {
     display: none;
   }
@@ -135,7 +146,7 @@ svg#search-btn {
     left: 25%; */
     /* transform: translateX(-50%); */
   }
- 
+
   .navbar-toggler-icon {
     height: 3 px;
     color: #3c2e26;
