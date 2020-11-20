@@ -1,272 +1,319 @@
-/* 拍立得section始 */
-#hero-polaroid {
-  background-color: #f2eee8;
-  padding-top: 4vh;
-  height: 130vh;
+* {
+  border: 0.5px darkred dashed;
+  /* overflow: hidden; */
 }
 
-.polaroid-base {
-  margin: 10vh auto;
-  width: 90vw;
-  height: 100vh;
-  box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.4);
-  background-color: #f2f2f2;
-  transform: rotate(-2deg);
-  -webkit-transform: rotate(-2deg);
-  -o-transform: rotate(-2deg);
-  -ms-transform: rotate(-2deg);
+@media (max-width: 400px) {
+  #hero-polaroid-m {
+    background-color: #f2eee8;
+    padding-top: 4vh;
+    height: 130vh;
+    position: absolute;
+    top: 50px;
+  }
+
+  .rope figure {
+    width: 100%;
+    display: inline-block;
+  }
+  .rope figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .petliday-card {
+    display: flex;
+    /* flex-direction: column; */
+  }
+
+  .petliday-fig {
+    width: 70px;
+    height: 90px;
+    border-radius: 3%;
+    /* margin: 30px auto; */
+  }
+
+  .petliday-fig img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
-.polaroid-figure {
-  margin: 3% auto;
-  width: 90vw;
-  height: 75vh;
-  box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 15px 0px inset;
-  background: url("./img/banner-img1.jpg") no-repeat;
-  background-size: cover;
-}
+@media (min-width: 1200px) {
+  /* 拍立得section始 */
+  #hero-polaroid {
+    background-color: #f2eee8;
+    padding-top: 4vh;
+    height: 130vh;
+  }
 
-.signature {
-  height: 150px;
-  display: inline-block;
-  bottom: 20px;
-  right: 40px;
-}
+  #hero-polaroid-m {
+    display: none;
+  }
 
-.signature img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-/* 拍立得section末 */
+  .polaroid-base {
+    margin: 10vh auto;
+    width: 90vw;
+    height: 100vh;
+    box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.4);
+    background-color: #f2f2f2;
+    transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+  }
 
-#bg1 {
-  background: url("./img/bg-1.png") no-repeat;
-  background-size: cover;
-}
+  .polaroid-figure {
+    margin: 3% auto;
+    width: 90vw;
+    height: 75vh;
+    box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 15px 0px inset;
+    background: url("./img/banner-img1.jpg") no-repeat;
+    background-size: cover;
+  }
 
-/* 插圖介紹section始 */
-/* #petliday-wrap {
-  background-color: #f2eee8;
-  height: 70%;
-} */
+  .signature {
+    height: 150px;
+    display: inline-block;
+    bottom: 20px;
+    right: 40px;
+  }
 
-.petliday-fig {
-  margin: auto;
-  width: 95px;
-  height: 95px;
-}
+  .signature img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  /* 拍立得section末 */
 
-.petliday-fig img {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-}
+  /* 放背景section始 */
+  #bg1 {
+    background: url("./img/bg-1.png") no-repeat;
+    background-size: cover;
+    z-index: -2;
+  }
+  /* 放背景section末 */
 
-.petliday-title {
-  font-size: 16px;
-  font-weight: 400;
-}
+  /* 插圖介紹section始 */
 
-.petliday-content {
-  font-size: 14px;
-  font-weight: 400;
-}
+  .petliday-fig {
+    margin: auto;
+    width: 95px;
+    height: 95px;
+  }
 
-.des-title {
-  color: #3c2e26;
-}
+  .petliday-fig img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
 
-#destination svg {
-  fill: #49322d;
-  width: 23px;
-  height: 19px;
-}
+  .petliday-title {
+    font-size: 16px;
+    font-weight: 400;
+  }
 
-span {
-  position: relative;
-  padding: 0 10px;
-}
+  .petliday-content {
+    font-size: 14px;
+    font-weight: 400;
+  }
 
-span:before {
-  content: "";
-  display: block;
-  background-color: #ffecd4;
-  width: 95%;
-  height: 15px;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  z-index: -1;
-  margin-left: 5px;
-}
+  .des-title {
+    color: #3c2e26;
+  }
 
-.des-card {
-  margin: 10px 10px;
-  border-radius: 5px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  background-color: #ffffff;
-}
+  #destination svg {
+    fill: #49322d;
+    width: 23px;
+    height: 19px;
+  }
 
-.des-card h6 {
-  margin: 10% auto;
-}
+  span {
+    position: relative;
+    padding: 0 10px;
+  }
 
-.des-card figure {
-  width: 250px;
-  height: 160px;
-  border-radius: 3%;
-  /* margin: 30px auto; */
-}
+  span :before {
+    content: "";
+    display: block;
+    background-color: #ffecd4;
+    width: 95%;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    z-index: -1;
+    margin-left: 5px;
+  }
 
-.des-card figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+  .des-card {
+    margin: 10px 10px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+  }
 
-/* 同樂目的地末 */
-/* 精選行程始 */
+  .des-card h6 {
+    margin: 10% auto;
+  }
 
-#tour svg {
-  fill: #49322d;
-  width: 23px;
-  height: 19px;
-}
+  .des-card figure {
+    width: 250px;
+    height: 160px;
+    border-radius: 3%;
+    /* margin: 30px auto; */
+  }
 
-.tour-card figure {
-  width: 300px;
-  height: 300px;
-  clip-path: circle(50% at 50% 50%);
-  margin: 8px auto;
-  background-color: #3c2e26;
-}
+  .des-card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  /* 同樂目的地末 */
 
-.tour-card h6 {
-  margin: 8px auto;
-  text-align: center;
-}
+  /* 精選行程始 */
+  #tour svg {
+    fill: #49322d;
+    width: 23px;
+    height: 19px;
+  }
 
-.cls-3 {
-  fill: #00907c;
-}
+  .tour-card figure {
+    width: 300px;
+    height: 300px;
+    clip-path: circle(50% at 50% 50%);
+    margin: 8px auto;
+    background-color: #3c2e26;
+  }
 
-hr {
-  border-top: 2px solid rgba(0, 0, 0, 0.2);
-}
+  .tour-card h6 {
+    margin: 8px auto;
+    text-align: center;
+  }
 
-#class svg {
-  fill: #49322d;
-  width: 23px;
-  height: 19px;
-}
+  .cls-3 {
+    fill: #00907c;
+  }
 
-.cls-5 {
-  fill: #e03d2d;
-}
+  hr {
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+  }
 
-.card {
-  width: 296px;
-  height: 295px;
-  border: none;
-  box-shadow: 1px 2px 8px rgba(200, 200, 200, 0.5);
-  position: relative;
-  transition: 0.5s;
-}
+  #class svg {
+    fill: #49322d;
+    width: 23px;
+    height: 19px;
+  }
 
-.card .p {
-  margin-bottom: 6px;
-}
+  .cls-5 {
+    fill: #e03d2d;
+  }
 
-.heart {
-  width: 35px;
-  height: 35px;
-  background-color: #fff;
-  opacity: 0.8;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  border-radius: 50%;
-  padding: 6px 8.5px;
-}
+  .card {
+    width: 296px;
+    height: 295px;
+    border: none;
+    box-shadow: 1px 2px 8px rgba(200, 200, 200, 0.5);
+    position: relative;
+    transition: 0.5s;
+  }
 
-.card-pic {
-  width: 100%;
-  height: 175px;
-  border-radius: 3px 3px 50px 3px;
-  overflow: hidden;
-  transition: 0.5s;
-}
+  .card .p {
+    margin-bottom: 6px;
+  }
 
-#depth svg {
-  fill: #49322d;
-  width: 23px;
-  height: 19px;
-}
+  .heart {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    opacity: 0.8;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 50%;
+    padding: 6px 8.5px;
+  }
 
-.chatpic-wrap {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
+  .card-pic {
+    width: 100%;
+    height: 175px;
+    border-radius: 3px 3px 50px 3px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
 
-.chatpic-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+  #depth svg {
+    fill: #49322d;
+    width: 23px;
+    height: 19px;
+  }
 
-.text-wrap {
-  top: calc(50% - 100px);
-  left: 80px;
-  width: 80%;
-}
+  .chatpic-wrap {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
-.text-wrap2 {
-  top: calc(50% - 80px);
-  right: 80px;
-  width: 80%;
-}
+  .chatpic-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
-.text-wrap h6 {
-  line-height: 1.5;
-}
+  .text-wrap {
+    top: calc(50% - 100px);
+    left: 80px;
+    width: 80%;
+  }
 
-#quiz svg {
-  fill: #49322d;
-  width: 23px;
-  height: 19px;
-}
+  .text-wrap2 {
+    top: calc(50% - 80px);
+    right: 80px;
+    width: 80%;
+  }
 
-.opt {
-  margin: 0 auto;
-  border-radius: 50%;
-  display: block;
-}
+  .text-wrap h6 {
+    line-height: 1.5;
+  }
 
-#quiz figure {
-  margin: 0 auto;
-}
+  #quiz svg {
+    fill: #49322d;
+    width: 23px;
+    height: 19px;
+  }
 
-#quiz .box {
-  width: 476px;
-  height: 191px;
-  box-shadow: 1px 2px 8px rgba(200, 200, 200, 0.5);
-  margin: 0 auto;
-  border-radius: 3px;
-  display: block;
-}
+  .opt {
+    margin: 0 auto;
+    border-radius: 50%;
+    display: block;
+  }
 
-#quiz .box h6 {
-  text-align: center;
-}
+  #quiz figure {
+    margin: 0 auto;
+  }
 
-.option {
-  text-align: center;
-  line-height: 1.5;
-  margin: 8px 0;
-}
+  #quiz .box {
+    width: 476px;
+    height: 191px;
+    box-shadow: 1px 2px 8px rgba(200, 200, 200, 0.5);
+    margin: 0 auto;
+    border-radius: 3px;
+    display: block;
+  }
 
-.tutor img {
-  width: 100%;
+  #quiz .box h6 {
+    text-align: center;
+  }
+
+  .option {
+    text-align: center;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+
+  .tutor img {
+    width: 100%;
+  }
 }

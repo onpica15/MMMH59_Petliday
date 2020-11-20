@@ -16,6 +16,18 @@
   </div>
 </section>
 
+<section id="hero-polaroid-m">
+  <div class="container">
+    <div class="row rope">
+      <figure><img src="./img/illustration/rope.png" alt=""></figure>
+    </div>
+    <div class="row per-pic">
+
+    </div>
+  </div>
+</section>
+
+<!-- 放背景section -->
 <section id="bg1">
   <!-- 插圖介紹section -->
   <section id="petliday-wrap">
@@ -26,7 +38,7 @@
         </div>
       </div>
       <div class="row d-flex justify-content-between my-5">
-        <div class="col-4 d-flex petliday-card">
+        <div class="col-xl-4 col-12 d-flex petliday-card">
           <figure class="row petliday-fig mx-auto">
             <img src="./img/illustration/index-dog1.png" alt="">
           </figure>
@@ -36,7 +48,7 @@
           </div>
         </div>
 
-        <div class="col-4 d-flex petliday-card">
+        <div class="col-xl-4 col-12 d-flex petliday-card">
           <figure class="row petliday-fig mx-auto">
             <img src="img/illustration/index-dog2.png" alt="">
           </figure>
@@ -46,7 +58,7 @@
           </div>
         </div>
 
-        <div class="col-4 d-flex petliday-card">
+        <div class="col-xl-4 col-12 d-flex petliday-card">
           <figure class="row petliday-fig mx-auto">
             <img src="img/illustration/index-dog3.png" alt="">
           </figure>
@@ -61,7 +73,7 @@
   <!-- 同樂目的地section -->
   <section id="destination">
     <!-- 腳印標題那部分 -->
-    <div class="container my-5">
+    <div class="container mt-5 my-3">
       <div class="row d-flex flex-start align-items-center">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.2 20.76">
           <g id="圖層_2" data-name="圖層 2">
@@ -141,7 +153,7 @@
         <figure>
           <img src="./img/pd2.jpg" alt="">
         </figure>
-        <h6 class="t-l">聖誕節精選行程一芭芭拉拉巴拉巴</h6>
+        <h6 class="t-l mt-4 my-3">聖誕節精選行程一芭芭拉拉巴拉巴</h6>
         <!-- 星等、評價、價錢 -->
         <div class="row w-75 d-flex mx-auto justify-content-between">
           <div class="d-flex align-items-center">
@@ -168,7 +180,7 @@
         <figure>
           <img src="./img/pd6.jpg" alt="">
         </figure>
-        <h6 class="t-l">聖誕節精選行程二芭芭拉拉巴拉巴</h6>
+        <h6 class="t-l mt-4 my-3">聖誕節精選行程二芭芭拉拉巴拉巴</h6>
         <!-- 星等、評價、價錢 -->
         <div class="row w-75 d-flex mx-auto justify-content-between">
           <div class="d-flex align-items-center">
@@ -195,7 +207,7 @@
         <figure>
           <img src="./img/pd10.jpg" alt="">
         </figure>
-        <h6 class="t-l">聖誕節精選行程三芭芭拉拉巴拉巴</h6>
+        <h6 class="t-l mt-4 my-3">聖誕節精選行程三芭芭拉拉巴拉巴</h6>
         <!-- 星等、評價、價錢 -->
         <div class="row w-75 d-flex mx-auto justify-content-between">
           <div class="d-flex align-items-center">
