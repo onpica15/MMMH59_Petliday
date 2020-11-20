@@ -179,11 +179,11 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-12 total-box d-flex justify-content-end align-items-center">
+    <div class="col-12 total-box d-flex justify-content-end align-items-center p-3">
       <div class="danger-color t-l">總計: NT$ <span class="danger-color t-xl"> 3000</span> </div>
 
       <a href="#">
-        <div class="buy-btn btn d-flex align-items-center justify-content-center">結帳</div>
+        <div class="buy-btn btn  btn-1 d-flex align-items-center justify-content-center">結帳</div>
       </a>
 
 

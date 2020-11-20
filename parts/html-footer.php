@@ -17,7 +17,7 @@
           <div class=" input-group mb-3">
             <input type="text" class="form-control" placeholder="輸入電子信箱收取優惠" aria-label="Recipient's username" aria-describedby="button-addon2" id="email-input">
             <div class="input-group-append">
-              <button class="btn " type="button" id="email-btn">訂閱</button>
+              <button class="btn btn-1" type="button" id="email-btn">訂閱</button>
             </div>
           </div>
         </div>

@@ -17,7 +17,9 @@ body {
 
 .prod-img {
   width: 150px;
+  min-width: 64px;
   height: 150px;
+  min-height: 64px;
 }
 .prod-img img {
   width: 100%;
@@ -48,4 +50,7 @@ body {
   border-radius: 3px 3px 3px 3px;
   /* padding: 20px; */
   margin-top: 20px;
+}
+.btn-1 {
+  min-height: 44px;
 }
