@@ -5,6 +5,15 @@
   width: 100%;
   object-fit: cover;
 }
+
+/* ---------------------- */
+
+.aside-bar {
+  position: sticky;
+  top: 15px;
+}
+
+/* ---------------------- */
 #acount {
   width: 100%;
   height: 100%;
@@ -33,7 +42,7 @@
 .member-img {
   width: 200px;
   height: 200px;
-  border-radius: 20%;
+  border-radius: 50%;
 
   overflow: hidden;
 
@@ -44,13 +53,23 @@
 
 .member-id {
   background-color: #00907c;
-  border-radius: 10px;
+  padding: 5px 10px;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 30%;
+}
+
+.member-id p {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #fff;
 }
 .camera-icon {
   border-radius: 50%;
   position: absolute;
-  right: 20%;
-  top: 65%;
+  right: 22%;
+  top: 70%;
 }
 
 #pet-list {
@@ -71,9 +90,29 @@
   width: 200px;
   height: 200px;
   border-radius: 1.5rem;
+  border: 3px solid #ffa12c;
+  /* box-sizing: content-box; */
+  overflow: hidden;
 }
 
-#page-icon .a {
-  width: 10px;
-  height: 10px;
+#pet-info {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f2f2f2;
+}
+
+#page-icon a {
+  width: 28px;
+  height: 28px;
+}
+
+.pet-card {
+  position: relative;
+}
+
+.pet-card .camera-icon {
+  border-radius: 50%;
+  position: absolute;
+  left: 70%;
+  top: 90%;
 }

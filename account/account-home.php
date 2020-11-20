@@ -12,8 +12,8 @@
     </div>
     <!-- aside-bar 側邊攔 -->
     <div class="container">
-        <div class="row">
-            <div class="col-3 ">
+        <div class="row ">
+            <div class="col-3 aside-bar">
                 <h2 class="list-group-item text-center t-xxl">會員中心</h2>
 
                 <div class="list-group text-center t-l" id="list-tab" role="tablist">
@@ -43,7 +43,7 @@
                                 <h4 class="t-xxl">會員資料</h4>
                             </div>
                             <div class="row">
-                                <div class="col-4 member-card">
+                                <div class="col-4 member-card ">
                                     <div class="member-img ">
                                         <img src="./img/avatar-1.jpg" alt="">
 
@@ -82,11 +82,13 @@
                                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="台北市">
                                             </div>
                                         </div>
+                                        <br>
+
                                     </form>
                                 </div>
                             </div>
                             <div class="row justify-content-end">
-                                <button class="btn">儲存修改</button>
+                                <button class="btn">資料修改</button>
                                 <button class="btn">密碼更改</button>
 
                             </div>
@@ -99,30 +101,91 @@
                                 <div class="line mr-2"></div>
                                 <h4 class="t-xxl ">寵物資料</h4>
                             </div>
-                            <div class="row">
-                                <div class="col-4">
+                            <!-- 單筆寵物資料 -->
+                            <div class="row" id="pet-info">
+                                <div class="col-4 pet-card">
                                     <div class="pet-img">
-                                        <img src="./img/avatar-pet1" alt="">
+                                        <img src="./img/avatar-pet1.jpg" alt="">
                                     </div>
-                                    <h6>Qbone</h6>
+                                    <a href="" class="camera-icon">
+                                        <img src="../icon/camera.svg" alt="">
+                                    </a>
 
                                 </div>
                                 <div class="col-6">
-                                    <div class="pet-detail">
-                                        <p>品種 : 柴犬</p>
-                                        <p>年齡 : 1歲</p>
-                                        <p>生日 : 2019/09/10</p>
-
+                                    <div>
+                                        <h6 class="t-l">Qbone</h6>
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-2 col-form-label">品種</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="柴犬">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-2 col-form-label">年齡</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="1歲">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-2 col-form-label">生日</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="2019/09/10">
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>
-                                <div class="col-2" id="page-icon">
-                                    <a href="">
+                                <div class="col-2 d-flex justify-content-around align-items-center" id="page-icon">
+                                    <a href="" class="edit-icon">
                                         <img src="../icon/edit.svg" alt="">
                                     </a>
-                                    <a href="">
+                                    <a href="" class="del-icon">
                                         <img src="../icon/trash.svg" alt="">
+                                    </a>
+                                </div>
 
+                            </div>
+                            <div class="row" id="pet-info">
+                                <div class="col-4 pet-card">
+                                    <div class="pet-img">
+                                        <img src="./img/avatar-pet1.jpg" alt="">
+                                    </div>
+                                    <a href="" class="camera-icon">
+                                        <img src="../icon/camera.svg" alt="">
+                                    </a>
+
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <h6 class="t-l">Qbone</h6>
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-2 col-form-label">品種</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="柴犬">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-2 col-form-label">年齡</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="1歲">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-2 col-form-label">生日</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="2019/09/10">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-2 d-flex justify-content-around align-items-center" id="page-icon">
+                                    <a href="" class="edit-icon">
+                                        <img src="../icon/edit.svg" alt="">
+                                    </a>
+                                    <a href="" class="del-icon">
+                                        <img src="../icon/trash.svg" alt="">
                                     </a>
                                 </div>
 
@@ -131,6 +194,8 @@
                                 <button class="btn">新增寵物</button>
                             </div>
                         </div>
+
+
                     </div>
                     <!--  list-order 我的訂單-->
                     <div class="tab-pane fade" id="list-order" role="tabpanel" aria-labelledby="list-messages-list">
@@ -146,14 +211,14 @@
                                             <div class="member-img">
                                                 <img src="./img/avatar-1.jpg" alt="">
                                             </div>
-                                            <div class="member-id">
+                                            <div class="member-id ">
                                                 ID:pity0507
                                             </div>
                                         </div>
                                         <div class="col-8">
                                             <form>
                                                 <div class="form-group row">
-                                                    <label for="staticEmail" class="col-sm-2 col-form-label">姓名</label>
+                                                    <label for="staticEmail" class="col-sm-2 col-form-label ">姓名</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="黎小霈">
                                                     </div>
@@ -170,17 +235,11 @@
                                                         <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="pity0824@gmail.com">
                                                     </div>
                                                 </div>
-                                                <!-- <div class="form-group row">
-                                            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                                            <div class="col-sm-10">
-                                                <input type="password" class="form-control" id="inputPassword">
-                                            </div>
-                                        </div> -->
                                             </form>
                                         </div>
                                     </div>
                                     <div class="row justify-content-end">
-                                        <button class="btn">儲存修改</button>
+                                        <button class="btn">資料編輯</button>
                                         <button class="btn">密碼更改</button>
 
                                     </div>
