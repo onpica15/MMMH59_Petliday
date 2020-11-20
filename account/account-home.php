@@ -7,25 +7,6 @@
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 <section id="acount">
-    <div class="container mt-5">
-
-        <h1 class="orange-color t-xxxl bg-color ">Hello!開始開心寫網站 orange-color t-xxxl bg-color</h1>
-        <br>
-        <h6 class="brown-color t-xxl ">毛日 brown-color t-xxl</h6>
-        <br>
-        <h6 class="green-color t-xl">毛日 green-color t-xl</h6>
-        <br>
-        <h6 class="danger-color t-l">毛日 danger-color t-l</h6>
-        <br>
-        <h6 class="text-color t-m">毛日 text-color t-m</h6>
-        <br>
-        <h6 class="text-color t-s">毛日 text-color t-s</h6>
-        <br>
-        <h6 class="text-gray t-xs">毛日 text-gray t-xs</h6>
-
-        <button class="btn">測試 class='btn'</button>
-
-    </div>
     <div class="container">
         <div class="row my-5"></div>
     </div>
@@ -61,13 +42,18 @@
                                 <div class="line mr-2"></div>
                                 <h4 class="t-xxl">會員資料</h4>
                             </div>
-                            <div class="row ">
-                                <div class="col-4 ">
-                                    <div class="member-img">
+                            <div class="row">
+                                <div class="col-4 member-card">
+                                    <div class="member-img ">
                                         <img src="./img/avatar-1.jpg" alt="">
+
                                     </div>
-                                    <div class="member-id">
-                                        ID:pity0507
+                                    <a href="" class="camera-icon">
+                                        <img src="../icon/camera.svg" alt="">
+                                    </a>
+                                    <div class="member-id text-center mt-3">
+                                        <p> ID:pity0507
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="col-8">
@@ -90,12 +76,12 @@
                                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="pity0824@gmail.com">
                                             </div>
                                         </div>
-                                        <!-- <div class="form-group row">
-                                            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-2 col-form-label">地址</label>
                                             <div class="col-sm-10">
-                                                <input type="password" class="form-control" id="inputPassword">
+                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="台北市">
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </form>
                                 </div>
                             </div>
