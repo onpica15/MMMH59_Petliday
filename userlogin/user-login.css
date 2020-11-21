@@ -1,9 +1,64 @@
-/* * {
+* {
     outline: 1px solid red;
-  } */
+  }
 
-  .modal-content{
+  .login{
       border-top:15px solid #FFC072;
   }
 
+/* .login-social{
+    display: flex;
+    justify-self: around;
+} */
 
+.login-form{
+    padding-top: 50px;
+    width: 500px;
+    height: 700px;
+    background-color: rgb(253, 251, 251);
+}
+
+.login-form h2{
+    text-align: center;
+}
+
+.login-facebook{
+    width: 44px;
+    height: 44px;
+}
+
+.login-line{
+    width: 44px;
+    height: 44px;
+}
+
+.login-google{
+    width: 44px;
+    height: 44px;
+    padding: 2px;
+}
+
+.login-apple {
+    width: 44px;
+    height: 44px;
+}
+
+.login-border{
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.text-or{
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -10px;
+}
+
+.btn{
+    width: 400px;
+    height: 60px;
+    text-align: center;
+}

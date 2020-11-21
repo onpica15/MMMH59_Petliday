@@ -28,32 +28,39 @@
 <div class="container">
   <div class="row">
     <div class="login">
+      <button type="button" class="close" data-dismiss="model" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+
       <form class="login-form">
         <h2 class="t-xl">使用社群平台帳戶登入</h2>
         <h2 class="t-m">立即登入，隨時給毛孩獨家優惠</h2>
-        <div class="login-social">
-          <!-- 放社群icon -->
+        <div class="login-social d-flex justify-content-center">
+          <div class="login-facebook m-4"><img src="./imgs/facebook.svg" alt=""></div>
+          <div class="login-line m-4"><img src="./imgs/LINE.svg" alt=""></div>
+          <div class="login-google m-4"><img src="./imgs/Google.svg" alt=""></div>
+          <div class="login-apple m-4"><img src="./imgs/apple.svg" alt=""></div>
         </div>
-        
-        <div class="col-lg-5" style="padding-left: 0;">
-          <hr>
-        </div>
-        <div class="col-lg-2" style="font-size: 14px; text-align: center; padding: 7px;">
-          或
-        </div>
-        <div class="col-lg-5" style="padding-right: 0;">
-          <hr>
+
+        <div class="login-border">
+          <div class="text-or">或</div>
         </div>
 
         <h2 class="t-xl">Petliday會員登入</h2>
         <div class="login-group">
-          <!-- <label for="account">電子信箱</label> -->
+          <label for="account">帳號</label>
           <input type="text" class="form-control" id="account" name="account" placeholder="電子信箱">
         </div>
+
         <div class="login-group">
-          <!-- <label for="password">密碼</label> -->
+          <label for="password">密碼</label>
           <input type="password" class="form-control" id="password" name="password" placeholder="密碼">
         </div>
+
+        <div class="login-group-2">
+          <button class="login-btn btn">登入</button>
+        </div>
+
       </form>
     </div>
   </div>
