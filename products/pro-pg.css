@@ -194,14 +194,15 @@ background-color: #fff;
 
 .bg-dog{
     /* padding: 300px; */
-    height: 4800px;
-    background: url(./img/pg-dog.svg) 0 150px no-repeat;
-    background-size: cover;
+    height: 5200px;
+    background: linear-gradient( rgba(242,238,232,.5), rgba(242,238,232,.5)),url(./img/pg-dog.svg) 0 150px no-repeat;
+    background-size: contain;
     overflow: hidden;
+    
 }
 .cate-fix{
     height: 80px;
-    box-shadow: 1px 2px 20px #ccc;
+    box-shadow: 1px 2px 20px #ddd;
     border-radius: 0 0 80px 80px;
     overflow: hidden;
 }
@@ -266,4 +267,37 @@ background-color: #fff;
 
 .day-text{
     font-size: 24px;
+}
+/* white bg */
+.white-bg{
+    height: 3600px;
+    /* background-color: rgba(255,255,255,.5); */
+    background: url(./img/white-bg.svg) 0 200px no-repeat, linear-gradient( rgba(255,255,255,.5), rgba(255,255,255,.5));,;
+    background-size: contain;
+}
+.white-bg .container{
+    padding-top: 100px;
+}
+.term{
+    background-color: #fff;
+    height: 350px;
+    border-radius: 3px 30px 3px 3px;
+    margin-bottom: 80px;
+    box-shadow: 1px 2px 20px #eee;
+    padding: 50px 80px;
+}
+.term-text{
+    font-size: 14px;
+    line-height: 30px;
+}
+.term a{
+    width: 25px;
+    display: inline-block;
+}
+.term img{
+    width: 100%;
+    object-fit: contain;
+}
+.hidden{
+    display: none;
 }
