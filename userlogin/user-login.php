@@ -48,12 +48,12 @@
 
         <h2 class="t-xl">Petliday會員登入</h2>
         <div class="login-group">
-          <label for="account">帳號</label>
+          <!-- <label for="account">帳號</label> -->
           <input type="text" class="form-control" id="account" name="account" placeholder="電子信箱">
         </div>
 
         <div class="login-group">
-          <label for="password">密碼</label>
+          <!-- <label for="password">密碼</label> -->
           <input type="password" class="form-control" id="password" name="password" placeholder="密碼">
         </div>
 

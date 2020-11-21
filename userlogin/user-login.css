@@ -1,9 +1,10 @@
-* {
+/* * {
     outline: 1px solid red;
-  }
+  } */
 
   .login{
       border-top:15px solid #FFC072;
+      border-radius: 3px;
   }
 
 /* .login-social{
@@ -14,7 +15,7 @@
 .login-form{
     padding-top: 50px;
     width: 500px;
-    height: 700px;
+    height: 600px;
     background-color: rgb(253, 251, 251);
 }
 
@@ -47,6 +48,7 @@
     border-bottom: 1px solid #ccc;
     position: relative;
     margin-bottom: 50px;
+    margin-top: 25px;
 }
 
 .text-or{
@@ -55,10 +57,33 @@
     left: 50%;
     transform: translateX(-50%);
     top: -10px;
+    background-color: rgb(253, 251, 251);
+    padding: 0 10px 0 10px;
+}
+
+.form-control{
+    width: 350px;
+    height: 40px;
+}
+
+
+/* .login-group label{
+    margin-top: 20px;
+    margin-left: 75px;
+} */
+
+.login-group input{
+    margin-top: 20px;
+    margin-left: 75px;
+}
+
+.login-group-2{
+    text-align: center;
 }
 
 .btn{
-    width: 400px;
-    height: 60px;
+    width: 350px;
+    height: 40px;
     text-align: center;
+    margin-top: 30px;
 }
