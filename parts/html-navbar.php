@@ -1,3 +1,4 @@
+<script></script>
 </head>
 
 <body>
@@ -88,24 +89,38 @@
               </svg>
             </div>
           </a>
-          <input type="text" placeholder="想與寶貝去哪玩？" class="search-bar pl-3">
-          <button class="search-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352.48 336.07">
-
-              <g id="search-icon_2" data-name="search-icon 2">
-                <g id="search-icon-2" data-name="search-icon 1">
-                  <path id="Path_144" data-name="Path 144" class="cls-1" d="M346.5,301.38l-84.25-83.79h0a142,142,0,1,0-26.4,31l82,81.51a20.3,20.3,0,1,0,28.72-28.71h0Zm-204.23-58a101,101,0,1,1,101-101,101,101,0,0,1-101,101Z" />
+          <div class="search-box nav-pc" id="search-box">
+            <input type="text" placeholder="想與寶貝去哪玩？" class="search-bar pl-3" id="search-input">
+            <button class="search-btn ">
+              <svg class="" id="search-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352.48 336.07">
+                <g>
+                  <path data-name="Path 144" d="M346.5,301.38l-84.25-83.79h0a142,142,0,1,0-26.4,31l82,81.51a20.3,20.3,0,1,0,28.72-28.71h0Zm-204.23-58a101,101,0,1,1,101-101,101,101,0,0,1-101,101Z" />
                 </g>
-              </g>
-            </svg></button>
+              </svg></button>
+          </div>
 
         </div>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=" ham-box navbar-collapse">
+            <div class="d-flex flex-column">
+              <div class="ham-line ham-line1"></div>
+              <div class="ham-line ham-line1"></div>
+              <div class="ham-line ham-line3"></div>
+            </div>
+          </span>
+        </button> -->
 
-        <div class="collapse navbar-collapse " id="navbarNav">
+        <div class="ham-box nav-m ">
+          <div class="d-flex flex-column">
+            <div class="ham-line ham-line1 mt-1"></div>
+            <div class="ham-line ham-line1"></div>
+            <div class="ham-line ham-line3"></div>
+          </div>
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
 
             <li class="nav-item mr-3">
@@ -114,13 +129,13 @@
             <li class="nav-item">
               <a class="nav-link" href="#">毛日行程</a>
             </li>
-
           </ul>
         </div>
 
-        <ul class="navbar-nav ml-auto d-flex align-content-center">
 
-          <li class="nav-item ">
+        <ul class="navbar-nav ml-auto d-flex flex-row align-content-center">
+
+          <li class="nav-item m-1">
             <a class="nav-link" href="#">
               <div class="navbtn nav-cart-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.29 312.24">
@@ -134,7 +149,7 @@
               </div>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item  m-1">
             <a class="nav-link" href="#">
               <div class="navbtn nav-user-btn" data-toggle="modal" data-target="#modalLoginForm">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274.17 264.67">
@@ -147,14 +162,32 @@
               </div>
             </a>
           </li>
+
           <!-- <li class="nav-item">
               <a class="nav-link brown-color t-m login-text" href="#">登入/註冊</a>
             </li> -->
 
         </ul>
 
-
       </div>
     </nav>
 
+
   </header>
+
+
+  <!-- ---------------js/jq 開始 ------------------ -->
+  <?php include __DIR__ . '/../parts/html-script.php' ?>
+  <script>
+    // ------JS開始 以上勿刪-------
+
+    // $('.search-box').on('mouseenter', 'mousedown', function() {
+    //   console.log('enter')
+    //   $('.search-bar').addClass('search-hover');
+    //   $('.search-btn').addClass('search-hover');
+    //   $('.search-box button').addClass('search-hover');
+
+    // });
+
+    // ------JS結束 勿刪到-------
+  </script>

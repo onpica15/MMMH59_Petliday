@@ -1,7 +1,6 @@
 /* 大家請不要動這檔案！----------------  */
 * {
   font-family: "Roboto", "Noto Sans TC", sans-serif;
-  /* font-family: "Montserrat", "Noto Sans TC", sans-serif; */
   font-weight: 400;
   color: #555;
 }
@@ -72,7 +71,10 @@
   box-shadow: inset 5px 5px 10px rgb(255, 133, 2), inset -5px -5px 10px #ff9f39;
 }
 .btn:focus {
-  display: none;
+  outline: none;
+}
+.btn:active {
+  outline: none;
 }
 
 .t-xxxl {
@@ -110,3 +112,6 @@
 footer {
   font-size: 10px;
 }
+
+
+
