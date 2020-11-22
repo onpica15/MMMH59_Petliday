@@ -151,7 +151,7 @@
           </li>
           <li class="nav-item  m-1">
             <a class="nav-link" href="#">
-              <div class="navbtn nav-user-btn" data-toggle="modal" data-target="#modalLoginForm">
+              <div class="navbtn nav-user-btn" data-toggle="modal">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274.17 264.67">
                   <g id="user-icon_2" data-name="user-icon 2">
                     <g id="user-icon_1-2" data-name="user-icon 1">

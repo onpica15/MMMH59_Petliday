@@ -67,10 +67,6 @@
     padding: 0 10px 0 10px;
 }
 
-.form-control{
-    width: 350px;
-    height: 40px;
-}
 
 
 /* .login-group label{
@@ -81,6 +77,12 @@
 .login-group input{
     margin-top: 20px;
     margin-left: 75px;
+    font-size: 0.5rem;
+}
+
+.form-control{
+    width: 350px;
+    height: 40px;
     font-size: 0.5rem;
 }
 
@@ -106,17 +108,4 @@
 
 .login-other span{
     color: #555;
-}
-
-/* scroll-top */
-.scroll-top{
-    display: block;
-    font-size: 30px;
-    color: #148F7C;
-    position: fixed;
-    bottom: 5vh;
-    right: 5vh;
-    cursor: pointer;
-    opacity: 0;
-    transition: 1s;
 }
