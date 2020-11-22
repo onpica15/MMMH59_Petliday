@@ -2,32 +2,88 @@
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <!-- --- css 連結放下面 ----- -->
 <style>
+  .aside-bar {
+    position: sticky;
+    top: 15px;
+    box-shadow: 0px 0px 5px rgba(200, 200, 200, 0.5);
+  }
 
+  .aside-bar h2 {
+    background-color: #fff;
+    border-radius: 3px;
+    margin-bottom: -5px;
+  }
+
+  #acount {
+    width: 100%;
+    height: 100%;
+    margin-top: 8vh;
+    background-color: #f2f2f2;
+    border-radius: 25px 25px 0 0;
+  }
+
+  #list-title {
+    min-height: 300px;
+    background-color: #fff;
+    border-radius: 3px 30px 3px 3px;
+    box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.5);
+  }
+
+  .line {
+    width: 1rem;
+    height: 2rem;
+    background: #ffa12c;
+    border-radius: 2px 2px 2px 13px;
+  }
+
+  .list-group-item.active {
+    z-index: 2;
+    color: #ffa12c;
+    background-color: #f2f2f2;
+    border: rgba(200, 200, 200, 0.5);
+    border-left: 3px solid #ffa12c;
+  }
 </style>
 
 
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 
-<div class="container mt-5">
+<section id="acount">
+  <div class="container">
+    <div class="row my-4"></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <?php include __DIR__ . '/../account/account-aside-bar.php' ?>
 
-  <h1 class="orange-color t-xxxl bg-color ">Hello!開始開心寫網站 orange-color t-xxxl bg-color</h1>
-  <br>
-  <h6 class="brown-color t-xxl ">毛日 brown-color t-xxl</h6>
-  <br>
-  <h6 class="green-color t-xl">毛日 green-color t-xl</h6>
-  <br>
-  <h6 class="danger-color t-l">毛日 danger-color t-l</h6>
-  <br>
-  <h6 class="text-color t-m">毛日 text-color t-m</h6>
-  <br>
-  <h6 class="text-color t-s">毛日 text-color t-s</h6>
-  <br>
-  <h6 class="text-gray t-xs">毛日 text-gray t-xs</h6>
+      <div class="col-12 col-lg-9">
+        <div class="tab-content" id="nav-tabContent">
+          <!-- list-profile 會員資料 -->
+          <div class="tab-pane fade show active" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
 
-  <button class="btn">測試 class='btn'</button>
+            <div class="container mb-3" id="list-title">
+              <div class="row  mb-3">
+                <div class="d-flex pt-3 p-4">
+                  <div class="line mr-2"></div>
+                  <h4 class="t-xxl">修改寵物頭像</h4>
+                </div>
+              </div>
+              <div class="row">
 
-</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+</section>
 
 
 

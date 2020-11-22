@@ -2,6 +2,49 @@
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <!-- --- css 連結放下面 ----- -->
 <link rel="stylesheet" href="style.css">
+<style>
+    .aside-bar {
+        position: sticky;
+        top: 15px;
+        box-shadow: 0px 0px 5px rgba(200, 200, 200, 0.5);
+    }
+
+    .aside-bar h2 {
+        background-color: #fff;
+        border-radius: 3px;
+        margin-bottom: -5px;
+    }
+
+    #acount {
+        width: 100%;
+        height: 100%;
+        margin-top: 8vh;
+        background-color: #f2f2f2;
+        border-radius: 25px 25px 0 0;
+    }
+
+    #list-title {
+        min-height: 300px;
+        background-color: #fff;
+        border-radius: 3px 30px 3px 3px;
+        box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.5);
+    }
+
+    .line {
+        width: 1rem;
+        height: 2rem;
+        background: #ffa12c;
+        border-radius: 2px 2px 2px 13px;
+    }
+
+    .list-group-item.active {
+        z-index: 2;
+        color: #ffa12c;
+        background-color: #f2f2f2;
+        border: rgba(200, 200, 200, 0.5);
+        border-left: 3px solid #ffa12c;
+    }
+</style>
 
 
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
@@ -13,19 +56,7 @@
     <div class="container">
         <div class="row">
             <!-- aside-bar 側邊攔 -->
-
-            <div class="col-12 col-lg-3 aside-bar">
-                <h2 class="text-center t-xxl">會員中心</h2>
-
-                <div class="list-group text-center t-l" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action active" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">會員資料</a>
-                    <a class="list-group-item list-group-item-action" id="list-order-list" data-toggle="list" href="#list-order" role="tab" aria-controls="order">我的訂單</a>
-                    <a class="list-group-item list-group-item-action" id="list-wish-list" data-toggle="list" href="#list-wish" role="tab" aria-controls="wishlist">願望清單</a>
-                    <a class="list-group-item list-group-item-action" id="list-mailbox-list" data-toggle="list" href="#list-mailbox" role="tab" aria-controls="mailbox">會員信箱</a>
-                    <a class="list-group-item list-group-item-action" id="list-coupon-list" data-toggle="list" href="#list-coupon" role="tab" aria-controls="coupon">優惠券</a>
-                    <a class="list-group-item list-group-item-action" id="list-qa-list" data-toggle="list" href="#list-qa" role="tab" aria-controls="qa">Q&A</a>
-                </div>
-            </div>
+            <?php include __DIR__ . '/../account/account-aside-bar.php' ?>
             <!-- endof  aside-bar 側邊攔 -->
 
             <!-- aside-bar點出的內容 -->
@@ -218,15 +249,13 @@
                                 <div class="col-10 col-lg-8 prod-text d-flex flex-column justify-content-center">
                                     <h5 class="t-l title1-m">標題標題標題標題標題標題標題標題題標題標題</h5>
                                     <h6 class="t-m title1-m">方案類型:恆春二日遊</h6>
-                                    <div class="row">
-                                        <div class="col small-text align-self-start">
-                                            <h6 class=" text-gray t-s">2020/08/12 pm 6:00</h6>
-                                            <div class="col prod-price d-flex align-items-center align-self-end">
-                                                <h5 class="t-m">NT$ 3000</h5>
-                                            </div>
+
+                                    <div class="col-4 small-text">
+                                        <h6 class=" text-gray t-s">2020/08/12 pm 6:00</h6>
+                                        <div class="col-4 prod-price d-flex align-items-center ">
+                                            <h5 class="t-m">NT$ 3000</h5>
                                         </div>
                                     </div>
-
                                     <div class=" mt-4 change-date">
                                         <div class=" d-flex green-color t-s">
                                             已完成

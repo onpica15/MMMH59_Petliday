@@ -6,33 +6,12 @@
   object-fit: cover;
 }
 
-/* ---------------------- */
-
-.aside-bar {
-  position: sticky;
-  top: 15px;
-}
-
-/* ---------------------- */
 #acount {
   width: 100%;
   height: 100%;
   margin-top: 8vh;
   background-color: #f2f2f2;
   border-radius: 25px 25px 0 0;
-}
-
-#list-title {
-  min-height: 300px;
-  background-color: #fff;
-  border-radius: 3px 30px 3px 3px;
-  box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.5);
-}
-.line {
-  width: 1rem;
-  height: 2rem;
-  background: #ffa12c;
-  border-radius: 2px 2px 2px 13px;
 }
 
 .member-card {
@@ -77,14 +56,6 @@
   background-color: #fff;
   border-radius: 3px 30px 3px 3px;
   box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.5);
-}
-
-.list-group-item.active {
-  z-index: 2;
-  color: #ffa12c;
-  background-color: #f2f2f2;
-  border: rgba(200, 200, 200, 0.5);
-  border-left: 3px solid #ffa12c;
 }
 
 .pet-img {
