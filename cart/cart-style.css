@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   margin: 0;
   padding: 0;
 }
@@ -183,8 +183,12 @@ svg#date-icon {
   color: #fe8b11;
 }
 .step.active {
+  /* border-bottom: 3px solid #fe8b11; */
+}
+.step:focus {
   border-bottom: 3px solid #fe8b11;
 }
+
 #food-icon.active {
   fill: #fe8b11;
 }
@@ -258,7 +262,10 @@ svg#date-icon {
 }
 .form-input:focus {
   outline: none;
+  border: 1px solid #fe8b11;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
 }
+
 .form-input.active {
   border: 1px solid #ffa12c;
 }
@@ -271,13 +278,43 @@ svg#date-icon {
   /* width: 44px; */
   height: 44px;
   margin-right: 10px;
-  
 }
-.radio-text{
+.radio-text {
   font-size: 14px;
   /* color: #000; */
 }
 
+.coupon {
+  border: 1px solid #ffa02c9a;
+  position: relative;
+  border-radius: 3px 30px 3px 3px;
+  padding: 20px;
+}
+.coupon:hover {
+  border: 1px solid #ffa02c;
+}
+
+.coupon-check {
+  width: 18px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background-color: #ccc;
+}
+input[type="radio"]:checked {
+  background-color: #00907c;
+}
+.form-error {
+  border: 1px solid #e03d2d;
+}
+.pay-btn-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.pay-btn {
+  margin: 0;
+}
 /* ------------------------------------ */
 @media (max-width: 991.98px) {
   .prod-img {
@@ -362,5 +399,9 @@ svg#date-icon {
     background-color: #fff;
     padding: 30px 0 0 0;
     border-radius: 3px 30px 3px 3px;
+  }
+  .pay-btn {
+    width: 100%;
+    margin: 0;
   }
 }

@@ -70,10 +70,13 @@
   background-color: #fe8b11;
   box-shadow: inset 5px 5px 10px rgb(255, 133, 2), inset -5px -5px 10px #ff9f39;
 }
-.btn:focus {
-  outline: none;
-}
-.btn:active {
+
+.btn:hover,
+.btn:focus,
+.btn:focus-visible,
+.btn:visited,
+.btn:active,
+.btn:focus-within {
   outline: none;
 }
 
