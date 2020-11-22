@@ -44,7 +44,7 @@
             <!-- 評價,標籤row -->
             <div class="row rate-row">
                 <div class="star">
-                    <img src="/petliday/icon/star-green.png" alt="">
+                    <img src="/petliday/icon/star-green-fill.png" alt="">
                 </div>
                 <span class="rate text-gray">4.9</span>
                 <span class="rate-number"><u class="text-gray">133則評論</u></span>
@@ -187,7 +187,7 @@
 
                 </div>
             </div>
-            <div class="container mt-5 pt-4">
+            <div class="container main-c mt-5 pt-4">
                 <div class="topic">
                     <p>行程介紹</p>
                     <p class="topic-line"></p>
@@ -198,25 +198,27 @@
                     <p class="mb-1">16:00 - 18:00 鹿野熱氣球嘉年華，看展球和繫留搭乘</p>
                     <p class="mb-1">19:00 - 24:00 夜宿波希米亞露營區</p>
                 </div>
-                <div class="row r1">
-                    <div class="pic1"><img src="/Petliday/products/img/pd1.jpg" alt=""></div>
-                    <div class="intro1">
+                <div class="item1">
+                    <div class="pic520"><img src="/Petliday/products/img/pd1.jpg" alt=""></div>
+                    <div class="item-intro">
                         <p>夏日遊台東，一定要到鹿野鄉欣賞熱氣球之美。</p>
-                        <p>熱氣球的時間為早晨與傍晚兩個階段。天氣好的話，還可以看到熱氣球起飛或親自搭乘。</p>
-                        <p>與寵物來場愜意之旅，看著各式各樣的氣球飛上藍天。相機準備好，絕對是殺底片的好地方！</p>
+                        <p>熱氣球的時間為早晨與傍晚兩個階段。</p>
+                        <p>天氣好的話，還可以看到熱氣球起飛或親自搭乘。</p>
+                        <p>與寵物來場愜意之旅，看著各式各樣的氣球飛上藍天。</p>
+                        <p>相機準備好，絕對是殺底片的好地方！</p>
                     </div>
                 </div>
-                <div class="row r2">
-                    <div class="pic2"><img src="/Petliday/products/img/pd2.jpg" alt=""></div>
-                    <div class="intro2">
+                <div class="item2">
+                    <div class="pic420"><img src="/Petliday/products/img/pd2.jpg" alt=""></div>
+                    <div class="item-intro">
                         <p>想在大自然入眠？就入住台東「波希米亞露營區」</p>
                         <p>猶如置身北歐的異國風情，絕對是遠離塵囂好去處！</p>
                         <p>適合與三五好友帶著寵物來野餐、伴隨蟲鳴鳥叫入夢鄉。</p>
                     </div>
                 </div>
-                <div class="row r3">
-                    <div class="pic3"><img src="/Petliday/products/img/pd3.jpg" alt=""></div>
-                    <div class="intro3">
+                <div class="item3 pb-5">
+                    <div class="pic580"><img src="/Petliday/products/img/pd3.jpg" alt=""></div>
+                    <div class="item-intro">
                         <p>露營區每週都有不同的主題派對及音樂饗宴，</p>
                         <p>可以認識不同的狗友，一起玩樂談心數星星。</p>
                         <p>此外，也會替寵物們準備豐盛的晚餐，野餐派對玩起來！</p>
@@ -230,9 +232,9 @@
                     <p class="mb-1">14:00 - 16:00 都歷海灘SUP探險</p>
                     <p class="mb-1">18:00 - 24:00 夜宿花蓮加賀屋溫泉會館</p>
                 </div>
-                <div class="row r4">
-                    <div class="pic4"><img src="/Petliday/products/img/pd4.jpg" alt=""></div>
-                    <div class="intro4">
+                <div class="item4">
+                    <div class="pic420"><img src="/Petliday/products/img/pd4.jpg" alt=""></div>
+                    <div class="item-intro">
                         <p>一起走入台東部落，親自體驗原鄉的文化與日常。</p>
                         <p>位於台東縣成功鎮「都歷部落」，同樣是阿美族部落，</p>
                         <p>而都歷Torik在阿美族語中，意指將物品固定或有編織之意。</p>
@@ -242,9 +244,9 @@
                         <p>在等待午餐的空檔，大家也可以DIY月桃的編織物當紀念品。</p>
                     </div>
                 </div>
-                <div class="row r5">
-                    <div class="pic5"><img src="/Petliday/products/img/pd5.jpg" alt=""></div>
-                    <div class="intro5">
+                <div class="item5">
+                    <div class="pic580"><img src="/Petliday/products/img/pd5.jpg" alt=""></div>
+                    <div class="item-intro">
                         <p>「自己的午餐，自己備料！」</p>
                         <p>主人可以帶著寵物採集各自午餐的食材。</p>
                         <p>部落會幫大家客製化餐點，從中搭配桃花醬與月桃草鹽調味，</p>
@@ -252,25 +254,25 @@
                         <p>也會有互動的趣味遊戲，是主人與寵物的默契大考驗！</p>
                     </div>
                 </div>
-                <div class="row r6">
-                    <div class="pic6"><img src="/Petliday/products/img/pd6.jpg" alt=""></div>
-                    <div class="intro6">
-                        <p>除了認識原鄉的生活與文化，絕對不能錯過的就是走進都歷部落的「扎拉匝海沙灘」</p>
+                <div class="item6">
+                    <div class="pic420"><img src="/Petliday/products/img/pd6.jpg" alt=""></div>
+                    <div class="item-intro">
+                        <p>除了認識原鄉的生活與文化，</p>
+                        <p>絕對不能錯過的就是走進都歷部落的「扎拉匝海沙灘」，</p>
                         <p>特別的是每個沙灘、海灣甚至礁岩，都有自己的名字喔！</p>
-                        <p>這次安排部落族人帶領大家體驗SUP</p>
-                        <p>SUP (Stand Up Paddle) 立槳衝浪，結合衝浪和帆船滑行原理的板類運動，</p>
-                        <p>可以站坐在板子上，簡單易學，是近年來國內外非常流行的水上運動之一。</p>
+                        <p>這次安排部落族人帶領大家體驗SUP(Stand Up Paddle)立槳衝浪 </p>
+                        <p>結合衝浪和帆船滑行原理的板類運動，可以站坐在板子上，</p>
+                        <p>簡單易學，是近年來國內外非常流行的水上運動之一。</p>
                     </div>
                 </div>
-                <div class="row r7">
-                    <div class="pic7"><img src="/Petliday/products/img/pd7.jpg" alt=""></div>
-                    <div class="intro7">
-                        <p>「走吧，去海邊！」海邊踏浪、玩水，</p>
-                        <p>是夏日出遊的必要行程之一，更不能錯過帶著毛孩來場SUP的探險。</p>
-                        <p>經過專業教練的指導，可以在寬闊無際的大海中盡情航行。</p>
-                        <p>不僅是主人玩得開心，連寵物都可以共同待在衝浪板上享樂！</p>
-                        <p>如果玩累了，也很適合在岸邊泡著水，享受藍色包覆的安定感。</p>
-                        <p>千萬別忘了替毛孩拍一張網美照唷！</p>
+                <div class="item7 pb-5">
+                    <div class="pic520"><img src="/Petliday/products/img/pd7.jpg" alt=""></div>
+                    <div class="item-intro">
+                        <p>「走吧，去海邊！」海邊踏浪、玩水，是夏日出遊的必要行程之一，</p>
+                        <p>更不能錯過帶著毛孩來場SUP的探險。經過專業教練的指導，</p>
+                        <p>可以在寬闊無際的大海中盡情航行。不僅是主人玩得開心，</p>
+                        <p>連寵物都可以共同待在衝浪板上享樂！如果玩累了，也很適合在岸邊泡著水，</p>
+                        <p>享受藍色包覆的安定感。千萬別忘了替毛孩拍一張網美照唷！</p>
                     </div>
                 </div>
                 <!-- 第三天 -->
@@ -281,9 +283,9 @@
                     <p class="mb-1">11:30 - 14:00 瑞穗農場踏青+大地遊戲（附餐券）</p>
                     <p class="mb-1">14:00 - 18:30 回程，返抵出發地（晚餐附餐盒）</p>
                 </div>
-                <div class="row r8">
-                    <div class="pic8"><img src="/Petliday/products/img/pd8.jpg" alt=""></div>
-                    <div class="intro8">
+                <div class="item8">
+                    <div class="pic580"><img src="/Petliday/products/img/pd8.jpg" alt=""></div>
+                    <div class="item-intro">
                         <p>花東網美必訪的拍照景點！</p>
                         <p>六十石山位在富里鄉竹田村東側海拔約800公尺的海岸山脈上，</p>
                         <p>經過一段蜿蜒的山路後，眼前出現無邊無際的田野景致，</p>
@@ -292,19 +294,19 @@
                         <p>快帶家裡的毛孩來當小網美、走伸展台吧！</p>
                     </div>
                 </div>
-                <div class="row r9">
-                    <div class="pic9"><img src="/Petliday/products/img/pd9.jpg" alt=""></div>
-                    <div class="intro9">
+                <div class="item9">
+                    <div class="pic420"><img src="/Petliday/products/img/pd9.jpg" alt=""></div>
+                    <div class="item-intro">
                         <p>「瑞穗牧場」靠著源自中央山脈的潔淨水源灌溉，</p>
-                        <p>種植出一片油亮碧綠的鮮美牧草，飼養著300多頭壯碩健康的荷蘭品種乳牛。</p>
-                        <p>乳牛平均每天可生產20多公斤的鮮乳量，喝起來非常順口，受到許多遊客的喜愛！</p>
+                        <p>種植出一片油亮碧綠的鮮美牧草，</p>
+                        <p>飼養著300多頭壯碩健康的荷蘭品種乳牛。</p>
                         <p>午餐時間會發送餐券，建議可以嚐嚐鮮奶饅頭和乳製品等，</p>
                         <p>農場也設有紀念品販售部，替毛孩添加飾品衣物，也可以買些特色商品送親朋好友喔！</p>
                     </div>
                 </div>
-                <div class="row r10">
-                    <div class="pic10"><img src="/Petliday/products/img/pd10.jpg" alt=""></div>
-                    <div class="intro10">
+                <div class="item10">
+                    <div class="pic520"><img src="/Petliday/products/img/pd10.jpg" alt=""></div>
+                    <div class="item-intro">
                         <p>有在農場與寵物們一起玩大地遊戲的經驗嗎？</p>
                         <p>除了乳牛在草原散步、鴕鳥在旁奔跑，在場的我們熱情也不能少啊。</p>
                         <p>毛孩與爸媽準備好了嗎？準備來場難忘的冒險旅程吧！</p>
@@ -316,12 +318,12 @@
         </div>
     </div>
     <div class="white-bg">
-        <div class="container h-100">
+        <div class="container">
             <div class="term w-100">
                 <div class="row justify-content-between align-items-center">
                     <div class="topic">
                         <p>行前準備</p>
-                        <p class="topic-line"></p>
+                        <p class="topic-line-gray"></p>
                     </div>
                     <a>
                         <img src="/Petliday/icon/down.png" alt="">
@@ -366,7 +368,7 @@
                 <div class="row justify-content-between align-items-center">
                     <div class="topic">
                         <p>注意事項</p>
-                        <p class="topic-line"></p>
+                        <p class="topic-line-gray"></p>
                     </div>
                     <a>
                         <img src="/Petliday/icon/down.png" alt="">
@@ -393,7 +395,7 @@
                 <div class="row justify-content-between align-items-center">
                     <div class="topic">
                         <p>取消政策</p>
-                        <p class="topic-line"></p>
+                        <p class="topic-line-gray"></p>
                     </div>
                     <a>
                         <img src="/Petliday/icon/down.png" alt="">
@@ -422,8 +424,398 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="row mb-5">
+                <div class="topic">
+                    <p>行程評價</p>
+                    <p class="topic-line"></p>
+                </div>
+            </div>
+        </div>
+        <div class="container rate pt-0">
+            <div class="rate-scroll">
+                <div class="row">
+                    <div class="rate-card d-flex c1">
+                        <div class="rate-l m-3"><img src="/Petliday/products/img/avatar1.jpg" alt="">
+                        </div>
+                        <div class="rate-r m-2">
+                            <p class="rate-name t-xs mt-3">愛莉師</p>
+                            <p class="rate-title t-m mb-2">台東熱氣球嘉年華</p>
+                            <div class="star d-flex mb-3">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                            </div>
+                            <p class="t-s mb-1">很幸運的看到起飛的景象，超級美的</p>
+                            <p class="t-s mb-1">狂拍照留念，第一站就佔了很多手機記憶體耶</p>
+                            <p class="t-s mb-1">明年想要再帶我們家的小可愛來看！</p>
+                        </div>
+                    </div>
+                    <div class="rate-card d-flex c2">
+                        <div class="rate-l m-3"><img src="/Petliday/products/img/avatar2.jpg" alt="">
+                        </div>
+                        <div class="rate-r m-2">
+                            <p class="rate-name t-xs mt-3">John</p>
+                            <p class="rate-title t-m mb-2">露營區很棒</p>
+                            <div class="star d-flex mb-3">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                            </div>
+                            <p class="t-s mb-1">可以跟三五好友帶著寵物來露營，真的是很棒的體驗</p>
+                            <p class="t-s mb-1">營區還有特別準備寵物的食材，非常貼心！</p>
+                        </div>
+                    </div>
+                    <div class="rate-card d-flex c3">
+                        <div class="rate-l m-3"><img src="/Petliday/products/img/avatar3.jpg" alt="">
+                        </div>
+                        <div class="rate-r m-2">
+                            <p class="rate-name t-xs mt-2">Lily Alien</p>
+                            <p class="rate-title t-m mb-2">六十石山金針花海</p>
+                            <div class="star d-flex mb-3">
+                                <img src="/petliday/icon/star-green.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                            </div>
+                            <p class="t-s mb-1">有非常充裕的時間可以在這裡狂殺底片</p>
+                            <p class="t-s mb-1">這裡實在太美了！</p>
+                            <p class="t-s mb-1">我跟我們家的寵物也陷入網美的世界了 (害羞)</p>
+                        </div>
+                    </div>
+                    <div class="rate-card d-flex c4">
+                        <div class="rate-l m-3"><img src="/Petliday/products/img/avatar4.jpg" alt="">
+                        </div>
+                        <div class="rate-r m-2">
+                            <p class="rate-name t-xs mt-3">蝦哩</p>
+                            <p class="rate-title t-m mb-2">三天兩夜玩得超開心</p>
+                            <div class="star d-flex mb-3">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                            </div>
+                            <p class="t-s mb-1">旅行社真的太貼心了，行程充裕不緊湊。</p>
+                            <p class="t-s mb-1">跟自己的寵物體驗上山下海的行程很難得！</p>
+                            <p class="t-s mb-1">在這裡認識好多狗友們，開心 :)</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="rate-card d-flex c5">
+                        <div class="rate-l m-3"><img src="/Petliday/products/img/avatar5.jpg" alt="">
+                        </div>
+                        <div class="rate-r m-2">
+                            <p class="rate-name t-xs mt-3">木瓜人</p>
+                            <p class="rate-title t-m mb-2">都歷海灘SUP</p>
+                            <div class="star d-flex mb-3">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                            </div>
+                            <p class="t-s mb-1">之前在網路上看到別人分享和狗狗一起衝浪的體驗</p>
+                            <p class="t-s mb-1">想不到今天我實現了！！！</p>
+                            <p class="t-s mb-1">而且有專業教練的帶領，可以非常安心的盡興玩樂！</p>
+                        </div>
+                    </div>
+                    <div class="rate-card d-flex c6">
+                        <div class="rate-l m-3"><img src="/Petliday/products/img/avatar6.jpg" alt="">
+                        </div>
+                        <div class="rate-r m-2">
+                            <p class="rate-name t-xs mt-3">Tom Cat</p>
+                            <p class="rate-title t-m mb-2">住宿與食物</p>
+                            <div class="star d-flex mb-3">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                            </div>
+                            <p class="t-s mb-1">旅行社選的住宿景點，對寵物都是非常的友善</p>
+                            <p class="t-s mb-1">食物也會精心準備，完全不馬虎耶！吃得超開心</p>
+                            <p class="t-s mb-1">CP值超級高的行程，推推</p>
+                        </div>
+                    </div>
+                    <div class="rate-card d-flex c7">
+                        <div class="rate-l m-3"><img src="/Petliday/products/img/avatar7.jpg" alt="">
+                        </div>
+                        <div class="rate-r m-2">
+                            <p class="rate-name t-xs mt-2">柏拉圖</p>
+                            <p class="rate-title t-m mb-2">值得體驗的行程</p>
+                            <div class="star d-flex mb-3">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                            </div>
+                            <p class="t-s mb-1">浮潛真的太棒了，海底的珊瑚礁非常漂亮！</p>
+                            <p class="t-s mb-1">天氣超熱，遊覽車絕對非常適合</p>
+                            <p class="t-s mb-1">搭中巴環七美島，司機時間抓的很充裕，也都會解說</p>
+                        </div>
+                    </div>
+                    <div class="rate-card d-flex c8">
+                        <div class="rate-l m-3"><img src="/Petliday/products/img/avatar8.jpg" alt="">
+                        </div>
+                        <div class="rate-r m-2">
+                            <p class="rate-name t-xs mt-3">Silver Gray</p>
+                            <p class="rate-title t-m mb-2">cp值頗高的單日旅遊</p>
+                            <div class="star d-flex mb-3">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                            </div>
+                            <p class="t-s mb-1">我們這團才6人，所以旅遊品質超棒的啦！</p>
+                            <p class="t-s mb-1">小烏來風景區可以從玻璃天空步道欣賞壯闊的瀑布景觀</p>
+                            <p class="t-s mb-1">導遊大哥一路上很細心為我們解說，體貼友善</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="rate-card d-flex c9">
+                        <div class="rate-l m-3"><img src="/Petliday/products/img/avatar9.jpg" alt="">
+                        </div>
+                        <div class="rate-r m-2">
+                            <p class="rate-name t-xs mt-3">比利獸</p>
+                            <p class="rate-title t-m mb-2">免裝備豪華露營</p>
+                            <div class="star d-flex mb-3">
+                                <img src="/petliday/icon/star-green.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                            </div>
+                            <p class="t-s mb-1">第一次體會豪華露營，真的很不錯，營區環境很舒服</p>
+                            <p class="t-s mb-1">暖東峽谷步道整理的很好，很適合全家大小一起去散步</p>
+                            <p class="t-s mb-1">餐食很用心，吃的很豐盛，有機會會再去住一晚。</p>
+                        </div>
+                    </div>
+                    <div class="rate-card d-flex c10">
+                        <div class="rate-l m-3"><img src="/Petliday/products/img/avatar10.jpg" alt="">
+                        </div>
+                        <div class="rate-r m-2">
+                            <p class="rate-name t-xs mt-3">Pitty Girl</p>
+                            <p class="rate-title t-m mb-2">風景優美</p>
+                            <div class="star d-flex mb-3">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                            </div>
+                            <p class="t-s mb-1">自備食材。環境乾淨舒適。 很棒的懶人露營</p>
+                            <p class="t-s mb-1">提供的備品也都很齊全、設想周到 會推薦朋友來
+                            </p>
+                        </div>
+                    </div>
+                    <div class="rate-card d-flex c11">
+                        <div class="rate-l m-3"><img src="/Petliday/products/img/avatar11.jpg" alt="">
+                        </div>
+                        <div class="rate-r m-2">
+                            <p class="rate-name t-xs mt-2">阿蓉</p>
+                            <p class="rate-title t-m mb-2">汪汪地瓜園控窯</p>
+                            <div class="star d-flex mb-3">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                            </div>
+                            <p class="t-s mb-1">非常愉快的控窯體驗，食材非常的充足</p>
+                            <p class="t-s mb-1">導覽哥哥講解的很生動，朋友都非常踴躍發言</p>
+                            <p class="t-s mb-1">謝謝店家的用心讓我們渡過了愉快的週末！</p>
+                        </div>
+                    </div>
+                    <div class="rate-card d-flex c12">
+                        <div class="rate-l m-3"><img src="/Petliday/products/img/avatar12.jpg" alt="">
+                        </div>
+                        <div class="rate-r m-2">
+                            <p class="rate-name t-xs mt-3">迷唇妹</p>
+                            <p class="rate-title t-m mb-2">麻雀雖小，五臟俱全</p>
+                            <div class="star d-flex mb-3">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                                <img src="/petliday/icon/star-green-fill.png" alt="">
+                            </div>
+                            <p class="t-s mb-1">食材豐盛好吃，環境乾淨舒適。</p>
+                            <p class="t-s mb-1">店家細心解說流程，還預備了許多孩子能參與的活動</p>
+                            <p class="t-s mb-1">環境非常好，腹地廣大，很適合帶毛孩一起去玩樂</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mb-5">
+                <div class="topic">
+                    <p>推薦行程</p>
+                    <p class="topic-line"></p>
+                </div>
+            </div>
+        </div>
+        <!-- 3個一排card -->
+        <div class="container p-0">
+            <div class="row align-items-center">
+                <!-- 左箭頭 -->
+                <a class="arrow m-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.62 51.56" width="20px">
+                        <defs></defs>
+                        <g id="圖層_2" data-name="圖層 2">
+                            <g id="圖層_1-2" data-name="圖層 1">
+                                <path class="cls-4" d="M25.12,51.56a3.52,3.52,0,0,1-2.51-1.06L1,28.22a3.5,3.5,0,0,1,0-4.88L22.61,1.06a3.5,3.5,0,0,1,5,4.88L8.38,25.78,27.64,45.62a3.51,3.51,0,0,1-2.52,5.94Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+                <div class="card c3 col-md m-3 p-0">
+                    <div class="heart">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
+                            <defs></defs>
+                            <g id="圖層_2" data-name="圖層 2">
+                                <g id="圖層_1-2" data-name="圖層 1">
+                                    <path class="cls-5" d="M31.31,65A3.48,3.48,0,0,1,29,64.09C27.9,63.13,3.36,40.49.37,20.86A17,17,0,0,1,0,17.33a16.37,16.37,0,0,1,.13-2A13,13,0,0,1,1.78,9.7,17.34,17.34,0,0,1,31.32,7.07,17.33,17.33,0,0,1,60.89,9.78a12.84,12.84,0,0,1,1.6,5.38,17.22,17.22,0,0,1,.15,2.17,17.42,17.42,0,0,1-.4,3.64C59.17,40.58,34.71,63.13,33.67,64.09A3.48,3.48,0,0,1,31.31,65Zm-14-58A10.39,10.39,0,0,0,8,12.89a1.9,1.9,0,0,1-.2.37,6.13,6.13,0,0,0-.71,2.68.59.59,0,0,1,0,.14A12.15,12.15,0,0,0,7,17.33a10.74,10.74,0,0,0,.23,2.17,1.7,1.7,0,0,1,0,.22c2.07,13.93,18,30.87,24,36.92,6.08-6,21.9-22.92,24-36.84,0-.07,0-.15,0-.23a10.21,10.21,0,0,0,.26-2.24,12.11,12.11,0,0,0-.1-1.34.77.77,0,0,1,0-.15,6,6,0,0,0-.69-2.56c-.07-.11-.13-.23-.19-.34A10.31,10.31,0,0,0,35,17a3.49,3.49,0,0,1-1.56,2.79l-.16.11a3.5,3.5,0,0,1-3.93,0l-.15-.11A3.49,3.49,0,0,1,27.64,17,10.28,10.28,0,0,0,17.33,7Z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-pic w-100">
+                        <img src="/Petliday/products/img/reco1.jpg" alt="">
+                    </div>
+                    <div class="card-text pt-3 pb-1 px-4">
+                        <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
+                        <div class="d-flex justify-content-between">
+                            <div class="info-left d-flex align-items-center">
+                                <div class="star mr-2">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
+                                        <defs>
+                                        </defs>
+                                        <g id="圖層_2" data-name="圖層 2">
+                                            <g id="圖層_1-2" data-name="圖層 1">
+                                                <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
+                                            </g>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <div class="rate text-gray t-m">4.9</div>
+                                <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                            </div>
+                            <div class="info-right pr-2 t-l orange-color">$2680</div>
+                        </div>
+                    </div>
+                    <p class="card-info px-4 t-xs">
+                        簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
+                    </p>
+                </div>
+                <div class="card c3 col-md col-sm-12 m-3 p-0">
+                    <div class="heart">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
+                            <defs></defs>
+                            <g id="圖層_2" data-name="圖層 2">
+                                <g id="圖層_1-2" data-name="圖層 1">
+                                    <path class="cls-5" d="M31.31,65A3.48,3.48,0,0,1,29,64.09C27.9,63.13,3.36,40.49.37,20.86A17,17,0,0,1,0,17.33a16.37,16.37,0,0,1,.13-2A13,13,0,0,1,1.78,9.7,17.34,17.34,0,0,1,31.32,7.07,17.33,17.33,0,0,1,60.89,9.78a12.84,12.84,0,0,1,1.6,5.38,17.22,17.22,0,0,1,.15,2.17,17.42,17.42,0,0,1-.4,3.64C59.17,40.58,34.71,63.13,33.67,64.09A3.48,3.48,0,0,1,31.31,65Zm-14-58A10.39,10.39,0,0,0,8,12.89a1.9,1.9,0,0,1-.2.37,6.13,6.13,0,0,0-.71,2.68.59.59,0,0,1,0,.14A12.15,12.15,0,0,0,7,17.33a10.74,10.74,0,0,0,.23,2.17,1.7,1.7,0,0,1,0,.22c2.07,13.93,18,30.87,24,36.92,6.08-6,21.9-22.92,24-36.84,0-.07,0-.15,0-.23a10.21,10.21,0,0,0,.26-2.24,12.11,12.11,0,0,0-.1-1.34.77.77,0,0,1,0-.15,6,6,0,0,0-.69-2.56c-.07-.11-.13-.23-.19-.34A10.31,10.31,0,0,0,35,17a3.49,3.49,0,0,1-1.56,2.79l-.16.11a3.5,3.5,0,0,1-3.93,0l-.15-.11A3.49,3.49,0,0,1,27.64,17,10.28,10.28,0,0,0,17.33,7Z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-pic w-100">
+                        <img src="/Petliday/products/img/reco2.jpg" alt="">
+                    </div>
+                    <div class="card-text pt-3 pb-1 px-4">
+                        <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
+                        <div class="d-flex justify-content-between">
+                            <div class="info-left d-flex align-items-center">
+                                <div class="star mr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
+                                        <g id="圖層_2" data-name="圖層 2">
+                                            <g id="圖層_1-2" data-name="圖層 1">
+                                                <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
+                                            </g>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <div class="rate text-gray t-m">4.9</div>
+                                <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                            </div>
+                            <div class="info-right pr-2 t-l orange-color">$2680</div>
+                        </div>
+                    </div>
+                    <p class="card-info px-4 t-xs">
+                        簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
+                    </p>
+                </div>
+                <div class="card c3 col-md col-sm-12 m-3 p-0">
+                    <div class="heart">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
+                            <defs></defs>
+                            <g id="圖層_2" data-name="圖層 2">
+                                <g id="圖層_1-2" data-name="圖層 1">
+                                    <path class="cls-5" d="M31.31,65A3.48,3.48,0,0,1,29,64.09C27.9,63.13,3.36,40.49.37,20.86A17,17,0,0,1,0,17.33a16.37,16.37,0,0,1,.13-2A13,13,0,0,1,1.78,9.7,17.34,17.34,0,0,1,31.32,7.07,17.33,17.33,0,0,1,60.89,9.78a12.84,12.84,0,0,1,1.6,5.38,17.22,17.22,0,0,1,.15,2.17,17.42,17.42,0,0,1-.4,3.64C59.17,40.58,34.71,63.13,33.67,64.09A3.48,3.48,0,0,1,31.31,65Zm-14-58A10.39,10.39,0,0,0,8,12.89a1.9,1.9,0,0,1-.2.37,6.13,6.13,0,0,0-.71,2.68.59.59,0,0,1,0,.14A12.15,12.15,0,0,0,7,17.33a10.74,10.74,0,0,0,.23,2.17,1.7,1.7,0,0,1,0,.22c2.07,13.93,18,30.87,24,36.92,6.08-6,21.9-22.92,24-36.84,0-.07,0-.15,0-.23a10.21,10.21,0,0,0,.26-2.24,12.11,12.11,0,0,0-.1-1.34.77.77,0,0,1,0-.15,6,6,0,0,0-.69-2.56c-.07-.11-.13-.23-.19-.34A10.31,10.31,0,0,0,35,17a3.49,3.49,0,0,1-1.56,2.79l-.16.11a3.5,3.5,0,0,1-3.93,0l-.15-.11A3.49,3.49,0,0,1,27.64,17,10.28,10.28,0,0,0,17.33,7Z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-pic w-100">
+                        <img src="/Petliday/products/img/reco3.jpg" alt="">
+                    </div>
+                    <div class="card-text pt-3 pb-1 px-4">
+                        <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
+                        <div class="d-flex justify-content-between">
+                            <div class="info-left d-flex align-items-center">
+                                <div class="star mr-2">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
+                                        <defs></defs>
+                                        <g id="圖層_2" data-name="圖層 2">
+                                            <g id="圖層_1-2" data-name="圖層 1">
+                                                <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
+                                            </g>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <div class="rate text-gray t-m">4.9</div>
+                                <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                            </div>
+                            <div class="info-right pr-2 t-l orange-color">$2680</div>
+                        </div>
+                    </div>
+                    <p class="card-info px-4 t-xs">
+                        簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
+                    </p>
+                </div>
+                <!-- 右箭頭 -->
+                <a class="arrow m-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.62 51.56" width="20px">
+                        <defs></defs>
+                        <g id="圖層_2" data-name="圖層 2">
+                            <g id="圖層_1-2" data-name="圖層 1">
+                                <path class="cls-4" d="M3.5,51.56A3.5,3.5,0,0,1,1,45.62L20.25,25.78,1,5.94A3.5,3.5,0,0,1,6,1.06L27.64,23.34a3.52,3.52,0,0,1,0,4.88L6,50.5A3.51,3.51,0,0,1,3.5,51.56Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </div>
-    </div>
+    <!-- white-bg -->
 </main>
 
 <!-- ------------------ body結束 ------------------ -->
@@ -433,9 +825,22 @@
 <script src="/petliday/products/calendar.js"></script>
 
 <!-- // ------JS開始 以上誤刪------- -->
-
-
-
+<script>
+    $('.c3').on('mouseenter', function() {
+        $(this).find('.card-pic').css('height', '135px');
+        $(this).find('.card-info').css({
+            'opacity': '1',
+            'height': '10px',
+        });
+    });
+    $('.c3').on('mouseleave', function() {
+        $(this).find('.card-pic').css('height', '175px')
+        $(this).find('.card-info').css({
+            'opacity': '0',
+            'height': '0',
+        });
+    });
+</script>
 <!-- // ------JS結束 誤刪到------- -->
 
 <?php include __DIR__ . '/../parts/html-foot.php' ?>
