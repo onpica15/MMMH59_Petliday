@@ -9,7 +9,6 @@
 
   .login .close span {
     font-size: 2.5rem;
-    /* color: #49322D; */
     padding-right: 10px;
 }
 
@@ -19,6 +18,12 @@
     height: 550px;
     background-color: rgb(253, 251, 251);
 }
+
+/* @media (max-width: 767.98px){
+    .login-form{
+        width: 450px;
+    }
+} */
 
 .login-form h2{
     color: #333;
@@ -112,7 +117,6 @@
 .scroll-top{
     display: block;
     font-size: 30px;
-    color: #148F7C;
     position: fixed;
     bottom: 5vh;
     right: 5vh;
@@ -120,3 +124,4 @@
     opacity: 0;
     transition: 1s;
 }
+

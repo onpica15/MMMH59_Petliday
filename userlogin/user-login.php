@@ -26,8 +26,8 @@
 </div>
 
 <!-- Model -->
-<div class="container">
-  <div class="row">
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="login">
       <button data-dismiss="modal" class="close">
         <span aria-hidden="true">×</span>
@@ -63,9 +63,9 @@
         </div>
 
         <div class="login-other">
-          <a href="">免費註冊</a>
+          <a href="login-petliday.php">免費註冊</a>
           <span>｜</span>
-          <a href="">忘記密碼？</a>
+          <a href="errorpassword.php">忘記密碼？</a>
         </div>
 
       </form>
@@ -73,13 +73,10 @@
   </div>
 </div>
 
-<div class="scroll-top">
-  <i class="fas fa-chevron-circle-up"></i>
-</div>
 
 <!-- scroll-top -->
 <div class="scroll-top">
-  <i class="fas fa-chevron-circle-up"></i>
+  <i class="fas fa-chevron-circle-up" style="color: #148F7C;"></i>
 </div>
 <!-- 範例 -->
 
