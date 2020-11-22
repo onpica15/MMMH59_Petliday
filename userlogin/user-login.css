@@ -2,17 +2,20 @@
     outline: 1px solid red;
   } */
 
-.login{
+/* .login{
     border-top:15px solid #FFC072;
     border-radius: 3px;
-  }
+  } */
 
-  .login .close span {
+
+.login .close span {
     font-size: 2.5rem;
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 .login-form{
+    border-top:15px solid #FFC072;
+    border-radius: 3px;
     padding-top: 50px;
     width: 500px;
     height: 550px;
