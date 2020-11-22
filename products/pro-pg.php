@@ -68,8 +68,10 @@
         <div class="top-wrap select">
             <div class="top d-flex justify-content-between align-items-center">
                 <div class="top-left">
-                    <p class="topic">選擇日期、數量</p>
-                    <div class="topic-line"></div>
+                    <div class="topic">
+                        <p>選擇日期、數量</p>
+                        <p class="topic-line"></p>
+                    </div>
                 </div>
                 <div class="top-right d-flex">
                     <div class="reset mr-2">

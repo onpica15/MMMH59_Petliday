@@ -73,6 +73,33 @@ body{
     text-align: center;
     line-height: 44px;
     margin: 8px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+.form-control{
+    background-color: #f2eee8;
+}
+.order label{
+    width: 80px;
+    margin: 0;
+}
+.order select{
+    width: 150px;
+}
+/* 共用標題 */
+.topic p{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    width: 150px;
+    text-align: center;
+}
+.topic-line{
+    height: 4px;
+    width: 150px;
+    border-radius: 2px;
+    background-color: #ffa12c;
+    margin-top: -10px;
 }
 /* prod card 公版三個一排 */
 
@@ -165,4 +192,32 @@ body{
             opacity: 0;
             position: absolute;
         }
+        /* card RWD */
+    }
+    .page-list{
+        list-style: none;
+        margin: 20px auto;
+        /* margin: 50px 470px; */
+    }
+    .pages{
+        width: 50px;
+        height: 50px;
+        background-color: #f2eee8;
+        font-size: 16px;
+        text-align: center;
+        line-height: 50px;
+        margin: 5px;
+        border-radius: 3px;
+        border: 1px solid #ffa12c;
+    }
+    .pages-link{
+        color: #3c2e26;
+    }
+    .arrow-page{
+        width: 8px;
+        margin: 0 auto;
+    }
+    .arrow-page img{
+        width: 100%;
+        object-fit: contain;
     }

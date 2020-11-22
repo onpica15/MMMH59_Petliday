@@ -101,6 +101,9 @@ background-color: #fff;
     line-height: 60px;
 }
 /* 選擇方案區塊--------------------------- */
+.input-group-prepend{
+    background-color: #eee;
+}
 .select{
     height: 765px;
     margin: 60px auto 0;
@@ -117,11 +120,7 @@ background-color: #fff;
     padding:80px 80px 10px;
 }
 .topic-line{
-    width: 160px;
-    height: 3px;
-    border-radius: 1.5px;
-    background-color: #ffa12c;
-    margin-top: -10px;
+   
 }
 .topic-line-gray{
     width: 160px;
@@ -260,12 +259,12 @@ background-color: #fff;
     width: 150px;
     text-align: center;
 }
-
 .topic-line{
     height: 4px;
     width: 150px;
     border-radius: 2px;
     background-color: #ffa12c;
+    margin-top: -10px;
 }
 /* 介紹內文 */
 .day-text{
