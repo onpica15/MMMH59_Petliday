@@ -113,5 +113,6 @@ footer {
   font-size: 10px;
 }
 
-
-
+.t-bold {
+  font-weight: 500;
+}

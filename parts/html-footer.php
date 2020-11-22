@@ -13,7 +13,7 @@
           <p class="text-gray t-xs">每週分享寵物資訊，時刻保持最新資訊</p>
         </div>
 
-        <div class=" col-8 col-lg-4 ">
+        <div class=" col-10 col-lg-4 ">
           <div class=" input-group mb-3">
             <input type="text" class="form-control" placeholder="輸入電子信箱收取優惠" aria-label="Recipient's username" aria-describedby="button-addon2" id="email-input">
             <div class="input-group-append">
