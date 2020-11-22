@@ -2,22 +2,7 @@
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <!-- --- css 連結放下面 ----- -->
 <style>
-  .card-info {
-    background-color: #ccc;
-    border-radius: 20px;
-  }
 
-  .card-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-  }
-
-  .img {
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
-  }
 </style>
 
 
@@ -43,18 +28,7 @@
   <button class="btn">測試 class='btn'</button>
 
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col-4 card-info">
-      <div class="card-img">
-        <img src="./img/avatar-1" alt="">
-      </div>
-      <div class="camera-icon"> <a href="#"></a>
-      </div>
-      <p>id</p>
-    </div>
-  </div>
-</div>
+
 
 
 

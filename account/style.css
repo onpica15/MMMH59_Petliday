@@ -17,12 +17,12 @@
 #acount {
   width: 100%;
   height: 100%;
-  background-color: #f2f2f2;
   margin-top: 8vh;
+  background-color: #f2f2f2;
   border-radius: 25px 25px 0 0;
 }
 
-#member-list {
+#list-title {
   min-height: 300px;
   background-color: #fff;
   border-radius: 3px 30px 3px 3px;
@@ -36,7 +36,7 @@
 }
 
 .member-card {
-  position: relative;
+  /* position: relative; */
 }
 
 .member-img {
@@ -46,7 +46,7 @@
 
   overflow: hidden;
 
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 15%;
 }
@@ -83,6 +83,7 @@
   z-index: 2;
   color: #ffa12c;
   background-color: #f2f2f2;
+  border: rgba(200, 200, 200, 0.5);
   border-left: 3px solid #ffa12c;
 }
 
@@ -101,6 +102,10 @@
   border-bottom: 2px solid #f2f2f2;
 }
 
+#pet-info h6 {
+  margin-bottom: 20px;
+}
+
 #page-icon a {
   width: 28px;
   height: 28px;
@@ -115,4 +120,70 @@
   position: absolute;
   left: 70%;
   top: 90%;
+}
+
+.btn-search {
+  color: #fff;
+  width: 80px;
+  background-color: #00907c;
+  border-radius: 50px;
+}
+
+/* order-list */
+.list-order {
+  border-bottom: 2px solid #ccc;
+}
+.prod-box {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px 30px 3px 3px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+.prod-img {
+  width: 140px;
+  /* min-width: 64px; */
+  height: 140px;
+  /* min-height: 64px; */
+}
+.prod-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.prod-text {
+  max-width: 500px;
+  min-width: 200px;
+}
+
+.prod-text h5 {
+  line-height: 25px;
+}
+
+.change-date {
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+.change-btn {
+  width: 50;
+  height: 50px;
+  padding: 10px;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prod-price {
+  padding: 0;
+  margin-left: auto;
+}
+
+/* rwd */
+@media (max-width: 991.98px) {
+  .member-img {
+  }
 }

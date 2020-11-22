@@ -8,43 +8,42 @@
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 <section id="acount">
     <div class="container">
-        <div class="row my-5"></div>
+        <div class="row my-4"></div>
     </div>
-    <!-- aside-bar 側邊攔 -->
     <div class="container">
-        <div class="row ">
-            <div class="col-3 aside-bar">
-                <h2 class="list-group-item text-center t-xxl">會員中心</h2>
+        <div class="row">
+            <!-- aside-bar 側邊攔 -->
+
+            <div class="col-12 col-lg-3 aside-bar">
+                <h2 class="text-center t-xxl">會員中心</h2>
 
                 <div class="list-group text-center t-l" id="list-tab" role="tablist">
-
-                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">會員資料</a>
-
-                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-order" role="tab" aria-controls="messages">我的訂單</a>
-
-                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-wishlist" role="tab" aria-controls="profile">願望清單</a>
-
-                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-mailbox" role="tab" aria-controls="settings">會員信箱</a>
-
-                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-coupon" role="tab" aria-controls="settings">優惠券</a>
-
-                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-qa" role="tab" aria-controls="settings">Q&A</a>
+                    <a class="list-group-item list-group-item-action active" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">會員資料</a>
+                    <a class="list-group-item list-group-item-action" id="list-order-list" data-toggle="list" href="#list-order" role="tab" aria-controls="order">我的訂單</a>
+                    <a class="list-group-item list-group-item-action" id="list-wish-list" data-toggle="list" href="#list-wish" role="tab" aria-controls="wishlist">願望清單</a>
+                    <a class="list-group-item list-group-item-action" id="list-mailbox-list" data-toggle="list" href="#list-mailbox" role="tab" aria-controls="mailbox">會員信箱</a>
+                    <a class="list-group-item list-group-item-action" id="list-coupon-list" data-toggle="list" href="#list-coupon" role="tab" aria-controls="coupon">優惠券</a>
+                    <a class="list-group-item list-group-item-action" id="list-qa-list" data-toggle="list" href="#list-qa" role="tab" aria-controls="qa">Q&A</a>
                 </div>
             </div>
+            <!-- endof  aside-bar 側邊攔 -->
 
-            <!-- 會員資料 -->
-
-            <div class="col-9">
+            <!-- aside-bar點出的內容 -->
+            <div class="col-12 col-lg-9">
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="list-profile" role="tabpanel" aria-labelledby="list-home-list">
-                        <div class="col mb-3 " id="member-list">
-                            <div class="row pt-3 p-2">
-                                <div class="line mr-2"></div>
-                                <h4 class="t-xxl">會員資料</h4>
+                    <!-- list-profile 會員資料 -->
+                    <div class="tab-pane fade show active" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                        <!-- 會員資料 -->
+                        <div class="container mb-3" id="list-title">
+                            <div class="row  mb-3">
+                                <div class="d-flex pt-3 p-4">
+                                    <div class="line mr-2"></div>
+                                    <h4 class="t-xxl">會員資料</h4>
+                                </div>
                             </div>
-                            <div class="row">
-                                <div class="col-4 member-card ">
-                                    <div class="member-img ">
+                            <div class="row member-info">
+                                <div class="col-12 col-lg-4 position-relative member-card ">
+                                    <div class="member-img   position-absolute">
                                         <img src="./img/avatar-1.jpg" alt="">
 
                                     </div>
@@ -56,7 +55,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-12 col-lg-8">
                                     <form>
                                         <div class="form-group row">
                                             <label for="staticEmail" class="col-sm-2 col-form-label">姓名</label>
@@ -93,11 +92,9 @@
 
                             </div>
                         </div>
-
                         <!-- 寵物資料 -->
-
                         <div class="col mb-3" id="pet-list">
-                            <div class="row pt-3 p-2">
+                            <div class="row pt-3 p-4">
                                 <div class="line mr-2"></div>
                                 <h4 class="t-xxl ">寵物資料</h4>
                             </div>
@@ -195,67 +192,84 @@
                             </div>
                         </div>
 
-
                     </div>
-                    <!--  list-order 我的訂單-->
-                    <div class="tab-pane fade" id="list-order" role="tabpanel" aria-labelledby="list-messages-list">
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="list-profile" role="tabpanel" aria-labelledby="list-home-list">
-                                <div class="col mb-3 " id="member-list">
-                                    <div class="row pt-3 p-2">
-                                        <div class="line mr-2"></div>
-                                        <h4 class="t-xxl">我的訂單</h4>
-                                    </div>
-                                    <div class="row ">
-                                        <div class="col-4 ">
-                                            <div class="member-img">
-                                                <img src="./img/avatar-1.jpg" alt="">
-                                            </div>
-                                            <div class="member-id ">
-                                                ID:pity0507
+                    <!-- endof list-profile -->
+
+                    <!-- list-order 我的訂單 -->
+                    <div class="tab-pane fade" id="list-order" role="tabpanel" aria-labelledby="list-order-list">
+                        <div class="container mb-3" id="list-title">
+                            <div class="row  mb-3">
+                                <div class="d-flex pt-3 p-4">
+                                    <div class="line mr-2"></div>
+                                    <h4 class="t-xxl">我的訂單</h4>
+                                </div>
+                            </div>
+                            <div class="row search-br">
+                                <div class="col">
+                                    <input class="" type="search" placeholder="搜索歷史清單" aria-label="Search">
+                                    <button class="btn-search" type="submit">go</button>
+                                </div>
+                            </div>
+                            <div class="row prod-box d-flex align-items-center">
+                                <div class="prod-img col-2 col-lg-4">
+                                    <img src="../products/img/pd6.jpg" alt="">
+                                </div>
+                                <!-- brod-box>text -->
+                                <div class="col-10 col-lg-8 prod-text d-flex flex-column justify-content-center">
+                                    <h5 class="t-l title1-m">標題標題標題標題標題標題標題標題題標題標題</h5>
+                                    <h6 class="t-m title1-m">方案類型:恆春二日遊</h6>
+                                    <div class="row">
+                                        <div class="col small-text align-self-start">
+                                            <h6 class=" text-gray t-s">2020/08/12 pm 6:00</h6>
+                                            <div class="col prod-price d-flex align-items-center align-self-end">
+                                                <h5 class="t-m">NT$ 3000</h5>
                                             </div>
                                         </div>
-                                        <div class="col-8">
-                                            <form>
-                                                <div class="form-group row">
-                                                    <label for="staticEmail" class="col-sm-2 col-form-label ">姓名</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="黎小霈">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label for="staticEmail" class="col-sm-2 col-form-label">生日</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="1996/08/24">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="pity0824@gmail.com">
-                                                    </div>
-                                                </div>
-                                            </form>
+                                    </div>
+
+                                    <div class=" mt-4 change-date">
+                                        <div class=" d-flex green-color t-s">
+                                            已完成
                                         </div>
                                     </div>
-                                    <div class="row justify-content-end">
-                                        <button class="btn">資料編輯</button>
-                                        <button class="btn">密碼更改</button>
+
+                                    <div class="col-10 col-lg-4 prod-edit">
+                                        <button class="btn">訂單評論</button>
+                                        <button class="btn">訂單明細</button>
 
                                     </div>
                                 </div>
+                                <!-- endof brod-box>text -->
+
                             </div>
-
-                            <div class="tab-pane fade" id="list-wishlist" role="tabpanel" aria-labelledby="list-profile-list">list-wishlist</div>
-
-                            <div class="tab-pane fade" id="list-mailbox" role="tabpanel" aria-labelledby="list-settings-list">list-mailbox</div>
-
-                            <div class="tab-pane fade" id="list-coupon" role="tabpanel" aria-labelledby="list-settings-list">list-coupon</div>
-
-                            <div class="tab-pane fade" id="list-qa" role="tabpanel" aria-labelledby="list-settings-list">list-coupon</div>
                         </div>
                     </div>
+
+                    <!-- endof list-order 我的訂單 -->
+
+                    <div class="tab-pane fade" id="list-wish" role="tabpanel" aria-labelledby="list-wish-list">願望清單
+                    </div>
+                    <div class="tab-pane fade" id="list-mailbox" role="tabpanel" aria-labelledby="list-mailbox-list">會員信箱
+
+                    </div>
+                    <div class="tab-pane fade" id="list-coupon" role="tabpanel" aria-labelledby="list-coupon-list">優惠券
+
+                    </div>
+                    <div class="tab-pane fade" id="list-qa" role="tabpanel" aria-labelledby="list-qa-list">Q&A
+
+                    </div>
                 </div>
+            </div>
+            <!-- endof aside-bar點出的內容 -->
+
+        </div>
+
+
+
+
+
+
+    </div>
 </section>
 
 
