@@ -1,8 +1,3 @@
-
-.cls-3{
-    fill:#fff;
-    opacity: .6;
-}
 main{
     background-color: #f2eee8;
 }
@@ -106,6 +101,9 @@ background-color: #fff;
     line-height: 60px;
 }
 /* 選擇方案區塊--------------------------- */
+.input-group-prepend{
+    background-color: #eee;
+}
 .select{
     height: 765px;
     margin: 60px auto 0;
@@ -122,10 +120,13 @@ background-color: #fff;
     padding:80px 80px 10px;
 }
 .topic-line{
+   
+}
+.topic-line-gray{
     width: 160px;
     height: 3px;
     border-radius: 1.5px;
-    background-color: #ffa12c;
+    background-color: #ccc;
     margin-top: -10px;
 }
 .select-wrap{
@@ -194,7 +195,7 @@ background-color: #fff;
 
 .bg-dog{
     /* padding: 300px; */
-    height: 5200px;
+    height: 5300px;
     background: linear-gradient( rgba(242,238,232,.5), rgba(242,238,232,.5)),url(./img/pg-dog.svg) 0 150px no-repeat;
     background-size: contain;
     overflow: hidden;
@@ -214,12 +215,12 @@ background-color: #fff;
     font-weight: 500;
     letter-spacing: 1px;
 }
-.btn-cate-left{
-    /* border-radius: 0 0 0 80px; */
-}
-.btn-cate-right{
-    /* border-radius: 0 0 80px; */
-}
+/* .btn-cate-left{
+    border-radius: 0 0 0 80px;
+} */
+/* .btn-cate-right{
+    border-radius: 0 0 80px;
+} */
 .day123-fix{
     position: relative;
 }
@@ -250,6 +251,7 @@ background-color: #fff;
     top: 100px;
     right: 295px;
 }
+/* 共用標題 */
 .topic p{
     font-size: 18px;
     font-weight: 500;
@@ -257,32 +259,98 @@ background-color: #fff;
     width: 150px;
     text-align: center;
 }
-
 .topic-line{
     height: 4px;
     width: 150px;
     border-radius: 2px;
     background-color: #ffa12c;
+    margin-top: -10px;
 }
-
+/* 介紹內文 */
 .day-text{
     font-size: 24px;
 }
+.item-intro p{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.pic520{
+    width: 520px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.pic520 img{
+    width: 100%;
+    object-fit: cover;
+}
+.pic420{
+    width: 420px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.pic420 img{
+    width: 100%;
+    object-fit: cover;
+}
+.pic580{
+    width: 580px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.pic580 img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.item1{
+    margin: 80px 0 0 150px;
+}
+.item2{
+margin: -60px 0 0 700px;
+}
+.item3{
+    margin: -150px 0 0;
+}
+.item4{
+    margin: 80px 0 0 60px;
+}
+.item5{
+    margin: -250px 0 0 550px;
+}
+.item6{
+    margin: -80px 0 0;
+}
+.item7{
+    margin: -80px 0 0 500px;
+}
+.item8{
+    margin: 80px 0 0;
+}
+.item9{
+    margin: -250px 0 0 700px;
+}
+.item10{
+    margin: -50px 0 0 80px;
+}
+
 /* white bg */
 .white-bg{
-    height: 3600px;
+    height: 3100px;
     /* background-color: rgba(255,255,255,.5); */
-    background: url(./img/white-bg.svg) 0 200px no-repeat, linear-gradient( rgba(255,255,255,.5), rgba(255,255,255,.5));,;
+    background: url(./img/white-bg.svg) 0 200px no-repeat, linear-gradient( rgba(255,255,255,.5), rgba(255,255,255,.5));
     background-size: contain;
 }
 .white-bg .container{
     padding-top: 100px;
 }
+.main-c{
+    overflow: hidden;
+}
 .term{
     background-color: #fff;
     height: 350px;
     border-radius: 3px 30px 3px 3px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     box-shadow: 1px 2px 20px #eee;
     padding: 50px 80px;
 }
@@ -300,4 +368,162 @@ background-color: #fff;
 }
 .hidden{
     display: none;
+}
+/* 評論區 */
+.rate{
+    overflow: auto;
+}
+.rate-scroll .row{
+    width: 3000px;
+}
+.rate-card{
+    width: 500px;
+    height: 260px;
+    background-color: rgba(255,255,255,.8);
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 20px #eee;
+}
+.rate-l{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.rate-l img{
+    width: 100%;
+    object-fit: cover;
+}
+.star img{
+    margin-right: 3px;
+  }
+
+  /* 卡片位置個別 */
+  .c1{
+      margin: 30px 0 0 200px;
+  }
+  .c2{
+      margin: 150px 0 0 100px;
+  }
+  .c3{
+      margin: 0 0 0 -80px;
+  }
+  .c4{
+      margin: 30px 0 0 200px;
+  }
+  .c5{
+      margin: -150px 0 0 0;
+  }
+.c6{
+    margin: 50px 0 0 150px;
+}
+.c7{
+    margin: -80px 0 0 400px;
+}
+.c8{
+    margin: -200px 0 0 300px;
+}
+.c9{
+    margin: -100px 0 0 100px;
+}
+.c10{
+    margin: -150px 0 0 500px;
+}
+.c11{
+    margin: -160px 0 0 250px;
+}
+.c12{
+    margin: -80px 0 0 100px;
+}
+/* recommand區域 */
+/* 3個一排card css start------------------------------------- */
+.cls-3 {
+    fill: #00907c;
+}
+
+/* lighr-gray */
+.cls-4 {
+    fill: #ccc;
+}
+
+/* red */
+.cls-5 {
+    fill: #e03d2d;
+}
+
+.card {
+    width: 296px;
+    height: 295px;
+    border: none;
+    box-shadow: 1px 2px 8px rgba(200, 200, 200, .5);
+    position: relative;
+    transition: .5s;
+}
+
+.card .p {
+    margin-bottom: 6px;
+}
+
+.heart {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    opacity: .8;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 50%;
+    padding: 6px 8.5px;
+}
+
+.card-pic {
+    height: 175px;
+    border-radius: 3px 3px 50px 3px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card-pic img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-text h6 {
+    line-height: 23px;
+}
+
+.card-info {
+    opacity: 0;
+    height: 0;
+}
+
+.rate-all {
+    letter-spacing: 0.5px;
+}
+
+@media(max-width: 400px) {
+    .card {
+        width: 266px;
+        height: 300px;
+        border: none;
+        box-shadow: 1px 2px 8px rgba(200, 200, 200, .5);
+        position: relative;
+        margin: 20px auto !important;
+    }
+
+    .card-pic {
+        width: 100%;
+        height: 175px;
+        border-radius: 3px 3px 40px 3px;
+        overflow: hidden;
+    }
+    .arrow {
+        opacity: 0;
+        position: absolute;
+    }
+}
+/* 3個一排card css end------------------------------------- */
+/* footer-box */
+.footer-box{
+    margin-top: 0;
 }

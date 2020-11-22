@@ -1,9 +1,6 @@
 <?php include __DIR__ . '/../parts/config.php' ?>
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <link rel="stylesheet" href="../css/all-style.css">
-<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 <style>
     .cls-3 {
@@ -53,10 +50,10 @@
         transition: .5s;
     }
 
-    .card-pic:hover {
-        /* height: 125px; */
-        /* transform: translateY(-50px); */
-    }
+    /* .card-pic:hover {
+        height: 125px;
+        transform: translateY(-50px);
+    } */
 
     .c2 {
         height: 330px;
@@ -66,9 +63,10 @@
         height: 235px;
     }
 
+    /* 
     .c2 .card-pic:hover {
-        /* height: 185px; */
-    }
+        height: 185px;
+    } */
 
     .c2 .info {
         display: flex;
@@ -83,9 +81,9 @@
         border-radius: 3px 3px 40px 3px;
     }
 
-    .c4 .card-pic:hover {
-        /* height: 90px; */
-    }
+    /* .c4 .card-pic:hover {
+        height: 90px;
+    } */
 
     .c4 .heart {
         top: 10px;

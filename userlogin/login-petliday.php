@@ -29,7 +29,7 @@
 <div class="container">
   <div class="row">
     <div class="login">
-      <button data-dismiss="modal" class="close">
+      <button data-dismiss="modal" class="close" >
         <span aria-hidden="true">×</span>
       </button>
 
@@ -47,7 +47,7 @@
           <div class="text-or">或</div>
         </div>
 
-        <h2 class="t-xl">Petliday會員登入</h2>
+        <h2 class="t-xl">免費註冊</h2>
         <div class="login-group">
           <!-- <label for="account">帳號</label> -->
           <input type="text" class="form-control" id="account" name="account" placeholder="電子信箱">
@@ -59,13 +59,13 @@
         </div>
 
         <div class="login-group-2">
-          <button class="login-btn btn">登入</button>
+          <button class="login-btn btn">註冊</button>
         </div>
 
         <div class="login-other">
-          <a href="">免費註冊</a>
+          <a href="">Petliday會員登入</a>
           <span>｜</span>
-          <a href="">忘記密碼？</a>
+          <a href="">尚未收到驗證信？</a>
         </div>
 
       </form>
@@ -73,14 +73,8 @@
   </div>
 </div>
 
-<div class="scroll-top">
-  <i class="fas fa-chevron-circle-up"></i>
-</div>
+<dialog></dialog>
 
-<!-- scroll-top -->
-<div class="scroll-top">
-  <i class="fas fa-chevron-circle-up"></i>
-</div>
 <!-- 範例 -->
 
 
@@ -94,22 +88,7 @@
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
   // ------JS開始 以上勿刪-------
-  $(".scroll-top").click(function() {
-    $("html,body").animate({
-      "scrollTop": ""
-    })
-    n = 1
-  })
 
-  $(window).scroll(function() {
-    if ($(window).scrollTop() <= $(".login").offset().top) {
-      $(".scroll-top").css('opacity', '0');
-    } else {
-      $(".scroll-top").css('opacity', '1');
-    }
-  });
-
-  AOS.init();
 
 
   // ------JS結束 勿刪到-------
