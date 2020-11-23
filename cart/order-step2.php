@@ -107,23 +107,17 @@
                         <label class="text-color t-s label-all " name="cardDatecardDate">信用卡有效日期： &nbsp;<span class="danger-color">*</span></label><br>
                         <div class="row">
                           <div class="col-8 d-flex flex-row">
-<<<<<<< Updated upstream
+
                             <input id="cardDateM" class="col-6 col-lg-4 form-input mr-3" type="text" name="cardDateMM" placeholder="MM" required>
-=======
-                            <input id="cardDate" class="col-6 col-lg-4 form-input mr-3" type="text" name="cardDateMM" placeholder="MM" required>
->>>>>>> Stashed changes
+
                             <input id="cardDateY" class="col-6 col-lg-4 form-input" type="text" name="cardDateYY" placeholder="YY" required>
                           </div>
                         </div>
                       </div>
                       <div class="col-12 col-lg-6  one-form mb-5">
-<<<<<<< Updated upstream
                         <label class="text-color t-s label-all " name="cardCVC" for="cardCVC">信用卡背面三碼：&nbsp; <span class="danger-color">*</span></label><br>
                         <input class="form-input" type="text" name="cardCVC" placeholder="CVC" id="cardCVC" required>
-=======
-                        <label class="text-color t-s label-all " name="surname" for="">信用卡被後三碼：&nbsp; <span class="danger-color">*</span></label><br>
-                        <input class="form-input" type="text" name="surname" placeholder="CVC" required>
->>>>>>> Stashed changes
+
                       </div>
                     </div>
                   </div>
