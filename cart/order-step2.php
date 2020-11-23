@@ -11,10 +11,10 @@
     <div class="col-12">
       <div class="row d-flex justify-content-center">
         <div class="col-11 col-lg-8 step-box d-flex">
-          <div class="step step1 active">
-            <div class="step-title t-m active">
+          <div class="step step1 ">
+            <div class="step-title t-m ">
               <span>
-                <svg id="food-icon" class="active" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.03 39.5">
+                <svg id="food-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.03 39.5">
                   <path id="Path_443" data-name="Path 443" class="cls-222" d="M36.25,20a19.87,19.87,0,0,0-24.49,0,12.53,12.53,0,0,0-5.34,9.47C6.42,35.63,13.16,39.5,24,39.5s17.59-3.86,17.59-10.08A12.56,12.56,0,0,0,36.25,20Z" />
                   <path id="Path_444" data-name="Path 444" class="cls-222" d="M24.06,13.15A6.6,6.6,0,1,0,16.72,6.6,7,7,0,0,0,24.06,13.15Z" />
                   <path id="Path_445" data-name="Path 445" class="cls-222" d="M47.6,11.14a8.1,8.1,0,0,0-8.77-5.06,6,6,0,0,0-4.69,8.12,7.88,7.88,0,0,0,3.5,4.07,8.05,8.05,0,0,0,4,1.1,7.45,7.45,0,0,0,1.25-.11A6,6,0,0,0,48,12.51a6.54,6.54,0,0,0-.37-1.38Z" />
@@ -23,10 +23,10 @@
               </span> 旅客明細
             </div>
           </div>
-          <div class="step step2 ">
-            <div class="step-title t-m ">
+          <div class="step step2 step-active">
+            <div class="step-title t-m active">
               <span>
-                <svg id="food-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.03 39.5">
+                <svg id="food-icon" class="active" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.03 39.5">
                   <path id="Path_443" data-name="Path 443" class="cls-222" d="M36.25,20a19.87,19.87,0,0,0-24.49,0,12.53,12.53,0,0,0-5.34,9.47C6.42,35.63,13.16,39.5,24,39.5s17.59-3.86,17.59-10.08A12.56,12.56,0,0,0,36.25,20Z" />
                   <path id="Path_444" data-name="Path 444" class="cls-222" d="M24.06,13.15A6.6,6.6,0,1,0,16.72,6.6,7,7,0,0,0,24.06,13.15Z" />
                   <path id="Path_445" data-name="Path 445" class="cls-222" d="M47.6,11.14a8.1,8.1,0,0,0-8.77-5.06,6,6,0,0,0-4.69,8.12,7.88,7.88,0,0,0,3.5,4.07,8.05,8.05,0,0,0,4,1.1,7.45,7.45,0,0,0,1.25-.11A6,6,0,0,0,48,12.51a6.54,6.54,0,0,0-.37-1.38Z" />
@@ -59,169 +59,116 @@
       <div class="row">
         <div class="all-form-box-in w-100">
           <div class="col-12 form-box">
-            <h5 class="green-color t-l title1-m form-title">訂購人資料</h5>
-          </div>
-          <div class="col-12 form-box contacts-box">
-            <div class="row">
-              <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">聯絡家長資訊</h5>
-              <h5 class=" col-12 text-gray t-xs mb-2">若訂單有任何變動，客服將聯繫你</h5>
-            </div>
-            <div class="row">
-              <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                <label class="text-color t-s label-all" name="surname" for="">姓氏（須與旅遊證件一致） <span class="danger-color">*</span></label>
-                <input class="form-input form-error" type="text" name="surname" placeholder="例：陳" required>
-                <!-- <div class="form-feedback danger-color t-xs">
-                  請輸入正確資訊。
-                </div> -->
-              </div>
-              <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                <label class="text-color t-s label-all " name="surname" for="">名子（須與旅遊證件一致）<span class="danger-color">*</span></label>
-                <input class="form-input" type="text" name="surname" placeholder="例：毛毛" required>
-              </div>
-              <div class="col-8 col-lg-6 d-flex flex-column one-form">
-                <label class="text-color t-s label-all " name="surname" for="">稱謂<span class="danger-color">*</span></label>
-                <select class="form-input" name="" id="">
-                  <option value="0">請選擇</option>
-                  <option value="men">先生</option>
-                  <option value="men">女士</option>
-                </select>
-              </div>
-              <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                <label class="text-color t-s label-all " name="surname" for="">聯繫電話<span class="danger-color">*</span></label>
-                <input class="form-input" type="tel" name="surname" placeholder="例：0900-000-000" required>
-              </div>
-              <div class="col-12 col-lg-12 d-flex flex-column one-form">
-                <label class="text-color t-s label-all " name="surname" for="">聯繫信箱<span class="danger-color">*</span></label>
-                <input class="form-input" type="email" name="surname" placeholder="例：petilday@petilday.com" required>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-12 form-box contacts-box">
-            <div class="row">
-              <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">旅客 1</h5>
-            </div>
-            <div class="row">
-              <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                <label class="text-color t-s label-all" name="surname" for="">姓氏（須與旅遊證件一致）<span class="danger-color">*</span></label>
-                <input class="form-input" type="text" name="surname" placeholder="例：陳" required>
-              </div>
-              <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                <label class="text-color t-s label-all " name="surname" for="">名子（須與旅遊證件一致）<span class="danger-color">*</span></label>
-                <input class="form-input" type="text" name="surname" placeholder="例：毛毛" required>
-              </div>
-              <div class="col-8 col-lg-6 d-flex flex-column one-form">
-                <label class="text-color t-s label-all " name="surname" for="">身分證字號（行程保險中使用）<span class="danger-color">*</span></label>
-                <input class="form-input" type="text" name="surname" placeholder="例：A0000000000" required>
-              </div>
-              <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                <label class="text-color t-s label-all " name="surname" for="">出身年月日（行程保險中使用）<span class="danger-color">*</span></label>
-                <input class="form-input" type="date" name="surname" required>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 form-box contacts-box">
-            <div class="row">
-              <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">旅客 2</h5>
-            </div>
-            <div class="row">
-              <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                <label class="text-color t-s label-all" name="surname" for="">姓氏（須與旅遊證件一致）<span class="danger-color">*</span></label>
-                <input class="form-input" type="text" name="surname" placeholder="例：陳" required>
-              </div>
-              <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                <label class="text-color t-s label-all " name="surname" for="">名子（須與旅遊證件一致）<span class="danger-color">*</span></label>
-                <input class="form-input" type="text" name="surname" placeholder="例：毛毛" required>
-              </div>
-              <div class="col-8 col-lg-6 d-flex flex-column one-form">
-                <label class="text-color t-s label-all " name="surname" for="">身分證字號（行程保險中使用）<span class="danger-color">*</span></label>
-                <input class="form-input" type="text" name="surname" placeholder="例：A0000000000" required>
-              </div>
-              <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                <label class="text-color t-s label-all " name="surname" for="">出身年月日（行程保險中使用）<span class="danger-color">*</span></label>
-                <input class="form-input" type="date" name="surname" required>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 form-box contacts-box">
-            <div class="row">
-              <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">寵物 1</h5>
-            </div>
-            <div class="row">
-              <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                <label class="text-color t-s label-all" name="surname" for="">寶貝稱呼<span class="danger-color">*</span></label>
-                <input class="form-input" type="text" name="surname" placeholder="例：陳" required>
-              </div>
-              <div class="col-8 col-lg-6 d-flex flex-column one-form">
-                <label class="text-color t-s label-all " name="surname" for="">體型<span class="danger-color">*</span></label>
-                <select class="form-input" name="" id="">
-                  <option value="0">請選擇</option>
-                  <option value="l-size">大型犬</option>
-                  <option value="m-size">中型犬</option>
-                  <option value="s-size">小型犬</option>
-                </select>
-              </div>
-              <div class="col-12 col-lg-12 d-flex flex-column one-form">
-                <label class="text-color t-s label-all " name="surname" for="">備註<span class="danger-color">*</span></label>
-                <input class="form-input" type="text" name="surname">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="all-form-box-in w-100 mt-3">
-          <div class="col-12 form-box">
-            <h5 class="green-color t-l title1-m form-title">優惠折扣碼</h5>
+            <h5 class="green-color t-l title1-m form-title">付款方式</h5>
           </div>
           <div class="col-12 form-box contacts-box">
             <div class="row">
               <div class="col-12 col-lg-12">
-                <div class="row">
-                  <div class="col-12 d-flex align-items-center">
-                    <input class="form-input form-radio" type="radio" name="surname" "><span class=" radio-text t-m text-color">我沒有折扣碼</span>
+                <div class="row ">
+                  <div class="col-12 d-flex align-items-center ">
+                    <input id="creditCard" class="form-radio " type="radio" name="payItems" checked>
+                    <label for="creditCard" class="mb-0"><span class=" radio-text t-m text-color mt-2 mb-2">信用卡線上刷卡一次付清</span></label>
+                    <br>
+
                   </div>
-                  <div class="col-12 d-flex align-items-center">
-                    <input class="form-input form-radio" type="radio" name="surname"> <span class="radio-text t-m text-color">我有折扣碼</span>
+                  <div class="col-12 d-flex align-items-center ">
+                    <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mt-3 mb-3">信用卡資訊</h5>
                   </div>
-                  <div class="col-12 d-flex align-items-center">
-                    <input class="form-input form-radio" type="text" name="surname" placeholder="請輸入折扣碼">
-                    <button class="form-input-btn btn btn-1">兌換</button>
-                  </div>
-                  <div class="col-12 col-lg-6 mt-4">
-                    <div class="coupon">
-                      <input class="form-input form-radio coupon-check" type="radio" name="surname">
-                      <h5 class="orange-color t-l mb-3">新客優惠 20%OFF </h5>
-                      <p class="text-gray t-xs mb-0">折扣券碼： WJIFJIJEE
-                      </p>
-                      <p class="text-gray t-xs mb-0">有效日期： 2020/12/18-2021/6/30
-                      </p>
+                  <div class="col-12 d-flex justify-content-center mb-4 credit-card-box">
+                    <div class="card1">
+                      <div class="credit-card card-front">
+                        <img class="credit-card-img" src="./imgs/3x/card-front@3x.png" alt="">
+                        <div class="card-text-box">
+                          <h3 class="card-text card-number">0000 0000 0000 0000</h3>
+                          <h3 class="card-text card-name-t"> cardholder name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expiration</h3>
+                          <h3 class="card-text card-name"> CHANH CHU YDHS</h3>
+                          <h3 class="card-text card-date">MM / YY</h3>
+                        </div>
+
+                      </div>
+                      <div class="credit-card card-back">
+                        <img class="credit-card-img" src="./imgs/3x/card-back@3x.png" alt="">
+                        <div class="card-cvc">CVC</div>
+                      </div>
                     </div>
+
+                  </div>
+                  <div class="col-12 d-flex align-items-center  bb-line">
+                    <div class="row d-flex justify-content-center w-100">
+                      <div class="col-12 col-lg-6  one-form">
+                        <label class="text-color t-s label-all" name="cardNumber" for="cardNumber">信用卡號碼：&nbsp; <span class="danger-color">*</span></label><br>
+                        <input id="cardNumber" class="form-input w-100" type="text" name="cardNumber" placeholder="0000 0000 0000 0000" required>
+                      </div>
+                      <div class="col-12 col-lg-6  one-form">
+                        <label class="text-color t-s label-all " name="holderName" for="holderName">持卡人姓名：&nbsp; <span class="danger-color">*</span></label><br>
+                        <input class="form-input w-100" type="text" name="holderName" id="holderName" placeholder="例：陳毛毛" required>
+                      </div>
+                      <div class="col-12 col-lg-6 one-form">
+                        <label class="text-color t-s label-all " name="cardDatecardDate">信用卡有效日期： &nbsp;<span class="danger-color">*</span></label><br>
+                        <div class="row">
+                          <div class="col-8 d-flex flex-row">
+                            <input id="cardDate" class="col-6 col-lg-4 form-input mr-3" type="text" name="cardDateMM" placeholder="MM" required>
+                            <input id="cardDateY" class="col-6 col-lg-4 form-input" type="text" name="cardDateYY" placeholder="YY" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-6  one-form mb-5">
+                        <label class="text-color t-s label-all " name="surname" for="">信用卡被後三碼：&nbsp; <span class="danger-color">*</span></label><br>
+                        <input class="form-input" type="text" name="surname" placeholder="CVC" required>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ------信用卡----  -->
+                  <div class="col-12 d-flex align-items-center bb-line">
+                    <input id="ATM" class="form-radio" type="radio" name="payItems">
+                    <label for="ATM" class="mb-0"><span class=" radio-text t-m text-color mt-2 mb-2">ATM付款(轉帳/網路線上繳款)</span></label>
+
+
+                  </div>
+                  <div class="col-12 d-flex align-items-center bb-line">
+                    <input id="linePay" class="form-radio" type="radio" name="payItems">
+                    <label for="linePay" class="mb-0"><span class=" radio-text t-m text-color mt-2 mb-2">LINE PAY</span></label>
+
+                  </div>
+                  <div class="col-12 d-flex align-items-center bb-line">
+                    <input id="applePay" class="form-radio" type="radio" name="payItems">
+                    <label for="applePay" class="mb-0"><span class=" radio-text t-m text-color mt-2 mb-2">Apple Pay</span></label>
+
+                  </div>
+                  <div class="col-12 d-flex align-items-center ">
+                    <input id="travelCard" class="form-radio" type="radio" name="payItems">
+                    <label for="travelCard" class="mb-0"><span class=" radio-text t-m text-color mt-2 mb-2">國民旅遊卡</span></label>
+
                   </div>
                 </div>
               </div>
-
-
-
             </div>
           </div>
+
+
           <div class="col-12 order-box order-box-total">
-            <div class="detail-box-total">
-              <div class="detail-all detail-time d-flex justify-content-between">
-                <h6 class=" text-gray t-s ">價格：</h6>
-                <h6 class=" text-gray t-s">2039</h6>
+            <div class="row mt-3">
+              <div class="col-12 col-lg-7 text-gray t-xs ">
+                <p>點擊“確認結帳”，即表示您已確認訂單無誤以及同意右邊顯示的總金額，且同意 服務條款 和 退訂政策</p>
               </div>
-              <div class="detail-all detail-quan d-flex justify-content-between">
-                <h6 class=" text-gray t-s">折扣卷：</h6>
-                <h6 class=" text-gray t-s">( NEDDDF ) &nbsp; <span class="prod-price-single t-m danger-color">- 404</span></h6>
+
+
+
+              <div class="col-12 col-lg-5 single-prod-total d-flex justify-content-end mb-3 mt-1">
+                <h5 class="brown-color t-m">總計：</h5>
+                <h5 class="t-l prod-price-single danger-color ">NT$ 3000</h5>
               </div>
             </div>
-            <div class="single-prod-total d-flex justify-content-end mb-3 mt-1">
-              <h5 class="brown-color t-m">總計：</h5>
-              <h5 class="t-l prod-price-single danger-color ">NT$ 3000</h5>
+            <div class="pay-btn-box pb-3 ">
+              <a href="./order-step3.php" class="a-style w-100 d-flex justify-content-end">
+                <button class="btn pay-btn ml-3">確認結帳</button>
+              </a>
+              <a href="./order-step1.php" class=" a-style w-100 d-flex justify-content-start">
+                <button class="btn-outline pay-btn mr-3">回上一步</button>
+              </a>
             </div>
-            <div class="pay-btn-box">
-              <button class="btn pay-btn ">確認結帳</button>
-            </div>
+
 
           </div>
         </div>
@@ -323,7 +270,11 @@
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
   // ------JS開始 以上勿刪-------
+  var card = document.querySelector('.card1');
+  card.addEventListener('click', function() {
+    card.classList.toggle('is-flipped');
 
+  });
 
 
   // $('.form-input').on('click', function() {
