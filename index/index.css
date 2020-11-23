@@ -1,25 +1,201 @@
 * {
-  border: 0.5px darkred dashed;
-  /* overflow: hidden; */
+  outline: auto;
+}
+
+span {
+  position: relative;
+  padding: 0 1% 0 0;
+}
+
+.des-card figure img {
+  /* width: 100%; */
+  height: 100%;
+  object-fit: contain;
+}
+
+span :before {
+  content: "";
+  display: block;
+  background-color: #ffecd4;
+  width: 95%;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  z-index: -1;
+  margin-left: 5px;
 }
 
 @media (max-width: 400px) {
-  #hero-polaroid-m {
+  * {
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: #ffffff;
+  }
+
+  #hero-polaroid,
+  .tour-cards,
+  #depth,
+  #quiz {
+    display: none;
+  }
+
+  /* 拍立得部分始 */
+  .weirdpart {
+    margin-top: 64px;
     background-color: #f2eee8;
-    padding-top: 4vh;
-    height: 130vh;
-    position: absolute;
-    top: 50px;
   }
 
   .rope figure {
     width: 100%;
-    display: inline-block;
+    height: 100%;
+    z-index: 2;
   }
   .rope figure img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .por-pic-m {
+    margin: -55px 0 0 -60px;
+  }
+
+  .polaroid-base {
+    background-color: #fff;
+    transform: rotate(-2deg);
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+
+  .por-frame-2 {
+    height: 207px;
+    margin-top: -7px;
+  }
+
+  .por-frame-1 {
+    height: 160px;
+    transform: rotate(-5deg);
+    margin-top: -10px;
+  }
+
+  .por-frame-3 {
+    height: 165px;
+    transform: rotate(5deg);
+    margin-top: -20px;
+  }
+
+  .polaroid-base figure {
+    width: 85%;
+    height: 65%;
+  }
+
+  .polaroid-base figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sig-m-1 {
+    width: 55%;
+    height: 25%;
+    right: 5px;
+    bottom: -5px;
+    z-index: 5;
+    transform: rotate(10deg);
+  }
+
+  .sig-m-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* 拍立得部分末 */
+
+  /* RWD後改變順序始 */
+  .change-order-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #petliday-wrap {
+    flex: 100%;
+    order: 2;
+    background: url(img/bg-2-m.png) no-repeat;
+    background-size: 100%;
+  }
+
+  #destination {
+    flex: 100%;
+    order: 1;
+    padding-bottom: 24px;
+    background: url(img/bg-1-m.png) no-repeat;
+    background-size: 100%;
+  }
+
+  .row:not(.por-pic-m):not(.pet-slogan):not(.rope) {
+    margin: 0;
+  }
+
+  /* RWD後改變順序末 */
+
+  /* 同樂目的地始 */
+
+  .des-wrap {
+    padding-right: 0px;
+  }
+
+  .des-title {
+    font-size: 16px;
+  }
+
+  .des-card figure {
+    width: 143px;
+    height: 109px;
+  }
+
+  #destination svg {
+    fill: #49322d;
+    width: 18px;
+    height: 15px;
+  }
+
+  .des-row {
+    overflow-x: scroll;
+    justify-content: start;
+  }
+
+  .des-card {
+    flex-shrink: 0;
+    margin: 1rem 20px 0 0;
+    position: relative;
+  }
+
+  .des-card h6 {
+    position: absolute;
+    font-size: 14px;
+    color: #ffffff;
+    bottom: 20px;
+  }
+
+  .des-card::after {
+    position: absolute;
+    content: "134個行程體驗";
+    bottom: 5px;
+    left: 0px;
+    color: #ffffff;
+    font-size: 12px;
+  }
+
+  /* 同樂目的地末 */
+
+  /* 插圖介紹部分始 */
+  .logo-sentence img {
+    width: 100%;
+    height: 100%;
   }
 
   .petliday-card {
@@ -39,7 +215,106 @@
     height: 100%;
     object-fit: contain;
   }
+
+  .pet-slogan {
+    margin: 40px 0;
+  }
+
+  .petliday-card p:first-child {
+    font-size: 16px;
+  }
+
+  .petliday-card p:last-child {
+    font-size: 14px;
+  }
+  /* 插圖介紹部分末 */
+
+  /* 精選行程部分始 */
+  #tour svg {
+    fill: #49322d;
+    width: 18px;
+    height: 15px;
+  }
+  /* 精選行程部分末 */
+
+  /* 體驗課程部分始 */
+  #class svg {
+    fill: #49322d;
+    width: 18px;
+    height: 15px;
+  }
+
+  .card {
+    width: 266px;
+    height: 300px;
+    border: none;
+    box-shadow: 1px 2px 8px rgba(200, 200, 200, 0.5);
+    position: relative;
+    margin: 20px auto !important;
+  }
+
+  .card-pic {
+    width: 100%;
+    height: 175px;
+    border-radius: 3px 3px 40px 3px;
+    overflow: hidden;
+  }
+
+  .card.c2 {
+    height: 240px;
+    margin: 10px !important;
+  }
+
+  .c2 .card-pic {
+    height: 84px;
+  }
+
+  .c2 .info {
+    display: block;
+  }
+
+  .c2 .info-left,
+  .c2 .heart {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .c2 .card-text {
+    font-size: 14px;
+  }
+
+  .c2 p {
+    margin-bottom: 5px;
+  }
+
+  .c4 {
+    height: 300px;
+  }
+
+  .c4 .card-pic {
+    height: 175px;
+  }
+
+  .c4 .heart {
+    top: 10px;
+    right: 10px;
+  }
+
+  .arrow {
+    opacity: 0;
+    position: absolute;
+  }
 }
+
+/* 超明顯換media就在這裡啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊/
+  超明顯換media就在這裡啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊/
+  超明顯換media就在這裡啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊/
+  超明顯換media就在這裡啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊/
+  超明顯換media就在這裡啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊/
+  超明顯換media就在這裡啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊/
+  超明顯換media就在這裡啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊/
+  超明顯換media就在這裡啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊/
+  超明顯換media就在這裡啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊/*/
 
 @media (min-width: 1200px) {
   /* 拍立得section始 */
@@ -49,7 +324,7 @@
     height: 130vh;
   }
 
-  #hero-polaroid-m {
+  .weirdpart {
     display: none;
   }
 
@@ -97,6 +372,9 @@
   /* 放背景section末 */
 
   /* 插圖介紹section始 */
+  #petliday-wrap .row:last-of-type {
+    margin: 45px 0;
+  }
 
   .petliday-fig {
     margin: auto;
@@ -124,28 +402,19 @@
     color: #3c2e26;
   }
 
+  #destination .container {
+    margin-bottom: 16px;
+  }
+
   #destination svg {
     fill: #49322d;
     width: 23px;
     height: 19px;
   }
 
-  span {
-    position: relative;
-    padding: 0 10px;
-  }
-
-  span :before {
-    content: "";
-    display: block;
-    background-color: #ffecd4;
-    width: 95%;
-    height: 15px;
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    z-index: -1;
-    margin-left: 5px;
+  .des-row {
+    display: flex;
+    justify-content: center;
   }
 
   .des-card {
@@ -166,11 +435,6 @@
     /* margin: 30px auto; */
   }
 
-  .des-card figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
   /* 同樂目的地末 */
 
   /* 精選行程始 */
@@ -200,6 +464,8 @@
   hr {
     border-top: 2px solid rgba(0, 0, 0, 0.2);
   }
+
+  /* 體驗課程部份始 */
 
   #class svg {
     fill: #49322d;

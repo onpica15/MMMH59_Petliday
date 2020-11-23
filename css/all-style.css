@@ -32,6 +32,9 @@
 .text-gray {
   color: #999;
 }
+.text-white {
+  color: #fff;
+}
 
 .petilday {
   /* 漸層橘 / */
@@ -69,15 +72,40 @@
   color: rgba(255, 255, 255, 0.9);
   background-color: #fe8b11;
   box-shadow: inset 5px 5px 10px rgb(255, 133, 2), inset -5px -5px 10px #ff9f39;
+  text-decoration: none;
 }
 
 .btn:hover,
+.btn-outline:focus,
 .btn:focus,
 .btn:focus-visible,
 .btn:visited,
 .btn:active,
 .btn:focus-within {
   outline: none;
+}
+
+.btn-outline {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-indent: 2px;
+  color: #ffa12c;
+  padding: 1% 3%;
+  background-color: #fff;
+  border: 1px solid #ffa12c;
+  border-radius: 3px;
+  min-height: 44px;
+  min-width: 80px;
+  /* margin: 14px 18px; */
+  transition: 0.2s;
+}
+
+.btn-outline:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #fe8b11;
+  box-shadow: inset 5px 5px 10px rgb(255, 133, 2), inset -5px -5px 10px #ff9f39;
+  text-decoration: none;
 }
 
 .t-xxxl {
@@ -115,7 +143,14 @@
 footer {
   font-size: 10px;
 }
-
+/* ------其他------- */
 .t-bold {
   font-weight: 500;
+}
+
+.bb-line {
+  border-bottom: 1px solid #eee;
+}
+.bb-line-b {
+  border-bottom: 1px solid rgba(204, 204, 204, 0.838);
 }

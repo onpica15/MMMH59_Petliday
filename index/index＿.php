@@ -16,33 +16,60 @@
   </div>
 </section>
 
-<section id="hero-polaroid-m">
-  <div class="container">
+<section id="hero-polaroid-m float-none" class="weirdpart pb-4">
+  <div class="container pr-0">
+    <!-- 繩子的部分 -->
     <div class="row rope">
-      <figure><img src="./img/illustration/rope.png" alt=""></figure>
+      <figure>
+        <img src="./img/illustration/rope.png" alt="">
+      </figure>
     </div>
-    <div class="row per-pic">
-
+    <!-- 拍立得照片的部分 -->
+    <div class="row d-flex por-pic-m flex-nowrap mr-0 pt-4 pb-2">
+      <div class="polaroid-base col-4 por-frame-1 d-flex position-relative justify-content-center">
+        <figure class="position-absolute mt-3">
+          <img src="img/pd1.jpg" alt="">
+        </figure>
+        <div class="position-absolute sig-m-1">
+          <img src="img/signature2.png" alt="">
+        </div>
+      </div>
+      <div class="polaroid-base col-5 por-frame-2 d-flex position-relative justify-content-center mx-3 p-0">
+        <figure class="position-absolute mt-3">
+          <img src="img/pd2.jpg" alt="">
+        </figure>
+        <div class="position-absolute sig-m-1">
+          <img src="img/signature2.png" alt="">
+        </div>
+      </div>
+      <div class="polaroid-base col-4 por-frame-3 d-flex position-relative justify-content-center">
+        <figure class="position-absolute mt-3">
+          <img src="img/pd3.jpg" alt="">
+        </figure>
+        <div class="position-absolute sig-m-1">
+          <img src="img/signature2.png" alt="">
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 放背景section -->
-<section id="bg1">
+<!-- rwd後改變順序 -->
+<div class="change-order-wrap">
   <!-- 插圖介紹section -->
   <section id="petliday-wrap">
     <div class="container">
-      <div class="row justify-item-center mb-5">
-        <div class="logo-sentence mx-auto">
+      <div class="row justify-item-center">
+        <div class="logo-sentence col-xl-6 col-10  mx-auto">
           <img src="img/illustration/petliday.png" alt="">
         </div>
       </div>
-      <div class="row d-flex justify-content-between my-5">
+      <div class="row d-flex justify-content-between pet-slogan">
         <div class="col-xl-4 col-12 d-flex petliday-card">
           <figure class="row petliday-fig mx-auto">
             <img src="./img/illustration/index-dog1.png" alt="">
           </figure>
-          <div class="row">
+          <div class="row petliday-text">
             <p class="petliday-title">放鬆</p>
             <p class="petliday-content">最多樣的行程安排，讓飼主可以和寶貝毛孩一起在旅行中放鬆</p>
           </div>
@@ -63,7 +90,7 @@
             <img src="img/illustration/index-dog3.png" alt="">
           </figure>
           <div class="row">
-            <p class="petliday-title">放鬆</p>
+            <p class="petliday-title">放心遊</p>
             <p class="petliday-content">最多樣的行程安排，讓飼主可以和寶貝毛孩一起在旅行中放鬆</p>
           </div>
         </div>
@@ -73,8 +100,8 @@
   <!-- 同樂目的地section -->
   <section id="destination">
     <!-- 腳印標題那部分 -->
-    <div class="container mt-5 my-3">
-      <div class="row d-flex flex-start align-items-center">
+    <div class="container">
+      <div class="row svg-row d-flex flex-start align-items-center">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.2 20.76">
           <g id="圖層_2" data-name="圖層 2">
             <g id="圖層_1-2" data-name="圖層 1">
@@ -93,37 +120,37 @@
       </div>
     </div>
     <!-- 同樂目的地卡片 -->
-    <div class="container">
-      <div class="row d-flex des-row flex-nowrap justify-content-center">
-        <div class="col-3 des-card">
-          <figure class="mt-4">
+    <div class="container des-wrap">
+      <div class="row des-row flex-nowrap">
+        <div class="des-card">
+          <figure class="m-0">
             <img src="./img/scenery-im2.jpg" alt="">
           </figure>
           <h6 class="green-color t-l text-center">北部旅遊</h6>
         </div>
-        <div class="col-3 des-card">
-          <figure class="mt-4">
+        <div class="des-card">
+          <figure class="m-0">
             <img src="./img/scenery-im1.jpg" alt="">
           </figure>
           <h6 class="green-color t-l text-center">中部旅遊</h6>
         </div>
-        <div class="col-3 des-card">
-          <figure class="mt-4">
+        <div class="des-card">
+          <figure class="m-0">
             <img src="./img/scenery-im4.jpg" alt="">
           </figure>
           <h6 class="green-color t-l text-center">南部旅遊</h6>
         </div>
-        <div class="col-3 des-card">
-          <figure class="mt-4">
+        <div class="des-card">
+          <figure class="m-0">
             <img src="./img/scenery-im3.jpg" alt="">
           </figure>
           <h6 class="des-card-text green-color t-l text-center">東部、離島旅遊</h6>
         </div>
       </div>
     </div>
-    </div>
   </section>
-</section>
+</div>
+
 <!-- 精選行程section -->
 <section id="tour">
   <!-- 腳印標題那部分 -->
@@ -147,7 +174,8 @@
     </div>
   </div>
   <!-- 精選行程卡片 -->
-  <div class="container">
+  <!-- 桌機版 -->
+  <div class="container tour-cards">
     <div class="row d-flex tour-row flex-nowrap justify-content-center">
       <div class="col-4 tour-card">
         <figure>
@@ -234,7 +262,14 @@
       </div>
     </div>
   </div>
+  <!-- 手機版 -->
+  <div class="container tour-cards-m">
+    <div class="row d-flex tour-row-m justify-content-center">
+
+    </div>
+  </div>
 </section>
+
 <!-- 體驗課程section -->
 <section id="class">
   <!-- 腳印標題那部分 -->
@@ -259,7 +294,7 @@
   </div>
   <!-- 精選課程卡片 -->
   <div class="container mt-5">
-    <div class="row align-items-center">
+    <div class="row align-items-center no-wrap">
       <!-- 左箭頭 -->
       <a class="arrow m-3">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.62 51.56" width="20px">
