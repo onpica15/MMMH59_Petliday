@@ -114,7 +114,7 @@
                       <p class="t-xs text-gray mb-0">身分證字號（行程保險中使用）:</p>
                       <p class="t-s text-color mb-3">A0000000000</p>
 
-                      <p class="t-xs text-gray mb-0">出身年月日（行程保險中使用）</p>
+                      <p class="t-xs text-gray mb-0">出生 年/月/日（行程保險中使用）</p>
                       <p class="t-s text-color mb-0 pb-3 bb-line-b">2020年 10月 10日</p>
                     </div>
                   </div>
@@ -195,7 +195,7 @@
             </div>
             <div class="col-12 d-flex justify-content-center  one-form">
 
-              <input class="form-input form-input-review" type="text" name="surname" placeholder="更多流程建議都歡迎與我們分享!">
+              <input id="review" class="form-input form-input-review" type="text" name="review" placeholder="更多流程建議都歡迎與我們分享!">
             </div>
 
             <div class="col-12  mt-3">

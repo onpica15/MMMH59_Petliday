@@ -452,8 +452,8 @@ input[type="radio"]:checked {
 }
 .btn-more {
   height: 44px;
-  padding: 10px 40px;
-  margin: 20px 30px;
+  padding: 10px 20px;
+  margin: 20px 10px;
   border-radius: 3px;
   background-color: #fff;
   border: 1px solid #ffa12c;
@@ -465,8 +465,8 @@ input[type="radio"]:checked {
 }
 .btn-more-review {
   height: 44px;
-  padding: 10px 40px;
-  margin: 20px 30px;
+  padding: 10px 20px;
+  margin: 20px 10px;
   border-radius: 3px;
   border: 1px solid #ffa12c;
   background-color: #ffa12c;
