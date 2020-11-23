@@ -14,7 +14,7 @@ main{
 .caro img{
     width: 100%;
     /* clip-path: path('M263,0H164.28C73.7,0,0,73.7,0,164.28v235c0,90.59,73.7,164.29,164.28,164.29H263c141.72,0,257-126.4,257-281.76S404.69,0,263,0Z'); */
-    clip-path: url(#d-clip);
+    clip-path: url(#d-clip-web);
 }
 /* 主要資訊區塊--------------------------- */
 .top-wrap{
@@ -27,6 +27,10 @@ background-color: #fff;
     height: 400px;
     margin: -100px auto 0;
     padding: 60px 100px;
+}
+.bread-row a{
+   color: #555;
+   margin: 0 3px; 
 }
 .title-left{
     font-size: 28px;
@@ -56,6 +60,9 @@ background-color: #fff;
     object-fit: cover;
 }
 /* 評價row */
+.rate{
+    margin: 0 10px;
+}
 .rate-row{
     margin-top: 15px;
 }
@@ -108,6 +115,17 @@ background-color: #fff;
     height: 765px;
     margin: 60px auto 0;
 }
+.select-left, .select-right{
+    margin: 48px;
+    padding: 0;
+}
+.select-date, .select-amount{
+    padding: 0;
+    margin-bottom: 48px;
+}
+.month{
+    margin: 24px 0;
+}
 .reset{
     width: 15px;
     height: 15px;
@@ -119,9 +137,6 @@ background-color: #fff;
 .top{
     padding:80px 80px 10px;
 }
-.topic-line{
-   
-}
 .topic-line-gray{
     width: 160px;
     height: 3px;
@@ -130,10 +145,17 @@ background-color: #fff;
     margin-top: -10px;
 }
 .select-wrap{
+    display: flex;
     padding: 0 80px 50px;
     /* margin: 0 -15px; */
 }
 .select-wrap p{
+    margin: 0;
+}
+.select-brother{
+    display: flex;
+}
+.select-brother label{
     margin: 0;
 }
 .cal-icon span{
@@ -185,6 +207,9 @@ background-color: #fff;
 }
 .select-middle{
     height: 170px;
+}
+.btn-twin{
+ margin-top: 48px;
 }
 .btn-twin .btn{
     width: 190px;
@@ -251,7 +276,11 @@ background-color: #fff;
     top: 100px;
     right: 295px;
 }
+.end-dot{
+    display: none;
+}
 /* 共用標題 */
+
 .topic p{
     font-size: 18px;
     font-weight: 500;
@@ -266,9 +295,19 @@ background-color: #fff;
     background-color: #ffa12c;
     margin-top: -10px;
 }
-/* 介紹內文 */
+/* 行程介紹 */
+.main-c{
+    margin-top: 48px;
+}
 .day-text{
     font-size: 24px;
+}
+.day-text-all{
+margin-top: 48px;
+}
+.hide-mb, .hide-rate-mb{
+    display: none;
+    position: absolute;
 }
 .item-intro p{
     font-size: 14px;
@@ -370,8 +409,14 @@ margin: -60px 0 0 700px;
     display: none;
 }
 /* 評論區 */
-.rate{
-    overflow: auto;
+.topic-wrap{
+    margin-bottom: 48px;
+}
+.rate-container{
+    overflow: scroll;
+}
+.rate-number{
+    margin-right: 10px;
 }
 .rate-scroll .row{
     width: 3000px;
@@ -383,6 +428,10 @@ margin: -60px 0 0 700px;
     padding: 20px 30px;
     border-radius: 20px;
     box-shadow: 1px 2px 20px #eee;
+    display: flex;
+}
+.rate-name{
+    margin-top: 16px;
 }
 .rate-l{
     width: 40px;
@@ -464,7 +513,7 @@ margin: -60px 0 0 700px;
     margin-bottom: 6px;
 }
 
-.heart {
+.heart-card {
     width: 35px;
     height: 35px;
     background-color: #fff;
@@ -500,11 +549,321 @@ margin: -60px 0 0 700px;
 .rate-all {
     letter-spacing: 0.5px;
 }
+/* footer-box */
+.footer-box{
+    margin-top: 0;
+}
+/* 3個一排card css end------------------------------------- */
+/* 425 RWD start */
+@media(max-width: 425px) {
+    .t-l{
+        font-size: 14px;
+    }
+    .white-bg{
+        height: 2340px;
+    }
+    .white-bg .row{
+        margin: 0;
+    }
+    /* caro D */
+    .caro{
+        width: 208px;
+        height: 300px;
+        margin: 50px auto 0;
+    }
+    .caro img{
+        width: 100%;
+        clip-path: url(#d-clip-web);
+        object-fit: cover;
+    }
+    /* 兩個白色卡區 */
+    .top-green{
+        height: 1860px;
+    }
+    .top-wrap{
+    width: 100%;
+    }
+    .info{
+        height: 540px;
+        margin: -100px auto 0;
+        padding: 40px 20px;
+    }
+    .bread-row, .title-row{
+        margin: 0;
+    }
+    .title-left{
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .title-left p:last-child{
+        padding-right: 40px;
+    }
+    .title-right{
+        margin-top: 20px;
+    }
+    .heart{
+        margin: 10px 10px 10px 50px;
+        width: 35px;
+    }
+    .share{
+        margin: 10px;
+        width: 35px;
+    }
+    .rate-row{
+        margin-left: 0;
+    }
+    .intro{
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    .intro ul{
+        padding-right: 40px;
+    }
+    .intro li{
+        line-height: 25px;
+    }
+    .select-btn{
+        margin: 0 auto;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+    }
+    .top{
+        padding: 20px 20px 10px;
+    }
+    .top-right{
+        font-size: 12px;
+        text-decoration: underline;  
+    }
+    .reset{
+        width: 10px;
+        height: 10px;
+    }
+    /* select section */
+     .select{
+         height: 900px;
+        transform: scale(1.09);
+        margin: 60px auto 0;
+        border-radius: 3px;
+    }
+    .select-wrap{
+        display: inline-block;
+        padding: 0;
+    }
+    .select-left, .select-right{
+        margin: 0;
+        padding: 0;
+    }
+    .select-brother{
+        display: inline-block;
+        padding: 0 20px 0;
+    }
+    .select-date{
+        padding: 0 20px;
+        font-size: 12px;
+        margin-bottom: 0px;
+    }
+    .select-amount{
+    padding: 20px 20px 0;
+    font-size: 12px;
+    margin-bottom: 0px;
+    }
+    .calendar .t-m{
+        font-size: 12px;
+    }
+    .month{
+        margin: 20px 0;
+        padding: 0 20px;
+        font-size: 14px;
+    }
+    .calendar td,.calendar th {
+        text-align: center;
+        padding: 10px 0px;
+    }
+    .tag{
+        margin-top: 10px;
+    }
+    .tag p{
+        line-height: 25px;
+    }
+    /* 選擇數量區塊 */
+    .select-man{
+        margin-bottom: 30px;
+    }
+    .select-brother label{
+        display: inline-block;
+        margin-right: 30px;
+    }
+    .select-middle{
+        padding: 10px 25px 0 0;
+        font-size: 12px;
+        height: 80px;
+    }
+    .btn-twin{
+        margin-top: 10px;
+        padding: 0 20px;
+    }
+    .btn{
+        margin: 14px 8px;
+    }
+    /* 行程介紹目錄 */
+    .btn-cate{
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 2px;
+    }
+    .cate-fix{
+        border-radius: 0 0 40px 40px;
+    }
+    /* day123 */
+    .day123 a{
+        font-size: 12px;
+        width: 50px;
+        transform:none;
+        line-height: 48px;
+        margin: 0 20px 390px 20px;
+    }
+    .day123{
+        top: 95px;
+        right: 290px;
+    }
+    /* 行程介紹 */
+    .bg-dog{
+        height: 1510px;
+    }
+    .main-c{
+        margin-top: 10px;
+        padding: 0 40px 0 75px;
+    }
+    .day-text-all{
+        margin-top: 38px;
+        font-size: 12px;
+    }
+    .day-text{
+        font-size: 16px;
+    }
+    .topic-intro{
+        margin-left: -65px;
+        margin-top: -25px;
+    }
+    .line{
+        top: 140px;
+        right: 334px;
+        height: 1255px;
+    }
+    .end-dot{
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid #ffa12c;
+        background-color: #f2eee8;
+        position: relative;
+        top: 1385px;
+        left: 17px;
+    }
+    .hide-mb{
+        text-decoration: underline;
+        color: #ffa12c;
+        display: inline-block;
+        position: relative;
+        left: 180px;
+        margin-bottom: 10px;
+    }
+    /* photo correction */
+    .pic520, .pic420, .pic580{
+        width: 270px;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+    /* item1-10 行程頁介紹 */
+    .item1, .item4, .item8{
+        margin: 20px 0 0 0;
+    }
+    .item2, .item3, .item5, .item6, .item7, .item9, .item10{
+        display: none;
+    }
+    .item-intro{
+        display: none;
+    }
+    /* term 區 */
+    .white-bg .container{
+        padding-top: 30px;
+    }
+    .term{
+        height: 300px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    .term .row{
+        margin: 0;
+    }
+    .term a{
+        margin:-5px 15px 0 0;
+    }
+    .term-text ul{
+        padding: 0 20px;
+    }
+    .term-text li{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .white-bg .term:last-child{
+        height: 220px;
+    }
+/* 評價區 */
+    .topic-wrap{
+        margin-bottom: 20px;
+    }
+    .rate-card{
+        width: 345px;
+        display: none;
+        position: absolute;
+        padding: 10px 20px;
+        margin: 0 auto;
+    }
+    .c1{
+        position: relative;
+        display: inline-block;
 
-@media(max-width: 400px) {
+    }
+    .rate-scroll .row{
+        margin: 0;
+        width: 100%;
+    }
+    .t-m{
+        font-size: 14px;
+    }
+    .rate-name{
+        margin: 10px 0;
+    }
+    .star{
+        width: 15px;
+        height: 15px;
+        margin-bottom: 12px;
+    }
+    .t-s{
+        font-size: 12px;
+    }
+    .hide-rate-mb{
+        text-decoration: underline;
+        color: #ffa12c;
+        display: inline-block;
+        position: relative;
+        left: 250px;
+        bottom: 40px;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+    .rate-container{
+        margin-top: -25px;
+    }
+    /* 3個一排card RWD start--------------------------------- */
     .card {
         width: 266px;
-        height: 300px;
+        height: 280px;
         border: none;
         box-shadow: 1px 2px 8px rgba(200, 200, 200, .5);
         position: relative;
@@ -513,17 +872,10 @@ margin: -60px 0 0 700px;
 
     .card-pic {
         width: 100%;
-        height: 175px;
+        height: 155px;
         border-radius: 3px 3px 40px 3px;
         overflow: hidden;
     }
-    .arrow {
-        opacity: 0;
-        position: absolute;
-    }
 }
-/* 3個一排card css end------------------------------------- */
-/* footer-box */
-.footer-box{
-    margin-top: 0;
-}
+
+

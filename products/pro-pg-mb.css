@@ -1,0 +1,265 @@
+/* 主要資訊區塊--------------------------- */
+.top-wrap{
+    width: 1140px;
+    border-radius: 3px 30px 3px 3px;
+    background-color: #fff;
+    }
+    /* 麵包屑 */
+    .info{
+        height: 400px;
+        margin: -100px auto 0;
+        padding: 60px 100px;
+    }
+    .bread-row a{
+       color: #555;
+       margin: 0 3px; 
+    }
+    .title-left{
+        font-size: 28px;
+    }
+    .title-left p{
+        margin:0 ;
+        font-weight: 500;
+    }
+    .title-right p{
+        margin:0 ;
+    }
+    
+    .heart{
+        margin: 10px;
+        width: 40px;
+    }
+    .heart img{
+        width: 100%;
+        object-fit: cover;
+    }
+    .share{
+        margin: 10px;
+        width: 40px;
+    }
+    .share img{
+        width: 100%;
+        object-fit: cover;
+    }
+    /* 評價row */
+    .rate{
+        margin: 0 10px;
+    }
+    .rate-row{
+        margin-top: 15px;
+    }
+    .star{
+        width: 20px;
+        height: 20px;
+    }
+    .star img{
+        width: 100%;
+        object-fit: cover;
+    }
+    .tag p{
+        width: 70px;
+        height: 26px;
+        border-radius: 13px;
+        border: 1px solid #00907c;
+        text-align: center;
+        line-height: 26px;
+        font-size: 12px;
+        color: #00907c;
+        margin: 0 5px;
+    }
+    /* 商品介紹區域 */
+
+.bg-dog{
+    /* padding: 300px; */
+    height: 5300px;
+    background: linear-gradient( rgba(242,238,232,.5), rgba(242,238,232,.5)),url(./img/pg-dog.svg) 0 150px no-repeat;
+    background-size: contain;
+    overflow: hidden;
+    
+}
+.cate-fix{
+    height: 80px;
+    box-shadow: 1px 2px 20px #ddd;
+    border-radius: 0 0 80px 80px;
+    overflow: hidden;
+}
+.btn-cate{
+    flex-grow: 1;
+    background-color: #fff;
+    border: none;
+    border-right: 1px solid #ccc;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+/* .btn-cate-left{
+    border-radius: 0 0 0 80px;
+} */
+/* .btn-cate-right{
+    border-radius: 0 0 80px;
+} */
+.day123-fix{
+    position: relative;
+}
+.day123{
+    position: absolute;
+    top: 40px;
+    right: 200px;
+    z-index: 1;
+}
+.day123 a{
+    width: 150px;
+    height: 50px;
+    display: block;
+    border: 2px solid #ffa12c;
+    background-color: #f2eee8;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 50px;
+    color: #3c2e26;
+    margin: 20px;
+    transform: rotate(-10deg);
+}
+.line{
+    height: 120px;
+    border-left: 2px solid #ffa12c;
+    position: absolute;
+    top: 100px;
+    right: 295px;
+}
+/* 共用標題 */
+
+.topic p{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    width: 150px;
+    text-align: center;
+}
+.topic-line{
+    height: 4px;
+    width: 150px;
+    border-radius: 2px;
+    background-color: #ffa12c;
+    margin-top: -10px;
+}
+/* 行程介紹 */
+.main-c{
+    margin-top: 48px;
+}
+.day-text{
+    font-size: 24px;
+}
+.day-text-all{
+margin-top: 48px;
+}
+.hide-mb, .hide-rate-mb{
+    /* display: none; */
+    position: absolute;
+}
+.item-intro p{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.pic520{
+    width: 520px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.pic520 img{
+    width: 100%;
+    object-fit: cover;
+}
+.pic420{
+    width: 420px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.pic420 img{
+    width: 100%;
+    object-fit: cover;
+}
+.pic580{
+    width: 580px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.pic580 img{
+    width: 100%;
+    object-fit: cover;
+}
+@media(max-width: 425px) {
+    .t-l{
+        font-size: 14px;
+    }
+    .white-bg{
+        height: 2340px;
+    }
+    .white-bg .row{
+        margin: 0;
+    }
+    .day123 a{
+        font-size: 12px;
+        width: 50px;
+        transform:none;
+        line-height: 48px;
+        margin: 0 20px 390px 20px;
+    }
+    .day123{
+        top: 95px;
+        right: 290px;
+    }
+    /* 行程介紹 */
+    .bg-dog{
+        height: 1510px;
+    }
+    .main-c{
+        margin-top: 10px;
+        padding: 0 40px 0 75px;
+    }
+    .day-text-all{
+        margin-top: 38px;
+        font-size: 12px;
+    }
+    .day-text{
+        font-size: 16px;
+    }
+    .topic-intro{
+        margin-left: -65px;
+        margin-top: -25px;
+    }
+    .line{
+        top: 140px;
+        right: 334px;
+        height: 1255px;
+    }
+    .end-dot{
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid #ffa12c;
+        background-color: #f2eee8;
+        position: relative;
+        top: 1385px;
+        left: 17px;
+    }
+    .hide-mb{
+        text-decoration: underline;
+        color: #ffa12c;
+        display: inline-block;
+        position: relative;
+        left: 180px;
+        margin-bottom: 10px;
+    }
+    /* photo correction */
+    .pic520, .pic420, .pic580{
+        width: 270px;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+    /* item1-10 行程頁介紹 */
+    .item1, .item4, .item8,.item2, .item3, .item5, .item6, .item7, .item9, .item10{
+        margin: 20px 0 0 0;
+    }
+}

@@ -7,9 +7,11 @@ body{
     color: #3c2e26;
     letter-spacing: 2px;
 }
+.top-pic-con{
+    overflow: hidden;
+}
 .top-pic{
     width: 110%;
-    overflow: hidden;
     margin-top: 57px;
 }
 .top-pic img{
@@ -17,6 +19,14 @@ body{
     object-fit: cover;
 }
 
+/* 麵包屑 */
+.bread-row{
+    padding-bottom: 48px;
+}
+.bread-row a{
+    color: #555;
+    margin: 0 3px; 
+ }
 /* .al{ 
     margin-left: -20px; 
  } */
@@ -24,10 +34,11 @@ body{
     width: 60%;
     height: 340px;
     background-color: #fff;
-    box-shadow: 2px 2px 20px #ccc;
+    box-shadow: 1px 2px 20px #ddd;
     overflow: hidden;
     border-radius: 20px;
     overflow: hidden;
+    display: flex;
 }
 .hot-pic{
     width: 800px;
@@ -45,6 +56,20 @@ body{
     left: 50px;
     padding: 40px 60px;
 }
+.tag{
+    margin-bottom: 15px;
+}
+.tag p{
+    width: 70px;
+    height: 26px;
+    border-radius: 13px;
+    border: 1px solid #00907c;
+    text-align: center;
+    line-height: 26px;
+    font-size: 12px;
+    color: #00907c;
+    margin: 0 5px;
+}
 .hot-title{
     letter-spacing: 2px;
 }
@@ -55,6 +80,9 @@ body{
 .star img{
     width: 100%;
     object-fit: cover;
+}
+.dots ul{
+    margin: 0 24px 0 0;
 }
 .dots li{
     width: 20px;
@@ -75,6 +103,12 @@ body{
     margin: 8px;
     font-weight: 500;
     letter-spacing: 3px;
+}
+.time, .area{
+    display: flex;
+}
+.time p, .area p{
+    margin-bottom: 0;
 }
 .form-control{
     background-color: #f2eee8;
@@ -171,8 +205,45 @@ body{
     .rate-all {
         letter-spacing: 0.5px;
     }
+    /* 分頁按鈕 */
+    .page-list{
+        list-style: none;
+        margin: 20px auto;
+        /* margin: 50px 470px; */
+    }
+    .pages{
+        width: 50px;
+        height: 50px;
+        background-color: #f2eee8;
+        font-size: 16px;
+        text-align: center;
+        line-height: 50px;
+        margin: 5px;
+        border-radius: 3px;
+        border: 1px solid #ffa12c;
+    }
+    .p-arrow{
+        line-height: 48px;
+    }
+    .pages a:hover{
+        color: #ffb14f;
+        text-decoration: none;
+    }
+    .pages-link{
+        color: #3c2e26;
+    }
+    .arrow-page{
+        width: 8px;
+        margin: 0 auto;
+    }
+    .arrow-page img{
+        width: 100%;
+        object-fit: contain;
+    }
 
-    @media(max-width: 400px) {
+    /* RWD 425 start */
+    @media(max-width: 425px) {
+    /* card RWD */
         .card {
             width: 266px;
             height: 300px;
@@ -192,32 +263,87 @@ body{
             opacity: 0;
             position: absolute;
         }
-        /* card RWD */
-    }
-    .page-list{
-        list-style: none;
-        margin: 20px auto;
-        /* margin: 50px 470px; */
-    }
-    .pages{
-        width: 50px;
-        height: 50px;
-        background-color: #f2eee8;
-        font-size: 16px;
-        text-align: center;
-        line-height: 50px;
-        margin: 5px;
-        border-radius: 3px;
-        border: 1px solid #ffa12c;
-    }
-    .pages-link{
-        color: #3c2e26;
-    }
-    .arrow-page{
-        width: 8px;
-        margin: 0 auto;
-    }
-    .arrow-page img{
+    /* card RWD end*/
+    /* 首圖插畫 */
+        .top-pic{
+            /* width: 130%; */
+            margin-top: 73px;
+            margin-left: 0px;
+            transform: scale(1.2);
+        }
+        .bread-row{
+            margin: 10px 0 0;
+            padding-bottom: 30px;
+        }
+        .hot{
+            margin-left: 0;
+            margin-top: -20px;
+        }
+        .hot-card{
+            width: 100%;
+            height: 360px;
+            display: inline-block;
+            padding: 20px;
+        }
+        .hot-pic{
+            width: 300px;
+            margin: 100px auto 0;
+        
+        }
+        .hot-right{
+            margin-left: 0;
+        }
+        .hot-right svg{
+            display: none;
+        }
+        .hot-text{
+            padding: 0;
+            top: 0;
+            left: 0;
+        }
+         .hot-title{
+            /* width: 100%; */
+            font-size: 18px;
+            margin: 0 0 15px 0;
+            letter-spacing: 2px;
+        }
+        .tag{
+            margin: -245px 0 10px 0;
+        }
+        .hot-info{
+            margin-top: 160px;
+            font-size: 12px;
+        }
+        .hot-buttom{
+        margin-top: -10px;
         width: 100%;
-        object-fit: contain;
+        padding: 0 5px;
+        }
+        .dots{
+            margin-top: -15px;
+        }
+        .dots ul{
+            margin: 0 auto;
+            padding: 0;
+        }
+        /* hot card end */
+        .time, .area{
+            display: inline-block;
+        }
+        .time p, .area p{
+            margin-bottom: 5px;
+        }
+        .trip-select a{
+            width: 146px;
+            display: inline-block;
+        }
+        .area{
+            margin-top: 10px;
+        }
+        .order{
+            margin-top: 20px;
+        }
+        .p-arrow{
+            line-height: 45px;
+        }
     }

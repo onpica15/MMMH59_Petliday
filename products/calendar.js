@@ -34,7 +34,7 @@ console.log(dataTemp)
 let dataDisplay = '<tr>'
 
 for (let i = 0; i < dataTemp.length; i++) {
-  dataDisplay += `<td><p>${dataTemp[i]}</p><p class="green-color">2280</p></td>`
+  dataDisplay += `<td><p>${dataTemp[i]}</p><p class="green-color t-m">2280</p></td>`
   if ((i + 1) % 7 === 0) {
     dataDisplay += '</tr><tr>'
   }

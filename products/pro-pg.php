@@ -8,29 +8,32 @@
         <!-- banner輪播D -->
         <div class="row caro">
             <img src="/petliday/products/img/pd-caro1.jpg" alt="">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 563.52" width="520px">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208 563.52" width="520px">
                 <defs>
-                    <clipPath id="d-clip">
+                    <clipPath id="d-clip-web">
                         <path d="M263,0H164.28C73.7,0,0,73.7,0,164.28v235c0,90.59,73.7,164.29,164.28,164.29H263c141.72,0,257-126.4,257-281.76S404.69,0,263,0Z" />
+                    </clipPath>
+                </defs>
             </svg>
-            </clipPath>
-            </defs>
         </div>
         <!-- 主要資訊區塊 -->
         <div class="top-wrap info">
             <!-- 麵包屑 -->
-            <div class="row bread-row">
-                <p class="t-xs">首頁 / 行程列表 / 台北出發 / 九份一日遊</p>
+            <div class="row bread-row t-xs">
+                <a href="">首頁</a> /
+                <a href="">行程列表</a> /
+                <a href="">台北出發</a> /
+                <a href="">九份一日遊</a>
             </div>
             <!-- 標題row -->
             <div class="row title-row justify-content-between">
                 <div class="title-left">
-                    <p>花東包車三日遊｜上山下海玩得夠！</p>
-                    <p>熱氣球嘉年華＆部落SUP體驗＆金針花海</p>
+                    <p>上山下海玩得夠！｜熱氣球嘉年華＆</p>
+                    <p>SUP體驗＆金針花海 花東三日遊</p>
                 </div>
                 <div class="title-right d-flex">
                     <div class="price-wrap mr-3">
-                        <p class="price t-xxxl">NT$ 2280</p>
+                        <p class="price t-xxl">NT$ 2280</p>
                         <p class="text-gray">成團7日前免費取消</p>
                     </div>
                     <div class="heart">
@@ -81,9 +84,9 @@
                 </div>
             </div>
             <!-- 選擇日期．日曆 -->
-            <div class="select-wrap d-flex">
-                <div class="select-left col-md col-sm-12 m-5 p-0">
-                    <div class="select-date justify-content-between p-0 mb-5 d-flex">
+            <div class="select-wrap w-100">
+                <div class="select-left col-md col-sm-12">
+                    <div class="select-date justify-content-between d-flex">
                         <p class="t-l">選擇出發日期</p>
                         <div class="cal-icon d-flex align-items-center">
                             <div class="green-dot mx-2"></div>
@@ -93,7 +96,7 @@
                         </div>
 
                     </div>
-                    <div class="month d-flex justify-content-between my-4">
+                    <div class="month d-flex justify-content-between">
                         <div class="arrow">
                             <img src="/Petliday/icon/left-orange.png" alt="">
                         </div>
@@ -112,13 +115,13 @@
                     </div>
                 </div>
                 <!-- 選擇數量 -->
-                <div class="select-right col-md col-sm-12 m-5 p-0">
-                    <div class="select-amount mb-5">
+                <div class="select-right col-md col-sm-12">
+                    <div class="select-amount">
                         <p class="t-l">選擇數量</p>
                     </div>
-                    <div class="select-brother d-flex justify-content-between my-4">
+                    <div class="select-brother justify-content-between my-4">
                         <div class="select-man d-flex align-items-center">
-                            <label class="m-0" for="">人數</label>
+                            <label for="">人數</label>
                             <div class="input-group d-flex align-items-center">
                                 <div class="input-group-prepend">
                                     <button class="btn-add" type="button" id="button-sub">－</button>
@@ -130,7 +133,7 @@
                             </div>
                         </div>
                         <div class="select-pet d-flex align-items-center">
-                            <label class="m-0" for="">寵物</label>
+                            <label for="">寵物</label>
                             <div class="input-group d-flex align-items-center">
                                 <div class="input-group-prepend">
                                     <button class="btn-add" type="button" id="button-sub">－</button>
@@ -145,17 +148,17 @@
                     <div class="select-middle d-flex align-items-end justify-content-between">
                         <div class="select-term">
                             <ul class="m-0">
-                                <li>成團7日內免費取消</li>
-                                <li>成團7日內免費取消</li>
-                                <li>成團7日內免費取消</li>
+                                <li>成團7日前免費取消</li>
+                                <li>歡迎使用優惠券</li>
+                                <li>現場請出示電子憑證</li>
                             </ul>
                         </div>
                         <div class="select-price">
                             <span>總金額</span>
-                            <p>NT$ 2280</p>
+                            <p class="t-xxl">NT$ 2280</p>
                         </div>
                     </div>
-                    <div class="btn-twin d-flex justify-content-between mt-5">
+                    <div class="btn-twin d-flex justify-content-between">
                         <div class="btn ml-0">加入購物車</div>
                         <div class="btn mr-0">立即預訂</div>
                     </div>
@@ -186,16 +189,17 @@
                     <a href="">第3天</a>
                 </div>
                 <div class="line">
-
                 </div>
+                <div class="end-dot"></div>
             </div>
-            <div class="container main-c mt-5 pt-4">
-                <div class="topic">
+            <div class="container main-c pt-4">
+                <div class="topic topic-intro">
                     <p>行程介紹</p>
                     <p class="topic-line"></p>
                 </div>
-                <div class="1day-text mt-5">
-                    <p class="day-text">第一天：台東熱氣球嘉年華+波希米亞露營野餐派對</p>
+                <div class="day-text-all">
+                    <p class="hide-mb">查看完整行程</p>
+                    <p class="day-text">第一天：台東熱氣球嘉年華 & 波希米亞露營野餐派對</p>
                     <p class="mt-4 mb-1">09:00 - 09:30 台北火車站(北二門)集合，搭乘專屬Petliday巴士出發</p>
                     <p class="mb-1">16:00 - 18:00 鹿野熱氣球嘉年華，看展球和繫留搭乘</p>
                     <p class="mb-1">19:00 - 24:00 夜宿波希米亞露營區</p>
@@ -227,8 +231,9 @@
                     </div>
                 </div>
                 <!-- 第二天 -->
-                <div class="2day-text mt-5">
-                    <p class="day-text">第二天：台東都歷部落原鄉體驗+都歷海灘SUP探險</p>
+                <div class="day-text-all">
+                    <p class="hide-mb">查看完整行程</p>
+                    <p class="day-text">第二天：台東都歷部落原鄉體驗 & 都歷海灘SUP探險</p>
                     <p class="mt-4 mb-1">08:00 - 09:00 在波希米亞露營區用完早餐，出發到都歷部落</p>
                     <p class="mb-1">10:00 - 13:00 都歷部落農村體驗（附午餐）</p>
                     <p class="mb-1">14:00 - 16:00 都歷海灘SUP探險</p>
@@ -278,8 +283,9 @@
                     </div>
                 </div>
                 <!-- 第三天 -->
-                <div class="3day-text mt-5">
-                    <p class="day-text">第三天：六十石山金針花海+瑞穗農場大地遊戲</p>
+                <div class="day-text-all">
+                    <p class="hide-mb">查看完整行程</p>
+                    <p class="day-text">第三天：六十石山金針花海 & 瑞穗農場大地遊戲</p>
                     <p class="mt-4 mb-1">09:00 - 09:30 加賀屋溫泉會館用完早餐，出發</p>
                     <p class="mb-1">09:30 - 10:30 六十石山金針花海</p>
                     <p class="mb-1">11:30 - 14:00 瑞穗農場踏青+大地遊戲（附餐券）</p>
@@ -319,6 +325,7 @@
             </div>
         </div>
     </div>
+    <!-- 資訊條款三排區 -->
     <div class="white-bg">
         <div class="container">
             <div class="term w-100">
@@ -427,21 +434,22 @@
             </div>
         </div>
         <div class="container">
-            <div class="row mb-5">
+            <div class="topic-wrap">
                 <div class="topic">
                     <p>行程評價</p>
                     <p class="topic-line"></p>
                 </div>
             </div>
+            <p class="hide-rate-mb">查看完整評價</p>
         </div>
-        <div class="container rate pt-0">
+        <div class="container rate-container pt-0">
             <div class="rate-scroll">
                 <div class="row">
-                    <div class="rate-card d-flex c1">
+                    <div class="rate-card c1">
                         <div class="rate-l m-3"><img src="/Petliday/products/img/avatar1.jpg" alt="">
                         </div>
                         <div class="rate-r m-2">
-                            <p class="rate-name t-xs mt-3">愛莉師</p>
+                            <p class="rate-name t-xs">愛莉師</p>
                             <p class="rate-title t-m mb-2">台東熱氣球嘉年華</p>
                             <div class="star d-flex mb-3">
                                 <img src="/petliday/icon/star-green-fill.png" alt="">
@@ -455,7 +463,7 @@
                             <p class="t-s mb-1">明年想要再帶我們家的小可愛來看！</p>
                         </div>
                     </div>
-                    <div class="rate-card d-flex c2">
+                    <div class="rate-card c2">
                         <div class="rate-l m-3"><img src="/Petliday/products/img/avatar2.jpg" alt="">
                         </div>
                         <div class="rate-r m-2">
@@ -472,7 +480,7 @@
                             <p class="t-s mb-1">營區還有特別準備寵物的食材，非常貼心！</p>
                         </div>
                     </div>
-                    <div class="rate-card d-flex c3">
+                    <div class="rate-card c3">
                         <div class="rate-l m-3"><img src="/Petliday/products/img/avatar3.jpg" alt="">
                         </div>
                         <div class="rate-r m-2">
@@ -490,7 +498,7 @@
                             <p class="t-s mb-1">我跟我們家的寵物也陷入網美的世界了 (害羞)</p>
                         </div>
                     </div>
-                    <div class="rate-card d-flex c4">
+                    <div class="rate-card c4">
                         <div class="rate-l m-3"><img src="/Petliday/products/img/avatar4.jpg" alt="">
                         </div>
                         <div class="rate-r m-2">
@@ -511,7 +519,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="rate-card d-flex c5">
+                    <div class="rate-card c5">
                         <div class="rate-l m-3"><img src="/Petliday/products/img/avatar5.jpg" alt="">
                         </div>
                         <div class="rate-r m-2">
@@ -529,7 +537,7 @@
                             <p class="t-s mb-1">而且有專業教練的帶領，可以非常安心的盡興玩樂！</p>
                         </div>
                     </div>
-                    <div class="rate-card d-flex c6">
+                    <div class="rate-card c6">
                         <div class="rate-l m-3"><img src="/Petliday/products/img/avatar6.jpg" alt="">
                         </div>
                         <div class="rate-r m-2">
@@ -547,7 +555,7 @@
                             <p class="t-s mb-1">CP值超級高的行程，推推</p>
                         </div>
                     </div>
-                    <div class="rate-card d-flex c7">
+                    <div class="rate-card c7">
                         <div class="rate-l m-3"><img src="/Petliday/products/img/avatar7.jpg" alt="">
                         </div>
                         <div class="rate-r m-2">
@@ -565,7 +573,7 @@
                             <p class="t-s mb-1">搭中巴環七美島，司機時間抓的很充裕，也都會解說</p>
                         </div>
                     </div>
-                    <div class="rate-card d-flex c8">
+                    <div class="rate-card c8">
                         <div class="rate-l m-3"><img src="/Petliday/products/img/avatar8.jpg" alt="">
                         </div>
                         <div class="rate-r m-2">
@@ -586,7 +594,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="rate-card d-flex c9">
+                    <div class="rate-card c9">
                         <div class="rate-l m-3"><img src="/Petliday/products/img/avatar9.jpg" alt="">
                         </div>
                         <div class="rate-r m-2">
@@ -604,7 +612,7 @@
                             <p class="t-s mb-1">餐食很用心，吃的很豐盛，有機會會再去住一晚。</p>
                         </div>
                     </div>
-                    <div class="rate-card d-flex c10">
+                    <div class="rate-card c10">
                         <div class="rate-l m-3"><img src="/Petliday/products/img/avatar10.jpg" alt="">
                         </div>
                         <div class="rate-r m-2">
@@ -622,7 +630,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="rate-card d-flex c11">
+                    <div class="rate-card c11">
                         <div class="rate-l m-3"><img src="/Petliday/products/img/avatar11.jpg" alt="">
                         </div>
                         <div class="rate-r m-2">
@@ -640,7 +648,7 @@
                             <p class="t-s mb-1">謝謝店家的用心讓我們渡過了愉快的週末！</p>
                         </div>
                     </div>
-                    <div class="rate-card d-flex c12">
+                    <div class="rate-card c12">
                         <div class="rate-l m-3"><img src="/Petliday/products/img/avatar12.jpg" alt="">
                         </div>
                         <div class="rate-r m-2">
@@ -663,7 +671,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="row mb-5">
+            <div class="topic-wrap">
                 <div class="topic">
                     <p>推薦行程</p>
                     <p class="topic-line"></p>
@@ -672,20 +680,9 @@
         </div>
         <!-- 3個一排card -->
         <div class="container p-0">
-            <div class="row align-items-center">
-                <!-- 左箭頭 -->
-                <a class="arrow m-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.62 51.56" width="20px">
-                        <defs></defs>
-                        <g id="圖層_2" data-name="圖層 2">
-                            <g id="圖層_1-2" data-name="圖層 1">
-                                <path class="cls-4" d="M25.12,51.56a3.52,3.52,0,0,1-2.51-1.06L1,28.22a3.5,3.5,0,0,1,0-4.88L22.61,1.06a3.5,3.5,0,0,1,5,4.88L8.38,25.78,27.64,45.62a3.51,3.51,0,0,1-2.52,5.94Z" />
-                            </g>
-                        </g>
-                    </svg>
-                </a>
+            <div class="row align-items-center w-100">
                 <div class="card c3 col-md m-3 p-0">
-                    <div class="heart">
+                    <div class="heart-card ">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
                             <defs></defs>
                             <g id="圖層_2" data-name="圖層 2">
@@ -700,7 +697,7 @@
                     </div>
                     <div class="card-text pt-3 pb-1 px-4">
                         <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
-                        <div class="d-flex justify-content-between">
+                        <div class="d-flex justify-content-between align-items-center">
                             <div class="info-left d-flex align-items-center">
                                 <div class="star mr-2">
 
@@ -726,7 +723,7 @@
                     </p>
                 </div>
                 <div class="card c3 col-md col-sm-12 m-3 p-0">
-                    <div class="heart">
+                    <div class="heart-card ">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
                             <defs></defs>
                             <g id="圖層_2" data-name="圖層 2">
@@ -741,7 +738,7 @@
                     </div>
                     <div class="card-text pt-3 pb-1 px-4">
                         <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
-                        <div class="d-flex justify-content-between">
+                        <div class="d-flex justify-content-between align-items-center">
                             <div class="info-left d-flex align-items-center">
                                 <div class="star mr-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
@@ -764,7 +761,7 @@
                     </p>
                 </div>
                 <div class="card c3 col-md col-sm-12 m-3 p-0">
-                    <div class="heart">
+                    <div class="heart-card ">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
                             <defs></defs>
                             <g id="圖層_2" data-name="圖層 2">
@@ -779,7 +776,7 @@
                     </div>
                     <div class="card-text pt-3 pb-1 px-4">
                         <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
-                        <div class="d-flex justify-content-between">
+                        <div class="d-flex justify-content-between align-items-center">
                             <div class="info-left d-flex align-items-center">
                                 <div class="star mr-2">
 
@@ -803,17 +800,6 @@
                         簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
                     </p>
                 </div>
-                <!-- 右箭頭 -->
-                <a class="arrow m-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.62 51.56" width="20px">
-                        <defs></defs>
-                        <g id="圖層_2" data-name="圖層 2">
-                            <g id="圖層_1-2" data-name="圖層 1">
-                                <path class="cls-4" d="M3.5,51.56A3.5,3.5,0,0,1,1,45.62L20.25,25.78,1,5.94A3.5,3.5,0,0,1,6,1.06L27.64,23.34a3.52,3.52,0,0,1,0,4.88L6,50.5A3.51,3.51,0,0,1,3.5,51.56Z" />
-                            </g>
-                        </g>
-                    </svg>
-                </a>
             </div>
         </div>
     </div>

@@ -3,12 +3,16 @@
 <link rel="stylesheet" href="pro-list.css">
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
 
-<div class="container-fluid">
+<div class="container-fluid top-pic-con">
     <div class="row top-pic">
         <img src="/petliday/products/img/prolist-top.png" alt="">
     </div>
 </div>
 <div class="container">
+    <div class="row bread-row t-xs">
+        <a href="">首頁</a> /
+        <a href="">行程列表</a>
+    </div>
     <div class="topic">
         <p>熱門行程</p>
         <p class="topic-line"></p>
@@ -21,7 +25,7 @@
                 <path class="cls-4" d="M25.12,51.56a3.52,3.52,0,0,1-2.51-1.06L1,28.22a3.5,3.5,0,0,1,0-4.88L22.61,1.06a3.5,3.5,0,0,1,5,4.88L8.38,25.78,27.64,45.62a3.51,3.51,0,0,1-2.52,5.94Z" />
             </svg>
         </a>
-        <div class="hot-card d-flex">
+        <div class="hot-card">
             <div class="hot-pic">
                 <img src="/petliday/products/img/pdlist_hot1.jpg" alt="">
             </div>
@@ -34,8 +38,9 @@
                 </svg>
                 <div class="hot-text position-absolute">
                     <div class="tag d-flex">
-                        <p>tag1</p>
-                        <p>tag2</p>
+                        <p>高cp值</p>
+                        <p>獨家行程</p>
+                        <p>一致好評</p>
                     </div>
                     <p class="hot-title t-xl">標題標題標題標題標題標標題標題標題標標</p>
                     <p class="hot-info">
@@ -44,10 +49,10 @@
                     <div class="hot-buttom d-flex justify-content-between align-items-center">
                         <div class="hot-buttom-left d-flex">
                             <div class="star">
-                                <img src="/Petliday/icon/star-green.png" alt="">
+                                <img src="/Petliday/icon/star-green-fill.png" alt="">
                             </div>
                             <p class="rate t-xl text-gray ml-2">4.8</p>
-                            <p class="rate-num"><u>18則評論</u></p>
+                            <p class="rate-num mt-1 ml-2"><u class="text-gray">18則評論</u></p>
                         </div>
                         <div class="hot-button-right">
                             <p class="price orange-color t-xxl">$3880</p>
@@ -65,7 +70,7 @@
 </div>
 <div class="container">
     <div class="row dots justify-content-end">
-        <ul class="d-flex mr-4">
+        <ul class="d-flex">
             <li></li>
             <li></li>
             <li></li>
@@ -78,15 +83,15 @@
         <p>行程一覽</p>
         <p class="topic-line"></p>
     </div>
-    <div class="time d-flex align-items-center">
-        <p class="m-0 pr-3">玩多久？</p>
+    <div class="time align-items-center">
+        <p class="pr-3">玩多久？</p>
         <a href="">三日遊</a>
         <a href="">二日遊</a>
         <a href="">一日遊</a>
         <a href="">活動</a>
     </div>
-    <div class="area d-flex align-items-center">
-        <p class="m-0 pr-3">去哪玩？</p>
+    <div class="area align-items-center">
+        <p class="pr-3">去哪玩？</p>
         <a href="">北部出發</a>
         <a href="">中部出發</a>
         <a href="">南部出發</a>
@@ -474,7 +479,7 @@
 <div class="container">
     <div class="row mt-4">
         <ul class="page-list p-0 d-flex">
-            <li class="pages">
+            <li class="pages p-arrow">
                 <a class="pages-link" href="#" aria-label="Previous">
                     <div class="arrow-page">
                         <img src="/Petliday/icon/left.png" alt="">
@@ -484,7 +489,7 @@
             <li class="pages"><a class="pages-link" href="#">1</a></li>
             <li class="pages"><a class="pages-link" href="#">2</a></li>
             <li class="pages"><a class="pages-link" href="#">3</a></li>
-            <li class="pages">
+            <li class="pages p-arrow">
                 <a class="pages-link" href="#" aria-label="Next">
                     <div class="arrow-page">
                         <img src="/Petliday/icon/right.png" alt="">
