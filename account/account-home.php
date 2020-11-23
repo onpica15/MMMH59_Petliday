@@ -235,42 +235,43 @@
                                     <h4 class="t-xxl">我的訂單</h4>
                                 </div>
                             </div>
-                            <div class="row search-br">
-                                <div class="col">
-                                    <input class="" type="search" placeholder="搜索歷史清單" aria-label="Search">
-                                    <button class="btn-search" type="submit">go</button>
-                                </div>
+                            <!-- search -->
+                            <div class="row search w-100">
+                                <input class="col-12" type="search" placeholder="搜索歷史清單" aria-label="Search">
+                                <button class="btn-search" type="submit">go</button>
                             </div>
+                            <!-- ----prod-box---- -->
+
+
                             <div class="row prod-box d-flex align-items-center">
-                                <div class="prod-img col-2 col-lg-4">
+                                <div class="prod-img col-2 col-lg-2">
                                     <img src="../products/img/pd6.jpg" alt="">
                                 </div>
-                                <!-- brod-box>text -->
-                                <div class="col-10 col-lg-8 prod-text d-flex flex-column justify-content-center">
-                                    <h5 class="t-l title1-m">標題標題標題標題標題標題標題標題題標題標題</h5>
+                                <div class="col-10 col-lg-7 prod-text d-flex flex-column">
+                                    <h5 class="brown-color t-l title1-m">標題標題標題標題標題標題標題標題題標題</h5>
                                     <h6 class="t-m title1-m">方案類型:恆春二日遊</h6>
 
-                                    <div class="col-4 small-text">
-                                        <h6 class=" text-gray t-s">2020/08/12 pm 6:00</h6>
-                                        <div class="col-4 prod-price d-flex align-items-center ">
-                                            <h5 class="t-m">NT$ 3000</h5>
-                                        </div>
-                                    </div>
-                                    <div class=" mt-4 change-date">
-                                        <div class=" d-flex green-color t-s">
-                                            已完成
-                                        </div>
-                                    </div>
-
-                                    <div class="col-10 col-lg-4 prod-edit">
-                                        <button class="btn">訂單評論</button>
-                                        <button class="btn">訂單明細</button>
+                                    <div class="small-text">
+                                        <h6 class=" text-gray t-s">訂購日期: 2020/08/12 pm 6:00</h6>
 
                                     </div>
                                 </div>
-                                <!-- endof brod-box>text -->
+                                <div class="col-1 col-lg-3 d-flex flex-column ml-auto align-self-end">
+                                    <h5 class="mb-4 ml-auto t-m brown-color prod-price-in">NT$ 3000</h5>
+                                    <h5 class="ml-auto green-color t-l title1-m">訂單已完成</h5>
+                                </div>
+
+
 
                             </div>
+                            <div class="row justify-content-end">
+                                <button class="btn">訂單明細</button>
+                                <button class="btn">訂單評論</button>
+                            </div>
+
+
+                            <!-- ----endof prod-box---- -->
+
                         </div>
                     </div>
 

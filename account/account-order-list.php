@@ -61,7 +61,7 @@
 
             <div class="col-12 col-lg-9">
                 <div class="tab-content" id="nav-tabContent">
-                    <!-- list-profile 會員資料 -->
+                    <!-- oreder-list 訂單明細 -->
                     <div class="tab-pane fade show active" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
 
                         <div class="container mb-3" id="list-title">
@@ -75,9 +75,9 @@
                                 <div class="col-12">
                                     <h6 class="t-l">訂單已確認</h6>
                                 </div>
-                                <div class="row justify-content-between">
+                                <div class="qrcode justify-content-between">
                                     <div class="col-12 col-lg-3 qrcode">
-                                        <img src="" alt="">
+                                        <img src="./img/qrcode.png" alt="">
                                     </div>
                                     <div class="col-12 col-lg-5 info-text">
                                         <p>訂單編號：00000000</p>
@@ -107,10 +107,16 @@
                                     <p>身分證號碼： A2235743245</p>
                                 </div>
                             </div>
+                            <div class="row">
+                                <button class="btn btn btn-outline-warning">返回歷史訂單</button>
+                            </div>
                         </div>
                     </div>
+                    <!-- endof oreder-list 訂單明細 -->
                 </div>
+
             </div>
+
 
 
 
