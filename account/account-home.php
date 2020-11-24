@@ -197,13 +197,14 @@
 
                         <!-- search -->
                         <div class="container">
-                            <div class="row search justify-content-center">
-                                <!-- <div class="search-img">
-                                    <img class="" src="../icon/search.svg" alt="">
-                                </div> -->
-                                <i class=' fas fa-search'></i>
-                                <input class="col-10 " type="search" placeholder="搜索歷史清單" aria-label="Search">
-                                <button class="btn-search" type="submit">go</button>
+                            <div class="row ml-0">
+                                <div class="col-10 col-lg-6 search align-items-center">
+                                    <div class="icon-search">
+                                        <i class=' fas fa-search'></i>
+                                    </div>
+                                    <input class="form-control" type="search" placeholder="搜索歷史清單" aria-label="Search">
+                                    <a class="btn-green btn-search" type="submit">go</a>
+                                </div>
                             </div>
                         </div>
                         <!-- ----prod-box---- -->
@@ -344,7 +345,12 @@
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
     // ------JS開始 以上勿刪-------
-
+    $('.list-group-item').on('click', function() {
+        // console.log('hi')
+        // $('.list-group-item').removeClass('active');
+        // $(this).addClass('active');
+        // location.hash = $(this).attr('href');
+    })
 
 
     // ------JS結束 勿刪到-------

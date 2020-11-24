@@ -58,20 +58,20 @@
                 <div class="bar d-flex">
                   <button class="col btn-prev border-btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
 
-                  <div class="col color-bar d-flex">
-                    <div class=" circle mr-3">
+                  <div class="col color-bar d-flex justify-content-around">
+                    <div class=" selected-border ">
                       <div class="red ball" style="background-color: rgb(255, 83, 83);"></div>
                     </div>
-                    <div class=" circle mr-3">
+                    <div class=" selected-border ">
                       <div class="orange ball" style="background-color: #ffa12c;"></div>
                     </div>
-                    <div class=" circle mr-3 active">
+                    <div class=" selected-border active">
                       <div class="blue ball" style="background-color: rgb(89, 180, 255);"></div>
                     </div>
-                    <div class=" circle mr-3">
+                    <div class=" selected-border ">
                       <div class="purple ball" style="background-color: rgb(170, 85, 219);"></div>
                     </div>
-                    <div class="circle">
+                    <div class="selected-border">
                       <div class="green ball" style="background-color: #00907c;"></div>
                     </div>
                   </div>
@@ -203,15 +203,15 @@
   // ------JS開始 以上勿刪-------
 
   $('.border-btn-next').on('click', function() {
-    if ($('.circle.active').next().length > 0) {
-      $('.circle.active').removeClass('active').next().addClass('active')
+    if ($('.selected-border.active').next().length > 0) {
+      $('.selected-border.active').removeClass('active').next().addClass('active')
     }
   })
 
   $('.border-btn-prev').on('click', function() {
-    // console.log('hi', $('.circle.active'))
-    if ($('.circle.active').prev().length > 0) {
-      $('.circle.active').removeClass('active').prev().addClass('active')
+    // console.log('hi', $('.selected-border.active'))
+    if ($('.selected-border.active').prev().length > 0) {
+      $('.selected-border.active').removeClass('active').prev().addClass('active')
     }
   })
 
