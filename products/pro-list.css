@@ -32,7 +32,7 @@ body{
  } */
  /* hot carosel */
  .wrap {
-    width: 340px;
+    width: 1140px;
     height: 340px;
     border-radius: 20px;
     overflow: hidden;
@@ -303,14 +303,14 @@ body{
         /* 熱門輪播 */
                 /* hot carosel */
         .wrap {
-            width: 1140px;
-            height: 340px;
+            width: 340px;
+            height: 380px;
             border-radius: 20px;
             overflow: hidden;
         }
 
         .wrap-img {
-            left: -1140px;
+            left: -340px;
             width: 6840px;
             transition: .5s;
         }
@@ -325,14 +325,14 @@ body{
             margin-top: -20px;
         }
         .hot-card{
-            width: 100%;
-            height: 360px;
+            width: 340px;
+            height: 380px;
             display: inline-block;
             padding: 20px;
         }
         .hot-pic{
             width: 300px;
-            margin: -20px 0 0 -20px;
+            margin: 100px 0 0;
         }
         .hot-pic img{
             width: 100%;
