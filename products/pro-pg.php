@@ -8,7 +8,8 @@
         <!-- banner輪播D -->
         <div class="row caro">
             <img src="/petliday/products/img/pd-caro1.jpg" alt="">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208 563.52" width="520px">
+            <!--clipPathUnits="objectBoundingBox" transform="scale(0.0019 0.00178)" -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208 563.52" width="500px">
                 <defs>
                     <clipPath id="d-clip-web">
                         <path d="M263,0H164.28C73.7,0,0,73.7,0,164.28v235c0,90.59,73.7,164.29,164.28,164.29H263c141.72,0,257-126.4,257-281.76S404.69,0,263,0Z" />
@@ -36,7 +37,7 @@
                         <p class="price t-xxl">NT$ 2280</p>
                         <p class="text-gray">成團7日前免費取消</p>
                     </div>
-                    <div class="heart">
+                    <div class="heart-top">
                         <img src="/petliday/icon/heart.png">
                     </div>
                     <div class="share">
@@ -50,7 +51,7 @@
                     <img src="/petliday/icon/star-green-fill.png" alt="">
                 </div>
                 <span class="rate text-gray">4.9</span>
-                <span class="rate-number"><u class="text-gray">133則評論</u></span>
+                <a href="#rate-section" class="rate-number"><u class="text-gray">133則評論</u></a>
                 <div class="tag d-flex">
                     <p>高cp值</p>
                     <p>獨家行程</p>
@@ -64,12 +65,12 @@
                     <li>第二天：台東都歷部落原鄉體驗+都歷海灘SUP探險</li>
                     <li>第三天：六十石山金針花海+瑞穗農場大地遊戲</li>
                 </ul>
-                <div class="select-btn ">選擇方案</div>
+                <a href="#select-section" class="select-btn ">選擇方案</a>
             </div>
         </div>
         <!-- 選擇方案區塊 -->
         <div class="top-wrap select">
-            <div class="top d-flex justify-content-between align-items-center">
+            <div id="select-section" class="top d-flex justify-content-between align-items-center">
                 <div class="top-left">
                     <div class="topic">
                         <p>選擇日期、數量</p>
@@ -159,25 +160,25 @@
                         </div>
                     </div>
                     <div class="btn-twin d-flex justify-content-between">
-                        <div class="btn ml-0">加入購物車</div>
-                        <div class="btn mr-0">立即預訂</div>
+                        <a href="" class="btn ml-0">加入購物車</a>
+                        <a href="" class="btn mr-0">立即預訂</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- 出血狗狗背景圖 -->
-    <div class="product w-100">
+    <div id="trip-section" class="product w-100">
         <div class="bg-dog">
             <div class="container">
                 <div class="row cate-fix">
                     <div class="btn-group w-100" role="group" aria-label="Basic example">
-                        <button type="button" class="btn-cate btn-cate-left pl-4">行程介紹</button>
-                        <button type="button" class="btn-cate">行前準備</button>
-                        <button type="button" class="btn-cate">注意事項</button>
-                        <button type="button" class="btn-cate">取消政策</button>
-                        <button type="button" class="btn-cate">行程評價</button>
-                        <button type="button" class="btn-cate
+                        <button onclick="location.href='#trip-section'" type="button" class="btn-cate bc1 btn-cate-left pl-4">行程介紹</button>
+                        <button onclick="location.href='#prepare-section'" type="button" class="btn-cate bc2">行前準備</button>
+                        <button onclick="location.href='#intention-section'" type="button" class="btn-cate bc3">注意事項</button>
+                        <button onclick="location.href='#cancel-section'" type="button" class="btn-cate bc4">取消政策</button>
+                        <button onclick="location.href='#rate-section'" type="button" class="btn-cate bc5">行程評價</button>
+                        <button onclick="location.href='#recommand-section'" type="button" class="btn-cate bc6
                         btn-cate-right pr-4">推薦行程</button>
                     </div>
                 </div>
@@ -319,7 +320,7 @@
                         <p>除了乳牛在草原散步、鴕鳥在旁奔跑，在場的我們熱情也不能少啊。</p>
                         <p>毛孩與爸媽準備好了嗎？準備來場難忘的冒險旅程吧！</p>
                         <p>遊戲時間約1小時，拍完大合照，就可以帶著寵物們自由活動。</p>
-                        <p>三天的旅程即將劃下句點，期望大家帶著滿滿的收穫回家囉！</p>
+                        <p id="prepare-section">三天的旅程即將劃下句點，期望大家帶著滿滿的收穫回家囉！</p>
                     </div>
                 </div>
             </div>
@@ -328,7 +329,7 @@
     <!-- 資訊條款三排區 -->
     <div class="white-bg">
         <div class="container">
-            <div class="term w-100">
+            <div id="intention-section" class="term t1 w-100">
                 <div class="row justify-content-between align-items-center">
                     <div class="topic">
                         <p>行前準備</p>
@@ -338,7 +339,7 @@
                         <img src="/Petliday/icon/down.png" alt="">
                     </a>
                 </div>
-                <div class="row term-text">
+                <div class="row term-text w-100">
                     <ul class="mt-2">
                         <li>牽繩＋胸背或胸背帶。</li>
                         <li>推車：搭車時段統一放置於遊覽車行李箱區。</li>
@@ -373,7 +374,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="term w-100">
+            <div id="cancel-section" class="term t2 w-100">
                 <div class="row justify-content-between align-items-center">
                     <div class="topic">
                         <p>注意事項</p>
@@ -383,7 +384,7 @@
                         <img src="/Petliday/icon/down.png" alt="">
                     </a>
                 </div>
-                <div class="row term-text">
+                <div class="row term-text w-100">
                     <ul class="mt-2">
                         <li>尚未結紮之男寳寶：尊重同行女寶寶請穿禮貌帶或尿布。
                         </li>
@@ -398,9 +399,24 @@
                         <li>行程出發前二日另行傳真或電話通知相關注意事項。
                         </li>
                     </ul>
+                    <ul class="hidden">
+                        <li>請於規定時間內準時集合，報名時登記的手機請開機，以免領隊聯絡不到客人，無法上車。
+                        </li>
+                        <li>遊覽車為密閉空間，請勿攜帶危險物品上車，以免影響遊客安全。
+                        </li>
+                        <li>行程中如旅客因個人因素私自脫隊，集合不到，本公司不予退費。
+                        </li>
+                        <li>本行程所載明之車行時間僅供參考，因路況或遇假日遊客眾多，行程順序將視情況前後更動。
+                        </li>
+                        <li>敬請自備防寒衣物及雨具，個人慣用隨身藥品：如暈車藥、感冒藥、防蚊蟲液等。
+                        </li>
+                        <li>由於遊覽車上屬密閉式空間，為了您與其他旅客的健康，若有感冒咳嗽等症狀之旅客請記得戴上口罩喔！
+                        </li>
+                        <li>本行程團費費用包含之項目如有不使用者，視同放棄，恕不另行退款。</li>
+                    </ul>
                 </div>
             </div>
-            <div class="term w-100">
+            <div class="term t3 w-100">
                 <div class="row justify-content-between align-items-center">
                     <div class="topic">
                         <p>取消政策</p>
@@ -410,25 +426,35 @@
                         <img src="/Petliday/icon/down.png" alt="">
                     </a>
                 </div>
-                <div class="row term-text">
+                <div class="row term-text w-100">
                     <ul class="mt-2">
                         <li>報名後因故不能參加活動時，請儘早來電告知
                         </li>
                         <li>取消手續費規定：
-
                         </li>
                         <li>出發前31天以上取消：總費用的10%；
-
                         </li>
                         <li>出發前21-30天取消：總費用的50%；
-
                         </li>
                         <li>出發前8-20天取消：總費用之75%；
-
                         </li>
-                        <li>出發前7天內取消：全額費用。
-
+                        <li id="rate-section">出發前7天內取消：全額費用。
                         </li>
+                    </ul>
+                    <ul class="hidden">
+                        <li>若旅程中無法參加使用內含之活動、餐費、入場費、住房等，所繳費用恕不退費。
+                        </li>
+                        <li>報名訂單需經客服人員確認回覆後始可生效，並視同雙方同意簽署國內旅遊定型化契約書，敬請詳閱該契約書內容。
+                        </li>
+                        <li>線上預約並非保證訂位成功，仍需以客服人員回覆確認為準。
+                        </li>
+                        <li>旅客同意，本商品經訂購付款後，如要取消或延期所衍生之費用需自行負責。
+                        </li>
+                        <li>如遇颱風、地震、豪雨等大自然不可抗拒之因素，本公司保有延期出發或全額退費之權利。
+                        </li>
+                        <li>取消規定：本公司作業均遵依照觀光局相關規定，與旅客簽署旅遊契約書，詳細取消規訂請參閱《國內旅遊定型化契約書》。
+                        </li>
+                        <li>通知日需以人事行政局公告之正常上班時間為依準，超過時間以下個工作日計算，敬請見諒。</li>
                     </ul>
                 </div>
             </div>
@@ -436,14 +462,14 @@
         <div class="container">
             <div class="topic-wrap">
                 <div class="topic">
-                    <p>行程評價</p>
+                    <p id="rate-area">行程評價</p>
                     <p class="topic-line"></p>
                 </div>
             </div>
             <a class="hide-rate-mb">查看完整評價</a>
         </div>
         <div class="container rate-container pt-0">
-            <div class="rate-scroll">
+            <div class="rate-scroll pb-5">
                 <div class="row">
                     <div class="rate-card c1">
                         <div class="rate-l m-3"><img src="/Petliday/products/img/avatar1.jpg" alt="">
@@ -673,7 +699,7 @@
         <div class="container">
             <div class="topic-wrap">
                 <div class="topic">
-                    <p>推薦行程</p>
+                    <p id="recommand-section">推薦行程</p>
                     <p class="topic-line"></p>
                 </div>
             </div>
@@ -682,15 +708,8 @@
         <div class="container p-0">
             <div class="row align-items-center w-100">
                 <div class="card c3 col-md m-3 p-0">
-                    <div class="heart-card ">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
-                            <defs></defs>
-                            <g id="圖層_2" data-name="圖層 2">
-                                <g id="圖層_1-2" data-name="圖層 1">
-                                    <path class="cls-5" d="M31.31,65A3.48,3.48,0,0,1,29,64.09C27.9,63.13,3.36,40.49.37,20.86A17,17,0,0,1,0,17.33a16.37,16.37,0,0,1,.13-2A13,13,0,0,1,1.78,9.7,17.34,17.34,0,0,1,31.32,7.07,17.33,17.33,0,0,1,60.89,9.78a12.84,12.84,0,0,1,1.6,5.38,17.22,17.22,0,0,1,.15,2.17,17.42,17.42,0,0,1-.4,3.64C59.17,40.58,34.71,63.13,33.67,64.09A3.48,3.48,0,0,1,31.31,65Zm-14-58A10.39,10.39,0,0,0,8,12.89a1.9,1.9,0,0,1-.2.37,6.13,6.13,0,0,0-.71,2.68.59.59,0,0,1,0,.14A12.15,12.15,0,0,0,7,17.33a10.74,10.74,0,0,0,.23,2.17,1.7,1.7,0,0,1,0,.22c2.07,13.93,18,30.87,24,36.92,6.08-6,21.9-22.92,24-36.84,0-.07,0-.15,0-.23a10.21,10.21,0,0,0,.26-2.24,12.11,12.11,0,0,0-.1-1.34.77.77,0,0,1,0-.15,6,6,0,0,0-.69-2.56c-.07-.11-.13-.23-.19-.34A10.31,10.31,0,0,0,35,17a3.49,3.49,0,0,1-1.56,2.79l-.16.11a3.5,3.5,0,0,1-3.93,0l-.15-.11A3.49,3.49,0,0,1,27.64,17,10.28,10.28,0,0,0,17.33,7Z" />
-                                </g>
-                            </g>
-                        </svg>
+                    <div class="heart-circle">
+                        <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
                     </div>
                     <div class="card-pic w-100">
                         <img src="/Petliday/products/img/reco1.jpg" alt="">
@@ -723,15 +742,8 @@
                     </p>
                 </div>
                 <div class="card c3 col-md col-sm-12 m-3 p-0">
-                    <div class="heart-card ">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
-                            <defs></defs>
-                            <g id="圖層_2" data-name="圖層 2">
-                                <g id="圖層_1-2" data-name="圖層 1">
-                                    <path class="cls-5" d="M31.31,65A3.48,3.48,0,0,1,29,64.09C27.9,63.13,3.36,40.49.37,20.86A17,17,0,0,1,0,17.33a16.37,16.37,0,0,1,.13-2A13,13,0,0,1,1.78,9.7,17.34,17.34,0,0,1,31.32,7.07,17.33,17.33,0,0,1,60.89,9.78a12.84,12.84,0,0,1,1.6,5.38,17.22,17.22,0,0,1,.15,2.17,17.42,17.42,0,0,1-.4,3.64C59.17,40.58,34.71,63.13,33.67,64.09A3.48,3.48,0,0,1,31.31,65Zm-14-58A10.39,10.39,0,0,0,8,12.89a1.9,1.9,0,0,1-.2.37,6.13,6.13,0,0,0-.71,2.68.59.59,0,0,1,0,.14A12.15,12.15,0,0,0,7,17.33a10.74,10.74,0,0,0,.23,2.17,1.7,1.7,0,0,1,0,.22c2.07,13.93,18,30.87,24,36.92,6.08-6,21.9-22.92,24-36.84,0-.07,0-.15,0-.23a10.21,10.21,0,0,0,.26-2.24,12.11,12.11,0,0,0-.1-1.34.77.77,0,0,1,0-.15,6,6,0,0,0-.69-2.56c-.07-.11-.13-.23-.19-.34A10.31,10.31,0,0,0,35,17a3.49,3.49,0,0,1-1.56,2.79l-.16.11a3.5,3.5,0,0,1-3.93,0l-.15-.11A3.49,3.49,0,0,1,27.64,17,10.28,10.28,0,0,0,17.33,7Z" />
-                                </g>
-                            </g>
-                        </svg>
+                    <div class="heart-circle">
+                        <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
                     </div>
                     <div class="card-pic w-100">
                         <img src="/Petliday/products/img/reco2.jpg" alt="">
@@ -761,15 +773,8 @@
                     </p>
                 </div>
                 <div class="card c3 col-md col-sm-12 m-3 p-0">
-                    <div class="heart-card ">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
-                            <defs></defs>
-                            <g id="圖層_2" data-name="圖層 2">
-                                <g id="圖層_1-2" data-name="圖層 1">
-                                    <path class="cls-5" d="M31.31,65A3.48,3.48,0,0,1,29,64.09C27.9,63.13,3.36,40.49.37,20.86A17,17,0,0,1,0,17.33a16.37,16.37,0,0,1,.13-2A13,13,0,0,1,1.78,9.7,17.34,17.34,0,0,1,31.32,7.07,17.33,17.33,0,0,1,60.89,9.78a12.84,12.84,0,0,1,1.6,5.38,17.22,17.22,0,0,1,.15,2.17,17.42,17.42,0,0,1-.4,3.64C59.17,40.58,34.71,63.13,33.67,64.09A3.48,3.48,0,0,1,31.31,65Zm-14-58A10.39,10.39,0,0,0,8,12.89a1.9,1.9,0,0,1-.2.37,6.13,6.13,0,0,0-.71,2.68.59.59,0,0,1,0,.14A12.15,12.15,0,0,0,7,17.33a10.74,10.74,0,0,0,.23,2.17,1.7,1.7,0,0,1,0,.22c2.07,13.93,18,30.87,24,36.92,6.08-6,21.9-22.92,24-36.84,0-.07,0-.15,0-.23a10.21,10.21,0,0,0,.26-2.24,12.11,12.11,0,0,0-.1-1.34.77.77,0,0,1,0-.15,6,6,0,0,0-.69-2.56c-.07-.11-.13-.23-.19-.34A10.31,10.31,0,0,0,35,17a3.49,3.49,0,0,1-1.56,2.79l-.16.11a3.5,3.5,0,0,1-3.93,0l-.15-.11A3.49,3.49,0,0,1,27.64,17,10.28,10.28,0,0,0,17.33,7Z" />
-                                </g>
-                            </g>
-                        </svg>
+                    <div class="heart-circle">
+                        <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
                     </div>
                     <div class="card-pic w-100">
                         <img src="/Petliday/products/img/reco3.jpg" alt="">
@@ -810,25 +815,11 @@
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
 <?php include __DIR__ . '/../parts/html-script.php' ?>
-<script src="/petliday/products/calendar.js"></script>
+
 
 <!-- // ------JS開始 以上誤刪------- -->
-<script>
-    $('.c3').on('mouseenter', function() {
-        $(this).find('.card-pic').css('height', '135px');
-        $(this).find('.card-info').css({
-            'opacity': '1',
-            'height': '10px',
-        });
-    });
-    $('.c3').on('mouseleave', function() {
-        $(this).find('.card-pic').css('height', '175px')
-        $(this).find('.card-info').css({
-            'opacity': '0',
-            'height': '0',
-        });
-    });
-</script>
+<script src="/petliday/products/calendar.js"></script>
+<script src="/petliday/products/pro-pg.js"></script>
 <!-- // ------JS結束 誤刪到------- -->
 
 <?php include __DIR__ . '/../parts/html-foot.php' ?>

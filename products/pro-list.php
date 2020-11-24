@@ -687,8 +687,6 @@
         });
         $('.ar').click(function() {
             index = index + 1;
-            console.log('index1:', index);
-            // let nowIndex = (index > 4) ? 0 : index;
             $('.wrap-img').css('transition', '0.7s').css('left', (-340 * index));
             $('.dots li').eq(index - 1).css('background', '#ffc072').siblings().css('background', '#ccc');
 
@@ -696,7 +694,6 @@
             $('.wrap-img').on('transitionend webkitTransitionEnd', function() {
                 if (index == 4) {
                     index = 0;
-                    console.log('index2:', index);
                     $('.wrap-img').css('transition', 'none').css('left', '-40')
                     $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
                 }
@@ -711,7 +708,6 @@
             $('.wrap-img').on('transitionend webkitTransitionEnd', function() {
                 if (index == -1) {
                     index = 4;
-                    console.log('index4:', index);
                     $('.wrap-img').css('transition', 'none').css('left', '-4560px')
                     $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
                 }
