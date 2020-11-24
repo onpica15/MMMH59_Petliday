@@ -7,11 +7,15 @@
     border-radius: 3px;
   } */
 
+button:focus{
+    outline:1px solid transparent;
+}
 
 .login .close span {
     font-size: 2.5rem;
     padding-right: 20px;
 }
+
 
 .login-form{
     border-top:15px solid #FFC072;
@@ -22,21 +26,33 @@
     background-color: rgb(253, 251, 251);
 }
 
-/* @media (max-width: 767.98px){
-    .login-form{
-        width: 450px;
-    }
-} */
-
+/* 登入頁和註冊頁form */
 .login-form h2{
     color: #333;
     text-align: center;
 }
 
+.login-form-two{
+    border-top:15px solid #FFC072;
+    border-radius: 3px;
+    padding-top: 50px;
+    width: 500px;
+    height: 400px;
+    background-color: rgb(253, 251, 251);
+}
+
+/* 忘記密碼頁form */
+.login-form-two h2{
+    color: #333;
+    text-align: center;
+}
+
+
 .login-facebook{
     width: 44px;
     height: 44px;
 }
+/*  */
 
 .login-line{
     width: 44px;
@@ -108,8 +124,16 @@
     text-align: center;
 }
 
-.login a{
+/* .login-other button{
     color: #555;
+    background-color: #fff;
+    border: none;
+} */
+
+.login-other a{
+    color: #555;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .login-other span{

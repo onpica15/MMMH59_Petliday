@@ -28,6 +28,8 @@
 <!-- Model -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
+
+
     <div class="modal-content">
       <div class="login">
         <button data-dismiss="modal" class="close" style="margin-top: 20px;">
@@ -63,29 +65,30 @@
             <button class="login-btn btn">登入</button>
           </div>
 
-          <div class="login-other">
-            <a href="login-petliday.php">免費註冊</a>
+          <div class="login-other d-flex justify-content-center">
+            <a data-toggle="modal" data-target="#register_show" data-dismiss="modal">免費註冊</a>
             <span>｜</span>
-            <a href="errorpassword.php">忘記密碼？</a>
+            <a data-toggle="modal" data-target="#errorPassword" data-dismiss="modal" class>忘記密碼？</a>
           </div>
 
         </form>
       </div>
-    </div>
+    </div> 
   </div>
 </div>
 
+
+<?php include __DIR__ . '/login-petliday.php' ?>
+<?php include __DIR__ . '/errorpassword.php' ?>
+<?php include __DIR__ . '/no-verified-email.php' ?>
 
 <!-- scroll-top -->
 <div class="scroll-top">
   <i class="fas fa-chevron-circle-up" style="color: #148F7C;"></i>
 </div>
+
+
 <!-- 範例 -->
-
-
-
-
-
 
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
@@ -93,6 +96,13 @@
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
   // ------JS開始 以上勿刪-------
+
+  // $('.register_show').on('click',function(event){
+  //   event.preventDefault();
+  //   console.log('register_show')
+  // })
+
+  // scroll-top
   $(".scroll-top").click(function() {
     $("html,body").animate({
       "scrollTop": ""
