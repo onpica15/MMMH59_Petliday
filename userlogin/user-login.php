@@ -51,14 +51,17 @@
           </div>
 
           <h2 class="t-xl">Petliday會員登入</h2>
-          <div class="login-group">
+
+          <div class="login-group input-icon">
             <!-- <label for="account">帳號</label> -->
             <input type="text" class="form-control" id="account" name="account" placeholder="電子信箱">
+            <img class="icon-msg" src="./imgs/mail.svg">
           </div>
 
-          <div class="login-group">
+          <div class="login-group input-icon">
             <!-- <label for="password">密碼</label> -->
             <input type="password" class="form-control" id="password" name="password" placeholder="密碼">
+            <img class="icon-psd" src="./imgs/password.svg">
           </div>
 
           <div class="login-group-2">
