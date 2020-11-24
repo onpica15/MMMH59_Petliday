@@ -72,39 +72,39 @@
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">聯絡家長資訊</h5>
                 <h5 class=" col-12 text-gray t-xs mb-2">若訂單有任何變動，客服將聯繫你</h5>
               </div>
-              <form name="mainform" method="POST">
-                <div class="row">
-                  <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                    <label class="text-color t-s label-all" name="mainLastName" for="mainLastName">姓氏：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
-                    <input id="mainLastName" class="form-input form-error" type="text" name="mainLastName" placeholder="例：陳" required>
-                    <small class="form-feedback danger-color t-xs"></small>
-                  </div>
-                  <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                    <label class="text-color t-s label-all " name="mainFirstName" for="mainFirstName">名子：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
-                    <input id="mainFirstName" class="form-input" type="text" name="mainFirstName" placeholder="例：毛毛" required>
-                    <small class="form-feedback danger-color t-xs"></small>
-                  </div>
-                  <div class="col-8 col-lg-6 d-flex flex-column one-form">
-                    <label class="text-color t-s label-all " name="mainGender" for="mainGender">稱謂 :&nbsp;&nbsp;<span class="danger-color">*</span></label>
-                    <select class="form-input" name="mainGender" id="mainGender">
-                      <option name="0" value="0">請選擇</option>
-                      <option name="man" value="man">先生</option>
-                      <option name="woman" value="woman">女士</option>
-                    </select>
-                    <small class="form-feedback danger-color t-xs"></small>
-                  </div>
-                  <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                    <label class="text-color t-s label-all" name="phone" for="phone">聯繫電話 :&nbsp;&nbsp;<span class="danger-color">*</span></label>
-                    <input id="phone" class="form-input" type="tel" name="phone" placeholder="例：0900-000-000" required>
-                    <small class="form-feedback danger-color t-xs"></small>
-                  </div>
-                  <div class="col-12 col-lg-12 d-flex flex-column one-form">
-                    <label class="text-color t-s label-all " name="email" for="email">聯繫信箱 :&nbsp;&nbsp;<span class="danger-color">*</span></label>
-                    <input id="email" class="form-input" type="email" name="email" placeholder="例：petilday@petilday.com" required>
-                    <small class="form-feedback danger-color t-xs"></small>
-                  </div>
+
+              <div class="row">
+                <div class="col-12 col-lg-6 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all" name="mainLastName" for="mainLastName">姓氏：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
+                  <input id="mainLastName" class="form-input form-error" type="text" name="mainLastName" placeholder="例：陳" required>
+                  <small class="form-feedback danger-color t-xs"></small>
                 </div>
-              </form>
+                <div class="col-12 col-lg-6 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all " name="mainFirstName" for="mainFirstName">名子：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
+                  <input id="mainFirstName" class="form-input" type="text" name="mainFirstName" placeholder="例：毛毛" required>
+                  <small class="form-feedback danger-color t-xs"></small>
+                </div>
+                <div class="col-8 col-lg-6 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all " name="mainGender" for="mainGender">稱謂 :&nbsp;&nbsp;<span class="danger-color">*</span></label>
+                  <select class="form-input" name="mainGender" id="mainGender">
+                    <option name="0" value="0">請選擇</option>
+                    <option name="man" value="man">先生</option>
+                    <option name="woman" value="woman">女士</option>
+                  </select>
+                  <small class="form-feedback danger-color t-xs"></small>
+                </div>
+                <div class="col-12 col-lg-6 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all" name="phone" for="phone">聯繫電話 :&nbsp;&nbsp;<span class="danger-color">*</span></label>
+                  <input id="phone" class="form-input" type="tel" name="phone" placeholder="例：0900-000-000" required>
+                  <small class="form-feedback danger-color t-xs"></small>
+                </div>
+                <div class="col-12 col-lg-12 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all " name="email" for="email">聯繫信箱 :&nbsp;&nbsp;<span class="danger-color">*</span></label>
+                  <input id="email" class="form-input" type="email" name="email" placeholder="例：petilday@petilday.com" required>
+                  <small class="form-feedback danger-color t-xs"></small>
+                </div>
+              </div>
+
 
             </div>
 
@@ -112,29 +112,29 @@
               <div class="row">
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">旅客 1</h5>
               </div>
-              <form name="user1form" method="POST">
-                <div class="row">
-                  <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                    <label class="text-color t-s label-all" name="lastName" for="lastName">姓氏：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
-                    <input id="lastName" class="form-input form-error" type="text" name="lastName" placeholder="例：陳" required>
-                    <small class="form-feedback danger-color t-xs"></small>
-                  </div>
-                  <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                    <label class="text-color t-s label-all " name="firstName" for="firstName">名子：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
-                    <input id="firstName" class="form-input" type="text" name="firstName" placeholder="例：毛毛" required>
-                    <small class="form-feedback danger-color t-xs"></small>
-                  </div>
-                  <div class="col-8 col-lg-6 d-flex flex-column one-form">
-                    <label class="text-color t-s label-all " name="idCard" for="idCard">身分證字號：（行程保險中使用）&nbsp;<span class="danger-color">*</span></label>
-                    <input id="idCard" class="form-input" type="text" name="idCard" placeholder="例：A0000000000" required>
-                  </div>
 
-                  <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                    <label class="text-color t-s label-all " name="birthday" for="birthday">出生 年/月/日：（行程保險中使用）&nbsp;<span class="danger-color">*</span></label>
-                    <input id="birthday" class="form-input" type="date" name="birthday" required>
-                  </div>
+              <div class="row">
+                <div class="col-12 col-lg-6 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all" name="lastName" for="lastName">姓氏：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
+                  <input id="lastName" class="form-input form-error" type="text" name="lastName" placeholder="例：陳" required>
+                  <small class="form-feedback danger-color t-xs"></small>
                 </div>
-              </form>
+                <div class="col-12 col-lg-6 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all " name="firstName" for="firstName">名子：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
+                  <input id="firstName" class="form-input" type="text" name="firstName" placeholder="例：毛毛" required>
+                  <small class="form-feedback danger-color t-xs"></small>
+                </div>
+                <div class="col-8 col-lg-6 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all " name="idCard" for="idCard">身分證字號：（行程保險中使用）&nbsp;<span class="danger-color">*</span></label>
+                  <input id="idCard" class="form-input" type="text" name="idCard" placeholder="例：A0000000000" required>
+                </div>
+
+                <div class="col-12 col-lg-6 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all " name="birthday" for="birthday">出生 年/月/日：（行程保險中使用）&nbsp;<span class="danger-color">*</span></label>
+                  <input id="birthday" class="form-input" type="date" name="birthday" required>
+                </div>
+              </div>
+
             </div>
 
             <div class="col-12 form-box contacts-box">
@@ -142,55 +142,55 @@
               <div class="row">
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">寵物 1</h5>
               </div>
-              <form action="" name="petForm" method="POST">
-                <div class="row">
-                  <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                    <label class="text-color t-s label-all" name="petName" for="petName">寶貝稱呼： &nbsp;&nbsp;<span class="danger-color">*</span></label>
-                    <input id="petName" class="form-input" type="text" name="petName" placeholder="例：毛日日" required>
-                  </div>
-                  <div class="col-8 col-lg-6 d-flex flex-column one-form">
-                    <label class="text-color t-s label-all " name="petSize" for="petSize">體型： &nbsp;&nbsp;<span class="danger-color">*</span></label>
-                    <select id="petSize" class="form-input" name="petSize">
-                      <option class="option-style" name="0" value="0">請選擇</option>
-                      <option name="lSize" value="lSize">大型犬</option>
-                      <option name="MSize" value="MSize">中型犬</option>
-                      <option name="SSize" value="SSize">小型犬</option>
-                    </select>
-                  </div>
-                  <div class="col-12 col-lg-12 d-flex flex-column one-form">
-                    <label class="text-color t-s label-all " name="notes" for="notes">備註： &nbsp;&nbsp;<span class="danger-color">*</span></label>
-                    <input class="form-input" type="text" name="notes" id="notes">
-                  </div>
+
+              <div class="row">
+                <div class="col-12 col-lg-6 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all" name="petName" for="petName">寶貝稱呼： &nbsp;&nbsp;<span class="danger-color">*</span></label>
+                  <input id="petName" class="form-input" type="text" name="petName" placeholder="例：毛日日" required>
                 </div>
-              </form>
+                <div class="col-8 col-lg-6 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all " name="petSize" for="petSize">體型： &nbsp;&nbsp;<span class="danger-color">*</span></label>
+                  <select id="petSize" class="form-input" name="petSize">
+                    <option class="option-style" name="0" value="0">請選擇</option>
+                    <option name="lSize" value="lSize">大型犬</option>
+                    <option name="MSize" value="MSize">中型犬</option>
+                    <option name="SSize" value="SSize">小型犬</option>
+                  </select>
+                </div>
+                <div class="col-12 col-lg-12 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all " name="notes" for="notes">備註： &nbsp;&nbsp;<span class="danger-color">*</span></label>
+                  <input class="form-input" type="text" name="notes" id="notes">
+                </div>
+              </div>
+
             </div>
             <div class="col-12 form-box contacts-box">
               <div class="row">
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">發票資訊</h5>
               </div>
-              <form action="" name="receiptForm" method="POST">
-                <div class="row">
-                  <div class="col-12 col-lg-12">
-                    <div class="row ">
-                      <div class="col-12 d-flex align-items-center bb-line">
-                        <input id="donateReceipt" class="form-radio " type="radio" name="receipt"><label for="donateReceipt" class="mb-0"><span class=" radio-text t-m text-color">捐贈發票</span></label>
-                      </div>
-                      <div class="col-12 d-flex align-items-center bb-line">
 
-                        <input id="receipt2" class="form-radio " type="radio" name="receipt">
-                        <label for="receipt2" class="mb-0"><span class=" radio-text t-m text-color">二聯電子發票</span></label>
-                      </div>
+              <div class="row">
+                <div class="col-12 col-lg-12">
+                  <div class="row ">
+                    <div class="col-12 d-flex align-items-center bb-line">
+                      <input id="donateReceipt" class="form-radio " type="radio" name="receipt"><label for="donateReceipt" class="mb-0"><span class=" radio-text t-m text-color">捐贈發票</span></label>
+                    </div>
+                    <div class="col-12 d-flex align-items-center bb-line">
 
-                      <div class="col-12 d-flex align-items-center">
+                      <input id="receipt2" class="form-radio " type="radio" name="receipt">
+                      <label for="receipt2" class="mb-0"><span class=" radio-text t-m text-color">二聯電子發票</span></label>
+                    </div>
 
-                        <input id="receipt3" class="form-radio " type="radio" name="receipt">
-                        <label for="receipt3" class="mb-0"><span class=" radio-text t-m text-color">三聯電子發票</span></label>
+                    <div class="col-12 d-flex align-items-center">
 
-                      </div>
+                      <input id="receipt3" class="form-radio " type="radio" name="receipt">
+                      <label for="receipt3" class="mb-0"><span class=" radio-text t-m text-color">三聯電子發票</span></label>
+
                     </div>
                   </div>
                 </div>
-              </form>
+              </div>
+
             </div>
           </div>
           <div class="all-form-box-in w-100 mt-3">
@@ -198,38 +198,38 @@
               <h5 class="green-color t-l title1-m form-title">優惠折扣碼</h5>
             </div>
             <div class="col-12 form-box contacts-box">
-              <form action="" name="couponForm" method="POST">
-                <div class="row">
-                  <div class="col-12 col-lg-12">
-                    <div class="row">
+
+              <div class="row">
+                <div class="col-12 col-lg-12">
+                  <div class="row">
+                    <div class="col-12 d-flex align-items-center">
+                      <input id="couponNo" class="form-radio" type="radio" name="coupon" checked>
+                      <label class=" radio-text t-m text-color" for="couponNo">我沒有折扣碼</label>
+                    </div>
+                    <div class="col-12 d-flex align-items-center">
+                      <input id="couponYes" class="form-radio" type="radio" name="coupon">
+                      <label class="radio-text t-m text-color" for="couponYes">我有折扣碼</label>
+                    </div>
+                    <div class="coupon-items w-100 animation">
                       <div class="col-12 d-flex align-items-center">
-                        <input id="couponNo" class="form-radio" type="radio" name="coupon" checked>
-                        <label class=" radio-text t-m text-color" for="couponNo">我沒有折扣碼</label>
+                        <input class="form-input form-input-btn" id="couponNumber" type="text" name="couponNumber" placeholder="請輸入折扣碼">
+                        <button type="submit" name="couponNumberBtn" class="ml-2 form-input-btn btn ">兌換</button>
                       </div>
-                      <div class="col-12 d-flex align-items-center">
-                        <input id="couponYes" class="form-radio" type="radio" name="coupon">
-                        <label class="radio-text t-m text-color" for="couponYes">我有折扣碼</label>
-                      </div>
-                      <div class="coupon-items w-100 animation">
-                        <div class="col-12 d-flex align-items-center">
-                          <input class="form-input form-input-btn" id="couponNumber" type="text" name="couponNumber" placeholder="請輸入折扣碼">
-                          <button type="submit" name="couponNumberBtn" class="ml-2 form-input-btn btn ">兌換</button>
-                        </div>
-                        <div class="col-12 col-lg-6 mt-4">
-                          <div class="coupon">
-                            <input class="form-radio coupon-check" type="radio" name="coupon-box">
-                            <h5 class="orange-color t-l mb-3">新客優惠 20%OFF </h5>
-                            <p class="text-gray t-xs mb-0">折扣券碼： WJIFJIJEE
-                            </p>
-                            <p class="text-gray t-xs mb-0">有效日期： 2020/12/18-2021/6/30
-                            </p>
-                          </div>
+                      <div class="col-12 col-lg-6 mt-4">
+                        <div class="coupon">
+                          <input class="form-radio coupon-check" type="radio" name="coupon-box">
+                          <h5 class="orange-color t-l mb-3">新客優惠 20%OFF </h5>
+                          <p class="text-gray t-xs mb-0">折扣券碼： WJIFJIJEE
+                          </p>
+                          <p class="text-gray t-xs mb-0">有效日期： 2020/12/18-2021/6/30
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </form>
+              </div>
+
             </div>
             <div class="col-12 order-box order-box-total">
               <div class="detail-box-total">
