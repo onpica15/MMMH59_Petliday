@@ -51,14 +51,17 @@
           </div>
 
           <h2 class="t-xl">Petliday會員登入</h2>
-          <div class="login-group">
+
+          <div class="login-group input-icon">
             <!-- <label for="account">帳號</label> -->
             <input type="text" class="form-control" id="account" name="account" placeholder="電子信箱">
+            <img class="icon-msg" src="./imgs/mail.svg">
           </div>
 
-          <div class="login-group">
+          <div class="login-group input-icon">
             <!-- <label for="password">密碼</label> -->
             <input type="password" class="form-control" id="password" name="password" placeholder="密碼">
+            <img class="icon-psd" src="./imgs/password.svg">
           </div>
 
           <div class="login-group-2">
@@ -69,6 +72,12 @@
             <a data-toggle="modal" data-target="#register_show" data-dismiss="modal">免費註冊</a>
             <span>｜</span>
             <a data-toggle="modal" data-target="#errorPassword" data-dismiss="modal" class>忘記密碼？</a>
+          </div>
+
+          <!-- 一鍵輸入 -->
+          <div class="auto-input">
+            <button class="input-error"></button>
+            <button class="input-correct"></button>
           </div>
 
         </form>
@@ -101,6 +110,20 @@
   //   event.preventDefault();
   //   console.log('register_show')
   // })
+
+  // 錯誤登入
+  $('.input-error').click(function(event){
+    event.preventDefault();
+    $('#account').val('abcd000@petliday.com');
+    $('#password').val('test123456');
+  })
+
+  // 正確登入
+  $('.input-correct').click(function(event){
+    event.preventDefault();
+    $('#account').val('boy123@petliday.com');
+    $('#password').val('test123');
+  })
 
   // scroll-top
   $(".scroll-top").click(function() {

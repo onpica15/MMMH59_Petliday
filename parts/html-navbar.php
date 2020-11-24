@@ -136,7 +136,7 @@
         <ul class="navbar-nav ml-auto d-flex flex-row align-content-center">
 
           <li class="nav-item m-1">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?= WEB_ROOT ?>cart/cart.php">
               <div class="navbtn nav-cart-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.29 312.24">
 

@@ -64,18 +64,42 @@ body {
 #add-icon {
   width: 30px;
   height: 30px;
-  fill: #ccc;
-  background-color: #eee;
+  fill: #555;
+  background-color: #ccc;
   border-radius: 3px;
   padding: 8px;
 }
+
 #sub-icon {
   width: 30px;
   height: 30px;
-  fill: #ccc;
-  background-color: #eee;
+  fill: #555;
+  background-color: #ccc;
   border-radius: 3px;
   padding: 8px;
+}
+#add-icon1 {
+  width: 30px;
+  height: 30px;
+  fill: #555;
+  background-color: #ccc;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+#sub-icon1 {
+  width: 30px;
+  height: 30px;
+  fill: #555;
+  background-color: #ccc;
+  border-radius: 3px;
+  padding: 8px;
+}
+.able-icon {
+  background-color: #ccc;
+}
+.unable-icon {
+  background-color: #eee;
 }
 
 .change-quantity {
@@ -85,6 +109,7 @@ body {
   text-align: center;
   line-height: 44px;
   border-radius: 3px;
+  font-size: 14px;
 }
 
 .change-date {
@@ -284,7 +309,7 @@ svg#date-icon {
 }
 .form-input:focus {
   outline: none;
-  border: 1px solid #fe8b11;
+  border: 1px solid #ffd096;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
 }
 
@@ -521,19 +546,27 @@ input:optional {
   font-size: 12px;
 }
 .coupon-items {
-  display: none;
-  transition: 0.3s;
+  /* display: none; */
+  /* transition: 0.3s; */
+  /* animation: 0.3s forwards; */
+  overflow: hidden;
+  /* height: 100%; */
 }
 .creditCard-box {
   display: none;
   /* display: block; */
+}
+.animation {
+  transition: height 0.3s;
 }
 
 .can-display {
   display: block;
 }
 .unable {
-  display: none;
+  /* display: none; */
+  height: 0;
+  transition: 2s;
 }
 .card-icon-items {
   /* width: 30px; */

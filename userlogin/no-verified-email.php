@@ -14,9 +14,10 @@
           <h2 class="t-xl">沒有收到驗證信？</h2>
           <h2 class="t-m" style="line-height:24px;">輸入您當初註冊的電子信箱<br>我們會重新發送驗證信給您</h2>
 
-          <div class="login-group">
+          <div class="login-group input-icon">
             <!-- <label for="account">帳號</label> -->
             <input type="text" class="form-control" id="account" name="account" placeholder="電子信箱">
+            <img class="icon-msg" style="bottom:209px;" src="./imgs/mail.svg">
           </div>
 
           <div class="login-group-2">

@@ -48,11 +48,11 @@ button:focus{
 }
 
 
+/* 社群icon */
 .login-facebook{
     width: 44px;
     height: 44px;
 }
-/*  */
 
 .login-line{
     width: 44px;
@@ -70,6 +70,7 @@ button:focus{
     height: 44px;
 }
 
+/* 或 */
 .login-border{
     border-bottom: 1px solid #D1D1D1;
     position: relative;
@@ -91,11 +92,37 @@ button:focus{
     padding: 0 10px 0 10px;
 }
 
+/* 登入from */
 .form-control{
     width: 350px;
     height: 40px;
+    border: 1px solid #D1D1D1;
+    position: relative;
 }
 
+/* .form-control:focus{
+    outline:1px solid transparent;
+} */
+
+.icon-msg{
+    position: absolute;
+    left: 85px;
+    bottom: 223px;
+    height: 12px;
+    margin-right: 50px;
+}
+
+.icon-psd{
+    position: absolute;
+    left: 85px;
+    bottom: 162px;
+    height: 18px;
+    margin-right: 50px;
+}
+
+.input-icon .form-control{
+    padding-left: 35px;
+}
 
 /* .login-group label{
     margin-top: 20px;
@@ -124,12 +151,6 @@ button:focus{
     text-align: center;
 }
 
-/* .login-other button{
-    color: #555;
-    background-color: #fff;
-    border: none;
-} */
-
 .login-other a{
     color: #555;
     cursor: pointer;
@@ -138,6 +159,24 @@ button:focus{
 
 .login-other span{
     color: #555;
+}
+
+.auto-input button{
+    height: 35px;
+    width: 60px;
+    background-color: rgb(253, 251, 251);
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.auto-input .input-error{
+    position: absolute;
+    left: 0;
+}
+
+.auto-input .input-correct{
+    position: absolute;
+    right: 0;
 }
 
 /* scroll-top */
