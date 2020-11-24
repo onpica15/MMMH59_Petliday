@@ -1,55 +1,7 @@
 <?php include __DIR__ . '/../parts/config.php' ?>
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <!-- --- css 連結放下面 ----- -->
-<link rel="stylesheet" href="style.css">
-
-<style>
-  * {
-    outline: 1px solid red;
-  }
-
-  .aside-bar {
-    position: sticky;
-    top: 15px;
-    box-shadow: 0px 0px 5px rgba(200, 200, 200, 0.5);
-  }
-
-  .aside-bar h2 {
-    background-color: #fff;
-    border-radius: 3px;
-    margin-bottom: -5px;
-  }
-
-  #acount {
-    width: 100%;
-    height: 100%;
-    margin-top: 8vh;
-    background-color: #f2f2f2;
-    border-radius: 25px 25px 0 0;
-  }
-
-  #list-title {
-    min-height: 300px;
-    background-color: #fff;
-    border-radius: 3px 30px 3px 3px;
-    box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.5);
-  }
-
-  .line {
-    width: 1rem;
-    height: 2rem;
-    background: #ffa12c;
-    border-radius: 2px 2px 2px 13px;
-  }
-
-  .list-group-item.active {
-    z-index: 2;
-    color: #ffa12c;
-    background-color: #f2f2f2;
-    border: rgba(200, 200, 200, 0.5);
-    border-left: 3px solid #ffa12c;
-  }
-</style>
+<link rel="stylesheet" href="<?= WEB_ROOT ?>account/style.css">
 
 
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
@@ -66,7 +18,7 @@
       <div class="col-12 col-lg-9">
         <div class="tab-content" id="nav-tabContent">
           <!-- list-profile 會員資料 -->
-          <div class="tab-pane fade show active" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+          <div class="tab-pane fade show active list-section" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
 
             <div class="container mb-3" id="list-title">
               <div class="row  mb-3">
@@ -104,16 +56,26 @@
               <div class="row justify-content-center my-2">
 
                 <div class="bar d-flex">
-                  <button class="col btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
+                  <button class="col btn-prev border-btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
 
-                  <div class="col color-bar d-flex py-2">
-                    <div class="red circle mr-3" style="background-color: rgb(255, 83, 83);"></div>
-                    <div class="orange circle mr-3" style="background-color: #ffa12c;"></div>
-                    <div class="blue circle mr-3" style="background-color: rgb(89, 180, 255);"></div>
-                    <div class="purple circle mr-3" style="background-color: rgb(170, 85, 219);"></div>
-                    <div class="green circle mr-3" style="background-color: #00907c"></div>
+                  <div class="col color-bar d-flex">
+                    <div class=" circle mr-3">
+                      <div class="red ball" style="background-color: rgb(255, 83, 83);"></div>
+                    </div>
+                    <div class=" circle mr-3">
+                      <div class="orange ball" style="background-color: #ffa12c;"></div>
+                    </div>
+                    <div class=" circle mr-3 active">
+                      <div class="blue ball" style="background-color: rgb(89, 180, 255);"></div>
+                    </div>
+                    <div class=" circle mr-3">
+                      <div class="purple ball" style="background-color: rgb(170, 85, 219);"></div>
+                    </div>
+                    <div class="circle">
+                      <div class="green ball" style="background-color: #00907c;"></div>
+                    </div>
                   </div>
-                  <button class="col btn-next align-self-center"><i class="fas fa-caret-right"></i></button>
+                  <button class="col btn-next border-btn-next align-self-center"><i class="fas fa-caret-right"></i></button>
 
                 </div>
               </div>
@@ -240,6 +202,18 @@
 <script>
   // ------JS開始 以上勿刪-------
 
+  $('.border-btn-next').on('click', function() {
+    if ($('.circle.active').next().length > 0) {
+      $('.circle.active').removeClass('active').next().addClass('active')
+    }
+  })
+
+  $('.border-btn-prev').on('click', function() {
+    // console.log('hi', $('.circle.active'))
+    if ($('.circle.active').prev().length > 0) {
+      $('.circle.active').removeClass('active').prev().addClass('active')
+    }
+  })
 
 
   // ------JS結束 勿刪到-------
