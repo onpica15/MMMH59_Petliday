@@ -151,12 +151,6 @@ button:focus{
     text-align: center;
 }
 
-/* .login-other button{
-    color: #555;
-    background-color: #fff;
-    border: none;
-} */
-
 .login-other a{
     color: #555;
     cursor: pointer;
@@ -165,6 +159,24 @@ button:focus{
 
 .login-other span{
     color: #555;
+}
+
+.auto-input button{
+    height: 35px;
+    width: 60px;
+    background-color: rgb(253, 251, 251);
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.auto-input .input-error{
+    position: absolute;
+    left: 0;
+}
+
+.auto-input .input-correct{
+    position: absolute;
+    right: 0;
 }
 
 /* scroll-top */

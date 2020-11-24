@@ -45,6 +45,13 @@
             <span>｜</span>
             <a data-toggle="modal" data-target="#noVerifiedEmail" data-dismiss="modal">尚未收到驗證信？</a>
           </div>
+
+          <!-- 一鍵輸入 -->
+          <div class="auto-input">
+            <button class="input-error"></button>
+            <button class="input-correct"></button>
+          </div>
+                   
         </form>
       </div>
     </div> 

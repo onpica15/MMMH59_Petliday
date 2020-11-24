@@ -74,6 +74,12 @@
             <a data-toggle="modal" data-target="#errorPassword" data-dismiss="modal" class>忘記密碼？</a>
           </div>
 
+          <!-- 一鍵輸入 -->
+          <div class="auto-input">
+            <button class="input-error"></button>
+            <button class="input-correct"></button>
+          </div>
+
         </form>
       </div>
     </div> 
@@ -104,6 +110,20 @@
   //   event.preventDefault();
   //   console.log('register_show')
   // })
+
+  // 錯誤登入
+  $('.input-error').click(function(event){
+    event.preventDefault();
+    $('#account').val('abcd000@petliday.com');
+    $('#password').val('test123456');
+  })
+
+  // 正確登入
+  $('.input-correct').click(function(event){
+    event.preventDefault();
+    $('#account').val('boy123@petliday.com');
+    $('#password').val('test123');
+  })
 
   // scroll-top
   $(".scroll-top").click(function() {
