@@ -198,7 +198,7 @@
 
               <input id="review" class="form-input form-input-review" type="text" name="review" placeholder="更多流程建議都歡迎與我們分享!">
 
-
+            </div>
             <div class="col-12  mt-3">
               <a href="./order-step2.php" class="a-style w-100 d-flex justify-content-center">
                 <button class="btn btn-more-review">送出評論</button>
@@ -249,20 +249,7 @@
     // }
   })
 
-  // $('.form-input').on('click', function() {
-
-  //   console.log('.fom-mousedown');
-  //   // $('.contacts-box')
-  //   $(this).addClass('active');
-  // })
-  // $('.form-input').on('mouseleave', function() {
-
-  //   console.log('.fom-mouseleave');
-  //   // $('.contacts-box')
-  //   $(this).removeClass('active');
-  // })
-
-
+  
 
   // ------JS結束 勿刪到-------
 </script>

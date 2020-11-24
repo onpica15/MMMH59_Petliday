@@ -65,62 +65,76 @@
             <div class="row">
               <div class="col-12 col-lg-12">
                 <div class="row ">
-                  <div class="col-12 d-flex align-items-center ">
-                    <input id="creditCard" class="form-radio " type="radio" name="payItems" checked>
-                    <label for="creditCard" class="mb-0"><span class=" radio-text t-m text-color mt-2 mb-2">信用卡線上刷卡一次付清</span></label>
+                  <div class="col-12 d-flex align-items-center bb-line">
+                    <input id="creditCard" class="form-radio " type="radio" name="payItems">
+                    <label for="creditCard" class="mb-0 d-flex flex-row justify-content-center align-items-center">
+                      <div class=" radio-text t-m text-color mt-2 mb-2 mr-3">
+                        信用卡線上刷卡一次付清
+                      </div>
+                      <div class="card-icon-items-box ">
+                        <div class=" card-icon-items d-flex ">
+                          <img class="mr-2" src="./imgs/3x/visa@3x.png" alt="">
+                          <img class="mr-2" src="./imgs/3x/master@3x.png" alt="">
+                          <img class="mr-2" src="./imgs/3x/jcb@3x.png" alt="">
+                        </div>
+                      </div>
+                    </label>
                     <br>
 
                   </div>
-                  <div class="col-12 d-flex align-items-center ">
-                    <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mt-3 mb-3">信用卡資訊</h5>
-                  </div>
-                  <div class="col-12 d-flex justify-content-center mb-4 credit-card-box">
-                    <div class="card1">
-                      <div class="credit-card card-front">
-                        <img class="credit-card-img" src="./imgs/3x/card-front@3x.png" alt="">
-                        <div class="card-text-box">
-                          <h3 class="card-text card-number">0000 0000 0000 0000</h3>
-                          <h3 class="card-text card-name-t"> cardholder name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expiration</h3>
-                          <h3 class="card-text card-name"> CHANH CHU YDHS</h3>
-                          <h3 class="card-text card-date">MM / YY</h3>
-                        </div>
-
-                      </div>
-                      <div class="credit-card card-back">
-                        <img class="credit-card-img" src="./imgs/3x/card-back@3x.png" alt="">
-                        <div class="card-cvc">CVC</div>
-                      </div>
+                  <div id="creditCard-box" class="creditCard-box w-100">
+                    <div class="col-12 d-flex align-items-center ">
+                      <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mt-3 mb-3">信用卡資訊</h5>
                     </div>
+                    <div class="col-12 d-flex justify-content-center mb-4 credit-card-box">
+                      <div class="card1">
+                        <div class="credit-card card-front">
+                          <img class="credit-card-img" src="./imgs/3x/card-front@3x.png" alt="">
+                          <div class="card-text-box">
+                            <h3 class="card-text card-number">0000 0000 0000 0000</h3>
+                            <h3 class="card-text card-name-t"> cardholder name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expiration</h3>
+                            <h3 class="card-text card-name"> CHANH CHU YDHS</h3>
+                            <h3 class="card-text card-date">MM / YY</h3>
+                          </div>
 
-                  </div>
-                  <div class="col-12 d-flex align-items-center  bb-line">
-                    <div class="row d-flex justify-content-center w-100">
-                      <div class="col-12 col-lg-6  one-form">
-                        <label class="text-color t-s label-all" name="cardNumber" for="cardNumber">信用卡號碼：&nbsp; <span class="danger-color">*</span></label><br>
-                        <input id="cardNumber" class="form-input w-100" type="text" name="cardNumber" placeholder="0000 0000 0000 0000" required>
+                        </div>
+                        <div class="credit-card card-back">
+                          <img class="credit-card-img" src="./imgs/3x/card-back@3x.png" alt="">
+                          <div class="card-cvc">CVC</div>
+                        </div>
                       </div>
-                      <div class="col-12 col-lg-6  one-form">
-                        <label class="text-color t-s label-all " name="holderName" for="holderName">持卡人姓名：&nbsp; <span class="danger-color">*</span></label><br>
-                        <input class="form-input w-100" type="text" name="holderName" id="holderName" placeholder="例：陳毛毛" required>
-                      </div>
-                      <div class="col-12 col-lg-6 one-form">
-                        <label class="text-color t-s label-all " name="cardDatecardDate">信用卡有效日期： &nbsp;<span class="danger-color">*</span></label><br>
-                        <div class="row">
-                          <div class="col-8 d-flex flex-row">
 
-                            <input id="cardDateM" class="col-6 col-lg-4 form-input mr-3" type="text" name="cardDateMM" placeholder="MM" required>
+                    </div>
+                    <div class="col-12 d-flex align-items-center  bb-line">
+                      <div class="row d-flex justify-content-center w-100">
+                        <div class="col-12 col-lg-6  one-form">
+                          <label class="text-color t-s label-all" name="cardNumber" for="cardNumber">信用卡號碼：&nbsp; <span class="danger-color">*</span></label><br>
+                          <input id="cardNumber" class="form-input w-100" type="text" name="cardNumber" placeholder="0000 0000 0000 0000" required>
+                        </div>
+                        <div class="col-12 col-lg-6  one-form">
+                          <label class="text-color t-s label-all " name="holderName" for="holderName">持卡人姓名：&nbsp; <span class="danger-color">*</span></label><br>
+                          <input class="form-input w-100" type="text" name="holderName" id="holderName" placeholder="例：陳毛毛" required>
+                        </div>
+                        <div class="col-12 col-lg-6 one-form">
+                          <label class="text-color t-s label-all " name="cardDatecardDate">信用卡有效日期： &nbsp;<span class="danger-color">*</span></label><br>
+                          <div class="row">
+                            <div class="col-8 d-flex flex-row">
 
-                            <input id="cardDateY" class="col-6 col-lg-4 form-input" type="text" name="cardDateYY" placeholder="YY" required>
+                              <input id="cardDateM" class="col-6 col-lg-4 form-input mr-3" type="text" name="cardDateMM" placeholder="MM" required>
+
+                              <input id="cardDateY" class="col-6 col-lg-4 form-input" type="text" name="cardDateYY" placeholder="YY" required>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-lg-6  one-form mb-5">
-                        <label class="text-color t-s label-all " name="cardCVC" for="cardCVC">信用卡背面三碼：&nbsp; <span class="danger-color">*</span></label><br>
-                        <input class="form-input" type="text" name="cardCVC" placeholder="CVC" id="cardCVC" required>
+                        <div class="col-12 col-lg-6  one-form mb-5">
+                          <label class="text-color t-s label-all " name="cardCVC" for="cardCVC">信用卡背面三碼：&nbsp; <span class="danger-color">*</span></label><br>
+                          <input class="form-input" type="text" name="cardCVC" placeholder="CVC" id="cardCVC" required>
 
+                        </div>
                       </div>
                     </div>
                   </div>
+
 
                   <!-- ------信用卡----  -->
                   <div class="col-12 d-flex align-items-center bb-line">
@@ -131,12 +145,35 @@
                   </div>
                   <div class="col-12 d-flex align-items-center bb-line">
                     <input id="linePay" class="form-radio" type="radio" name="payItems">
-                    <label for="linePay" class="mb-0"><span class=" radio-text t-m text-color mt-2 mb-2">LINE PAY</span></label>
+                    <label for="linePay" class="mb-0 d-flex flex-row justify-content-center align-items-center">
+                      <span class=" radio-text t-m text-color mt-2 mb-2 mr-3">
+                        LINE PAY
+                      </span>
+                      <div class="card-icon-items-box ">
+                        <div class=" card-icon-items d-flex ">
+                          <img class="mr-2" src="./imgs/3x/line@3x.png" alt="">
+
+                        </div>
+                      </div>
+                    </label>
+
 
                   </div>
                   <div class="col-12 d-flex align-items-center bb-line">
                     <input id="applePay" class="form-radio" type="radio" name="payItems">
-                    <label for="applePay" class="mb-0"><span class=" radio-text t-m text-color mt-2 mb-2">Apple Pay</span></label>
+                    <label for="applePay" class="mb-0 d-flex flex-row justify-content-center align-items-center">
+                      <span class=" radio-text t-m text-color mt-2 mb-2 mr-3">
+                        Apple Pay
+                      </span>
+                      <div class="card-icon-items-box ">
+                        <div class=" card-icon-items d-flex ">
+                          <img class="mr-2" src="./imgs/3x/apple@3x.png" alt="">
+
+                        </div>
+                      </div>
+                    </label>
+
+
 
                   </div>
                   <div class="col-12 d-flex align-items-center ">
@@ -273,25 +310,53 @@
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
   // ------JS開始 以上勿刪-------
-  var card = document.querySelector('.card1');
+  let card = document.querySelector('.card1');
+  let cardCVC = document.querySelector('#cardCVC');
+
   card.addEventListener('click', function() {
     card.classList.toggle('is-flipped');
 
   });
 
+  cardCVC.addEventListener('click', function() {
+    console.log('cardCVC')
+    card.classList.toggle('is-flipped');
+  });
 
-  // $('.form-input').on('click', function() {
 
-  //   console.log('.fom-mousedown');
-  //   // $('.contacts-box')
-  //   $(this).addClass('active');
-  // })
-  // $('.form-input').on('mouseleave', function() {
 
-  //   console.log('.fom-mouseleave');
-  //   // $('.contacts-box')
-  //   $(this).removeClass('active');
-  // })
+
+  let couponNo = document.querySelector('#couponNo');
+  let payItems = document.querySelector('[name=payItems]');
+  let creditCard = document.querySelector('#creditCard');
+  let creditCardBox = document.querySelector('.creditCard-box');
+  let atm = document.querySelector('#ATM');
+  let creditCardParent = creditCard.parentElement;
+
+  console.log('creditCardParent', creditCardParent);
+
+  creditCard.addEventListener('click', function() {
+    creditCardBox.classList.add('can-display');
+    creditCardParent.classList.remove('bb-line');
+  });
+  atm.addEventListener('click', function() {
+    creditCardBox.classList.remove('can-display');
+    creditCardParent.classList.add('bb-line');
+
+  });
+  // if (creditCard.checked) {
+  //   console.log('creditCard')
+  //   creditCardBox.classList.add('can-display');
+  //   creditCardParent.classList.remove('bb-line');
+
+  // } else if (atm.checked) {
+  //   creditCardBox.classList.remove('can-display');
+  // }
+  // if (atm.checked) {
+  //   console.log('atm')
+  //   creditCardBox.classList.remove('can-display');
+  //   creditCardParent.classList.adds('bb-line');
+  // }
 
 
 

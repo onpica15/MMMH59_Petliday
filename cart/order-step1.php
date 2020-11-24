@@ -224,25 +224,27 @@
                 <div class="col-12 col-lg-12">
                   <div class="row">
                     <div class="col-12 d-flex align-items-center">
+                      <input id="couponNo" class="form-radio" type="radio" name="coupon" checked>
+                      <label class=" radio-text t-m text-color" for="couponNo">我沒有折扣碼</label>
+                    </div>
+                    <div class="col-12 d-flex align-items-center">
                       <input id="couponYes" class="form-radio" type="radio" name="coupon">
-                      <label class=" radio-text t-m text-color" for="couponYes">我沒有折扣碼</label>
+                      <label class="radio-text t-m text-color" for="couponYes">我有折扣碼</label>
                     </div>
-                    <div class="col-12 d-flex align-items-center">
-                      <input id="couponNo" class="form-radio" type="radio" name="coupon">
-                      <label class="radio-text t-m text-color" for="couponNo">我有折扣碼</label>
-                    </div>
-                    <div class="col-12 d-flex align-items-center">
-                      <input class="form-input form-input-btn" id="couponNumber" type="text" name="couponNumber" placeholder="請輸入折扣碼">
-                      <button type="submit" name="couponNumberBtn" class="ml-2 form-input-btn btn ">兌換</button>
-                    </div>
-                    <div class="col-12 col-lg-6 mt-4">
-                      <div class="coupon">
-                        <input class="form-radio coupon-check" type="radio" name="coupon-box">
-                        <h5 class="orange-color t-l mb-3">新客優惠 20%OFF </h5>
-                        <p class="text-gray t-xs mb-0">折扣券碼： WJIFJIJEE
-                        </p>
-                        <p class="text-gray t-xs mb-0">有效日期： 2020/12/18-2021/6/30
-                        </p>
+                    <div class="coupon-items w-100">
+                      <div class="col-12 d-flex align-items-center">
+                        <input class="form-input form-input-btn" id="couponNumber" type="text" name="couponNumber" placeholder="請輸入折扣碼">
+                        <button type="submit" name="couponNumberBtn" class="ml-2 form-input-btn btn ">兌換</button>
+                      </div>
+                      <div class="col-12 col-lg-6 mt-4">
+                        <div class="coupon">
+                          <input class="form-radio coupon-check" type="radio" name="coupon-box">
+                          <h5 class="orange-color t-l mb-3">新客優惠 20%OFF </h5>
+                          <p class="text-gray t-xs mb-0">折扣券碼： WJIFJIJEE
+                          </p>
+                          <p class="text-gray t-xs mb-0">有效日期： 2020/12/18-2021/6/30
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -376,20 +378,18 @@
 <script>
   // ------JS開始 以上勿刪-------
 
+  let couponYes = document.querySelector('#couponYes')
+  let couponNo = document.querySelector('#couponNo')
+  let coupon = document.querySelector('.coupon-items')
 
+  couponYes.addEventListener('click', function() {
+    coupon.classList.toggle('can-display');
 
-  // $('.form-input').on('click', function() {
+  });
+  couponNo.addEventListener('click', function() {
+    coupon.classList.remove('can-display');
 
-  //   console.log('.fom-mousedown');
-  //   // $('.contacts-box')
-  //   $(this).addClass('active');
-  // })
-  // $('.form-input').on('mouseleave', function() {
-
-  //   console.log('.fom-mouseleave');
-  //   // $('.contacts-box')
-  //   $(this).removeClass('active');
-  // })
+  });
 
 
 
