@@ -1,5 +1,6 @@
 <?php include __DIR__ . '/../parts/config.php' ?>
 <?php include __DIR__ . '/../parts/html-head.php' ?>
+<?php include __DIR__ . '/../parts/html-script.php' ?>
 <!-- --- css 連結放下面 ----- -->
 <link rel="stylesheet" href="<?= WEB_ROOT ?>cart/cart-style.css">
 
@@ -55,7 +56,7 @@
 <!-- --------------------step---------------- -->
 <div class="container container-mt">
   <pre>
-    <?php print_r($_GET) ?>
+    <?php print_r($_POST) ?>
     </pre>
   <form action="" method="POST">
     <div class="row">
@@ -71,7 +72,7 @@
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">聯絡家長資訊</h5>
                 <h5 class=" col-12 text-gray t-xs mb-2">若訂單有任何變動，客服將聯繫你</h5>
               </div>
-              <form name="mainform">
+              <form name="mainform" method="POST">
                 <div class="row">
                   <div class="col-12 col-lg-6 d-flex flex-column one-form">
                     <label class="text-color t-s label-all" name="mainLastName" for="mainLastName">姓氏：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
@@ -111,7 +112,7 @@
               <div class="row">
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">旅客 1</h5>
               </div>
-              <form name="user1form">
+              <form name="user1form" method="POST">
                 <div class="row">
                   <div class="col-12 col-lg-6 d-flex flex-column one-form">
                     <label class="text-color t-s label-all" name="lastName" for="lastName">姓氏：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
@@ -141,7 +142,7 @@
               <div class="row">
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">寵物 1</h5>
               </div>
-              <form action="" name="petForm">
+              <form action="" name="petForm" method="POST">
                 <div class="row">
                   <div class="col-12 col-lg-6 d-flex flex-column one-form">
                     <label class="text-color t-s label-all" name="petName" for="petName">寶貝稱呼： &nbsp;&nbsp;<span class="danger-color">*</span></label>
@@ -167,7 +168,7 @@
               <div class="row">
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">發票資訊</h5>
               </div>
-              <form action="" name="receiptForm">
+              <form action="" name="receiptForm" method="POST">
                 <div class="row">
                   <div class="col-12 col-lg-12">
                     <div class="row ">
@@ -197,7 +198,7 @@
               <h5 class="green-color t-l title1-m form-title">優惠折扣碼</h5>
             </div>
             <div class="col-12 form-box contacts-box">
-              <form action="" name="couponForm">
+              <form action="" name="couponForm" method="POST">
                 <div class="row">
                   <div class="col-12 col-lg-12">
                     <div class="row">
@@ -209,7 +210,7 @@
                         <input id="couponYes" class="form-radio" type="radio" name="coupon">
                         <label class="radio-text t-m text-color" for="couponYes">我有折扣碼</label>
                       </div>
-                      <div class="coupon-items w-100 unable animation">
+                      <div class="coupon-items w-100 animation">
                         <div class="col-12 d-flex align-items-center">
                           <input class="form-input form-input-btn" id="couponNumber" type="text" name="couponNumber" placeholder="請輸入折扣碼">
                           <button type="submit" name="couponNumberBtn" class="ml-2 form-input-btn btn ">兌換</button>
@@ -323,23 +324,6 @@
 
 
 
-<!-- <div class="container mt-5">
-  <h6 class="brown-color t-xxl ">毛日 brown-color t-xxl</h6>
-  <br>
-  <h6 class="green-color t-xl">毛日 green-color t-xl</h6>
-  <br>
-  <h6 class="danger-color t-l">毛日 danger-color t-l</h6>
-  <br>
-  <h6 class="text-color t-m">毛日 text-color t-m</h6>
-  <br>
-  <h6 class="text-color t-s">毛日 text-color t-s</h6>
-  <br>
-  <h6 class="text-gray t-xs">毛日 text-gray t-xs</h6>
-
-  <button class="btn">測試 class='btn'</button>
-
-</div> -->
-
 
 
 
@@ -354,7 +338,7 @@
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
-<?php include __DIR__ . '/../parts/html-script.php' ?>
+
 <script>
   // ------JS開始 以上勿刪-------
 
@@ -362,15 +346,28 @@
   let couponNo = document.querySelector('#couponNo')
   let coupon = document.querySelector('.coupon-items')
 
-  couponYes.addEventListener('click', function() {
-    coupon.classList.remove('unable');
+  // couponYes.addEventListener('click', function() {
+  //   coupon.classList.remove('unable');
 
-  });
-  couponNo.addEventListener('click', function() {
-    coupon.classList.add('unable');
+  // });
+  // couponNo.addEventListener('click', function() {
+  //   coupon.classList.add('unable');
 
-  });
+  // });
 
+  let couponItems = $('.coupon-items');
+
+  $('.coupon-items').slideUp()
+
+  $('#couponNo').on('click', function() {
+    $('.coupon-items').slideUp()
+
+
+  })
+  $('#couponYes').on('click', function() {
+    $('.coupon-items').slideDown()
+
+  })
 
 
   // ------JS結束 勿刪到-------
