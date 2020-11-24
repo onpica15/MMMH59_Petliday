@@ -2,31 +2,21 @@
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <link rel="stylesheet" href="pro-pg-mb.css">
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
-
-<div class="top-wrap info">
-    <!-- 麵包屑 -->
-    <div class="row bread-row t-xs">
-        <a href="">首頁</a> /
-        <a href="">行程列表</a> /
-        <a href="">台北出發</a> /
-        <a href="">九份一日遊</a>
-    </div>
-    <!-- 標題row -->
-    <div class="row title-row justify-content-between">
-        <div class="title-left">
-            <p>上山下海玩得夠！｜熱氣球嘉年華＆</p>
-            <p>SUP體驗＆金針花海 花東三日遊</p>
+<div class="container">
+    <div class="top-wrap info">
+        <!-- 麵包屑 -->
+        <div class="row bread-row mb-2 t-xs">
+            <a href="">首頁</a> /
+            <a href="">行程列表</a> /
+            <a href="">台北出發</a> /
+            <a href="">花東三日遊</a> /
+            <a href="">行程介紹</a>
         </div>
-        <div class="title-right d-flex">
-            <div class="price-wrap mr-3">
-                <p class="price t-xxl">NT$ 2280</p>
-                <p class="text-gray">成團7日前免費取消</p>
-            </div>
-            <div class="heart">
-                <img src="/petliday/icon/heart.png">
-            </div>
-            <div class="share">
-                <img src="/petliday/icon/share.png">
+        <!-- 標題row -->
+        <div class="row title-row">
+            <div class="title-left">
+                <p>上山下海玩得夠！｜熱氣球嘉年華＆</p>
+                <p>SUP體驗＆金針花海 花東三日遊</p>
             </div>
         </div>
     </div>
@@ -35,9 +25,9 @@
     <div class="bg-dog">
         <div class="container-fluid day123-fix">
             <div class="day123">
-                <a href="">第1天</a>
-                <a href="">第2天</a>
-                <a href="">第3天</a>
+                <a class="day1" href="">第1天</a>
+                <a class="day2" href="">第2天</a>
+                <a class="day3" href="">第3天</a>
             </div>
             <div class="line">
             </div>
@@ -49,7 +39,6 @@
                 <p class="topic-line"></p>
             </div>
             <div class="day-text-all">
-                <p class="hide-mb">查看完整行程</p>
                 <p class="day-text">第一天：台東熱氣球嘉年華 & 波希米亞露營野餐派對</p>
                 <p class="mt-4 mb-1">09:00 - 09:30 台北火車站(北二門)集合，搭乘專屬Petliday巴士出發</p>
                 <p class="mb-1">16:00 - 18:00 鹿野熱氣球嘉年華，看展球和繫留搭乘</p>
@@ -83,7 +72,6 @@
             </div>
             <!-- 第二天 -->
             <div class="day-text-all">
-                <p class="hide-mb">查看完整行程</p>
                 <p class="day-text">第二天：台東都歷部落原鄉體驗 & 都歷海灘SUP探險</p>
                 <p class="mt-4 mb-1">08:00 - 09:00 在波希米亞露營區用完早餐，出發到都歷部落</p>
                 <p class="mb-1">10:00 - 13:00 都歷部落農村體驗（附午餐）</p>
@@ -135,7 +123,6 @@
             </div>
             <!-- 第三天 -->
             <div class="day-text-all">
-                <p class="hide-mb">查看完整行程</p>
                 <p class="day-text">第三天：六十石山金針花海 & 瑞穗農場大地遊戲</p>
                 <p class="mt-4 mb-1">09:00 - 09:30 加賀屋溫泉會館用完早餐，出發</p>
                 <p class="mb-1">09:30 - 10:30 六十石山金針花海</p>
@@ -180,24 +167,9 @@
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
 <?php include __DIR__ . '/../parts/html-script.php' ?>
-<script src="/petliday/products/calendar.js"></script>
 
 <!-- // ------JS開始 以上誤刪------- -->
 <script>
-    $('.c3').on('mouseenter', function() {
-        $(this).find('.card-pic').css('height', '135px');
-        $(this).find('.card-info').css({
-            'opacity': '1',
-            'height': '10px',
-        });
-    });
-    $('.c3').on('mouseleave', function() {
-        $(this).find('.card-pic').css('height', '175px')
-        $(this).find('.card-info').css({
-            'opacity': '0',
-            'height': '0',
-        });
-    });
 </script>
 <!-- // ------JS結束 誤刪到------- -->
 

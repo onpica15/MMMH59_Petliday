@@ -198,7 +198,7 @@
                     <p class="topic-line"></p>
                 </div>
                 <div class="day-text-all">
-                    <p class="hide-mb">查看完整行程</p>
+                    <a class="hide-mb">查看完整行程</a>
                     <p class="day-text">第一天：台東熱氣球嘉年華 & 波希米亞露營野餐派對</p>
                     <p class="mt-4 mb-1">09:00 - 09:30 台北火車站(北二門)集合，搭乘專屬Petliday巴士出發</p>
                     <p class="mb-1">16:00 - 18:00 鹿野熱氣球嘉年華，看展球和繫留搭乘</p>
@@ -232,7 +232,7 @@
                 </div>
                 <!-- 第二天 -->
                 <div class="day-text-all">
-                    <p class="hide-mb">查看完整行程</p>
+                    <a class="hide-mb">查看完整行程</a>
                     <p class="day-text">第二天：台東都歷部落原鄉體驗 & 都歷海灘SUP探險</p>
                     <p class="mt-4 mb-1">08:00 - 09:00 在波希米亞露營區用完早餐，出發到都歷部落</p>
                     <p class="mb-1">10:00 - 13:00 都歷部落農村體驗（附午餐）</p>
@@ -284,7 +284,7 @@
                 </div>
                 <!-- 第三天 -->
                 <div class="day-text-all">
-                    <p class="hide-mb">查看完整行程</p>
+                    <a class="hide-mb">查看完整行程</a>
                     <p class="day-text">第三天：六十石山金針花海 & 瑞穗農場大地遊戲</p>
                     <p class="mt-4 mb-1">09:00 - 09:30 加賀屋溫泉會館用完早餐，出發</p>
                     <p class="mb-1">09:30 - 10:30 六十石山金針花海</p>
@@ -440,7 +440,7 @@
                     <p class="topic-line"></p>
                 </div>
             </div>
-            <p class="hide-rate-mb">查看完整評價</p>
+            <a class="hide-rate-mb">查看完整評價</a>
         </div>
         <div class="container rate-container pt-0">
             <div class="rate-scroll">

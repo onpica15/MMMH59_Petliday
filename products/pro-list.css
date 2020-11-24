@@ -30,8 +30,27 @@ body{
 /* .al{ 
     margin-left: -20px; 
  } */
+ /* hot carosel */
+ .wrap {
+    width: 340px;
+    height: 340px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.wrap-img {
+    left: -1140px;
+    width: 6840px;
+    transition: .5s;
+}
+
+.wrap-img li {
+    flex: 1 0 0;
+}
+
+/* hot carosel end */
 .hot-card{
-    width: 60%;
+    width: 1140px;
     height: 340px;
     background-color: #fff;
     box-shadow: 1px 2px 20px #ddd;
@@ -45,7 +64,7 @@ body{
     overflow: hidden;
 }
 .hot-pic img{
-    width: 100%;
+    /* width: 100%; */
     object-fit: cover;
 }
 .hot-right{
@@ -164,7 +183,7 @@ body{
         margin-bottom: 6px;
     }
 
-    .heart {
+    .heart-circle {
         width: 35px;
         height: 35px;
         background-color: #fff;
@@ -175,7 +194,13 @@ body{
         border-radius: 50%;
         padding: 6px 8.5px;
     }
-
+    .heart{
+        width: 18px;
+    }
+    .heart img{
+        width: 100%;
+        object-fit: contain;
+    }
     .card-pic {
         width: 100%;
         height: 175px;
@@ -252,7 +277,6 @@ body{
             position: relative;
             margin: 20px auto !important;
         }
-
         .card-pic {
             width: 100%;
             height: 175px;
@@ -265,6 +289,7 @@ body{
         }
     /* card RWD end*/
     /* 首圖插畫 */
+    
         .top-pic{
             /* width: 130%; */
             margin-top: 73px;
@@ -275,6 +300,26 @@ body{
             margin: 10px 0 0;
             padding-bottom: 30px;
         }
+        /* 熱門輪播 */
+                /* hot carosel */
+        .wrap {
+            width: 1140px;
+            height: 340px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .wrap-img {
+            left: -1140px;
+            width: 6840px;
+            transition: .5s;
+        }
+
+        .wrap-img li {
+            flex: none;
+        }
+
+        /* hot carosel end */
         .hot{
             margin-left: 0;
             margin-top: -20px;
@@ -287,8 +332,11 @@ body{
         }
         .hot-pic{
             width: 300px;
-            margin: 100px auto 0;
-        
+            margin: -20px 0 0 -20px;
+        }
+        .hot-pic img{
+            width: 100%;
+            object-fit: contain;
         }
         .hot-right{
             margin-left: 0;

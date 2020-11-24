@@ -1,21 +1,22 @@
 /* 主要資訊區塊--------------------------- */
 .top-wrap{
-    width: 1140px;
     border-radius: 3px 30px 3px 3px;
-    background-color: #fff;
+    /* background-color: #fff; */
     }
     /* 麵包屑 */
     .info{
-        height: 400px;
-        margin: -100px auto 0;
-        padding: 60px 100px;
+        height: 200px;
+        padding: 90px 0px;
     }
     .bread-row a{
        color: #555;
        margin: 0 3px; 
     }
+    .title-row, .bread-row{
+        margin: 0;
+    }
     .title-left{
-        font-size: 28px;
+        font-size: 20px;
     }
     .title-left p{
         margin:0 ;
@@ -151,43 +152,21 @@
     font-size: 24px;
 }
 .day-text-all{
-margin-top: 48px;
+    margin-top: 48px;
 }
 .hide-mb, .hide-rate-mb{
     /* display: none; */
     position: absolute;
 }
 .item-intro p{
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 5px;
 }
-.pic520{
-    width: 520px;
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-.pic520 img{
+.pic520 img,.pic420 img,.pic580 img{
     width: 100%;
     object-fit: cover;
 }
-.pic420{
-    width: 420px;
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-.pic420 img{
-    width: 100%;
-    object-fit: cover;
-}
-.pic580{
-    width: 580px;
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-.pic580 img{
-    width: 100%;
-    object-fit: cover;
-}
+
 @media(max-width: 425px) {
     .t-l{
         font-size: 14px;
@@ -203,15 +182,21 @@ margin-top: 48px;
         width: 50px;
         transform:none;
         line-height: 48px;
-        margin: 0 20px 390px 20px;
+        margin: 0 20px;
     }
     .day123{
         top: 95px;
         right: 290px;
     }
+    .day123 .day1{
+        margin-bottom: 1240px;
+    }
+    .day123 .day2{
+        margin-bottom: 2000px;
+    }
     /* 行程介紹 */
     .bg-dog{
-        height: 1510px;
+        height: 5000px;
     }
     .main-c{
         margin-top: 10px;
@@ -219,7 +204,7 @@ margin-top: 48px;
     }
     .day-text-all{
         margin-top: 38px;
-        font-size: 12px;
+        font-size: 14px;
     }
     .day-text{
         font-size: 16px;
@@ -231,7 +216,7 @@ margin-top: 48px;
     .line{
         top: 140px;
         right: 334px;
-        height: 1255px;
+        height: 4820px;
     }
     .end-dot{
         display: inline-block;
@@ -241,7 +226,7 @@ margin-top: 48px;
         border: 2px solid #ffa12c;
         background-color: #f2eee8;
         position: relative;
-        top: 1385px;
+        top: 4950px;
         left: 17px;
     }
     .hide-mb{
@@ -259,7 +244,10 @@ margin-top: 48px;
         margin-bottom: 30px;
     }
     /* item1-10 行程頁介紹 */
-    .item1, .item4, .item8,.item2, .item3, .item5, .item6, .item7, .item9, .item10{
+    .item1, .item4, .item8, .item2, .item3, .item5, .item6, .item7, .item9, .item10{
         margin: 20px 0 0 0;
+    }
+    .footer-box{
+        margin: 0;
     }
 }
