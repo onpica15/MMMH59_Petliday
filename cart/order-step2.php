@@ -1,5 +1,6 @@
 <?php include __DIR__ . '/../parts/config.php' ?>
 <?php include __DIR__ . '/../parts/html-head.php' ?>
+<?php include __DIR__ . '/../parts/html-script.php' ?>
 <!-- --- css 連結放下面 ----- -->
 <link rel="stylesheet" href="<?= WEB_ROOT ?>cart/cart-style.css">
 
@@ -66,7 +67,7 @@
               <div class="col-12 col-lg-12">
                 <div class="row ">
                   <div class="col-12 d-flex align-items-center bb-line">
-                    <input id="creditCard" class="form-radio " type="radio" name="payItems">
+                    <input id="creditCard" class="form-radio " type="radio" name="payItems" value="creditCard" checked>
                     <label for="creditCard" class="mb-0 d-flex flex-row justify-content-center align-items-center">
                       <div class=" radio-text t-m text-color mt-2 mb-2 mr-3">
                         信用卡線上刷卡一次付清
@@ -108,21 +109,21 @@
                     <div class="col-12 d-flex align-items-center  bb-line">
                       <div class="row d-flex justify-content-center w-100">
                         <div class="col-12 col-lg-6  one-form">
-                          <label class="text-color t-s label-all" name="cardNumber" for="cardNumber">信用卡號碼：&nbsp; <span class="danger-color">*</span></label><br>
-                          <input id="cardNumber" class="form-input w-100" type="text" name="cardNumber" placeholder="0000 0000 0000 0000" required>
+                          <label class="front text-color t-s label-all" name="cardNumber" for="cardNumber">信用卡號碼：&nbsp; <span class="danger-color">*</span></label><br>
+                          <input id="cardNumber" class="form-input w-100" type="text" name="cardNumber" placeholder="0000 0000 0000 0000" class="front" required>
                         </div>
                         <div class="col-12 col-lg-6  one-form">
-                          <label class="text-color t-s label-all " name="holderName" for="holderName">持卡人姓名：&nbsp; <span class="danger-color">*</span></label><br>
-                          <input class="form-input w-100" type="text" name="holderName" id="holderName" placeholder="例：陳毛毛" required>
+                          <label class="front text-color t-s label-all " name="holderName" for="holderName">持卡人姓名：&nbsp; <span class="danger-color">*</span></label><br>
+                          <input class="form-input w-100" type="text" name="holderName" id="holderName" class="front" placeholder="例：陳毛毛" required>
                         </div>
                         <div class="col-12 col-lg-6 one-form">
-                          <label class="text-color t-s label-all " name="cardDatecardDate">信用卡有效日期： &nbsp;<span class="danger-color">*</span></label><br>
+                          <label class="front text-color t-s label-all " name="cardDatecardDate">信用卡有效日期： &nbsp;<span class="danger-color">*</span></label><br>
                           <div class="row">
                             <div class="col-8 d-flex flex-row">
 
-                              <input id="cardDateM" class="col-6 col-lg-4 form-input mr-3" type="text" name="cardDateMM" placeholder="MM" required>
+                              <input id="cardDateM" class="front col-6 col-lg-4 form-input mr-3" type="text" name="cardDateMM" placeholder="MM" required>
 
-                              <input id="cardDateY" class="col-6 col-lg-4 form-input" type="text" name="cardDateYY" placeholder="YY" required>
+                              <input id="cardDateY" class="front col-6 col-lg-4 form-input" type="text" name="cardDateYY" placeholder="YY" required>
                             </div>
                           </div>
                         </div>
@@ -138,13 +139,13 @@
 
                   <!-- ------信用卡----  -->
                   <div class="col-12 d-flex align-items-center bb-line">
-                    <input id="ATM" class="form-radio" type="radio" name="payItems">
+                    <input id="ATM" class="form-radio" type="radio" name="payItems" value="ATM">
                     <label for="ATM" class="mb-0"><span class=" radio-text t-m text-color mt-2 mb-2">ATM付款(轉帳/網路線上繳款)</span></label>
 
 
                   </div>
                   <div class="col-12 d-flex align-items-center bb-line">
-                    <input id="linePay" class="form-radio" type="radio" name="payItems">
+                    <input id="linePay" class="form-radio" type="radio" name="payItems" value="linePay">
                     <label for="linePay" class="mb-0 d-flex flex-row justify-content-center align-items-center">
                       <span class=" radio-text t-m text-color mt-2 mb-2 mr-3">
                         LINE PAY
@@ -160,7 +161,7 @@
 
                   </div>
                   <div class="col-12 d-flex align-items-center bb-line">
-                    <input id="applePay" class="form-radio" type="radio" name="payItems">
+                    <input id="applePay" class="form-radio" type="radio" name="payItems" value="applePay">
                     <label for="applePay" class="mb-0 d-flex flex-row justify-content-center align-items-center">
                       <span class=" radio-text t-m text-color mt-2 mb-2 mr-3">
                         Apple Pay
@@ -177,7 +178,7 @@
 
                   </div>
                   <div class="col-12 d-flex align-items-center ">
-                    <input id="travelCard" class="form-radio" type="radio" name="payItems">
+                    <input id="travelCard" class="form-radio" type="radio" name="payItems" value="travelCard">
                     <label for="travelCard" class="mb-0"><span class=" radio-text t-m text-color mt-2 mb-2">國民旅遊卡</span></label>
 
                   </div>
@@ -307,43 +308,122 @@
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
-<?php include __DIR__ . '/../parts/html-script.php' ?>
+
 <script>
   // ------JS開始 以上勿刪-------
   let card = document.querySelector('.card1');
   let cardCVC = document.querySelector('#cardCVC');
+  let cardNumber = document.querySelector('#cardNumber');
+  let holderName = document.querySelector('#holderName');
+  let cardDateM = document.querySelector('#cardDateM');
+  let cardDateY = document.querySelector('#cardDateY');
+  let cardCount = 0;
 
   card.addEventListener('click', function() {
     card.classList.toggle('is-flipped');
-
+    cardCount += 1;
+    console.log(cardCount)
   });
 
   cardCVC.addEventListener('click', function() {
     console.log('cardCVC')
-    card.classList.toggle('is-flipped');
+    if (cardCount % 2) {
+
+    } else {
+      card.classList.toggle('is-flipped');
+      cardCount += 1;
+      console.log(cardCVC)
+      console.log(cardCount)
+    }
+  });
+
+  cardNumber.addEventListener('click', function() {
+    console.log('cardNumber')
+    if (cardCount % 2) {
+      card.classList.toggle('is-flipped');
+      cardCount += 1;
+      console.log(cardNumber)
+      console.log(cardCount)
+    }
+  });
+  holderName.addEventListener('click', function() {
+    console.log('holderName')
+    if (cardCount % 2) {
+      card.classList.toggle('is-flipped');
+      cardCount += 1;
+      console.log(holderName)
+      console.log(cardCount)
+    }
+  });
+  cardDateM.addEventListener('click', function() {
+    console.log('cardDateM')
+    if (cardCount % 2) {
+      card.classList.toggle('is-flipped');
+      cardCount += 1;
+      console.log(cardDateM)
+      console.log(cardCount)
+    }
+  });
+  cardDateY.addEventListener('click', function() {
+    console.log('cardDateY')
+    if (cardCount % 2) {
+      card.classList.toggle('is-flipped');
+      cardCount += 1;
+      console.log(cardDateY)
+      console.log(cardCount)
+    }
   });
 
 
 
 
-  let couponNo = document.querySelector('#couponNo');
-  let payItems = document.querySelector('[name=payItems]');
-  let creditCard = document.querySelector('#creditCard');
-  let creditCardBox = document.querySelector('.creditCard-box');
-  let atm = document.querySelector('#ATM');
-  let creditCardParent = creditCard.parentElement;
+  // let couponNo = document.querySelector('#couponNo');
+  // let payItems = document.querySelector('[name=payItems]');
+  // let creditCard = document.querySelector('#creditCard');
+  // let creditCardBox = document.querySelector('.creditCard-box');
+  // let atm = document.querySelector('#ATM');
+  // let creditCardParent = creditCard.parentElement;
 
-  console.log('creditCardParent', creditCardParent);
+  // console.log('creditCardParent', creditCardParent);
 
-  creditCard.addEventListener('click', function() {
-    creditCardBox.classList.add('can-display');
-    creditCardParent.classList.remove('bb-line');
+  // creditCard.addEventListener('click', function() {
+  //   creditCardBox.classList.add('can-display');
+  //   creditCardParent.classList.remove('bb-line');
+  // });
+  // atm.addEventListener('click', function() {
+  //   creditCardBox.classList.remove('can-display');
+  //   creditCardParent.classList.add('bb-line');
+
+  // });
+
+  let val = $('input[name=payItems]:checked').val();
+  let checked = $('input[name=payItems]:checked');
+  let CardParent = $('#creditCard').parent()
+
+  console.log('CardParent', CardParent);
+
+  $('.creditCard-box').slideDown();
+  $('#creditCard').on('click', function() {
+    console.log('#creditCard');
+    console.log('val', val);
+
+    if (val = 'creditCard') {
+      console.log('creditCard,checked');
+      $(CardParent).removeClass('bb-line')
+      $('.creditCard-box').slideDown();
+    }
+  })
+
+  $('#ATM').on('click', function() {
+    $('.creditCard-box').slideUp()
+    $(CardParent).addClass('bb-line')
   });
-  atm.addEventListener('click', function() {
-    creditCardBox.classList.remove('can-display');
-    creditCardParent.classList.add('bb-line');
 
-  });
+  // $('#creditCard').on('click', function() {
+  //   $('.creditCard-box').slideDown()
+  // })
+
+
   // if (creditCard.checked) {
   //   console.log('creditCard')
   //   creditCardBox.classList.add('can-display');

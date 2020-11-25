@@ -238,19 +238,37 @@ span :before {
   /* 精選行程部分末 */
 
   /* 體驗課程部分始 */
+  #class .container:first-child {
+    margin: 25px auto;
+  }
+
+  #class .container:last-child {
+    padding-right: 0px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
   #class svg {
     fill: #49322d;
     width: 18px;
     height: 15px;
   }
 
+  #class .row:last-child {
+    overflow-x: scroll;
+    padding-right: 0;
+  }
+
   .card {
     width: 266px;
     height: 300px;
     border: none;
-    box-shadow: 1px 2px 8px rgba(200, 200, 200, 0.5);
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
     position: relative;
-    margin: 20px auto !important;
+    flex-shrink: 0;
+    margin: 0 20px 0 0;
   }
 
   .card-pic {
@@ -260,44 +278,13 @@ span :before {
     overflow: hidden;
   }
 
-  .card.c2 {
-    height: 240px;
-    margin: 10px !important;
-  }
-
-  .c2 .card-pic {
-    height: 84px;
-  }
-
-  .c2 .info {
-    display: block;
-  }
-
-  .c2 .info-left,
-  .c2 .heart {
-    opacity: 0;
-    position: absolute;
-  }
-
-  .c2 .card-text {
-    font-size: 14px;
-  }
-
-  .c2 p {
-    margin-bottom: 5px;
-  }
-
-  .c4 {
-    height: 300px;
-  }
-
-  .c4 .card-pic {
-    height: 175px;
-  }
-
   .c4 .heart {
     top: 10px;
     right: 10px;
+  }
+
+  .cls-5 {
+    fill: #e03d2d;
   }
 
   .arrow {
@@ -466,6 +453,9 @@ span :before {
   }
 
   /* 體驗課程部份始 */
+  #class .container:first-child {
+    margin: 45px auto;
+  }
 
   #class svg {
     fill: #49322d;
@@ -484,6 +474,7 @@ span :before {
     box-shadow: 1px 2px 8px rgba(200, 200, 200, 0.5);
     position: relative;
     transition: 0.5s;
+    margin: 15px;
   }
 
   .card .p {

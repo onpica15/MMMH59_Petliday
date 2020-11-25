@@ -273,7 +273,7 @@
 <!-- 體驗課程section -->
 <section id="class">
   <!-- 腳印標題那部分 -->
-  <div class="container my-5">
+  <div class="container">
     <div class="row d-flex flex-start align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.2 20.76">
         <g id="圖層_2" data-name="圖層 2">
@@ -292,9 +292,9 @@
       </span>
     </div>
   </div>
-  <!-- 精選課程卡片 -->
-  <div class="container mt-5">
-    <div class="row align-items-center no-wrap">
+  <!-- 體驗課程卡片 -->
+  <div class="container">
+    <div class="row flex-start flex-nowrap">
       <!-- 左箭頭 -->
       <a class="arrow m-3">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.62 51.56" width="20px">
@@ -306,7 +306,8 @@
           </g>
         </svg>
       </a>
-      <div class="card c4 col-md col-sm-12 m-3 p-0">
+      <!-- card start -->
+      <div class="card c4 col-md p-0">
         <div class="heart">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
             <defs></defs>
@@ -347,7 +348,9 @@
           簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
         </p>
       </div>
-      <div class="card c4 col-md col-sm-12 m-3 p-0">
+      <!-- card end -->
+      <!-- card start -->
+      <div class="card c4 col-md p-0">
         <div class="heart">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
             <defs></defs>
@@ -388,7 +391,9 @@
           簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
         </p>
       </div>
-      <div class="card c4 col-md col-sm-12 m-3 p-0">
+      <!-- card end -->
+      <!-- card start -->
+      <div class="card c4 col-md p-0">
         <div class="heart">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
             <defs></defs>
@@ -428,7 +433,9 @@
           簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
         </p>
       </div>
-      <div class="card c4 col-md col-sm-12 m-3 p-0">
+      <!-- card end -->
+      <!-- card start -->
+      <div class="card c4 col-md p-0">
         <div class="heart">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.64 65" width="18px">
             <defs></defs>
@@ -468,6 +475,9 @@
           簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
         </p>
       </div>
+      <!-- card end -->
+
+
       <!-- 右箭頭 -->
       <a class="arrow m-3">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.62 51.56" width="20px">

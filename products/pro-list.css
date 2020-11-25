@@ -247,6 +247,9 @@ body{
         border-radius: 3px;
         border: 1px solid #ffa12c;
     }
+    .pages:focus{
+        background-color: #fff;
+    }
     .p-arrow{
         line-height: 48px;
     }
