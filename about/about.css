@@ -2,7 +2,7 @@
   outline: auto;
 }
 
-/* span {
+span {
   position: relative;
   padding: 0 1% 0 0;
 }
@@ -18,7 +18,7 @@ span::before {
   bottom: -1px;
   z-index: -1;
   margin-left: 5px;
-} */
+}
 
 @media (min-width: 1200px) {
   .footprint {
@@ -267,6 +267,37 @@ span::before {
   }
   /* Petliday是什麼的部分末 */
   /* Petliday做了什麼的部分始 */
-  
+  #markable {
+    padding-bottom: 5vh;
+  }
+
+  #markable .svg-row svg {
+    fill: #49322d;
+    width: 23px;
+    height: 19px;
+  }
+
+  .icon-row {
+    padding: 0 15%;
+  }
+
+  .num-count p {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
   /* Petliday做了什麼的部分末 */
+}
+
+  /* RWD超級明顯的吧RWDRWDRWDRWDRWDRWDRWDRWD*/
+  /* RWD超級明顯的吧RWDRWDRWDRWDRWDRWDRWDRWD*/
+  /* RWD超級明顯的吧RWDRWDRWDRWDRWDRWDRWDRWD*/
+  /* RWD超級明顯的吧RWDRWDRWDRWDRWDRWDRWDRWD*/
+  /* RWD超級明顯的吧RWDRWDRWDRWDRWDRWDRWDRWD*/
+  /* RWD超級明顯的吧RWDRWDRWDRWDRWDRWDRWDRWD*/
+  /* RWD超級明顯的吧RWDRWDRWDRWDRWDRWDRWDRWD*/
+  /* RWD超級明顯的吧RWDRWDRWDRWDRWDRWDRWDRWD*/
+
+@media (maㄌ-width: 400px) {
+
 }

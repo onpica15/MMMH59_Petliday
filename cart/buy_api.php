@@ -9,4 +9,5 @@ if (empty($_SESSION['cart'])) {
 
   ], JSON_UNESCAPED_UNICODE);
   exit;
+   
 }

@@ -169,7 +169,7 @@
     </div>
     <!-- 出血狗狗背景圖 -->
     <div id="trip-section" class="product w-100">
-        <div class="bg-dog">
+        <div id="day1" class="bg-dog">
             <div class="container">
                 <div class="row cate-fix">
                     <div class="btn-group w-100" role="group" aria-label="Basic example">
@@ -185,9 +185,9 @@
             </div>
             <div class="container-fluid day123-fix">
                 <div class="day123">
-                    <a href="">第1天</a>
-                    <a href="">第2天</a>
-                    <a href="">第3天</a>
+                    <a class="day1" href="#day1">第1天</a>
+                    <a class="day2" href="#day2">第2天</a>
+                    <a class="day3" href="#day3">第3天</a>
                 </div>
                 <div class="line">
                 </div>
@@ -225,7 +225,7 @@
                 </div>
                 <div class="item3 pb-5">
                     <div class="pic580"><img src="/Petliday/products/img/pd3.jpg" alt=""></div>
-                    <div class="item-intro">
+                    <div id="day2" class="item-intro">
                         <p>露營區每週都有不同的主題派對及音樂饗宴，</p>
                         <p>可以認識不同的狗友，一起玩樂談心數星星。</p>
                         <p>此外，也會替寵物們準備豐盛的晚餐，野餐派對玩起來！</p>
@@ -279,7 +279,7 @@
                         <p>「走吧，去海邊！」海邊踏浪、玩水，是夏日出遊的必要行程之一，</p>
                         <p>更不能錯過帶著毛孩來場SUP的探險。經過專業教練的指導，</p>
                         <p>可以在寬闊無際的大海中盡情航行。不僅是主人玩得開心，</p>
-                        <p>連寵物都可以共同待在衝浪板上享樂！如果玩累了，也很適合在岸邊泡著水，</p>
+                        <p id="day3">連寵物都可以共同待在衝浪板上享樂！如果玩累了，也很適合在岸邊泡著水，</p>
                         <p>享受藍色包覆的安定感。千萬別忘了替毛孩拍一張網美照唷！</p>
                     </div>
                 </div>

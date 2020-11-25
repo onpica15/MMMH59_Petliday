@@ -92,16 +92,19 @@
                         <div class="credit-card card-front">
                           <img class="credit-card-img" src="./imgs/3x/card-front@3x.png" alt="">
                           <div class="card-text-box">
-                            <h3 class="card-text card-number">0000 0000 0000 0000</h3>
+                            <h3 id="card-number" class="card-text card-number">0000 0000 0000 0000</h3>
                             <h3 class="card-text card-name-t"> cardholder name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expiration</h3>
-                            <h3 class="card-text card-name"> CHANH CHU YDHS</h3>
-                            <h3 class="card-text card-date">MM / YY</h3>
+                            <h3 id="card-name" class="card-text card-name"> YOUR NAME</h3>
+                            <h3 class="card-text card-date">
+                              <span id="card-date-m" class="card-date-font">••</span> /
+                              <span id="card-date-y" class="card-date-font">••</span>
+                            </h3>
                           </div>
 
                         </div>
                         <div class="credit-card card-back">
                           <img class="credit-card-img" src="./imgs/3x/card-back@3x.png" alt="">
-                          <div class="card-cvc">CVC</div>
+                          <div id="card-cvc" class="card-cvc">•••</div>
                         </div>
                       </div>
 
@@ -110,26 +113,26 @@
                       <div class="row d-flex justify-content-center w-100">
                         <div class="col-12 col-lg-6  one-form">
                           <label class="front text-color t-s label-all" name="cardNumber" for="cardNumber">信用卡號碼：&nbsp; <span class="danger-color">*</span></label><br>
-                          <input id="cardNumber" class="form-input w-100" type="text" name="cardNumber" placeholder="0000 0000 0000 0000" class="front" required>
+                          <input id="cardNumber" class="form-input w-100" type="text" name="cardNumber" placeholder="0000 0000 0000 0000" class="front" value="" required>
                         </div>
                         <div class="col-12 col-lg-6  one-form">
                           <label class="front text-color t-s label-all " name="holderName" for="holderName">持卡人姓名：&nbsp; <span class="danger-color">*</span></label><br>
-                          <input class="form-input w-100" type="text" name="holderName" id="holderName" class="front" placeholder="例：陳毛毛" required>
+                          <input class="form-input w-100" type="text" name="holderName" id="holderName" class="front" placeholder="例：陳毛毛" value="" required>
                         </div>
                         <div class="col-12 col-lg-6 one-form">
                           <label class="front text-color t-s label-all " name="cardDatecardDate">信用卡有效日期： &nbsp;<span class="danger-color">*</span></label><br>
                           <div class="row">
                             <div class="col-8 d-flex flex-row">
 
-                              <input id="cardDateM" class="front col-6 col-lg-4 form-input mr-3" type="text" name="cardDateMM" placeholder="MM" required>
+                              <input id="cardDateM" class="front col-6 col-lg-4 form-input mr-3" type="text" name="cardDateMM" placeholder="MM" value="" required>
 
-                              <input id="cardDateY" class="front col-6 col-lg-4 form-input" type="text" name="cardDateYY" placeholder="YY" required>
+                              <input id="cardDateY" class="front col-6 col-lg-4 form-input" type="text" name="cardDateYY" placeholder="YY" value="" required>
                             </div>
                           </div>
                         </div>
                         <div class="col-12 col-lg-6  one-form mb-5">
                           <label class="text-color t-s label-all " name="cardCVC" for="cardCVC">信用卡背面三碼：&nbsp; <span class="danger-color">*</span></label><br>
-                          <input class="form-input" type="text" name="cardCVC" placeholder="CVC" id="cardCVC" required>
+                          <input class="form-input" type="text" name="cardCVC" placeholder="CVC" value="" id="cardCVC" required>
 
                         </div>
                       </div>
@@ -277,34 +280,6 @@
 
 
 
-<!-- <div class="container mt-5">
-  <h6 class="brown-color t-xxl ">毛日 brown-color t-xxl</h6>
-  <br>
-  <h6 class="green-color t-xl">毛日 green-color t-xl</h6>
-  <br>
-  <h6 class="danger-color t-l">毛日 danger-color t-l</h6>
-  <br>
-  <h6 class="text-color t-m">毛日 text-color t-m</h6>
-  <br>
-  <h6 class="text-color t-s">毛日 text-color t-s</h6>
-  <br>
-  <h6 class="text-gray t-xs">毛日 text-gray t-xs</h6>
-
-  <button class="btn">測試 class='btn'</button>
-
-</div> -->
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
@@ -374,6 +349,54 @@
     }
   });
 
+
+
+  $("#cardNumber").keyup(
+    function() {
+      $("#card-number").html(this.value)
+      if (!(this.value)) {
+        $("#card-number").html('0000 0000 0000 0000')
+      }
+    }
+  )
+  $("#holderName").keyup(
+    function() {
+      $("#card-name").html(this.value)
+      if (!(this.value)) {
+        $("#card-name").html('YOUR NAME')
+      }
+    }
+  )
+  $("#cardDateMM").keyup(
+    function() {
+      $("#card-date-m").html(this.value)
+      if (!(this.value)) {
+        $("#card-date-m").html('MM')
+      }
+    }
+  )
+  $("#cardDateYY").keyup(
+    function() {
+      $("#card-date-y").html(this.value)
+      if (!(this.value)) {
+        $("#card-date-y").html('YY')
+      }
+    }
+  )
+  $("#cardCVC").keyup(
+    function() {
+      $("#card-cvc").html(this.value)
+      if (!(this.value)) {
+        $("#card-cvc").html('cvc')
+      }
+    }
+  )
+
+  const cardNumberConfirm = function(n) {
+    return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  };
+
+  ' ^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$'
 
 
 
