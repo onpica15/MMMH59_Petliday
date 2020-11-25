@@ -95,9 +95,9 @@
                             <h3 id="card-number" class="card-text card-number">0000 0000 0000 0000</h3>
                             <h3 class="card-text card-name-t"> cardholder name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expiration</h3>
                             <h3 id="card-name" class="card-text card-name"> YOUR NAME</h3>
-                            <h3 class="card-text card-date">
-                              <span id="card-date-m" class="card-date-font">••</span> /
-                              <span id="card-date-y" class="card-date-font">••</span>
+                            <h3 class="card-text card-date d-flex">
+                              <div id="card-date-m" class="card-date-font">••</div> /
+                              <div id="card-date-y" class="card-date-font">••</div>
                             </h3>
                           </div>
 
