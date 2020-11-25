@@ -31,6 +31,9 @@
                 <div class="avatar-img">
                   <img src="./img/avatar-pet3.jpg" alt="">
                 </div>
+                <a href="#" class="camera-icon">
+                  <img src="../icon/camera.svg" alt="">
+                </a>
               </div>
               <!-- color bar -->
               <div class="row title d-flex flex-start align-items-center mt-4 px-3 t-l">
@@ -58,20 +61,20 @@
                 <div class="bar d-flex">
                   <button class="col btn-prev border-btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
 
-                  <div class="col color-bar d-flex">
-                    <div class=" circle mr-3">
+                  <div class="col color-bar d-flex justify-content-around">
+                    <div class=" selected-border ">
                       <div class="red ball" style="background-color: rgb(255, 83, 83);"></div>
                     </div>
-                    <div class=" circle mr-3">
-                      <div class="orange ball" style="background-color: #ffa12c;"></div>
-                    </div>
-                    <div class=" circle mr-3 active">
+                    <div class=" selected-border ">
                       <div class="blue ball" style="background-color: rgb(89, 180, 255);"></div>
                     </div>
-                    <div class=" circle mr-3">
+                    <div class=" selected-border active">
+                      <div class="orange ball" style="background-color: #ffa12c;"></div>
+                    </div>
+                    <div class=" selected-border ">
                       <div class="purple ball" style="background-color: rgb(170, 85, 219);"></div>
                     </div>
-                    <div class="circle">
+                    <div class="selected-border">
                       <div class="green ball" style="background-color: #00907c;"></div>
                     </div>
                   </div>
@@ -184,6 +187,7 @@
 
         </div>
       </div>
+
 </section>
 
 
@@ -201,19 +205,27 @@
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
   // ------JS開始 以上勿刪-------
+  $('.selected-border').on('click', function() {
+    // 點到就加active
+    $(this).addClass('active')
+  })
 
   $('.border-btn-next').on('click', function() {
-    if ($('.circle.active').next().length > 0) {
-      $('.circle.active').removeClass('active').next().addClass('active')
+    if ($('.selected-border.active').next().length > 0) {
+      $('.selected-border.active').removeClass('active').next().addClass('active')
     }
   })
 
   $('.border-btn-prev').on('click', function() {
-    // console.log('hi', $('.circle.active'))
-    if ($('.circle.active').prev().length > 0) {
-      $('.circle.active').removeClass('active').prev().addClass('active')
+    // console.log('hi', $('.selected-border.active'))
+    if ($('.selected-border.active').prev().length > 0) {
+      $('.selected-border.active').removeClass('active').prev().addClass('active')
     }
   })
+
+  // $('avatar-img img').on('click', function {
+  //   let imgbd = $('this').addClass('')
+  // })
 
 
   // ------JS結束 勿刪到-------

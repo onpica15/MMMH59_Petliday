@@ -22,7 +22,7 @@
                     <!-- list-profile 會員資料 -->
                     <div class="tab-pane fade show active " id="list-profile" role="tabpanel" aria-labelledby="list-profile-list" href="./account-home">
                         <!-- 會員資料 -->
-                        <div class="container mb-5 list-section" id="list-title">
+                        <div class="container mb-3 list-section" id="list-title">
                             <div class="row  mb-3">
                                 <div class="d-flex pt-3 p-4">
                                     <div class="line mr-2"></div>
@@ -35,7 +35,7 @@
                                         <img src="./img/avatar-1.jpg" alt="">
 
                                     </div>
-                                    <a href="./account-edit.php" class="camera-icon">
+                                    <a href="#" class="camera-icon">
                                         <img src="../icon/camera.svg" alt="">
                                     </a>
                                     <div class="member-id text-center mt-3">
@@ -43,7 +43,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-12 col-lg-8">
+                                <div class="col-12 col-lg-8 move-down">
                                     <form>
                                         <div class="form-group row">
                                             <label for="staticEmail" class="col-sm-2 col-form-label">姓名</label>
@@ -74,54 +74,57 @@
                                     </form>
                                 </div>
                             </div>
-                            <div class="row justify-content-end">
+                            <div class=" row justify-content-end">
                                 <button class="btn">資料修改</button>
                                 <button class="btn">密碼更改</button>
-
                             </div>
                         </div>
                         <!-- 寵物資料 -->
-                        <div class="container mb-5 list-section" id="pet-list">
+                        <div class="container mb-3 list-section" id="pet-list">
                             <div class="row pt-3 p-4">
                                 <div class="line mr-2"></div>
                                 <h4 class="t-xxl ">寵物資料</h4>
                             </div>
                             <!-- 單筆寵物資料 -->
                             <div class="row" id="pet-info">
-                                <div class="col-4 pet-card">
+                                <div class="col-12 col-lg-4 pet-card d-flex justify-content-center">
                                     <div class="pet-img">
-                                        <img src="./img/avatar-pet1.jpg" alt="">
+                                        <img src="./img/head.png" alt="">
                                     </div>
-                                    <a href="./account-edit.php" class="camera-icon">
-                                        <img src="../icon/camera.svg" alt="">
+                                    <a href="./account-edit.php" class="edit-round">
+                                        <img src="./img/edit-round.svg" alt="">
                                     </a>
 
                                 </div>
-                                <div class="col-6">
+                                <div class="form-move-down col-12 col-lg-6">
                                     <div>
-                                        <h6 class="t-l">Qbone</h6>
+                                        <div class=" d-flex">
+                                            <i class="fas fa-bone title-icon"></i>
+                                            <h6 class="form-title t-l">Qbone</h6>
+                                            <i class="fas fa-bone title-icon"></i>
+                                        </div>
                                         <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-2 col-form-label">品種</label>
-                                            <div class="col-sm-10">
+                                            <label for="staticEmail" class="col-lg-3 col-form-label">品種</label>
+                                            <div class="col-lg-9">
                                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="柴犬">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-2 col-form-label">年齡</label>
-                                            <div class="col-sm-10">
+                                            <label for="staticEmail" class="col-lg-3 col-form-label">年齡</label>
+                                            <div class="col-lg-9">
                                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="1歲">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-2 col-form-label">生日</label>
-                                            <div class="col-sm-10">
+                                            <label for="staticEmail" class="col-lg-3 col-form-label">生日</label>
+                                            <div class="col-lg-9">
                                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="2019/09/10">
                                             </div>
                                         </div>
                                     </div>
 
                                 </div>
-                                <div class="col-2 d-flex justify-content-around align-items-center" id="page-icon">
+                                <div class="col-12 col-lg-2 d-flex justify-content-around align-items-center" id="page-icon">
                                     <a href="" class="edit-icon">
                                         <img src="../icon/edit.svg" alt="">
                                     </a>
@@ -131,41 +134,46 @@
                                 </div>
 
                             </div>
+                            <!-- ----------------------------- -->
                             <div class="row" id="pet-info">
-                                <div class="col-4 pet-card">
+                                <div class="col-12 col-lg-4 pet-card d-flex justify-content-center">
                                     <div class="pet-img">
                                         <img src="./img/avatar-pet1.jpg" alt="">
                                     </div>
-                                    <a href="./account-edit.php" class="camera-icon">
-                                        <img src="../icon/camera.svg" alt="">
+                                    <a href="./account-edit.php" class="edit-round">
+                                        <img src="./img/edit-round.svg" alt="">
                                     </a>
 
                                 </div>
-                                <div class="col-6">
+                                <div class="form-move-down col-12 col-lg-6">
                                     <div>
-                                        <h6 class="t-l">Qbone</h6>
+                                        <div class=" d-flex">
+                                            <i class="fas fa-bone title-icon"></i>
+                                            <h6 class="form-title t-l">Qbone</h6>
+                                            <i class="fas fa-bone title-icon"></i>
+                                        </div>
                                         <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-2 col-form-label">品種</label>
-                                            <div class="col-sm-10">
+                                            <label for="staticEmail" class="col-lg-3 col-form-label">品種</label>
+                                            <div class="col-lg-9">
                                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="柴犬">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-2 col-form-label">年齡</label>
-                                            <div class="col-sm-10">
+                                            <label for="staticEmail" class="col-lg-3 col-form-label">年齡</label>
+                                            <div class="col-lg-9">
                                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="1歲">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-2 col-form-label">生日</label>
-                                            <div class="col-sm-10">
+                                            <label for="staticEmail" class="col-lg-3 col-form-label">生日</label>
+                                            <div class="col-lg-9">
                                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="2019/09/10">
                                             </div>
                                         </div>
                                     </div>
 
                                 </div>
-                                <div class="col-2 d-flex justify-content-around align-items-center" id="page-icon">
+                                <div class="col-12 col-lg-2 d-flex justify-content-around align-items-center" id="page-icon">
                                     <a href="" class="edit-icon">
                                         <img src="../icon/edit.svg" alt="">
                                     </a>
@@ -179,7 +187,6 @@
                                 <button class="btn">新增寵物</button>
                             </div>
                         </div>
-
                     </div>
                     <!-- endof list-profile -->
 
@@ -197,13 +204,14 @@
 
                         <!-- search -->
                         <div class="container">
-                            <div class="row search justify-content-center">
-                                <!-- <div class="search-img">
-                                    <img class="" src="../icon/search.svg" alt="">
-                                </div> -->
-                                <i class=' fas fa-search'></i>
-                                <input class="col-10 " type="search" placeholder="搜索歷史清單" aria-label="Search">
-                                <button class="btn-search" type="submit">go</button>
+                            <div class="row ml-0">
+                                <div class="col-12 col-lg-6 search align-items-center">
+                                    <div class="icon-search">
+                                        <i class='fas fa-search'></i>
+                                    </div>
+                                    <input class="form-control" type="search" placeholder="搜索歷史清單" aria-label="Search">
+                                    <a class="btn-green btn-search" type="submit">go</a>
+                                </div>
                             </div>
                         </div>
                         <!-- ----prod-box---- -->
@@ -221,7 +229,7 @@
 
                                     </div>
                                 </div>
-                                <div class="col-1 col-lg-3 d-flex flex-column ml-auto align-self-end">
+                                <div class="col-10 col-lg-3 d-flex flex-column ml-auto align-self-end">
                                     <h5 class="mb-5 ml-auto t-m brown-color prod-price-in">NT$ 3000</h5>
                                     <h5 class="ml-auto green-color t-l title1-m">訂單已完成</h5>
                                 </div>
@@ -247,7 +255,7 @@
 
                                     </div>
                                 </div>
-                                <div class="col-1 col-lg-3 d-flex flex-column ml-auto align-self-end">
+                                <div class="col-10 col-lg-3 d-flex flex-column ml-auto align-self-end">
                                     <h5 class="mb-5 ml-auto t-m brown-color prod-price-in">NT$ 3000</h5>
                                     <h5 class="ml-auto text-gray t-l title1-m">訂單取消</h5>
                                 </div>
@@ -344,7 +352,12 @@
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
     // ------JS開始 以上勿刪-------
-
+    $('.list-group-item').on('click', function() {
+        // console.log('hi')
+        // $('.list-group-item').removeClass('active');
+        // $(this).addClass('active');
+        // location.hash = $(this).attr('href');
+    })
 
 
     // ------JS結束 勿刪到-------
