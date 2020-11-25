@@ -1,4 +1,7 @@
 
+// D clip path
+$('#d-clip-web').attr('clipPathUnits', 'objectBoundingBox').attr('transform', 'scale(0.0019 0.00178)');
+
 //  上面大愛心點按加入取消清單
  $('.heart-top').on('click', function() {
         let imgSrc = $(this).find('img').attr('src')
@@ -9,6 +12,15 @@
             $(this).find('img').attr('src', '/Petliday/icon/heart.png');
         }
     });
+//calendar點日期換背景色
+
+// const td = document.querySelectorAll('td')
+$('.calendar td').on('click',function(){
+    $('#data').find('td').css('background-color','#fff');
+    $(this).css('background-color','#ffc072');
+    // console.log('this.val()',td.innerHTML);
+    // console.log('this.val()',dataTemp[i]);
+})
 
 // cate menu 行程介紹fixed目錄bar 滑到定位固定
 $(window).scroll(function () {
@@ -34,12 +46,28 @@ if (window.matchMedia('(max-width: 425px)').matches) {
 // 123day fixed
 $(window).scroll(function () {
     let nowTop = $(this).scrollTop();
-    console.log('scrolltop', nowTop)
-    if($(this).scrollTop() >= 1835 ){
+    if(nowTop >= 1835 && nowTop <= 6530){
         $('.day123-fix').css('position','fixed').css('top','200px').css('right','-20px')
+    }
+    else if(nowTop > 6530){
+        $('.day123-fix').css('position','relative').css('top','4800px').css('right','-20px')
     }
     else{
         $('.day123-fix').css('position','relative').css('top','200px').css('right','-20px')
+    }
+})
+// 123day 滑到區域換色
+$(window).scroll(function () {
+    let nowTop = $(this).scrollTop();
+    console.log('scrolltop', nowTop)
+    if(nowTop>1865 && nowTop<3310){
+        $('.day1').css('background-color','#fff').siblings().css('background-color','#f2eee8');
+    }
+    else if(nowTop>3310 && nowTop<5260){
+        $('.day2').css('background-color','#fff').siblings().css('background-color','#f2eee8');
+    }
+    else if(nowTop>5260 && nowTop<7050){
+        $('.day3').css('background-color','#fff').siblings().css('background-color','#f2eee8');
     }
 })
 // 1835.1795
@@ -115,5 +143,3 @@ $(window).scroll(function () {
             $(this).find('img').attr('src', '/Petliday/icon/heart-red.png');
         }
     });
-
-    $('#d-clip-web').attr('clipPathUnits', 'objectBoundingBox').attr('transform', 'scale(0.0019 0.00178)');

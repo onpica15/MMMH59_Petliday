@@ -171,8 +171,9 @@ body{
     }
 
     .card {
-        width: 296px;
-        height: 295px;
+        width: 100%;
+        min-width: 296px;
+        min-height: 295px;
         border: none;
         box-shadow: 1px 2px 8px rgba(200, 200, 200, .5);
         position: relative;

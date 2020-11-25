@@ -118,6 +118,12 @@ background-color: #fff;
     text-decoration: none;
 }
 /* 選擇方案區塊--------------------------- */
+/* calendar */
+
+#data td{
+border-radius: 3px;
+}
+
 .input-group-prepend{
     background-color: #eee;
 }
@@ -255,6 +261,10 @@ background-color: #fff;
     font-weight: 500;
     letter-spacing: 1px;
 }
+.btn-cate:hover{
+    cursor: pointer;
+    background-color: #ffd096;
+}
 /* .btn-cate-left{
     border-radius: 0 0 0 80px;
 } */
@@ -284,6 +294,16 @@ background-color: #fff;
     margin: 20px;
     transform: rotate(-10deg);
 }
+.day123 a:hover{
+    cursor: pointer;
+    background-color: #ffd096;
+    text-decoration: none;
+}
+.day123 a:active{
+    background-color: #fff;
+    text-decoration: none;
+}
+
 .line{
     height: 120px;
     border-left: 2px solid #ffa12c;

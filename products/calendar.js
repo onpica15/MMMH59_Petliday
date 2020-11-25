@@ -40,3 +40,11 @@ for (let i = 0; i < dataTemp.length; i++) {
   }
 }
 data.innerHTML = dataDisplay
+
+// 測試取得點擊的日期值
+$('.calendar td').on('click',function(){
+  $('#data').find('td').css('background-color','#fff');
+  $(this).css('background-color','#ffc072');
+  // console.log('this.val()',td.innerHTML);
+  console.log('this.val()',dataTemp[$(this).index()]);
+})
