@@ -8,7 +8,7 @@ if (!isset($_SESSION)) {
 }
 
 $db_host = 'localhost';
-$db_name = 'petilday';
+$db_name = 'petliday';
 $db_user = 'root';
 $db_pass = '';
 
