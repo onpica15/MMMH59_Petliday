@@ -1,7 +1,39 @@
 <?php include __DIR__ . '/../parts/config.php' ?>
 
+<?php $pageName = 'product-list';
 
+$perPage = 9; // 每頁幾筆
+$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+// $cate = isset($_GET['cate']) ? intval($_GET['cate']) : 0;
 
+$t_sql = "SELECT COUNT(1) FROM products";
+$t_stmt = $pdo->query($t_sql);
+
+$totalRows = $t_stmt->fetch(PDO::FETCH_NUM)[0]; // 總筆數
+$totalPages = ceil($totalRows / $perPage); // 總頁數
+
+if ($totalRows != 0) {
+    if ($page < 1) {
+        header('Location: pdlist-db.php');
+        // header表轉向到原本頁面預設值
+        exit;
+    }
+    if ($page > $totalPages) {
+        header('Location: pdlist-db.php?page=' . $totalPages);
+        // 轉向到最後一頁
+        exit;
+    }
+    $sql = sprintf(
+        "SELECT * FROM products ORDER BY sid ASC LIMIT %s, %s",
+        ($page - 1) * $perPage,
+        $perPage
+    );
+    $stmt = $pdo->query($sql);
+    $rows = $stmt->fetchAll();
+} else {
+    $rows = [];
+}
+?>
 
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <link rel="stylesheet" href="pro-list.css">
@@ -23,7 +55,7 @@
     </div>
 </div>
 <div class="container-fluid mt-5">
-    <div class="row hot align-items-center justify-content-center w-100">
+    <div class="row hot align-items-center justify-content-center w-100 m-0">
         <a class="arrow al mr-5">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.62 51.56" width="30px">
                 <path class="cls-4" d="M25.12,51.56a3.52,3.52,0,0,1-2.51-1.06L1,28.22a3.5,3.5,0,0,1,0-4.88L22.61,1.06a3.5,3.5,0,0,1,5,4.88L8.38,25.78,27.64,45.62a3.51,3.51,0,0,1-2.52,5.94Z" />
@@ -279,17 +311,17 @@
     </div>
     <div class="time align-items-center">
         <p class="pr-3">玩多久？</p>
-        <a href="">三日遊</a>
-        <a href="">二日遊</a>
-        <a href="">一日遊</a>
-        <a href="">活動</a>
+        <a class="tag-on" href="">三日遊</a>
+        <a class="tag-on" href="">二日遊</a>
+        <a class="tag-on" href="">一日遊</a>
+        <a class="tag-on" href="">活動</a>
     </div>
     <div class="area align-items-center">
         <p class="pr-3">去哪玩？</p>
-        <a href="">北部出發</a>
-        <a href="">中部出發</a>
-        <a href="">南部出發</a>
-        <a href="">東部出發</a>
+        <a class="tag-on" href="">北部出發</a>
+        <a class="tag-on" href="">中部出發</a>
+        <a class="tag-on" href="">南部出發</a>
+        <a class="tag-on" href="">東部出發</a>
     </div>
     <form action="" class="order">
         <div class="form-group d-flex align-items-center justify-content-end">
@@ -304,307 +336,46 @@
 </div>
 <!-- 商品卡列表 -->
 <div class="container">
-    <div class="row align-items-center">
-        <div class="card c3 col-md m-3 p-0">
-            <div class="heart-circle">
-                <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-            </div>
-            <div class="card-pic w-100">
-                <img src="/Petliday/products/img/prolist1.jpg" alt="">
-            </div>
-            <div class="card-text pt-3 pb-1 px-4">
-                <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
-                <div class="info d-flex justify-content-between">
-                    <div class="info-left d-flex align-items-center">
-                        <div class="star mr-2">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
-                                <defs>
-                                </defs>
-                                <g id="圖層_2" data-name="圖層 2">
-                                    <g id="圖層_1-2" data-name="圖層 1">
-                                        <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
-                                    </g>
-                                </g>
-                            </svg>
-
-                        </div>
-                        <div class="rate text-gray t-m">4.9</div>
-                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+    <div class="row card-row align-items-center">
+        <?php foreach ($rows as $r) : ?>
+            <div class="col-md-4 col-12 p-4">
+                <div class="card c3">
+                    <div class="heart-circle">
+                        <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
                     </div>
-                    <div class="info-right pr-2 t-l orange-color">$2680</div>
+                    <a href="" class="card-pic w-100">
+                        <img src="/Petliday/products/img/prolist<?= $r['sid'] ?>.jpg" alt="...">
+                        <!-- <img src="/Petliday/products/img/prolist1.jpg" alt=""> -->
+                    </a>
+                    <div class="card-text pt-3 pb-1 px-4">
+                        <a href="/Petliday/products/pro-pg.php"><?= $r['product_name'] ?></a>
+                        <div class="info d-flex justify-content-between">
+                            <div class="info-left d-flex align-items-center">
+                                <div class="star mb-2 mr-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
+                                        <defs>
+                                        </defs>
+                                        <g id="圖層_2" data-name="圖層 2">
+                                            <g id="圖層_1-2" data-name="圖層 1">
+                                                <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
+                                            </g>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <div class="rate text-gray t-m"><?= $r['star'] ?></div>
+                                <div class="rate-all t-xs ml-2"><u class="text-gray"><?= $r['rate'] ?>則評論 </u></div>
+                            </div>
+                            <div class="info-right pr-2 t-l orange-color">$<?= $r['price_all'] ?></div>
+                        </div>
+                    </div>
+                    <p class="card-info px-4 t-xs">
+                        <?= $r['intro'] ?>
+                    </p>
                 </div>
             </div>
-            <p class="card-info px-4 t-xs">
-                簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-            </p>
-        </div>
-        <div class="card c3 col-md col-sm-12 m-3 p-0">
-            <div class="heart-circle">
-                <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-            </div>
-            <div class="card-pic w-100">
-                <img src="/Petliday/products/img/prolist2.jpg" alt="">
-            </div>
-            <div class="card-text pt-3 pb-1 px-4">
-                <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
-                <div class="info d-flex justify-content-between">
-                    <div class="info-left d-flex align-items-center">
-                        <div class="star mr-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
-                                <g id="圖層_2" data-name="圖層 2">
-                                    <g id="圖層_1-2" data-name="圖層 1">
-                                        <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
-                                    </g>
-                                </g>
-                            </svg>
-
-                        </div>
-                        <div class="rate text-gray t-m">4.9</div>
-                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
-                    </div>
-                    <div class="info-right pr-2 t-l orange-color">$2680</div>
-                </div>
-            </div>
-            <p class="card-info px-4 t-xs">
-                簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-            </p>
-        </div>
-        <div class="card c3 col-md col-sm-12 m-3 p-0">
-            <div class="heart-circle">
-                <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-            </div>
-            <div class="card-pic w-100">
-                <img src="/Petliday/products/img/prolist3.jpg" alt="">
-            </div>
-            <div class="card-text pt-3 pb-1 px-4">
-                <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
-                <div class="info d-flex justify-content-between">
-                    <div class="info-left d-flex align-items-center">
-                        <div class="star mr-2">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
-                                <defs></defs>
-                                <g id="圖層_2" data-name="圖層 2">
-                                    <g id="圖層_1-2" data-name="圖層 1">
-                                        <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
-                                    </g>
-                                </g>
-                            </svg>
-
-                        </div>
-                        <div class="rate text-gray t-m">4.9</div>
-                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
-                    </div>
-                    <div class="info-right pr-2 t-l orange-color">$2680</div>
-                </div>
-            </div>
-            <p class="card-info px-4 t-xs">
-                簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-            </p>
-        </div>
+        <?php endforeach; ?>
     </div>
-    <div class="row align-items-center">
-        <div class="card c3 col-md m-3 p-0">
-            <div class="heart-circle">
-                <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-            </div>
-            <div class="card-pic w-100">
-                <img src="/Petliday/products/img/prolist4.jpg" alt="">
-            </div>
-            <div class="card-text pt-3 pb-1 px-4">
-                <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
-                <div class="info d-flex justify-content-between">
-                    <div class="info-left d-flex align-items-center">
-                        <div class="star mr-2">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
-                                <defs>
-                                </defs>
-                                <g id="圖層_2" data-name="圖層 2">
-                                    <g id="圖層_1-2" data-name="圖層 1">
-                                        <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
-                                    </g>
-                                </g>
-                            </svg>
-
-                        </div>
-                        <div class="rate text-gray t-m">4.9</div>
-                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
-                    </div>
-                    <div class="info-right pr-2 t-l orange-color">$2680</div>
-                </div>
-            </div>
-            <p class="card-info px-4 t-xs">
-                簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-            </p>
-        </div>
-        <div class="card c3 col-md col-sm-12 m-3 p-0">
-            <div class="heart-circle">
-                <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-            </div>
-            <div class="card-pic w-100">
-                <img src="/Petliday/products/img/prolist5.jpg" alt="">
-            </div>
-            <div class="card-text pt-3 pb-1 px-4">
-                <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
-                <div class="info d-flex justify-content-between">
-                    <div class="info-left d-flex align-items-center">
-                        <div class="star mr-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
-                                <g id="圖層_2" data-name="圖層 2">
-                                    <g id="圖層_1-2" data-name="圖層 1">
-                                        <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
-                                    </g>
-                                </g>
-                            </svg>
-
-                        </div>
-                        <div class="rate text-gray t-m">4.9</div>
-                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
-                    </div>
-                    <div class="info-right pr-2 t-l orange-color">$2680</div>
-                </div>
-            </div>
-            <p class="card-info px-4 t-xs">
-                簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-            </p>
-        </div>
-        <div class="card c3 col-md col-sm-12 m-3 p-0">
-            <div class="heart-circle">
-                <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-            </div>
-            <div class="card-pic w-100">
-                <img src="/Petliday/products/img/prolist6.jpg" alt="">
-            </div>
-            <div class="card-text pt-3 pb-1 px-4">
-                <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
-                <div class="info d-flex justify-content-between">
-                    <div class="info-left d-flex align-items-center">
-                        <div class="star mr-2">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
-                                <defs></defs>
-                                <g id="圖層_2" data-name="圖層 2">
-                                    <g id="圖層_1-2" data-name="圖層 1">
-                                        <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
-                                    </g>
-                                </g>
-                            </svg>
-
-                        </div>
-                        <div class="rate text-gray t-m">4.9</div>
-                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
-                    </div>
-                    <div class="info-right pr-2 t-l orange-color">$2680</div>
-                </div>
-            </div>
-            <p class="card-info px-4 t-xs">
-                簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-            </p>
-        </div>
-    </div>
-    <div class="row align-items-center">
-        <div class="card c3 col-md m-3 p-0">
-            <div class="heart-circle">
-                <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-            </div>
-            <div class="card-pic w-100">
-                <img src="/Petliday/products/img/prolist7.jpg" alt="">
-            </div>
-            <div class="card-text pt-3 pb-1 px-4">
-                <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
-                <div class="info d-flex justify-content-between">
-                    <div class="info-left d-flex align-items-center">
-                        <div class="star mr-2">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
-                                <defs>
-                                </defs>
-                                <g id="圖層_2" data-name="圖層 2">
-                                    <g id="圖層_1-2" data-name="圖層 1">
-                                        <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
-                                    </g>
-                                </g>
-                            </svg>
-
-                        </div>
-                        <div class="rate text-gray t-m">4.9</div>
-                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
-                    </div>
-                    <div class="info-right pr-2 t-l orange-color">$2680</div>
-                </div>
-            </div>
-            <p class="card-info px-4 t-xs">
-                簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-            </p>
-        </div>
-        <div class="card c3 col-md col-sm-12 m-3 p-0">
-            <div class="heart-circle">
-                <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-            </div>
-            <div class="card-pic w-100">
-                <img src="/Petliday/products/img/prolist8.jpg" alt="">
-            </div>
-            <div class="card-text pt-3 pb-1 px-4">
-                <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
-                <div class="info d-flex justify-content-between">
-                    <div class="info-left d-flex align-items-center">
-                        <div class="star mr-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
-                                <g id="圖層_2" data-name="圖層 2">
-                                    <g id="圖層_1-2" data-name="圖層 1">
-                                        <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
-                                    </g>
-                                </g>
-                            </svg>
-
-                        </div>
-                        <div class="rate text-gray t-m">4.9</div>
-                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
-                    </div>
-                    <div class="info-right pr-2 t-l orange-color">$2680</div>
-                </div>
-            </div>
-            <p class="card-info px-4 t-xs">
-                簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-            </p>
-        </div>
-        <div class="card c3 col-md col-sm-12 m-3 p-0">
-            <div class="heart-circle">
-                <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-            </div>
-            <div class="card-pic w-100">
-                <img src="/Petliday/products/img/prolist9.jpg" alt="">
-            </div>
-            <div class="card-text pt-3 pb-1 px-4">
-                <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
-                <div class="info d-flex justify-content-between">
-                    <div class="info-left d-flex align-items-center">
-                        <div class="star mr-2">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
-                                <defs></defs>
-                                <g id="圖層_2" data-name="圖層 2">
-                                    <g id="圖層_1-2" data-name="圖層 1">
-                                        <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
-                                    </g>
-                                </g>
-                            </svg>
-
-                        </div>
-                        <div class="rate text-gray t-m">4.9</div>
-                        <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
-                    </div>
-                    <div class="info-right pr-2 t-l orange-color">$2680</div>
-                </div>
-            </div>
-            <p class="card-info px-4 t-xs">
-                簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-            </p>
-        </div>
-    </div>
-
 </div>
 <!-- 分頁按鈕 -->
 <div class="container">
@@ -635,118 +406,6 @@
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
 <?php include __DIR__ . '/../parts/html-script.php' ?>
-<!-- hot carosel -->
-<script>
-    // 熱門輪播 hot carosel
-    let index = 1;
-    $('.dots li').first().css('background', '#ffc072');
 
-    $('.dots li').click(function() {
-        $(this).css('background', '#ffc072').siblings().css('background', '#ccc');
-
-        $('.wrap-img').css('left', -1140 * ($(this).index() + 1));
-        index = $(this).index();
-    });
-    $('.ar').click(function() {
-        index = index + 1;
-        console.log('index1:', index);
-        // let nowIndex = (index > 4) ? 0 : index;
-        $('.wrap-img').css('transition', '0.7s').css('left', (-1140 * index));
-        $('.dots li').eq(index - 1).css('background', '#ffc072').siblings().css('background', '#ccc');
-        $('.wrap-img').on('transitionend webkitTransitionEnd', function() {
-            if (index == 5) {
-                index = 0;
-                $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
-                index = 1;
-                console.log('index2:', index);
-                $('.wrap-img').css('transition', 'none').css('left', '-1140px')
-            }
-        });
-    });
-    $('.al').click(function() {
-        index = index - 1;
-        // let nowIndex = (index < 0) ? 4 : index;
-        $('.wrap-img').css('transition', '0.7s').css('left', -1140 * (index + 1));
-        $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
-
-        $('.wrap-img').on('transitionend webkitTransitionEnd', function() {
-            if (index == -1) {
-                index = 4;
-                console.log('index4:', index);
-                $('.wrap-img').css('transition', 'none').css('left', '-4560px')
-                $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
-            }
-        });
-    });
-    // rwd時候的熱門輪播 rwd425 hot carosel
-    if (window.matchMedia('(max-width: 425px)').matches) {
-        let index = 1;
-        $('.dots li').first().css('background', '#ffc072');
-
-        $('.dots li').click(function() {
-            $(this).css('background', '#ffc072').siblings().css('background', '#ccc');
-
-            $('.wrap-img').css('left', -340 * ($(this).index() + 1));
-            index = $(this).index();
-        });
-        $('.ar').click(function() {
-            index = index + 1;
-            $('.wrap-img').css('transition', '0.7s').css('left', (-340 * index));
-            $('.dots li').eq(index - 1).css('background', '#ffc072').siblings().css('background', '#ccc');
-
-
-            $('.wrap-img').on('transitionend webkitTransitionEnd', function() {
-                if (index == 4) {
-                    index = 0;
-                    $('.wrap-img').css('transition', 'none').css('left', '-40')
-                    $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
-                }
-            });
-        });
-        $('.al').click(function() {
-            index = index - 1;
-            // let nowIndex = (index < 0) ? 4 : index;
-            $('.wrap-img').css('transition', '0.7s').css('left', -340 * (index + 1));
-            $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
-
-            $('.wrap-img').on('transitionend webkitTransitionEnd', function() {
-                if (index == -1) {
-                    index = 4;
-                    $('.wrap-img').css('transition', 'none').css('left', '-4560px')
-                    $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
-                }
-            });
-        });
-    }
-</script>
-<!-- 愛心 收藏喜好清單 -->
-<script>
-    $('.heart-circle').on('click', function() {
-        console.log('heart');
-        let imgSrc = $(this).find('img').attr('src')
-        console.log(imgSrc);
-        if (imgSrc == '/Petliday/icon/heart-red.png') {
-            $(this).find('img').attr('src', '/Petliday/icon/heart-red-fill.png');
-        } else {
-            $(this).find('img').attr('src', '/Petliday/icon/heart-red.png');
-        }
-    });
-</script>
-<!--  推薦行程區 卡片hover -->
-<script>
-    $('.c3').on('mouseenter', function() {
-        $(this).find('.card-pic').css('height', '135px');
-        $(this).find('.card-info').css({
-            'opacity': '1',
-            'height': '10px',
-        });
-    });
-    $('.c3').on('mouseleave', function() {
-        $(this).find('.card-pic').css('height', '175px')
-        $(this).find('.card-info').css({
-            'opacity': '0',
-            'height': '0',
-        });
-    });
-</script>
+<script src="/petliday/products/pro-list.js"></script>
 <?php include __DIR__ . '/../parts/html-foot.php' ?>
