@@ -53,7 +53,7 @@ if ($totalRows != 0) {
                         <p><?= $r['product_name'] ?></p>
                         <div class="info d-flex justify-content-between">
                             <div class="info-left d-flex align-items-center">
-                                <div class="star mr-2">
+                                <div class="star mb-2 mr-1">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
                                         <defs>
                                         </defs>

@@ -1,4 +1,8 @@
 <?php include __DIR__ . '/../parts/config.php' ?>
+
+
+
+
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <link rel="stylesheet" href="pro-list.css">
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
