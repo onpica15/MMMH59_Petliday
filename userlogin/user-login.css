@@ -26,6 +26,12 @@ button:focus{
     background-color: rgb(253, 251, 251);
 }
 
+@media (max-width: 400px) { 
+    .login-form{
+        width: 358px;
+    }
+ }
+
 /* 登入頁和註冊頁form */
 .login-form h2{
     color: #333;
@@ -40,6 +46,12 @@ button:focus{
     height: 400px;
     background-color: rgb(253, 251, 251);
 }
+
+@media (max-width: 400px) { 
+    .login-form-two{
+        width: 358px;
+    }
+ }
 
 /* 忘記密碼頁form */
 .login-form-two h2{
@@ -92,6 +104,13 @@ button:focus{
     padding: 0 10px 0 10px;
 }
 
+@media (max-width: 400px) { 
+    .login-border{
+        width: 320px;
+        margin-left: 20px;
+    }
+ }
+
 /* 登入from */
 .form-control{
     width: 350px;
@@ -124,6 +143,15 @@ button:focus{
     padding-left: 35px;
 }
 
+@media (max-width: 400px) { 
+    .icon-msg{
+        left: 40px;
+    }
+    .icon-psd{
+        left: 40px;
+    }
+ }
+
 /* .login-group label{
     margin-top: 20px;
     margin-left: 75px;
@@ -135,16 +163,30 @@ button:focus{
     font-size: 0.5rem;
 }
 
+@media (max-width: 400px) { 
+    .login-group input{
+        width: 300px;
+        margin-left: 30px;
+    }
+ }
+
 .login-group-2{
     text-align: center;
 }
 
-.btn{
+.login-btn.btn{
     width: 350px;
     height: 40px;
     text-align: center;
     margin-top: 30px;
 }
+
+@media (max-width: 400px) { 
+    .login-btn.btn{
+        width: 300px;
+        margin-left: 22px;
+    }
+ }
 
 .login-other{
     color: #555;
@@ -166,6 +208,7 @@ button:focus{
     width: 60px;
     background-color: rgb(253, 251, 251);
     border: 1px solid transparent;
+    /* 最終改成 1px solid transparent */
     position: relative;
 }
 
