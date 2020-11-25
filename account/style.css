@@ -12,11 +12,12 @@ body {
 
 /* aside-bar------------------------------------------ */
 .aside-bar {
+  border-radius: 15px;
   background: #fff;
   padding-bottom: 40px;
   height: 90%;
   position: sticky;
-  top: 50px;
+  top: 60px;
   box-shadow: 0px 0px 5px rgba(200, 200, 200, 0.5);
 }
 
@@ -43,6 +44,9 @@ body {
   background: #ffa12c;
   border-radius: 2px 2px 2px 13px;
 }
+.list-group-item {
+  border: 1px solid rgba(0, 0, 0, 0);
+}
 
 .list-group-item.active {
   z-index: 2;
@@ -59,6 +63,7 @@ body {
     box-shadow: none;
   }
   .aside-bar h2 {
+    padding-top: 0;
     background-color: #f2f2f2;
   }
   .menu-bar {
@@ -73,6 +78,11 @@ body {
 }
 
 /* ----------------------------------------- */
+
+/* account-home---------------------------- */
+.del-icon img {
+  height: 100%;
+}
 button:focus {
   outline: none;
 }
@@ -85,17 +95,11 @@ button:focus {
   border-radius: 25px 25px 0 0;
 }
 
-.member-card {
-  /* position: relative; */
-}
-
 .member-img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-
   overflow: hidden;
-
   /* position: absolute; */
   top: 0;
   left: 15%;
@@ -136,6 +140,9 @@ button:focus {
   overflow: hidden;
   box-shadow: 0 0 0 3px #ffa12c;
 }
+.pet-img img {
+  width: 100%;
+}
 
 #pet-info {
   margin-top: 20px;
@@ -156,11 +163,22 @@ button:focus {
   position: relative;
 }
 
-.pet-card .camera-icon {
-  border-radius: 50%;
+.pet-card .edit-round {
+  width: 32px;
+  padding: 2px;
   position: absolute;
-  left: 70%;
+  left: 80%;
   top: 90%;
+}
+
+.title-icon {
+  transform: rotate(45deg);
+  color: #9f5d38;
+  margin-right: 20px;
+}
+
+.form-title {
+  color: #9f5d38;
 }
 
 .btn-search {
@@ -172,6 +190,40 @@ button:focus {
   top: 1px;
   right: 18px;
 }
+@media (max-width: 991.98px) {
+  .member-img {
+    /* position: absolute; */
+    top: 0;
+    left: 20%;
+  }
+  .camera-icon {
+    position: absolute;
+    right: 80px;
+    top: 150px;
+  }
+  .member-id {
+    position: absolute;
+    bottom: -250px;
+    right: 120px;
+  }
+  .move-down {
+    margin-top: 80%;
+  }
+  .form-group {
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .pet-card .edit-round {
+    left: 75%;
+    top: 90%;
+  }
+  .form-move-down {
+    margin-top: 5%;
+  }
+  .form-title {
+    text-align: center;
+  }
+}
+/* ---------------------------- */
 
 /* order-list 我的訂單*/
 .icon-search {
@@ -182,6 +234,9 @@ button:focus {
 }
 .search .form-control {
   padding-left: 32px;
+}
+.fa-search {
+  color: #aaa;
 }
 
 .search input {
@@ -205,7 +260,7 @@ button:focus {
   letter-spacing: 2px;
   text-indent: 2px;
   color: #fff;
-  padding: 1% 3%;
+  padding: 6px 12px;
   background-color: #00907c;
   min-height: 44px;
   min-width: 80px;
@@ -266,7 +321,7 @@ button:focus {
   overflow: hidden;
   object-fit: cover;
   border-radius: 30px;
-  border: 3px solid#ffa12c;
+  box-shadow: 0 0 0 3px #ffa12c;
 }
 .bar {
   min-height: 90px;
@@ -275,11 +330,11 @@ button:focus {
   border: 1px solid#9f5d38;
   border-radius: 20px;
 }
-.circle {
+.selected-border {
   width: 80px;
   height: 100%;
 }
-.circle.active {
+.selected-border.active {
   border: 2px solid #ffa12c;
   border-radius: 5px;
 }
@@ -310,6 +365,25 @@ button:focus {
   border-radius: 0 5px 5px 0;
 }
 
+/* -------------- */
 /* rwd */
 @media (max-width: 991.98px) {
+  .btn-search {
+  }
+}
+/* account-edit */
+.pet-avatar {
+  position: relative;
+}
+.pet-avatar .camera-icon {
+  right: calc(50% - 105px);
+  top: 90%;
+}
+/* ----------------------------------- */
+
+/* order-detail------------------------ */
+.single-detail {
+  background-color: #f2f2f2;
+  margin-top: 1rem;
+  padding: 0.5rem;
 }

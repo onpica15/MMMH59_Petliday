@@ -43,7 +43,7 @@
                                 </div>
 
                             </div>
-                            <div class="row form-box ">
+                            <div class="row form-box mt-2 mb-4">
                                 <div class="col-12 ">
                                     <div class="detail-all detail-quan d-flex justify-content-end ">
                                         <h6 class=" text-gray t-s mb-0 mr-2">共 2 項商品</h6>
@@ -73,19 +73,39 @@
                             <div class="row ">
                                 <div class="all-order-box-in w-100">
                                     <div class="col-12 order-box-fin">
-                                        <h5 class="text-color t-l mt-1">標題標題標題標題標題標題標題標題題標題標題</h5>
-                                        <div class="detail-box-fin">
-                                            <div class="detail-all detail-time d-flex justify-content-between">
-                                                <h6 class=" text-gray t-s ">時間：</h6>
-                                                <h6 class=" text-gray t-s">2020/08/12 pm 6:00</h6>
+                                        <!--  -->
+                                        <div class="order-items">
+                                            <h5 class="text-color t-l mt-1">標題標題標題標題標題標題標題標題題標題標題</h5>
+                                            <div class="detail-box-fin">
+                                                <div class="detail-all detail-time d-flex justify-content-between">
+                                                    <h6 class=" text-gray t-s ">時間：</h6>
+                                                    <h6 class=" text-gray t-s">2020/08/12 pm 6:00</h6>
+                                                </div>
+                                                <div class="detail-all detail-quan d-flex justify-content-between">
+                                                    <h6 class=" text-gray t-s">數量：</h6>
+                                                    <h6 class=" text-gray t-s">2 x 人 / 1 x 犬</h6>
+                                                </div>
                                             </div>
-                                            <div class="detail-all detail-quan d-flex justify-content-between">
-                                                <h6 class=" text-gray t-s">數量：</h6>
-                                                <h6 class=" text-gray t-s">2 x 人 / 1 x 犬</h6>
+                                            <div class="single-prod-total d-flex justify-content-end bb-line">
+                                                <h5 class="t-m brown-color prod-price-single">NT$ 1500</h5>
                                             </div>
                                         </div>
-                                        <div class="single-prod-total d-flex justify-content-end bb-line">
-                                            <h5 class="t-m brown-color prod-price-single">NT$ 3000</h5>
+                                        <!--  -->
+                                        <div class="order-items">
+                                            <h5 class="text-color t-l mt-1">標題標題標題標題標題標題標題標題題標題標題</h5>
+                                            <div class="detail-box-fin">
+                                                <div class="detail-all detail-time d-flex justify-content-between">
+                                                    <h6 class=" text-gray t-s ">時間：</h6>
+                                                    <h6 class=" text-gray t-s">2020/08/12 pm 6:00</h6>
+                                                </div>
+                                                <div class="detail-all detail-quan d-flex justify-content-between">
+                                                    <h6 class=" text-gray t-s">數量：</h6>
+                                                    <h6 class=" text-gray t-s">2 x 人 / 1 x 犬</h6>
+                                                </div>
+                                            </div>
+                                            <div class="single-prod-total d-flex justify-content-end bb-line">
+                                                <h5 class="t-m brown-color prod-price-single">NT$ 1500</h5>
+                                            </div>
                                         </div>
                                         <div class="row d-flex align-content-stretch">
                                             <div class="col-12 col-lg-4 single-detail-box">
@@ -147,7 +167,7 @@
                         <!-- button -->
                         <div class="container">
                             <div class="row">
-                                <button class="btn btn btn-outline-warning">返回歷史訂單</button>
+                                <button class="btn btn-outline-warning ml-auto">返回歷史訂單</button>
                             </div>
                         </div>
                     </div>
