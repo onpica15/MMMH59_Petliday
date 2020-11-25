@@ -443,6 +443,11 @@ input[type="radio"]:checked {
   right: 0px;
   bottom: 10%;
 }
+.card-date-font {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+}
 .card-cvc {
   font-size: 14px;
   color: #fff;
