@@ -152,6 +152,9 @@
               </div>
             </a>
           </li>
+          
+          <!-- 登入前 -->
+          <?php if(! isset($_SESSION['member_avatar'])): ?>
           <li class="nav-item  m-1">
             <a class="nav-link" href="#">
               <div class="navbtn nav-user-btn" data-toggle="modal" data-target="#exampleModalCenter">
@@ -165,6 +168,14 @@
               </div>
             </a>
           </li>
+          <?php endif ?>
+
+          <!-- 登入後 -->
+          <?php if(isset($_SESSION['member_avatar'])): ?>
+          <li class="nav-item  m-1">
+            <a class="nav-link"><?= $_SESSION['member_avatar']['name'] ?></a>
+          </li>
+          <?php endif ?>
 
           <!-- <li class="nav-item">
               <a class="nav-link brown-color t-m login-text" href="#">登入/註冊</a>
