@@ -137,6 +137,9 @@
 
           <li class="nav-item m-1">
             <a class="nav-link" href="<?= WEB_ROOT ?>cart/cart.php">
+              <div class="buy-items">
+                <div class="buy-quant">1</div>
+              </div>
               <div class="navbtn nav-cart-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.29 312.24">
 
@@ -181,13 +184,29 @@
   <script>
     // ------JS開始 以上勿刪-------
 
-    // $('.search-box').on('mouseenter', 'mousedown', function() {
-    //   console.log('enter')
-    //   $('.search-bar').addClass('search-hover');
-    //   $('.search-btn').addClass('search-hover');
-    //   $('.search-box button').addClass('search-hover');
+    $('.search-box').on('mouseenter', function() {
+      console.log('enter')
+      $('#search-input').addClass('search-hover');
 
-    // });
+    });
+    $('.search-box').on('mouseleave', function() {
+      console.log('enter')
+      $('#search-input').removeClass('search-hover');
+
+
+    });
+
+
+    // $(window).on('click', function() {
+    //   $(this).not(".a1")
+    //   $('#search-input').removeClass('search-focus');
+    //   $('.search-btn').removeClass('search-btn-focus');
+    // })
+    $('.search-box').on('mousedown', function() {
+      console.log('enter')
+      $('#search-input').addClass('search-focus');
+      $('.search-btn').addClass('search-btn-focus');
+    });
 
     // ------JS結束 勿刪到-------
   </script>
