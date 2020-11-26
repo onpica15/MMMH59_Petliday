@@ -6,7 +6,7 @@
 
     <div class="modal-content">
       <div class="login">
-        <button data-dismiss="modal" class="close">
+        <button data-dismiss="modal" class="close" style="margin-top: 20px;">
           <span aria-hidden="true">×</span>
         </button>
 
