@@ -13,12 +13,12 @@
   </div>
   <div class="container">
     <div class="row">
-      <?php include __DIR__ . '/../account/account-aside-bar.php' ?>
+      <?php include __DIR__ . '/../account/account-aside-bar-c.php' ?>
 
       <div class="col-12 col-lg-9">
         <div class="tab-content" id="nav-tabContent">
           <!-- list-profile 會員資料 -->
-          <div class="tab-pane fade show active list-section" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+          <div class="tab-pane show active list-section" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
 
             <div class="container mb-3" id="list-title">
               <div class="row  mb-3">
@@ -175,7 +175,7 @@
               <!--endof top decoration bar -->
               <div class="row justify-content-center">
                 <button class="btn">全部清除</button>
-                <button class="btn">儲存修改</button>
+                <a class="btn" href="account-profile.php">儲存修改</a>
 
               </div>
             </div>

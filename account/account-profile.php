@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row">
             <!-- aside-bar 側邊攔 -->
-            <?php include __DIR__ . '/../account/account-aside-bar.php' ?>
+            <?php include __DIR__ . '/../account/account-aside-bar-c.php' ?>
             <!-- endof  aside-bar 側邊攔 -->
 
             <!-- aside-bar點出的內容 -->
@@ -190,140 +190,7 @@
                     </div>
                     <!-- endof list-profile -->
 
-                    <!-- list-order 我的訂單 -->
-                    <div class="tab-pane fade list-section" id="list-order" role="tabpanel" aria-labelledby="list-order-list">
 
-                        <div class="container mb-3" id="list-title">
-                            <div class="row  mb-3">
-                                <div class="d-flex pt-3 p-4">
-                                    <div class="line mr-2"></div>
-                                    <h4 class="t-xxl">我的訂單</h4>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- search -->
-                        <div class="container">
-                            <div class="row ml-0">
-                                <div class="col-12 col-lg-6 search align-items-center">
-                                    <div class="icon-search">
-                                        <i class='fas fa-search'></i>
-                                    </div>
-                                    <input class="form-control" type="search" placeholder="搜索歷史清單" aria-label="Search">
-                                    <a class="btn-green btn-search" type="submit">go</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ----prod-box---- -->
-                        <div class="container">
-                            <div class="row prod-box mt-4 d-flex align-items-top">
-                                <div class="prod-img col-2 col-lg-3">
-                                    <img src="../products/img/pd6.jpg" alt="">
-                                </div>
-                                <div class="col-10 col-lg-6 prod-text d-flex flex-column">
-                                    <h5 class="brown-color t-l title1-m">標題標題標題標題標題標題標題標題題標題</h5>
-                                    <h6 class="t-m title1-m">方案類型:恆春二日遊</h6>
-
-                                    <div class="small-text">
-                                        <h6 class=" text-gray t-s">訂購日期: 2020/08/12 pm 6:00</h6>
-
-                                    </div>
-                                </div>
-                                <div class="col-10 col-lg-3 d-flex flex-column ml-auto align-self-end">
-                                    <h5 class="mb-5 ml-auto t-m brown-color prod-price-in">NT$ 3000</h5>
-                                    <h5 class="ml-auto green-color t-l title1-m">訂單已完成</h5>
-                                </div>
-                            </div>
-                            <div class="row justify-content-end">
-                                <button class="btn btn-outline">訂單評論</button>
-                                <a class="btn" href="./account-order-detail.php">訂單明細</a>
-                            </div>
-
-                        </div>
-                        <!-- ----endof prod-box---- -->
-                        <div class="container">
-                            <div class="row prod-box mt-4 d-flex align-items-top">
-                                <div class="prod-img col-2 col-lg-3">
-                                    <img src="../products/img/pd6.jpg" alt="">
-                                </div>
-                                <div class="col-10 col-lg-6 prod-text d-flex flex-column">
-                                    <h5 class="brown-color t-l title1-m">標題標題標題標題標題標題標題標題題標題</h5>
-                                    <h6 class="t-m title1-m">方案類型:恆春二日遊</h6>
-
-                                    <div class="small-text">
-                                        <h6 class=" text-gray t-s">訂購日期: 2020/08/12 pm 6:00</h6>
-
-                                    </div>
-                                </div>
-                                <div class="col-10 col-lg-3 d-flex flex-column ml-auto align-self-end">
-                                    <h5 class="mb-5 ml-auto t-m brown-color prod-price-in">NT$ 3000</h5>
-                                    <h5 class="ml-auto text-gray t-l title1-m">訂單取消</h5>
-                                </div>
-                            </div>
-                            <div class="row justify-content-end">
-                                <button class="btn btn-outline">訂單評論</button>
-                                <a class="btn" href="./account-order-detail.php">訂單明細</a> </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- endof list-order 我的訂單 -->
-
-                    <!--  願望清單 -->
-                    <div class="tab-pane fade list-section" id="list-wish" role="tabpanel" aria-labelledby="list-wish-list">
-                        <div class="container mb-3" id="list-title">
-                            <div class="row  mb-3">
-                                <div class="d-flex pt-3 p-4">
-                                    <div class="line mr-2"></div>
-                                    <h4 class="t-xxl">願望清單</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- endof 願望清單 -->
-
-                    <!--  會員信箱 -->
-                    <div class="tab-pane fade list-section" id="list-mailbox" role="tabpanel" aria-labelledby="list-mailbox-list">
-                        <div class="container mb-3" id="list-title">
-                            <div class="row  mb-3">
-                                <div class="d-flex pt-3 p-4">
-                                    <div class="line mr-2"></div>
-                                    <h4 class="t-xxl">會員信箱</h4>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- endof 會員信箱 -->
-
-                    <!--  優惠券 -->
-                    <div class="tab-pane fade list-section" id="list-coupon" role="tabpanel" aria-labelledby="list-coupon-list">
-                        <div class="container mb-3" id="list-title">
-                            <div class="row  mb-3">
-                                <div class="d-flex pt-3 p-4">
-                                    <div class="line mr-2"></div>
-                                    <h4 class="t-xxl">優惠券</h4>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- endof 優惠券 -->
-
-                    <!--  Q&A -->
-                    <div class="tab-pane fade list-section" id="list-qa" role="tabpanel" aria-labelledby="list-qa-list">
-                        <div class="container mb-3" id="list-title">
-                            <div class="row  mb-3">
-                                <div class="d-flex pt-3 p-4">
-                                    <div class="line mr-2"></div>
-                                    <h4 class="t-xxl">Q&A</h4>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- endof Q&A -->
 
                 </div>
             </div>
