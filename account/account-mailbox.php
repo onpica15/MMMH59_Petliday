@@ -60,6 +60,7 @@
 <script>
     // ------JS開始 以上勿刪-------
 
+    <?php include __DIR__ . '/../account/account-aside-bar-js.php' ?>
 
 
     // ------JS結束 勿刪到-------

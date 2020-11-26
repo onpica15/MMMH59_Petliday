@@ -18,7 +18,7 @@
       <div class="col-12 col-lg-9">
         <div class="tab-content" id="nav-tabContent">
           <!-- list-profile 會員資料 -->
-          <div class="tab-pane show active list-section" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+          <div class="tab-pane active list-section " id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
 
             <div class="container mb-3" id="list-title">
               <div class="row  mb-3">
@@ -59,9 +59,9 @@
               <div class="row justify-content-center my-2">
 
                 <div class="bar d-flex">
-                  <button class="col btn-prev border-btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
+                  <button class="col col-md-1 btn-prev border-btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
 
-                  <div class="col color-bar d-flex justify-content-around">
+                  <div class="col col-md-10 color-bar d-flex justify-content-around">
                     <div class=" selected-border ">
                       <div class="red ball" style="background-color: rgb(255, 83, 83);"></div>
                     </div>
@@ -78,7 +78,7 @@
                       <div class="green ball" style="background-color: #00907c;"></div>
                     </div>
                   </div>
-                  <button class="col btn-next border-btn-next align-self-center"><i class="fas fa-caret-right"></i></button>
+                  <button class="col col-md-1 btn-next border-btn-next align-self-center"><i class="fas fa-caret-right"></i></button>
 
                 </div>
               </div>
@@ -107,9 +107,9 @@
               <div class="row justify-content-center my-2">
 
                 <div class="bar d-flex">
-                  <button class="col btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
+                  <button class="col col-md-1 btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
 
-                  <div class="col color-bar d-flex py-2">
+                  <div class="col col-md-10 color-bar d-flex">
                     <div class="square mr-3 d-flex justify-content-center align-items-center">
                       <img src="./img/hat1.svg" alt="">
                     </div>
@@ -123,7 +123,7 @@
                     </div>
 
                   </div>
-                  <button class="col btn-next align-self-center"><i class="fas fa-caret-right"></i></button>
+                  <button class="col col-md-1 btn-next align-self-center"><i class="fas fa-caret-right"></i></button>
 
                 </div>
               </div>
@@ -152,9 +152,9 @@
               <div class="row justify-content-center my-2">
 
                 <div class="bar d-flex">
-                  <button class="col btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
+                  <button class="col col-md-1 btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
 
-                  <div class="col color-bar d-flex py-2">
+                  <div class="col col-md-10 color-bar d-flex">
                     <div class="square mr-3 d-flex justify-content-center align-items-center">
                       <img src="./img/bow.svg" alt="">
                     </div>
@@ -168,7 +168,7 @@
                     </div>
 
                   </div>
-                  <button class="col btn-next align-self-center"><i class="fas fa-caret-right"></i></button>
+                  <button class="col col-md-1 btn-next align-self-center"><i class="fas fa-caret-right"></i></button>
 
                 </div>
               </div>
@@ -205,6 +205,8 @@
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
   // ------JS開始 以上勿刪-------
+  <?php include __DIR__ . '/../account/account-aside-bar-js.php' ?>
+
   $('.selected-border').on('click', function() {
     // 點到就加active
     $(this).addClass('active')
@@ -222,10 +224,6 @@
       $('.selected-border.active').removeClass('active').prev().addClass('active')
     }
   })
-
-  // $('avatar-img img').on('click', function {
-  //   let imgbd = $('this').addClass('')
-  // })
 
 
   // ------JS結束 勿刪到-------

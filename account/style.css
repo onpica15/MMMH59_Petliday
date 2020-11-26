@@ -331,7 +331,7 @@ button:focus {
   border-radius: 20px;
 }
 .selected-border {
-  width: 80px;
+  /* width: 80px; */
   height: 100%;
 }
 .selected-border.active {
@@ -344,7 +344,6 @@ button:focus {
   border-radius: 50%;
 }
 .square {
-  width: 90px;
   height: auto;
 }
 .btn-prev,
@@ -368,7 +367,10 @@ button:focus {
 /* -------------- */
 /* rwd */
 @media (max-width: 991.98px) {
-  .btn-search {
+  .ball {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
   }
 }
 /* account-edit */

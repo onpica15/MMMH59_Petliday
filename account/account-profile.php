@@ -20,7 +20,7 @@
             <div class="col-12 col-lg-9">
                 <div class="tab-content" id="nav-tabContent">
                     <!-- list-profile 會員資料 -->
-                    <div class="tab-pane fade show active " id="list-profile" role="tabpanel" aria-labelledby="list-profile-list" href="./account-home">
+                    <div class="tab-pane show active " id="list-profile" role="tabpanel" aria-labelledby="list-profile-list" href="./account-home">
                         <!-- 會員資料 -->
                         <div class="container mb-3 list-section" id="list-title">
                             <div class="row  mb-3">
@@ -42,6 +42,17 @@
                                         <p> ID:pity0507
                                         </p>
                                     </div>
+                                    <!-- uploadimg -->
+                                    <form name="form1" style="display: none">
+                                        <input type="file" name="avatar" accept="image/jpeg" />
+                                    </form>
+
+                                    <button class="camera-icon" onclick="field.click()">
+                                        <img src="../icon/camera.svg" alt="">
+                                    </button>
+                                    <img id="myimg" src="" alt="" />
+
+                                    <!-- endof uploadimg -->
                                 </div>
                                 <div class="col-12 col-lg-8 move-down">
                                     <form>
@@ -213,12 +224,22 @@
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
     // ------JS開始 以上勿刪-------
-    $('.list-group-item').on('click', function() {
-        // console.log('hi')
-        // $('.list-group-item').removeClass('active');
-        // $(this).addClass('active');
-        // location.hash = $(this).attr('href');
-    })
+    const field = document.querySelector("input[name=avatar]");
+    field.addEventListener("change", function() {
+        const fd = new FormData(document.form1);
+        fetch("../upload-avatar-img.php", {
+                method: "POST",
+                body: fd
+            })
+            .then((r) => r.json())
+            .then((obj) => {
+                console.log(obj);
+                documrnt.querySelector('#myimg').src = obj.img
+            });
+    });
+
+    <?php include __DIR__ . '/../account/account-aside-bar-js.php' ?>
+
 
 
     // ------JS結束 勿刪到-------
