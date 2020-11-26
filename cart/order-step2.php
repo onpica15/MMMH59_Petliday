@@ -1,6 +1,6 @@
-<?php include __DIR__ . '/../parts/config.php' ?>
-<?php include __DIR__ . '/../parts/html-head.php' ?>
-<?php include __DIR__ . '/../parts/html-script.php' ?>
+<?php include __DIR__ . '<?= WEB_ROOT ?>/parts/config.php' ?>
+<?php include __DIR__ . '<?= WEB_ROOT ?>/parts/html-head.php' ?>
+<?php include __DIR__ . '<?= WEB_ROOT ?>/parts/html-script.php' ?>
 <!-- --- css 連結放下面 ----- -->
 <link rel="stylesheet" href="<?= WEB_ROOT ?>cart/cart-style.css">
 
@@ -96,8 +96,8 @@
                             <h3 class="card-text card-name-t"> cardholder name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expiration</h3>
                             <h3 id="card-name" class="card-text card-name"> YOUR NAME</h3>
                             <h3 class="card-text card-date d-flex">
-                              <div id="card-date-m" class="card-date-font">••</div> /
-                              <div id="card-date-y" class="card-date-font">••</div>
+                              <span id="card-date-m" class="card-date-font">••</span> /
+                              <span id="card-date-y" class="card-date-font">••</span>
                             </h3>
                           </div>
 
@@ -292,6 +292,7 @@
   let holderName = document.querySelector('#holderName');
   let cardDateM = document.querySelector('#cardDateM');
   let cardDateY = document.querySelector('#cardDateY');
+  let cardDate = document.querySelector('.card-date');
   let cardCount = 0;
 
   card.addEventListener('click', function() {
@@ -330,6 +331,8 @@
       console.log(cardCount)
     }
   });
+
+
   cardDateM.addEventListener('click', function() {
     console.log('cardDateM')
     if (cardCount % 2) {
@@ -367,19 +370,23 @@
       }
     }
   )
-  $("#cardDateMM").keyup(
+
+
+  $("#cardDateM").keyup(
     function() {
-      $("#card-date-m").html(this.value)
+      $("span#card-date-m.card-date-font").html(this.value)
       if (!(this.value)) {
-        $("#card-date-m").html('MM')
+        $("span#card-date-m.card-date-font").html('MM')
       }
     }
   )
-  $("#cardDateYY").keyup(
+  // $("span#card-date-y.card-date-font").html('YY');
+
+  $("#cardDateY").keyup(
     function() {
-      $("#card-date-y").html(this.value)
+      $("span#card-date-y.card-date-font").html(this.value)
       if (!(this.value)) {
-        $("#card-date-y").html('YY')
+        $("span#card-date-y.card-date-font").html('YY')
       }
     }
   )
