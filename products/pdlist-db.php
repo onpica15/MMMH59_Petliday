@@ -33,7 +33,7 @@ if ($totalRows != 0) {
         exit;
     }
     $sql = sprintf(
-        "SELECT * FROM products %s ORDER BY sid DESC LIMIT %s, %s",
+        "SELECT * FROM products %s ORDER BY sid ASC LIMIT %s, %s",
         $where,
         ($page - 1) * $perPage,
         $perPage
@@ -48,7 +48,7 @@ if ($totalRows != 0) {
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <link rel="stylesheet" href="pro-list.css">
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
-<!-- 分類tag -->
+<!-- 分類tag 篩選-->
 <div class="container trip-select">
     <div class="topic">
         <p>行程一覽</p>
@@ -82,8 +82,8 @@ if ($totalRows != 0) {
 <div class="container">
     <div class="row align-items-center">
         <?php foreach ($rows as $r) : ?>
-            <div class="col-md-4 col-12 p-4">
-                <a href="" class="card c3">
+            <div class="product-item col-md-4 col-12 p-4" data-sid="<?= $r['sid'] ?>">
+                <div class="card c3">
                     <div class="heart-circle">
                         <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
                     </div>
@@ -114,9 +114,9 @@ if ($totalRows != 0) {
                         </div>
                     </div>
                     <p class="card-info px-4 t-xs">
-                        簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
+                        <?= $r['intro'] ?>
                     </p>
-                </a>
+                </div>
             </div>
         <?php endforeach; ?>
     </div>
@@ -138,7 +138,7 @@ if ($totalRows != 0) {
             </li>
             <?php for ($i = $page - 3; $i <= $page + 3; $i++) : ?>
                 <?php if ($i >= 1 and $i <= $totalPages) : ?>
-                    <li class="page-item <?= $page == $i ? 'pages-on' : 'pages' ?>">
+                    <li class="pages <?= $page == $i ? 'pages-on' : 'pages' ?>">
                         <a href="?<?php
                                     $params['page'] = $i;
                                     echo http_build_query($params);
@@ -165,12 +165,21 @@ if ($totalRows != 0) {
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
     // ------JS開始 以上勿刪-------
-    const card = document.querySelector('.card');
-    card.addEventListener('click', function() {
-        console.log('sid', <?= $r['sid'] ?>);
-    })
 
+    // pdlist
 
+    // 取得點擊卡片的sid值
+    $('.card-pic').on('click', function(event) {
+        const item = $(this).closest('.product-item');
+        // closest往上找最近的
+        const sid = item.attr('data-sid');
+        // const qty = item.find('.quantity').val();
+        // find往下找
+        console.log({
+            sid: sid,
+            // quantity: qty
+        });
+    });
     // ------JS結束 勿刪到-------
 </script>
 <?php include __DIR__ . '/../parts/html-foot.php' ?>
