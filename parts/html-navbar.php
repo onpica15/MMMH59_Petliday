@@ -225,7 +225,6 @@
                   <a class="member-item member-line" href="">願望清單</a>
                   <a class="member-item member-line" href="">優惠券</a>
                   <a class="member-item member-line" href="">會員信箱</a>
-
                   <a class="member-item" href="">登出</a>
 
                 </div>
@@ -240,6 +239,11 @@
           <?php if (isset($_SESSION['member_avatar'])) : ?>
             <li class="nav-item  m-1">
               <a class="nav-link"><?= $_SESSION['member_avatar']['name'] ?></a>
+            </li>
+
+          <!-- 登出 -->
+            <li class="nav-item  m-1">
+              <a class="nav-link" href="user-logout.php">登出</a>
             </li>
           <?php endif ?>
 
