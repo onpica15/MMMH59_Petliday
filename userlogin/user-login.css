@@ -26,9 +26,9 @@ button:focus{
     background-color: rgb(253, 251, 251);
 }
 
-@media (max-width: 400px) { 
+@media (max-width: 415px) { 
     .login-form{
-        width: 358px;
+        width: 100%;
     }
  }
 
@@ -47,9 +47,9 @@ button:focus{
     background-color: rgb(253, 251, 251);
 }
 
-@media (max-width: 400px) { 
+@media (max-width: 415px) { 
     .login-form-two{
-        width: 358px;
+        width: 100%;
     }
  }
 
@@ -104,7 +104,7 @@ button:focus{
     padding: 0 10px 0 10px;
 }
 
-@media (max-width: 400px) { 
+@media (max-width: 415px) { 
     .login-border{
         width: 320px;
         margin-left: 20px;
@@ -143,7 +143,7 @@ button:focus{
     padding-left: 35px;
 }
 
-@media (max-width: 400px) { 
+@media (max-width: 415px) { 
     .icon-msg{
         left: 40px;
     }
@@ -163,7 +163,7 @@ button:focus{
     font-size: 0.5rem;
 }
 
-@media (max-width: 400px) { 
+@media (max-width: 415px) { 
     .login-group input{
         width: 300px;
         margin-left: 30px;
@@ -181,7 +181,7 @@ button:focus{
     margin-top: 30px;
 }
 
-@media (max-width: 400px) { 
+@media (max-width: 415px) { 
     .login-btn.btn{
         width: 300px;
         margin-left: 22px;
