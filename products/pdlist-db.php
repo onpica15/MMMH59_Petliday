@@ -1,37 +1,14 @@
 <?php include __DIR__ . '/../parts/config.php' ?>
-
-<?php $pageName = 'product-list';
-
-$perPage = 9; // 每頁幾筆
-$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
-$cate = isset($_GET['cate']) ? intval($_GET['cate']) : 3;
-
-// 取得分類（分類目錄按鈕標題）
-$c_sql = "SELECT * FROM `pd_time` ORDER BY `pd_time`.`sid` ASC";
-$c_rows = $pdo->query($c_sql)->fetchAll();
-
-$where = " WHERE 1 ";
-if (!empty($cate)) {
-    $params['cate'] = $cate;
-    $where .= " AND `cate`=$cate ";
-}
-
-
-$t_sql = "SELECT COUNT(1) FROM products";
-$t_stmt = $pdo->query($t_sql);
-
-$totalRows = $t_stmt->fetch(PDO::FETCH_NUM)[0]; // 總筆數
-$totalPages = ceil($totalRows / $perPage); // 總頁數
-
+<?php
 if ($totalRows != 0) {
-    if ($page < 1) {
-        header('Location: pdlist-db.php');
-        exit;
-    }
-    if ($page > $totalPages) {
-        header('Location: pdlist-db.php?page=' . $totalPages);
-        exit;
-    }
+    // if ($page < 1) {
+    //     header('Location: pdlist-db.php');
+    //     exit;
+    // }
+    // if ($page > $totalPages) {
+    //     header('Location: pdlist-db.php?page=' . $totalPages);
+    //     exit;
+    // }
     $sql = sprintf(
         "SELECT * FROM products %s ORDER BY sid ASC LIMIT %s, %s",
         $where,
@@ -45,6 +22,7 @@ if ($totalRows != 0) {
     $rows = [];
 }
 ?>
+
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <link rel="stylesheet" href="pro-list.css">
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
@@ -54,18 +32,26 @@ if ($totalRows != 0) {
         <p>行程一覽</p>
         <p class="topic-line"></p>
     </div>
+
+    <!-- <div class="time align-items-center">
+        <p class="pr-3">玩多久？</p>
+        <php foreach ($c_rows as $c) : ?>
+            <a class="tag<= $cate == $c['time_sid'] ? '' : '-not' ?>-on" href="?cate=<= $c['time_sid'] ?>"><= $c['time'] ?></a>
+        <php endforeach ?>
+    </div> -->
     <div class="time align-items-center">
         <p class="pr-3">玩多久？</p>
-        <?php foreach ($c_rows as $c) : ?>
-            <a class="tag<?= $cate == $c['time_sid'] ? '' : '-not' ?>-on" href="?cate=<?= $c['time_sid'] ?>"><?= $c['time'] ?></a>
-        <?php endforeach ?>
+        <a class="tag-not-on" data-time="3">三日遊</a>
+        <a class="tag-not-on" data-time="2">二日遊</a>
+        <a class="tag-not-on" data-time="1">一日遊</a>
+        <a class="tag-not-on" data-time="4">活動</a>
     </div>
     <div class="area align-items-center">
         <p class="pr-3">去哪玩？</p>
-        <a class="tag-on" href="">北部出發</a>
-        <a class="tag-on" href="">中部出發</a>
-        <a class="tag-on" href="">南部出發</a>
-        <a class="tag-on" href="">東部出發</a>
+        <a class="tag-not-on" data-area="n">北部出發</a>
+        <a class="tag-not-on" data-area="c">中部出發</a>
+        <a class="tag-not-on" data-area="s">南部出發</a>
+        <a class="tag-not-on" data-area="e">東部出發</a>
     </div>
     <form action="" class="order">
         <div class="form-group d-flex align-items-center justify-content-end">
@@ -123,11 +109,11 @@ if ($totalRows != 0) {
 </div>
 <!-- 11/13 研究分頁按鈕連結-->
 
-<div class="container">
+<!-- <div class="container">
     <div class="row mt-4">
         <ul class="page-list p-0 d-flex">
-            <li class="pages p-arrow <?= $page == 1 ? 'pages-off' : '' ?>">
-                <a href="?<?php
+            <li class="pages p-arrow <= $page == 1 ? 'pages-off' : '' ?>">
+                <a href="?<php
                             $params['page'] = $page - 1;
                             echo http_build_query($params);
                             ?>" aria-label="Previous">
@@ -136,18 +122,18 @@ if ($totalRows != 0) {
                     </div>
                 </a>
             </li>
-            <?php for ($i = $page - 3; $i <= $page + 3; $i++) : ?>
-                <?php if ($i >= 1 and $i <= $totalPages) : ?>
-                    <li class="pages <?= $page == $i ? 'pages-on' : 'pages' ?>">
-                        <a href="?<?php
+            <php for ($i = $page - 3; $i <= $page + 3; $i++) : ?>
+                <php if ($i >= 1 and $i <= $totalPages) : ?>
+                    <li class="pages <= $page == $i ? 'pages-on' : 'pages' ?>">
+                        <a href="?<php
                                     $params['page'] = $i;
                                     echo http_build_query($params);
-                                    ?>"><?= $i ?></a>
+                                    ?>"><= $i ?></a>
                     </li>
-                <?php endif ?>
-            <?php endfor ?>
-            <li class="pages p-arrow <?= $page == $totalPages ? 'pages-off' : '' ?>">
-                <a href="?<?php
+                <php endif ?>
+            <php endfor ?>
+            <li class="pages p-arrow <= $page == $totalPages ? 'pages-off' : '' ?>">
+                <a href="?<php
                             $params['page'] = $page + 1;
                             echo http_build_query($params);
                             ?>" aria-label="Next">
@@ -158,7 +144,7 @@ if ($totalRows != 0) {
             </li>
         </ul>
     </div>
-</div>
+</div> -->
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
@@ -166,7 +152,40 @@ if ($totalRows != 0) {
 <script>
     // ------JS開始 以上勿刪-------
 
-    // pdlist
+    // tag selection
+    $('.time a, .area a').on('click', function() {
+        $(this).toggleClass('tag-on');
+
+        const dataTime = [];
+        const dataArea = [];
+        $('.time a.tag-on').each(function(i, el) {
+            console.log($(this).attr('data-time'));
+            dataTime.push($(this).attr('data-time'));
+        })
+        $('.area a.tag-on').each(function(i, el) {
+            console.log($(this).attr('data-area'));
+            dataArea.push($(this).attr('data-area'));
+        })
+        // const dTime = dataTime.join(',');
+        // const dArea = dataArea.join(',');
+        let sendData = [];
+        dataTime.forEach(function(el) {
+            sendData.push('dTime[]=' + el);
+        });
+        dataArea.forEach(function(el) {
+            sendData.push('dArea[]=' + el);
+        });
+        const sendDataStr = sendData.join('&');
+        console.log(sendDataStr);
+
+        $.get('pdlist-db-api.php?' + sendDataStr, function(data) {
+            console.log('last', data);
+
+        }, 'json');
+
+    })
+
+
 
     // 取得點擊卡片的sid值
     $('.card-pic').on('click', function(event) {

@@ -1,4 +1,16 @@
 <?php include __DIR__ . '/../parts/config.php' ?>
+
+<?php
+
+$sid = intval($_GET['sid']);
+$sql = "SELECT * FROM products WHERE sid=$sid";
+$rows = $pdo->query($sql)->fetch();
+
+// echo json_encode($rows, JSON_UNESCAPED_UNICODE);
+// exit;
+
+?>
+
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <link rel="stylesheet" href="pro-pg.css">
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
@@ -34,7 +46,7 @@
                 </div>
                 <div class="title-right d-flex">
                     <div class="price-wrap mr-3">
-                        <p class="price t-xxl">NT$ 2280</p>
+                        <p class="price t-xxl">NT$<?= $rows['price_all'] ?></p>
                         <p class="text-gray">成團7日前免費取消</p>
                     </div>
                     <div class="heart-top">
@@ -50,8 +62,8 @@
                 <div class="star">
                     <img src="/petliday/icon/star-green-fill.png" alt="">
                 </div>
-                <span class="rate text-gray">4.9</span>
-                <a href="#rate-section" class="rate-number"><u class="text-gray">133則評論</u></a>
+                <span class="rate text-gray"><?= $rows['star'] ?></span>
+                <a href="#rate-section" class="rate-number"><u class="text-gray"><?= $rows['rate'] ?>則評論</u></a>
                 <div class="tag d-flex">
                     <p>高cp值</p>
                     <p>獨家行程</p>
@@ -120,7 +132,8 @@
                     <div class="select-amount">
                         <p class="t-l">選擇數量</p>
                     </div>
-                    <div class="select-brother justify-content-between my-4">
+                    <!-- 彭版加減數量 start *****************************-->
+                    <!-- <div class="select-brother justify-content-between my-4">
                         <div class="select-man d-flex align-items-center">
                             <label for="">人數</label>
                             <div class="input-group d-flex align-items-center">
@@ -145,7 +158,41 @@
                                 </div>
                             </div>
                         </div>
+                    </div> -->
+                    <!-- 彭版加減數量 end *****************************-->
+
+                    <!-- ㄩㄐ版加減數量 start *****************************-->
+                    <div class="change-box d-flex">
+                        <div class="man-box all-box pr-3">
+                            <p class="pl-2 pb-2">人數</p>
+                            <div class="change-man d-flex align-items-center">
+                                <div class="change-btn sub-btn">
+                                    <svg id="sub-man" class="sub-man" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
+                                        <path data-name="Path 86" d="M32.23,0H2.61a2.55,2.55,0,1,0-.12,5.1H32.23A2.55,2.55,0,0,0,32.35,0Z" /></svg>
+                                </div>
+                                <input type="text" value="1" name="man-quantity" id="man-quantity" class="change-quantity"></input>
+                                <div class="change-btn add-btn">
+                                    <svg id="add-man" class="add-man" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 34.73">
+                                        <path d="M32.23,14.75H20V2.49a2.55,2.55,0,0,0-5.1,0V14.75H2.61a2.55,2.55,0,0,0-.12,5.1H14.87V32.11a2.55,2.55,0,1,0,5.1.13V19.85H32.23a2.55,2.55,0,0,0,.12-5.1Z" /></svg></div>
+                            </div>
+                        </div>
+                        <div class="pet-box all-box pl-3">
+                            <p class="pl-2 pb-2">寵物</p>
+                            <div class="change-man d-flex align-items-center">
+                                <div class="change-btn subtr-btn">
+                                    <svg id="sub-pet" class="sub-pet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
+                                        <path data-name="Path 86" d="M32.23,0H2.61a2.55,2.55,0,1,0-.12,5.1H32.23A2.55,2.55,0,0,0,32.35,0Z" /></svg>
+                                </div>
+                                <input type="text" value="1" name="pet-quantity" id="pet-quantity" class="change-quantity"></input>
+                                <div class="change-btn add-btn">
+                                    <svg id="add-pet" class="add-pet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 34.73">
+                                        <path d="M32.23,14.75H20V2.49a2.55,2.55,0,0,0-5.1,0V14.75H2.61a2.55,2.55,0,0,0-.12,5.1H14.87V32.11a2.55,2.55,0,1,0,5.1.13V19.85H32.23a2.55,2.55,0,0,0,.12-5.1Z" /></svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- ㄩㄐ版加減數量 end *****************************-->
                     <div class="select-middle d-flex align-items-end justify-content-between">
                         <div class="select-term">
                             <ul class="m-0">
@@ -156,17 +203,18 @@
                         </div>
                         <div class="select-price">
                             <span>總金額</span>
-                            <p class="t-xxl">NT$ 2280</p>
+                            <p class="t-xxl">NT$ <?= $rows['price_all'] ?></p>
                         </div>
                     </div>
                     <div class="btn-twin d-flex justify-content-between">
-                        <a href="" class="btn ml-0">加入購物車</a>
-                        <a href="" class="btn mr-0">立即預訂</a>
+                        <a href="" onclick="session()" class="btn ml-0">加入購物車</a>
+                        <a href="" onclick="session()" class="btn mr-0">立即預訂</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- 出血狗狗背景圖 -->
     <div id="trip-section" class="product w-100">
         <div id="day1" class="bg-dog">

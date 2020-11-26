@@ -201,6 +201,73 @@ border-radius: 3px;
     padding: 10px;
 }
 /* 選擇數量區塊 */
+
+/* ㄩㄐ選擇數量區 start*********************************** */
+
+.change-btn {
+    width: 50;
+    height: 50px;
+    padding: 10px;
+  
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .add-man {
+    width: 30px;
+    height: 30px;
+    fill: #555;
+    background-color: #ccc;
+    border-radius: 3px;
+    padding: 8px;
+  }
+  
+  .sub-man {
+    width: 30px;
+    height: 30px;
+    fill: #555;
+    background-color: #ccc;
+    border-radius: 3px;
+    padding: 8px;
+  }
+  .add-pet {
+    width: 30px;
+    height: 30px;
+    fill: #555;
+    background-color: #ccc;
+    border-radius: 3px;
+    padding: 8px;
+  }
+  
+  .sub-pet {
+    width: 30px;
+    height: 30px;
+    fill: #555;
+    background-color: #ccc;
+    border-radius: 3px;
+    padding: 8px;
+  }
+  .able-icon {
+    background-color: #ccc;
+  }
+  .unable-icon {
+    background-color: #eee;
+  }
+  
+  .change-quantity {
+    width: 60px;
+    height: 44px;
+    border: 1px solid #eee;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  
+/* ㄩㄐ選擇數量區 end*********************************** */
+
 .btn-add{
     width: 35px;
     height: 35px;

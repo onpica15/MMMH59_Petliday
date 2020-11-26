@@ -34,9 +34,17 @@ console.log(dataTemp)
 let dataDisplay = '<tr>'
 
 for (let i = 0; i < dataTemp.length; i++) {
-  dataDisplay += `<td><p>${dataTemp[i]}</p><p class="green-color t-m">2280</p></td>`
+  // dataDisplay += `<td><p>${dataTemp[i]}</p><p class="green-color t-m">2280</p></td>`
+  dataDisplay += `<td><p>${dataTemp[i]}</p>`
+  if ((i + 3) % 7 === 0|| (i + 4) % 7 === 0 || (i + 5) % 7 === 0 || (i + 6) % 7 === 0||(i) % 7 === 0) {
+    dataDisplay +=`<p class="green-color t-m">2280</p></td>`
+  }
+  if ((i + 2) % 7 === 0) {
+    dataDisplay +=`<p class="danger-color t-m">2480</p></td>`}
   if ((i + 1) % 7 === 0) {
+    dataDisplay +=`<p class="danger-color t-m">2480</p></td>`
     dataDisplay += '</tr><tr>'
+    
   }
 }
 data.innerHTML = dataDisplay
