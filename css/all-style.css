@@ -3,7 +3,9 @@
   font-family: "Roboto", "Noto Sans TC", sans-serif;
   font-weight: 400;
   color: #555;
-  
+}
+body {
+  overflow-x: hidden;
 }
 
 /* 顏色區-------------------------- */

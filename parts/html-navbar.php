@@ -171,7 +171,7 @@
         </div>
 
 
-        <ul class=" navbar-nav ml-auto d-flex flex-row align-content-center">
+        <ul class=" navbar-nav ml-auto pt-1 d-flex flex-row align-content-center">
           <li class="nav-item m-1 mr-3 only-m search-btn-m">
             <div class="nav-link ">
               <div class="navbtn nav-search-btn">
