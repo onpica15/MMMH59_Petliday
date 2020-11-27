@@ -18,6 +18,29 @@ $rows = $pdo->query($sql)->fetch();
     <!-- 最上綠色區塊 -->
     <div class="container-fluid top-green">
         <!-- banner輪播D -->
+        <div class="cart-hover">
+            <div class="cart-box-top">
+                <img src="/Petliday/products/img/cart-top.svg" alt="">
+            </div>
+            <div class="cart-box d-flex justify-content-between">
+                <div class="cart-pic">
+                    <img src="/Petliday/products/img/pd-caro1.jpg" alt="">
+                </div>
+                <div class="cart-text ml-4">
+                    <p class="cart-title t-m">上山下海玩得夠！｜熱氣球嘉年華＆SUP體驗＆金針花海 花東三日遊</p>
+                    <div class="cart-text-butt d-flex justify-content-between">
+                        <div class="butt-left d-flex align-items-center">
+                            <div class="cart-star">
+                                <img src="/Petliday/icon/star-green-fill.png" alt="">
+                            </div>
+                            <p class="cart-rate mb-0 mx-2 t-s text-gray">4.9</p>
+                            <p class="cart-comments mb-0 t-s text-gray">133則留言</p>
+                        </div>
+                        <p class="cart-price mb-0 mr-2 t-l orange-color"><?= $rows['price_all'] ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row caro">
             <img src="/petliday/products/img/pd-caro1.jpg" alt="">
             <!--clipPathUnits="objectBoundingBox" transform="scale(0.0019 0.00178)" -->
@@ -113,7 +136,7 @@ $rows = $pdo->query($sql)->fetch();
                         <div class="arrow">
                             <img src="/Petliday/icon/left-orange.png" alt="">
                         </div>
-                        <p class="my">11 月2020年</p>
+                        <p class="cal-title fw-5">11月2020年</p>
                         <div class="arrow">
                             <img src="/Petliday/icon/right-orange.png" alt="">
                         </div>
@@ -162,7 +185,7 @@ $rows = $pdo->query($sql)->fetch();
                     <!-- 彭版加減數量 end *****************************-->
 
                     <!-- ㄩㄐ版加減數量 start *****************************-->
-                    <div class="change-box d-flex">
+                    <div class="change-box d-flex justify-content-between">
                         <div class="man-box all-box pr-3">
                             <p class="pl-2 pb-2">人數</p>
                             <div class="change-man d-flex align-items-center">

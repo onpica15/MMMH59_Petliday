@@ -6,15 +6,15 @@ const now = new Date()
 const nowY = now.getFullYear()
 const nowM = now.getMonth() + 1
 
-const weekList = ['mon.', 'tue.', 'wed.', 'thu.', 'fri.', 'sat.', 'sun.']
+const weekList = ['日','一', '二', '三', '四', '五', '六']
 
 for (let i = 0; i < weekList.length; i++) {
-  title.innerHTML += `<th>${weekList[i]}</th>`
+  title.innerHTML += `<th class="fw-5">${weekList[i]}</th>`
 }
 
-const days = new Date(2020, 11, 0).getDate()
+const days = new Date(2020, 12, 0).getDate()
 
-const weekdayFirst = new Date('2020/11/1').getDay()
+const weekdayFirst = new Date('2020/12/1').getDay()
 
 console.log(days, weekdayFirst)
 
@@ -35,16 +35,22 @@ let dataDisplay = '<tr>'
 
 for (let i = 0; i < dataTemp.length; i++) {
   // dataDisplay += `<td><p>${dataTemp[i]}</p><p class="green-color t-m">2280</p></td>`
-  dataDisplay += `<td><p>${dataTemp[i]}</p>`
-  if ((i + 3) % 7 === 0|| (i + 4) % 7 === 0 || (i + 5) % 7 === 0 || (i + 6) % 7 === 0||(i) % 7 === 0) {
-    dataDisplay +=`<p class="green-color t-m">2280</p></td>`
-  }
-  if ((i + 2) % 7 === 0) {
-    dataDisplay +=`<p class="danger-color t-m">2480</p></td>`}
-  if ((i + 1) % 7 === 0) {
-    dataDisplay +=`<p class="danger-color t-m">2480</p></td>`
+  // dataDisplay += `<td><p>${dataTemp[i]}</p>`
+
+  // ((i + 3) % 7 === 0|| (i + 4) % 7 === 0 || (i + 5) % 7 === 0 || (i + 6) % 7 === 0||(i) % 7 === 0)
+  if ((i + 2) % 13 === 0||(i + 5) % 10 === 0) {
+    dataDisplay +=`<td><p class="danger-color fw-5">${dataTemp[i]}</p><p class="danger-color">4280</p></td>`}
+  else if ((i + 3) % 11 === 0) {
+    dataDisplay +=`<td><p class="text-gray fw-5">${dataTemp[i]}</p><p class="text-gray t-xs">已額滿</p></td>`}
+  else if ((i + 1) % 7 === 0) {
+    dataDisplay +=`<td><p class="fw-5">${dataTemp[i]}</p><p class="green-color">4580</p></td>`
     dataDisplay += '</tr><tr>'
-    
+  }
+  else if(i==0 || i==1){
+    dataDisplay +=`<td><p class="fw-5">${dataTemp[i]}</p><p class="green-color"></p></td>`
+  }
+  else {
+    dataDisplay +=`<td><p class="fw-5">${dataTemp[i]}</p><p class="green-color">4280</p></td>`
   }
 }
 data.innerHTML = dataDisplay
@@ -54,5 +60,6 @@ $('.calendar td').on('click',function(){
   $('#data').find('td').css('background-color','#fff');
   $(this).css('background-color','#ffc072');
   // console.log('this.val()',td.innerHTML);
-  console.log('this.val()',dataTemp[$(this).index()]);
+  console.log('date',$(this).children('p').html());
+  $.put
 })
