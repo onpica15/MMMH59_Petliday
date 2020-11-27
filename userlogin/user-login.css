@@ -163,6 +163,22 @@ button:focus{
     font-size: 0.5rem;
 }
 
+.login-group input:required:invalid{
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-color: #ccc;
+    box-shadow: none;
+     /* 相容FF13以前版本 */
+    -moz-box-shadow: none;
+}
+
+/* .login-group input:required:invalid{
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-color: green;
+    -moz-box-shadow: none;
+} */
+
 @media (max-width: 415px) { 
     .login-group input{
         width: 300px;
@@ -234,3 +250,6 @@ button:focus{
     transition: 1s;
 }
 
+small.form-text {
+    color: red;
+}

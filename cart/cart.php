@@ -60,30 +60,34 @@
       <div class="col-12 col-lg-3 change-box ">
         <div class="man-box all-box">
 
-          <div class="change-man d-flex align-items-center">
-            <p class="mr-2 mb-0 m-chanhe-box-quant">人數</p>
-            <div class="change-btn subtr-btn">
-              <svg id="sub-icon" class="sub-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
-                <path data-name="Path 86" d="M32.23,0H2.61a2.55,2.55,0,1,0-.12,5.1H32.23A2.55,2.55,0,0,0,32.35,0Z" /></svg>
+          <div class="change-man d-flex align-items-center change-m ">
+            <p class=" mb-0 m-chanhe-box-quant">人數</p>
+            <div class="change-box-m d-flex flex-row ">
+              <div class="change-btn subtr-btn ">
+                <svg id="sub-icon" class="sub-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
+                  <path data-name="Path 86" d="M32.23,0H2.61a2.55,2.55,0,1,0-.12,5.1H32.23A2.55,2.55,0,0,0,32.35,0Z" /></svg>
+              </div>
+              <input type="text" value="1" name="man-quantity" id="man-quantity" class="change-quantity"></input>
+              <div class="change-btn add-btn">
+                <svg id="add-icon" class="add-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 34.73">
+                  <path d="M32.23,14.75H20V2.49a2.55,2.55,0,0,0-5.1,0V14.75H2.61a2.55,2.55,0,0,0-.12,5.1H14.87V32.11a2.55,2.55,0,1,0,5.1.13V19.85H32.23a2.55,2.55,0,0,0,.12-5.1Z" /></svg></div>
             </div>
-            <input type="text" value="1" name="man-quantity" id="man-quantity" class="change-quantity"></input>
-            <div class="change-btn add-btn">
-              <svg id="add-icon" calss="add-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 34.73">
-                <path d="M32.23,14.75H20V2.49a2.55,2.55,0,0,0-5.1,0V14.75H2.61a2.55,2.55,0,0,0-.12,5.1H14.87V32.11a2.55,2.55,0,1,0,5.1.13V19.85H32.23a2.55,2.55,0,0,0,.12-5.1Z" /></svg></div>
           </div>
         </div>
         <div class="pet-box all-box">
 
-          <div class="change-man d-flex align-items-center">
+          <div class="change-pet  d-flex align-items-center change-m ">
             <p class="mr-2 mb-0 m-chanhe-box-quant">寵物</p>
-            <div class="change-btn subtr-btn">
-              <svg id="sub-icon1" class="sub-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
-                <path data-name="Path 86" d="M32.23,0H2.61a2.55,2.55,0,1,0-.12,5.1H32.23A2.55,2.55,0,0,0,32.35,0Z" /></svg>
-            </div>
-            <input type="text" value="1" name="pet-quantity" id="pet-quantity" class="change-quantity"></input>
-            <div class="change-btn add-btn">
-              <svg id="add-icon1" class="add-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 34.73">
-                <path d="M32.23,14.75H20V2.49a2.55,2.55,0,0,0-5.1,0V14.75H2.61a2.55,2.55,0,0,0-.12,5.1H14.87V32.11a2.55,2.55,0,1,0,5.1.13V19.85H32.23a2.55,2.55,0,0,0,.12-5.1Z" /></svg>
+            <div class="change-box-m d-flex flex-row ">
+              <div class="change-btn subtr-btn">
+                <svg id="sub-icon1" class="sub-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
+                  <path data-name="Path 86" d="M32.23,0H2.61a2.55,2.55,0,1,0-.12,5.1H32.23A2.55,2.55,0,0,0,32.35,0Z" /></svg>
+              </div>
+              <input type="text" value="1" name="pet-quantity" id="pet-quantity" class="change-quantity"></input>
+              <div class="change-btn add-btn">
+                <svg id="add-icon1" class="add-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 34.73">
+                  <path d="M32.23,14.75H20V2.49a2.55,2.55,0,0,0-5.1,0V14.75H2.61a2.55,2.55,0,0,0-.12,5.1H14.87V32.11a2.55,2.55,0,1,0,5.1.13V19.85H32.23a2.55,2.55,0,0,0,.12-5.1Z" /></svg>
+              </div>
             </div>
           </div>
         </div>

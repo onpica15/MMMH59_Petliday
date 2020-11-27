@@ -121,18 +121,23 @@ body{
     font-weight: 500;
     letter-spacing: 3px;
 }
-.tag-on{
-    border: 1px solid #00907c;
-    color: #00907c;
+.trip-select a:hover{
+text-decoration: none;
+color: #00907c;
 }
 .tag-not-on{
     border: 1px solid #ccc;
     color: #ccc;
 }
+.tag-on{
+    border: 1px solid #00907c;
+    color: #00907c;
+}
 .time, .area{
     display: flex;
 }
 .time p, .area p{
+    width: 100px;
     margin-bottom: 0;
 }
 .form-control{

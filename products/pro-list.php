@@ -343,7 +343,7 @@ if ($totalRows != 0) {
                     <div class="heart-circle">
                         <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
                     </div>
-                    <a href="" class="card-pic w-100">
+                    <a href="pro-pg.php?sid=<?= $r['sid'] ?>" class="card-pic w-100">
                         <img src="/Petliday/products/img/prolist<?= $r['sid'] ?>.jpg" alt="...">
                         <!-- <img src="/Petliday/products/img/prolist1.jpg" alt=""> -->
                     </a>

@@ -1,13 +1,4 @@
 <?php include __DIR__ . '/../parts/config.php' ?>
-<?php
-if(isset($_POST['account']) and isset($_POST['password'])){
-  if($_POST['account']==='boy123@petliday.com' and $_POST['password']==='test123');
-  else{
-    $msg = '用戶帳號或密碼不正確';
-  }
-}
-?>
-
 
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <!-- --- css 連結放下面 ----- -->
@@ -20,14 +11,15 @@ if(isset($_POST['account']) and isset($_POST['password'])){
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
 
-
     <div class="modal-content">
       <div class="login">
         <button data-dismiss="modal" class="close" style="margin-top: 20px;">
           <span aria-hidden="true">×</span>
         </button>
 
-        <form class="login-form">
+        <div id="info_bar" class="alert alert-danger" role="alert" style="display: none">
+        </div>
+        <form class="login-form" name="login-form" onsubmit="checkForm(); return false;">
           <h2 class="t-xl">使用社群平台帳戶登入</h2>
           <h2 class="t-m">立即登入，隨時給毛孩獨家優惠</h2>
           <div class="login-social d-flex justify-content-center">
@@ -44,22 +36,16 @@ if(isset($_POST['account']) and isset($_POST['password'])){
           <h2 class="t-xl">Petliday會員登入</h2>
 
           <div class="login-group input-icon">
-            <!-- <label for="account">帳號</label> -->
-            <input type="text" class="form-control" id="account" name="account" placeholder="電子信箱">
+            <!-- <label for="email">帳號</label> -->
+            <input type="email" class="form-control" id="login-email" name="login-email" placeholder="電子信箱" required oninvalid="setCustomValidity('請填寫您的信箱');" oninput="setCustomValidity('');">
             <img class="icon-msg" src="./imgs/mail.svg">
           </div>
 
           <div class="login-group input-icon">
             <!-- <label for="password">密碼</label> -->
-            <input type="password" class="form-control" id="password" name="password" placeholder="密碼">
+            <input type="password" class="form-control" id="password" name="password" placeholder="密碼" required>
             <img class="icon-psd" src="./imgs/password.svg">
           </div>
-
-          <?php if(isset($msg)): ?>
-            <div>
-              <?= $msg ?>
-            </div>
-          <?php endif; ?>
 
           <div class="login-group-2">
             <button class="login-btn btn">登入</button>
@@ -79,7 +65,7 @@ if(isset($_POST['account']) and isset($_POST['password'])){
 
         </form>
       </div>
-    </div> 
+    </div>
   </div>
 </div>
 
@@ -102,6 +88,31 @@ if(isset($_POST['account']) and isset($_POST['password'])){
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
   // ------JS開始 以上勿刪-------
+  const email = $('#login-email'),
+    password = $('#password')
+
+  function checkForm() {
+
+    $.post('user-login-api.php', {email: email.val(), password: password.val()}, function(data) {
+      if (data.success) {
+        info_bar
+          .removeClass('alert-danger')
+          .addClass('alert-success')
+          .text('登入成功');
+          // 轉到哪一頁 location.href = 'index＿.php';
+      } else {
+        info_bar
+          .removeClass('alert-success')
+          .addClass('alert-danger')
+          .text('登入失敗');
+      }
+      info_bar.slideDown();
+
+      setTimeout(function() {
+        info_bar.slideUp();
+      }, 2000);
+    }, 'json');
+  }
 
   // $('.register_show').on('click',function(event){
   //   event.preventDefault();
@@ -109,16 +120,16 @@ if(isset($_POST['account']) and isset($_POST['password'])){
   // })
 
   // 錯誤登入
-  $('.input-error').click(function(event){
+  $('.input-error').click(function(event) {
     event.preventDefault();
-    $('#account').val('abcd000@petliday.com');
+    $('#login-email').val('abcd000@petliday.com');
     $('#password').val('test123456');
   })
 
   // 正確登入
-  $('.input-correct').click(function(event){
+  $('.input-correct').click(function(event) {
     event.preventDefault();
-    $('#account').val('boy123@petliday.com');
+    $('#login-email').val('boy123@petliday.com');
     $('#password').val('test123');
   })
 
@@ -138,7 +149,7 @@ if(isset($_POST['account']) and isset($_POST['password'])){
     }
   });
 
-  AOS.init();
+
 
 
   // ------JS結束 勿刪到-------

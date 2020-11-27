@@ -686,4 +686,12 @@ input:optional {
     display: flex;
     justify-content: center;
   }
+  .change-m {
+    
+    display: flex;
+    flex-direction: column;
+  }
+  .all-box {
+    padding: 0;
+  }
 }
