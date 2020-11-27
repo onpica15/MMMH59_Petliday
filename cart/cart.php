@@ -77,7 +77,8 @@
         <div class="pet-box all-box">
 
           <div class="change-pet  d-flex align-items-center change-m ">
-            <p class="mr-2 mb-0 m-chanhe-box-quant">寵物</p>
+            <p class=" mb-0 m-chanhe-box-quant">寵物
+            </p>
             <div class="change-box-m d-flex flex-row ">
               <div class="change-btn subtr-btn">
                 <svg id="sub-icon1" class="sub-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">

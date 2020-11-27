@@ -141,16 +141,22 @@
               <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>products/pro-list.php">毛日行程</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>products/pro-list.php">我的訂單</a>
+              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>account/account-profile.php">會員資料</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>products/pro-list.php">願望清單</a>
+              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>account/account-order.php">我的訂單</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>account/account-wishlist.php">願望清單</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>products/pro-list.php">優惠券</a>
+              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>account/account-coupon.php">優惠券</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>products/pro-list.php">會員信箱</a>
+              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>account/account-mailbox.php">會員信箱</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>account/account-qa.php">Q & A</a>
             </li>
             <li class="nav-item mt-5">
               <a class="nav-link item-m" href="<?= WEB_ROOT ?>products/pro-list.php">登出</a>
@@ -220,11 +226,12 @@
                   </svg>
                 </div>
                 <div class="member-items only-pc ">
-                  <a class="member-item member-line" href="">會員資料</a>
-                  <a class="member-item member-line" href="">我的訂單</a>
-                  <a class="member-item member-line" href="">願望清單</a>
-                  <a class="member-item member-line" href="">優惠券</a>
-                  <a class="member-item member-line" href="">會員信箱</a>
+                  <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-profile.php">會員資料</a>
+                  <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-order.php">我的訂單</a>
+                  <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-wishlist.php">願望清單</a>
+                  <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-coupon.php">優惠券</a>
+                  <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-mailbox.php">會員信箱</a>
+                  <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-qa.php">Q & A</a>
                   <a class="member-item" href="">登出</a>
 
                 </div>
@@ -241,7 +248,7 @@
               <a class="nav-link"><?= $_SESSION['member_avatar']['name'] ?></a>
             </li>
 
-          <!-- 登出 -->
+            <!-- 登出 -->
             <li class="nav-item  m-1">
               <a class="nav-link" href="user-logout.php">登出</a>
             </li>

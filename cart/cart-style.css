@@ -178,9 +178,9 @@ svg#date-icon {
   padding: 0 30px;
 }
 
-.step-box {
-  /* border-bottom: 3px solid #fff; */
-}
+/* .step-box { */
+/* border-bottom: 3px solid #fff; */
+/* } */
 .step {
   width: 33.3%;
   height: 100%;
@@ -377,6 +377,9 @@ input[type="radio"]:checked {
 .credit-card-box {
   /* position: relative; */
   height: 180px;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .credit-card-img {
   object-fit: contain;
@@ -393,6 +396,7 @@ input[type="radio"]:checked {
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
+  box-shadow: 0px 40px 15px -30px rgba(0, 0, 0, 0.2);
 }
 .credit-card {
   position: absolute;
@@ -587,6 +591,9 @@ input:optional {
   height: 100%;
   object-fit: cover;
 }
+.m-chanhe-box-quant {
+  margin: 0 10px;
+}
 
 /* ------------------------------------ */
 @media (max-width: 991.98px) {
@@ -630,7 +637,8 @@ input:optional {
   }
 
   .m-chanhe-box-quant {
-    font-size: 12px;
+    font-size: 14px;
+    margin-bottom: 10px;
   }
   .prod-text {
     margin-bottom: 15px;
@@ -687,7 +695,6 @@ input:optional {
     justify-content: center;
   }
   .change-m {
-    
     display: flex;
     flex-direction: column;
   }
