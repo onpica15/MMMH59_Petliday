@@ -10,6 +10,8 @@
 <!-- Model -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
+    <div id="info_bar" class="alert alert-danger" role="alert" style="display: none">
+    </div>
 
     <div class="modal-content">
       <div class="login">
@@ -17,8 +19,6 @@
           <span aria-hidden="true">×</span>
         </button>
 
-        <div id="info_bar" class="alert alert-danger" role="alert" style="display: none">
-        </div>
         <form class="login-form" name="login-form" onsubmit="checkForm(); return false;">
           <h2 class="t-xl">使用社群平台帳戶登入</h2>
           <h2 class="t-m">立即登入，隨時給毛孩獨家優惠</h2>
@@ -90,16 +90,18 @@
   // ------JS開始 以上勿刪-------
   const email = $('#login-email'),
     password = $('#password')
+  const info_bar = $('#info_bar');
 
   function checkForm() {
 
-    $.post('user-login-api.php', {email: email.val(), password: password.val()}, function(data) {
+    $.post('user-login-api.php', {email: email.val(),password: password.val()}, 
+    function(data) {
       if (data.success) {
         info_bar
           .removeClass('alert-danger')
           .addClass('alert-success')
           .text('登入成功');
-          // 轉到哪一頁 location.href = 'index＿.php';
+        location.href = 'user-login.php';
       } else {
         info_bar
           .removeClass('alert-success')
@@ -119,14 +121,14 @@
   //   console.log('register_show')
   // })
 
-  // 錯誤登入
+  // 一鍵輸入：錯誤登入
   $('.input-error').click(function(event) {
     event.preventDefault();
     $('#login-email').val('abcd000@petliday.com');
     $('#password').val('test123456');
   })
 
-  // 正確登入
+  // 一鍵輸入：正確登入
   $('.input-correct').click(function(event) {
     event.preventDefault();
     $('#login-email').val('boy123@petliday.com');
