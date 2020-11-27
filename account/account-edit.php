@@ -31,9 +31,17 @@
                 <div class="avatar-img">
                   <img src="./img/avatar-pet3.jpg" alt="">
                 </div>
-                <a href="#" class="camera-icon">
+                <!-- uploadimg -->
+                <form name="form1" style="display: none">
+                  <input type="file" name="avatar" accept="image/jpeg" />
+                </form>
+
+                <button class="btn-none camera-icon" onclick="field.click()">
                   <img src="../icon/camera.svg" alt="">
-                </a>
+                </button>
+                <img id="myimg" src="" alt="" />
+
+                <!-- endof uploadimg -->
               </div>
               <!-- color bar -->
               <div class="row title d-flex flex-start align-items-center mt-4 px-3 t-l">

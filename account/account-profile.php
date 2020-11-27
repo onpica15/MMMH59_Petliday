@@ -35,24 +35,22 @@
                                         <img src="./img/avatar-1.jpg" alt="">
 
                                     </div>
-                                    <a href="#" class="camera-icon">
-                                        <img src="../icon/camera.svg" alt="">
-                                    </a>
-                                    <div class="member-id text-center mt-3">
-                                        <p> ID:pity0507
-                                        </p>
-                                    </div>
                                     <!-- uploadimg -->
                                     <form name="form1" style="display: none">
                                         <input type="file" name="avatar" accept="image/jpeg" />
                                     </form>
 
-                                    <button class="camera-icon" onclick="field.click()">
+                                    <button class="btn-none camera-icon" onclick="field.click()">
                                         <img src="../icon/camera.svg" alt="">
                                     </button>
                                     <img id="myimg" src="" alt="" />
 
                                     <!-- endof uploadimg -->
+                                    <div class="member-id text-center mt-3">
+                                        <p> ID:pity0507
+                                        </p>
+                                    </div>
+
                                 </div>
                                 <div class="col-12 col-lg-8 move-down">
                                     <form>
