@@ -168,22 +168,72 @@ if ($totalRows != 0) {
         })
         // const dTime = dataTime.join(',');
         // const dArea = dataArea.join(',');
-        let sendData = [];
+        let sendTime = [];
+        let sendArea = [];
+        let whereArray = [];
+        let whereStr = '';
         dataTime.forEach(function(el) {
-            sendData.push('dTime[]=' + el);
+            sendTime.push('`cate`=' + el);
+            // sendData.push('dTime[]=' + el);
         });
         dataArea.forEach(function(el) {
-            sendData.push('dArea[]=' + el);
+            sendArea.push('`area`=' + `'${el}'`);
+            // sendData.push('dArea[]=' + el);
         });
-        const sendDataStr = sendData.join('&');
-        console.log(sendDataStr);
+        const sendTimeStr = sendTime.join(' OR ');
+        const sendAreaStr = sendArea.join(' OR ');
 
-        $.get('pdlist-db-api.php?' + sendDataStr, function(data) {
-            console.log('last', data);
+        // console.log('sendTime', sendTimeStr);
+        // console.log('sendArea', sendAreaStr);
+        whereArray.push(sendTimeStr);
+        whereArray.push(sendAreaStr);
+        console.log('whereArray', whereArray);
+        if (sendTimeStr.length !== 0 && sendAreaStr.length !== 0) {
+            console.log('hi')
+            whereStr = whereArray.join(" AND ");
+        } else {
+            console.log('nono')
+            whereStr = whereArray.join("");
+        }
+        console.log('whereStr', whereStr);
 
-        }, 'json');
 
+        // const sendDataStr = sendData.join(' OR ');
+        // console.log(sendDataStr);
+        $.get('pdlist-db-api.php'), {
+            // where: whereStr,
+            time: sendTime,
+            area: sendArea
+        }
+
+        // location.href = "#" + whereStr;
+        // $.get('pdlist-db-api.php?' + whereStr, function(data) {
+        //     console.log('last', whereStr);
+        //     // getProductData(u);
+        // }, 'json');
     })
+
+    // from 19.product-list-ajax.php+++++++++++++++++++++++
+    const tags = $('.time p, .area p');
+
+
+    // function whenHashChanged() {
+    //     for (let i = 0; i < sendDataStr.length; i++) {
+    //         let u = parseInt(sendDataStr[i]);
+    //         console.log('u', u);
+    // getProductData(u);
+    //     }
+    // }
+    // tags.removeClass('btn-primary').addClass('btn-outline-primary');
+    // tags.each(function(index, el) {
+    //     const sid = parseInt($(this).attr('data-sid'));
+    //     if (sid === u) {
+    //         $(this).removeClass('btn-outline-primary').addClass('btn-primary');
+    //     }
+    // });
+
+    // window.addEventListener('hashchange', whenHashChanged);
+    // whenHashChanged();
 
 
 

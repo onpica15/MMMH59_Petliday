@@ -1,19 +1,29 @@
 <?php include __DIR__ . '/../parts/config.php';
+//tag+++++++++++++++++++++++++++++++++++++++ 
+$output = [];
 
 
-echo json_encode([
-    'dTime' => $_GET['dTime'] ?? [],
-    'dArea' => $_GET['dArea'] ?? [],
-]);
-$time = isset($_GET['dTime']) ? intval($_GET['dTime']) : 0;
-$area = isset($_GET['dArea']) ? intval($_GET['dArea']) : 0;
+$getWhere = isset($_GET['`cate`']) ? ($_GET['`cate`']) : '';
+// $area = isset($_GET[`area`]) ? intval($_GET['`area`']) : 0;
 
+// 印出抓到的資料ex:{"where": "2 AND `cate`=4 AND `area`='s'"}
+// echo json_encode([
+//     'where' => $_GET['`cate`'] ?? [],
+//     // 'area' => $_GET['`area`'] ?? [],
+// ], JSON_UNESCAPED_UNICODE);
 
-$where = " WHERE 1 ";
+// 能抓到正確資料的sql格式
+// $c_sql = "SELECT * FROM `products` WHERE (`cate`=1 OR `cate`=2) AND (`area`='n' OR `area`='n')";
+// $c_rows = $pdo->query($c_sql)->fetchAll();
+
+//tag+++++++++++++++++++++++++++++++++++++++ 
+
+$where = " WHERE `cate`=$getWhere";
+echo $where;
+
 // $output['dTime'] = $time;
 // $output['dArea'] = $area;
-$where .= " AND `cate`=$time ";
-$where .= " AND `area`=$area ";
+// $where .= " AND `cate`=$time ";
 
 
 $ta_sql = " SELECT * FROM products $where ";
@@ -32,7 +42,6 @@ if (!isset($_SESSION['prolist'])) {
     $_SESSION['prolist'] = [];
 }
 
-$output = [];
 
 
 
