@@ -197,7 +197,7 @@
           <li class="nav-item m-1 mr-3">
             <a class="nav-link" href="<?= WEB_ROOT ?>cart/cart.php">
               <div class="buy-items">
-                <div class="buy-quant">1</div>
+                <div class="buy-quant"></div>
               </div>
               <div class="navbtn nav-cart-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.29 312.24">
@@ -312,38 +312,21 @@
       $('.nav-item-m').toggleClass('nav-item-m-able');
 
     })
+    const buy_quant = $('.buy-quant');
+
+    function countCart(cart) {
+      let count = 0;
+      for (let i in cart) {
+        count += cart[i].item * 1;
+      }
+      buy_quant.html(count);
+    }
 
 
-
-    // let time = 0
-    // $(window).on('click', function() {
-
-    //   if (time = 0) {
-    //     console.log('window', time);
-    //     $('#search-input').removeClass('search-focus');
-    //     $('.search-btn').removeClass('search-btn-focus');
-    //   }
-
-
-
-    // });
-
-
-    // if ($('.search-box:input')) {
-
-
-
-    // $('#search-input').click(function() {
-    //   console.log('search-box:focus');
-    //   $('#search-input').focus().addClass('search-focus');
-    //   $('.search-btn').focus().addClass('search-btn-focus').fadeOut( 1000 );
-    // $(window).click().off("focus")
-
-    // console.log('focus');
-    // $('#search-input').addClass('search-focus');
-    // $('.search-btn').addClass('search-btn-focus');
-    // });
-
+    $.get('pro-pg-api-ching.php', function(data) {
+      console.log(data);
+      countCart(data.cart);
+    }, 'json');
 
 
 
