@@ -86,9 +86,9 @@
     // $('.heart-circle').on('click', function() {
 //  為了避免js先於ajax返回html內容造成js效果失效，改成父元素接收
     $(document).on('click','.heart-circle', function() {
-        console.log('heart');
+        console.log('sid=',$(this).closest('.product-item').attr('data-sid'));
         let imgSrc = $(this).find('img').attr('src')
-        console.log(imgSrc);
+        // console.log(imgSrc);
         if (imgSrc == '/Petliday/icon/heart-red.png') {
             $(this).find('img').attr('src', '/Petliday/icon/heart-red-fill.png');
         } else {

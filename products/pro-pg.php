@@ -30,13 +30,11 @@ $rows = $pdo->query($sql)->fetch();
                     <p class="cart-title t-m">上山下海玩得夠！｜熱氣球嘉年華＆SUP體驗＆金針花海 花東三日遊</p>
                     <div class="cart-text-butt d-flex justify-content-between">
                         <div class="butt-left d-flex align-items-center">
-                            <div class="cart-star">
-                                <img src="/Petliday/icon/star-green-fill.png" alt="">
-                            </div>
-                            <p class="cart-rate mb-0 mx-2 t-s text-gray">4.9</p>
-                            <p class="cart-comments mb-0 t-s text-gray">133則留言</p>
+                            <p class="cart-man mb-0 t-s text-gray">12/18</p>
+                            <p class="cart-man mb-0 mx-2 t-s text-gray">人數 x 2</p>
+                            <p class="cart-pets mb-0 t-s text-gray">寵物 x 1</p>
                         </div>
-                        <p class="cart-price mb-0 mr-2 t-l orange-color"><?= $rows['price_all'] ?></p>
+                        <p class="cart-price mb-0 mr-2 t-l orange-color">＄<?= $rows['price_all'] ?></p>
                     </div>
                 </div>
             </div>
@@ -53,7 +51,36 @@ $rows = $pdo->query($sql)->fetch();
             </svg>
         </div>
         <!-- 主要資訊區塊 -->
-        <div class="top-wrap info">
+
+        <div class="top-wrap info position-relative">
+            <!-- 分享彈出視窗 -->
+            <div class="share-frame position-absolute">
+                <div class="share-row position-absolute">
+                    <p>分享</p>
+                    <div class="share-pic d-flex justify-content-between">
+                        <div class="fb">
+                            <img src="/Petliday/icon/fb.png" alt="">
+                            <p>fb</p>
+                        </div>
+                        <div class="line-icon">
+                            <img src="/Petliday/icon/line.png" alt="">
+                            <p>line</p>
+                        </div>
+                        <div class="email">
+                            <img src="/Petliday/icon/google.png" alt="">
+                            <p>email</p>
+                        </div>
+                        <div class="ig">
+                            <img src="/Petliday/icon/ig.png" alt="">
+                            <p>ig</p>
+                        </div>
+                    </div>
+                    <input type="text" class="copy-link" value="http://localhost/Petliday/products/pro-pg.php?sid=1">
+                    <div class="copy-btn position-absolute">
+                        <img src="/Petliday/icon/copy.png" alt="">
+                    </div>
+                </div>
+            </div>
             <!-- 麵包屑 -->
             <div class="row bread-row t-xs">
                 <a href="">首頁</a> /

@@ -14,6 +14,14 @@ $('#d-clip-web').attr('clipPathUnits', 'objectBoundingBox').attr('transform', 's
             $(this).find('img').attr('src', '/petliday/icon/heart.png');
         }
     });
+// 主要資訊區 分享點擊彈出視窗
+$('.share').on('click',function(){
+    $('.share-row').css('top','0');
+}) 
+$('.share-row').on('click',function(){
+    $(this).css('top','200px')
+})
+
 
 //calendar點日期換背景色**********************************
 

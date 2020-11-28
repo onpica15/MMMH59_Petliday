@@ -321,14 +321,14 @@
     // ------JS開始 以上勿刪-------
     const productTpl = function(a) {
         return `
-            <div class="product-item col-md-4 col-12 p-4" data-sid="${a.sid}">
+        <div class="product-item col-md-4 col-12 p-4" data-sid="${a.sid}">
             <div class="card c3">
                 <div class="heart-circle">
                     <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
                 </div>
-                <div class="card-pic w-100">
+                <a href="pro-pg.php?sid=${a.sid}" class="card-pic w-100">
                     <img src="/Petliday/products/img/prolist${a.sid}.jpg" alt="...">
-                </div>
+                </a>
                 <div class="card-text pt-3 pb-1 px-4">
                     <p>${a.product_name}</p>
                     <div class="info d-flex justify-content-between">
