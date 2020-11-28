@@ -3,7 +3,8 @@
 $output = [];
 
 
-$getWhere = isset($_GET['where']) ? ($_GET['where']) : '';
+$getWhere = isset($_GET['where']) ? ($_GET['where']) : "`cate`=3 OR `cate`=2 OR `cate`=1 OR `cate`=4) AND (`area`='n'";
+// `cate`=3 OR `cate`=2 OR `cate`=1 OR `cate`=4) AND (`area`='n'
 // $area = isset($_GET[`area`]) ? intval($_GET['`area`']) : 0;
 
 // 印出抓到的資料ex:{"where": "2 AND `cate`=4 AND `area`='s'"}
@@ -18,8 +19,8 @@ $getWhere = isset($_GET['where']) ? ($_GET['where']) : '';
 
 //tag+++++++++++++++++++++++++++++++++++++++ 
 
-$where = " WHERE ($getWhere)";
-// echo $where;
+$where = " WHERE ($getWhere) ";
+// echo json_encode($where, JSON_UNESCAPED_UNICODE);
 
 // // $output['dTime'] = $time;
 // // $output['dArea'] = $area;

@@ -24,7 +24,7 @@
     </div>
     <div class="area align-items-center">
         <p class="pr-3">去哪玩？</p>
-        <a class="tag-not-on" data-area="n">北部出發</a>
+        <a class="tag-not-on tag-on" data-area="n">北部出發</a>
         <a class="tag-not-on" data-area="c">中部出發</a>
         <a class="tag-not-on" data-area="s">南部出發</a>
         <a class="tag-not-on" data-area="e">東部出發</a>
@@ -191,7 +191,7 @@
 
     })
     $.get('pdlist-db-api.php', {
-            where: whereStr,
+            none: '?',
         },
         function(data) {
             console.log('daaaaaaa', data);
@@ -204,7 +204,6 @@
             }
             $('.product-row').html(str);
         }, 'json');
-
 
 
 
