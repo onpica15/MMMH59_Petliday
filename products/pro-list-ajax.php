@@ -404,7 +404,7 @@
         console.log('whereStr', whereStr);
         location.href = "#" + whereStr;
 
-        $.get('pdlist-db-api.php', {
+        $.get('pro-list-ajax-api.php', {
                 where: whereStr,
             },
             function(data) {
@@ -420,7 +420,7 @@
             }, 'json');
 
     })
-    $.get('pdlist-db-api.php', {
+    $.get('pro-list-ajax-api.php', {
             none: '?',
         },
         function(data) {
