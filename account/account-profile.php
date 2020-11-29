@@ -35,15 +35,28 @@
                                         <img src="./img/avatar-1.jpg" alt="">
 
                                     </div>
+
+
                                     <!-- uploadimg -->
-                                    <form name="form1" style="display: none">
-                                        <input type="file" name="avatar" accept="image/jpeg" />
+                                    <?php
+                                    require __DIR__ . './processForm.php';
+                                    ?>
+                                    <div class="form-group text-center">
+                                        <img src="img/head.png" onclick="triggerClick()" id="profileDisplay">
+                                        <!-- <label for="profileTmage">profile image</label> -->
+                                        <input type="file" name="profileImage" onchange="displayImage(this)" id="profileImage" style="display: none;">
+                                    </div>
+
+                                    <!-- <form name="form1" style="display: none">
+                                        <input type="file" name="avatar" accept="image/*" />
                                     </form>
 
-                                    <button class="btn-none camera-icon" onclick="field.click()">
+                                    <button class="btn-none camera-icon" id="save_profile" onclick="field.click()">
                                         <img src="../icon/camera.svg" alt="">
                                     </button>
                                     <img id="myimg" src="" alt="" />
+                                    <div id="result"></div>
+                                    <div id="p-imgs"></div> -->
 
                                     <!-- endof uploadimg -->
                                     <div class="member-id text-center mt-3">
@@ -220,24 +233,11 @@
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
 <?php include __DIR__ . '/../parts/html-script.php' ?>
+
+<script src="script.js"></script>
+
 <script>
-    // ------JS開始 以上勿刪-------
-    const field = document.querySelector("input[name=avatar]");
-    field.addEventListener("change", function() {
-        const fd = new FormData(document.form1);
-        fetch("../upload-avatar-img.php", {
-                method: "POST",
-                body: fd
-            })
-            .then((r) => r.json())
-            .then((obj) => {
-                console.log(obj);
-                documrnt.querySelector('#myimg').src = obj.img
-            });
-    });
-
     <?php include __DIR__ . '/../account/account-aside-bar-js.php' ?>
-
 
 
     // ------JS結束 勿刪到-------

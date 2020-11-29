@@ -33,7 +33,7 @@
                 </div>
                 <!-- uploadimg -->
                 <form name="form1" style="display: none">
-                  <input type="file" name="avatar" accept="image/jpeg" />
+                  <input type="file" name="avatar" accept="image/*" />
                 </form>
 
                 <button class="btn-none camera-icon" onclick="field.click()">
