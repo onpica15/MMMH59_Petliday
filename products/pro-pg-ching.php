@@ -6,12 +6,15 @@ $sid = intval($_GET['sid']);
 $sql = "SELECT * FROM products WHERE sid=$sid";
 $rows = $pdo->query($sql)->fetch();
 
+
 // echo json_encode($rows, JSON_UNESCAPED_UNICODE);
 // exit;
 
 ?>
 
+
 <?php include __DIR__ . '/../parts/html-head.php' ?>
+<?php include __DIR__ . '/../parts/html-script.php' ?>
 <link rel="stylesheet" href="pro-pg.css">
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
 <main>
@@ -30,11 +33,13 @@ $rows = $pdo->query($sql)->fetch();
                     <p class="cart-title t-m">上山下海玩得夠！｜熱氣球嘉年華＆SUP體驗＆金針花海 花東三日遊</p>
                     <div class="cart-text-butt d-flex justify-content-between">
                         <div class="butt-left d-flex align-items-center">
-                            <p class="cart-man mb-0 t-s text-gray">12/18</p>
-                            <p class="cart-man mb-0 mx-2 t-s text-gray">人數 x 2</p>
-                            <p class="cart-pets mb-0 t-s text-gray">寵物 x 1</p>
+                            <div class="cart-star">
+                                <img src="/Petliday/icon/star-green-fill.png" alt="">
+                            </div>
+                            <p class="cart-rate mb-0 mx-2 t-s text-gray">4.9</p>
+                            <p class="cart-comments mb-0 t-s text-gray">133則留言</p>
                         </div>
-                        <p class="cart-price mb-0 mr-2 t-l orange-color">＄<?= $rows['price_all'] ?></p>
+                        <p class="cart-price mb-0 mr-2 t-l orange-color"><?= $rows['price_all'] ?></p>
                     </div>
                 </div>
             </div>
@@ -51,36 +56,7 @@ $rows = $pdo->query($sql)->fetch();
             </svg>
         </div>
         <!-- 主要資訊區塊 -->
-
-        <div class="top-wrap info position-relative">
-            <!-- 分享彈出視窗 -->
-            <div class="share-frame position-absolute">
-                <div class="share-row position-absolute">
-                    <p>分享</p>
-                    <div class="share-pic d-flex justify-content-between">
-                        <div class="fb">
-                            <img src="/Petliday/icon/fb.png" alt="">
-                            <p>fb</p>
-                        </div>
-                        <div class="line-icon">
-                            <img src="/Petliday/icon/line.png" alt="">
-                            <p>line</p>
-                        </div>
-                        <div class="email">
-                            <img src="/Petliday/icon/google.png" alt="">
-                            <p>email</p>
-                        </div>
-                        <div class="ig">
-                            <img src="/Petliday/icon/ig.png" alt="">
-                            <p>ig</p>
-                        </div>
-                    </div>
-                    <input type="text" class="copy-link" value="http://localhost/Petliday/products/pro-pg.php?sid=1">
-                    <div class="copy-btn position-absolute">
-                        <img src="/Petliday/icon/copy.png" alt="">
-                    </div>
-                </div>
-            </div>
+        <div class="top-wrap info">
             <!-- 麵包屑 -->
             <div class="row bread-row t-xs">
                 <a href="">首頁</a> /
@@ -220,7 +196,7 @@ $rows = $pdo->query($sql)->fetch();
                                     <svg id="sub-man" class="sub-man" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
                                         <path data-name="Path 86" d="M32.23,0H2.61a2.55,2.55,0,1,0-.12,5.1H32.23A2.55,2.55,0,0,0,32.35,0Z" /></svg>
                                 </div>
-                                <input type="text" value="1" name="man-quantity" id="man-quantity" class="change-quantity"></input>
+                                <input type="text" value="" name="quantity" id="man-quantity" class="change-quantity"></input>
                                 <div class="change-btn add-btn">
                                     <svg id="add-man" class="add-man" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 34.73">
                                         <path d="M32.23,14.75H20V2.49a2.55,2.55,0,0,0-5.1,0V14.75H2.61a2.55,2.55,0,0,0-.12,5.1H14.87V32.11a2.55,2.55,0,1,0,5.1.13V19.85H32.23a2.55,2.55,0,0,0,.12-5.1Z" /></svg></div>
@@ -233,7 +209,7 @@ $rows = $pdo->query($sql)->fetch();
                                     <svg id="sub-pet" class="sub-pet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
                                         <path data-name="Path 86" d="M32.23,0H2.61a2.55,2.55,0,1,0-.12,5.1H32.23A2.55,2.55,0,0,0,32.35,0Z" /></svg>
                                 </div>
-                                <input type="text" value="1" name="pet-quantity" id="pet-quantity" class="change-quantity"></input>
+                                <input type="text" value="" name="pet-quantity" id="pet-quantity" class="change-quantity"></input>
                                 <div class="change-btn add-btn">
                                     <svg id="add-pet" class="add-pet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 34.73">
                                         <path d="M32.23,14.75H20V2.49a2.55,2.55,0,0,0-5.1,0V14.75H2.61a2.55,2.55,0,0,0-.12,5.1H14.87V32.11a2.55,2.55,0,1,0,5.1.13V19.85H32.23a2.55,2.55,0,0,0,.12-5.1Z" /></svg>
@@ -257,8 +233,10 @@ $rows = $pdo->query($sql)->fetch();
                         </div>
                     </div>
                     <div class="btn-twin d-flex justify-content-between">
-                        <a href="" onclick="session()" class="btn ml-0">加入購物車</a>
-                        <a href="" onclick="session()" class="btn mr-0">立即預訂</a>
+                        <div href="" class="btn ml-0">加入購物車</div>
+                        <div href="" class="btn mr-0">立即預訂</div>
+                        <!-- <a href="" onclick="session()" class="btn ml-0">加入購物車</a>
+                        <a href="" onclick="session()" class="btn mr-0">立即預訂</a> -->
                     </div>
                 </div>
             </div>
@@ -912,12 +890,87 @@ $rows = $pdo->query($sql)->fetch();
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
-<?php include __DIR__ . '/../parts/html-script.php' ?>
+
+
 
 
 <!-- // ------JS開始 以上誤刪------- -->
 <script src="/petliday/products/calendar.js"></script>
 <script src="/petliday/products/pro-pg.js"></script>
+
+<script>
+    // 測試取得點擊的日期值
+    $('.calendar td').on('click', function() {
+        $('#data').find('td').css('background-color', '#fff');
+        $(this).css('background-color', '#ffc072').addClass('actve').siblings().removeClass('actve');
+        // console.log('this.val()',td.innerHTML);
+        console.log('date', $(this).children('p').html());
+
+    });
+
+
+
+
+
+    // let manQuant = manQ.val()
+
+
+    // $('.man-box .change-btn').on('click', function() {
+
+    //     console.log('manQ', manQ)
+    // });
+    $('.btn-twin').on('click', function() {
+        // sid 還沒設 先1
+        //class 加product-item" data-sid=" ?= $r['sid'] ? ">;
+        // const item = $(this).closest('.product-item');
+        // console.log('item', item);
+        // const sid = item.attr('data-sid');
+
+
+        const sid = 1;
+        const manQ = $('#man-quantity').val();
+        const petQ = $('#pet-quantity').val();
+        const date = $('.calendar .actve').children('p').html();
+
+
+        // $('.calendar td').on('click', function(a) {
+
+        //     date = $(this).children('p').html();
+
+        // });
+        console.log('sid', sid);
+        console.log('manQ', manQ)
+        console.log('petQ', petQ)
+        console.log('date', date)
+
+        $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', {
+                sid: sid,
+                manQ: manQ,
+                petQ: petQ,
+                date: date,
+                item: 1,
+                action: 'add'
+            },
+            function(data) {
+                console.log(data);
+                countCart(data);
+            }, 'json');
+
+
+
+    });
+
+    // console.log('outmanQ', manQ)
+
+
+
+    // console.log({
+    //     sid: sid,
+    //     quantity: qty
+    // });
+</script>
+
+
 <!-- // ------JS結束 誤刪到------- -->
 
 <?php include __DIR__ . '/../parts/html-foot.php' ?>

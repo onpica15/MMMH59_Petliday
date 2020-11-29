@@ -34,7 +34,7 @@ body {
 }
 
 .prod-text {
-  max-width: 500px;
+  max-width: 400px;
   min-width: 200px;
 }
 
@@ -43,7 +43,7 @@ body {
 }
 
 .all-box {
-  padding: 10px;
+  padding: 10px 0;
 }
 .change-date {
   margin-bottom: 0;
@@ -61,7 +61,7 @@ body {
   align-items: center;
 }
 
-#add-icon {
+.add-icon {
   width: 30px;
   height: 30px;
   fill: #555;
@@ -70,7 +70,7 @@ body {
   padding: 8px;
 }
 
-#sub-icon {
+.sub-icon {
   width: 30px;
   height: 30px;
   fill: #555;
@@ -78,7 +78,7 @@ body {
   border-radius: 3px;
   padding: 8px;
 }
-#add-icon1 {
+.add-icon1 {
   width: 30px;
   height: 30px;
   fill: #555;
@@ -87,7 +87,7 @@ body {
   padding: 8px;
 }
 
-#sub-icon1 {
+.sub-icon1 {
   width: 30px;
   height: 30px;
   fill: #555;
@@ -168,6 +168,8 @@ svg#date-icon {
   flex-direction: column;
   justify-content: center;
   margin-left: auto;
+  /* margin-left: 0; */
+  padding-left: 0;
 }
 .prod-item-title {
   padding-bottom: 15px;

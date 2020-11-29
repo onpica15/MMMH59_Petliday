@@ -14,7 +14,7 @@ main{
 .cart-hover{
     position: fixed;
     top: 80px;
-    right: 170px;
+    right: 210px;
     z-index: 4;
     /* display: none; */
 }
@@ -57,6 +57,8 @@ object-fit: contain;
 
 /* cart hover end--------------------------------------- */
 .caro{
+    position: relative;
+    z-index: 1;
     width: 520px;
     height: 600px;
     margin: 50px auto 0;
@@ -72,6 +74,50 @@ width: 1140px;
 border-radius: 3px 30px 3px 3px;
 background-color: #fff;
 }
+/* 分享 share */
+.share-frame{
+    width: 300px;
+    height: 230px;
+    border-radius: 3px 30px 3px 3px;
+    top: -170px;
+    right: 0;
+    overflow: hidden;
+}
+.share-row{
+    width: 300px;
+    height: 230px;
+    padding: 30px 30px;
+    background-color: #fff;
+    top: 200px;
+    right: 0;
+    border-radius: 3px 30px 3px 3px;
+    transition: .5s;
+}
+.fb,.line-icon,.email,.ig{
+    width: 40px;
+    height: 40px;
+}
+.share-pic{
+    height: 75px;
+}
+.share-row img{
+    width: 100%;
+    object-fit: contain;
+}
+.share-row input{
+    padding-left: 10px;
+    padding-right: 40px;
+    width: 100%;
+    height: 40px;
+}
+.copy-btn{
+    width: 20px;
+    height: 20px;
+    bottom: 58px;
+    right: 40px;
+}
+
+
 /* 麵包屑 */
 .info{
     height: 400px;

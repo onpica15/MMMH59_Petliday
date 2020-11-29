@@ -82,24 +82,28 @@
         });
     }
 // <!-- 愛心 收藏喜好清單 -->
-    $('.heart-circle').on('click', function() {
-        console.log('heart');
+// 原先js觸發選取器
+    // $('.heart-circle').on('click', function() {
+//  為了避免js先於ajax返回html內容造成js效果失效，改成父元素接收
+    $(document).on('click','.heart-circle', function() {
+        console.log('sid=',$(this).closest('.product-item').attr('data-sid'));
         let imgSrc = $(this).find('img').attr('src')
-        console.log(imgSrc);
+        // console.log(imgSrc);
         if (imgSrc == '/Petliday/icon/heart-red.png') {
             $(this).find('img').attr('src', '/Petliday/icon/heart-red-fill.png');
         } else {
             $(this).find('img').attr('src', '/Petliday/icon/heart-red.png');
         }
     });
-// <!--  推薦行程區 卡片hover -->
-    $('.c3').on('mouseenter', function() {
+// <!-- 卡片hover -->
+    // $('.c3').on('mouseenter', function() {
+    $(document).on('mouseenter','.c3', function() {
         $(this).find('.card-pic').css('height', '135px');
         $(this).find('.card-info').css({
             'opacity': '1'
         });
     });
-    $('.c3').on('mouseleave', function() {
+    $(document).on('mouseleave','.c3', function() {
         $(this).find('.card-pic').css('height', '175px')
         $(this).find('.card-info').css({
             'opacity': '0'

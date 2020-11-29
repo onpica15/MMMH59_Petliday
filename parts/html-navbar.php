@@ -197,7 +197,7 @@
           <li class="nav-item m-1 mr-3">
             <a class="nav-link" href="<?= WEB_ROOT ?>cart/cart.php">
               <div class="buy-items">
-                <div class="buy-quant">1</div>
+                <div class="buy-quant"></div>
               </div>
               <div class="navbtn nav-cart-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.29 312.24">
@@ -214,9 +214,18 @@
 
           <!-- 登入前 -->
           <?php if (!isset($_SESSION['member_avatar'])) : ?>
+            <li class="nav-item">
+              <a class="nav-link brown-color t-m login-text" data-toggle="modal" data-target="#exampleModalCenter">登入/註冊</a>
+            </li>
+
+          <?php endif ?>
+
+          <!-- 登入後 -->
+          <?php if (isset($_SESSION['member_avatar'])) : ?>
+
             <li class="nav-item  m-1">
-              <div class="nav-link" href="#">
-                <div class="navbtn nav-user-btn" data-toggle="modal" data-target="#exampleModalCenter">
+              <div class="nav-link d-flex align-items-center" href="#">
+                <div class="navbtn nav-user-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274.17 264.67">
                     <g id="user-icon_2" data-name="user-icon 2">
                       <g id="user-icon_1-2" data-name="user-icon 1">
@@ -225,6 +234,7 @@
                     </g>
                   </svg>
                 </div>
+                <a class="nav-link only-pc"><?= $_SESSION['member_avatar']['name'] ?></a>
                 <div class="member-items only-pc ">
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-profile.php">會員資料</a>
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-order.php">我的訂單</a>
@@ -236,16 +246,6 @@
 
                 </div>
               </div>
-
-
-
-            </li>
-          <?php endif ?>
-
-          <!-- 登入後 -->
-          <?php if (isset($_SESSION['member_avatar'])) : ?>
-            <li class="nav-item  m-1">
-              <a class="nav-link"><?= $_SESSION['member_avatar']['name'] ?></a>
             </li>
 
             <!-- 登出 -->
@@ -254,9 +254,7 @@
             </li>
           <?php endif ?>
 
-          <!-- <li class="nav-item">
-              <a class="nav-link brown-color t-m login-text" href="#">登入/註冊</a>
-            </li> -->
+
 
         </ul>
 
@@ -314,38 +312,22 @@
       $('.nav-item-m').toggleClass('nav-item-m-able');
 
     })
+    const buy_quant = $('.buy-quant');
 
+    function countCart(cart) {
+      let count = 0;
+      for (let i in cart) {
+        count += cart[i].item * 1;
+      }
+      buy_quant.html(count);
+    }
 
+    function additem(cart) {}
 
-    // let time = 0
-    // $(window).on('click', function() {
-
-    //   if (time = 0) {
-    //     console.log('window', time);
-    //     $('#search-input').removeClass('search-focus');
-    //     $('.search-btn').removeClass('search-btn-focus');
-    //   }
-
-
-
-    // });
-
-
-    // if ($('.search-box:input')) {
-
-
-
-    // $('#search-input').click(function() {
-    //   console.log('search-box:focus');
-    //   $('#search-input').focus().addClass('search-focus');
-    //   $('.search-btn').focus().addClass('search-btn-focus').fadeOut( 1000 );
-    // $(window).click().off("focus")
-
-    // console.log('focus');
-    // $('#search-input').addClass('search-focus');
-    // $('.search-btn').addClass('search-btn-focus');
-    // });
-
+    $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', function(data) {
+      console.log(data);
+      countCart(data.cart);
+    }, 'json');
 
 
 
