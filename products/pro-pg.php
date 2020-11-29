@@ -6,6 +6,7 @@ $sid = intval($_GET['sid']);
 $sql = "SELECT * FROM products WHERE sid=$sid";
 $rows = $pdo->query($sql)->fetch();
 
+
 // echo json_encode($rows, JSON_UNESCAPED_UNICODE);
 // exit;
 
@@ -99,7 +100,7 @@ $rows = $pdo->query($sql)->fetch();
                         <p class="price t-xxl">NT$<?= $rows['price_all'] ?></p>
                         <p class="text-gray">成團7日前免費取消</p>
                     </div>
-                    <div class="heart-top">
+                    <div class="heart-top" data-sid=<?= $rows['sid'] ?>>
                         <img src="/petliday/icon/heart.png">
                     </div>
                     <div class="share">
@@ -212,8 +213,8 @@ $rows = $pdo->query($sql)->fetch();
                     <!-- 彭版加減數量 end *****************************-->
 
                     <!-- ㄩㄐ版加減數量 start *****************************-->
-                    <div class="change-box d-flex justify-content-between">
-                        <div class="man-box all-box pr-3">
+                    <div class="change-box justify-content-between">
+                        <div class="man-box all-box">
                             <p class="pl-2 pb-2">人數</p>
                             <div class="change-man d-flex align-items-center">
                                 <div class="change-btn sub-btn">
@@ -226,7 +227,7 @@ $rows = $pdo->query($sql)->fetch();
                                         <path d="M32.23,14.75H20V2.49a2.55,2.55,0,0,0-5.1,0V14.75H2.61a2.55,2.55,0,0,0-.12,5.1H14.87V32.11a2.55,2.55,0,1,0,5.1.13V19.85H32.23a2.55,2.55,0,0,0,.12-5.1Z" /></svg></div>
                             </div>
                         </div>
-                        <div class="pet-box all-box pl-3">
+                        <div class="pet-box all-box">
                             <p class="pl-2 pb-2">寵物</p>
                             <div class="change-man d-flex align-items-center">
                                 <div class="change-btn subtr-btn">

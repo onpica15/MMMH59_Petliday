@@ -303,7 +303,16 @@ border-radius: 3px;
 /* 選擇數量區塊 */
 
 /* ㄩㄐ選擇數量區 start*********************************** */
+.change-box{
+    display: flex;
+}
+.man-box{
+    padding:0 16px 0 0;
+}
 
+.pet-box{
+    padding:0 0 0 16px;
+}
 .change-btn {
     width: 50;
     height: 50px;
@@ -794,7 +803,7 @@ margin: -60px 0 0 700px;
     }
     /* 兩個白色卡區 */
     .top-green{
-        height: 1860px;
+        height: 2000px;
     }
     .top-wrap{
     width: 100%;
@@ -857,9 +866,17 @@ margin: -60px 0 0 700px;
         width: 10px;
         height: 10px;
     }
-    /* select section */
-     .select{
-         height: 900px;
+    /* select section 425*/
+    /* ㄩㄐ 選擇數量425 start */
+    .change-box{
+        display: block;
+    }
+    .man-box,.pet-box{
+        padding:20px
+    }
+    /* ㄩㄐ 選擇數量425 end*/
+    .select{
+         height: 1030px;
         transform: scale(1.09);
         margin: 60px auto 0;
         border-radius: 3px;
@@ -882,7 +899,7 @@ margin: -60px 0 0 700px;
         margin-bottom: 0px;
     }
     .select-amount{
-    padding: 20px 20px 0;
+    padding: 20px;
     font-size: 12px;
     margin-bottom: 0px;
     }

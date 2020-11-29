@@ -6,13 +6,38 @@ $('#d-clip-web').attr('clipPathUnits', 'objectBoundingBox').attr('transform', 's
 //  上面大愛心點按加入取消清單**********************************
 
  $('.heart-top').on('click', function() {
-        let imgSrc = $(this).find('img').attr('src')
+        let imgSrc = $(this).find('img').attr('src');
+        let productSid = $(this).attr('data-sid');
         // console.log(imgSrc);
         if (imgSrc === '/petliday/icon/heart.png') {
             $(this).find('img').attr('src', '/petliday/icon/heart-red-fill.png');
+            insertWish();
         } else {
             $(this).find('img').attr('src', '/petliday/icon/heart.png');
+            deleteWish();
         }
+        console.log('productSid=',productSid);
+
+        function insertWish(){
+        $.get('insert-wish-api.php',{
+            product_sid: productSid}
+            // $(this).closest('.product-item').attr('data-sid')}
+        ,function(data){
+            console.log('data',data);
+            $.post('insert-wish-api.php',data)
+        },'json')
+        }
+
+        function deleteWish(){
+        $.get('dele-wish-api.php',{
+            product_sid: productSid}
+            
+        ,function(data){
+            console.log('data',data);
+            $.post('dele-wish-api.php',data)
+        },'json')
+        }
+        
     });
 // 主要資訊區 分享點擊彈出視窗
 $('.share').on('click',function(){
