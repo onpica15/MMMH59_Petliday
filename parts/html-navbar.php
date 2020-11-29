@@ -322,8 +322,9 @@
       buy_quant.html(count);
     }
 
+    function additem(cart) {}
 
-    $.get('pro-pg-api-ching.php', function(data) {
+    $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', function(data) {
       console.log(data);
       countCart(data.cart);
     }, 'json');
