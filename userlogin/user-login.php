@@ -13,14 +13,17 @@
 
     <div class="modal-content">
       <div class="login">
-      <div id="info_bar" class="alert alert-danger" role="alert" style="display: none">
-        </div>
+      
         
-        <button data-dismiss="modal" class="close" style="margin-top: 20px;">
-          <span aria-hidden="true">×</span>
-        </button>
+        
 
         <form class="login-form" name="login-form" onsubmit="checkForm(); return false;">
+        <div id="info_bar" class="alert alert-danger" role="alert" style="display: none"></div>
+        <button data-dismiss="modal" class="close" style="position:absolute;top:14px;right:0;">
+          <span aria-hidden="true">×</span>
+        </button>
+        
+        
           <h2 class="t-xl">使用社群平台帳戶登入</h2>
           <h2 class="t-m">立即登入，隨時給毛孩獨家優惠</h2>
           <div class="login-social d-flex justify-content-center">
@@ -38,7 +41,7 @@
 
           <div class="login-group input-icon">
             <!-- <label for="email">帳號</label> -->
-            <input type="email" class="form-control" id="login-email" name="login-email" placeholder="電子信箱" required oninvalid="setCustomValidity('請填寫您的信箱');" oninput="setCustomValidity('');">
+            <input type="email" class="form-control" id="login-email" name="email" placeholder="電子信箱" required oninvalid="setCustomValidity('請填寫您的信箱');" oninput="setCustomValidity('');">
             <img class="icon-msg" src="./imgs/mail.svg">
           </div>
 

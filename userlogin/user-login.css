@@ -21,9 +21,16 @@ button:focus{
     border-top:15px solid #FFC072;
     border-radius: 3px;
     padding-top: 50px;
-    width: 500px;
+    /* width: 500px; */
     height: 550px;
     background-color: rgb(253, 251, 251);
+}
+
+#info_bar{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
 }
 
 @media (max-width: 415px) { 
@@ -163,13 +170,12 @@ button:focus{
     font-size: 0.5rem;
 }
 
-.login-group input:required:invalid{
-    background-position: right center;
-    background-repeat: no-repeat;
-    border-color: #ccc;
+
+
+.login-group input:focus{
+    outline: none;
     box-shadow: none;
-     /* 相容FF13以前版本 */
-    -moz-box-shadow: none;
+    border-color: #ccc;
 }
 
 /* .login-group input:required:invalid{
@@ -195,6 +201,11 @@ button:focus{
     height: 40px;
     text-align: center;
     margin-top: 30px;
+}
+
+.login-btn.btn:focus{
+    outline: none;
+    box-shadow: none;
 }
 
 @media (max-width: 415px) { 
