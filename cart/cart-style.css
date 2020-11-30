@@ -95,10 +95,22 @@ body {
   border-radius: 3px;
   padding: 8px;
 }
+
 .able-icon {
   background-color: #ccc;
+  fill: #555;
 }
+.add-icon:hover,
+.add-icon1:hover,
+.able-icon:hover {
+  background-color: rgb(171, 171, 171);
+}
+
 .unable-icon {
+  background-color: #eee;
+  fill: #ccc;
+}
+.unable-icon:hover {
   background-color: #eee;
 }
 

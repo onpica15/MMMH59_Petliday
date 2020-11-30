@@ -59,18 +59,21 @@
 
           </div>
           <div class="col-12 col-lg-3 change-box ">
+            <div class="mprice" data-mprice="<?= $i['price_man'] ?>"></div>
+            <div class="pprice" data-pprice="<?= $i['price_pet'] ?>"></div>
             <div class="man-box all-box">
-
               <div class="change-man d-flex align-items-center change-m ">
                 <p class=" mb-0 m-chanhe-box-quant">人數</p>
                 <div class="change-box-m d-flex flex-row ">
                   <div class="change-btn subtr-btn ">
-                    <svg id="sub-icon" class="sub-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
+                    <svg id="sub-icon" class="sub-icon subIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
                       <path data-name="Path 86" d="M32.23,0H2.61a2.55,2.55,0,1,0-.12,5.1H32.23A2.55,2.55,0,0,0,32.35,0Z" /></svg>
                   </div>
-                  <input data-manQ="<?= $i['manQ'] ?>" type="text" value="" name="man-quantity" class="change-quantity man-quantity"></input>
+
+                  <input data-manQ="<?= $i['manQ'] ?>" type="text" value="" name="man-quantity" class="change-quantity man-quantity">
+
                   <div class="change-btn add-btn">
-                    <svg id="add-icon" class="add-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 34.73">
+                    <svg id="add-icon" class="add-icon addIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 34.73">
                       <path d="M32.23,14.75H20V2.49a2.55,2.55,0,0,0-5.1,0V14.75H2.61a2.55,2.55,0,0,0-.12,5.1H14.87V32.11a2.55,2.55,0,1,0,5.1.13V19.85H32.23a2.55,2.55,0,0,0,.12-5.1Z" /></svg></div>
                 </div>
               </div>
@@ -82,12 +85,12 @@
                 </p>
                 <div class="change-box-m d-flex flex-row ">
                   <div class="change-btn subtr-btn">
-                    <svg id="sub-icon1" class="sub-icon1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
+                    <svg id="sub-icon1" class="sub-icon1 subIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
                       <path data-name="Path 86" d="M32.23,0H2.61a2.55,2.55,0,1,0-.12,5.1H32.23A2.55,2.55,0,0,0,32.35,0Z" /></svg>
                   </div>
                   <input data-petQ="<?= $i['petQ'] ?>" type="text" value="" name="pet-quantity" class=" change-quantity pet-quantity"></input>
                   <div class="change-btn add-btn">
-                    <svg id="add-icon1" class="add-icon1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 34.73">
+                    <svg id="add-icon1" class="add-icon1 addIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 34.73">
                       <path d="M32.23,14.75H20V2.49a2.55,2.55,0,0,0-5.1,0V14.75H2.61a2.55,2.55,0,0,0-.12,5.1H14.87V32.11a2.55,2.55,0,1,0,5.1.13V19.85H32.23a2.55,2.55,0,0,0,.12-5.1Z" /></svg>
                   </div>
                 </div>
@@ -118,7 +121,7 @@
       <div class="row">
         <div class="col-12 total-box d-flex justify-content-end align-items-center p-3">
           <div class="prod-items mr-auto t-s">共 <span>三件商品</span> </div>
-          <div class="danger-color t-l mr-3">總計: NT$ <span class="danger-color t-xl"> 3000</span> </div>
+          <div class="danger-color t-l mr-3">總計: NT <span class="danger-color t-xl" id="totleAmount"></span> </div>
 
           <a href="./order-step1.php" class="a-style">
             <button type="submit" class="buy-btn btn  btn-1 btn-2 d-flex align-items-center justify-content-center">結帳</button>
@@ -139,17 +142,17 @@
 
 <script>
   // ------JS開始 以上勿刪-------
-  const petQuantity = document.querySelector('.pet-quantity');
-  const manQuantity = document.querySelector('.man-quantity');
-  const addButton = document.querySelector('.add-icon');
-  const subButton = document.querySelector('.sub-icon');
-  const addButton1 = document.querySelector('.add-icon1');
-  const subButton1 = document.querySelector('.sub-icon1');
+  // const petQuantity = document.querySelectorAll('.pet-quantity');
+  // const manQuantity = document.querySelectorAll('.man-quantity');
+  // const addButton = document.querySelectorAll('.add-icon');
+  // const subButton = document.querySelectorAll('.sub-icon');
+  // const addButton1 = document.querySelectorAll('.add-icon1');
+  // const subButton1 = document.querySelectorAll('.sub-icon1');
 
   const dallorCommas = function(n) {
     return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
   };
-
+  // 刪除------
   function removeItem(sid) {
     $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', {
         sid: sid,
@@ -163,127 +166,293 @@
       }, 'json');
 
   };
-
+  // 輸入------
   $('.prod-item').each(function() {
     const tr = $(this);
     // const price = parseInt(tr.find('td.price').attr('data-price'))
     const mQuantity = parseInt(tr.find('.man-box input').attr('data-manQ'))
-    // const m_price = <?= $i['price_man'] ?>;
-    // const p_price = <?= $i['price_pet'] ?>;
+    // const tr = $(this).attr('data-sid');
+    const pprice = parseInt(tr.find('.pprice').attr('data-pprice'))
+    const mprice = parseInt(tr.find('.mprice').attr('data-mprice'))
     const pQuantity = parseInt(tr.find('.pet-box input').attr('data-petQ'))
-    const price = (mQuantity * <?= $i['price_man'] ?>) + (pQuantity * <?= $i['price_pet'] ?>);
-
-
+    const price = (mQuantity * mprice) + (pQuantity * pprice);
 
     console.log('mQuantity', mQuantity)
     console.log('pQuantity', pQuantity)
     tr.find('.man-box input').val(mQuantity);
     tr.find('.pet-box input').val(pQuantity);
-    tr.find('.prod-price h5').html(price);
+    tr.find('.prod-price h5').html('$ ' + dallorCommas(price));
 
-  });
+    // -------加減按鈕區-------
 
-
-
-
-
-  // -------加減按鈕區-------
-
-
-  console.log('manQuantity.value', manQuantity.value);
-  console.log('petQuantity.value', petQuantity.value);
-
-  if (manQuantity.value > 1) {
-    console.log('> 1')
-    subButton.style['background-color'] = '#ccc';
-    subButton.style['fill'] = '#555';
-  }
-
-  if (manQuantity.value == 1) {
-
-    subButton.style['background-color'] = '#eee';
-    subButton.style['fill'] = '#ccc';
-  }
+    const addButton = $(tr.find('.add-icon'));
+    const subButton = $(tr.find('.sub-icon'));
+    const addButton1 = $(tr.find('.add-icon1'));
+    const subButton1 = $(tr.find('.sub-icon1'));
 
 
-  addButton.addEventListener('click', function() {
-    console.log('addButton')
-
-    manQuantity.value = +manQuantity.value + 1
-
-    if (manQuantity.value > 1) {
-      subButton.style['background-color'] = '#ccc';
-      subButton.style['fill'] = '#555';
-    } else if (manQuantity.value == 1) {
-      subButton.style['background-color'] = '#eee';
-      subButton.style['fill'] = '#ccc';
-    };
-
-    console.log(manQuantity.value)
-  });
-
-  subButton.addEventListener('click', function() {
-    console.log('subButton')
-    if (manQuantity.value > 1) {
-      manQuantity.value = +manQuantity.value - 1;
-    };
-
-    if (manQuantity.value > 1) {
-      subButton.style['background-color'] = '#ccc';
-      subButton.style['fill'] = '#555';
-    } else if (manQuantity.value == 1) {
-      subButton.style['background-color'] = '#eee';
-      subButton.style['fill'] = '#ccc';
-    };
-    console.log(manQuantity.value)
-  });
-  //  pet------------------
-
-  if (petQuantity.value == 1) {
-    subButton1.style['background-color'] = '#eee';
-    subButton1.style['fill'] = '#ccc';
-  };
-
-  addButton1.addEventListener('click', function() {
-    console.log('addButton1')
-    petQuantity.value = +petQuantity.value + 1
-
-    if (petQuantity.value > 1) {
-      subButton1.style['background-color'] = '#ccc';
-      subButton1.style['fill'] = '#555';
-    } else if (petQuantity.value == 1) {
-      subButton1.style['background-color'] = '#eee';
-      subButton1.style['fill'] = '#ccc';
-    };
-
-    console.log(petQuantity.value)
-  })
-
-  subButton1.addEventListener('click', function() {
-    console.log('subButton1')
-    if (petQuantity.value > 1) {
-      petQuantity.value = +petQuantity.value - 1;
+    if (mQuantity > 1) {
+      console.log('> 1')
+      subButton.addClass('able-icon');
+      subButton.remove('unable-icon');
+      subButton.hover(function() {
+        $(this).css('background-color', rgb(171, 171, 171));
+      })
     }
-    if (petQuantity.value > 1) {
-      subButton1.style['background-color'] = '#ccc';
-      subButton1.style['fill'] = '#555';
-    } else if (petQuantity.value == 1) {
-      subButton1.style['background-color'] = '#eee';
-      subButton1.style['fill'] = '#ccc';
-    };
 
-    // console.log(petQuantity.value)
+    if (mQuantity == 1) {
+      subButton.remove('able-icon');
+      subButton.addClass('unable-icon');
+      subButton.hover(function() {
+        $(this).css('background-color', ' #eee');
+      })
+
+
+
+    }
+
+    if (pQuantity > 1) {
+      console.log('> 1')
+      subButton1.remove('unable-icon');
+      subButton1.addClass('able-icon');
+      subButton.hover(function() {
+        $(this).css('background-color', rgb(171, 171, 171));
+      })
+
+    }
+
+    if (pQuantity == 1) {
+      subButton1.remove('able-icon');
+      subButton1.addClass('unable-icon');
+      subButton.hover(function() {
+        $(this).css('background-color', ' #eee');
+      })
+
+
+    }
+
+  });
+
+  // const addButton = $('.add-icon');
+  // const subButton = $('.sub-icon');
+  // const addButton1 = $('.add-icon1');
+  // const subButton1 = $('.sub-icon1');
+  // let item = parseInt($('.prod-item').find('.man-box input').val());
+  // let mQuantityV = addButton.closest('.prod-item').find('.man-box input');
+  // let pQuantityV = $('.prod-item').find('.pet-box input');
+  // let item = $('.prod-item').find('.man-box input').val();
+
+  $('.add-icon').click(function() {
+    console.log('add-icon-click')
+    let item = parseInt($(this).closest('.prod-item').find('.man-box input').val());
+    const subButton = $(this).closest('.prod-item').find('.sub-icon');
+
+
+    console.log('A1addButton', item)
+    if (item == 1) {
+      subButton.addClass('unable-icon');
+      subButton.remove('able-icon');
+    } else if (item > 1) {
+      console.log('> 1')
+      subButton.addClass('able-icon');
+      subButton.remove('unable-icon');
+    }
+
+
+    item = +item + 1
+    $(this).closest('.prod-item').find('.man-box input').val(item)
+    console.log('AAAAAAAaddButton', item)
   })
-  // console.log('tt', $('.prod-item .change-box .man-box input').val())
+
+  $('.sub-icon').click(function() {
+    console.log('subButton-click')
+    let item = parseInt($(this).closest('.prod-item').find('.man-box input').val());
+    const subButton = $(this).closest('.prod-item').find('.sub-icon');
+    if (item == 1) {
+      subButton.addClass('unable-icon');
+      subButton.remove('able-icon');
+    } else if (item > 1) {
+      item = +item - 1
+      console.log('A1-subButton', item)
+
+      console.log('> 1')
+      subButton.addClass('able-icon');
+      subButton.remove('unable-icon');
+    }
+
+
+    $(this).closest('.prod-item').find('.man-box input').val(item)
+    console.log('AAAAAAA-subButton', item)
+
+  })
+
+
+
+  $('.add-icon1').click(function() {
+    console.log('add-icon1-click')
+    let item = parseInt($(this).closest('.prod-item').find('.pet-box input').val());
+    const subButton1 = $(this).closest('.prod-item').find('.sub-icon1');
+
+    console.log('A1addButton', item)
+
+
+
+    item = +item + 1
+    $(this).closest('.prod-item').find('.pet-box input').val(item)
+    console.log('AAAAAAAaddButton', item)
+    if (item == 1) {
+      subButton1.addClass('unable-icon');
+      subButton1.remove('able-icon');
+
+    } else if (item > 1) {
+      console.log('> 1')
+      subButton1.addClass('able-icon');
+      subButton1.remove('unable-icon');
+    }
+  })
+
+
+
+  $('.sub-icon1').click(function() {
+    console.log('subButton-click')
+    let item = parseInt($(this).closest('.prod-item').find('.pet-box input').val());
+    const subButton1 = $(this).closest('.prod-item').find('.sub-icon1');
+
+    if (item == 1) {
+      subButton1.addClass('unable-icon');
+      subButton1.remove('able-icon');
+    } else if (item > 1) {
+      item = +item - 1
+      console.log('A1-subButton', item)
+
+      console.log('> 1')
+      subButton1.addClass('able-icon');
+      subButton1.remove('unable-icon');
+    }
+
+
+    $(this).closest('.prod-item').find('.pet-box input').val(item)
+    console.log('AAAAAAA-subButton', item)
+
+  })
+  // // --------------------------------------------
+  // const petQuantity = document.querySelector('.pet-quantity');
+  // const manQuantity = document.querySelector('.man-quantity');
+  // const addButton = document.querySelector('.add-icon');
+  // const subButton = document.querySelector('.sub-icon');
+  // const addButton1 = document.querySelector('.add-icon1');
+  // const subButton1 = document.querySelector('.sub-icon1');
+
+  // addButton.addEventListener('click', function() {
+  //   console.log('addButton')
+
+  //   manQuantity.value = +manQuantity.value + 1
+
+  //   if (manQuantity.value > 1) {
+  //     subButton.style['background-color'] = '#ccc';
+  //     subButton.style['fill'] = '#555';
+  //   } else if (manQuantity.value == 1) {
+  //     subButton.style['background-color'] = '#eee';
+  //     subButton.style['fill'] = '#ccc';
+  //   };
+
+  //   console.log(manQuantity.value)
+  // });
+
+  // subButton.addEventListener('click', function() {
+  //   console.log('subButton')
+  //   if (manQuantity.value > 1) {
+  //     manQuantity.value = +manQuantity.value - 1;
+  //   };
+
+  //   if (manQuantity.value > 1) {
+  //     subButton.style['background-color'] = '#ccc';
+  //     subButton.style['fill'] = '#555';
+  //   } else if (manQuantity.value == 1) {
+  //     subButton.style['background-color'] = '#eee';
+  //     subButton.style['fill'] = '#ccc';
+  //   };
+  //   console.log(manQuantity.value)
+  // });
+  // //  pet------------------
+
+  // if (petQuantity.value == 1) {
+  //   subButton1.style['background-color'] = '#eee';
+  //   subButton1.style['fill'] = '#ccc';
+  // };
+
+  // addButton1.addEventListener('click', function() {
+  //   console.log('addButton1')
+  //   petQuantity.value = +petQuantity.value + 1
+
+  //   if (petQuantity.value > 1) {
+  //     subButton1.style['background-color'] = '#ccc';
+  //     subButton1.style['fill'] = '#555';
+  //   } else if (petQuantity.value == 1) {
+  //     subButton1.style['background-color'] = '#eee';
+  //     subButton1.style['fill'] = '#ccc';
+  //   };
+
+  //   console.log(petQuantity.value)
+  // })
+
+  // subButton1.addEventListener('click', function() {
+  //   console.log('subButton1')
+  //   if (petQuantity.value > 1) {
+  //     petQuantity.value = +petQuantity.value - 1;
+  //   }
+  //   if (petQuantity.value > 1) {
+  //     subButton1.style['background-color'] = '#ccc';
+  //     subButton1.style['fill'] = '#555';
+  //   } else if (petQuantity.value == 1) {
+  //     subButton1.style['background-color'] = '#eee';
+  //     subButton1.style['fill'] = '#ccc';
+  //   };
+
+  //   // console.log(petQuantity.value)
+  // })
+
+  // --------------------------------------------
+
+  function calcTotal() {
+    let total = 0;
+    $('.prod-item').each(function() {
+      const tr = $(this);
+      let mQuantity = parseInt(tr.find('.man-box input').val());
+      let pQuantity = parseInt(tr.find('.pet-box input').val());
+      const pprice = parseInt(tr.find('.pprice').attr('data-pprice'));
+      const mprice = parseInt(tr.find('.mprice').attr('data-mprice'));
+      const price = (mQuantity * mprice) + (pQuantity * pprice);
+
+      // tr.find('td.quantity > select').val(quantity); 
+      // tr.find('.prod-price h5').html('$ ' + dallorCommas(price));
+      total += price;
+    });
+    $('#totleAmount').text('$' + dallorCommas(total))
+  }
+  calcTotal()
+
 
   $('.prod-item .change-box').click(function() {
-    console.log('change');
     const combo = $(this);
-    const mQuantity = $(this).find('.man-box input').val();
-    const pQuantity = $(this).find('.pet-box input').val();
     const tr = $(this).closest('.prod-item').attr('data-sid');
-    const price = (mQuantity * <?= $i['price_man'] ?>) + (pQuantity * <?= $i['price_pet'] ?>);
+    // const addButton = $(this).find('.add-icon');
+    // const subButton = $(this).find('.sub-icon');
+    // const addButton1 = $(this).find('.add-icon1');
+    // const subButton1 = $(this).find('.sub-icon1');
+    // const subButton1 = $(this).find('man-box .sub-icon');
+    let mQuantity = parseInt($(this).find('.man-box input').val());
+    let pQuantity = parseInt($(this).find('.pet-box input').val());
+    const pprice = parseInt($('.prod-item').find('.pprice').attr('data-pprice'));
+    const mprice = parseInt($('.prod-item').find('.mprice').attr('data-mprice'));
+    const price = (mQuantity * mprice) + (pQuantity * pprice);
+    ('data-quantity');
     // console.log('mQuantity', mQuantity);
+
+    const subButton = $(this).closest('.prod-item').find('.man-box .subIcon');
+
+    const subButton1 = $(this).closest('.prod-item ').find('.pet-box .subIcon');
+
 
     $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', {
       sid: tr,
@@ -296,12 +465,34 @@
       combo.attr('data-manQ', mQuantity);
       combo.attr('data-petQ', pQuantity);
       combo.attr('data-petQ', pQuantity);
-      combo.closest('.prod-item').find('.prod-price h5').html(price);
+      combo.closest('.prod-item').find('.prod-price h5').html('$ ' + dallorCommas(price));
+      calcTotal();
+      if (mQuantity == 1) {
+        subButton.addClass('unable-icon')
+        subButton.removeClass('able-icon');
+      } else if (mQuantity > 1) {
+        subButton.addClass('able-icon')
+        subButton.removeClass('unable-icon');
+      };
+      if (pQuantity == 1) {
+        subButton1.addClass('unable-icon');
+        subButton1.removeClass('able-icon');
+      } else if (pQuantity > 1) {
+        subButton1.addClass('able-icon');
+        subButton1.removeClass('unable-icon');
+      };
+
+
     }, 'json');
     // console.log('AAAAsmQuantity', mQuantity);
     // console.log('AAAAsmQuantity', pQuantity);
-
   })
+
+
+
+
+
+
 
 
 

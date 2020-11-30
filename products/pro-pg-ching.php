@@ -30,7 +30,7 @@ $rows = $pdo->query($sql)->fetch();
                     <img src="/Petliday/products/img/pd-caro1.jpg" alt="">
                 </div>
                 <div class="cart-text ml-4">
-                    <p class="cart-title t-m">上山下海玩得夠！｜熱氣球嘉年華＆SUP體驗＆金針花海 花東三日遊</p>
+                    <p class="cart-title t-m product-item">上山下海玩得夠！｜熱氣球嘉年華＆SUP體驗＆金針花海 花東三日遊</p>
                     <div class="cart-text-butt d-flex justify-content-between">
                         <div class="butt-left d-flex align-items-center">
                             <div class="cart-star">
@@ -921,10 +921,10 @@ $rows = $pdo->query($sql)->fetch();
     // });
     $('.btn-twin').on('click', function() {
         // sid 還沒設 先1
-        //class 加product-item" data-sid=" ?= $r['sid'] ? ">;
-        // const item = $(this).closest('.product-item');
+        // class 加product-item" data-sid=" ?= $r['sid'] ? ">;
+        const item = $(this).closest('.product-item');
         // console.log('item', item);
-        // const sid = item.attr('data-sid');
+        const sid = item.attr('data-sid');
 
 
         const sid = 1;
