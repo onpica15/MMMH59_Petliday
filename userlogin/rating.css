@@ -1,0 +1,94 @@
+.rating-widget{
+    width: 50px;
+    height: 145px;
+    background-color: #148F7C;
+    border-radius: 3px 0px 0px 30px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 25vh;
+    right: 0vh;
+}
+
+.rating-widget span{
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    writing-mode: vertical-lr;
+    letter-spacing: 0.3rem;
+    padding-top: 10px;
+    padding-left: 10px;
+    /* transform: rotate(90deg) translateY(90px); */
+    
+}
+
+.rating-widget img{
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    padding-top: 2px;
+}
+
+
+
+
+
+/* 星星 */
+.txt-center {
+    text-align: center;
+  }
+  .hide {
+    display: none;
+  }
+  
+  .clear {
+    float: none;
+    clear: both;
+  }
+  
+  .rating {
+      width: 90px;
+      unicode-bidi: bidi-override;
+      direction: rtl;
+      text-align: center;
+      position: relative;
+  }
+  
+  .rating > label {
+      float: right;
+      display: inline;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      width: 1.1em;
+      cursor: pointer;
+      color: #000;
+  }
+  
+  .rating > label:hover,
+  .rating > label:hover ~ label,
+  .rating > input.radio-btn:checked ~ label {
+      color: transparent;
+  }
+  
+  .rating > label:hover:before,
+  .rating > label:hover ~ label:before,
+  .rating > input.radio-btn:checked ~ label:before,
+  .rating > input.radio-btn:checked ~ label:before {
+      content: "\2605";
+      position: absolute;
+      left: 0;
+      color: #FFD700;
+  }
+
+
+/* scroll_top */
+.scroll_top{
+    display: block;
+    font-size: 30px;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+    cursor: pointer;
+    opacity: 0;
+    transition: 1s;
+}
