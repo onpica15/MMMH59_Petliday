@@ -219,7 +219,7 @@ $rows = $pdo->query($sql)->fetch();
                     <div class="change-box justify-content-between">
                         <div class="man-box all-box">
                             <p class="pl-2 pb-2">人數</p>
-                            <div class="change-man d-flex align-items-center">
+                            <div class="change-man d-flex align-items-center" data-price="<?= $rows['price_man'] ?>">
                                 <div class="change-btn sub-btn">
                                     <svg id="sub-man" class="sub-man" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
                                         <path data-name="Path 86" d="M32.23,0H2.61a2.55,2.55,0,1,0-.12,5.1H32.23A2.55,2.55,0,0,0,32.35,0Z" /></svg>
@@ -232,7 +232,7 @@ $rows = $pdo->query($sql)->fetch();
                         </div>
                         <div class="pet-box all-box">
                             <p class="pl-2 pb-2">寵物</p>
-                            <div class="change-man d-flex align-items-center">
+                            <div class="change-pet d-flex align-items-center" data-price="<?= $rows['price_pet'] ?>">
                                 <div class="change-btn subtr-btn">
                                     <svg id="sub-pet" class="sub-pet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
                                         <path data-name="Path 86" d="M32.23,0H2.61a2.55,2.55,0,1,0-.12,5.1H32.23A2.55,2.55,0,0,0,32.35,0Z" /></svg>
@@ -257,7 +257,7 @@ $rows = $pdo->query($sql)->fetch();
                         </div>
                         <div class="select-price">
                             <span>總金額</span>
-                            <p class="t-xxl">NT$ <?= $rows['price_all'] ?></p>
+                            <p class="t-xxl"></p>
                         </div>
                     </div>
                     <div class="btn-twin d-flex justify-content-between">

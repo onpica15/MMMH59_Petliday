@@ -60,7 +60,28 @@ $('.share').on('click',function(){
 $('.share-row').on('click',function(){
     $(this).css('top','200px')
 })
+//  選擇區塊加總金額
 
+const dallorCommas = function(n) {
+    return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+};
+let total = 4280;
+function calcTotal() {
+    let tr = $('.change-box');
+    let manP = parseInt(tr.find('.change-man').attr('data-price'));
+    let manQ = parseInt($('#man-quantity').val());
+    let petP = parseInt(tr.find('.change-pet').attr('data-price'));
+    let petQ = parseInt($('#pet-quantity').val());
+    console.log(manP,manQ,petP,petQ)
+    // tr.find('td.quantity > select').val(quantity);
+    total = manP * manQ + petP * petQ;
+    $('.select-price p').text('NTD$ ' + dallorCommas(total));
+}
+$('.select-price p').text('NTD$ ' + dallorCommas(total));
+
+$('.change-btn').on('click',function(){
+    calcTotal()
+})
 
 //選擇區塊資料丟進session['cart'] start**********************************
 
