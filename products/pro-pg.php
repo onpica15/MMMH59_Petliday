@@ -6,6 +6,7 @@ $sid = intval($_GET['sid']);
 $sql = "SELECT * FROM products WHERE sid=$sid";
 $rows = $pdo->query($sql)->fetch();
 
+
 // echo json_encode($rows, JSON_UNESCAPED_UNICODE);
 // exit;
 
@@ -39,8 +40,11 @@ $rows = $pdo->query($sql)->fetch();
                 </div>
             </div>
         </div>
-        <div class="row caro">
-            <img src="/petliday/products/img/pd-caro1.jpg" alt="">
+        <div class="row caro position-relative">
+            <img class="position-absolute" src="/petliday/products/img/pd-caro4.jpg" alt="">
+            <img class="position-absolute" src="/petliday/products/img/pd-caro3.jpg" alt="">
+            <img class="position-absolute" src="/petliday/products/img/pd-caro2.jpg" alt="">
+            <img class="position-absolute" src="/petliday/products/img/pd-caro1.jpg" alt="">
             <!--clipPathUnits="objectBoundingBox" transform="scale(0.0019 0.00178)" -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208 563.52" width="500px">
                 <defs>
@@ -99,7 +103,7 @@ $rows = $pdo->query($sql)->fetch();
                         <p class="price t-xxl">NT$<?= $rows['price_all'] ?></p>
                         <p class="text-gray">成團7日前免費取消</p>
                     </div>
-                    <div class="heart-top">
+                    <div class="heart-top" data-sid=<?= $rows['sid'] ?>>
                         <img src="/petliday/icon/heart.png">
                     </div>
                     <div class="share">
@@ -212,28 +216,28 @@ $rows = $pdo->query($sql)->fetch();
                     <!-- 彭版加減數量 end *****************************-->
 
                     <!-- ㄩㄐ版加減數量 start *****************************-->
-                    <div class="change-box d-flex justify-content-between">
-                        <div class="man-box all-box pr-3">
+                    <div class="change-box justify-content-between">
+                        <div class="man-box all-box">
                             <p class="pl-2 pb-2">人數</p>
-                            <div class="change-man d-flex align-items-center">
+                            <div class="change-man d-flex align-items-center" data-price="<?= $rows['price_man'] ?>">
                                 <div class="change-btn sub-btn">
                                     <svg id="sub-man" class="sub-man" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
                                         <path data-name="Path 86" d="M32.23,0H2.61a2.55,2.55,0,1,0-.12,5.1H32.23A2.55,2.55,0,0,0,32.35,0Z" /></svg>
                                 </div>
-                                <input type="text" value="1" name="man-quantity" id="man-quantity" class="change-quantity"></input>
+                                <input type="text" placeholder="1" value="" name="man-quantity" id="man-quantity" class="change-quantity"></input>
                                 <div class="change-btn add-btn">
                                     <svg id="add-man" class="add-man" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 34.73">
                                         <path d="M32.23,14.75H20V2.49a2.55,2.55,0,0,0-5.1,0V14.75H2.61a2.55,2.55,0,0,0-.12,5.1H14.87V32.11a2.55,2.55,0,1,0,5.1.13V19.85H32.23a2.55,2.55,0,0,0,.12-5.1Z" /></svg></div>
                             </div>
                         </div>
-                        <div class="pet-box all-box pl-3">
+                        <div class="pet-box all-box">
                             <p class="pl-2 pb-2">寵物</p>
-                            <div class="change-man d-flex align-items-center">
+                            <div class="change-pet d-flex align-items-center" data-price="<?= $rows['price_pet'] ?>">
                                 <div class="change-btn subtr-btn">
                                     <svg id="sub-pet" class="sub-pet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
                                         <path data-name="Path 86" d="M32.23,0H2.61a2.55,2.55,0,1,0-.12,5.1H32.23A2.55,2.55,0,0,0,32.35,0Z" /></svg>
                                 </div>
-                                <input type="text" value="1" name="pet-quantity" id="pet-quantity" class="change-quantity"></input>
+                                <input type="text" placeholder="1" value="" name="pet-quantity" id="pet-quantity" class="change-quantity"></input>
                                 <div class="change-btn add-btn">
                                     <svg id="add-pet" class="add-pet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 34.73">
                                         <path d="M32.23,14.75H20V2.49a2.55,2.55,0,0,0-5.1,0V14.75H2.61a2.55,2.55,0,0,0-.12,5.1H14.87V32.11a2.55,2.55,0,1,0,5.1.13V19.85H32.23a2.55,2.55,0,0,0,.12-5.1Z" /></svg>
@@ -253,12 +257,12 @@ $rows = $pdo->query($sql)->fetch();
                         </div>
                         <div class="select-price">
                             <span>總金額</span>
-                            <p class="t-xxl">NT$ <?= $rows['price_all'] ?></p>
+                            <p class="t-xxl"></p>
                         </div>
                     </div>
                     <div class="btn-twin d-flex justify-content-between">
-                        <a href="" onclick="session()" class="btn ml-0">加入購物車</a>
-                        <a href="" onclick="session()" class="btn mr-0">立即預訂</a>
+                        <a class="btn ml-0">加入購物車</a>
+                        <a class="btn mr-0">立即預訂</a>
                     </div>
                 </div>
             </div>
@@ -291,13 +295,13 @@ $rows = $pdo->query($sql)->fetch();
                 </div>
                 <div class="end-dot"></div>
             </div>
-            <div class="container main-c pt-4">
+            <div class="container main-c">
                 <div class="topic topic-intro">
                     <p>行程介紹</p>
                     <p class="topic-line"></p>
                 </div>
                 <div class="day-text-all">
-                    <a class="hide-mb">查看完整行程</a>
+                    <a href="/Petliday/products/pro-pg-mb.php" class="hide-mb">查看完整行程</a>
                     <p class="day-text">第一天：台東熱氣球嘉年華 & 波希米亞露營野餐派對</p>
                     <p class="mt-4 mb-1">09:00 - 09:30 台北火車站(北二門)集合，搭乘專屬Petliday巴士出發</p>
                     <p class="mb-1">16:00 - 18:00 鹿野熱氣球嘉年華，看展球和繫留搭乘</p>
@@ -331,7 +335,7 @@ $rows = $pdo->query($sql)->fetch();
                 </div>
                 <!-- 第二天 -->
                 <div class="day-text-all">
-                    <a class="hide-mb">查看完整行程</a>
+                    <a href="/Petliday/products/pro-pg-mb.php" class="hide-mb">查看完整行程</a>
                     <p class="day-text">第二天：台東都歷部落原鄉體驗 & 都歷海灘SUP探險</p>
                     <p class="mt-4 mb-1">08:00 - 09:00 在波希米亞露營區用完早餐，出發到都歷部落</p>
                     <p class="mb-1">10:00 - 13:00 都歷部落農村體驗（附午餐）</p>
@@ -383,7 +387,7 @@ $rows = $pdo->query($sql)->fetch();
                 </div>
                 <!-- 第三天 -->
                 <div class="day-text-all">
-                    <a class="hide-mb">查看完整行程</a>
+                    <a href="/Petliday/products/pro-pg-mb.php" class="hide-mb">查看完整行程</a>
                     <p class="day-text">第三天：六十石山金針花海 & 瑞穗農場大地遊戲</p>
                     <p class="mt-4 mb-1">09:00 - 09:30 加賀屋溫泉會館用完早餐，出發</p>
                     <p class="mb-1">09:30 - 10:30 六十石山金針花海</p>
@@ -567,7 +571,7 @@ $rows = $pdo->query($sql)->fetch();
             <a class="hide-rate-mb">查看完整評價</a>
         </div>
         <div class="container rate-container pt-0">
-            <div class="rate-scroll pb-5">
+            <div class="rate-scroll pb-5 position-relative">
                 <div class="row">
                     <div class="rate-card c1">
                         <div class="rate-l m-3"><img src="/Petliday/products/img/avatar1.jpg" alt="">
@@ -813,30 +817,20 @@ $rows = $pdo->query($sql)->fetch();
                         <img src="/Petliday/products/img/reco1.jpg" alt="">
                     </div>
                     <div class="card-text pt-3 pb-1 px-4">
-                        <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
+                        <p>寵物陪你血拼到手軟｜桃園華泰名品城 & 春天農場一日遊</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="info-left d-flex align-items-center">
                                 <div class="star mr-2">
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
-                                        <defs>
-                                        </defs>
-                                        <g id="圖層_2" data-name="圖層 2">
-                                            <g id="圖層_1-2" data-name="圖層 1">
-                                                <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
-                                            </g>
-                                        </g>
-                                    </svg>
-
+                                    <img src="/petliday/icon/star-green-fill.png" alt="">
                                 </div>
-                                <div class="rate text-gray t-m">4.9</div>
-                                <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                                <div class="rate text-gray t-m">4.8</div>
+                                <div class="rate-all t-xs ml-2"><u class="text-gray">121則評論</u></div>
                             </div>
-                            <div class="info-right pr-2 t-l orange-color">$2680</div>
+                            <div class="info-right pr-2 t-l orange-color">$1680</div>
                         </div>
                     </div>
                     <p class="card-info px-4 t-xs">
-                        簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
+                        帶你探索華泰名品城的各式生活主題，與毛孩也能輕鬆愉悅地享受購物樂趣。
                     </p>
                 </div>
                 <div class="card c3 col-md col-sm-12 m-3 p-0">
@@ -847,27 +841,20 @@ $rows = $pdo->query($sql)->fetch();
                         <img src="/Petliday/products/img/reco2.jpg" alt="">
                     </div>
                     <div class="card-text pt-3 pb-1 px-4">
-                        <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
+                        <p>你就是寵物的大廚｜寵物鮮食烹飪 & 營養知識教學課程</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="info-left d-flex align-items-center">
                                 <div class="star mr-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
-                                        <g id="圖層_2" data-name="圖層 2">
-                                            <g id="圖層_1-2" data-name="圖層 1">
-                                                <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
-                                            </g>
-                                        </g>
-                                    </svg>
-
+                                    <img src="/petliday/icon/star-green-fill.png" alt="">
                                 </div>
                                 <div class="rate text-gray t-m">4.9</div>
-                                <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                                <div class="rate-all t-xs ml-2"><u class="text-gray">66則評論</u></div>
                             </div>
-                            <div class="info-right pr-2 t-l orange-color">$2680</div>
+                            <div class="info-right pr-2 t-l orange-color">$1280</div>
                         </div>
                     </div>
                     <p class="card-info px-4 t-xs">
-                        簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
+                        透過營養師協助規劃後的鮮食，幫助飼主在家也能輕鬆備餐，寶貝天天吃得健康美味又營養
                     </p>
                 </div>
                 <div class="card c3 col-md col-sm-12 m-3 p-0">
@@ -878,29 +865,20 @@ $rows = $pdo->query($sql)->fetch();
                         <img src="/Petliday/products/img/reco3.jpg" alt="">
                     </div>
                     <div class="card-text pt-3 pb-1 px-4">
-                        <p>一起奔跑！宜蘭兩天一夜 | 熱氣球嘉年華 | 露營 | 夜間觀星</p>
+                        <p>手牽狗去散步｜墾丁龍磐公園 & 小巴里島岩三日遊</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="info-left d-flex align-items-center">
                                 <div class="star mr-2">
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
-                                        <defs></defs>
-                                        <g id="圖層_2" data-name="圖層 2">
-                                            <g id="圖層_1-2" data-name="圖層 1">
-                                                <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z" />
-                                            </g>
-                                        </g>
-                                    </svg>
-
+                                    <img src="/petliday/icon/star-green-fill.png" alt="">
                                 </div>
-                                <div class="rate text-gray t-m">4.9</div>
-                                <div class="rate-all t-xs ml-2"><u class="text-gray">78則評論</u></div>
+                                <div class="rate text-gray t-m">4.7</div>
+                                <div class="rate-all t-xs ml-2"><u class="text-gray">49則評論</u></div>
                             </div>
                             <div class="info-right pr-2 t-l orange-color">$2680</div>
                         </div>
                     </div>
                     <p class="card-info px-4 t-xs">
-                        簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
+                        放假來屏東三日遊玩，屏東有哪些好玩的地方，來趟屏東輕旅行感受一下在地的自然風光。
                     </p>
                 </div>
             </div>
@@ -913,7 +891,6 @@ $rows = $pdo->query($sql)->fetch();
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
 <?php include __DIR__ . '/../parts/html-script.php' ?>
-
 
 <!-- // ------JS開始 以上誤刪------- -->
 <script src="/petliday/products/calendar.js"></script>

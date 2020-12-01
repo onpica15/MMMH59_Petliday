@@ -67,6 +67,10 @@ object-fit: contain;
     width: 100%;
     /* clip-path: path('M263,0H164.28C73.7,0,0,73.7,0,164.28v235c0,90.59,73.7,164.29,164.28,164.29H263c141.72,0,257-126.4,257-281.76S404.69,0,263,0Z'); */
     clip-path: url(#d-clip-web);
+    transition: .5s;
+}
+.caro svg{
+    pointer-events:none;
 }
 /* 主要資訊區塊--------------------------- */
 .top-wrap{
@@ -92,6 +96,7 @@ background-color: #fff;
     right: 0;
     border-radius: 3px 30px 3px 3px;
     transition: .5s;
+    z-index: 2;
 }
 .fb,.line-icon,.email,.ig{
     width: 40px;
@@ -157,6 +162,7 @@ background-color: #fff;
 }
 /* 評價row */
 .rate{
+    height: 15px;
     margin: 0 10px;
 }
 .rate-row{
@@ -168,7 +174,7 @@ background-color: #fff;
 }
 .star img{
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 .tag p{
     width: 70px;
@@ -303,7 +309,16 @@ border-radius: 3px;
 /* 選擇數量區塊 */
 
 /* ㄩㄐ選擇數量區 start*********************************** */
+.change-box{
+    display: flex;
+}
+.man-box{
+    padding:0 16px 0 0;
+}
 
+.pet-box{
+    padding:0 0 0 16px;
+}
 .change-btn {
     width: 50;
     height: 50px;
@@ -412,7 +427,7 @@ border-radius: 3px;
 .cate-fix{
     width: 1140px;
     height: 80px;
-    box-shadow: 1px 2px 20px #ddd;
+    box-shadow: 1px 2px 20px rgba(0,0,0,.1);
     border-radius: 0 0 80px 80px;
     overflow: hidden;
     position: sticky;
@@ -439,6 +454,7 @@ border-radius: 3px;
     border-radius: 0 0 80px;
 } */
 .day123-fix{
+    top: 0px;
     position: relative;
 }
 .day123{
@@ -585,6 +601,7 @@ margin: -60px 0 0 700px;
     padding-top: 100px;
 }
 .main-c{
+    padding-top: 24px;
     overflow: hidden;
 }
 .term{
@@ -616,7 +633,7 @@ margin: -60px 0 0 700px;
     margin-bottom: 48px;
 }
 .rate-container{
-    overflow: scroll;
+    overflow: auto;
 }
 .rate-number{
     margin-right: 10px;
@@ -624,6 +641,21 @@ margin: -60px 0 0 700px;
 .rate-scroll .row{
     width: 3000px;
 }
+.rate-scroll{
+    animation: rooolling 30s linear;
+}
+@keyframes rooolling{
+from{
+    left: 0;
+}
+to{
+    left: -1900px;
+}
+}
+.rate-scroll:hover{
+    animation-play-state: paused;
+}
+
 .rate-card{
     width: 500px;
     height: 260px;
@@ -768,6 +800,7 @@ margin: -60px 0 0 700px;
 }
 
 .rate-all {
+    height: 12px;
     letter-spacing: 0.5px;
 }
 /* footer-box */
@@ -781,7 +814,7 @@ margin: -60px 0 0 700px;
         font-size: 14px;
     }
     .white-bg{
-        height: 2340px;
+        height: 2400px;
     }
     .white-bg .row{
         margin: 0;
@@ -794,13 +827,13 @@ margin: -60px 0 0 700px;
     }
     /* 兩個白色卡區 */
     .top-green{
-        height: 1860px;
+        height: 2000px;
     }
     .top-wrap{
     width: 100%;
     }
     .info{
-        height: 540px;
+        height: 530px;
         margin: -100px auto 0;
         padding: 40px 20px;
     }
@@ -827,6 +860,12 @@ margin: -60px 0 0 700px;
     }
     .rate-row{
         margin-left: 0;
+    }
+    .rate{
+        height: 19px;
+    }
+    .rate-all{
+        height: 16.5px;
     }
     .intro{
         margin-left: 0;
@@ -857,9 +896,17 @@ margin: -60px 0 0 700px;
         width: 10px;
         height: 10px;
     }
-    /* select section */
-     .select{
-         height: 900px;
+    /* select section 425*/
+    /* ㄩㄐ 選擇數量425 start */
+    .change-box{
+        display: block;
+    }
+    .man-box,.pet-box{
+        padding:20px
+    }
+    /* ㄩㄐ 選擇數量425 end*/
+    .select{
+         height: 1030px;
         transform: scale(1.09);
         margin: 60px auto 0;
         border-radius: 3px;
@@ -882,7 +929,7 @@ margin: -60px 0 0 700px;
         margin-bottom: 0px;
     }
     .select-amount{
-    padding: 20px 20px 0;
+    padding: 20px;
     font-size: 12px;
     margin-bottom: 0px;
     }
@@ -932,6 +979,7 @@ margin: -60px 0 0 700px;
         letter-spacing: 2px;
     }
     .cate-fix{
+        left: 0;
         width: 375px;
         border-radius: 0 0 40px 40px;
     }
@@ -941,11 +989,16 @@ margin: -60px 0 0 700px;
         width: 50px;
         transform:none;
         line-height: 48px;
-        margin: 0 20px 390px 20px;
     }
     .day123{
         top: 95px;
         right: 290px;
+    }
+    .day123 .day1{
+        margin:0 20px 460px 20px;
+    }
+    .day123 .day2{
+        margin: 0 20px 400px 20px;
     }
     /* 行程介紹 */
     .bg-dog{
@@ -964,7 +1017,7 @@ margin: -60px 0 0 700px;
     }
     .topic-intro{
         margin-left: -65px;
-        margin-top: -25px;
+        margin-top: 0px;
     }
     .line{
         top: 140px;

@@ -86,15 +86,41 @@
     // $('.heart-circle').on('click', function() {
 //  為了避免js先於ajax返回html內容造成js效果失效，改成父元素接收
     $(document).on('click','.heart-circle', function() {
-        console.log('sid=',$(this).closest('.product-item').attr('data-sid'));
         let imgSrc = $(this).find('img').attr('src')
+        let productSid = $(this).closest('.product-item').attr('data-sid')
         // console.log(imgSrc);
         if (imgSrc == '/Petliday/icon/heart-red.png') {
             $(this).find('img').attr('src', '/Petliday/icon/heart-red-fill.png');
+            insertWish();
         } else {
             $(this).find('img').attr('src', '/Petliday/icon/heart-red.png');
+            deleteWish();
         }
+        
+        console.log('productSid=',productSid);
+
+        function insertWish(){
+        $.get('insert-wish-api.php',{
+            product_sid: productSid}
+            // $(this).closest('.product-item').attr('data-sid')}
+        ,function(data){
+            console.log('data',data);
+            $.post('insert-wish-api.php',data)
+        },'json')
+        }
+
+        function deleteWish(){
+        $.get('dele-wish-api.php',{
+            product_sid: productSid}
+            
+        ,function(data){
+            console.log('data',data);
+            $.post('dele-wish-api.php',data)
+        },'json')
+        }
+        
     });
+    
 // <!-- 卡片hover -->
     // $('.c3').on('mouseenter', function() {
     $(document).on('mouseenter','.c3', function() {

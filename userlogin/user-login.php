@@ -10,16 +10,20 @@
 <!-- Model -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div id="info_bar" class="alert alert-danger" role="alert" style="display: none">
-    </div>
 
     <div class="modal-content">
       <div class="login">
-        <button data-dismiss="modal" class="close" style="margin-top: 20px;">
-          <span aria-hidden="true">×</span>
-        </button>
+      
+        
+        
 
         <form class="login-form" name="login-form" onsubmit="checkForm(); return false;">
+        <div id="info_bar" class="alert alert-danger" role="alert" style="display: none"></div>
+        <button data-dismiss="modal" class="close" style="position:absolute;top:14px;right:0;">
+          <span aria-hidden="true">×</span>
+        </button>
+        
+        
           <h2 class="t-xl">使用社群平台帳戶登入</h2>
           <h2 class="t-m">立即登入，隨時給毛孩獨家優惠</h2>
           <div class="login-social d-flex justify-content-center">
@@ -37,7 +41,7 @@
 
           <div class="login-group input-icon">
             <!-- <label for="email">帳號</label> -->
-            <input type="email" class="form-control" id="login-email" name="login-email" placeholder="電子信箱" required oninvalid="setCustomValidity('請填寫您的信箱');" oninput="setCustomValidity('');">
+            <input type="email" class="form-control" id="login-email" name="email" placeholder="電子信箱" required oninvalid="setCustomValidity('請填寫您的信箱');" oninput="setCustomValidity('');">
             <img class="icon-msg" src="./imgs/mail.svg">
           </div>
 
@@ -89,31 +93,34 @@
 <script>
   // ------JS開始 以上勿刪-------
   const email = $('#login-email'),
-    password = $('#password')
-  const info_bar = $('#info_bar');
+    password = $('#password'),
+    info_bar = $('#info_bar');
 
   function checkForm() {
 
-    $.post('user-login-api.php', {email: email.val(),password: password.val()}, 
-    function(data) {
-      if (data.success) {
-        info_bar
-          .removeClass('alert-danger')
-          .addClass('alert-success')
-          .text('登入成功');
-        location.href = 'user-login.php';
-      } else {
-        info_bar
-          .removeClass('alert-success')
-          .addClass('alert-danger')
-          .text('登入失敗');
-      }
-      info_bar.slideDown();
+    $.post('user-login-api.php', {
+        email: email.val(),
+        password: password.val()
+      },
+      function(data) {
+        if (data.success) {
+          info_bar
+            .removeClass('alert-danger')
+            .addClass('alert-success')
+            .text('登入成功');
+          location.href = 'user-login.php';
+        } else {
+          info_bar
+            .removeClass('alert-success')
+            .addClass('alert-danger')
+            .text('登入失敗');
+        }
+        info_bar.slideDown();
 
-      setTimeout(function() {
-        info_bar.slideUp();
-      }, 2000);
-    }, 'json');
+        setTimeout(function() {
+          info_bar.slideUp();
+        }, 2000);
+      }, 'json');
   }
 
   // $('.register_show').on('click',function(event){
