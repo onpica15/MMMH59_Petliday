@@ -19,3 +19,17 @@
                 </div>
 
             </div>
+
+
+            <script>
+                let pageInfo = ['account-profile', 'account-order', 'account-wishlist', 'account-mailbox', 'account-coupon', 'account-qa']
+
+                pageInfo.forEach((item, index) => {
+                    // console.log('check if item?', item, window.location.pathname.indexOf(item))
+                    if (window.location.pathname.indexOf(item) != -1) {
+                        $('.list-group-item').removeClass('active').eq(index).addClass('active')
+                    }
+
+                })
+                // console.log('path ', window.location.pathname)
+            </script>

@@ -77,27 +77,27 @@
                                 <div class="col-12 col-lg-8 move-down">
                                     <form>
                                         <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-2 col-form-label">姓名</label>
+                                            <label for="staticName" class="col-sm-2 col-form-label">姓名</label>
                                             <div class="col-sm-10">
-                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="黎小霈">
+                                                <input type="text" readonly class="form-control-plaintext" id="staticName" value="黎小霈">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-2 col-form-label">生日</label>
+                                            <label for="staticBirthday" class="col-sm-2 col-form-label">生日</label>
                                             <div class="col-sm-10">
-                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="1996/08/24">
+                                                <input type="text" readonly class="form-control-plaintext" id="staticBirthday" value="1982/06/08">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
                                             <div class="col-sm-10">
-                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="pity0824@gmail.com">
+                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="pity0507@petliday.com">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-2 col-form-label">地址</label>
+                                            <label for="staticAddress" class="col-sm-2 col-form-label">地址</label>
                                             <div class="col-sm-10">
-                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="台北市">
+                                                <input type="text" readonly class="form-control-plaintext" id="staticAddress" value="台南市東區弘勤路2段33弄2號5樓">
                                             </div>
                                         </div>
                                         <br>
@@ -120,7 +120,7 @@
                             <div class="row" id="pet-info">
                                 <div class="col-12 col-lg-4 pet-card d-flex justify-content-center">
                                     <div class="pet-img">
-                                        <img src="./img/profile-edit1.jpg" alt="">
+                                        <img src="./img/profile-edit2.jpg" alt="">
                                     </div>
                                     <a href="./account-edit.php" class="edit-round">
                                         <img src="./img/edit-round.svg" alt="">
@@ -169,7 +169,7 @@
                             <div class="row" id="pet-info">
                                 <div class="col-12 col-lg-4 pet-card d-flex justify-content-center">
                                     <div class="pet-img">
-                                        <img src="./img/profile-edit2.jpg" alt="">
+                                        <img src="./img/profile-edit1.jpg" alt="">
                                     </div>
                                     <a href="./account-edit.php" class="edit-round">
                                         <img src="./img/edit-round.svg" alt="">

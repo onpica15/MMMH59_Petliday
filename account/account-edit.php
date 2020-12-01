@@ -28,11 +28,23 @@
                 </div>
               </div>
               <div class="row pet-avatar justify-content-center">
-                <div class="edit">
+                <div class="edit edit-hat">
                   <img src="./img/edit-hat1.png" alt="">
+                </div>
+                <div class="edit edit-hat">
+                  <img src="./img/edit-hat2.png" alt="">
+                </div>
+                <div class="edit edit-hat">
+                  <img src="./img/edit-hat3.png" alt="">
                 </div>
                 <div class="edit">
                   <img src="./img/edit-decor1.png" alt="">
+                </div>
+                <div class="edit">
+                  <img src="./img/edit-decor2.png" alt="">
+                </div>
+                <div class="edit">
+                  <img src="./img/edit-decor3.png" alt="">
                 </div>
                 <!-- uploadimg -->
                 <?php
@@ -235,7 +247,11 @@
 
   $('.border-btn-next').on('click', function() {
     if ($('.selected-border.active').next().length > 0) {
+      console.log('css', $('.selected-border.active').next().find('.ball').css('background-color'))
+      let $color = $('.selected-border.active').next().find('.ball').css('background-color');
+      $('#profileDisplay').css('box-shadow', '0 0 0 3px ' + $color);
       $('.selected-border.active').removeClass('active').next().addClass('active')
+
     }
   })
 
@@ -246,8 +262,14 @@
     }
   })
 
+  // 初始化帽子顯示第一頂
+  $('.edit-hat').hide().eq(0).show()
+
   $('.border-btn-next1').on('click', function() {
     if ($('.selected-border1.active').next().length > 0) {
+      // console.log('index', );
+      let index = $('.selected-border1.active').index()
+      $('.edit-hat').hide().eq(index + 1).show()
       $('.selected-border1.active').removeClass('active').next().addClass('active')
     }
   })
