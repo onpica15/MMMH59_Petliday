@@ -97,6 +97,7 @@ background-color: #fff;
     border-radius: 3px 30px 3px 3px;
     transition: .5s;
     z-index: 2;
+    opacity: 0;
 }
 .fb,.line-icon,.email,.ig{
     width: 40px;
@@ -998,14 +999,14 @@ to{
         right: 290px;
     }
     .day123 .day1{
-        margin:0 20px 460px 20px;
+        margin:0 20px 400px 20px;
     }
     .day123 .day2{
-        margin: 0 20px 400px 20px;
+        margin: 0 20px 390px 20px;
     }
     /* 行程介紹 */
     .bg-dog{
-        height: 1450px;
+        height: 1520px;
     }
     .main-c{
         margin-top: 10px;

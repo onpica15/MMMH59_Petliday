@@ -19,7 +19,7 @@ $rows = $pdo->query($sql)->fetch();
     <!-- 最上綠色區塊 -->
     <div class="container-fluid top-green">
         <!-- banner輪播D -->
-        <div class="cart-hover">
+        <div class="cart-hover" hidden>
             <div class="cart-box-top">
                 <img src="/Petliday/products/img/cart-top.svg" alt="">
             </div>

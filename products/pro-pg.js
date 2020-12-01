@@ -55,10 +55,10 @@ setInterval(function(){
     });
 // 主要資訊區 分享點擊彈出視窗
 $('.share').on('click',function(){
-    $('.share-row').css('top','0');
+    $('.share-row').css('top','0').css('opacity','1');
 }) 
 $('.share-row').on('click',function(){
-    $(this).css('top','200px')
+    $(this).css('top','200px').css('opacity','0');
 })
 //  選擇區塊加總金額
 
@@ -90,17 +90,20 @@ $('.btn-twin').on('click', function() {
     const manQ = $('#man-quantity').val();
     const petQ = $('#pet-quantity').val();
     const date = $('.calendar .active').children('p').html();
+    const total = $('.select-price p').html().slice(4);
 
     console.log('sid', sid);
     console.log('manQ', manQ);
     console.log('petQ', petQ);
     console.log('date', date);
+    console.log('total', total);
 
     $.get('pro-pg-api.php', {
         sid: sid,
         manQ: manQ,
         petQ: petQ,
         date: date,
+        total: total,
         item: 1,
         action: 'add'
     },
@@ -223,7 +226,7 @@ if (window.matchMedia('(max-width: 425px)').matches) {
     // 手機版
     $(window).scroll(function () {
         let nowTop = $(this).scrollTop();
-        if($(this).scrollTop() >= 1932 ){
+        if(nowTop >= 1932 ){
             $('.cate-fix').css('position','fixed').css('top','63px').css('left','15px')
             // $('.trip-section').css('padding-top','80px');
             $('.main-c').css('padding-top','80px');
@@ -238,7 +241,7 @@ if (window.matchMedia('(max-width: 425px)').matches) {
 } else {
     $(window).scroll(function () {
         let nowTop = $(this).scrollTop();
-        if($(this).scrollTop() >= 1833 ){
+        if(nowTop >= 1833 ){
             $('.cate-fix').css('position','fixed').css('top','63px').css('left','405px')
             $('.bg-dog').css('padding-top','80px');
             // $('.day123-fix').css('top','200px');
@@ -252,8 +255,15 @@ if (window.matchMedia('(max-width: 425px)').matches) {
 }
 // 123day fixed**********************************
 if (window.matchMedia('(max-width: 425px)').matches) {
+    
 $(window).scroll(function () {
-        $('.day123-fix').css('position','relative').css('top','0px').css('right','0px')
+    let nowTop = $(this).scrollTop();
+    if(nowTop >= 1932){
+        $('.day123-fix').css('top','80px');
+    }else{
+        $('.day123-fix').css('top','0px');
+    }
+    
 })
 // 網頁版
 }else{
@@ -291,37 +301,39 @@ $(window).scroll(function () {
 $('.btn-cate').on('click',function(){
     $(this).css('background-color','#ffc072').siblings().css('background-color','#fff');
 })
-$(window).scroll(function () {
+if (window.matchMedia('(max-width: 425px)').matches) {
+    // 手機版 425 滑到區域變色
     let nowTop = $(this).scrollTop();
-    console.log('scrolltop', nowTop)
+    $(window).scroll(function () {
+        switch (gotoPage){
+            case 0:
+                if(nowTop === 1998) isScroll = true;
+                break;
+            case 1:
+                if(nowTop === 7045) isScroll = true;
+                break;
+            case 2:
+                if(nowTop === 7380) isScroll = true;
+                break;
+            case 3:
+                if(nowTop === 7790) isScroll = true;
+                break;
+            case 4:
+                if(nowTop === 8460) isScroll = true;
+                break;
+            case 5:
+                if(nowTop === 9418) isScroll = true;
+                break;
 
-    switch (gotoPage){
-        case 0:
-            if(nowTop === 1900) isScroll = true;
-            break;
-        case 1:
-            if(nowTop === 7045) isScroll = true;
-            break;
-        case 2:
-            if(nowTop === 7380) isScroll = true;
-            break;
-        case 3:
-            if(nowTop === 7790) isScroll = true;
-            break;
-        case 4:
-            if(nowTop === 8460) isScroll = true;
-            break;
-        case 5:
-            if(nowTop === 9418) isScroll = true;
-            break;
-
-        default:
-            break;
-    }
-
-
+            default:
+                break;
+        }
+    })
     if(isScroll){
-        if(nowTop>1835 && nowTop<6830){
+        if(nowTop<1940){
+            $('.bc1').css('background-color','#fff').siblings().css('background-color','#fff');;
+        }
+        else if(nowTop>1940 && nowTop<3340){
             $('.bc1').css('background-color','#ffc072').siblings().css('background-color','#fff');
         }
         else if(nowTop>6830 && nowTop<7280){
@@ -340,8 +352,58 @@ $(window).scroll(function () {
             $('.bc6').css('background-color','#ffc072').siblings().css('background-color','#fff');
         }
     }
-    
-})
+}else{
+    $(window).scroll(function () {
+        let nowTop = $(this).scrollTop();
+
+        switch (gotoPage){
+            case 0:
+                if(nowTop === 1900) isScroll = true;
+                break;
+            case 1:
+                if(nowTop === 7045) isScroll = true;
+                break;
+            case 2:
+                if(nowTop === 7380) isScroll = true;
+                break;
+            case 3:
+                if(nowTop === 7790) isScroll = true;
+                break;
+            case 4:
+                if(nowTop === 8460) isScroll = true;
+                break;
+            case 5:
+                if(nowTop === 9418) isScroll = true;
+                break;
+
+            default:
+                break;
+        }
+
+
+        if(isScroll){
+            if(nowTop>1835 && nowTop<6830){
+                $('.bc1').css('background-color','#ffc072').siblings().css('background-color','#fff');
+            }
+            else if(nowTop>6830 && nowTop<7280){
+                $('.bc2').css('background-color','#ffc072').siblings().css('background-color','#fff');
+            }
+            else if(nowTop>7280 && nowTop<7760){
+                $('.bc3').css('background-color','#ffc072').siblings().css('background-color','#fff');
+            }
+            else if(nowTop>7760 && nowTop<8330){
+                $('.bc4').css('background-color','#ffc072').siblings().css('background-color','#fff');
+            }
+            else if(nowTop>8330 && nowTop<9200){
+                $('.bc5').css('background-color','#ffc072').siblings().css('background-color','#fff');
+            }
+            else if(nowTop>9200){
+                $('.bc6').css('background-color','#ffc072').siblings().css('background-color','#fff');
+            }
+        }
+        
+    })
+}
 
 // <!-- term點了展開 -->**********************************
 
@@ -463,7 +525,7 @@ if (window.matchMedia('(max-width: 425px)').matches) {
 
     $('.btn-cate').on('mouseleave',function(){
         if($(this).css('background-color') === 'rgb(255, 192, 114)'){
-            console.log('hi #ffc072')
+            // console.log('hi #ffc072')
         }
         else{
             $(this).css('background-color','#fff')
