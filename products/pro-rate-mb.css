@@ -1,0 +1,82 @@
+.top-wrap{
+    height: 200px;
+    padding: 90px 0;
+}
+
+.bg-dog{
+    /* padding: 300px; */
+    height: 3470px;
+    background: linear-gradient( rgba(242,238,232,.5), rgba(242,238,232,.5)),url(./img/pg-dog.svg) 0 150px no-repeat;
+    background-size: contain;
+    overflow: hidden;
+    
+}
+.bread-row a{
+    color: #555;
+    margin: 0 3px; 
+ }
+ .title-row, .bread-row{
+     margin: 0;
+ }
+ .title-left{
+     font-size: 20px;
+ }
+ .title-left p{
+     margin:0 ;
+     font-weight: 500;
+ }
+ .title-right p{
+     margin:0 ;
+ }
+.rate-card{
+    width: 345px;
+    height: 260px;
+    background-color: rgba(255,255,255,.8);
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 20px;
+    box-shadow: 1px 2px 20px #eee;
+    display: inline-block;
+}
+.rate-name{
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+.rate-l{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.rate-l img{
+    width: 100%;
+    object-fit: cover;
+}
+.star{
+    width: 15px;
+    height: 15px;
+}
+.star img{
+    margin-right: 3px;
+    width: 100%;
+    object-fit: contain;
+}
+/* 共用標題 */
+
+.topic p{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    width: 150px;
+    text-align: center;
+}
+.topic-line{
+    height: 4px;
+    width: 150px;
+    border-radius: 2px;
+    background-color: #ffa12c;
+    margin-top: -10px;
+}
+.footer-box{
+    margin-top: 0;
+}
