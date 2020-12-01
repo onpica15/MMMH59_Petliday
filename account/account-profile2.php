@@ -246,9 +246,6 @@
 <script src="script.js"></script>
 
 <script>
-    <?php include __DIR__ . '/../account/account-aside-bar-js.php' ?>
-
-
     // ------JS結束 勿刪到-------
 </script>
 <?php include __DIR__ . '/../parts/html-foot.php' ?>

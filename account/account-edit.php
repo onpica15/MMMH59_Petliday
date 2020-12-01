@@ -243,7 +243,6 @@
 
 <script>
   // ------JS開始 以上勿刪-------
-  <?php include __DIR__ . '/../account/account-aside-bar-js.php' ?>
 
   $('.border-btn-next').on('click', function() {
     if ($('.selected-border.active').next().length > 0) {
@@ -287,12 +286,6 @@
     if ($('.selected-border2.active').prev().length > 0) {
       $('.selected-border2.active').removeClass('active').prev().addClass('active')
     }
-  })
-  // .avatar-img img boxshadow//.pick
-  $('.pick').on('click', function() {
-    // console.log('hi')
-    let color = $(this).css('background-color')
-    $('.avatar-img img').css('boxshadow', color)
   })
 
   // ------JS結束 勿刪到-------
