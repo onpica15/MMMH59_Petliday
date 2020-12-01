@@ -1,0 +1,148 @@
+/* index-ratin */
+.index-rating{
+    width: 50px;
+    height: 145px;
+    background-color: #148F7C;
+    border-radius: 3px 0px 0px 30px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 25vh;
+    right: 0vh;
+}
+
+.index-rating span{
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    writing-mode: vertical-lr;
+    letter-spacing: 0.3rem;
+    padding-top: 10px;
+    padding-left: 10px;
+    /* transform: rotate(90deg) translateY(90px); */
+    
+}
+
+.index-rating img{
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    padding-top: 2px;
+}
+
+/* rating-info 如何讓骨頭被填色*/
+.rating-info{
+    width: 200px;
+    height: 145px;
+    background-color: #ccc;
+    border-radius: 3px 0px 0px 30px;
+    border-top:10px solid #1c9e8bab;
+    position: fixed;
+    bottom: 45vh;
+    right: 0vh;
+}
+
+.rating-info p{
+    color: #3C2E26;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+
+.hide {
+    display: none;
+  }
+  
+.clear {
+    float: none;
+    clear: both;
+  }
+  
+.rating-bone {
+    width: 100%;
+    right: 25px;
+    bottom: 5px;
+    position: relative;
+    unicode-bidi: bidi-override;
+    /* unicode-bidi:bidi-override 自動輸寫順序 */
+    direction: rtl;
+    /* 單個數字、字母瀏覽器不能判斷語言就用rtl預設設定 */
+  }
+  
+.rating-bone > label {
+    float: right;
+    display: inline;
+    align-self: start;
+    margin: 1px;
+    position: relative;
+    width: 1.8em;
+    cursor: pointer;
+    /* color: #000; */
+  }
+  
+.rating-bone > label:hover,
+.rating-bone > label:hover ~ label,
+.rating-bone > input.radio-btn:checked ~ label {
+    color: transparent;
+  }
+  
+.rating-bone > label:hover:before,
+.rating-bone > label:hover ~ label:before,
+.rating-bone > input.radio-btn:checked ~ label:before,
+.rating-bone > input.radio-btn:checked ~ label:before {
+    /* content: "\url('./imgs/bone-3.svg')"; */
+    display: block;
+    content:'';
+    background-image: url(./imgs/bone-3.svg);
+    background-size: 28px;
+    height: 28px;
+    width: 28px;
+    position: absolute;
+  }
+
+
+/* rating-input */
+.rating-input{
+    height: 4em;
+}
+
+.rating-input input{
+    width: 100px;
+    font-size: 0.5rem;
+    border-radius: 3px 0px 0px 3px;
+    border: 1px solid  transparent;;
+}
+
+.rating-input input:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.rating-input-append button{
+    width: 50px;
+    font-size: 0.5rem;
+    color: #fff;
+    background-color: #148F7C;
+    border: 2px solid  #148F7C;
+    border-radius: 0px 3px 3px 0px;
+}
+
+.rating-input-append button:focus{
+    outline: none;
+}
+
+
+
+
+/* scroll_top */
+.scroll_top{
+    display: block;
+    font-size: 30px;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+    cursor: pointer;
+    opacity: 0;
+    transition: 1s;
+}

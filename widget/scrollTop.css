@@ -1,0 +1,12 @@
+/* scroll-top */
+.scroll-top{
+    display: block;
+    font-size: 30px;
+    color: #148F7C;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+    cursor: pointer;
+    opacity: 0;
+    transition: 1s;
+}

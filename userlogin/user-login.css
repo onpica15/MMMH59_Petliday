@@ -230,6 +230,7 @@ button:focus{
     color: #555;
 }
 
+/* 一鍵輸入 */
 .auto-input button{
     height: 35px;
     width: 60px;
@@ -247,6 +248,7 @@ button:focus{
 .auto-input .input-correct{
     position: absolute;
     right: 0;
+    bottom: 5px;
 }
 
 /* scroll-top */
