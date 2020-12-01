@@ -64,7 +64,7 @@
 </div>
 <!-- rating -->
 <div class="index-rating">
-  <div class="index-title">
+  <div class="rating-title">
     <span>逛得愉快嗎<img src="./imgs/bone.svg" alt="bone"></span>
   </div>
 
