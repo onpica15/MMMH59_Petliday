@@ -1,5 +1,5 @@
 /* index-ratin */
-.index-rating{
+.index-title{
     width: 50px;
     height: 145px;
     background-color: #148F7C;
@@ -10,7 +10,7 @@
     right: 0vh;
 }
 
-.index-rating span{
+.index-title span{
     color: #fff;
     font-size: 16px;
     text-align: center;
@@ -22,9 +22,9 @@
     
 }
 
-.index-rating img{
-    width: 16px;
-    height: 16px;
+.index-rating .index-title img{
+    width: 28px;
+    height: 28px;
     color: #fff;
     padding-top: 2px;
 }
@@ -37,7 +37,7 @@
     border-radius: 3px 0px 0px 30px;
     border-top:10px solid #1c9e8bab;
     position: fixed;
-    bottom: 45vh;
+    bottom: 25vh;
     right: 0vh;
 }
 

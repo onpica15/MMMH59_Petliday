@@ -64,42 +64,43 @@
 </div>
 <!-- rating -->
 <div class="index-rating">
-  <span>逛得愉快嗎<img src="./imgs/bone.svg" alt="bone"></span>
-</div>
+  <div class="index-title">
+    <span>逛得愉快嗎<img src="./imgs/bone.svg" alt="bone"></span>
+  </div>
 
-<div class="rating-info">
-  <p>Petliday 網頁瀏覽是否滿意？</p>
-  <form>
-    <div class="rating-bone">
-      <input id="bone5" name="bone" type="radio" value="5" class="radio-btn hide" />
-      <label for="bone5"><img src="./imgs/bone-2.svg" alt=""></label>
+  <div class="rating-info">
+    <p>Petliday 網頁瀏覽是否滿意？</p>
+    <form>
+      <div class="rating-bone">
+        <input id="bone5" name="bone" type="radio" value="5" class="radio-btn hide" />
+        <label for="bone5"><img src="./imgs/bone-2.svg" alt=""></label>
 
-      <input id="bone4" name="bone" type="radio" value="4" class="radio-btn hide" />
-      <label for="bone4"><img src="./imgs/bone-2.svg" alt=""></label>
+        <input id="bone4" name="bone" type="radio" value="4" class="radio-btn hide" />
+        <label for="bone4"><img src="./imgs/bone-2.svg" alt=""></label>
 
-      <input id="bone3" name="bone" type="radio" value="3" class="radio-btn hide" />
-      <label for="bone3"><img src="./imgs/bone-2.svg" alt=""></label>
+        <input id="bone3" name="bone" type="radio" value="3" class="radio-btn hide" />
+        <label for="bone3"><img src="./imgs/bone-2.svg" alt=""></label>
 
-      <input id="bone2" name="bone" type="radio" value="2" class="radio-btn hide" />
-      <label for="bone2"><img src="./imgs/bone-2.svg" alt=""></label>
+        <input id="bone2" name="bone" type="radio" value="2" class="radio-btn hide" />
+        <label for="bone2"><img src="./imgs/bone-2.svg" alt=""></label>
 
-      <input id="bone1" name="bone" type="radio" value="1" class="radio-btn hide" />
-      <label for="bone1"><img src="./imgs/bone-2.svg" alt=""></label>
+        <input id="bone1" name="bone" type="radio" value="1" class="radio-btn hide" />
+        <label for="bone1"><img src="./imgs/bone-2.svg" alt=""></label>
 
-      <div class="clear"></div>
-    </div>
-  </form>
+        <div class="clear"></div>
+      </div>
+    </form>
 
-  <div class=" col-10 col-lg-4 ">
-    <div class="rating-input d-flex mt-2 ml-2">
-      <input type="text" class="form-control" placeholder="輸入更多回饋" aria-label="Recipient's username" aria-describedby="button-addon2" id="rating-input">
-      <div class="rating-input-append">
-        <button type="button" id="rating-btn">送出</button>
+    <div class=" col-10 col-lg-4 ">
+      <div class="rating-input d-flex mt-2 ml-2">
+        <input type="text" class="form-control" placeholder="輸入更多回饋" aria-label="Recipient's username" aria-describedby="button-addon2" id="rating-input">
+        <div class="rating-input-append">
+          <button type="button" id="rating-btn">送出</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 
 <!-- scroll_top -->
 <div class="scroll_top">
@@ -116,6 +117,17 @@
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
   // ------JS開始 以上勿刪-------
+
+  // rating
+  
+  $(".index-rating").mouseenter(function() {
+    $(".index-rating").animate({right: "0"});
+  });
+
+  $(".index-rating").mouseleave(function() {
+    $(".index-rating").animate({right: "-200px"
+    });
+  });
 
   // scroll_top
   $(".scroll_top").click(function() {
