@@ -58,8 +58,8 @@
             </div>
 
           </div>
-          <div class="col-12 col-lg-3 change-box ">
-            <div class="mprice" data-mprice="<?= $i['price_man'] ?>"></div>
+          <div class="col-12 col-lg-3 change-box " data-manQ="<?= $i['manQ'] ?>" data-petQ="<?= $i['petQ'] ?>">
+            <div class=" mprice" data-mprice="<?= $i['price_man'] ?>"></div>
             <div class="pprice" data-pprice="<?= $i['price_pet'] ?>"></div>
             <div class="man-box all-box">
               <div class="change-man d-flex align-items-center change-m ">
@@ -120,11 +120,11 @@
     <div class="container">
       <div class="row">
         <div class="col-12 total-box d-flex justify-content-end align-items-center p-3">
-          <div class="prod-items mr-auto t-s">共 <span>三件商品</span> </div>
+          <div class="prod-items mr-auto t-s">共 <span class="total-items"></span> </div>
           <div class="danger-color t-l mr-3">總計: NT <span class="danger-color t-xl" id="totleAmount"></span> </div>
 
           <a href="./order-step1.php" class="a-style">
-            <button type="submit" class="buy-btn btn  btn-1 btn-2 d-flex align-items-center justify-content-center">結帳</button>
+            <button type="submit" class=" buy-btn btn  btn-1 btn-2 d-flex align-items-center justify-content-center">結帳</button>
           </a>
 
 
@@ -153,6 +153,10 @@
     return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
   };
   // 刪除------
+  // $('span.total-items').text(count + '件商品');
+
+  // $('span.total-items').text(countCart() + '件商品');
+
   function removeItem(sid) {
     $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', {
         sid: sid,
@@ -162,7 +166,8 @@
         console.log(data);
         countCart(data);
         $('#prod' + sid).remove();
-
+        calcTotal();
+        // $('span.total-items').text(countCart(data) + '件商品');
       }, 'json');
 
   };
@@ -177,8 +182,8 @@
     const pQuantity = parseInt(tr.find('.pet-box input').attr('data-petQ'))
     const price = (mQuantity * mprice) + (pQuantity * pprice);
 
-    console.log('mQuantity', mQuantity)
-    console.log('pQuantity', pQuantity)
+    // console.log('mQuantity', mQuantity)
+    // console.log('pQuantity', pQuantity)
     tr.find('.man-box input').val(mQuantity);
     tr.find('.pet-box input').val(pQuantity);
     tr.find('.prod-price h5').html('$ ' + dallorCommas(price));
@@ -195,8 +200,11 @@
       console.log('> 1')
       subButton.addClass('able-icon');
       subButton.remove('unable-icon');
-      subButton.hover(function() {
-        $(this).css('background-color', rgb(171, 171, 171));
+      subButton.mouseenter(function() {
+        $(this).css('background-color', ' rgb(171, 171, 171)');
+      })
+      subButton.mouseleave(function() {
+        $(this).css('background-color', ' #eee');
       })
     }
 
@@ -215,8 +223,11 @@
       console.log('> 1')
       subButton1.remove('unable-icon');
       subButton1.addClass('able-icon');
-      subButton.hover(function() {
-        $(this).css('background-color', rgb(171, 171, 171));
+      subButton1.mouseenter(function() {
+        $(this).css('background-color', ' rgb(171, 171, 171)');
+      })
+      subButton1.mouseleave(function() {
+        $(this).css('background-color', ' #eee');
       })
 
     }
@@ -224,7 +235,7 @@
     if (pQuantity == 1) {
       subButton1.remove('able-icon');
       subButton1.addClass('unable-icon');
-      subButton.hover(function() {
+      subButton1.hover(function() {
         $(this).css('background-color', ' #eee');
       })
 
@@ -252,10 +263,19 @@
     if (item == 1) {
       subButton.addClass('unable-icon');
       subButton.remove('able-icon');
+      subButton.mouseenter(function() {
+        $(this).css('background-color', ' #eee');
+      })
     } else if (item > 1) {
       console.log('> 1')
       subButton.addClass('able-icon');
       subButton.remove('unable-icon');
+      subButton.mouseenter(function() {
+        $(this).css('background-color', ' rgb(171, 171, 171)');
+      })
+      subButton.mouseleave(function() {
+        $(this).css('background-color', ' #eee');
+      })
     }
 
 
@@ -271,13 +291,22 @@
     if (item == 1) {
       subButton.addClass('unable-icon');
       subButton.remove('able-icon');
+      subButton.mouseenter(function() {
+        $(this).css('background-color', ' #eee');
+      })
     } else if (item > 1) {
       item = +item - 1
-      console.log('A1-subButton', item)
+      // console.log('A1-subButton', item)
 
-      console.log('> 1')
+      // console.log('> 1')
       subButton.addClass('able-icon');
       subButton.remove('unable-icon');
+      subButton.mouseenter(function() {
+        $(this).css('background-color', ' rgb(171, 171, 171)');
+      })
+      subButton.mouseleave(function() {
+        $(this).css('background-color', ' #eee');
+      })
     }
 
 
@@ -303,16 +332,25 @@
     if (item == 1) {
       subButton1.addClass('unable-icon');
       subButton1.remove('able-icon');
+      subButton1.mouseenter(function() {
+        $(this).css('background-color', ' #eee');
+      })
 
     } else if (item > 1) {
       console.log('> 1')
       subButton1.addClass('able-icon');
       subButton1.remove('unable-icon');
+      subButton1.mouseenter(function() {
+        $(this).css('background-color', ' rgb(171, 171, 171)');
+      })
+      subButton1.mouseleave(function() {
+        $(this).css('background-color', ' #eee');
+      })
     }
   })
 
 
-
+  // pet－－－－－－－－－－－－－
   $('.sub-icon1').click(function() {
     console.log('subButton-click')
     let item = parseInt($(this).closest('.prod-item').find('.pet-box input').val());
@@ -321,13 +359,21 @@
     if (item == 1) {
       subButton1.addClass('unable-icon');
       subButton1.remove('able-icon');
+      subButton1.mouseenter(function() {
+        $(this).css('background-color', ' #eee');
+      })
     } else if (item > 1) {
       item = +item - 1
-      console.log('A1-subButton', item)
-
-      console.log('> 1')
+      // console.log('A1-subButton', item)
+      // console.log('> 1')
       subButton1.addClass('able-icon');
       subButton1.remove('unable-icon');
+      subButton1.mouseenter(function() {
+        $(this).css('background-color', ' rgb(171, 171, 171)');
+      })
+      subButton1.mouseleave(function() {
+        $(this).css('background-color', ' #eee');
+      })
     }
 
 
@@ -335,82 +381,7 @@
     console.log('AAAAAAA-subButton', item)
 
   })
-  // // --------------------------------------------
-  // const petQuantity = document.querySelector('.pet-quantity');
-  // const manQuantity = document.querySelector('.man-quantity');
-  // const addButton = document.querySelector('.add-icon');
-  // const subButton = document.querySelector('.sub-icon');
-  // const addButton1 = document.querySelector('.add-icon1');
-  // const subButton1 = document.querySelector('.sub-icon1');
 
-  // addButton.addEventListener('click', function() {
-  //   console.log('addButton')
-
-  //   manQuantity.value = +manQuantity.value + 1
-
-  //   if (manQuantity.value > 1) {
-  //     subButton.style['background-color'] = '#ccc';
-  //     subButton.style['fill'] = '#555';
-  //   } else if (manQuantity.value == 1) {
-  //     subButton.style['background-color'] = '#eee';
-  //     subButton.style['fill'] = '#ccc';
-  //   };
-
-  //   console.log(manQuantity.value)
-  // });
-
-  // subButton.addEventListener('click', function() {
-  //   console.log('subButton')
-  //   if (manQuantity.value > 1) {
-  //     manQuantity.value = +manQuantity.value - 1;
-  //   };
-
-  //   if (manQuantity.value > 1) {
-  //     subButton.style['background-color'] = '#ccc';
-  //     subButton.style['fill'] = '#555';
-  //   } else if (manQuantity.value == 1) {
-  //     subButton.style['background-color'] = '#eee';
-  //     subButton.style['fill'] = '#ccc';
-  //   };
-  //   console.log(manQuantity.value)
-  // });
-  // //  pet------------------
-
-  // if (petQuantity.value == 1) {
-  //   subButton1.style['background-color'] = '#eee';
-  //   subButton1.style['fill'] = '#ccc';
-  // };
-
-  // addButton1.addEventListener('click', function() {
-  //   console.log('addButton1')
-  //   petQuantity.value = +petQuantity.value + 1
-
-  //   if (petQuantity.value > 1) {
-  //     subButton1.style['background-color'] = '#ccc';
-  //     subButton1.style['fill'] = '#555';
-  //   } else if (petQuantity.value == 1) {
-  //     subButton1.style['background-color'] = '#eee';
-  //     subButton1.style['fill'] = '#ccc';
-  //   };
-
-  //   console.log(petQuantity.value)
-  // })
-
-  // subButton1.addEventListener('click', function() {
-  //   console.log('subButton1')
-  //   if (petQuantity.value > 1) {
-  //     petQuantity.value = +petQuantity.value - 1;
-  //   }
-  //   if (petQuantity.value > 1) {
-  //     subButton1.style['background-color'] = '#ccc';
-  //     subButton1.style['fill'] = '#555';
-  //   } else if (petQuantity.value == 1) {
-  //     subButton1.style['background-color'] = '#eee';
-  //     subButton1.style['fill'] = '#ccc';
-  //   };
-
-  //   // console.log(petQuantity.value)
-  // })
 
   // --------------------------------------------
 
@@ -418,12 +389,16 @@
     let total = 0;
     $('.prod-item').each(function() {
       const tr = $(this);
-      let mQuantity = parseInt(tr.find('.man-box input').val());
-      let pQuantity = parseInt(tr.find('.pet-box input').val());
+      const mQuantity = parseInt(tr.find('.change-box').attr('data-manq'));
+      console.log('TTmQuantity', mQuantity)
+      const pQuantity = parseInt(tr.find('.change-box').attr('data-petq'));
+      console.log('TTpQuantity', pQuantity)
       const pprice = parseInt(tr.find('.pprice').attr('data-pprice'));
+      console.log('TTpprice', pprice)
       const mprice = parseInt(tr.find('.mprice').attr('data-mprice'));
+      console.log('TTmprice', mprice)
       const price = (mQuantity * mprice) + (pQuantity * pprice);
-
+      console.log('TTprice', price)
       // tr.find('td.quantity > select').val(quantity); 
       // tr.find('.prod-price h5').html('$ ' + dallorCommas(price));
       total += price;
@@ -443,6 +418,8 @@
     // const subButton1 = $(this).find('man-box .sub-icon');
     let mQuantity = parseInt($(this).find('.man-box input').val());
     let pQuantity = parseInt($(this).find('.pet-box input').val());
+    console.log('CCmQuantity', mQuantity)
+    console.log('CCpQuantity', pQuantity)
     const pprice = parseInt($('.prod-item').find('.pprice').attr('data-pprice'));
     const mprice = parseInt($('.prod-item').find('.mprice').attr('data-mprice'));
     const price = (mQuantity * mprice) + (pQuantity * pprice);
@@ -464,8 +441,9 @@
       // countCart(data);
       combo.attr('data-manQ', mQuantity);
       combo.attr('data-petQ', pQuantity);
-      combo.attr('data-petQ', pQuantity);
       combo.closest('.prod-item').find('.prod-price h5').html('$ ' + dallorCommas(price));
+
+
       calcTotal();
       if (mQuantity == 1) {
         subButton.addClass('unable-icon')
@@ -487,17 +465,42 @@
     // console.log('AAAAsmQuantity', mQuantity);
     // console.log('AAAAsmQuantity', pQuantity);
   })
+  // 要送資料嗎？ -----------------
+  // $('.buy-btn').click(function() {
+  //   const combo = $(this);
+  //   const tr = $(this).closest('.prod-item').attr('data-sid');
+  //   let mQuantity = parseInt($(this).find('.man-box input').val());
+  //   let pQuantity = parseInt($(this).find('.pet-box input').val());
+  //   // console.log('CCmQuantity', mQuantity)
+  //   // console.log('CCpQuantity', pQuantity)
+  //   const pprice = parseInt($('.prod-item').find('.pprice').attr('data-pprice'));
+  //   const mprice = parseInt($('.prod-item').find('.mprice').attr('data-mprice'));
+  //   const price = (mQuantity * mprice) + (pQuantity * pprice);
+  //   ('data-quantity');
+  //   // console.log('mQuantity', mQuantity);
+
+  //   const subButton = $(this).closest('.prod-item').find('.man-box .subIcon');
+
+  //   const subButton1 = $(this).closest('.prod-item ').find('.pet-box .subIcon');
+
+
+  //   $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', {
+  //     sid: tr,
+  //     action: 'add',
+  //     manQ: mQuantity,
+  //     petQ: pQuantity,
+  //     price: price,
+
+  //   }, function(data) {
+  //     console.log(data);
+  //     // countCart(data);
 
 
 
-
-
-
-
-
-
-
-
+  //   }, 'json');
+  //   // console.log('AAAAsmQuantity', mQuantity);
+  //   // console.log('AAAAsmQuantity', pQuantity);
+  // })
 
 
   // ------JS結束 勿刪到-------

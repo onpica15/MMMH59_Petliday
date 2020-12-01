@@ -320,6 +320,7 @@
         count += cart[i].item * 1;
       }
       buy_quant.html(count);
+      $('span.total-items').html(count + ' 件商品');
     }
 
     function additem(cart) {}

@@ -244,6 +244,12 @@ svg#date-icon {
   padding: 20px;
   border-radius: 3px;
 }
+.form-box-title {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 3px 3px 0px 0px;
+  /* line-height: 0; */
+}
 .form-box-fin {
   background-color: #fff;
   padding: 20px;
@@ -257,6 +263,9 @@ svg#date-icon {
   margin-bottom: 15px;
   border-bottom: 2px solid #eee;
 }
+/* h5.text-color .t-m .mt-1 .title-box-item {
+  line-height: 18px;
+} */
 .order-box-fin {
   background-color: #fff;
   padding: 10px 20px 0px 20px;
@@ -266,6 +275,7 @@ svg#date-icon {
 .order-box-total {
   border-radius: 3px 3px 30px 3px;
 }
+
 .form-title {
   margin-top: 10px;
 }
@@ -335,14 +345,40 @@ svg#date-icon {
   font-size: 14px;
   opacity: 1; /* Firefox */
 }
-.form-radio {
-  width: 18px;
-  height: 44px;
-  margin-right: 10px;
+
+/* .form-radio:checked ~ .form-radio-label { */
+
+.custom-control-input ~ .custom-control-label::before {
+  background-color: #fff;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
   cursor: pointer;
+  /* padding-bottom: -5px; */
+  /* margin-right: 25px; */
 }
-.form-radio:checked {
+
+.custom-control-label {
+  left: 25px;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+  outline: none;
+  border-color: none;
+  box-shadow: none;
+  /* color: #00907c; */
+
   background-color: #00907c;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #00907c;
+}
+.custom-control-input:checked ~ .custom-control-label::before :hover {
+  box-shadow: 0px 10px 3px rgba(0, 0, 0, 0.2);
+  border-color: #006f60;
 }
 .radio-text {
   font-size: 14px;
@@ -352,6 +388,13 @@ svg#date-icon {
   /* color: #000; */
 }
 
+.form-radio {
+  /* width: 18px; */
+  /* height: 44px; */
+  /* margin-right: 10px; */
+  cursor: pointer;
+  background-color: #00907c;
+}
 .coupon {
   border: 1px solid #ffa02c9a;
   position: relative;
@@ -607,6 +650,12 @@ input:optional {
 }
 .m-chanhe-box-quant {
   margin: 0 10px;
+}
+.fast-btn {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: red;
 }
 
 /* ------------------------------------ */

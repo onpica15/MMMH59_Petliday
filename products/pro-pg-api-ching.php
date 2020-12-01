@@ -4,12 +4,18 @@ if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
 
+if (!isset($_SESSION['order'])) {
+    $_SESSION['order'] = [];
+}
+
 $output = [];
 
+
 $action = isset($_GET['action']) ? $_GET['action'] : 'read';
-$sid = isset($_GET['sid']) ? intval($_GET['sid']) : 0;
+
 
 // $quantity = isset($_GET['quantity']) ? intval($_GET['quantity']) : 1;
+$sid = isset($_GET['sid']) ? intval($_GET['sid']) : 0;
 $manQ = isset($_GET['manQ']) ? intval($_GET['manQ']) : 1;
 $petQ = isset($_GET['petQ']) ? intval($_GET['petQ']) : 1;
 $date = isset($_GET['date']) ? intval($_GET['date']) : 1;
@@ -60,5 +66,10 @@ switch ($action) {
 
         break;
 }
+
 $output['cart'] = $_SESSION['cart'];
+
+$output['order'] = $_SESSION['order'];
+
+
 echo json_encode($output, JSON_UNESCAPED_UNICODE);

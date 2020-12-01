@@ -56,16 +56,18 @@
 <!-- --------------------step---------------- -->
 <div class="container container-mt">
   <pre>
-    <?php print_r($_POST) ?>
+    <?php print_r($_GET) ?>
     </pre>
-  <form action="" method="POST">
+  <form action="" method="GET">
     <div class="row">
-
       <div class="col-12 col-lg-8 all-step-box all-form-box ">
         <div class="row">
           <div class="all-form-box-in w-100">
             <div class="col-12 form-box">
               <h5 class="green-color t-l title1-m form-title">訂購人資料</h5>
+
+
+
             </div>
             <div class="col-12 form-box contacts-box">
               <div class="row">
@@ -108,7 +110,13 @@
 
             </div>
 
-            <div class="col-12 form-box contacts-box">
+
+            <!-- ----man---- -->
+            <div class="w-100 info-form"></div>
+            <!-- <div class="w-100 pet-form"></div> -->
+
+
+            <!-- <div class="col-12 form-box contacts-box">
               <div class="row">
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">旅客 1</h5>
               </div>
@@ -135,9 +143,9 @@
                 </div>
               </div>
 
-            </div>
+            </div> -->
 
-            <div class="col-12 form-box contacts-box">
+            <!-- <div class="col-12 form-box contacts-box">
 
               <div class="row">
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">寵物 1</h5>
@@ -163,7 +171,7 @@
                 </div>
               </div>
 
-            </div>
+            </div> -->
             <div class="col-12 form-box contacts-box">
               <div class="row">
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">發票資訊</h5>
@@ -173,18 +181,19 @@
                 <div class="col-12 col-lg-12">
                   <div class="row ">
                     <div class="col-12 d-flex align-items-center bb-line">
-                      <input id="donateReceipt" class="form-radio " type="radio" name="receipt"><label for="donateReceipt" class="mb-0"><span class=" radio-text t-m text-color">捐贈發票</span></label>
+                      <input id="donateReceipt" class="form-radio custom-control-input" type="radio" name="receipt">
+                      <label for="donateReceipt" class="form-radio-label custom-control-label mb-0"><span class=" radio-text t-m text-color">捐贈發票</span></label>
                     </div>
                     <div class="col-12 d-flex align-items-center bb-line">
 
-                      <input id="receipt2" class="form-radio " type="radio" name="receipt">
-                      <label for="receipt2" class="mb-0"><span class=" radio-text t-m text-color">二聯電子發票</span></label>
+                      <input id="receipt2" class="form-radio  custom-control-input" type="radio" name="receipt">
+                      <label for="receipt2 " class="mb-0 custom-control-label"><span class=" radio-text t-m text-color">二聯電子發票</span></label>
                     </div>
 
                     <div class="col-12 d-flex align-items-center">
 
-                      <input id="receipt3" class="form-radio " type="radio" name="receipt">
-                      <label for="receipt3" class="mb-0"><span class=" radio-text t-m text-color">三聯電子發票</span></label>
+                      <input id="receipt3" class="form-radio custom-control-input" type="radio" name="receipt">
+                      <label for="receipt3" class="mb-0 custom-control-label"><span class=" radio-text t-m text-color">三聯電子發票</span></label>
 
                     </div>
                   </div>
@@ -203,12 +212,12 @@
                 <div class="col-12 col-lg-12">
                   <div class="row">
                     <div class="col-12 d-flex align-items-center">
-                      <input id="couponNo" class="form-radio" type="radio" name="coupon" checked>
-                      <label class=" radio-text t-m text-color" for="couponNo">我沒有折扣碼</label>
+                      <input id="couponNo" class="form-radio custom-control-input" type="radio" name="coupon" checked>
+                      <label class=" radio-text t-m text-color custom-control-label" for="couponNo">我沒有折扣碼</label>
                     </div>
                     <div class="col-12 d-flex align-items-center">
-                      <input id="couponYes" class="form-radio" type="radio" name="coupon">
-                      <label class="radio-text t-m text-color" for="couponYes">我有折扣碼</label>
+                      <input id="couponYes" class="form-radio custom-control-input" type="radio" name="coupon">
+                      <label class="radio-text t-m text-color custom-control-label pt-1" for="couponYes">我有折扣碼</label>
                     </div>
                     <div class="coupon-items w-100 animation">
                       <div class="col-12 d-flex align-items-center">
@@ -217,9 +226,10 @@
                       </div>
                       <div class="col-12 col-lg-6 mt-4">
                         <div class="coupon">
-                          <input class="form-radio coupon-check" type="radio" name="coupon-box">
+                          <input class="form-radio  custom-control-input coupon-check" type="radio" name="coupon-box">
+                          <label class="custom-control-label"></label>
                           <h5 class="orange-color t-l mb-3">新客優惠 20%OFF </h5>
-                          <p class="text-gray t-xs mb-0">折扣券碼： WJIFJIJEE
+                          <p class="text-gray t-xs mb-0">折扣券碼： 2020WELCOME
                           </p>
                           <p class="text-gray t-xs mb-0">有效日期： 2020/12/18-2021/6/30
                           </p>
@@ -235,11 +245,11 @@
               <div class="detail-box-total">
                 <div class="detail-all detail-time d-flex justify-content-between">
                   <h6 class=" text-gray t-s ">價格：</h6>
-                  <h6 class=" text-gray t-s">2039</h6>
+                  <h6 class=" text-gray t-s totleAmount">0</h6>
                 </div>
                 <div class="detail-all detail-quan d-flex justify-content-between">
                   <h6 class=" text-gray t-s">折扣卷：</h6>
-                  <h6 class=" text-gray t-s">( NEDDDF ) &nbsp; <span class="prod-price-single t-m danger-color">- 404</span></h6>
+                  <h6 class=" text-gray t-s">( 2020WELCOME ) &nbsp; <span class="prod-price-single t-m danger-color coupon-price">- 0</span></h6>
                 </div>
               </div>
               <div class="single-prod-total d-flex justify-content-end mb-3 mt-1 ">
@@ -250,7 +260,7 @@
               <div class="pay-btn-box pb-3 ">
                 <!-- href="./order-step2.php" -->
                 <a href="#" class="a-style w-100 d-flex justify-content-end">
-                  <button type="submit" class="btn pay-btn ml-3">繼續結帳</button>
+                  <button type="submit" class="btn pay-btn ml-3" id="pay-btn">繼續結帳</button>
                 </a>
                 <a href="./cart.php" class=" a-style w-100 d-flex justify-content-start">
                   <button class="btn-outline pay-btn mr-3">回購物車</button>
@@ -261,57 +271,44 @@
           </div>
         </div>
       </div>
-
+      <!-- -----右邊----- -->
 
       <div class="col-12 col-lg-4 all-step-box all-order-box">
         <div class="row ">
           <div class="all-order-box-in w-100">
-            <div class="col-12 order-box">
-              <h5 class="text-color t-m mt-1">標題標題標題標題標題標題標題標題題標題標題</h5>
-              <div class="detail-box">
-                <div class="detail-all detail-time d-flex justify-content-between">
-                  <h6 class=" text-gray t-s ">時間：</h6>
-                  <h6 class=" text-gray t-s">2020/08/12 pm 6:00</h6>
+            <?php foreach ($_SESSION['cart'] as $i) : ?>
+              <div class="col-12 order-box form-quan" data-sid="<?= $i['sid'] ?>" data-man="<?= $i['manQ'] ?>" data-pet="<?= $i['petQ'] ?>" id="prod<?= $i['sid'] ?>">
+                <h5 class="text-color t-m mt-1 title-box-item"><?= $i['product_name'] ?></h5>
+                <div class="detail-box">
+                  <div class="detail-all detail-time d-flex justify-content-between">
+                    <h6 class=" text-gray t-s ">時間：</h6>
+                    <h6 class=" text-gray t-s">2020/08/<?= $i['date'] ?></h6>
+                  </div>
+                  <div class="detail-all detail-quan d-flex justify-content-between">
+                    <h6 class=" text-gray t-s">數量：</h6>
+                    <h6 class=" text-gray t-s " data-sid="<?= $i['sid'] ?>" data-man="<?= $i['manQ'] ?>" data-pet="<?= $i['petQ'] ?>"><?= $i['manQ'] ?> x 人 / <?= $i['petQ'] ?> x 犬</h6>
+                  </div>
                 </div>
-                <div class="detail-all detail-quan d-flex justify-content-between">
-                  <h6 class=" text-gray t-s">數量：</h6>
-                  <h6 class=" text-gray t-s">2 x 人 / 1 x 犬</h6>
-                </div>
-              </div>
-              <div class="single-prod-total d-flex justify-content-end">
-                <h5 class="t-m brown-color prod-price-single">NT$ 3000</h5>
-              </div>
-            </div>
-            <div class="col-12 order-box">
-              <h5 class="text-color t-m mt-1">標題標題標題標題標題標題標題標題題標題標題</h5>
-              <div class="detail-box">
-                <div class="detail-all detail-time d-flex justify-content-between">
-                  <h6 class=" text-gray t-s ">時間：</h6>
-                  <h6 class=" text-gray t-s">2020/08/12 pm 6:00</h6>
-                </div>
-                <div class="detail-all detail-quan d-flex justify-content-between">
-                  <h6 class=" text-gray t-s">數量：</h6>
-                  <h6 class=" text-gray t-s">2 x 人 / 1 x 犬</h6>
+                <div class="single-prod-total d-flex justify-content-end">
+                  <h5 class="t-m brown-color prod-price-single ">NT$ <span class="total-box-item"><?= ($i['manQ'] * $i['price_man'] + $i['petQ'] * $i['price_pet']) ?></span></h5>
                 </div>
               </div>
-              <div class="single-prod-total d-flex justify-content-end">
-                <h5 class="t-m brown-color prod-price-single">NT$ 3000</h5>
-              </div>
-            </div>
+            <?php endforeach;  ?>
+
             <div class="col-12 order-box order-box-total">
               <div class="detail-box-total">
                 <div class="detail-all detail-time d-flex justify-content-between">
                   <h6 class=" text-gray t-s ">價格：</h6>
-                  <h6 class=" text-gray t-s ">2039</h6>
+                  <h6 class=" text-gray t-s totleAmount"></h6>
                 </div>
                 <div class="detail-all detail-quan d-flex justify-content-between ">
                   <h6 class=" text-gray t-s ">折扣卷：</h6>
-                  <h6 class=" text-gray t-s ">( NEDDDF ) &nbsp; <span class="prod-price-single t-m danger-color">- 404</span></h6>
+                  <h6 class=" text-gray t-s ">( 2020WELCOME ) &nbsp; <span class="prod-price-single t-m danger-color coupon-price">- 0</span></h6>
                 </div>
               </div>
               <div class="single-prod-total d-flex justify-content-end">
                 <h5 class="brown-color t-m ">總計：</h5>
-                <h5 class="t-m prod-price-single danger-color ">NT$ 3000</h5>
+                <h5 class="t-m prod-price-single danger-color"></h5>
               </div>
             </div>
           </div>
@@ -346,6 +343,10 @@
   let couponNo = document.querySelector('#couponNo')
   let coupon = document.querySelector('.coupon-items')
 
+  const dallorCommas = function(n) {
+    return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  };
+
   // couponYes.addEventListener('click', function() {
   //   coupon.classList.remove('unable');
 
@@ -368,6 +369,148 @@
     $('.coupon-items').slideDown()
 
   })
+
+  function total() {
+    let total = 0;
+    $('.total-box-item').each(function() {
+      price = parseInt($(this).html())
+      console.log('$(this).html()', $(this).html())
+      total += price;
+    })
+    $('.totleAmount').text('NT$ ' + dallorCommas(total))
+    $('.totleAmount').attr('data-total', total)
+    $('.coupon-price').text('-$ ' + dallorCommas(parseInt(total * 0.2)))
+
+  }
+  total();
+
+
+  // function coupon() {
+  //   let total = $('.totleAmount').text();
+  //   $('.total-box-item').each(function() {
+  //     price = parseInt($(this).html())
+  //     console.log('$(this).html()', $(this).html())
+  //     total += price;
+  //   })
+  //   $('.totleAmount').text('NT$ ' + dallorCommas(total))
+  //   $('.coupon-price').text('-$ ' + dallorCommas(parseInt(total * 0.2)))
+
+  // }
+  // total();
+
+
+
+
+
+
+
+
+
+  $('.form-quan').each(function() {
+    let form_title = $(this).find('.title-box-item').html();
+    let form_sid = parseInt($(this).attr('data-sid'));
+    let form_man = parseInt($(this).attr('data-man'));
+    let form_pet = parseInt($(this).attr('data-pet'));
+    let form_inner = $('.info-form');
+    let xl_title = `<div class="contacts-box  col-12 form-box-title green-color t-m title1-m t-bold ">【 ${form_title} 】旅客資料：</div>`;
+    let dayDisplay = ''
+    // let dayDisplay_all = ''
+    let dayDisplay_pet = ''
+    console.log('form_title', form_title)
+
+    for (let i = 1; i < form_man + 1; i++) {
+      dayDisplay += `<div class="col-12 form-box contacts-box" data-sid="${form_sid}" data-type="man" >
+              <div class="row">
+                <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">旅客 ${i}</h5>
+              </div>
+
+              <div class="row">
+                <div class="col-12 col-lg-6 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all" name="lastName" for="lastName">姓氏：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
+                  <input  class="form-input form-error" type="text" name="prod${form_sid}-lastName-${i}" placeholder="例：陳" required>
+                  <small class="form-feedback danger-color t-xs"></small>
+                </div>
+                <div class="col-12 col-lg-6 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all " name="firstName" for="firstName">名子：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
+                  <input  class="form-input" type="text" name="prod${form_sid}-firstName-${i}" placeholder="例：毛毛" required>
+                  <small class="form-feedback danger-color t-xs"></small>
+                </div>
+                <div class="col-8 col-lg-6 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all " name="idCard" for="idCard">身分證字號：（行程保險中使用）&nbsp;<span class="danger-color">*</span></label>
+                  <input  class="form-input" type="text" name="prod${form_sid}-idCard-${i}" placeholder="例：A0000000000" required>
+                </div>
+
+                <div class="col-12 col-lg-6 d-flex flex-column one-form">
+                  <label class="text-color t-s label-all " name="birthday" for="birthday">出生 年/月/日：（行程保險中使用）&nbsp;<span class="danger-color">*</span></label>
+                  <input  class="form-input" type="date" name="prod${form_sid}-birthday-${i}" required>
+                </div>
+              </div>
+
+            </div>`
+    }
+    for (let k = 1; k < form_pet + 1; k++) {
+      dayDisplay_pet += `<div class="col-12 form-box contacts-box" data-sid="${form_sid}" data-type="pet">
+      <div class="row">
+       <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">寵物${k}</h5>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-6 d-flex flex-column one-form">
+          <label class="text-color t-s label-all" name="petName" for="petName">寶貝稱呼： &nbsp;&nbsp;<span class="danger-color">*</span></label>
+          <input  class="form-input" type="text" name="prod${form_sid}-petName$-${k}" placeholder="例：毛日日" required>
+        </div>
+        <div class="col-8 col-lg-6 d-flex flex-column one-form">
+          <label class="text-color t-s label-all " name="petSize" for="petSize">體型： &nbsp;&nbsp;<span class="danger-color">*</span></label>
+          <select class="form-input" name="prod${form_sid}-petSize-${k}">
+            <option class="option-style" name="0" value="0">請選擇</option>
+            <option name="lSize" value="lSize">大型犬</option>
+            <option name="MSize" value="MSize">中型犬</option>
+            <option name="SSize" value="SSize">小型犬</option>
+          </select>
+        </div>
+        <div class="col-12 col-lg-12 d-flex flex-column one-form">
+          <label class="text-color t-s label-all " name="notes" for="notes">備註： &nbsp;&nbsp;<span class="danger-color">*</span></label>
+          <input class="form-input" type="text" name="prod${form_sid}-notes-${k}" >
+        </div>
+      </div>
+      </div>`
+    }
+
+    // xl_title + dayDisplay + dayDisplay_pet;
+
+    form_inner.append(xl_title + dayDisplay + dayDisplay_pet);
+
+  })
+
+
+  // $('#pay-btn').click(function() {
+  //       let mainLastName = $('#mainLastName').val();
+  //       let mainFirstName = $('#mainFirstName').val();
+  //       let mainGender = $('#mainGender').val();
+  //       let phone = $('#phone').val();
+  //       let email = $('#email').val();
+  //       let coupon = '2020WELCOME';
+
+  //       $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', {
+  //         mainLastName: mainLastName,
+  //         mainFirstName: mainFirstName,
+  //         mainGender: mainGender,
+  //         phone: phone,
+  //         email: email,
+  //         coupon: coupon,
+  //       }, function(data) {
+  //         console.log(data);
+  //         // countCart(data);
+
+  //       });
+
+
+
+
+
+  // $('#pay-btn').on('click', function() {
+
+  // })
 
 
   // ------JS結束 勿刪到-------
