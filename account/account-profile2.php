@@ -40,7 +40,7 @@
                                     ?>
                                     <!-- <div class="form-group text-center"> -->
                                     <div class="member-img   position-absolute">
-                                        <img src="./img/avatar-1.jpg" id="profileDisplay" alt="">
+                                        <img src="./img/avatar-2.jpg" id="profileDisplay" alt="">
                                     </div>
                                     <button class=" btn-none camera-icon" onclick="triggerClick()">
                                         <img src="../icon/camera.svg" alt="">
@@ -120,7 +120,7 @@
                             <div class="row" id="pet-info">
                                 <div class="col-12 col-lg-4 pet-card d-flex justify-content-center">
                                     <div class="pet-img">
-                                        <img src="./img/head.png" alt="">
+                                        <img src="./img/profile-edit1.jpg" alt="">
                                     </div>
                                     <a href="./account-edit.php" class="edit-round">
                                         <img src="./img/edit-round.svg" alt="">

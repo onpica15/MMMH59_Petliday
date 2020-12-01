@@ -28,18 +28,20 @@
                 </div>
               </div>
               <div class="row pet-avatar justify-content-center">
-                <div class="avatar-img">
-                  <img src="./img/avatar-pet3.jpg" alt="">
-                </div>
-                <!-- uploadimg -->
-                <form name="form1" style="display: none">
-                  <input type="file" name="avatar" accept="image/*" />
-                </form>
 
-                <button class="btn-none camera-icon" onclick="field.click()">
+                <!-- uploadimg -->
+                <?php
+                require __DIR__ . './processForm.php';
+                ?>
+                <div class="avatar-img">
+                  <img src="./img/head.png" id="profileDisplay" alt="">
+                </div>
+                <button class=" btn-none camera-icon" onclick="triggerClick()">
                   <img src="../icon/camera.svg" alt="">
                 </button>
-                <img id="myimg" src="" alt="" />
+                <input type="file" name="profileImage" onchange="displayImage(this)" id="profileImage" style="display: none;">
+
+
 
                 <!-- endof uploadimg -->
               </div>
@@ -115,23 +117,27 @@
               <div class="row justify-content-center my-2">
 
                 <div class="bar d-flex">
-                  <button class="col col-md-1 btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
+                  <button class="col col-md-1 btn-prev align-self-center border-btn-prev1"><i class="fas fa-caret-left"></i></button>
 
                   <div class="col col-md-10 color-bar d-flex">
-                    <div class="square mr-3 d-flex justify-content-center align-items-center">
-                      <img src="./img/hat1.svg" alt="">
+                    <div class="selected-border1 active">
+                      <div class="square mr-3 d-flex justify-content-center align-items-center">
+                        <img src="./img/hat1.svg" alt="">
+                      </div>
                     </div>
-                    <div class="orange square mr-3 d-flex justify-content-center align-items-center">
-                      <img src="./img/hat2.svg" alt="">
-
+                    <div class="selected-border1">
+                      <div class="orange square mr-3 d-flex justify-content-center align-items-center">
+                        <img src="./img/hat2.svg" alt="">
+                      </div>
                     </div>
-                    <div class="blue square mr-3 d-flex justify-content-center align-items-center">
-                      <img src="./img/hat3.svg" alt="">
-
+                    <div class="selected-border1">
+                      <div class="blue square mr-3 d-flex justify-content-center align-items-center">
+                        <img src="./img/hat3.svg" alt="">
+                      </div>
                     </div>
 
                   </div>
-                  <button class="col col-md-1 btn-next align-self-center"><i class="fas fa-caret-right"></i></button>
+                  <button class="col col-md-1 btn-next align-self-center border-btn-next1"><i class="fas fa-caret-right"></i></button>
 
                 </div>
               </div>
@@ -160,30 +166,35 @@
               <div class="row justify-content-center my-2">
 
                 <div class="bar d-flex">
-                  <button class="col col-md-1 btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
+                  <button class="col col-md-1 btn-prev align-self-center border-btn-prev2"><i class="fas fa-caret-left"></i></button>
 
                   <div class="col col-md-10 color-bar d-flex">
-                    <div class="square mr-3 d-flex justify-content-center align-items-center">
-                      <img src="./img/bow.svg" alt="">
+                    <div class="selected-border2 active">
+                      <div class="square mr-3 d-flex justify-content-center align-items-center">
+                        <img src="./img/bow.svg" alt="">
+                      </div>
                     </div>
-                    <div class="orange square mr-3 d-flex justify-content-center align-items-center">
-                      <img src="./img/glass.svg" alt="">
+                    <div class="selected-border2">
+                      <div class="orange square mr-3 d-flex justify-content-center align-items-center">
+                        <img src="./img/glass.svg" alt="">
 
+                      </div>
                     </div>
-                    <div class="blue square mr-3 d-flex justify-content-center align-items-center">
-                      <img src="./img/neckless.svg" alt="">
-
+                    <div class="selected-border2">
+                      <div class="blue square mr-3 d-flex justify-content-center align-items-center">
+                        <img src="./img/neckless.svg" alt="">
+                      </div>
                     </div>
 
                   </div>
-                  <button class="col col-md-1 btn-next align-self-center"><i class="fas fa-caret-right"></i></button>
+                  <button class="col col-md-1 btn-next align-self-center border-btn-next2"><i class="fas fa-caret-right"></i></button>
 
                 </div>
               </div>
               <!--endof top decoration bar -->
               <div class="row justify-content-center">
                 <button class="btn">全部清除</button>
-                <a class="btn" href="account-profile.php">儲存修改</a>
+                <a class="btn" href="account-profile2.php">儲存修改</a>
 
               </div>
             </div>
@@ -211,14 +222,11 @@
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
 <?php include __DIR__ . '/../parts/html-script.php' ?>
+<script src="script.js"></script>
+
 <script>
   // ------JS開始 以上勿刪-------
   <?php include __DIR__ . '/../account/account-aside-bar-js.php' ?>
-
-  $('.selected-border').on('click', function() {
-    // 點到就加active
-    $(this).addClass('active')
-  })
 
   $('.border-btn-next').on('click', function() {
     if ($('.selected-border.active').next().length > 0) {
@@ -230,6 +238,27 @@
     // console.log('hi', $('.selected-border.active'))
     if ($('.selected-border.active').prev().length > 0) {
       $('.selected-border.active').removeClass('active').prev().addClass('active')
+    }
+  })
+
+  $('.border-btn-next1').on('click', function() {
+    if ($('.selected-border1.active').next().length > 0) {
+      $('.selected-border1.active').removeClass('active').next().addClass('active')
+    }
+  })
+  $('.border-btn-prev1').on('click', function() {
+    if ($('.selected-border1.active').prev().length > 0) {
+      $('.selected-border1.active').removeClass('active').prev().addClass('active')
+    }
+  })
+  $('.border-btn-next2').on('click', function() {
+    if ($('.selected-border2.active').next().length > 0) {
+      $('.selected-border2.active').removeClass('active').next().addClass('active')
+    }
+  })
+  $('.border-btn-prev2').on('click', function() {
+    if ($('.selected-border2.active').prev().length > 0) {
+      $('.selected-border2.active').removeClass('active').prev().addClass('active')
     }
   })
 

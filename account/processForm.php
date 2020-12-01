@@ -1,6 +1,4 @@
 <?php
-require __DIR__ . '/../parts/config.php';
-
 $msg = "";
 $msg_class = "";
 

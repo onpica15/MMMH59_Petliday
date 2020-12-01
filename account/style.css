@@ -354,11 +354,15 @@ button:focus {
   border: 1px solid#9f5d38;
   border-radius: 20px;
 }
-.selected-border {
+.selected-border,
+.selected-border1,
+.selected-border2 {
   /* width: 80px; */
   height: 100%;
 }
-.selected-border.active {
+.selected-border.active,
+.selected-border1.active,
+.selected-border2.active {
   border: 2px solid #ffa12c;
   border-radius: 5px;
 }
