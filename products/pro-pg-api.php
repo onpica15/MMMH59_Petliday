@@ -15,13 +15,13 @@ $petQ = isset($_GET['petQ']) ? intval($_GET['petQ']) : 1;
 $date = isset($_GET['date']) ? intval($_GET['date']) : 1;
 $item = isset($_GET['item']) ? intval($_GET['item']) : 1;
 
+$total = isset($_GET['total']) ? $_GET['total'] : '4280';
+
 
 switch ($action) {
-
     default:
     case 'read':
         break;
-
     case 'add':
         if (!$sid or !$manQ) {
             $output['code'] = 401;
@@ -30,6 +30,8 @@ switch ($action) {
             if (isset($_SESSION['cart']['sid'])) {
                 $_SESSION['cart'][$sid]['manQ'] = $manQ;
                 $_SESSION['cart'][$sid]['petQ'] = $petQ;
+                $_SESSION['cart'][$sid]['total'] = $total;
+                $_SESSION['cart'][$sid]['date'] = $date;
                 $_SESSION['cart'][$date]['date'] = $date;
                 $_SESSION['cart'][$date]['item'] = $item;
             } else {
@@ -44,19 +46,18 @@ switch ($action) {
                     $row['petQ'] = $petQ;
                     $row['date'] = $date;
                     $row['item'] = $item;
+                    $row['total'] = $total;
                     $_SESSION['cart'][$row['sid']] = $row;
                 }
             }
         }
         break;
-
     case 'remove':
         if (isset($_SESSION['cart'][$sid])) {
             unset($_SESSION['cart'][$sid]);
         } else {
             $output['code'] = 402;
         }
-
         break;
 }
 $output['cart'] = $_SESSION['cart'];
