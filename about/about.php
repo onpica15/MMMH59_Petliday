@@ -80,8 +80,11 @@
     <!-- timeline -->
     <div class="container timeline">
         <div class="row position-relative">
-            <figure class="col-12">
+            <figure class="col-12 timeline-d">
                 <img src="../index/img/illustration/milestone.png" alt="">
+            </figure>
+            <figure class="col-12 timeline-m">
+                <img src="../index/img/illustration/milestone2.png" alt="">
             </figure>
             <div class="detail-wrap position-absolute">
                 <p>於課程中塑造了Petliday的雛形</p>
@@ -142,18 +145,81 @@
         </div>
     </div>
     <!-- 內容的部分 -->
-    <div class="container">
+    <div class="container wat-info">
         <div class="row d-flex flex-start">
-            <div class="box pro-ppl col-2 text-center b-b">
+            <div class="box pro-ppl col-xl-2 text-center b-b">
                 <p>專業人員</p>
             </div>
-            <div class="box safe-place col-2 text-center b-b">
+            <div class="box safe-place col-xl-2 text-center b-b">
                 <p>安心場地</p>
             </div>
         </div>
         <div class="row">
             <div class="box info-cont b-b">
-
+                <div class="row d-flex justify-content-around">
+                    <div class="info-ppl-wrap col-lg-3 col-sm-12">
+                        <div class="box">
+                            <figure>
+                                <img src="../index/img/ppl-1.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="ppl-info-text-wrap">
+                            <p class="green-color text-center">王建成</p>
+                            <hr>
+                            <p class="text-center">專業獸醫</p>
+                            <p>中興大學獸醫臨床研究所麻醉暨急重症加護科研究室<br>
+                                前劍橋動物醫院醫師<br>
+                                日本北海道酪農大學獸醫教學醫院 麻醉科 研習<br>
+                                日本鹿兒島大學獸醫教學醫院 研習</p>
+                        </div>
+                    </div>
+                    <div class="info-ppl-wrap col-lg-3 col-sm-12">
+                        <div class="box">
+                            <figure>
+                                <img src="../index/img/ppl-2.jpg" alt=""></figure>
+                        </div>
+                        <div class="ppl-info-text-wrap">
+                            <p class="green-color text-center">邱茹甄</p>
+                            <hr>
+                            <p class="text-center">專業獸醫</p>
+                            <p>國家獸醫師專門職業及技術人員等考試合格<br>
+                                前台北愛心動物醫院 主治獸醫師<br>
+                                現任湖光動物醫院 主治獸醫師</p>
+                        </div>
+                    </div>
+                    <div class="info-ppl-wrap col-lg-3 col-sm-12">
+                        <div class="box">
+                            <figure>
+                                <img src="../index/img/ppl-3.jpg" alt=""></figure>
+                        </div>
+                        <div class="ppl-info-text-wrap">
+                            <p class="green-color text-center">謝明穎</p>
+                            <hr>
+                            <p class="text-center">寵物行為訓練師</p>
+                            <p>ABRA國際認證訓練師CDT-LE <br>
+                                第五屆亞洲訓練師/行為治療師培訓<br>
+                                完美狗狗訓練計劃研究聯盟訓練師<br>
+                                艾狗狗寵物工作室創辦人習</p>
+                        </div>
+                    </div>
+                    <div class="info-ppl-wrap col-lg-3 col-sm-12">
+                        <div class="box">
+                            <figure>
+                                <img src="../index/img/ppl-4.jpg" alt=""></figure>
+                        </div>
+                        <div class="ppl-info-text-wrap">
+                            <p class="green-color text-center">Leslie</p>
+                            <hr>
+                            <p class="text-center">專業寵物溝通師</p>
+                            <p>國立成功大學外文所碩士<br>
+                                2018 TACC動物溝通師<br>
+                                2019 TACC動物溝通講師 亞洲區動物溝通師大獎賽 優等獎</p>
+                        </div>
+                    </div>
+                </div>
+                <span>
+                    <p class="row swipe-m text-gray" style="font-size: 12px; margin:0;">可左右滑動觀看更多</p>
+                </span>
             </div>
         </div>
     </div>
@@ -184,7 +250,7 @@
     </div>
     <!-- 內容內容的部分 -->
     <div class="container">
-        <div class="row icon-row justify-content-around">
+        <div class="row icon-row justify-content-between">
             <div class="obj-wrap text-center">
                 <figure class="icon">
                     <svg id="Capa_1" enable-background="new 0 0 512 512" height="65" viewBox="0 0 512 512" width="65" xmlns="http://www.w3.org/2000/svg">
