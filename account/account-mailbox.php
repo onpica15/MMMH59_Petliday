@@ -2,6 +2,8 @@
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <!-- --- css 連結放下面 ----- -->
 <link rel="stylesheet" href="mailbox.css">
+<link rel="stylesheet" href="<?= WEB_ROOT ?>account/style.css">
+
 
 
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
@@ -50,7 +52,7 @@
                                 <div class="mail-wrap">
                                     <div class="collapsible coll-box-title row justify-content-start">
                                         <input type="checkbox" class="mx-0" style="height: 20px;">
-                                        <div class="title-wrap col-lg-8 col-sm-9 row justify-content-between mx-0">
+                                        <div class="title-wrap col-lg-8 row justify-content-between">
                                             <img src="../index/img/logo.png" alt="">
                                             <p>
                                                 小編手把手教您怎麼訂購最划算
@@ -76,7 +78,7 @@
                                 <div class="mail-wrap">
                                     <div class="collapsible coll-box-title row justify-content-start">
                                         <input type="checkbox" class="mx-0" style="height: 20px;">
-                                        <div class="title-wrap col-lg-8 col-sm-9 row justify-content-between mx-0">
+                                        <div class="title-wrap col-lg-8 row justify-content-between">
                                             <img src="../index/img/logo.png" alt="">
                                             <p>
                                                 小編手把手教您怎麼訂購最划算
@@ -102,7 +104,7 @@
                                 <div class="mail-wrap">
                                     <div class="collapsible coll-box-title row justify-content-start">
                                         <input type="checkbox" class="mx-0" style="height: 20px;">
-                                        <div class="title-wrap col-lg-8 col-sm-9 row justify-content-between mx-0">
+                                        <div class="title-wrap col-lg-8 row justify-content-between">
                                             <img src="../index/img/logo.png" alt="">
                                             <p>
                                                 小編手把手教您怎麼訂購最划算
@@ -128,7 +130,7 @@
                                 <div class="mail-wrap">
                                     <div class="collapsible coll-box-title row justify-content-start">
                                         <input type="checkbox" class="mx-0" style="height: 20px;">
-                                        <div class="title-wrap col-lg-8 col-sm-9 row justify-content-between mx-0">
+                                        <div class="title-wrap col-lg-8 row justify-content-between">
                                             <img src="../index/img/logo.png" alt="">
                                             <p>
                                                 小編手把手教您怎麼訂購最划算
@@ -154,7 +156,7 @@
                                 <div class="mail-wrap">
                                     <div class="collapsible coll-box-title row justify-content-start">
                                         <input type="checkbox" class="mx-0" style="height: 20px;">
-                                        <div class="title-wrap col-lg-8 col-sm-9 row justify-content-between mx-0">
+                                        <div class="title-wrap col-lg-8 row justify-content-between">
                                             <img src="../index/img/logo.png" alt="">
                                             <p>
                                                 小編手把手教您怎麼訂購最划算
@@ -209,9 +211,6 @@
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
     // ------JS開始 以上勿刪-------
-
-    <?php include __DIR__ . '/../account/account-aside-bar-js.php' ?>
-
 
     var coll = document.getElementsByClassName("collapsible");
     var i;
