@@ -28,11 +28,17 @@
                 </div>
               </div>
               <div class="row pet-avatar justify-content-center">
-
+                <div class="edit">
+                  <img src="./img/edit-hat1.png" alt="">
+                </div>
+                <div class="edit">
+                  <img src="./img/edit-decor1.png" alt="">
+                </div>
                 <!-- uploadimg -->
                 <?php
                 require __DIR__ . './processForm.php';
                 ?>
+
                 <div class="avatar-img">
                   <img src="./img/head.png" id="profileDisplay" alt="">
                 </div>
@@ -72,20 +78,20 @@
                   <button class="col col-md-1 btn-prev border-btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
 
                   <div class="col col-md-10 color-bar d-flex justify-content-around">
-                    <div class=" selected-border ">
-                      <div class="red ball" style="background-color: rgb(255, 83, 83);"></div>
+                    <div class=" selected-border d-flex align-items-center">
+                      <div class="mx-2 red ball pick" style="background-color: rgb(255, 83, 83);"></div>
                     </div>
-                    <div class=" selected-border ">
-                      <div class="blue ball" style="background-color: rgb(89, 180, 255);"></div>
+                    <div class=" selected-border d-flex align-items-center">
+                      <div class="mx-2 blue ball pick" style="background-color: rgb(89, 180, 255);"></div>
                     </div>
-                    <div class=" selected-border active">
-                      <div class="orange ball" style="background-color: #ffa12c;"></div>
+                    <div class=" selected-border active d-flex align-items-center">
+                      <div class="mx-2 orange ball pick" style="background-color: #ffa12c;"></div>
                     </div>
-                    <div class=" selected-border ">
-                      <div class="purple ball" style="background-color: rgb(170, 85, 219);"></div>
+                    <div class=" selected-border d-flex align-items-center">
+                      <div class="mx-2 purple ball pick" style="background-color: rgb(170, 85, 219);"></div>
                     </div>
-                    <div class="selected-border">
-                      <div class="green ball" style="background-color: #00907c;"></div>
+                    <div class="selected-border d-flex align-items-center">
+                      <div class="mx-2 green ball pick" style="background-color: #00907c;"></div>
                     </div>
                   </div>
                   <button class="col col-md-1 btn-next border-btn-next align-self-center"><i class="fas fa-caret-right"></i></button>
@@ -119,19 +125,19 @@
                 <div class="bar d-flex">
                   <button class="col col-md-1 btn-prev align-self-center border-btn-prev1"><i class="fas fa-caret-left"></i></button>
 
-                  <div class="col col-md-10 color-bar d-flex">
-                    <div class="selected-border1 active">
-                      <div class="square mr-3 d-flex justify-content-center align-items-center">
+                  <div class="col col-md-10 color-bar d-flex justify-content-around">
+                    <div class="selected-border1 active d-flex align-items-center">
+                      <div class="mx-2">
                         <img src="./img/hat1.svg" alt="">
                       </div>
                     </div>
-                    <div class="selected-border1">
-                      <div class="orange square mr-3 d-flex justify-content-center align-items-center">
+                    <div class="selected-border1 d-flex align-items-center">
+                      <div class="mx-2">
                         <img src="./img/hat2.svg" alt="">
                       </div>
                     </div>
-                    <div class="selected-border1">
-                      <div class="blue square mr-3 d-flex justify-content-center align-items-center">
+                    <div class="selected-border1 d-flex align-items-center">
+                      <div class="mx-2">
                         <img src="./img/hat3.svg" alt="">
                       </div>
                     </div>
@@ -169,20 +175,19 @@
                   <button class="col col-md-1 btn-prev align-self-center border-btn-prev2"><i class="fas fa-caret-left"></i></button>
 
                   <div class="col col-md-10 color-bar d-flex">
-                    <div class="selected-border2 active">
-                      <div class="square mr-3 d-flex justify-content-center align-items-center">
+                    <div class="selected-border2 active d-flex align-items-center">
+                      <div class="mx-2">
                         <img src="./img/bow.svg" alt="">
                       </div>
                     </div>
-                    <div class="selected-border2">
-                      <div class="orange square mr-3 d-flex justify-content-center align-items-center">
+                    <div class="selected-border2 d-flex align-items-center">
+                      <div class="mx-2">
                         <img src="./img/glass.svg" alt="">
-
                       </div>
                     </div>
-                    <div class="selected-border2">
-                      <div class="blue square mr-3 d-flex justify-content-center align-items-center">
-                        <img src="./img/neckless.svg" alt="">
+                    <div class="selected-border2 d-flex align-items-center">
+                      <div class="mx-2">
+                        <img src="./img/neckless.svg" alt="" style="width: 102px;">
                       </div>
                     </div>
 
@@ -261,7 +266,12 @@
       $('.selected-border2.active').removeClass('active').prev().addClass('active')
     }
   })
-
+  // .avatar-img img boxshadow//.pick
+  $('.pick').on('click', function() {
+    // console.log('hi')
+    let color = $(this).css('background-color')
+    $('.avatar-img img').css('boxshadow', color)
+  })
 
   // ------JS結束 勿刪到-------
 </script>
