@@ -867,6 +867,9 @@ to{
     .rate-all{
         height: 16.5px;
     }
+    .rate-scroll{
+        animation: none;
+    }
     .intro{
         margin-left: 0;
         margin-right: 0;
