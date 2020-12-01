@@ -31,10 +31,7 @@
                             </div>
                             <div class="row member-info">
                                 <div class="col-12 col-lg-4 position-relative member-card ">
-                                    <div class="member-img   position-absolute">
-                                        <img src="./img/avatar-1.jpg" alt="">
 
-                                    </div>
 
 
                                     <!-- uploadimg -->
@@ -42,11 +39,24 @@
                                     require __DIR__ . './processForm.php';
                                     ?>
                                     <div class="form-group text-center">
-                                        <img src="img/head.png" onclick="triggerClick()" id="profileDisplay">
-                                        <!-- <label for="profileTmage">profile image</label> -->
+                                        <div class="member-img   position-absolute">
+                                            <img src="./img/avatar-1.jpg" id="profileDisplay" alt="">
+                                        </div>
+                                        <button class=" btn-none camera-icon" onclick="triggerClick()">
+                                            <img src="../icon/camera.svg" alt="">
+                                        </button>
                                         <input type="file" name="profileImage" onchange="displayImage(this)" id="profileImage" style="display: none;">
                                     </div>
-
+                                    <!-- 網路上的 -->
+                                    <?php
+                                    // require __DIR__ . './processForm.php';
+                                    ?>
+                                    <!-- <div class="form-group text-center">
+                                        <img src="img/head.png" onclick="triggerClick()" id="profileDisplay">
+                                        <label for="profileTmage">profile image</label>
+                                        <input type="file" name="profileImage" onchange="displayImage(this)" id="profileImage" style="display: none;">
+                                    </div> -->
+                                    <!-- 老師教的 -->
                                     <!-- <form name="form1" style="display: none">
                                         <input type="file" name="avatar" accept="image/*" />
                                     </form>
@@ -54,9 +64,8 @@
                                     <button class="btn-none camera-icon" id="save_profile" onclick="field.click()">
                                         <img src="../icon/camera.svg" alt="">
                                     </button>
-                                    <img id="myimg" src="" alt="" />
-                                    <div id="result"></div>
-                                    <div id="p-imgs"></div> -->
+                                    <img id="myimg" src="" alt="" /> -->
+
 
                                     <!-- endof uploadimg -->
                                     <div class="member-id text-center mt-3">
