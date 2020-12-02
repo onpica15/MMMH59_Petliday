@@ -1,16 +1,32 @@
-/* index-ratin */
-.index-rating{
+body {
+    position: relative;
+    width: 100%;
+  }
+
+.index-rating {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    right: -200px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 22vh;
+  }
+
+/* 外層 */
+.rating-title{
     width: 50px;
-    height: 145px;
+    height: 155px;
     background-color: #148F7C;
     border-radius: 3px 0px 0px 30px;
     cursor: pointer;
-    position: fixed;
+    /* position: fixed;
     bottom: 25vh;
-    right: 0vh;
+    right: 0vh; */
 }
 
-.index-rating span{
+.rating-title span{
     color: #fff;
     font-size: 16px;
     text-align: center;
@@ -22,23 +38,22 @@
     
 }
 
-.index-rating img{
-    width: 16px;
-    height: 16px;
+.index-rating .rating-title img{
+    width: 28px;
+    height: 28px;
     color: #fff;
     padding-top: 2px;
 }
 
-/* rating-info 如何讓骨頭被填色*/
+/* 內層：如何讓骨頭被填色*/
 .rating-info{
     width: 200px;
-    height: 145px;
+    height: 155px;
     background-color: #ccc;
     border-radius: 3px 0px 0px 30px;
     border-top:10px solid #1c9e8bab;
-    position: fixed;
-    bottom: 45vh;
-    right: 0vh;
+    /* position: fixed;
+    bottom: 25vh; */
 }
 
 .rating-info p{
