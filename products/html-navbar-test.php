@@ -422,6 +422,7 @@ $cs = $_SESSION['cart'][$sid];
     $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', function(data) {
       console.log(data);
       countCart(data.cart);
+      console.log(' countCart(data.cart)', countCart(data.cart));
     }, 'json');
 
 

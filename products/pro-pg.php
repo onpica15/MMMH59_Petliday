@@ -13,6 +13,7 @@ $rows = $pdo->query($sql)->fetch();
 ?>
 
 <?php include __DIR__ . '/../parts/html-head.php' ?>
+<?php include __DIR__ . '/../parts/html-script.php' ?>
 <link rel="stylesheet" href="pro-pg.css">
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
 <main>
@@ -890,7 +891,7 @@ $rows = $pdo->query($sql)->fetch();
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
-<?php include __DIR__ . '/../parts/html-script.php' ?>
+
 
 <!-- // ------JS開始 以上誤刪------- -->
 <script src="/petliday/products/calendar.js"></script>

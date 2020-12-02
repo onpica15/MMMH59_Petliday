@@ -1,6 +1,7 @@
 <?php include __DIR__ . '/../parts/config.php' ?>
 <?php $pageName = 'product-list'; ?>
 <?php include __DIR__ . '/../parts/html-head.php' ?>
+<?php include __DIR__ . '/../parts/html-script.php' ?>
 <link rel="stylesheet" href="pro-list.css">
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
 
@@ -308,7 +309,7 @@
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
-<?php include __DIR__ . '/../parts/html-script.php' ?>
+
 <script src="/Petliday/products/pro-list.js"></script>
 <script>
     // <!-- ajax同步 -->

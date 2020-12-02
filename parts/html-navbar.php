@@ -325,7 +325,7 @@
 
     function additem(cart) {}
 
-    $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', function(data) {
+    $.get('<?= WEB_ROOT ?>products/pro-pg-api.php', function(data) {
       console.log(data);
       countCart(data.cart);
     }, 'json');

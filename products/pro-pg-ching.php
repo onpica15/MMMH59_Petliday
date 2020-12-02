@@ -943,7 +943,7 @@ $rows = $pdo->query($sql)->fetch();
         console.log('petQ', petQ)
         console.log('date', date)
 
-        $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', {
+        $.get('<?= WEB_ROOT ?>products/pro-pg-api.php', {
                 sid: sid,
                 manQ: manQ,
                 petQ: petQ,

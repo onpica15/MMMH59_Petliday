@@ -33,7 +33,7 @@
 
 
           <div class=" prod-img col-2 col-lg-2">
-            <img src="../products/img/pd<?= $i['sid'] ?>.jpg" alt="">
+            <img src="../products/img/prolist<?= $i['sid'] ?>.jpg" alt="">
           </div>
           <div class="col-10 col-lg-6 prod-text d-flex flex-column justify-content-center">
             <h5 class="brown-color t-l title1-m"><?= $i['product_name'] ?></h5>
@@ -158,7 +158,7 @@
   // $('span.total-items').text(countCart() + '件商品');
 
   function removeItem(sid) {
-    $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', {
+    $.get('<?= WEB_ROOT ?>products/pro-pg-api.php', {
         sid: sid,
         action: 'remove'
       },
@@ -431,7 +431,7 @@
     const subButton1 = $(this).closest('.prod-item ').find('.pet-box .subIcon');
 
 
-    $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', {
+    $.get('<?= WEB_ROOT ?>products/pro-pg-api.php', {
       sid: tr,
       action: 'add',
       manQ: mQuantity,
