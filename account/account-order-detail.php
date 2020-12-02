@@ -12,7 +12,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <?php include __DIR__ . '/../account/account-aside-bar.php' ?>
+            <?php include __DIR__ . '/../account/account-aside-bar-c.php' ?>
 
             <div class="col-12 col-lg-9">
                 <div class="tab-content" id="nav-tabContent">

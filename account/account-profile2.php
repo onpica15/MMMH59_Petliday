@@ -119,7 +119,7 @@
                             <!-- 單筆寵物資料 -->
                             <div class="row" id="pet-info">
                                 <div class="col-12 col-lg-4 pet-card d-flex justify-content-center">
-                                    <div class="pet-img">
+                                    <div class="pet-img" style="box-shadow: 0 0 0 3px rgb(89, 180, 255);">
                                         <img src="./img/profile-edit2.jpg" alt="">
                                     </div>
                                     <a href="./account-edit.php" class="edit-round">
