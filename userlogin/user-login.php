@@ -14,8 +14,6 @@
     <div class="modal-content">
       <div class="login">
       
-        
-        
 
         <form class="login-form" name="login-form" onsubmit="checkForm(); return false;">
         <div id="info_bar" class="alert alert-danger" role="alert" style="display: none"></div>

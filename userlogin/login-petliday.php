@@ -3,18 +3,21 @@
 <!-- Model -->
 <div class="modal fade" id="register_show" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
+
+    <div class="modal-content">
       <div class="login">
-        <button data-dismiss="modal" class="close" style="margin-top: 20px;">
+
+        <form class="login-form" name="apply-form" onsubmit="checkForm(); return false; ">
+          <!-- return false避免預設的行為 -->
+        <div id="apply_info_bar" class="alert alert-danger" role="alert" style="display: none"></div>
+        <button data-dismiss="modal" class="close" style="position:absolute;top:14px;right:0;">
           <span aria-hidden="true">×</span>
         </button>
-
-        <form class="login-form" name="login-form" onsubmit="checkForm(); return false; ">
-        <!-- return false避免預設的行為 -->
+                                                                                                               
           <h2 class="t-xl">使用社群平台帳戶登入</h2>
           <h2 class="t-m">立即登入，隨時給毛孩獨家優惠</h2>
           <div class="login-social d-flex justify-content-center">
-            <div class="login-facebook m-4"><img src="./imgsfacebook.svg" alt=""></div>
+            <div class="login-facebook m-4"><img src="./imgs/facebook.svg" alt=""></div>
             <div class="login-line m-4"><img src="./imgs/LINE.svg" alt=""></div>
             <div class="login-google m-4"><img src="./imgs/Google.svg" alt=""></div>
             <div class="login-apple m-4"><img src="./imgs/apple.svg" alt=""></div>
@@ -28,16 +31,20 @@
 
           <div class="login-group input-icon">
             <!-- <label for="account">帳號</label> -->
-            <input type="email" class="form-control" id="apply-email" name="email" placeholder="電子信箱" required  >
+            <input type="email" class="form-control" id="apply-email" name="apply-email" placeholder="電子信箱">
             <img class="icon-msg" src="./imgs/mail.svg">
-            <small class="form-text"></small>
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small class="form-text">此欄位必填</small>
           </div>
 
           <div class="login-group input-icon">
             <!-- <label for="password">密碼</label> -->
-            <input type="password" class="form-control" id="apply_password" name="password" placeholder="密碼">
+            <input type="password" class="form-control" id="apply_password" name="apply_password" placeholder="密碼">
             <img class="icon-psd" src="./imgs/password.svg">
-            <small class="form-text"></small>
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small class="form-text">此欄位必填</small>
           </div>
 
           <div class="login-group-2">
@@ -54,32 +61,70 @@
           <div class="auto-input">
             <button class="input-correct"></button>
           </div>
-                   
+
         </form>
       </div>
-    </div> 
+    </div>
   </div>
 </div>
 
 <!-- ---------------js/jq 開始 ------------------ -->
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
-  
-  const email = $('#apply-email'),
-    password = $('#apply_password');
+  const email_re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+  const email1 = $('#apply-email'),
+    password1 = $('#apply_password');
+    info_bar = $('#apply_info_bar')
 
-  function checkForm(){
-    let isPass = true;
+    function doSunmitForm() {
+      email1.next().text('');
 
-    if(email.val().length < 2){
-      isPass = false;
-      email.next().email('請填寫有效的電子信箱')
+      let isPass = true;
+
+      if (!email_re.test(email11.val())) {
+         isPass = false;
+         email1.closest('.login-group').addClass('error')
+      } else {
+        email1.closest('.login-group').removeClass('error')
+        email1.closest('.login-group').addClass('success');
+      }
+
+      if (password1.val().length < 3) {
+         isPass = false;
+         password1.closest('.login-group').addClass('error')
+      } else {
+        password1.closest('.login-group').removeClass('error')
+        password1.closest('.login-group').addClass('success');
+      }
+
+
+      if (isPass) {
+        $.post('login-petliday-api.php', $(document.apply-form).serialize(), function(data) {
+          console.log(data);
+          if (data.success) {
+            info_bar
+              .removeClass('alert-danger')
+              .addClass('alert-success')
+              .text('完成新增');
+          } else {
+            info_bar
+              .removeClass('alert-success')
+              .addClass('alert-danger')
+              .text(data.error || '新增失敗');
+          }
+          info_bar.slideDown();
+
+          setTimeout(function() {
+            info_bar.slideUp();
+          }, 2000);
+        }, 'json')
+      }
+
     }
-  }
 
 
-    // 一鍵輸入：正確登入
-    $('.input-correct').click(function(event) {
+  // 一鍵輸入：正確登入
+  $('.input-correct').click(function(event) {
     event.preventDefault();
     $('#apply-email').val('boy123@petliday.com');
     $('#apply_password').val('test123');

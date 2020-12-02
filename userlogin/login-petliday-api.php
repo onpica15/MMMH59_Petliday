@@ -20,7 +20,7 @@ $sql = "INSERT INTO `member_avatar`(
 $stmt = $pdo->prepare($sql);
 $stmt->execute([
         $_POST['email'],
-        $_POST['password']
+        $_POST['password'],
 ]);
 // 以上是真正執行的資料，然後再放到以下stmt裡面
 // 呼叫rowCount看有沒有新增

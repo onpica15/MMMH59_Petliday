@@ -92,7 +92,6 @@ body {
     position: relative;
     width: 1.8em;
     cursor: pointer;
-    /* color: #000; */
   }
   
 .rating-bone > label:hover,
@@ -105,7 +104,6 @@ body {
 .rating-bone > label:hover ~ label:before,
 .rating-bone > input.radio-btn:checked ~ label:before,
 .rating-bone > input.radio-btn:checked ~ label:before {
-    /* content: "\url('./imgs/bone-3.svg')"; */
     display: block;
     content:'';
     background-image: url(./imgs/bone-3.svg);
