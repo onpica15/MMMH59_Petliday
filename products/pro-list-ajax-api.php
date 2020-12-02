@@ -3,7 +3,7 @@
 $output = [];
 
 
-$getWhere = isset($_GET['where']) ? ($_GET['where']) : "`cate`=3 OR `cate`=2 OR `cate`=1 OR `cate`=4) AND (`area`='n'";
+$getWhere = isset($_GET['where']) ? ($_GET['where']) : "`cate`=3 OR `cate`=2 OR `cate`=1 OR `cate`=4) AND (`area`='n')";
 // `cate`=3 OR `cate`=2 OR `cate`=1 OR `cate`=4) AND (`area`='n'
 // $area = isset($_GET[`area`]) ? intval($_GET['`area`']) : 0;
 
@@ -19,7 +19,7 @@ $getWhere = isset($_GET['where']) ? ($_GET['where']) : "`cate`=3 OR `cate`=2 OR 
 
 //tag+++++++++++++++++++++++++++++++++++++++ 
 
-$where = " WHERE ($getWhere) ";
+$where = " WHERE ($getWhere ";
 // echo json_encode($where, JSON_UNESCAPED_UNICODE);
 
 // // $output['dTime'] = $time;

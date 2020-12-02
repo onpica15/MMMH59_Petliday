@@ -24,6 +24,7 @@
         box-shadow: 1px 2px 8px rgba(200, 200, 200, .5);
         position: relative;
         transition: .5s;
+        overflow: hidden;
     }
 
     .card .p {

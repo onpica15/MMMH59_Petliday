@@ -225,7 +225,7 @@ const subPetBtn = document.getElementById('sub-pet')
 if (window.matchMedia('(max-width: 425px)').matches) {
     // 手機版
     $(window).scroll(function () {
-        let nowTop = $(this).scrollTop();
+        let nowTop = $(window).scrollTop();
         if(nowTop >= 1932 ){
             $('.cate-fix').css('position','fixed').css('top','63px').css('left','15px')
             // $('.trip-section').css('padding-top','80px');
@@ -240,7 +240,7 @@ if (window.matchMedia('(max-width: 425px)').matches) {
     // 網頁版
 } else {
     $(window).scroll(function () {
-        let nowTop = $(this).scrollTop();
+        let nowTop = $(window).scrollTop();
         if(nowTop >= 1833 ){
             $('.cate-fix').css('position','fixed').css('top','63px').css('left','405px')
             $('.bg-dog').css('padding-top','80px');
@@ -303,17 +303,18 @@ $('.btn-cate').on('click',function(){
 })
 if (window.matchMedia('(max-width: 425px)').matches) {
     // 手機版 425 滑到區域變色
-    let nowTop = $(this).scrollTop();
+    
     $(window).scroll(function () {
+        let nowTop = $(this).scrollTop();
         switch (gotoPage){
             case 0:
-                if(nowTop === 1998) isScroll = true;
+                if(nowTop === 2000) isScroll = true;
                 break;
             case 1:
-                if(nowTop === 7045) isScroll = true;
+                if(nowTop === 3518) isScroll = true;
                 break;
             case 2:
-                if(nowTop === 7380) isScroll = true;
+                if(nowTop === 3550) isScroll = true;
                 break;
             case 3:
                 if(nowTop === 7790) isScroll = true;
@@ -328,33 +329,34 @@ if (window.matchMedia('(max-width: 425px)').matches) {
             default:
                 break;
         }
+        if(isScroll){
+            // console.log('手機版',nowTop)
+            if(nowTop<1940){
+                $('.bc1').css('background-color','#fff').siblings().css('background-color','#fff');;
+            }
+            else if(nowTop>1940 && nowTop<3340){
+                $('.bc1').css('background-color','#ffc072').siblings().css('background-color','#fff');
+            }
+            else if(nowTop>3340 && nowTop<3680){
+                $('.bc2').css('background-color','#ffc072').siblings().css('background-color','#fff');
+            }
+            else if(nowTop>3680 && nowTop<4000){
+                $('.bc3').css('background-color','#ffc072').siblings().css('background-color','#fff');
+            }
+            else if(nowTop>4000 && nowTop<4270){
+                $('.bc4').css('background-color','#ffc072').siblings().css('background-color','#fff');
+            }
+            else if(nowTop>4270 && nowTop<4650){
+                $('.bc5').css('background-color','#ffc072').siblings().css('background-color','#fff');
+            }
+            else if(nowTop>4650){
+                $('.bc6').css('background-color','#ffc072').siblings().css('background-color','#fff');
+            }
+        }
     })
-    if(isScroll){
-        if(nowTop<1940){
-            $('.bc1').css('background-color','#fff').siblings().css('background-color','#fff');;
-        }
-        else if(nowTop>1940 && nowTop<3340){
-            $('.bc1').css('background-color','#ffc072').siblings().css('background-color','#fff');
-        }
-        else if(nowTop>6830 && nowTop<7280){
-            $('.bc2').css('background-color','#ffc072').siblings().css('background-color','#fff');
-        }
-        else if(nowTop>7280 && nowTop<7760){
-            $('.bc3').css('background-color','#ffc072').siblings().css('background-color','#fff');
-        }
-        else if(nowTop>7760 && nowTop<8330){
-            $('.bc4').css('background-color','#ffc072').siblings().css('background-color','#fff');
-        }
-        else if(nowTop>8330 && nowTop<9200){
-            $('.bc5').css('background-color','#ffc072').siblings().css('background-color','#fff');
-        }
-        else if(nowTop>9200){
-            $('.bc6').css('background-color','#ffc072').siblings().css('background-color','#fff');
-        }
-    }
 }else{
     $(window).scroll(function () {
-        let nowTop = $(this).scrollTop();
+        let nowTop = $(window).scrollTop();
 
         switch (gotoPage){
             case 0:
@@ -380,8 +382,8 @@ if (window.matchMedia('(max-width: 425px)').matches) {
                 break;
         }
 
-
         if(isScroll){
+            // console.log('電腦版',nowTop)
             if(nowTop>1835 && nowTop<6830){
                 $('.bc1').css('background-color','#ffc072').siblings().css('background-color','#fff');
             }
@@ -412,15 +414,21 @@ if (window.matchMedia('(max-width: 425px)').matches) {
     $('.t1').on('click', function() {
         console.log('height', $(this).css('height'));
         if ($(this).css('height') === '300px') {
-            $(this).css('height', '960px').find('.hidden').css('display', 'inline-block');
+            $(this).css('height', '960px');
+            setTimeout(() => {
+                $(this).find('.hidden').css('opacity','1');
+            }, 200);
         } else {
-            $(this).css('height', '300px').find('.hidden').css('display', 'none');
+            $(this).css('height', '300px').find('.hidden').css('opacity','0').css('display', 'none');
         }
     });
     $('.t2').on('click', function() {
         console.log('height', $(this).css('height'));
         if ($(this).css('height') === '300px') {
-            $(this).css('height', '620px').find('.hidden').css('display', 'inline-block');
+            $(this).css('height', '620px');
+            setTimeout(() => {
+                $(this).find('.hidden').css('opacity','1');
+            }, 200);
         } else {
             $(this).css('height', '300px').find('.hidden').css('display', 'none');
         }
@@ -428,7 +436,10 @@ if (window.matchMedia('(max-width: 425px)').matches) {
     $('.t3').on('click', function() {
         console.log('height', $(this).css('height'));
         if ($(this).css('height') === '220px') {
-            $(this).css('height', '560px').find('.hidden').css('display', 'inline-block');
+            $(this).css('height', '560px');
+            setTimeout(() => {
+                $(this).find('.hidden').css('opacity','1');
+            }, 200);
         } else {
             $(this).css('height', '220px').find('.hidden').css('display', 'none');
         }
@@ -438,20 +449,28 @@ if (window.matchMedia('(max-width: 425px)').matches) {
     $('.t1').on('click', function() {
         console.log('height', $(this).css('height'));
         if ($(this).css('height') === '350px') {
-            $(this).css('height', '790px').find('.hidden').css('display', 'inline-block'); 
+            $(this).css('height', '790px')
+            setTimeout(() => {
+                $(this).find('.hidden').css('opacity','1');
+            }, 200);
         } else {
-            $(this).css('height', '350px').find('.hidden').css('display', 'none');
+            $(this).css('height', '350px').find('.hidden').css('opacity','0');
         }
     });
     $('.t2, .t3').on('click', function() {
         console.log('height', $(this).css('height'));
         if ($(this).css('height') === '350px') {
-            $(this).css('height', '570px').find('.hidden').css('display', 'inline-block');
+            $(this).css('height', '570px');
+            setTimeout(() => {
+                $(this).find('.hidden').css('opacity','1');
+            }, 200);
         } else {
-            $(this).css('height', '350px').find('.hidden').css('display', 'none');
+            $(this).css('height', '350px').find('.hidden').css('opacity','0');
         }
     });
 }
+
+// 推薦行程卡片 hover
         $('.c3').on('mouseenter', function() {
             $(this).find('.card-pic').css('height', '135px');
             $(this).find('.card-info').css({
@@ -469,7 +488,6 @@ if (window.matchMedia('(max-width: 425px)').matches) {
 
 // <!-- 愛心 收藏喜好清單 -->**********************************
 
-
     $('.heart-circle').on('click', function() {
         console.log('heart');
         let imgSrc = $(this).find('img').attr('src')
@@ -480,8 +498,6 @@ if (window.matchMedia('(max-width: 425px)').matches) {
             $(this).find('img').attr('src', '/Petliday/icon/heart-red.png');
         }
     });
-
-
 
     $('.btn-cate').on('click',function(){
         // console.log('hi',$(this).index())

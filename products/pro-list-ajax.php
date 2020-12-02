@@ -9,7 +9,7 @@
         <img src="/petliday/products/img/prolist-top.png" alt="">
     </div>
 </div>
-<div class="container">
+<div class="container top-container">
     <div class="row bread-row t-xs">
         <a href="">首頁</a> /
         <a href="">行程列表</a>
@@ -19,7 +19,7 @@
         <p class="topic-line"></p>
     </div>
 </div>
-<div class="container-fluid mt-5">
+<div class="container-fluid mt-4">
     <div class="row hot align-items-center justify-content-center w-100 m-0">
         <a class="arrow al mr-5">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.62 51.56" width="30px">
@@ -325,6 +325,7 @@
             <div class="card c3">
                 <div class="heart-circle">
                     <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
+                    <div class="heart heart-fly"><img src="/Petliday/icon/heart-red-fill.png" alt=""></div>
                 </div>
                 <a href="pro-pg.php?sid=${a.sid}" class="card-pic w-100">
                     <img src="/Petliday/products/img/prolist${a.sid}.jpg" alt="...">
@@ -359,9 +360,7 @@
         `;
     }
     // tag selection
-    $('.time a, .area a').on('click', function tagClick() {
-        $(this).toggleClass('tag-on');
-
+    function getWhere() {
         const dataTime = [];
         const dataArea = [];
         $('.time a.tag-on').each(function(i, el) {
@@ -401,8 +400,19 @@
             console.log('nono')
             whereStr = whereArray.join("");
         }
-        console.log('whereStr', whereStr);
         location.href = "#" + whereStr;
+
+        // 點擊標籤按鈕時同時確認排序
+        let order = $('.order select').val()
+        // console.log('order', order);
+        if (order === '依價錢低至高') {
+            whereStr = whereStr + ') ORDER BY CAST(`products`.`price_all` as SIGNED INTEGER) ASC';
+        } else if (order === '依價錢高至低') {
+            whereStr = whereStr + ') ORDER BY CAST(`products`.`price_all` as SIGNED INTEGER) DESC'
+        } else if (order === '依熱門程度') {
+            whereStr = whereStr + ')'
+        }
+        console.log('whereStr', whereStr);
 
         $.get('pro-list-ajax-api.php', {
                 where: whereStr,
@@ -418,7 +428,15 @@
                 }
                 $('.product-row').html(str);
             }, 'json');
-
+    }
+    $('.time a, .area a').on('click', function tagClick() {
+        $(this).toggleClass('tag-on');
+        getWhere()
+    })
+    // 排序點擊時更新卡片排序方式：熱門（預設sid) / 價錢低到高 / 價錢高到低
+    $('.order select').on('change', function() {
+        console.log('林阿嬤好')
+        getWhere()
     })
     $.get('pro-list-ajax-api.php', {
             none: '?',

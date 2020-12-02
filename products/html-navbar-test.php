@@ -337,27 +337,27 @@ $cs = $_SESSION['cart'][$sid];
   <main>
     <!-- $_SESSION['cart'][$sid] -->
 
-      <div class="cart-hover">
-        <div class="cart-box-top">
-          <img src="/Petliday/products/img/cart-top.svg" alt="">
+    <div class="cart-hover">
+      <div class="cart-box-top">
+        <img src="/Petliday/products/img/cart-top.svg" alt="">
+      </div>
+      <div class="cart-box d-flex justify-content-between">
+        <div class="cart-pic">
+          <img src="/Petliday/products/img/pd-caro1.jpg" alt="">
         </div>
-        <div class="cart-box d-flex justify-content-between">
-          <div class="cart-pic">
-            <img src="/Petliday/products/img/pd-caro1.jpg" alt="">
-          </div>
-          <div class="cart-text ml-4">
-            <p class="cart-title t-m">上山下海玩得夠！｜熱氣球嘉年華＆SUP體驗＆金針花海 花東三日遊</p>
-            <div class="cart-text-butt d-flex justify-content-between">
-              <div class="butt-left d-flex align-items-center">
-                <p class="cart-man mb-0 t-s text-gray">12/<?= $cs['date'] ?></p>
-                <p class="cart-man mb-0 mx-2 t-s text-gray">人數 x <?= $cs['manQ'] ?></p>
-                <p class="cart-pets mb-0 t-s text-gray">寵物 x <?= $cs['petQ'] ?></p>
-              </div>
-              <p class="cart-price mb-0 mr-2 t-l orange-color">＄<?= $cs['total'] ?></p>
+        <div class="cart-text ml-4">
+          <p class="cart-title t-m">上山下海玩得夠！｜熱氣球嘉年華＆SUP體驗＆金針花海 花東三日遊</p>
+          <div class="cart-text-butt d-flex justify-content-between">
+            <div class="butt-left d-flex align-items-center">
+              <p class="cart-man mb-0 t-s text-gray">12/<?= $cs['date'] ?></p>
+              <p class="cart-man mb-0 mx-2 t-s text-gray">人數 x <?= $cs['manQ'] ?></p>
+              <p class="cart-pets mb-0 t-s text-gray">寵物 x <?= $cs['petQ'] ?></p>
             </div>
+            <p class="cart-price mb-0 mr-2 t-l orange-color">＄<?= $cs['total'] ?></p>
           </div>
         </div>
       </div>
+    </div>
   </main>
 
   <!-- ---------------js/jq 開始 ------------------ -->

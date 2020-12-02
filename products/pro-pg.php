@@ -167,7 +167,7 @@ $rows = $pdo->query($sql)->fetch();
                         <div class="arrow">
                             <img src="/Petliday/icon/left-orange.png" alt="">
                         </div>
-                        <p class="cal-title fw-5">11月2020年</p>
+                        <p class="cal-title fw-5">12月2020年</p>
                         <div class="arrow">
                             <img src="/Petliday/icon/right-orange.png" alt="">
                         </div>
@@ -216,7 +216,7 @@ $rows = $pdo->query($sql)->fetch();
                     <!-- 彭版加減數量 end *****************************-->
 
                     <!-- ㄩㄐ版加減數量 start *****************************-->
-                    <div class="change-box justify-content-between">
+                    <div class="change-box">
                         <div class="man-box all-box">
                             <p class="pl-2 pb-2">人數</p>
                             <div class="change-man d-flex align-items-center" data-price="<?= $rows['price_man'] ?>">
@@ -257,7 +257,7 @@ $rows = $pdo->query($sql)->fetch();
                         </div>
                         <div class="select-price">
                             <span>總金額</span>
-                            <p class="t-xxl"></p>
+                            <p class="t-xxl danger-color"></p>
                         </div>
                     </div>
                     <div class="btn-twin d-flex justify-content-between">
@@ -422,14 +422,14 @@ $rows = $pdo->query($sql)->fetch();
                         <p>除了乳牛在草原散步、鴕鳥在旁奔跑，在場的我們熱情也不能少啊。</p>
                         <p>毛孩與爸媽準備好了嗎？準備來場難忘的冒險旅程吧！</p>
                         <p>遊戲時間約1小時，拍完大合照，就可以帶著寵物們自由活動。</p>
-                        <p id="prepare-section">三天的旅程即將劃下句點，期望大家帶著滿滿的收穫回家囉！</p>
+                        <p>三天的旅程即將劃下句點，期望大家帶著滿滿的收穫回家囉！</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- 資訊條款三排區 -->
-    <div class="white-bg">
+    <div id="prepare-section" class="white-bg">
         <div class="container">
             <div id="intention-section" class="term t1 w-100">
                 <div class="row justify-content-between align-items-center">

@@ -20,6 +20,10 @@ body{
 }
 
 /* 麵包屑 */
+
+.top-container{
+    margin-top: -80px;
+}
 .bread-row{
     padding-bottom: 48px;
 }
@@ -181,6 +185,7 @@ color: #00907c;
         fill: #e03d2d;
     }
 
+    /* card */
     .card {
         /* width: 100%; */
         min-width: 296px;
@@ -189,6 +194,7 @@ color: #00907c;
         box-shadow: 1px 2px 8px rgba(200, 200, 200, .5);
         position: relative;
         transition: .5s;
+        overflow: hidden;
     }
     .card:hover{
         text-decoration: none;
@@ -215,6 +221,34 @@ color: #00907c;
         width: 100%;
         object-fit: contain;
     }
+    .heart-fly{
+        /* top: 8px;
+        right: 8px; */
+        display: none;
+        transition: .5s ease-in;
+        /* position: fixed; */
+        position: absolute;
+    }
+    .fly-fly{
+        /* position: fixed;
+        top: 30px;
+        right: 450px; */
+        display: inline-block;
+        animation: fly 1s ease-in;
+    }
+    @keyframes fly{
+        from{
+            top: 8px;
+            right: 8px;
+            position: absolute;
+        }
+        to{
+        position: fixed;
+        top: -1000px;
+        right: -1550px;
+        }
+    }
+
     .card-pic {
         width: 100%;
         height: 175px;
