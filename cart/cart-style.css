@@ -345,8 +345,17 @@ svg#date-icon {
   font-size: 14px;
   opacity: 1; /* Firefox */
 }
-
+/* ----------自治radio-------------------------- */
 /* .form-radio:checked ~ .form-radio-label { */
+
+.custom-control-label {
+  left: 25px;
+  cursor: pointer;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+}
 
 .custom-control-input ~ .custom-control-label::before {
   background-color: #fff;
@@ -355,46 +364,71 @@ svg#date-icon {
   height: 20px;
   border-radius: 100%;
   cursor: pointer;
-  /* padding-bottom: -5px; */
-  /* margin-right: 25px; */
-}
-
-.custom-control-label {
-  left: 25px;
-  cursor: pointer;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: -5px;
 }
 .custom-control-input:checked ~ .custom-control-label::before {
   outline: none;
-  border-color: none;
   box-shadow: none;
-  /* color: #00907c; */
+  color: #00907c;
+  background-color: #ffa12c;
+  border-color: #ffa12c;
+  cursor: pointer;
+}
+.custom-control-label::before {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border-color: #ccc;
+}
 
-  background-color: #00907c;
+.custom-control-input {
+  background-color: #fff;
+  border-color: #ccc;
 }
-.custom-control-input:checked ~ .custom-control-label::before {
-  border-color: #00907c;
+.fast-main {
+  cursor: pointer;
 }
-.custom-control-input:checked ~ .custom-control-label::before :hover {
-  box-shadow: 0px 10px 3px rgba(0, 0, 0, 0.2);
-  border-color: #006f60;
+
+.custom-control-input:hover ~ .custom-control-label::before {
+  background-color: #f29018;
+  border-color: #ffa12c;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+}
+.custom-control-input:active ~ .custom-control-label::before:active {
+  background-color: #ffa332;
+  cursor: pointer;
+}
+.custom-control-input:focus ~ .custom-control-label::before {
+  background-color: #ffa12c;
+  border-color: #ffa12c;
+  cursor: pointer;
+  /* box-shadow: 0px 10px 3px rgba(0, 0, 0, 0.2); */
 }
 .radio-text {
   font-size: 14px;
   margin: 0;
+  cursor: pointer;
   /* height: 44px; */
   /* line-height: 44px; */
   /* color: #000; */
 }
+.custom-control-label::before {
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.custom-control-label::before:focus {
+  border-color: #ffa12c;
+}
 
-.form-radio {
-  /* width: 18px; */
-  /* height: 44px; */
-  /* margin-right: 10px; */
+/* .form-radio {
+  width: 18px; 
+  height: 44px;
+  margin-right: 10px;
   cursor: pointer;
   background-color: #00907c;
-}
+} */
 .coupon {
   border: 1px solid #ffa02c9a;
   position: relative;
@@ -404,17 +438,31 @@ svg#date-icon {
 .coupon:hover {
   border: 1px solid #ffa02c;
 }
-
-.coupon-check {
-  width: 18px;
+.coupon .custom-control-label {
+  cursor: pointer;
+}
+.coupon .custom-control-label::before {
   position: absolute;
-  top: 5px;
-  right: 10px;
-  background-color: #ccc;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  position: absolute;
+  top: 10px;
+  right: 230px;
+  border-color: #ccc;
 }
-input[type="radio"]:checked {
+.coupon .custom-control-input {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.coupon .custom-control-input:focus ~ .custom-control-label::before {
+  background-color: #ffa12c;
+  border-color: #ffa12c;
+}
+
+/* input[type="radio"]:checked {
   background-color: #00907c;
-}
+} */
 .form-error {
   border: 1px solid #e03d2d;
 }
@@ -658,6 +706,25 @@ input:optional {
   background-color: red;
 }
 
+.pay-all {
+  overflow: hidden;
+  /* height: 0px; */
+}
+
+#order-box-total.fixed {
+  width: 350px;
+  position: relative;
+  /* position: absolute; */
+  position: fixed;
+  top: 80px;
+  /* transition: 0.3s; */
+}
+/* #order-box-total {
+  position: relative;
+  position: absolute;
+  position: fixed;
+  top: 65px;
+} */
 /* ------------------------------------ */
 @media (max-width: 991.98px) {
   .prod-img {

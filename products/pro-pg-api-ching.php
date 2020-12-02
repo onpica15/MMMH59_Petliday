@@ -4,16 +4,10 @@ if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
 
-if (!isset($_SESSION['order'])) {
-    $_SESSION['order'] = [];
-}
-
 $output = [];
 
 
 $action = isset($_GET['action']) ? $_GET['action'] : 'read';
-
-
 // $quantity = isset($_GET['quantity']) ? intval($_GET['quantity']) : 1;
 $sid = isset($_GET['sid']) ? intval($_GET['sid']) : 0;
 $manQ = isset($_GET['manQ']) ? intval($_GET['manQ']) : 1;
@@ -36,8 +30,8 @@ switch ($action) {
             if (isset($_SESSION['cart']['sid'])) {
                 $_SESSION['cart'][$sid]['manQ'] = $manQ;
                 $_SESSION['cart'][$sid]['petQ'] = $petQ;
-                $_SESSION['cart'][$date]['date'] = $date;
-                $_SESSION['cart'][$date]['item'] = $item;
+                $_SESSION['cart'][$sid]['date'] = $date;
+                $_SESSION['cart'][$sid]['item'] = $item;
             } else {
 
                 $sql = "SELECT * FROM products WHERE sid=$sid";
@@ -69,7 +63,7 @@ switch ($action) {
 
 $output['cart'] = $_SESSION['cart'];
 
-$output['order'] = $_SESSION['order'];
+// $output['order'] = $_SESSION['order'];
 
 
 echo json_encode($output, JSON_UNESCAPED_UNICODE);

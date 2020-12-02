@@ -85,7 +85,7 @@
                   </div>
                   <div id="creditCard-box" class="creditCard-box w-100">
                     <div class="col-12 d-flex align-items-center ">
-                      <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mt-3 mb-3">信用卡資訊</h5>
+                      <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mt-3 mb-3">請輸入信用卡資訊：</h5>
                     </div>
                     <div class="col-12 d-flex justify-content-center mb-4 credit-card-box">
                       <div class="card1">
@@ -143,7 +143,7 @@
                   <!-- ------信用卡----  -->
                   <div class="col-12 d-flex align-items-center bb-line">
                     <input id="ATM" class="form-radio" type="radio" name="payItems" value="ATM">
-                    <label for="ATM" class="mb-0"><span class=" radio-text t-m text-color mt-2 mb-2">ATM付款(轉帳/網路線上繳款)</span></label>
+                    <label for="ATM" class="mb-0"><span class=" radio-text t-m text-color mt-2 mb-2">ATM付款(轉帳/網路線上繳款)：：請於12/19 23:59前完成繳款</span></label>
 
 
                   </div>
@@ -151,7 +151,7 @@
                     <input id="linePay" class="form-radio" type="radio" name="payItems" value="linePay">
                     <label for="linePay" class="mb-0 d-flex flex-row justify-content-center align-items-center">
                       <span class=" radio-text t-m text-color mt-2 mb-2 mr-3">
-                        LINE PAY
+                        LINE PAY：(可用LINE點數折抵) 請備妥手機以完成交易
                       </span>
                       <div class="card-icon-items-box ">
                         <div class=" card-icon-items d-flex ">
@@ -167,7 +167,7 @@
                     <input id="applePay" class="form-radio" type="radio" name="payItems" value="applePay">
                     <label for="applePay" class="mb-0 d-flex flex-row justify-content-center align-items-center">
                       <span class=" radio-text t-m text-color mt-2 mb-2 mr-3">
-                        Apple Pay
+                        Apple Pay：請備妥手機以完成交易
                       </span>
                       <div class="card-icon-items-box ">
                         <div class=" card-icon-items d-flex ">
@@ -194,7 +194,7 @@
           <div class="col-12 order-box order-box-total">
             <div class="row mt-3">
               <div class="col-12 col-lg-7 text-gray t-xs ">
-                <p>點擊“確認結帳”，即表示您已確認訂單無誤以及同意右邊顯示的總金額，且同意 服務條款 和 退訂政策</p>
+                <p>點擊“確認結帳”，即表示您已確認訂單無誤以及同意右邊顯示的總金額，且同意 服務條款 | 隱私權政策 | 銀行履約保證 | 退費保障政策。</p>
               </div>
 
 
@@ -480,6 +480,11 @@
   //   creditCardBox.classList.remove('can-display');
   //   creditCardParent.classList.adds('bb-line');
   // }
+
+  // <pre >
+  // <?php //print_r($_POST) 
+      // 
+      ?> </pre>
 
 
 
