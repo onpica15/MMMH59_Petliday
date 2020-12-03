@@ -6,7 +6,7 @@ $output = [
     'error' => '沒有表單資料',
 ];
 
-if(empty($_POST['email'])){
+if(empty($_POST['apply_email'])){
     echo json_encode($output, JSON_UNESCAPED_UNICODE); exit;
 }
 
@@ -19,8 +19,8 @@ $sql = "INSERT INTO `member_avatar`(
 
 $stmt = $pdo->prepare($sql);
 $stmt->execute([
-        $_POST['email'],
-        $_POST['password'],
+        $_POST['apply_email'],
+        $_POST['apply_password'],
 ]);
 // 以上是真正執行的資料，然後再放到以下stmt裡面
 // 呼叫rowCount看有沒有新增

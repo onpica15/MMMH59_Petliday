@@ -7,7 +7,7 @@
     <div class="modal-content">
       <div class="login">
 
-        <form class="login-form" name="apply-form" onsubmit="checkForm(); return false; ">
+        <form class="login-form" name="apply_form" onsubmit="checkFormRegister(); return false;">
           <!-- return false避免預設的行為 -->
         <div id="apply_info_bar" class="alert alert-danger" role="alert" style="display: none"></div>
         <button data-dismiss="modal" class="close" style="position:absolute;top:14px;right:0;">
@@ -31,7 +31,7 @@
 
           <div class="login-group input-icon">
             <!-- <label for="account">帳號</label> -->
-            <input type="email" class="form-control" id="apply-email" name="apply-email" placeholder="電子信箱">
+            <input type="email" class="form-control" id="apply_email" name="apply_email" placeholder="電子信箱">
             <img class="icon-msg" src="./imgs/mail.svg">
             <i class="fas fa-exclamation-circle"></i>
             <i class="fas fa-check-circle"></i>
@@ -72,34 +72,36 @@
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
   const email_re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-  const email1 = $('#apply-email'),
-    password1 = $('#apply_password');
-    info_bar = $('#apply_info_bar')
 
-    function doSunmitForm() {
-      email1.next().text('');
+
+    function checkFormRegister() { 
+      const email = $('#apply_email'),
+      password = $('#apply_password'),
+      info_bar = $('#apply_info_bar');
+      // email.next().text('');
+      // password.next().text('');
 
       let isPass = true;
-
-      if (!email_re.test(email11.val())) {
+      
+      if (!email_re.test(email.val())) {
          isPass = false;
-         email1.closest('.login-group').addClass('error')
+         email.closest('.login-group').addClass('error')
       } else {
-        email1.closest('.login-group').removeClass('error')
-        email1.closest('.login-group').addClass('success');
+        email.closest('.login-group').removeClass('error')
+        email.closest('.login-group').addClass('success');
       }
 
-      if (password1.val().length < 3) {
+      if (password.val().length < 3) {
          isPass = false;
-         password1.closest('.login-group').addClass('error')
+         password.closest('.login-group').addClass('error')
       } else {
-        password1.closest('.login-group').removeClass('error')
-        password1.closest('.login-group').addClass('success');
+        password.closest('.login-group').removeClass('error')
+        password.closest('.login-group').addClass('success');
       }
 
 
       if (isPass) {
-        $.post('login-petliday-api.php', $(document.apply-form).serialize(), function(data) {
+        $.post('login-petliday-api.php', $(document.apply_form).serialize(), function(data) {
           console.log(data);
           if (data.success) {
             info_bar
@@ -126,7 +128,7 @@
   // 一鍵輸入：正確登入
   $('.input-correct').click(function(event) {
     event.preventDefault();
-    $('#apply-email').val('boy123@petliday.com');
+    $('#apply_email').val('boy123@petliday.com');
     $('#apply_password').val('test123');
   })
 </script>

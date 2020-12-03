@@ -218,9 +218,14 @@ button:focus{
     color: #E03D2D; 
 }
 
-.login-group.error i.fa-check-circle{
+.login-group.success i.fa-check-circle{
     visibility: visible;
     color: #FFA12C; 
+}
+
+.login-group.error small{
+    color: #E03D2D; 
+    visibility: visible;
 }
 
 .form-text{
@@ -230,6 +235,7 @@ button:focus{
     display: block;
     color: #E03D2D; 
     visibility: hidden;
+    display: block;
 }
 
 
