@@ -62,7 +62,7 @@
           <h5 class="orange-color t-l title1-m form-title order-title">訂購完成</h5>
         </div>
         <div class="col-12 col-lg-6 d-flex order-time">
-          <p class="order-one text-gray t-xs mb-1">訂購時間: 2020/10/22 pm 12:00</p>
+          <p class="order-one text-gray t-xs mb-1">訂購時間: 2020/12/18</p>
         </div>
         <div class="col-12 col-lg-12 d-flex justify-content-center mb-3">
           <p class="order-one text-color t-s mb-1 t-bold">訂單編號: d0150505</p>
@@ -71,78 +71,96 @@
           <div class="cute-iocn"></div>
         </div>
       </div>
-
       <div class="row form-box bb-line">
-        <div class="col-12 ">
-          <div class="detail-all detail-quan d-flex justify-content-between ">
-            <h6 class=" text-gray t-s mb-0">共 2 項商品</h6>
-            <h5 class="brown-color t-m mb-0">總計：<span class="t-m prod-price-single danger-color ">NT$ 3000</span></h5>
+        <div class="col-12 d-flex flex-column align-content-center">
+          <h6 class=" text-gray t-m mb-1 ">聯絡家長資訊:</h6>
+          <h6 class=" text-gray t-s mb-2">若訂單有任何變動，主要聯繫人</h6>
+          <div class="detail-all detail-quan mt-3 ">
+
+            <h5 class="text-text t-m mb-2">聯絡姓名 : <span class="
+            t-m prod-price-single text-text"><?= $_SESSION['order']['mainLastName'] ?><?= $_SESSION['order']['mainFirstName'] ?></span></h5>
+            <h5 class="text-text t-m mb-2">聯繫電話 : <span class="
+            t-m prod-price-single text-text"><?= $_SESSION['order']['phone'] ?></span></h5>
+            <h5 class="text-text t-m mb-2">聯繫信箱 : <span class="
+            t-m prod-price-single text-text"><?= $_SESSION['order']['email'] ?></span></h5>
           </div>
         </div>
       </div>
       <div class="row form-box bb-line">
-        <div class="col-12 all-step-box all-order-box">
-          <div class="row ">
-            <div class="all-order-box-in w-100">
-              <div class="col-12 order-box-fin">
-                <h5 class="text-color t-l mt-1">標題標題標題標題標題標題標題標題題標題標題</h5>
-                <div class="detail-box-fin">
-                  <div class="detail-all detail-time d-flex justify-content-between">
-                    <h6 class=" text-gray t-s ">時間：</h6>
-                    <h6 class=" text-gray t-s">2020/08/12 pm 6:00</h6>
-                  </div>
-                  <div class="detail-all detail-quan d-flex justify-content-between">
-                    <h6 class=" text-gray t-s">數量：</h6>
-                    <h6 class=" text-gray t-s">2 x 人 / 1 x 犬</h6>
-                  </div>
-                </div>
-                <div class="single-prod-total d-flex justify-content-end bb-line">
-                  <h5 class="t-m brown-color prod-price-single">NT$ 0</h5>
-                </div>
-
-                <div class="row d-flex align-content-stretch">
-                  <!-- -----人 資料----- -->
-                  <div class="col-12 col-lg-4 single-detail-box">
-                    <div class="single-detail">
-                      <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">旅客 1</h3>
-                      <p class="t-xs text-gray mb-0">姓氏
-                        （須與旅遊證件一致）:</p>
-                      <p class="t-s text-color mb-3">陳毛毛</p>
-
-                      <p class="t-xs text-gray mb-0">行程當日聯繫電話:</p>
-                      <p class="t-s text-color mb-3">0900-000-000</p>
-
-                      <p class="t-xs text-gray mb-0">身分證字號（行程保險中使用）:</p>
-                      <p class="t-s text-color mb-3">A0000000000</p>
-
-                      <p class="t-xs text-gray mb-0">出生 年/月/日（行程保險中使用）</p>
-
-                      <p class="t-s text-color mb-0 pb-3 bb-line-b">2020- 10-10-</p>
+        <div class="col-12 ">
+          <div class="detail-all detail-quan d-flex justify-content-between ">
+            <h6 class=" text-gray t-s mb-0">共<?= $_SESSION['order']['items'] ?>項商品</h6>
+            <h5 class="brown-color t-m mb-0">總計：<span class="t-m prod-price-single danger-color "><?= $_SESSION['order']['totle_price'] ?></span></h5>
+          </div>
+        </div>
+      </div>
+      <?php foreach ($_SESSION['cart'] as $i) : ?>
+        <div class="row form-box bb-line orderInfo">
+          <div class="col-12 all-step-box all-order-box">
+            <div class="row ">
+              <div class="all-order-box-in w-100">
+                <div class="col-12 order-box-fin">
+                  <h5 class="text-color t-l mt-1"><?= $i['product_name'] ?></h5>
+                  <div class="detail-box-fin">
+                    <div class="detail-all detail-time d-flex justify-content-between">
+                      <h6 class=" text-gray t-s ">時間：</h6>
+                      <h6 class=" text-gray t-s">2020/08/<?= $i['date'] ?></h6>
+                    </div>
+                    <div class="detail-all detail-quan d-flex justify-content-between">
+                      <h6 class=" text-gray t-s">數量：</h6>
+                      <h6 class=" text-gray t-s"><?= $i['manQ'] ?> x 人 / <?= $i['petQ'] ?> x 犬</h6>
                     </div>
                   </div>
-                  <!-- -----end 人 資料 end----- -->
-                  <!-- -----犬 資料----- -->
-                  <div class="col-12 col-lg-4 single-detail-box">
-                    <div class="single-detail">
-                      <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">寵物 1</h3>
-                      <p class="t-xs text-gray mb-0">寶貝稱呼:</p>
-                      <p class="t-s text-color mb-3">毛毛毛</p>
-
-
-                      <p class="t-xs text-gray mb-0">體型:</p>
-                      <p class="t-s text-color mb-3">大型犬</p>
-
-                      <p class="t-xs text-gray mb-0">備註：</p>
-                      <p class="t-s text-color mb-0 pb-3 bb-line-b">希望提供碗給毛毛毛喝</p>
-                    </div>
+                  <div class="single-prod-total d-flex justify-content-end bb-line">
+                    <h5 class="t-m brown-color prod-price-single">NT$ <span class="total-box-item"><?= ($i['manQ'] * $i['price_man'] + $i['petQ'] * $i['price_pet']) ?></span></h5>
                   </div>
-                  <!-- -----end 犬 資料 end----- -->
+
+                  <div class="row d-flex align-content-stretch">
+                    <!-- -----人 資料----- -->
+                    <?php foreach ($_SESSION['order'] as $i) : ?>
+                      <div class="col-12 col-lg-4 single-detail-box">
+                        <div class="single-detail">
+                          <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">旅客 1</h3>
+                          <p class="t-xs text-gray mb-0">姓氏
+                            （須與旅遊證件一致）:</p>
+                          <p class="t-s text-color mb-3">陳毛毛</p>
+
+                          <p class="t-xs text-gray mb-0">行程當日聯繫電話:</p>
+                          <p class="t-s text-color mb-3">0900-000-000</p>
+
+                          <p class="t-xs text-gray mb-0">身分證字號（行程保險中使用）:</p>
+                          <p class="t-s text-color mb-3">A0000000000</p>
+
+                          <p class="t-xs text-gray mb-0">出生 年/月/日（行程保險中使用）</p>
+
+                          <p class="t-s text-color mb-0 pb-3 bb-line-b">2020- 10-10</p>
+                        </div>
+                      </div>
+                    <?php endforeach;  ?>
+                    <!-- -----end 人 資料 end----- -->
+                    <!-- -----犬 資料----- -->
+                    <div class="col-12 col-lg-4 single-detail-box">
+                      <div class="single-detail">
+                        <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">寵物 1</h3>
+                        <p class="t-xs text-gray mb-0">寶貝稱呼:</p>
+                        <p class="t-s text-color mb-3">毛毛毛</p>
+
+
+                        <p class="t-xs text-gray mb-0">體型:</p>
+                        <p class="t-s text-color mb-3">大型犬</p>
+
+                        <p class="t-xs text-gray mb-0">備註：</p>
+                        <p class="t-s text-color mb-0 pb-3 bb-line-b">希望提供碗給毛毛毛喝</p>
+                      </div>
+                    </div>
+                    <!-- -----end 犬 資料 end----- -->
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      <?php endforeach;  ?>
       <div class="row form-box bb-line">
         <div class="col-12 d-flex justify-content-center">
           <button class="btn-more">檢視訂單</button>

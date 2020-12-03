@@ -6,6 +6,7 @@ include __DIR__ . '/../parts/config.php';
 if (isset($_POST['mainLastName'])) {
     $_SESSION['order'] = $_POST;
 };
+
 $output = [];
 
 
@@ -26,15 +27,21 @@ $notes = isset($_POST['notes']) ? $_POST['notes'] : 'error';
 
 
 // // ---
-if (isset($_SESSION['cart']['sid'])) {
-    $_SESSION['order']['sid']['lastName'] = $mainLastName;
-    $_SESSION['order']['sid']['mainFirstName'] = $mainFirstName;
-    $_SESSION['order']['sid']['firstName'] = $mainGender;
-    $_SESSION['order']['sid']['idCard'] = $phone;
-    $_SESSION['order']['sid']['petName'] = $email;
-    $_SESSION['order']['sid']['petSize'] = $coupon;
-    $_SESSION['order']['sid']['notes'] = $coupon;
-}
+// if (isset($_SESSION['cart']['sid'])) {
+
+//     // foreach ($_SESSION['order']['sid'] as $i) {
+
+//     //     ]);
+//     // }
+//     $_SESSION['order']['sid']['lastName'] = $mainLastName;
+//     $_SESSION['order']['sid']['mainFirstName'] = $mainFirstName;
+//     $_SESSION['order']['sid']['firstName'] = $mainGender;
+//     $_SESSION['order']['sid']['idCard'] = $phone;
+//     $_SESSION['order']['sid']['petName'] = $email;
+//     $_SESSION['order']['sid']['petSize'] = $coupon;
+//     $_SESSION['order']['sid']['notes'] = $coupon;
+// }
+
 
 $output['order'] = $_SESSION['order'];
 echo json_encode($output, JSON_UNESCAPED_UNICODE);

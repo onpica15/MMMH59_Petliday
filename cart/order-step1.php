@@ -219,7 +219,7 @@
                   <div class="btn pay-btn d-flex align-items-center" id="pay-btn">繼續結帳</div>
                 </a>
                 <a href="./cart.php" class=" a-style w-100 d-flex justify-content-start">
-                  <button class="btn-outline pay-btn mr-3">回購物車</button>
+                  <div class="btn-outline pay-btn mr-3">回購物車</div>
                 </a>
               </div>
 
@@ -284,7 +284,7 @@
                         <div class="row d-flex all-bb justify-content-center w-100">
                           <div class="col-12 col-lg-6  one-form">
                             <label class="front text-color t-s label-all" name="cardNumber" for="cardNumber">信用卡號碼：&nbsp; <span class="danger-color">*</span></label><br>
-                            <input id="cardNumber" class="form-input w-100" type="text" name="cardNumber" placeholder="0000 0000 0000 0000" maxlength="16" class="front" value="">
+                            <input id="cardNumber" class="form-input w-100" type="text" name="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19" class="front" value="">
                           </div>
                           <div class="col-12 col-lg-6  one-form">
                             <label class="front text-color t-s label-all " name="holderName" for="holderName">持卡人姓名：&nbsp; <span class="danger-color">*</span></label><br>
@@ -368,8 +368,6 @@
                   <p>點擊“確認結帳”，即表示您已確認訂單無誤以及同意右邊顯示的總金額，且同意 服務條款 | 隱私權政策 | 銀行履約保證 | 退費保障政策。</p>
                 </div>
 
-
-
                 <div class="col-12 col-lg-5 single-prod-total d-flex justify-content-end mb-3 mt-1">
                   <h5 class="brown-color t-m">總計：</h5>
                   <h5 class="t-l prod-price-single danger-color all_total">NT$ 0</h5>
@@ -377,10 +375,10 @@
               </div>
               <div class="pay-btn-box pb-3 ">
                 <a href="./order-step3.php" class="a-style w-100 d-flex justify-content-end">
-                  <button class="btn pay-btn ml-3">確認結帳</button>
+                  <div class="btn pay-btn ml-3 " id="confirm-btn">確認結帳</div>
                 </a>
                 <a href="./cart.php" class=" a-style w-100 d-flex justify-content-start">
-                  <button class="btn-outline pay-btn mr-3">回購物車</button>
+                  <div class="btn-outline pay-btn mr-3">回購物車</div>
                 </a>
               </div>
 
@@ -417,6 +415,8 @@
                 <input class="justinfo" type="text" name="manQ[]" value="<?= $i['manQ'] ?>">
                 <input class="justinfo" type="text" name="petQ[]" value="<?= $i['petQ'] ?>">
               </div>
+              <input class="justinfo items-amount" data-item="1" type="text" name="items" value="">
+
             <?php endforeach;  ?>
 
             <div id="order-box-total" class="col-12 order-box order-box-total">
@@ -519,6 +519,7 @@
       $('span.coupon-price').text(' -$ ' + dallorCommas(parseInt(total * 0.2)));
       $('.all_total').attr('data-allTotal', parseInt(total * 0.8));
       $('.all_total').text('NT$ ' + dallorCommas(parseInt(total * 0.8)));
+      $('.totle_price').val((total * 0.8));
 
       $('.coupon-munber').text('( 2020WELCOME )');
     })
@@ -528,7 +529,12 @@
   };
   total();
 
+  // 算商品數量
+  let itemsAmount = parseInt($('.items-amount').attr('data-item'))
+  itemsAmount += itemsAmount
+  $('.items-amount').val(itemsAmount)
 
+  // console.log('itemsAmount', $('.items-amount').val())
 
   ///////自動輸入相對應人數表格
   $('.form-quan').each(function() {
@@ -552,22 +558,24 @@
               <div class="row">
                 <div class="col-12 col-lg-6 d-flex flex-column one-form">
                   <label class="text-color t-s label-all" name="lastName" for="lastName">姓名：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
-                  <input  class="form-input man-Name${i}" type="text" name="Name[]" placeholder="例：陳毛毛" >
+                  <input  class="form-input man-Name${i}" type="text" name="${form_sid}[man][Name][]" placeholder="例：陳毛毛" >
                   <small class="form-feedback danger-color t-xs"></small>
                 </div>
+
                 <div class="col-12 col-lg-6 d-flex flex-column one-form">
                   <label class="text-color t-s label-all " name="firstName" for="firstName">行程當日聯繫電話：&nbsp;<span class="danger-color">*</span></label>
-                  <input  class="form-input man-phone${i}" type="text" name="man-phone[]" placeholder="例：0900-000-000" >
+                  <input  class="form-input man-phone${i}" type="text" name="${form_sid}[man][man-phone][]" placeholder="例：0900-000-000" >
                   <small class="form-feedback danger-color t-xs"></small>
                 </div>
+
                 <div class="col-8 col-lg-6 d-flex flex-column one-form">
                   <label class="text-color t-s label-all " name="idCard" for="idCard">身分證字號：（行程保險中使用）&nbsp;<span class="danger-color">*</span></label>
-                  <input  class="form-input man-idCard${i}" type="text" name="idCard[]" placeholder="例：A0000000000" >
+                  <input  class="form-input man-idCard${i}" type="text" name="${form_sid}[man][idCard][]" placeholder="例：A0000000000" >
                 </div>
 
                 <div class="col-12 col-lg-6 d-flex flex-column one-form">
                   <label class="text-color t-s label-all " name="birthday" for="birthday">出生 年/月/日：（行程保險中使用）&nbsp;<span class="danger-color">*</span></label>
-                  <input  class="form-input man-birthday${i}" type="date" name="birthday[]" >
+                  <input  class="form-input man-birthday${i}" type="date" name="${form_sid}[man][birthday][]" >
                 </div>
               </div>
 
@@ -582,11 +590,11 @@
       <div class="row">
         <div class="col-12 col-lg-6 d-flex flex-column one-form">
           <label class="text-color t-s label-all" name="petName" for="petName">寶貝稱呼： &nbsp;&nbsp;<span class="danger-color">*</span></label>
-          <input  class="form-input pet-petName${k}" type="text" name="petName[]" placeholder="例：毛日日" >
+          <input  class="form-input pet-petName${k}" type="text" name="${form_sid}[pet][petName][]" placeholder="例：毛日日" >
         </div>
         <div class="col-8 col-lg-6 d-flex flex-column one-form">
           <label class="text-color t-s label-all " name="petSize" for="petSize">體型： &nbsp;&nbsp;<span class="danger-color">*</span></label>
-          <select class="form-input pet-Size${k}" name="petSize[]">
+          <select class="form-input pet-Size${k}" name="${form_sid}[pet][petSize][]">
             <option class="option-style" name="0" value="0">請選擇</option>
             <option name="lSize" value="lSize">大型犬</option>
             <option name="MSize" value="MSize">中型犬</option>
@@ -595,7 +603,7 @@
         </div>
         <div class="col-12 col-lg-12 d-flex flex-column one-form">
           <label class="text-color t-s label-all " name="notes" for="notes">備註： &nbsp;&nbsp;<span class="danger-color">*</span></label>
-          <input class="form-input pet-notes${k}" type="text" name="notes[]" >
+          <input class="form-input pet-notes${k}" type="text" name="${form_sid}[pet][notes][]" >
         </div>
       </div>
       </div>`
@@ -761,7 +769,7 @@
     console.log(cardCount)
   });
 
-  cardCVC.addEventListener('click', function() {
+  cardCVC.addEventListener('click input change keyup', function() {
     console.log('cardCVC')
     if (cardCount % 2) {
 
@@ -772,6 +780,7 @@
       console.log(cardCount)
     }
   });
+
 
   cardNumber.addEventListener('click', function() {
     console.log('cardNumber')
@@ -812,11 +821,23 @@
     }
   });
 
+  ///// 信用卡正規集合------------------------------------------
+  const card0000 = function(n) {
+    return n.toString().replace(/(\d{4})(?=\d)/g, "$1 ");
+  };
+  let cardname = function(n) {
+    return n.toUpperCase();
+  };
 
 
   $("#cardNumber").keyup(
     function() {
-      $("#card-number").html(this.value)
+      let cardNumber = $(this).val();
+      cardNumber = cardNumber.replace(/(\d{4})(?=\d)/g, "$1 ");
+      $(this).val(cardNumber);
+
+      $("#card-number").html(card0000(this.value));
+
       if (!(this.value)) {
         $("#card-number").html('0000 0000 0000 0000')
       }
@@ -826,7 +847,11 @@
   );
   $("#holderName").keyup(
     function() {
-      $("#card-name").html(this.value)
+      let cardName = $(this).val();
+      cardName = cardName.toUpperCase();
+      $(this).val(cardName);
+
+      $("#card-name").html(cardname(this.value))
       if (!(this.value)) {
         $("#card-name").html('YOUR NAME')
       }
