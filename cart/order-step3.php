@@ -97,46 +97,31 @@
                   </div>
                 </div>
                 <div class="single-prod-total d-flex justify-content-end bb-line">
-                  <h5 class="t-m brown-color prod-price-single">NT$ 3000</h5>
+                  <h5 class="t-m brown-color prod-price-single">NT$ 0</h5>
                 </div>
+
                 <div class="row d-flex align-content-stretch">
+                  <!-- -----人 資料----- -->
                   <div class="col-12 col-lg-4 single-detail-box">
                     <div class="single-detail">
                       <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">旅客 1</h3>
                       <p class="t-xs text-gray mb-0">姓氏
                         （須與旅遊證件一致）:</p>
-                      <p class="t-s text-color mb-3">陳</p>
+                      <p class="t-s text-color mb-3">陳毛毛</p>
 
-                      <p class="t-xs text-gray mb-0">名字
-                        （須與旅遊證件一致）:</p>
-                      <p class="t-s text-color mb-3">毛毛</p>
+                      <p class="t-xs text-gray mb-0">行程當日聯繫電話:</p>
+                      <p class="t-s text-color mb-3">0900-000-000</p>
 
                       <p class="t-xs text-gray mb-0">身分證字號（行程保險中使用）:</p>
                       <p class="t-s text-color mb-3">A0000000000</p>
 
                       <p class="t-xs text-gray mb-0">出生 年/月/日（行程保險中使用）</p>
 
-                      <p class="t-s text-color mb-0 pb-3 bb-line-b">2020年 10月 10日</p>
+                      <p class="t-s text-color mb-0 pb-3 bb-line-b">2020- 10-10-</p>
                     </div>
                   </div>
-                  <div class="col-12 col-lg-4 single-detail-box">
-                    <div class="single-detail">
-                      <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">旅客 2</h3>
-                      <p class="t-xs text-gray mb-0">姓氏
-                        （須與旅遊證件一致）:</p>
-                      <p class="t-s text-color mb-3">陳</p>
-
-                      <p class="t-xs text-gray mb-0">名字
-                        （須與旅遊證件一致）:</p>
-                      <p class="t-s text-color mb-3">毛毛</p>
-
-                      <p class="t-xs text-gray mb-0">身分證字號（行程保險中使用）:</p>
-                      <p class="t-s text-color mb-3">A0000000000</p>
-
-                      <p class="t-xs text-gray mb-0">出身年月日（行程保險中使用）</p>
-                      <p class="t-s text-color mb-0 pb-3 bb-line-b">2020年 10月 10日</p>
-                    </div>
-                  </div>
+                  <!-- -----end 人 資料 end----- -->
+                  <!-- -----犬 資料----- -->
                   <div class="col-12 col-lg-4 single-detail-box">
                     <div class="single-detail">
                       <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">寵物 1</h3>
@@ -151,6 +136,7 @@
                       <p class="t-s text-color mb-0 pb-3 bb-line-b">希望提供碗給毛毛毛喝</p>
                     </div>
                   </div>
+                  <!-- -----end 犬 資料 end----- -->
                 </div>
               </div>
             </div>
@@ -249,7 +235,7 @@
     // }
   })
 
-  
+
 
   // ------JS結束 勿刪到-------
 </script>

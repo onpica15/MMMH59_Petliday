@@ -57,7 +57,7 @@
 <!-- --------------------step---------------- -->
 <div class="container container-mt">
 
-  <form action="" method="POST" name="form1">
+  <form action="" method="POST" name="form_all">
     <div class="row">
       <div class="col-12 col-lg-8 all-step-box all-form-box ">
         <div class="row">
@@ -68,11 +68,17 @@
 
 
             </div>
+
             <div class="col-12 form-box contacts-box">
               <div class="row">
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">聯絡家長資訊</h5>
-                <h5 class=" col-12 text-gray t-xs mb-2">若訂單有任何變動，客服將聯繫你</h5>
+                <h5 class=" col-7 text-gray t-xs mb-2">若訂單有任何變動，主要聯繫人</h5>
+                <div class="col-5 d-flex justify-content-end">
+                  <input type="checkbox" id="autoUpdate" class="" checked></input>
+                  <label for="autoUpdate" class="text-gray t-xs mb-2">同步更新會員資料</label>
+                </div>
               </div>
+
 
               <div class="row">
                 <div class="col-12 col-lg-6 d-flex flex-column one-form">
@@ -110,10 +116,13 @@
             </div>
 
 
-            <!-- ----man---- -->
-            <div class="w-100 info-form"></div>
-            <!-- <div class="w-100 pet-form"></div> -->
 
+            <!-- ---自動表格---- -->
+            <!-- ---自動表格---- -->
+            <div class="w-100 info-form"></div>
+
+            <!-- 付款方式 -->
+            <!-- <form action="" method="POST" name="form_order"> -->
             <div class="col-12 form-box contacts-box">
               <div class="row">
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">發票資訊</h5>
@@ -123,19 +132,19 @@
                 <div class="col-12 col-lg-12">
                   <div class="row ">
                     <div class="col-12 d-flex align-items-center bb-line">
-                      <input id="donateReceipt" class="form-radio custom-control-input" type="radio" name="receipt">
+                      <input id="donateReceipt" class="form-radio custom-control-input" type="radio" name="receipt" checked value="捐贈發票">
                       <label for="donateReceipt" class="form-radio-label custom-control-label mb-0"><span class=" radio-text t-m text-color">捐贈發票</span></label>
                     </div>
                     <div class="col-12 d-flex align-items-center bb-line">
 
-                      <input id="receipt2" class="form-radio  custom-control-input" type="radio" name="receipt">
+                      <input id="receipt2" class="form-radio  custom-control-input" type="radio" name="receipt" value="二聯電子發票">
                       <label for="receipt2 " class="mb-0 custom-control-label"><span class=" radio-text t-m text-color ">二聯電子發票</span></label>
                     </div>
 
                     <div class="col-12 d-flex align-items-center">
 
-                      <input id="receipt3" class="form-radio custom-control-input" type="radio" name="receipt">
-                      <label for="receipt3" class="mb-0 custom-control-label"><span class=" radio-text t-m text-color">三聯電子發票</span></label>
+                      <input id="receipt3" class="form-radio custom-control-input" type="radio" name="receipt" value="三聯電子發票">
+                      <label for="receipt3" classs="mb-0 custom-control-label "><span class=" radio-text t-m text-color">三聯電子發票</span></label>
 
                     </div>
                   </div>
@@ -143,7 +152,9 @@
               </div>
 
             </div>
+            <!-- </form> -->
           </div>
+          <!-- <form action="" method="POST" name="form_coupon" class="w-100"> -->
           <div class="all-form-box-in w-100 mt-3">
             <div class="col-12 form-box">
               <h5 class="green-color t-l title1-m form-title">優惠折扣碼</h5>
@@ -154,16 +165,16 @@
                 <div class="col-12 col-lg-12">
                   <div class="row">
                     <div class="col-12 d-flex align-items-center">
-                      <input id="couponNo" class="form-radio custom-control-input" type="radio" name="coupon" checked>
-                      <label class=" radio-text t-m text-color custom-control-label" for="couponNo">我沒有折扣碼</label>
+                      <input id="couponNo" class="form-radio custom-control-input" type="radio" name="coupon" value="無折扣碼" checked>
+                      <label class=" radio-text t-m text-color custom-control-label" for="couponNo">無折扣碼</label>
                     </div>
                     <div class="col-12 d-flex align-items-center">
-                      <input id="couponYes" class="form-radio custom-control-input" type="radio" name="coupon">
+                      <input id="couponYes" class="form-radio custom-control-input" type="radio" name="coupon" value="我有折扣碼">
                       <label class="radio-text t-m text-color custom-control-label " for="couponYes">我有折扣碼</label>
                     </div>
                     <div class="coupon-items w-100 animation">
                       <div class="col-12 d-flex align-items-center">
-                        <input class="form-input form-input-btn " id="couponNumber" type="text" name="couponNumber" placeholder="請輸入折扣碼">
+                        <input class="form-input form-input-btn " id="couponNumber" type="text" name="couponNumber" placeholder="請輸入折扣碼" value="">
                         <button type="button" name="couponNumberBtn" class="ml-2 form-input-btn btn ">兌換</button>
                       </div>
                       <div class="col-12 col-lg-6 mt-4">
@@ -214,8 +225,10 @@
 
             </div>
           </div>
+          <!-- </form> -->
 
           <!-- ----------付款資訊-------------- -->
+          <!-- <form action="" method="POST" name="form_pay"> -->
           <div class="all-form-box-in w-100 pay-all" id="go-pay">
             <div class="col-12 form-box">
               <h5 class="green-color t-l title1-m form-title">付款方式</h5>
@@ -359,7 +372,7 @@
 
                 <div class="col-12 col-lg-5 single-prod-total d-flex justify-content-end mb-3 mt-1">
                   <h5 class="brown-color t-m">總計：</h5>
-                  <h5 class="t-l prod-price-single danger-color ">NT$ 3000</h5>
+                  <h5 class="t-l prod-price-single danger-color all_total">NT$ 0</h5>
                 </div>
               </div>
               <div class="pay-btn-box pb-3 ">
@@ -374,6 +387,7 @@
 
             </div>
           </div>
+          <!-- </form> -->
         </div>
       </div>
       <!-- -----右邊----- -->
@@ -397,6 +411,11 @@
                 <div class="single-prod-total d-flex justify-content-end">
                   <h5 class="t-m brown-color prod-price-single ">NT$ <span class="total-box-item"><?= ($i['manQ'] * $i['price_man'] + $i['petQ'] * $i['price_pet']) ?></span></h5>
                 </div>
+              </div>
+              <div class="justinfo">
+                <input class="justinfo" type="text" name="sid[]" value="<?= $i['sid'] ?>">
+                <input class="justinfo" type="text" name="manQ[]" value="<?= $i['manQ'] ?>">
+                <input class="justinfo" type="text" name="petQ[]" value="<?= $i['petQ'] ?>">
               </div>
             <?php endforeach;  ?>
 
@@ -423,8 +442,13 @@
         </div>
       </div>
     </div>
+    <div class="justinfo">
+      <input class="justinfo" type="text" name="coupon_t" value="2020WELCOME">
+      <input class="justinfo totle_price" type="text" name="totle_price" value="">
+    </div>
   </form>
 </div>
+
 
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
@@ -521,29 +545,29 @@
 
     for (let i = 1; i < form_man + 1; i++) {
       dayDisplay += `<div class="col-12 form-box contacts-box" data-sid="${form_sid}" data-type="man" >
-              <div class="row">
-                <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1 fast-man">旅客 ${i}</h5>
+              <div class="row fast-btn fast-man${i}">
+                <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1 ">旅客 ${i}</h5>
               </div>
 
               <div class="row">
                 <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                  <label class="text-color t-s label-all" name="lastName" for="lastName">姓氏：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
-                  <input  class="form-input form-error man-lastName" type="text" name="lastName[]" placeholder="例：陳" >
+                  <label class="text-color t-s label-all" name="lastName" for="lastName">姓名：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
+                  <input  class="form-input man-Name${i}" type="text" name="Name[]" placeholder="例：陳毛毛" >
                   <small class="form-feedback danger-color t-xs"></small>
                 </div>
                 <div class="col-12 col-lg-6 d-flex flex-column one-form">
-                  <label class="text-color t-s label-all " name="firstName" for="firstName">名字：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
-                  <input  class="form-input man-firstName" type="text" name="firstName[]" placeholder="例：毛毛" >
+                  <label class="text-color t-s label-all " name="firstName" for="firstName">行程當日聯繫電話：&nbsp;<span class="danger-color">*</span></label>
+                  <input  class="form-input man-phone${i}" type="text" name="man-phone[]" placeholder="例：0900-000-000" >
                   <small class="form-feedback danger-color t-xs"></small>
                 </div>
                 <div class="col-8 col-lg-6 d-flex flex-column one-form">
                   <label class="text-color t-s label-all " name="idCard" for="idCard">身分證字號：（行程保險中使用）&nbsp;<span class="danger-color">*</span></label>
-                  <input  class="form-input man-idCard" type="text" name="idCard[]" placeholder="例：A0000000000" >
+                  <input  class="form-input man-idCard${i}" type="text" name="idCard[]" placeholder="例：A0000000000" >
                 </div>
 
                 <div class="col-12 col-lg-6 d-flex flex-column one-form">
                   <label class="text-color t-s label-all " name="birthday" for="birthday">出生 年/月/日：（行程保險中使用）&nbsp;<span class="danger-color">*</span></label>
-                  <input  class="form-input man-birthday" type="date" name="birthday[]" >
+                  <input  class="form-input man-birthday${i}" type="date" name="birthday[]" >
                 </div>
               </div>
 
@@ -551,18 +575,18 @@
     }
     for (let k = 1; k < form_pet + 1; k++) {
       dayDisplay_pet += `<div class="col-12 form-box contacts-box" data-sid="${form_sid}" data-type="pet">
-      <div class="row">
-       <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1 fast-pet">寵物${k}</h5>
+      <div class="row fast-btn fast-pet${k}">
+       <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1 ">寵物${k}</h5>
       </div>
 
       <div class="row">
         <div class="col-12 col-lg-6 d-flex flex-column one-form">
           <label class="text-color t-s label-all" name="petName" for="petName">寶貝稱呼： &nbsp;&nbsp;<span class="danger-color">*</span></label>
-          <input  class="form-input pet-petName" type="text" name="prod${form_sid}-petName$-${k}" placeholder="例：毛日日" >
+          <input  class="form-input pet-petName${k}" type="text" name="petName[]" placeholder="例：毛日日" >
         </div>
         <div class="col-8 col-lg-6 d-flex flex-column one-form">
           <label class="text-color t-s label-all " name="petSize" for="petSize">體型： &nbsp;&nbsp;<span class="danger-color">*</span></label>
-          <select class="form-input pet-Size" name="prod${form_sid}-petSize-${k}">
+          <select class="form-input pet-Size${k}" name="petSize[]">
             <option class="option-style" name="0" value="0">請選擇</option>
             <option name="lSize" value="lSize">大型犬</option>
             <option name="MSize" value="MSize">中型犬</option>
@@ -571,7 +595,7 @@
         </div>
         <div class="col-12 col-lg-12 d-flex flex-column one-form">
           <label class="text-color t-s label-all " name="notes" for="notes">備註： &nbsp;&nbsp;<span class="danger-color">*</span></label>
-          <input class="form-input pet-notes" type="text" name="prod${form_sid}-notes-${k}" >
+          <input class="form-input pet-notes${k}" type="text" name="notes[]" >
         </div>
       </div>
       </div>`
@@ -586,82 +610,133 @@
     $('#mainLastName').val('陳');
     $('#mainFirstName').val('嘉偉');
     $('#mainGender').val('man');
-    $('#phone').val('0945362746');
-    $('#email').val('rrfhcye@gmail.com');
+    $('#phone').val('0945-362-746');
+    $('#email').val('rich184@gmail.com');
   })
 
-  $('.fast-man').on('click', function() {
-    $('.man-lastName').val('吳');
-    $('.man-firstName').val('春玫');
-    $('.man-idCard').val('A235648385');
-    $('.man-birthday').val('1985-10-03');
+  $('.fast-man4').on('click', function() {
+    $('.man-Name4').val('夏暐涵');
+    $('.man-phone4').val('0988-178-888');
+    $('.man-idCard4').val('F224938385');
+    $('.man-birthday4').val('1982-06-30');
   })
-  $('.fast-pet').on('click', function() {
-    $('.pet-petName').val('球球');
-    $('.pet-Size').val('MSize');
-    $('.pet-notes').val('希望能提供推車');
+  $('.fast-man1').on('click', function() {
+    $('.man-Name1').val('陳嘉偉');
+    $('.man-phone1').val('0945-362-746');
+    $('.man-idCard1').val('A135648385');
+    $('.man-birthday1').val('1985-10-03');
+  })
+  $('.fast-man5').on('click', function() {
+    $('.man-Name1').val('吳春玫');
+    $('.man-phone1').val('0965-184-168');
+    $('.man-idCard1').val('A235648385');
+    $('.man-birthday1').val('1988-08-26');
+  })
+  $('.fast-man2').on('click', function() {
+    $('.man-Name2').val('孔瑜琳');
+    $('.man-phone2').val('0977-369-717');
+    $('.man-idCard2').val('H263482385');
+    $('.man-birthday2').val('1989-01-16');
+  })
+  $('.fast-man3').on('click', function() {
+    $('.man-Name3').val('陳宇威');
+    $('.man-phone3').val('0977-369-717');
+    $('.man-idCard3').val('Q135648385');
+    $('.man-birthday3').val('1990-02-28');
+  })
+  // ----
+  $('.fast-pet4').on('click', function() {
+    $('.pet-petName4').val('胡迪');
+    $('.pet-Size4').val('MSize');
+    $('.pet-notes4').val('無');
   })
 
+  $('.fast-pet1').on('click', function() {
+    $('.pet-petName1').val('嘿蹦');
+    $('.pet-Size1').val('SSize');
+    $('.pet-notes1').val('希望能提供推車');
+  })
+
+  $('.fast-pet2').on('click', function() {
+    $('.pet-petName2').val('球球');
+    $('.pet-Size2').val('lSize');
+    $('.pet-notes2').val('狗狗有皮膚問題，提供的食物需要避免麥類');
+  })
+  $('.fast-pet3').on('click', function() {
+    $('.pet-petName3').val('熊熊');
+    $('.pet-Size3').val('MSize');
+    $('.pet-notes3').val('寶貝看到同類喜歡吠叫，希望工作人員幫忙一下');
+  })
+  // ----
 
   $('#pay-btn').on('click', function() {
 
-    // console.log('#pay-btn', 'click')
-    // const mainLastName = $('#mainLastName').val();
-    // const mainFirstName = $('#mainFirstName').val();
-    // const mainGender = $('#mainGender').val();
-    // const phone = $('#phone').val();
-    // const email = $('#email').val();
-    // const coupon = '2020WELCOME';
+
+    const coupon = '2020WELCOME';
 
     $.post('<?= WEB_ROOT ?>cart/cart_to_api.php',
 
-      $(document.form1).serialize(),
+      // $(document.form_main, document.form_order, document.form_coupon, document.form_coupon, document.form_pay).serialize(),
+
+      $(document.form_all).serialize(),
       function(data) {
         console.log('data', data);
-
-
       }, );
 
-    // console.log('mainLastName', mainLastName)
-    // console.log('mainFirstName', mainFirstName)
-    // console.log('mainGender', mainGender)
-    // console.log('phone', phone)
-    // console.log('email', email)
-    // console.log('coupon', coupon)
+
 
   });
 
+  // 右邊價錢～～～～～滑動固定
   // console.log('scrollTop', $('#order-box-total').scrollTop())
   // $('rder-box-total').scrollTop()
 
   // console.log('AAAAorder_box_total', order_box_total);
+
+  let wdth = $(window).width();
+  let order_box_first = $('#order-box-total').offset().top;
+  $(window).resize(function() {
+    wdth = $(window).width()
+
+  })
+
+
   $(window).on('scroll', function() {
     let scrollnow = $(window).scrollTop();
-    let scrollwidth = $(window).width();
+    let scrollwidth = wdth;
     let order_box_total = $('#order-box-total').offset().top;
-    // let order_box_total = $('#order-box-total').scrollTop();
-
-
-    // if (order_box_total - scrollnow < 80 && scrollwidth > 1000) {
-    //   console.log('fixed')
-    //   // $('#order-box-total').addClass('fixed')
-    // }
-
-    // if (order_box_total - scrollnow > 80 && scrollwidth > 1000) {
-    //   console.log('removeClassfixed')
-    //   // $('#order-box-total').removeClass('fixed')
-    // }
-
-
+    console.log('wdth', wdth)
     console.log('scrollnow', scrollnow);
     console.log('scrollwidth', scrollwidth);
     console.log('order_box_total', order_box_total - scrollnow);
+    console.log('order_box_first', order_box_first);
+
+    // let order_box_total = $('#order-box-total').scrollTop();
 
 
-    // console.log('order_box_total', order_box_total)
+    if (order_box_total - scrollnow <= 80 && wdth > 991.98) {
+      console.log('fixed')
+      $('#order-box-total').addClass('fixed')
+    }
+
+
+    if (order_box_first - scrollnow > 80 && wdth > 991.98) {
+      console.log('removeClassfixed')
+      $('#order-box-total').removeClass('fixed')
+    }
+
+
+
+
   })
 
-  // $('#pay-btn').on('click', function() {
+  // console.log('windowwdth', wdth)
+
+
+
+
+
+
 
   // }) 付款
 
