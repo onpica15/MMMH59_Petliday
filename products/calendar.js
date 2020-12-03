@@ -39,7 +39,7 @@ for (let i = 0; i < dataTemp.length; i++) {
 
   // ((i + 3) % 7 === 0|| (i + 4) % 7 === 0 || (i + 5) % 7 === 0 || (i + 6) % 7 === 0||(i) % 7 === 0)
   if ((i + 2) % 13 === 0||(i + 5) % 10 === 0) {
-    dataDisplay +=`<td><p class="danger-color fw-5">${dataTemp[i]}</p><p class="danger-color">4280</p></td>`}
+    dataDisplay +=`<td><p class="danger-color fw-5">${dataTemp[i]}</p><p class="danger-color"><?= $rows['price_all'] ?></p></td>`}
   else if ((i + 3) % 11 === 0) {
     dataDisplay +=`<td style="pointer-events:none"><p class="text-gray fw-5">${dataTemp[i]}</p><p class="text-gray t-xs">已額滿</p></td>`}
   else if ((i + 1) % 7 === 0) {

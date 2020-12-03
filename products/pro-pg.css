@@ -40,6 +40,7 @@ background-color: #fff;
     top: -170px;
     right: 0;
     overflow: hidden;
+    pointer-events: none;
 }
 .share-row{
     width: 300px;
@@ -52,6 +53,7 @@ background-color: #fff;
     transition: .5s;
     z-index: 2;
     opacity: 0;
+    pointer-events: none;
 }
 .cancel-btn{
     width: 12px;
@@ -110,6 +112,7 @@ background-color: #fff;
 .heart-top{
     margin: 10px;
     width: 40px;
+    cursor: pointer;
 }
 .heart-top img{
     width: 100%;
@@ -118,6 +121,7 @@ background-color: #fff;
 .share{
     margin: 10px;
     width: 40px;
+    cursor: pointer;
 }
 .share img{
     width: 100%;
@@ -130,6 +134,9 @@ background-color: #fff;
 }
 .rate-row{
     margin-top: 15px;
+}
+.rate-row a{
+    cursor: pointer;
 }
 .star{
     width: 20px;
@@ -183,6 +190,7 @@ background-color: #fff;
 
 #data td{
 border-radius: 3px;
+cursor: pointer;
 }
 
 .input-group-prepend{
@@ -217,6 +225,9 @@ border-radius: 3px;
 }
 .top{
     padding:80px 80px 10px;
+}
+.top-right{
+    cursor: pointer;
 }
 .topic-line-gray{
     width: 160px;
@@ -256,6 +267,7 @@ border-radius: 3px;
 }
 .arrow{
     width: 10px;
+    cursor: pointer;
 }
 .arrow img{
     width: 100%;
@@ -290,11 +302,11 @@ border-radius: 3px;
     width: 50;
     height: 50px;
     padding: 10px;
-  
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
   
   .add-man {
@@ -401,6 +413,7 @@ border-radius: 3px;
     top: 0;
     left: 0;
     z-index: 3;
+    cursor: pointer;
 }
 .btn-cate{
     flex-grow: 1;
@@ -452,6 +465,9 @@ border-radius: 3px;
 .day123 a:active{
     background-color: #fff;
     text-decoration: none;
+}
+.day1, .day2, .day3{
+    cursor: pointer;
 }
 
 .line{
@@ -579,6 +595,7 @@ margin: -60px 0 0 700px;
     box-shadow: 1px 2px 20px #eee;
     padding: 50px 80px;
     transition: .5s;
+    cursor: pointer;
 }
 .term-text{
     font-size: 14px;
@@ -742,6 +759,7 @@ to{
     right: 15px;
     border-radius: 50%;
     padding: 6px 8.5px;
+    cursor: pointer;
 }
 .heart{
     width: 18px;
@@ -785,6 +803,7 @@ font-size: 12px;
     margin-top: 0;
 }
 
+
 /* 3個一排card css end------------------------------------- */
 /* 425 RWD start */
 @media(max-width: 425px) {
@@ -802,6 +821,7 @@ font-size: 12px;
         width: 208px;
         height: 300px;
         margin: 50px auto 0;
+        pointer-events: none;
     }
     /* 兩個白色卡區 */
     .top-green{
@@ -1133,5 +1153,3 @@ font-size: 12px;
         margin: 0;
     }
 }
-
-

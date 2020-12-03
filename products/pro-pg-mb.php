@@ -1,16 +1,19 @@
 <?php include __DIR__ . '/../parts/config.php' ?>
 <?php include __DIR__ . '/../parts/html-head.php' ?>
+<meta http-equiv="Page-Enter" content="revealTrans(Transition=4,Duration=5.0)">
 <link rel="stylesheet" href="pro-pg-mb.css">
+<!-- <meta http-equiv="Page-Enter" content="revealTrans(Transition=4,Duration=5.0)"> -->
+<!-- <meta http-equiv="Site-Enter" content="revealTrans(Transition=4,Duration=5.0)"> -->
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
 <div class="container">
     <div class="top-wrap info">
         <!-- 麵包屑 -->
         <div class="row bread-row mb-2 t-xs">
-            <a href="">首頁</a> /
-            <a href="">行程列表</a> /
-            <a href="">台北出發</a> /
-            <a href="">花東三日遊</a> /
-            <a href="">行程介紹</a>
+            <a href="<?= WEB_ROOT ?>index/index＿.php">首頁</a> /
+            <a href="<?= WEB_ROOT ?>products/pro-list-ajax.php">行程列表</a> /
+            <a href="<?= WEB_ROOT ?>products/pro-list-ajax.php">台北出發</a> /
+            <a href="<?= WEB_ROOT ?>products/pro-pg.php?sid=1">花東三日遊</a> /
+            <a href="<?= WEB_ROOT ?>products/pro-pg-mb.php?">行程介紹</a>
         </div>
         <!-- 標題row -->
         <div class="row title-row">
