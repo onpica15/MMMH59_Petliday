@@ -3,12 +3,13 @@
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <?php
 
-$sid = isset($_SESSION['cart']['sid']) ? intval($_SESSION['cart']['sid']) : 0;
-$cs = $_SESSION['cart'][$sid];
+// // $sid = isset($_SESSION['cart']['sid']) ? intval($_SESSION['cart']['sid']) : 0;
+// $cs = $_SESSION['cart'][$sid];
 // echo json_encode($_SESSION['cart'][$sid], JSON_UNESCAPED_UNICODE);
 
 // echo json_encode($_SESSION['cart'], JSON_UNESCAPED_UNICODE);
 // exit;
+// 
 ?>
 
 <script></script>
@@ -19,7 +20,7 @@ $cs = $_SESSION['cart'][$sid];
     top: 80px;
     right: 210px;
     z-index: 4;
-    /* display: none; */
+    display: none;
   }
 
   /* .cart-hover:hover{
@@ -34,12 +35,12 @@ $cs = $_SESSION['cart'][$sid];
   .cart-box-top img,
   .cart-star img {
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   .cart-box {
     /* display: none; */
-    width: 400px;
+    width: 410px;
     padding: 20px;
     background-color: #fff;
     border-radius: 3px;
@@ -55,7 +56,8 @@ $cs = $_SESSION['cart'][$sid];
 
   .cart-pic img {
     width: 100%;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
   }
 
   .cart-text {
@@ -341,21 +343,27 @@ $cs = $_SESSION['cart'][$sid];
       <div class="cart-box-top">
         <img src="/Petliday/products/img/cart-top.svg" alt="">
       </div>
-      <div class="cart-box d-flex justify-content-between">
-        <div class="cart-pic">
-          <img src="/Petliday/products/img/pd-caro1.jpg" alt="">
-        </div>
-        <div class="cart-text ml-4">
-          <p class="cart-title t-m">上山下海玩得夠！｜熱氣球嘉年華＆SUP體驗＆金針花海 花東三日遊</p>
-          <div class="cart-text-butt d-flex justify-content-between">
-            <div class="butt-left d-flex align-items-center">
-              <p class="cart-man mb-0 t-s text-gray">12/<?= $cs['date'] ?></p>
-              <p class="cart-man mb-0 mx-2 t-s text-gray">人數 x <?= $cs['manQ'] ?></p>
-              <p class="cart-pets mb-0 t-s text-gray">寵物 x <?= $cs['petQ'] ?></p>
+      <div class="cart-box">
+        <!-- 購物車清單開始 -->
+        <?php foreach ($_SESSION['cart'] as $c) : ?>
+          <div class="cart-item d-flex justify-content-between py-3">
+            <div class="cart-pic">
+              <img src="/Petliday/products/img/prolist<?= $c['sid'] ?>.jpg" alt="">
             </div>
-            <p class="cart-price mb-0 mr-2 t-l orange-color">＄<?= $cs['total'] ?></p>
+            <div class="cart-text ml-4">
+              <p class="cart-title t-m"><?= $c['product_name'] ?></p>
+              <div class="cart-text-butt d-flex justify-content-between">
+                <div class="butt-left d-flex align-items-center">
+                  <p class="cart-man mb-0 t-s text-gray">12/<?= $c['date'] ?></p>
+                  <p class="cart-man mb-0 mx-2 t-s text-gray">人數 x <?= $c['manQ'] ?></p>
+                  <p class="cart-pets mb-0 t-s text-gray">寵物 x <?= $c['petQ'] ?></p>
+                </div>
+                <p class="cart-price mb-0 mr-2 t-l orange-color">＄<?= $c['total'] ?></p>
+              </div>
+            </div>
           </div>
-        </div>
+        <?php endforeach;  ?>
+        <!-- 購物車hover 清單結束 -->
       </div>
     </div>
   </main>
@@ -364,6 +372,7 @@ $cs = $_SESSION['cart'][$sid];
   <?php include __DIR__ . '/../parts/html-script.php' ?>
   <script>
     // ------JS開始 以上勿刪-------
+
 
     $('.search-box').on('mouseenter', function() {
       console.log('enter')
@@ -419,7 +428,7 @@ $cs = $_SESSION['cart'][$sid];
 
     function additem(cart) {}
 
-    $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', function(data) {
+    $.get('<?= WEB_ROOT ?>products/pro-pg-api.php', function(data) {
       console.log(data);
       countCart(data.cart);
       console.log(' countCart(data.cart)', countCart(data.cart));

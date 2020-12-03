@@ -41,7 +41,7 @@ for (let i = 0; i < dataTemp.length; i++) {
   if ((i + 2) % 13 === 0||(i + 5) % 10 === 0) {
     dataDisplay +=`<td><p class="danger-color fw-5">${dataTemp[i]}</p><p class="danger-color">4280</p></td>`}
   else if ((i + 3) % 11 === 0) {
-    dataDisplay +=`<td><p class="text-gray fw-5">${dataTemp[i]}</p><p class="text-gray t-xs">已額滿</p></td>`}
+    dataDisplay +=`<td style="pointer-events:none"><p class="text-gray fw-5">${dataTemp[i]}</p><p class="text-gray t-xs">已額滿</p></td>`}
   else if ((i + 1) % 7 === 0) {
     dataDisplay +=`<td><p class="fw-5">${dataTemp[i]}</p><p class="green-color">4580</p></td>`
     dataDisplay += '</tr><tr>'

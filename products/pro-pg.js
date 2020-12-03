@@ -53,19 +53,28 @@ setInterval(function(){
         }
         
     });
-// 主要資訊區 分享點擊彈出視窗
+// 主要資訊區 分享點擊彈出視窗*********************************
 $('.share').on('click',function(){
     $('.share-row').css('top','0').css('opacity','1');
 }) 
 $('.share-row').on('click',function(){
     $(this).css('top','200px').css('opacity','0');
 })
-//  選擇區塊加總金額
+//  選擇區塊加總金額*********************************
 
 const dallorCommas = function(n) {
     return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 };
-let total = 4280;
+// 設定預設金額為寵物金額＋人金額
+function deFaultTotal(){
+    let tr = $('.change-box');
+    let manP = parseInt(tr.find('.change-man').attr('data-price'));
+    let petP = parseInt(tr.find('.change-pet').attr('data-price'));
+    total = manP + petP;
+    $('.select-price p').text('NTD$ ' + dallorCommas(total));
+}
+deFaultTotal();
+// 在任何數量更動之前，執行預設總價計算
 function calcTotal() {
     let tr = $('.change-box');
     let manP = parseInt(tr.find('.change-man').attr('data-price'));
@@ -77,10 +86,14 @@ function calcTotal() {
     total = manP * manQ + petP * petQ;
     $('.select-price p').text('NTD$ ' + dallorCommas(total));
 }
-$('.select-price p').text('NTD$ ' + dallorCommas(total));
+// $('.select-price p').text('NTD$ ' + dallorCommas(total));
+
+
+// 加入購物車按鈕按下：cart hover show****************
 
 $('.change-btn').on('click',function(){
     calcTotal()
+  
 })
 
 //選擇區塊資料丟進session['cart'] start**********************************
@@ -111,30 +124,43 @@ $('.btn-twin').on('click', function() {
         console.log(data);
         countCart(data);
     }, 'json');
-
+    
+    setTimeout(() => {
+        $('.cart-hover').css('opacity', '1')
+    }, 500);
+    setTimeout(() => {
+        $('.cart-hover').css('opacity', '0')
+    }, 4000);
+    
 })
 
 //選擇區塊資料丟進session['cart'] end**********************************
 
+// 全部重選按鈕清除：日期背景.人數.寵物數歸一
+
+$('.top-right').on('click',function(){
+    $('#data').find('td').css('background-color','#fff').removeClass('active');
+    $('.change-man input,.change-pet input').val(1);
+})
+
 //calendar點日期換背景色**********************************
 
 // const td = document.querySelectorAll('td')
+
+    
 $('.calendar td').on('click',function(){
-    $('#data').find('td').css('background-color','#fff').removeClass('active');
+    let checkFull = $(this).children().eq(1).text();
+    // console.log('checkFull',checkFull)
+    if(checkFull==='已額滿'){
+        $(this).removeClass('active');
+    }else{
+    $(this).find('td').css('background-color','#fff').removeClass('active');
     $(this).css('background-color','#ffc072').addClass('active');
-    // console.log('this.val()',td.innerHTML);
-    // console.log('this.val()',dataTemp[i]);
+    }  
 })
 
 
 // 選擇數量區 ＋− start**********************************
-
-const manQuantity = document.getElementById('man-quantity')
-const petQuantity = document.getElementById('pet-quantity')
-const addManBtn = document.getElementById('add-man')
-const subManBtn = document.getElementById('sub-man')
-const addPetBtn = document.getElementById('add-pet')
-const subPetBtn = document.getElementById('sub-pet')
 
 // jq設定多個css--為什麼不行！！！！？？？？？？？？！？！？！？！？！？
 // let styleOn = {
@@ -148,6 +174,13 @@ const subPetBtn = document.getElementById('sub-pet')
 // jq設定多個css--為什麼不行！！！！？？？？？？？？！？！？！？！？！？
 
 // js寫法＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+const manQuantity = document.getElementById('man-quantity')
+const petQuantity = document.getElementById('pet-quantity')
+const addManBtn = document.getElementById('add-man')
+const subManBtn = document.getElementById('sub-man')
+const addPetBtn = document.getElementById('add-pet')
+const subPetBtn = document.getElementById('sub-pet')
+
   if (manQuantity.value = 1) {
     subManBtn.style = 'background-color:#eee;fill:#ccc';
   }
@@ -219,6 +252,7 @@ const subPetBtn = document.getElementById('sub-pet')
 //         pet: petQuantity.val()
 //     }, 'json');
 // }
+
 
 
 // cate menu 行程介紹fixed目錄bar 滑到定位固定**********************************
@@ -412,7 +446,6 @@ if (window.matchMedia('(max-width: 425px)').matches) {
 if (window.matchMedia('(max-width: 425px)').matches) {
     // 手機版
     $('.t1').on('click', function() {
-        console.log('height', $(this).css('height'));
         if ($(this).css('height') === '300px') {
             $(this).css('height', '960px');
             setTimeout(() => {
@@ -423,7 +456,6 @@ if (window.matchMedia('(max-width: 425px)').matches) {
         }
     });
     $('.t2').on('click', function() {
-        console.log('height', $(this).css('height'));
         if ($(this).css('height') === '300px') {
             $(this).css('height', '620px');
             setTimeout(() => {
@@ -434,7 +466,6 @@ if (window.matchMedia('(max-width: 425px)').matches) {
         }
     });
     $('.t3').on('click', function() {
-        console.log('height', $(this).css('height'));
         if ($(this).css('height') === '220px') {
             $(this).css('height', '560px');
             setTimeout(() => {
@@ -447,7 +478,6 @@ if (window.matchMedia('(max-width: 425px)').matches) {
     // 電腦版
 }else{
     $('.t1').on('click', function() {
-        console.log('height', $(this).css('height'));
         if ($(this).css('height') === '350px') {
             $(this).css('height', '790px')
             setTimeout(() => {
@@ -458,7 +488,6 @@ if (window.matchMedia('(max-width: 425px)').matches) {
         }
     });
     $('.t2, .t3').on('click', function() {
-        console.log('height', $(this).css('height'));
         if ($(this).css('height') === '350px') {
             $(this).css('height', '570px');
             setTimeout(() => {
@@ -471,7 +500,7 @@ if (window.matchMedia('(max-width: 425px)').matches) {
 }
 
 // 推薦行程卡片 hover
-        $('.c3').on('mouseenter', function() {
+    $('.c3').on('mouseenter', function() {
             $(this).find('.card-pic').css('height', '135px');
             $(this).find('.card-info').css({
                 'opacity': '1',

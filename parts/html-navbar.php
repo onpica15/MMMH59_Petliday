@@ -253,17 +253,43 @@
               <a class="nav-link" href="user-logout.php">登出</a>
             </li>
           <?php endif ?>
-
-
-
         </ul>
-
       </div>
     </nav>
-
-
   </header>
+  <!-- cart icon hover **************彭***************start -->
+  <main>
+    <!-- $_SESSION['cart'][$sid] -->
 
+    <div class="cart-hover">
+      <div class="cart-box-top">
+        <img src="/Petliday/products/img/cart-top.svg" alt="">
+      </div>
+      <div class="cart-box">
+        <!-- 購物車清單開始 -->
+        <?php foreach ($_SESSION['cart'] as $c) : ?>
+          <div class="cart-item d-flex justify-content-between py-3">
+            <div class="cart-pic">
+              <img src="/Petliday/products/img/prolist<?= $c['sid'] ?>.jpg" alt="">
+            </div>
+            <div class="cart-text ml-4">
+              <p class="cart-title t-m"><?= $c['product_name'] ?></p>
+              <div class="cart-text-butt d-flex justify-content-between">
+                <div class="butt-left d-flex align-items-center">
+                  <p class="cart-man mb-0 t-s text-gray">12/<?= $c['date'] ?></p>
+                  <p class="cart-man mb-0 mx-2 t-s text-gray">人數 x <?= $c['manQ'] ?></p>
+                  <p class="cart-pets mb-0 t-s text-gray">寵物 x <?= $c['petQ'] ?></p>
+                </div>
+                <p class="cart-price mb-0 mr-2 t-l orange-color">＄<?= $c['total'] ?></p>
+              </div>
+            </div>
+          </div>
+        <?php endforeach;  ?>
+        <!-- 購物車hover 清單結束 -->
+      </div>
+    </div>
+  </main>
+  <!-- cart icon hover **************彭***************end -->
 
   <!-- ---------------js/jq 開始 ------------------ -->
   <?php include __DIR__ . '/../parts/html-script.php' ?>
@@ -331,7 +357,17 @@
     }, 'json');
 
 
+    // cart icon hover **************彭*******************start
 
+    $('.navbar-nav').on('mouseenter', function() {
+      $('.cart-hover').css('opacity', '1')
+    })
+    $('.navbar-nav').on('mouseleave', function() {
+      $('.cart-hover').css('opacity', '0')
+    })
+
+
+    // cart icon hover **************彭*******************end
 
 
 

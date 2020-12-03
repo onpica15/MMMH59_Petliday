@@ -10,52 +10,6 @@ main{
     padding-top: 50px;
     height: 1900px;
 }
-/* cart hover start--------------------------------------- */
-.cart-hover{
-    position: fixed;
-    top: 80px;
-    right: 210px;
-    z-index: 4;
-    /* display: none; */
-}
-/* .cart-hover:hover{
-    display: block;
-} */
-.cart-box-top{
-    width: 120px;
-    margin-bottom: -9px;
-    margin-left: 20px;
-}
-.cart-box-top img, .cart-star img{
-width: 100%;
-object-fit: contain;
-}
-.cart-box{
-    /* display: none; */
-    width: 400px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 3px;
-    box-shadow: 1px 2px 20px rgba(0,0,0,.1);
-}
-.cart-pic{
-    width: 90px;
-    height: 90px;
-    border-radius: 3px;
-    overflow: hidden;
-}
-.cart-pic img{
-width: 100%;
-object-fit: contain;
-}
-.cart-text{
-    width: 250px;
-}
-.cart-star{
-    width: 15px;
-}
-
-/* cart hover end--------------------------------------- */
 .caro{
     position: relative;
     z-index: 1;
@@ -99,6 +53,14 @@ background-color: #fff;
     z-index: 2;
     opacity: 0;
 }
+.cancel-btn{
+    width: 12px;
+}
+.cancel-btn img{ 
+    width: 100%;
+    object-fit: contain;
+}
+
 .fb,.line-icon,.email,.ig{
     width: 40px;
     height: 40px;

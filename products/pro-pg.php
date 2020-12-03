@@ -20,27 +20,6 @@ $rows = $pdo->query($sql)->fetch();
     <!-- 最上綠色區塊 -->
     <div class="container-fluid top-green">
         <!-- banner輪播D -->
-        <div class="cart-hover" hidden>
-            <div class="cart-box-top">
-                <img src="/Petliday/products/img/cart-top.svg" alt="">
-            </div>
-            <div class="cart-box d-flex justify-content-between">
-                <div class="cart-pic">
-                    <img src="/Petliday/products/img/pd-caro1.jpg" alt="">
-                </div>
-                <div class="cart-text ml-4">
-                    <p class="cart-title t-m">上山下海玩得夠！｜熱氣球嘉年華＆SUP體驗＆金針花海 花東三日遊</p>
-                    <div class="cart-text-butt d-flex justify-content-between">
-                        <div class="butt-left d-flex align-items-center">
-                            <p class="cart-man mb-0 t-s text-gray">12/18</p>
-                            <p class="cart-man mb-0 mx-2 t-s text-gray">人數 x 2</p>
-                            <p class="cart-pets mb-0 t-s text-gray">寵物 x 1</p>
-                        </div>
-                        <p class="cart-price mb-0 mr-2 t-l orange-color">＄<?= $rows['price_all'] ?></p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row caro position-relative">
             <img class="position-absolute" src="/petliday/products/img/pd-caro4.jpg" alt="">
             <img class="position-absolute" src="/petliday/products/img/pd-caro3.jpg" alt="">
@@ -61,7 +40,12 @@ $rows = $pdo->query($sql)->fetch();
             <!-- 分享彈出視窗 -->
             <div class="share-frame position-absolute">
                 <div class="share-row position-absolute">
-                    <p>分享</p>
+                    <div class="first-row d-flex justify-content-between align-items-start">
+                        <p>分享</p>
+                        <div class="cancel-btn">
+                            <img src="/Petliday/icon/close.png" alt="">
+                        </div>
+                    </div>
                     <div class="share-pic d-flex justify-content-between">
                         <div class="fb">
                             <img src="/Petliday/icon/fb.png" alt="">
