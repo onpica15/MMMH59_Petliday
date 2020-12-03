@@ -62,6 +62,7 @@
   <button class="btn">測試 class='btn'</button>
 
 </div>
+<!-- 上面的只是範例，別管它！！！ -->
 <!-- rating -->
 <div class="index-rating">
   <div class="rating-title">
@@ -91,16 +92,19 @@
       </div>
     </form>
 
-    <div class=" col-10 col-lg-4 ">
+    <div class="col-10 col-lg-4">
       <div class="rating-input d-flex mt-2 ml-2">
         <input type="text" class="form-control" placeholder="輸入更多回饋" aria-label="Recipient's username" aria-describedby="button-addon2" id="rating-input">
         <div class="rating-input-append">
-          <button type="button" id="rating-btn">送出</button>
+          <button type="button">送出</button>
         </div>
       </div>
     </div>
+    
+    <p>感謝您的寶貴回饋！</p>
   </div>
 </div>
+
 
 <!-- scroll_top -->
 <div class="scroll_top">
@@ -119,15 +123,27 @@
   // ------JS開始 以上勿刪-------
 
   // rating
-  
+
   $(".index-rating").mouseenter(function() {
-    $(".index-rating").animate({right: "0"});
+    $(".index-rating").animate({
+      right: "0"
+    });
+    $(".rating-title").show().fadeOut(500);
   });
 
   $(".index-rating").mouseleave(function() {
-    $(".index-rating").animate({right: "-200px"
+    $(".index-rating").animate({
+      right: "-200px"
     });
+    $(".rating-title").show().fadeIn(300);
   });
+
+  // button送出成功顯示畫面
+  // $("rating-btn").on("click", function() {
+  //   $(".rating-info2").toggleClass("move")
+  // });
+
+
 
   // scroll_top
   $(".scroll_top").click(function() {
