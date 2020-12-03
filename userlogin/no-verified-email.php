@@ -17,7 +17,7 @@
           <div class="login-group input-icon">
             <!-- <label for="account">帳號</label> -->
             <input type="text" class="form-control" id="forget2-email" name="forget2-email" placeholder="電子信箱">
-            <img class="icon-msg" style="bottom:209px;" src="./imgs/mail.svg">
+            <img class="icon-msg1" src="./imgs/mail.svg">
           </div>
 
           <div class="login-group-2">

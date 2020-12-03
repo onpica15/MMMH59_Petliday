@@ -134,10 +134,8 @@ button:focus{
     position: relative;
 }
 
-/* .form-control:focus{
-    outline:1px solid transparent;
-} */
 
+/* 登入頁、註冊頁的icon */
 .icon-msg{
     position: absolute;
     left: 85px;
@@ -151,6 +149,15 @@ button:focus{
     left: 85px;
     bottom: 13px;
     height: 18px;
+    margin-right: 50px;
+}
+
+/* 忘記密碼頁、驗證頁的icon */
+.icon-msg1{
+    position: absolute;
+    left: 85px;
+    bottom: 14px;
+    height: 12px;
     margin-right: 50px;
 }
 

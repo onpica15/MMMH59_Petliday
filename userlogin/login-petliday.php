@@ -35,16 +35,16 @@
             <img class="icon-msg" src="./imgs/mail.svg">
             <i class="fas fa-exclamation-circle"></i>
             <i class="fas fa-check-circle"></i>
-            <small class="form-text">此欄位必填</small>
+            <small class="form-text">請輸入您的電子信箱</small>
           </div>
 
           <div class="login-group input-icon">
             <!-- <label for="password">密碼</label> -->
-            <input type="password" class="form-control" id="apply_password" name="apply_password" placeholder="密碼">
+            <input type="password" class="form-control" id="apply_password" name="apply_password" placeholder="密碼（至少六位數字）">
             <img class="icon-psd" src="./imgs/password.svg">
             <i class="fas fa-exclamation-circle"></i>
             <i class="fas fa-check-circle"></i>
-            <small class="form-text">此欄位必填</small>
+            <small class="form-text">請輸入密碼</small>
           </div>
 
           <div class="login-group-2">
@@ -91,7 +91,7 @@
         email.closest('.login-group').addClass('success');
       }
 
-      if (password.val().length < 3) {
+      if (password.val().length < 6) {
          isPass = false;
          password.closest('.login-group').addClass('error')
       } else {
