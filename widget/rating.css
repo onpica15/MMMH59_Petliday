@@ -4,7 +4,7 @@ body {
   }
 
 .index-rating {
-    width: 250px;
+    /* width: 250px; */
     height: 150px;
     position: absolute;
     right: -200px;
@@ -50,7 +50,7 @@ body {
     width: 200px;
     height: 155px;
     background-color: #ccc;
-    border-radius: 3px 0px 0px 30px;
+    border-radius: 3px 0px 0px 8px;
     border-top:10px solid #1c9e8bab;
     /* position: fixed;
     bottom: 25vh; */
@@ -145,8 +145,24 @@ body {
     outline: none;
 }
 
+/* 感謝頁 */
+/* .rating-info2{
+  width: 200px;
+  height: 155px;
+  background-color: #ccc;
+  border-radius: 3px 0px 0px 30px;
+  border-top:10px solid #1c9e8bab;
+  position: fixed;
+  bottom: 22vh;
+  right: 250px;
+}
 
-
+.rating-info2 p{
+  color: #3C2E26;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 60px;
+} */
 
 /* scroll_top */
 .scroll_top{
