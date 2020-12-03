@@ -70,6 +70,10 @@
   cursor: pointer;
   position: relative;
 }
+#search-box-m {
+  cursor: pointer;
+  position: relative;
+}
 
 .search-bar {
   position: relative;

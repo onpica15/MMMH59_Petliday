@@ -32,8 +32,8 @@ switch ($action) {
                 $_SESSION['cart'][$sid]['petQ'] = $petQ;
                 $_SESSION['cart'][$sid]['total'] = $total;
                 $_SESSION['cart'][$sid]['date'] = $date;
-                $_SESSION['cart'][$date]['date'] = $date;
-                $_SESSION['cart'][$date]['item'] = $item;
+                $_SESSION['cart'][$sid]['date'] = $date;
+                $_SESSION['cart'][$sid]['item'] = $item;
             } else {
                 $sql = "SELECT * FROM products WHERE sid=$sid";
                 $row = $pdo->query($sql)->fetch();

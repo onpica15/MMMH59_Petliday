@@ -32,7 +32,7 @@
         <div class="row prod-box d-flex align-items-center prod-item" data-sid="<?= $i['sid'] ?>" id="prod<?= $i['sid'] ?>">
 
 
-          <div class=" prod-img col-2 col-lg-2">
+          <div class="col-2 col-lg-2 prod-img">
             <img src="../products/img/prolist<?= $i['sid'] ?>.jpg" alt="">
           </div>
           <div class="col-10 col-lg-6 prod-text d-flex flex-column justify-content-center">
@@ -182,8 +182,8 @@
     const pQuantity = parseInt(tr.find('.pet-box input').attr('data-petQ'))
     const price = (mQuantity * mprice) + (pQuantity * pprice);
 
-    // console.log('mQuantity', mQuantity)
-    // console.log('pQuantity', pQuantity)
+    console.log('BmQuantity', mQuantity, 'mprice', mprice, 'price', price)
+    console.log('BpQuantity', pQuantity, 'pprice', pprice, 'price', price)
     tr.find('.man-box input').val(mQuantity);
     tr.find('.pet-box input').val(pQuantity);
     tr.find('.prod-price h5').html('$ ' + dallorCommas(price));
@@ -243,16 +243,7 @@
     }
 
   });
-
-  // const addButton = $('.add-icon');
-  // const subButton = $('.sub-icon');
-  // const addButton1 = $('.add-icon1');
-  // const subButton1 = $('.sub-icon1');
-  // let item = parseInt($('.prod-item').find('.man-box input').val());
-  // let mQuantityV = addButton.closest('.prod-item').find('.man-box input');
-  // let pQuantityV = $('.prod-item').find('.pet-box input');
-  // let item = $('.prod-item').find('.man-box input').val();
-
+  // -------加減按鈕區-------
   $('.add-icon').click(function() {
     console.log('add-icon-click')
     let item = parseInt($(this).closest('.prod-item').find('.man-box input').val());
@@ -315,7 +306,7 @@
 
   })
 
-
+  // pet－－－－－－－－－－－－－
 
   $('.add-icon1').click(function() {
     console.log('add-icon1-click')
@@ -349,8 +340,6 @@
     }
   })
 
-
-  // pet－－－－－－－－－－－－－
   $('.sub-icon1').click(function() {
     console.log('subButton-click')
     let item = parseInt($(this).closest('.prod-item').find('.pet-box input').val());
@@ -381,7 +370,6 @@
     console.log('AAAAAAA-subButton', item)
 
   })
-
 
   // --------------------------------------------
 
@@ -418,16 +406,20 @@
     // const subButton1 = $(this).find('man-box .sub-icon');
     let mQuantity = parseInt($(this).find('.man-box input').val());
     let pQuantity = parseInt($(this).find('.pet-box input').val());
-    console.log('CCmQuantity', mQuantity)
-    console.log('CCpQuantity', pQuantity)
-    const pprice = parseInt($('.prod-item').find('.pprice').attr('data-pprice'));
-    const mprice = parseInt($('.prod-item').find('.mprice').attr('data-mprice'));
+
+
+    const pprice = parseInt($(this).closest('.prod-item').find('.pprice').attr('data-pprice'));
+
+    const mprice = parseInt($(this).closest('.prod-item').find('.mprice').attr('data-mprice'));
     const price = (mQuantity * mprice) + (pQuantity * pprice);
     ('data-quantity');
     // console.log('mQuantity', mQuantity);
-
+    console.log('CCmQuantity', mQuantity)
+    console.log('CCpQuantity', pQuantity)
+    console.log('CCpprice', pprice)
+    console.log('CCmprice', mprice)
+    console.log('CCprice', price)
     const subButton = $(this).closest('.prod-item').find('.man-box .subIcon');
-
     const subButton1 = $(this).closest('.prod-item ').find('.pet-box .subIcon');
 
 
@@ -442,9 +434,9 @@
       combo.attr('data-manQ', mQuantity);
       combo.attr('data-petQ', pQuantity);
       combo.closest('.prod-item').find('.prod-price h5').html('$ ' + dallorCommas(price));
-
-
       calcTotal();
+
+
       if (mQuantity == 1) {
         subButton.addClass('unable-icon')
         subButton.removeClass('able-icon');
@@ -459,7 +451,6 @@
         subButton1.addClass('able-icon');
         subButton1.removeClass('unable-icon');
       };
-
 
     }, 'json');
     // console.log('AAAAsmQuantity', mQuantity);

@@ -101,8 +101,8 @@
               </svg>
             </div>
           </a>
-          <div class="search-box-m search-box nav-m" id="search-box">
-            <input type="text" placeholder="想與寶貝去哪玩？" class="search-bar pl-3" id="search-input">
+          <div class="search-box-m search-box nav-m" id="search-box-m">
+            <input type="text" placeholder="想與寶貝去哪玩？" class="search-bar pl-3" id="search-input-m">
             <button class="search-btn ">
               <svg class="" id="search-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352.48 336.07">
                 <g>
@@ -135,10 +135,10 @@
           <ul class="navbar-nav">
 
             <li class="nav-item mt-5">
-              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>products/pro-list.php">關於毛日</a>
+              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>about/about.php">關於毛日</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>products/pro-list.php">毛日行程</a>
+              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>products/pro-list-ajax.php">毛日行程</a>
             </li>
             <li class="nav-item">
               <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>account/account-profile.php">會員資料</a>
@@ -168,10 +168,10 @@
           <ul class="navbar-nav">
 
             <li class="nav-item mr-3">
-              <a class="nav-link" href="<?= WEB_ROOT ?>products/pro-list.php">關於毛日</a>
+              <a class="nav-link" href="<?= WEB_ROOT ?>about/about.php">關於毛日</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?= WEB_ROOT ?>products/pro-list.php">毛日行程</a>
+              <a class="nav-link" href="<?= WEB_ROOT ?>products/pro-list-ajax.php">毛日行程</a>
             </li>
           </ul>
         </div>
@@ -323,7 +323,8 @@
       $('span.total-items').html(count + ' 件商品');
     }
 
-    function additem(cart) {}
+    // function additem(cart) {}
+
 
     $.get('<?= WEB_ROOT ?>products/pro-pg-api.php', function(data) {
       console.log(data);
