@@ -288,8 +288,13 @@
         <!-- 購物車hover 清單結束 -->
       </div>
     </div>
+    <!-- cart icon hover **************彭***************end -->
+    <!-- scrolltop -->
+    <div class="scroll-top">
+      <img src="/Petliday/icon/up.png" alt="">
+    </div>
   </main>
-  <!-- cart icon hover **************彭***************end -->
+
 
   <!-- ---------------js/jq 開始 ------------------ -->
   <?php include __DIR__ . '/../parts/html-script.php' ?>
@@ -370,7 +375,42 @@
 
     // cart icon hover **************彭*******************end
 
-
+    // scrolltop ****************************start
+    $(window).scroll(function() {
+      if ($(window).scrollTop() < 1015) {
+        $('.scroll-top').css('opacity', '0').css('bottom', '100px');
+      } else if ($(window).scrollTop() > 1015 && $(window).scrollTop() < 9220) {
+        $('.scroll-top').css('opacity', '0.5').css('bottom', '100px');
+      } else {
+        $('.scroll-top').css('bottom', '400px');
+      }
+    })
+    $('.scroll-top').on('mouseenter', function() {
+      $(this).css('opacity', '1')
+    })
+    $('.scroll-top').on('mouseleave', function() {
+      $(this).css('opacity', '0.5')
+    })
+    $('.scroll-top').on('click', function() {
+      // $(window).scroll(function(){
+      //     let nowTop = $(window).scrollTop();
+      console.log('butt', $(window).scrollTop())
+      $(window).scrollTop(0);
+      // })
+    })
+    if (window.matchMedia('(max-width: 425px)').matches) {
+      $(window).scroll(function() {
+        if ($(window).scrollTop() < 230) {
+          $('.scroll-top').css('opacity', '0').css('bottom', '20px');
+        } else {
+          $('.scroll-top').css('opacity', '0.5').css('bottom', '20px');
+        }
+        // else{
+        //     $('.scroll-top').css('bottom','400px');
+        // }
+      })
+    }
+    // scrolltop ****************************end
 
     // ------JS結束 勿刪到-------
   </script>

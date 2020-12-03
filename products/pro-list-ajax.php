@@ -12,8 +12,8 @@
 </div>
 <div class="container top-container">
     <div class="row bread-row t-xs">
-        <a href="">首頁</a> /
-        <a href="">行程列表</a>
+        <a href="<?= WEB_ROOT ?>index/index＿.php">首頁</a> /
+        <a href="<?= WEB_ROOT ?>products/pro-list-ajax.php">行程列表</a>
     </div>
     <div class="topic">
         <p>熱門行程</p>

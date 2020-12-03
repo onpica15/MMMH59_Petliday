@@ -251,3 +251,7 @@
         margin: 0;
     }
 }
+/* mobile test */
+.ui-body-c, .ui-overlay-c{
+    text-shadow:none !important;
+}
