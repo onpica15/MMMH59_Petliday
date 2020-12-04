@@ -164,7 +164,8 @@
       },
       function(data) {
         console.log(data);
-        countCart(data);
+        countCart(data.cart);
+        // combo.closest('td.quantity').attr('data-quantity', quantity);
         $('#prod' + sid).remove();
         calcTotal();
         // $('span.total-items').text(countCart(data) + '件商品');
@@ -429,10 +430,11 @@
       manQ: mQuantity,
       petQ: pQuantity,
     }, function(data) {
-      console.log(data);
+      console.log(data.cart);
       // countCart(data);
       combo.attr('data-manQ', mQuantity);
       combo.attr('data-petQ', pQuantity);
+
       combo.closest('.prod-item').find('.prod-price h5').html('$ ' + dallorCommas(price));
       calcTotal();
 
