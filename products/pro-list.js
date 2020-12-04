@@ -47,35 +47,69 @@
         threshold: 0,
         swipe:function(event, direction, distance, duration, fingerCount) {
             console.log([event, direction, distance, duration, fingerCount]);
-            if(direction == 'left' && distance > 200){
-                index = index + 1;
-                console.log('index1:', index);
-                // let nowIndex = (index > 4) ? 0 : index;
-                $('.wrap-img').css('transition', '0.7s').css('left', (-1140 * index));
-                $('.dots li').eq(index - 1).css('background', '#ffc072').siblings().css('background', '#ccc');
-                $('.wrap-img').on('transitionend webkitTransitionEnd', function() {
-                if (index == 5) {
-                    index = 0;
-                    $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
-                    index = 1;
-                    console.log('index2:', index);
-                    $('.wrap-img').css('transition', 'none').css('left', '-1140px')
-                    }
-                });
-            }
-            else if(direction == 'right' && distance > 200){
-                index = index - 1;
-                $('.wrap-img').css('transition', '0.7s').css('left', -1140 * (index + 1));
-                $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
-
-                $('.wrap-img').on('transitionend webkitTransitionEnd', function() {
-                    if (index == -1) {
-                        index = 4;
-                        console.log('index4:', index);
-                        $('.wrap-img').css('transition', 'none').css('left', '-4560px')
+            if (window.matchMedia('(max-width: 425px)').matches) {
+                // 手機版
+                if(direction == 'left' && distance > 80){
+                    index = index + 1;
+                    $('.wrap-img').css('transition', '0.7s').css('left', (-340 * index));
+                    $('.dots li').eq(index - 1).css('background', '#ffc072').siblings().css('background', '#ccc');
+                    $('.wrap-img').on('transitionend webkitTransitionEnd', function() {
+                    if (index == 5) {
+                        index = 0;
                         $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
-                    }
-                });
+                        index = 1;
+                        console.log('index2:', index);
+                        $('.wrap-img').css('transition', 'none').css('left', '-1140px')
+                        }
+                    });
+                }
+                else if(direction == 'right' && distance > 80){
+                    index = index - 1;
+                    $('.wrap-img').css('transition', '0.7s').css('left', -340 * (index + 1));
+                    $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
+
+                    $('.wrap-img').on('transitionend webkitTransitionEnd', function() {
+                        if (index == -1) {
+                            index = 4;
+                            console.log('index4:', index);
+                            $('.wrap-img').css('transition', 'none').css('left', '-4560px')
+                            $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
+                        }
+                    });
+                }
+            }
+            else{
+                // 電腦版
+                if(direction == 'left' && distance > 200){
+                    index = index + 1;
+                    console.log('index1:', index);
+                    // let nowIndex = (index > 4) ? 0 : index;
+                    $('.wrap-img').css('transition', '0.7s').css('left', (-1140 * index));
+                    $('.dots li').eq(index - 1).css('background', '#ffc072').siblings().css('background', '#ccc');
+                    $('.wrap-img').on('transitionend webkitTransitionEnd', function() {
+                    if (index == 5) {
+                        index = 0;
+                        $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
+                        index = 1;
+                        console.log('index2:', index);
+                        $('.wrap-img').css('transition', 'none').css('left', '-1140px')
+                        }
+                    });
+                }
+                else if(direction == 'right' && distance > 200){
+                    index = index - 1;
+                    $('.wrap-img').css('transition', '0.7s').css('left', -1140 * (index + 1));
+                    $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
+
+                    $('.wrap-img').on('transitionend webkitTransitionEnd', function() {
+                        if (index == -1) {
+                            index = 4;
+                            console.log('index4:', index);
+                            $('.wrap-img').css('transition', 'none').css('left', '-4560px')
+                            $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
+                        }
+                    });
+                }
             }
         }
         
