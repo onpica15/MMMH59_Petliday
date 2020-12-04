@@ -4,7 +4,7 @@
 <body>
 
   <header id="nav-bar">
-    <nav class="navbar navbar-expand-lg navbar-light ">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <div class="logo-search d-flex">
           <a class="navbar-brand nav-pc" href="<?= WEB_ROOT ?>index/index＿.php">
@@ -177,7 +177,7 @@
         </div>
 
 
-        <ul class=" navbar-nav ml-auto pt-1 d-flex flex-row align-content-center">
+        <ul class="navbar-nav ml-auto pt-1 d-flex flex-row align-content-center">
           <li class="nav-item m-1 mr-3 only-m search-btn-m">
             <div class="nav-link ">
               <div class="navbtn nav-search-btn">
@@ -365,10 +365,10 @@
 
     // cart icon hover **************彭*******************start
 
-    $('.navbar-nav').on('mouseenter', function() {
+    $('.nav-right').on('mouseenter', function() {
       $('.cart-hover').css('opacity', '1')
     })
-    $('.navbar-nav').on('mouseleave', function() {
+    $('.nav-right').on('mouseleave', function() {
       $('.cart-hover').css('opacity', '0')
     })
 

@@ -41,6 +41,50 @@
             }
         });
     });
+
+    // 滑動拖移效果＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊start幹你娘我可以滑了
+    $('.hot-card').swipe({
+        threshold: 0,
+        swipe:function(event, direction, distance, duration, fingerCount) {
+            console.log([event, direction, distance, duration, fingerCount]);
+            if(direction == 'left' && distance > 200){
+                index = index + 1;
+                console.log('index1:', index);
+                // let nowIndex = (index > 4) ? 0 : index;
+                $('.wrap-img').css('transition', '0.7s').css('left', (-1140 * index));
+                $('.dots li').eq(index - 1).css('background', '#ffc072').siblings().css('background', '#ccc');
+                $('.wrap-img').on('transitionend webkitTransitionEnd', function() {
+                if (index == 5) {
+                    index = 0;
+                    $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
+                    index = 1;
+                    console.log('index2:', index);
+                    $('.wrap-img').css('transition', 'none').css('left', '-1140px')
+                    }
+                });
+            }
+            else if(direction == 'right' && distance > 200){
+                index = index - 1;
+                $('.wrap-img').css('transition', '0.7s').css('left', -1140 * (index + 1));
+                $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
+
+                $('.wrap-img').on('transitionend webkitTransitionEnd', function() {
+                    if (index == -1) {
+                        index = 4;
+                        console.log('index4:', index);
+                        $('.wrap-img').css('transition', 'none').css('left', '-4560px')
+                        $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
+                    }
+                });
+            }
+        }
+        
+    })
+    
+
+    // 滑動拖移效果＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊end幹你娘我可以滑了
+
+
     // rwd時候的熱門輪播 rwd425 hot carosel
     if (window.matchMedia('(max-width: 425px)').matches) {
         let index = 1;
