@@ -69,7 +69,7 @@
     <span>逛得愉快嗎<img src="./imgs/bone.svg" alt="bone"></span>
   </div>
 
-  <div class="rating-info">
+  <div class="rating-info position-relative">
     <p>Petliday 網頁瀏覽是否滿意？</p>
     <form>
       <div class="rating-bone">
@@ -90,18 +90,24 @@
 
         <div class="clear"></div>
       </div>
-    </form>
 
-    <div class="col-10 col-lg-4">
-      <div class="rating-input d-flex mt-2 ml-2">
-        <input type="text" class="form-control" placeholder="輸入更多回饋" aria-label="Recipient's username" aria-describedby="button-addon2" id="rating-input">
-        <div class="rating-input-append">
-          <button type="button">送出</button>
+      <div class="col-10 col-lg-4">
+        <div class="rating-input d-flex mt-2 ml-2">
+          <input type="text" class="form-control" placeholder="輸入更多回饋" aria-label="Recipient's username" aria-describedby="button-addon2" id="rating-input">
+          <div class="rating-input-append">
+            <button id="rating-btn" type="button">送出</button>
+          </div>
         </div>
       </div>
+    </form>
+
+
+
+    <div class="rating-success position-absolute w-100" style="top:0;background:#ccc;z-index:-1;opacity:0;transition:.5s">
+      <p class="success-text1"><img src="./imgs/paw.svg" alt="paw"> Thank you</p>
+      <p class="success-text2">您的寶貴回饋<br>是Petliday前進的動力！</p>
     </div>
-    
-    <p>感謝您的寶貴回饋！</p>
+
   </div>
 </div>
 
@@ -119,6 +125,7 @@
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
 <?php include __DIR__ . '/../parts/html-script.php' ?>
+
 <script>
   // ------JS開始 以上勿刪-------
 
@@ -139,9 +146,10 @@
   });
 
   // button送出成功顯示畫面
-  // $("rating-btn").on("click", function() {
-  //   $(".rating-info2").toggleClass("move")
-  // });
+  $("#rating-btn").on("click", function() {
+    // $(".rating-info2").toggleClass("move")
+    $('.rating-success').css('z-index',1).css('opacity',1);
+  });
 
 
 
@@ -153,14 +161,36 @@
     n = 1
   })
 
-  $(window).scroll(function() {
-    if ($(window).scrollTop() <= $(".login").offset().top) {
-      $(".scroll_top").css('opacity', '0');
-    } else {
-      $(".scroll_top").css('opacity', '1');
-    }
-  });
+  $(function(){
+    $(window).scroll(function() {
+    //   console.log('$(window).scrollTop()',$(window).scrollTop());
+    //   console.log('footer ',$('footer').offset().top);
+    //  console.log('window',$(window).height());
+    //   console.log($(window).width())
+      if($(window).width() > 992){
+        if($(window).scrollTop() >= 879){
+          // console.log('hi')
+          $('.index-rating').css('position','absolute').css('bottom',$(document).height() -  $('footer').offset().top + 25)
+        }
+        else{
+          $('.index-rating').css('position','fixed').css('bottom',100);
+        }
+      }
+      else{
+        if($(window).scrollTop() >= 1000){
+          // console.log('hi')
+          $('.index-rating').css('position','absolute').css('bottom',$(document).height() -  $('footer').offset().top + 25)
+        }
+        else{
+          $('.index-rating').css('position','fixed').css('bottom',100);
+        }
+      }
+      
+    });
+  })
+  
 
   // ------JS結束 勿刪到-------
 </script>
+
 <?php include __DIR__ . '/../parts/html-foot.php' ?>

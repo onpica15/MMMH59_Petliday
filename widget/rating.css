@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: row;
     position: fixed;
-    bottom: 22vh;
+    bottom: 100px;
   }
 
 /* 外層 */
@@ -145,33 +145,28 @@ body {
     outline: none;
 }
 
-/* 感謝頁 */
-/* .rating-info2{
-  width: 200px;
-  height: 155px;
-  background-color: #ccc;
-  border-radius: 3px 0px 0px 30px;
-  border-top:10px solid #1c9e8bab;
-  position: fixed;
-  bottom: 22vh;
-  right: 250px;
+/* 完成頁 */
+.rating-success{
+  height: 135px;
 }
 
-.rating-info2 p{
+.index-rating .rating-success img{
+  width: 32px;
+  height: 32px;
+  padding-bottom: 10px;
+}
+
+.index-rating .rating-success .success-text1{
+  color: #3C2E26;
+  font-weight: 600;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.rating-success .success-text2{
   color: #3C2E26;
   font-size: 14px;
   text-align: center;
-  padding-top: 60px;
-} */
-
-/* scroll_top */
-.scroll_top{
-    display: block;
-    font-size: 30px;
-    position: fixed;
-    bottom: 5vh;
-    right: 5vh;
-    cursor: pointer;
-    opacity: 0;
-    transition: 1s;
+  margin-bottom: 10px;
 }
+

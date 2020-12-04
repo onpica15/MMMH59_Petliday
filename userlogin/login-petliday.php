@@ -78,21 +78,31 @@
       const email = $('#apply_email'),
       password = $('#apply_password'),
       info_bar = $('#apply_info_bar');
-      // email.next().text('');
-      // password.next().text('');
 
+      // 如果電子信箱為"空值"，就出現「請輸入您的電子信箱」
       let isPass = true;
-      
-      if (!email_re.test(email.val())) {
+      if(email.val()==''){
+        isPass = false;
+         $('.form-text').eq(0).text('請輸入您的電子信箱')
+         email.closest('.login-group').removeClass('success')
+         email.closest('.login-group').addClass('error')
+      }
+
+      // 此外如果電子信箱為"格式錯誤"，就出現「請輸入有效的電子信箱」
+      else if (!email_re.test(email.val())) {
          isPass = false;
+         $('.form-text').eq(0).text('請輸入有效的電子信箱')
+         email.closest('.login-group').removeClass('success')
          email.closest('.login-group').addClass('error')
       } else {
         email.closest('.login-group').removeClass('error')
         email.closest('.login-group').addClass('success');
       }
 
+      // 如果密碼值小於6
       if (password.val().length < 6) {
          isPass = false;
+         password.closest('.login-group').removeClass('success')
          password.closest('.login-group').addClass('error')
       } else {
         password.closest('.login-group').removeClass('error')
