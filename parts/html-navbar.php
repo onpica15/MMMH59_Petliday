@@ -267,24 +267,7 @@
       </div>
       <div class="cart-box">
         <!-- 購物車清單開始 -->
-        <?php foreach ($_SESSION['cart'] as $c) : ?>
-          <div class="cart-item d-flex justify-content-between py-3">
-            <div class="cart-pic">
-              <img src="/Petliday/products/img/prolist<?= $c['sid'] ?>.jpg" alt="">
-            </div>
-            <div class="cart-text ml-4">
-              <p class="cart-title t-m"><?= $c['product_name'] ?></p>
-              <div class="cart-text-butt d-flex justify-content-between">
-                <div class="butt-left d-flex align-items-center">
-                  <p class="cart-man mb-0 t-s text-gray">12/<?= $c['date'] ?></p>
-                  <p class="cart-man mb-0 mx-2 t-s text-gray">人數 x <?= $c['manQ'] ?></p>
-                  <p class="cart-pets mb-0 t-s text-gray">寵物 x <?= $c['petQ'] ?></p>
-                </div>
-                <p class="cart-price mb-0 mr-2 t-l orange-color">＄<?= $c['total'] ?></p>
-              </div>
-            </div>
-          </div>
-        <?php endforeach;  ?>
+
         <!-- 購物車hover 清單結束 -->
       </div>
     </div>
@@ -411,6 +394,39 @@
       })
     }
     // scrolltop ****************************end
+
+
+    // cart list 
+    function updateCartList() {
+      console.log('updateCartList')
+      let div = document.querySelector('.cart-box');
+      let html = '';
+
+      <?php foreach ($_SESSION['cart'] as $c) : ?>
+        html += `
+          <div class="cart-item d-flex justify-content-between py-3">
+            <div class="cart-pic">
+              <img src="/Petliday/products/img/prolist<?= $c['sid'] ?>.jpg" alt="">
+            </div>
+            <div class="cart-text ml-4">
+              <p class="cart-title t-m"><?= $c['product_name'] ?></p>
+              <div class="cart-text-butt d-flex justify-content-between">
+                <div class="butt-left d-flex align-items-center">
+                  <p class="cart-man mb-0 t-s text-gray">12/<?= $c['date'] ?></p>
+                  <p class="cart-man mb-0 mx-2 t-s text-gray">人數 x <?= $c['manQ'] ?></p>
+                  <p class="cart-pets mb-0 t-s text-gray">寵物 x <?= $c['petQ'] ?></p>
+                </div>
+                <p class="cart-price mb-0 mr-2 t-l orange-color">＄<?= $c['total'] ?></p>
+              </div>
+            </div>
+          </div>`;
+
+      <?php endforeach;  ?>
+
+      div.innerHTML = html;
+    }
+
+    updateCartList();
 
     // ------JS結束 勿刪到-------
   </script>

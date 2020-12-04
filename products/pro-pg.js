@@ -98,6 +98,33 @@ $('.change-btn').on('click',function(){
 
 //選擇區塊資料丟進session['cart'] start**********************************
 
+function updateCartList(data) {
+    let div = document.querySelector('.cart-box');
+    let html = '';
+
+    for (keys in data.cart){
+        html += `
+        <div class="cart-item d-flex justify-content-between py-3">
+          <div class="cart-pic">
+            <img src="/Petliday/products/img/prolist${data.cart[keys]['sid']}.jpg" alt="">
+          </div>
+          <div class="cart-text ml-4">
+            <p class="cart-title t-m">${data.cart[keys]['product_name']}</p>
+            <div class="cart-text-butt d-flex justify-content-between">
+              <div class="butt-left d-flex align-items-center">
+                <p class="cart-man mb-0 t-s text-gray">12/${data.cart[keys]['date']}</p>
+                <p class="cart-man mb-0 mx-2 t-s text-gray">人數 x ${data.cart[keys]['manQ']}</p>
+                <p class="cart-pets mb-0 t-s text-gray">寵物 x ${data.cart[keys]['petQ']}</p>
+              </div>
+              <p class="cart-price mb-0 mr-2 t-l orange-color">＄${data.cart[keys]['total']}</p>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    div.innerHTML = html;
+}
+
 $('.btn-twin').on('click', function() {
     const sid = $('.heart-top').attr('data-sid');
     const manQ = $('#man-quantity').val();
@@ -121,8 +148,15 @@ $('.btn-twin').on('click', function() {
         action: 'add'
     },
     function(data) {
-        console.log(data);
-        countCart(data);
+        console.log(Object.keys(data.cart).length);
+
+        // countCart(data);
+        updateCartList(data);
+        const buy_quant = $('.buy-quant');
+
+      buy_quant.html(Object.keys(data.cart).length);
+      
+
     }, 'json');
     
     setTimeout(() => {
