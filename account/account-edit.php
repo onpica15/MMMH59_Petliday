@@ -29,6 +29,8 @@
               </div>
               <div class="row pet-avatar justify-content-center">
                 <div class="edit edit-hat">
+                </div>
+                <div class="edit edit-hat">
                   <img src="./img/edit-hat1.png" alt="">
                 </div>
                 <div class="edit edit-hat">
@@ -37,11 +39,21 @@
                 <div class="edit edit-hat">
                   <img src="./img/edit-hat3.png" alt="">
                 </div>
+                <div class="edit edit-hat">
+                  <img src="./img/edit-hat3.png" alt="">
+                </div>
+                <div class="edit edit-decor">
+                  <div class="edit edit-hat">
+                  </div>
+                </div>
                 <div class="edit edit-decor">
                   <img src="./img/edit-decor1.png" alt="">
                 </div>
                 <div class="edit edit-decor">
                   <img src="./img/edit-decor2.png" alt="">
+                </div>
+                <div class="edit edit-decor">
+                  <img src="./img/edit-decor3.png" alt="">
                 </div>
                 <div class="edit edit-decor">
                   <img src="./img/edit-decor3.png" alt="">
@@ -85,26 +97,26 @@
                 <div class="row justify-content-center my-2">
 
                   <div class="bar d-flex">
-                    <button class="col col-md-1 btn-prev border-btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
+                    <button class="col-1 col-lg-1 btn-prev border-btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
 
-                    <div class="col col-md-10 color-bar d-flex justify-content-around">
-                      <div class=" selected-border d-flex align-items-center">
-                        <div class="mx-2 red ball pick" style="background-color: rgb(255, 83, 83);"></div>
+                    <div class="color-bar d-flex">
+                      <div class="col selected-border d-flex align-items-center">
+                        <div class="ban ball pick"><i class="fas fa-ban "></i></div>
                       </div>
-                      <div class=" selected-border d-flex align-items-center">
-                        <div class="mx-2 blue ball pick" style="background-color: rgb(89, 180, 255);"></div>
+                      <div class="col selected-border d-flex align-items-center">
+                        <div class="blue ball pick" style="background-color: rgb(89, 180, 255);"></div>
                       </div>
-                      <div class=" selected-border active d-flex align-items-center">
-                        <div class="mx-2 orange ball pick" style="background-color: #ffa12c;"></div>
+                      <div class="col selected-border active d-flex align-items-center">
+                        <div class="orange ball pick" style="background-color: #ffa12c;"></div>
                       </div>
-                      <div class=" selected-border d-flex align-items-center">
-                        <div class="mx-2 purple ball pick" style="background-color: rgb(170, 85, 219);"></div>
+                      <div class="col selected-border d-flex align-items-center">
+                        <div class="purple ball pick" style="background-color: rgb(170, 85, 219);"></div>
                       </div>
-                      <div class="selected-border d-flex align-items-center">
-                        <div class="mx-2 green ball pick" style="background-color: #00907c;"></div>
+                      <div class="col selected-border d-flex align-items-center">
+                        <div class="green ball pick" style="background-color: #00907c;"></div>
                       </div>
                     </div>
-                    <button class="col col-md-1 btn-next border-btn-next align-self-center"><i class="fas fa-caret-right"></i></button>
+                    <button class="col-1 col-lg-1 btn-next border-btn-next align-self-center"><i class="fas fa-caret-right"></i></button>
 
                   </div>
                 </div>
@@ -135,27 +147,35 @@
                 <div class="row justify-content-center my-2">
 
                   <div class="bar d-flex">
-                    <button class="col col-md-1 btn-prev align-self-center border-btn-prev1"><i class="fas fa-caret-left"></i></button>
+                    <button class="col-1 col-md-1 btn-prev align-self-center border-btn-prev1"><i class="fas fa-caret-left"></i></button>
 
-                    <div class="col col-md-10 color-bar d-flex justify-content-around">
-                      <div class="selected-border1 active d-flex align-items-center">
-                        <div class="mx-2">
+                    <div class="color-bar d-flex">
+                      <div class="col selected-border1 d-flex align-items-center active">
+                        <div class="ban ball pick"><i class="fas fa-ban "></i></div>
+                      </div>
+                      <div class="col selected-border1 d-flex align-items-center">
+                        <div class="hat">
                           <img src="./img/hat1.svg" alt="">
                         </div>
                       </div>
-                      <div class="selected-border1 d-flex align-items-center">
-                        <div class="mx-2">
+                      <div class="col selected-border1 d-flex align-items-center">
+                        <div class="hat">
                           <img src="./img/hat2.svg" alt="">
                         </div>
                       </div>
-                      <div class="selected-border1 d-flex align-items-center">
-                        <div class="mx-2">
+                      <div class="col selected-border1 d-flex align-items-center">
+                        <div class="hat">
+                          <img src="./img/hat3.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="col selected-border1 d-flex align-items-center">
+                        <div class="hat">
                           <img src="./img/hat3.svg" alt="">
                         </div>
                       </div>
 
                     </div>
-                    <button class="col col-md-1 btn-next align-self-center border-btn-next1"><i class="fas fa-caret-right"></i></button>
+                    <button class="col-1 col-md-1 btn-next align-self-center border-btn-next1"><i class="fas fa-caret-right"></i></button>
 
                   </div>
                 </div>
@@ -187,19 +207,27 @@
                   <div class="bar d-flex">
                     <button class="col col-md-1 btn-prev align-self-center border-btn-prev2"><i class="fas fa-caret-left"></i></button>
 
-                    <div class="col col-md-10 color-bar d-flex">
-                      <div class="selected-border2 active d-flex align-items-center">
-                        <div class="mx-2 bow">
+                    <div class="color-bar d-flex">
+                      <div class="col selected-border2 d-flex align-items-center active">
+                        <div class="ban ball pick"><i class="fas fa-ban "></i></div>
+                      </div>
+                      <div class="col selected-border2 d-flex align-items-center">
+                        <div class="decor">
                           <img src="./img/bow.svg" alt="">
                         </div>
                       </div>
-                      <div class="selected-border2 d-flex align-items-center">
-                        <div class="mx-2 glass">
+                      <div class="col selected-border2 d-flex align-items-center">
+                        <div class="decor">
                           <img src="./img/glass.svg" alt="">
                         </div>
                       </div>
-                      <div class="selected-border2 d-flex align-items-center">
-                        <div class="mx-2 neckless">
+                      <div class="col selected-border2 d-flex align-items-center">
+                        <div class="decor">
+                          <img src="./img/neckless.svg" alt="" style="width: 88px;">
+                        </div>
+                      </div>
+                      <div class="col selected-border2 d-flex align-items-center">
+                        <div class="decor">
                           <img src="./img/neckless.svg" alt="" style="width: 88px;">
                         </div>
                       </div>
@@ -230,55 +258,66 @@
                   <div class="row justify-content-center my-2">
 
                     <div class="bar d-flex">
-                      <button class="col col-md-1 btn-prev border-btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
+                      <button class="col-1 col-lg-1 btn-prev border-btn-prev align-self-center"><i class="fas fa-caret-left"></i></button>
 
-                      <div class="col col-md-10 color-bar d-flex justify-content-around">
-                        <div class=" selected-border d-flex align-items-center">
-                          <div class="mx-2 red ball pick" style="background-color: rgb(255, 83, 83);"></div>
+                      <div class="color-bar d-flex">
+                        <div class="col selected-border d-flex align-items-center">
+                          <div class="ban ball pick"><i class="fas fa-ban "></i></div>
                         </div>
-                        <div class=" selected-border d-flex align-items-center">
-                          <div class="mx-2 blue ball pick" style="background-color: rgb(89, 180, 255);"></div>
+                        <div class="col selected-border d-flex align-items-center">
+                          <div class="blue ball pick" style="background-color: rgb(89, 180, 255);"></div>
                         </div>
-                        <div class=" selected-border active d-flex align-items-center">
-                          <div class="mx-2 orange ball pick" style="background-color: #ffa12c;"></div>
+                        <div class="col selected-border active d-flex align-items-center">
+                          <div class="orange ball pick" style="background-color: #ffa12c;"></div>
                         </div>
-                        <div class=" selected-border d-flex align-items-center">
-                          <div class="mx-2 purple ball pick" style="background-color: rgb(170, 85, 219);"></div>
+                        <div class="col selected-border d-flex align-items-center">
+                          <div class="purple ball pick" style="background-color: rgb(170, 85, 219);"></div>
                         </div>
-                        <div class="selected-border d-flex align-items-center">
-                          <div class="mx-2 green ball pick" style="background-color: #00907c;"></div>
+                        <div class="col selected-border d-flex align-items-center">
+                          <div class="green ball pick" style="background-color: #00907c;"></div>
                         </div>
                       </div>
-                      <button class="col col-md-1 btn-next border-btn-next align-self-center"><i class="fas fa-caret-right"></i></button>
+                      <button class="col-1 col-lg-1 btn-next border-btn-next align-self-center"><i class="fas fa-caret-right"></i></button>
 
                     </div>
                   </div>
                 </div>
                 <!-- hat-bar -->
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                  <div class="bar d-flex">
-                    <button class="col col-md-1 btn-prev align-self-center border-btn-prev1"><i class="fas fa-caret-left"></i></button>
+                  <div class="row justify-content-center my-2">
 
-                    <div class="col col-md-10 color-bar d-flex justify-content-around">
-                      <div class="selected-border1 active d-flex align-items-center">
-                        <div class="mx-2">
-                          <img src="./img/hat1.svg" alt="">
+                    <div class="bar d-flex">
+                      <button class="col-1 col-md-1 btn-prev align-self-center border-btn-prev1"><i class="fas fa-caret-left"></i></button>
+
+                      <div class="color-bar d-flex">
+                        <div class="col selected-border1 d-flex align-items-center active">
+                          <div class="ban ball pick"><i class="fas fa-ban "></i></div>
                         </div>
-                      </div>
-                      <div class="selected-border1 d-flex align-items-center">
-                        <div class="mx-2">
-                          <img src="./img/hat2.svg" alt="">
+                        <div class="col selected-border1 d-flex align-items-center">
+                          <div class="hat">
+                            <img src="./img/hat1.svg" alt="">
+                          </div>
                         </div>
-                      </div>
-                      <div class="selected-border1 d-flex align-items-center">
-                        <div class="mx-2">
-                          <img src="./img/hat3.svg" alt="">
+                        <div class="col selected-border1 d-flex align-items-center">
+                          <div class="hat">
+                            <img src="./img/hat2.svg" alt="">
+                          </div>
                         </div>
+                        <div class="col selected-border1 d-flex align-items-center">
+                          <div class="hat">
+                            <img src="./img/hat3.svg" alt="">
+                          </div>
+                        </div>
+                        <div class="col selected-border1 d-flex align-items-center">
+                          <div class="hat">
+                            <img src="./img/hat3.svg" alt="">
+                          </div>
+                        </div>
+
                       </div>
+                      <button class="col-1 col-md-1 btn-next align-self-center border-btn-next1"><i class="fas fa-caret-right"></i></button>
 
                     </div>
-                    <button class="col col-md-1 btn-next align-self-center border-btn-next1"><i class="fas fa-caret-right"></i></button>
-
                   </div>
                 </div>
                 <!-- decor-bar -->
@@ -287,20 +326,28 @@
                     <div class="bar d-flex">
                       <button class="col col-md-1 btn-prev align-self-center border-btn-prev2"><i class="fas fa-caret-left"></i></button>
 
-                      <div class="col col-md-10 color-bar d-flex">
-                        <div class="selected-border2 active d-flex align-items-center">
-                          <div class="mx-2 bow">
+                      <div class="color-bar d-flex">
+                        <div class="col selected-border2 d-flex align-items-center active">
+                          <div class="ban ball pick"><i class="fas fa-ban "></i></div>
+                        </div>
+                        <div class="col selected-border2 d-flex align-items-center">
+                          <div class="decor">
                             <img src="./img/bow.svg" alt="">
                           </div>
                         </div>
-                        <div class="selected-border2 d-flex align-items-center">
-                          <div class="mx-2 glass">
+                        <div class="col selected-border2 d-flex align-items-center">
+                          <div class="decor">
                             <img src="./img/glass.svg" alt="">
                           </div>
                         </div>
-                        <div class="selected-border2 d-flex align-items-center">
-                          <div class="mx-2 neckless">
-                            <img src="./img/neckless.svg" alt="" style="width: 88px;">
+                        <div class="col selected-border2 d-flex align-items-center">
+                          <div class="decor">
+                            <img src="./img/neckless.svg" alt="">
+                          </div>
+                        </div>
+                        <div class="col selected-border2 d-flex align-items-center">
+                          <div class="decor">
+                            <img src="./img/neckless.svg" alt="">
                           </div>
                         </div>
 
@@ -314,7 +361,7 @@
 
               <!-- rwd -->
               <div class="row justify-content-center">
-                <button class="btn">全部清除</button>
+                <button class="btn clear-all">全部清除</button>
                 <a class="btn" href="account-profile2.php">儲存修改</a>
 
               </div>
@@ -374,7 +421,7 @@
   $('.border-btn-next1').on('click', function() {
     if ($('.selected-border1.active').next().length > 0) {
       // 更換帽子
-      // console.log('index', );
+      console.log('index', );
       let index = $('.selected-border1.active').index()
       $('.edit-hat').hide().eq(index + 1).show()
       // 邊框
@@ -404,6 +451,18 @@
       $('.edit-decor').hide().eq(index - 1).show()
       $('.selected-border2.active').removeClass('active').prev().addClass('active')
     }
+  })
+  $('.clear-all').on('click', function() {
+    console.log('hi')
+    if ($('').index = 0) {
+      $('.edit-hat').hide().eq(0).show()
+      $('.edit-decor').hide().eq(0).show()
+    }
+
+
+    // 當點選clear-all的時候
+    // 移除其他人的active
+    // 為fa-ban 加上active(.selected-border1.active.index)
   })
 
   // ------JS結束 勿刪到-------
