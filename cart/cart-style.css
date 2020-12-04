@@ -495,6 +495,7 @@ svg#date-icon {
 .credit-card-img {
   object-fit: contain;
   width: 100%;
+
   /* overflow: hidden; */
 }
 .card1.is-flipped {
@@ -523,6 +524,7 @@ svg#date-icon {
 
 .card-front {
   backface-visibility: hidden;
+  /* opacity: 0.3; */
 }
 .card-back {
   transform: rotateY(180deg);
@@ -713,9 +715,16 @@ input:optional {
 }
 
 .pay-all {
-  overflow: hidden;
-  /* height: 0px; */
+  /* overflow: hidden;
+  height: 0; */
+  transition: 0.3s;
+  display: none;
 }
+/* .pay-all.display {
+  /* overflow: hidden; */
+
+/* height: 100%;
+} */
 
 #order-box-total.fixed {
   width: 350px;
@@ -741,6 +750,9 @@ input:optional {
 .confirm-btn {
   line-height: 44px;
 }
+/* .brightness {
+  filter: brightness(0.1);
+} */
 /* #order-box-total {
   position: relative;
   position: absolute;

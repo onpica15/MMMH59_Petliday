@@ -260,8 +260,8 @@
                       </div>
                       <div class="col-12 d-flex justify-content-center mb-4 credit-card-box">
                         <div class="card1">
-                          <div class="credit-card card-front">
-                            <img class="credit-card-img" src="./imgs/3x/card-front@3x.png" alt="">
+                          <div class="credit-card card-front ">
+                            <img class="credit-card-img brightness" src="./imgs/3x/card-front@3x.png" alt="">
                             <div class="card-text-box">
                               <h3 id="card-number" class="card-text card-number ">0000 0000 0000 0000</h3>
                               <h3 class="card-text card-name-t"> cardholder name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expiration</h3>
@@ -558,24 +558,24 @@
               <div class="row">
                 <div class="col-12 col-lg-6 d-flex flex-column one-form">
                   <label class="text-color t-s label-all" name="lastName" for="lastName">姓名：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
-                  <input  class="form-input man-Name${i}" type="text" name="${form_sid}[man][Name][]" placeholder="例：陳毛毛" >
+                  <input  class="form-input man-Name${i}" type="text" name="prod[${form_sid}][man][Name][]" placeholder="例：陳毛毛" >
                   <small class="form-feedback danger-color t-xs"></small>
                 </div>
 
                 <div class="col-12 col-lg-6 d-flex flex-column one-form">
                   <label class="text-color t-s label-all " name="firstName" for="firstName">行程當日聯繫電話：&nbsp;<span class="danger-color">*</span></label>
-                  <input  class="form-input man-phone${i}" type="text" name="${form_sid}[man][man-phone][]" placeholder="例：0900-000-000" >
+                  <input  class="form-input man-phone${i}" type="text" name="prod[${form_sid}][man][man-phone][]" placeholder="例：0900-000-000" >
                   <small class="form-feedback danger-color t-xs"></small>
                 </div>
 
                 <div class="col-8 col-lg-6 d-flex flex-column one-form">
                   <label class="text-color t-s label-all " name="idCard" for="idCard">身分證字號：（行程保險中使用）&nbsp;<span class="danger-color">*</span></label>
-                  <input  class="form-input man-idCard${i}" type="text" name="${form_sid}[man][idCard][]" placeholder="例：A0000000000" >
+                  <input  class="form-input man-idCard${i}" type="text" name="prod[${form_sid}][man][idCard][]" placeholder="例：A0000000000" >
                 </div>
 
                 <div class="col-12 col-lg-6 d-flex flex-column one-form">
                   <label class="text-color t-s label-all " name="birthday" for="birthday">出生 年/月/日：（行程保險中使用）&nbsp;<span class="danger-color">*</span></label>
-                  <input  class="form-input man-birthday${i}" type="date" name="${form_sid}[man][birthday][]" >
+                  <input  class="form-input man-birthday${i}" type="date" name="prod[${form_sid}][man][birthday][]" >
                 </div>
               </div>
 
@@ -590,11 +590,11 @@
       <div class="row">
         <div class="col-12 col-lg-6 d-flex flex-column one-form">
           <label class="text-color t-s label-all" name="petName" for="petName">寶貝稱呼： &nbsp;&nbsp;<span class="danger-color">*</span></label>
-          <input  class="form-input pet-petName${k}" type="text" name="${form_sid}[pet][petName][]" placeholder="例：毛日日" >
+          <input  class="form-input pet-petName${k}" type="text" name="prod[${form_sid}][pet][petName][]" placeholder="例：毛日日" >
         </div>
         <div class="col-8 col-lg-6 d-flex flex-column one-form">
           <label class="text-color t-s label-all " name="petSize" for="petSize">體型： &nbsp;&nbsp;<span class="danger-color">*</span></label>
-          <select class="form-input pet-Size${k}" name="${form_sid}[pet][petSize][]">
+          <select class="form-input pet-Size${k}" name="prod[${form_sid}][pet][petSize][]">
             <option class="option-style" name="0" value="0">請選擇</option>
             <option name="lSize" value="lSize">大型犬</option>
             <option name="MSize" value="MSize">中型犬</option>
@@ -603,7 +603,7 @@
         </div>
         <div class="col-12 col-lg-12 d-flex flex-column one-form">
           <label class="text-color t-s label-all " name="notes" for="notes">備註： &nbsp;&nbsp;<span class="danger-color">*</span></label>
-          <input class="form-input pet-notes${k}" type="text" name="${form_sid}[pet][notes][]" >
+          <input class="form-input pet-notes${k}" type="text" name="prod[${form_sid}][pet][notes][]" >
         </div>
       </div>
       </div>`
@@ -769,7 +769,7 @@
     console.log(cardCount)
   });
 
-  cardCVC.addEventListener('click input change keyup', function() {
+  cardCVC.addEventListener('click', function() {
     console.log('cardCVC')
     if (cardCount % 2) {
 
@@ -877,8 +877,15 @@
       if (!(this.value)) {
         $("span#card-date-y.card-date-font").html('YY')
       }
-      if ($(this).val().length == $(this).attr('maxlength'))
+      if ($(this).val().length == $(this).attr('maxlength')) {
         $(this).parentsUntil('.all-bb').next().children(':input').focus();
+        if (cardCount % 2) {} else {
+          card.classList.toggle('is-flipped');
+          cardCount += 1;
+          console.log(cardCVC)
+          console.log(cardCount)
+        }
+      }
     }
   );
   $("#cardCVC").keyup(
@@ -895,12 +902,6 @@
   };
 
 
-  // $('input').keyup(function(e) {
-  //   if ($(this).val().length == $(this).attr('maxlength'))
-  //     $(this).next(':input').focus();
-  // });
-
-  ' ^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$'
 
 
 
@@ -923,6 +924,8 @@
 
   // });
 
+
+  // -------------付款收合
   let val = $('input[name=payItems]:checked').val();
   let checked = $('input[name=payItems]:checked');
   let CardParent = $('#creditCard').parent()
@@ -965,6 +968,10 @@
   //   creditCardParent.classList.adds('bb-line');
   // }
 
+  $('#pay-btn').on('click', function() {
+
+    $('#go-pay').slideDown()
+  })
 
 
 

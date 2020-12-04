@@ -117,7 +117,7 @@
 
                   <div class="row d-flex align-content-stretch">
                     <!-- -----人 資料----- -->
-                    <?php foreach ($_SESSION['order'] as $i) : ?>
+                    <?php foreach ($_SESSION['order']['prod'] as $i => $v) : ?>
                       <div class="col-12 col-lg-4 single-detail-box">
                         <div class="single-detail">
                           <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">旅客 1</h3>
