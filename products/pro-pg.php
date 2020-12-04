@@ -882,7 +882,6 @@ $rows = $pdo->query($sql)->fetch();
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
 
-
 <!-- // ------JS開始 以上誤刪------- -->
 <script src="/petliday/products/calendar.js"></script>
 <script src="/petliday/products/pro-pg.js"></script>

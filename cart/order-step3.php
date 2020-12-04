@@ -94,7 +94,7 @@
           </div>
         </div>
       </div>
-      <?php foreach ($_SESSION['cart'] as $i) : ?>
+      <?php foreach ($_SESSION['cart'] as $j => $i) : ?>
         <div class="row form-box bb-line orderInfo">
           <div class="col-12 all-step-box all-order-box">
             <div class="row ">
@@ -117,43 +117,64 @@
 
                   <div class="row d-flex align-content-stretch">
                     <!-- -----人 資料----- -->
-                    <?php foreach ($_SESSION['order']['prod'] as $i => $v) : ?>
-                      <div class="col-12 col-lg-4 single-detail-box">
-                        <div class="single-detail">
-                          <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">旅客 1</h3>
-                          <p class="t-xs text-gray mb-0">姓氏
-                            （須與旅遊證件一致）:</p>
-                          <p class="t-s text-color mb-3">陳毛毛</p>
+                    <?php foreach ($_SESSION['order']['prod'][$j] as $k => $v) : ?>
+                      <!-- 人 迴圈-->
+                      <?php if ($k === 'man') : ?>
+                        <div class="col-12 col-lg-4 single-detail-box">
+                          <div class="single-detail">
+                            <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">旅客 1</h3>
+                            <p class="t-xs text-gray mb-0">姓氏
+                              （須與旅遊證件一致）:</p>
+                            <p class="t-s text-color mb-3"><?php print_r($v['Name'])  ?></p>
 
-                          <p class="t-xs text-gray mb-0">行程當日聯繫電話:</p>
-                          <p class="t-s text-color mb-3">0900-000-000</p>
+                            <p class="t-xs text-gray mb-0">行程當日聯繫電話:</p>
+                            <p class="t-s text-color mb-3">0900-000-000</p>
 
-                          <p class="t-xs text-gray mb-0">身分證字號（行程保險中使用）:</p>
-                          <p class="t-s text-color mb-3">A0000000000</p>
+                            <p class="t-xs text-gray mb-0">身分證字號（行程保險中使用）:</p>
+                            <p class="t-s text-color mb-3">A0000000000</p>
 
-                          <p class="t-xs text-gray mb-0">出生 年/月/日（行程保險中使用）</p>
+                            <p class="t-xs text-gray mb-0">出生 年/月/日（行程保險中使用）</p>
 
-                          <p class="t-s text-color mb-0 pb-3 bb-line-b">2020- 10-10</p>
+                            <p class="t-s text-color mb-0 pb-3 bb-line-b">2020- 10-10</p>
+                          </div>
                         </div>
-                      </div>
+                      <?php endif ?>
+                      <!-- -----end 人 資料 end----- -->
+
+
+                      <!-- pet 迴圈-->
+                      <!-- -----犬 資料----- -->
+                      <?php if ($k === 'pet') : ?>
+                        <!-- <?php print_r($v); ?> -->
+                        <?php for ($x = 0; $x < count($v['petName']); $x++) { ?>
+                          <div class="col-12 col-lg-4 single-detail-box">
+                            <div class="single-detail">
+                              <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">寵物</h3>
+                              <p class="t-xs text-gray mb-0">寶貝稱呼:</p>
+                              <p class="t-s text-color mb-3">
+
+                                <?php print_r($v['petName'][$x]); ?>
+
+                              </p>
+
+
+                              <p class="t-xs text-gray mb-0">體型:</p>
+                              <p class="t-s text-color mb-3"><?php print_r($v['petSize'][$x]); ?></p>
+
+                              <p class="t-xs text-gray mb-0">備註：</p>
+                              <p class="t-s text-color mb-0 pb-3 bb-line-b"><?php print_r($v['notes'][$x]); ?></p>
+                            </div>
+                          </div>
+                        <?php } ?>
+
+
+
+                      <?php endif ?>
+                      <!-- -----end 犬 資料 end----- -->
+
                     <?php endforeach;  ?>
-                    <!-- -----end 人 資料 end----- -->
-                    <!-- -----犬 資料----- -->
-                    <div class="col-12 col-lg-4 single-detail-box">
-                      <div class="single-detail">
-                        <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">寵物 1</h3>
-                        <p class="t-xs text-gray mb-0">寶貝稱呼:</p>
-                        <p class="t-s text-color mb-3">毛毛毛</p>
 
 
-                        <p class="t-xs text-gray mb-0">體型:</p>
-                        <p class="t-s text-color mb-3">大型犬</p>
-
-                        <p class="t-xs text-gray mb-0">備註：</p>
-                        <p class="t-s text-color mb-0 pb-3 bb-line-b">希望提供碗給毛毛毛喝</p>
-                      </div>
-                    </div>
-                    <!-- -----end 犬 資料 end----- -->
                   </div>
                 </div>
               </div>
