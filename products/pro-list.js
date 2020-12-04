@@ -59,7 +59,7 @@
                         $('.dots li').eq(index).css('background', '#ffc072').siblings().css('background', '#ccc');
                         index = 1;
                         console.log('index2:', index);
-                        $('.wrap-img').css('transition', 'none').css('left', '-1140px')
+                        $('.wrap-img').css('transition', 'none').css('left', '-40px')
                         }
                     });
                 }
