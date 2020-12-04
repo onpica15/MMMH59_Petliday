@@ -19,7 +19,7 @@ $totalRows = $t_stmt->fetch(PDO::FETCH_NUM)[0]; // 總比數
 $totalPages = ceil($totalRows / $perPage); //總頁數
 
 // LIMIT 0,5 每頁五筆取0~5
-$sql = sprintf("SELECT * FROM member_avatar ORDER BY sid DESC LIMIT %s, %s", ($page - 1) * $perPage, $perPage);
+$sql = sprintf("SELECT * FROM member_pet ORDER BY sid DESC LIMIT %s, %s", ($page - 1) * $perPage, $perPage);
 // ORDER BY sid DESC 排序方式
 $stmt = $pdo->query($sql);
 
@@ -45,9 +45,9 @@ $rows = $stmt->fetchAll();
                 <tr>
                     <td><?= $r['sid'] ?></td>
                     <td><?= $r['name'] ?></td>
-                    <td><?= $r['email'] ?></td>
-                    <td><?= $r['mobile'] ?></td>
-                    <td><?= $r['address'] ?></td>
+                    <td><?= $r['breed'] ?></td>
+                    <td><?= $r['age'] ?></td>
+                    <td><?= $r['birthday'] ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

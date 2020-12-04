@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/parts/config.php';
+require __DIR__ . '/../parts/config.php';
 header('Content-Type: application/json');
 
 $allowFiles = [
