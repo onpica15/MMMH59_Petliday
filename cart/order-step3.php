@@ -102,13 +102,13 @@
                 <div class="col-12 order-box-fin">
                   <h5 class="text-color t-l mt-1"><?= $i['product_name'] ?></h5>
                   <div class="detail-box-fin">
-                    <div class="detail-all detail-time d-flex justify-content-between">
+                    <div class="detail-all detail-time d-flex ">
                       <h6 class=" text-gray t-s ">時間：</h6>
-                      <h6 class=" text-gray t-s">2020/08/<?= $i['date'] ?></h6>
+                      <h6 class=" text-gray t-s">2020/12/<?= $i['date'] ?></h6>
                     </div>
-                    <div class="detail-all detail-quan d-flex justify-content-between">
+                    <div class="detail-all detail-quan d-flex ">
                       <h6 class=" text-gray t-s">數量：</h6>
-                      <h6 class=" text-gray t-s"><?= $i['manQ'] ?> x 人 / <?= $i['petQ'] ?> x 犬</h6>
+                      <h6 class=" text-gray t-s"><?= $i['manQ'] ?> x 人 / <?= $i['petQ'] ?> x 寵物</h6>
                     </div>
                   </div>
                   <div class="single-prod-total d-flex justify-content-end bb-line">
@@ -120,25 +120,28 @@
                     <?php foreach ($_SESSION['order']['prod'][$j] as $k => $v) : ?>
                       <!-- 人 迴圈-->
                       <?php if ($k === 'man') : ?>
-                        <div class="col-12 col-lg-4 single-detail-box">
-                          <div class="single-detail">
-                            <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">旅客 1</h3>
-                            <p class="t-xs text-gray mb-0">姓氏
-                              （須與旅遊證件一致）:</p>
-                            <p class="t-s text-color mb-3"><?php print_r($v['Name'])  ?></p>
+                        <?php for ($x = 0; $x < count($v['Name']); $x++) { ?>
+                          <div class="col-12 col-lg-4 single-detail-box">
+                            <div class="single-detail">
+                              <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">旅客 <?php print_r($v['number'][$x]);  ?></h3>
+                              <p class="t-xs text-gray mb-0">姓氏
+                                （須與旅遊證件一致）:</p>
+                              <p class="t-s text-color mb-3"><?php print_r($v['Name'][$x]);  ?></p>
 
-                            <p class="t-xs text-gray mb-0">行程當日聯繫電話:</p>
-                            <p class="t-s text-color mb-3">0900-000-000</p>
+                              <p class="t-xs text-gray mb-0">行程當日聯繫電話:</p>
+                              <p class="t-s text-color mb-3"><?php print_r($v['man-phone'][$x]); ?></p>
 
-                            <p class="t-xs text-gray mb-0">身分證字號（行程保險中使用）:</p>
-                            <p class="t-s text-color mb-3">A0000000000</p>
+                              <p class="t-xs text-gray mb-0">身分證字號（行程保險中使用）:</p>
+                              <p class="t-s text-color mb-3"><?php print_r($v['idCard'][$x]); ?></p>
 
-                            <p class="t-xs text-gray mb-0">出生 年/月/日（行程保險中使用）</p>
+                              <p class="t-xs text-gray mb-0">出生 年/月/日（行程保險中使用）</p>
 
-                            <p class="t-s text-color mb-0 pb-3 bb-line-b">2020- 10-10</p>
+                              <p class="t-s text-color mb-0 pb-3 bb-line-b"><?php print_r($v['birthday'][$x]); ?></p>
+                            </div>
                           </div>
-                        </div>
+                        <?php } ?>
                       <?php endif ?>
+
                       <!-- -----end 人 資料 end----- -->
 
 
@@ -149,7 +152,7 @@
                         <?php for ($x = 0; $x < count($v['petName']); $x++) { ?>
                           <div class="col-12 col-lg-4 single-detail-box">
                             <div class="single-detail">
-                              <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">寵物</h3>
+                              <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">寵物<?php print_r($v['number'][$x]);  ?></h3>
                               <p class="t-xs text-gray mb-0">寶貝稱呼:</p>
                               <p class="t-s text-color mb-3">
 

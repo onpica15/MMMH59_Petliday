@@ -750,6 +750,45 @@ input:optional {
 .confirm-btn {
   line-height: 44px;
 }
+/* .select-box {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+} */
+
+/* x */
+/* select#mainGender {
+  display: none;
+} */
+
+select.customDropdown {
+  font: 400 12px;
+  pointer-events: none;
+  outline: none;
+  overflow: hidden;
+  text-indent: 0.01px;
+  text-overflow: "";
+
+  background: url("https://img.icons8.com/material/24/000000/sort-down.png")
+    no-repeat right #fff;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+.customDropdown::after {
+  background-image: linear-gradient(45deg, transparent 50%, red 60%),
+    linear-gradient(135deg, red 40%, transparent 50%) !important;
+  background-position: calc(100% - 30px) 14px, calc(100% - 20px) 14px, 100% 0;
+  background-size: 10px 10px, 10px 10px;
+
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 /* .brightness {
   filter: brightness(0.1);
 } */

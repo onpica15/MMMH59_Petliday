@@ -93,7 +93,7 @@
                 </div>
                 <div class="col-8 col-lg-6 d-flex flex-column one-form">
                   <label class="text-color t-s label-all " name="mainGender" for="mainGender">稱謂 :&nbsp;&nbsp;<span class="danger-color">*</span></label>
-                  <select class="form-input" name="mainGender" id="mainGender">
+                  <select class="form-input customDropdown" name="mainGender" id="mainGender">
                     <option name="0" value="0">請選擇</option>
                     <option name="man" value="man">先生</option>
                     <option name="woman" value="woman">女士</option>
@@ -403,7 +403,7 @@
                   </div>
                   <div class="detail-all detail-quan d-flex justify-content-between">
                     <h6 class=" text-gray t-s">數量：</h6>
-                    <h6 class=" text-gray t-s " data-sid="<?= $i['sid'] ?>" data-man="<?= $i['manQ'] ?>" data-pet="<?= $i['petQ'] ?>"><?= $i['manQ'] ?> x 人 / <?= $i['petQ'] ?> x 犬</h6>
+                    <h6 class=" text-gray t-s " data-sid="<?= $i['sid'] ?>" data-man="<?= $i['manQ'] ?>" data-pet="<?= $i['petQ'] ?>"><?= $i['manQ'] ?> x 人 / <?= $i['petQ'] ?> x 寵物</h6>
                   </div>
                 </div>
                 <div class="single-prod-total d-flex justify-content-end">
@@ -510,6 +510,7 @@
 
     $('.all_total').text('NT$ ' + dallorCommas(total));
     $('.all_total').attr('data-allTotal', total);
+    $('.totle_price').val(parseInt(total));
 
     // $('.coupon-munber').text('')
 
@@ -519,7 +520,7 @@
       $('span.coupon-price').text(' -$ ' + dallorCommas(parseInt(total * 0.2)));
       $('.all_total').attr('data-allTotal', parseInt(total * 0.8));
       $('.all_total').text('NT$ ' + dallorCommas(parseInt(total * 0.8)));
-      $('.totle_price').val((total * 0.8));
+      $('.totle_price').val(parseInt(total * 0.8));
 
       $('.coupon-munber').text('( 2020WELCOME )');
     })
@@ -553,6 +554,7 @@
       dayDisplay += `<div class="col-12 form-box contacts-box" data-sid="${form_sid}" data-type="man" >
               <div class="row fast-btn fast-man${i}">
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1 ">旅客 ${i}</h5>
+                <input  class="justinfo" name="prod[${form_sid}][man][number][] " value="${i}" >
               </div>
 
               <div class="row">
@@ -585,6 +587,7 @@
       dayDisplay_pet += `<div class="col-12 form-box contacts-box" data-sid="${form_sid}" data-type="pet">
       <div class="row fast-btn fast-pet${k}">
        <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1 ">寵物${k}</h5>
+       <input  class="justinfo" name="prod[${form_sid}][pet][number][] " value="${k}" >
       </div>
 
       <div class="row">
