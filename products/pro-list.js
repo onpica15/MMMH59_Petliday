@@ -168,19 +168,21 @@
 
     $(document).on('click','.heart-circle', function() {
         console.log('offset',$('.nav-cart-btn').offset());
+        let heart = $(this);
         let imgSrc = $(this).find('img').attr('src')
         let productSid = $(this).closest('.product-item').attr('data-sid')
         let flyheart = $(this).find('.heart-fly');
         // console.log(imgSrc);
         if (imgSrc == '/Petliday/icon/heart-red.png') {
             $(this).find('img').attr('src', '/Petliday/icon/heart-red-fill.png');
-            $(this).find('.heart-fly').toggleClass('fly-fly');
+            // $(this).find('.heart-fly').toggleClass('fly-fly');
             insertWish();
+            flyHeart();
             
         } else {
             $(this).find('img').attr('src', '/Petliday/icon/heart-red.png');
             deleteWish();
-            $(this).find('.heart-fly').toggleClass('fly-fly');
+            // $(this).find('.heart-fly').toggleClass('fly-fly');
         }
         
         console.log('productSid=',productSid);
@@ -207,8 +209,8 @@
         // flyheart 愛心飛飛
         function flyHeart(){
             // const fh = document.querySelector('.heart')
-            console.log('fly',flyheart.html());
-            flyheart.toggleClass('fly-fly');
+            console.log('fly');
+            // flyheart.toggleClass('fly-fly');
             // flyheart.offset({top:0,left:2000});
             // setTimeout(() => {
                 // console.log('getBoundingClientRect.top',fh.getBoundingClientRect().top);
@@ -216,7 +218,20 @@
                 // fh.getBoundingClientRect().right = '200';
             //     flyheart.css('position','fixed').css('top','60px').css('left','1500px').css('z-index','5')
             // }, 1000);
+
+            let position = heart.offset();	
+            let cartPosition = $('.login-text').offset();
+            $("body").append('<div class="floating-cart"></div>');		
+            let cart = $('div.floating-cart');
+            cart.css({'top' : position.top + 'px', "left" : position.left + 'px', "width":flyheart.width(), "height":flyheart.height(), "position":"absolute","transition":"all 800ms ease-in-out","z-index":2000});
+            flyheart.clone().appendTo(cart);
+            cart.find('.heart-fly').css('display', 'block')
+            $(cart).fadeIn(500,function(){$(cart).css({'top' : cartPosition.top  + 'px', "left" : cartPosition.left + 20 + 'px'})}).delay(800).fadeIn("slow",function(){$(cart).css({'top' : cartPosition.top+20  + 'px', "left" : cartPosition.left + 20 + 'px','opacity':0})});
+            
+            setTimeout(function(){$('div.floating-cart').remove();}, 1200);
         }
+
+        
     });
     
 // <!-- 卡片hover -->
@@ -233,3 +248,4 @@
             'opacity': '0'
         });
     });
+
