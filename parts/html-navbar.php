@@ -395,7 +395,6 @@
     }
     // scrolltop ****************************end
 
-
     // cart list 
     function updateCartList() {
       console.log('updateCartList')
@@ -426,7 +425,7 @@
       div.innerHTML = html;
     }
 
-    updateCartList();
+    // updateCartList();
 
     // ------JS結束 勿刪到-------
   </script>

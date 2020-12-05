@@ -2,17 +2,54 @@
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <!-- --- css 連結放下面 ----- -->
 <link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="her0.css">
 
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 <!-- 拍立得section -->
 <section id="hero-polaroid">
-  <div class="polaroid-base d-flex position-relative justify-content-center">
-    <figure class="polaroid-figure col-11 position-absolute">
-    </figure>
-    <figure class="signature position-absolute">
-      <img src="./img/signature1.png" alt="">
-    </figure>
+  <!-- 3d start -->
+  <div class="con3d container-fluid">
+    <div class="moving">
+      <div class="layer">
+        <!-- 3d end -->
+        <div class="pb1 polaroid-base d-flex position-absolute justify-content-center">
+          <figure class="pf polaroid-figure1 col-11 position-absolute">
+          </figure>
+          <figure class="signature position-absolute">
+            <img src="./img/signature1.png" alt="">
+          </figure>
+        </div>
+        <div class="pb2 polaroid-base d-flex position-absolute justify-content-center">
+          <figure class="pf polaroid-figure2 col-11 position-absolute">
+          </figure>
+          <figure class="signature position-absolute">
+            <img src="./img/signature2.png" alt="">
+          </figure>
+        </div>
+        <div class="pb3 polaroid-base d-flex position-absolute justify-content-center">
+          <figure class="pf polaroid-figure3 col-11 position-absolute">
+          </figure>
+          <figure class="signature position-absolute">
+            <img src="./img/signature2.png" alt="">
+          </figure>
+        </div>
+        <div class="pb4 polaroid-base d-flex position-absolute justify-content-center">
+          <figure class="pf polaroid-figure4 col-11 position-absolute">
+          </figure>
+          <figure class="signature position-absolute">
+            <img src="./img/signature2.png" alt="">
+          </figure>
+        </div>
+        <div class="pb5 polaroid-base d-flex position-absolute justify-content-center">
+          <figure class="pf polaroid-figure5 col-11 position-absolute">
+          </figure>
+          <figure class="signature position-absolute">
+            <img src="./img/signature2.png" alt="">
+          </figure>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -644,11 +681,58 @@
       'height': '0',
     });
   });
-
-  // ------JS開始 以上勿刪-------
-
-
-
-  // ------JS結束 勿刪到-------
 </script>
+<!-- // ------JS開始 以上勿刪------- -->
+<!--  -->
+<script>
+  let index = 0;
+  setInterval(function() {
+    index = index + 1;
+    (index > 4) ? index = 0: index = index;
+    $('.polaroid-base').eq(index).addClass('up10').siblings().removeClass('up10');;
+  }, 2000);
+
+  // let index = 0;
+  // setInterval(function() {
+  //   index = index + 1;
+  //   (index > 4) ? index = 0: index = index;
+  //   let indexcheck = index + 1;
+  //   (indexcheck > 4) ? (indexcheck = 0) : (indexcheck = indexcheck);
+  //   let indexcheck2 = indexcheck + 1;
+  //   (indexcheck2 > 4) ? (indexcheck2 = 0) : (indexcheck2 = indexcheck2);
+  //   let indexcheck3 = indexcheck2 + 1;
+  //   (indexcheck3 > 4) ? (indexcheck3 = 0) : (indexcheck3 = indexcheck3);
+  //   let indexcheck4 = indexcheck3 + 1;
+  //   (indexcheck4 > 4) ? (indexcheck4 = 0) : (indexcheck4 = indexcheck4);
+  //   $('.polaroid-base').eq(index).addClass('up10').siblings().removeClass('up10 up9 up8 up7 up6');
+  //   $('.polaroid-base').eq(indexcheck).addClass('up9').siblings().removeClass('up10 up9 up8 up7 up6');
+  //   $('.polaroid-base').eq(indexcheck2).addClass('up8').siblings().removeClass('up10 up9 up8 up7 up6');
+  //   $('.polaroid-base').eq(indexcheck3).addClass('up7').siblings().removeClass('up10 up9 up8 up7 up6');
+  //   $('.polaroid-base').eq(indexcheck4).addClass('up6').siblings().removeClass('up10 up9 up8 up7 up6');
+  // }, 1000);
+</script>
+<!-- // hero 3d start -->
+<script>
+  var move = 20;
+  var rotate = 10;
+
+  $(document).mousemove(function(e) {
+    var docX = $(document).width();
+    var docY = $(document).height();
+
+    var moveX = (e.pageX - docX / 2) / (docX / 2) * -move;
+    var moveY = (e.pageY - docY / 2) / (docY / 2) * -move;
+
+    var rotateY = (e.pageX / docX * rotate * 2) - rotate;
+    var rotateX = -((e.pageY / docY * rotate * 2) - rotate);
+
+    $('.layer')
+      .css('left', moveX + 'px')
+      .css('top', moveY + 'px')
+      .css('transform', 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)');
+  });
+</script>
+<!-- // hero 3d end -->
+
+<!-- // ------JS結束 勿刪到------- -->
 <?php include __DIR__ . '/../parts/html-foot.php' ?>

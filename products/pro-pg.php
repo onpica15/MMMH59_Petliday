@@ -796,9 +796,6 @@ $rows = $pdo->query($sql)->fetch();
         <div class="container p-0">
             <div class="row align-items-center w-100">
                 <div class="card c3 col-md m-3 p-0">
-                    <div class="heart-circle">
-                        <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-                    </div>
                     <div class="card-pic w-100">
                         <img src="/Petliday/products/img/reco1.jpg" alt="">
                     </div>
@@ -820,9 +817,6 @@ $rows = $pdo->query($sql)->fetch();
                     </p>
                 </div>
                 <div class="card c3 col-md col-sm-12 m-3 p-0">
-                    <div class="heart-circle">
-                        <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-                    </div>
                     <div class="card-pic w-100">
                         <img src="/Petliday/products/img/reco2.jpg" alt="">
                     </div>
@@ -844,9 +838,6 @@ $rows = $pdo->query($sql)->fetch();
                     </p>
                 </div>
                 <div class="card c3 col-md col-sm-12 m-3 p-0">
-                    <div class="heart-circle">
-                        <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-                    </div>
                     <div class="card-pic w-100">
                         <img src="/Petliday/products/img/reco3.jpg" alt="">
                     </div>

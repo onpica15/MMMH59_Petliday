@@ -327,7 +327,7 @@ span :before {
     -ms-transform: rotate(-2deg);
   }
 
-  .polaroid-figure {
+  .polaroid-figure1 {
     margin: 3% auto;
     width: 90vw;
     height: 75vh;
@@ -335,6 +335,7 @@ span :before {
     background: url("./img/banner-img1.jpg") no-repeat;
     background-size: cover;
   }
+
 
   .signature {
     height: 150px;

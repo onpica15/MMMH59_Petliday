@@ -1,0 +1,124 @@
+#hero-polaroid{
+    position: relative;
+    width: 1920px;
+    height: 1450px;
+    overflow: hidden;
+}
+@media (min-width: 1200px) {
+    .pf{
+        margin: 3% auto;
+        width: 90vw;
+        height: 75vh;
+        box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px 5px inset;
+    }
+    .polaroid-base{
+        opacity:.9;
+        transition: .5s;
+    }
+    .polaroid-figure1 {
+    background: url("./img/banner-img1.jpg") no-repeat;
+    background-size: cover;
+    }
+
+    .polaroid-figure2 {
+        background: url("./img/banner-img2.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    .polaroid-figure3 {
+        background: url("./img/banner-img3.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    .polaroid-figure4 {
+        background: url("./img/banner-img4.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    .polaroid-figure5 {
+        background: url("./img/banner-img5.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    .pb1 {
+        top: 100px;
+        left: 120px;
+        box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.4);
+        background-color: #f2f2f2;
+        transform: rotate(1deg);
+        -webkit-transform: rotate(1deg);
+        z-index: 6;
+    }
+    .pb2 {
+        top: 80px;
+        left: -20px;
+        box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.4);
+        background-color: #f2f2f2;
+        transform: rotate(-4deg);
+        -webkit-transform: rotate(-4deg);
+        z-index: 5;
+    }
+    .pb3 {
+        top: 30px;
+        left: 60px;
+        box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.4);
+        background-color: #f2f2f2;
+        transform: rotate(4deg);
+        -webkit-transform: rotate(4deg);
+        z-index: 4;
+    }
+    .pb4 {
+        top: 130px;
+        left: 160px;
+        box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.4);
+        background-color: #f2f2f2;
+        transform: rotate(5deg);
+        -webkit-transform: rotate(5deg);
+        z-index: 3;
+    }
+    .pb5 {
+        top: -40px;
+        left: 170px;
+        box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.4);
+        background-color: #f2f2f2;
+        transform: rotate(-2deg);
+        -webkit-transform: rotate(-2deg);
+        z-index: 2;
+    }
+
+    .con3d {
+        width: 60%;
+        margin: 0px -140px;
+    }
+
+    .moving {
+        position: relative;
+        width: 80%;
+        height: 200%;
+        margin: auto;
+        perspective: 2000px;
+    }
+
+    .layer {
+        padding: 10px;
+        box-sizing: border-box;
+        cursor: pointer;
+        transform-style: preserve-3d;
+    }
+    .up10{
+        z-index: 10;
+        opacity: 1;
+    }
+    /* .up9{
+        z-index: 9;
+    }
+    .up8{
+        z-index: 8;
+    }
+    .up7{
+        z-index: 7;
+    }
+    .up6{
+        z-index: 6;
+    } */
+}
