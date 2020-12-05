@@ -326,7 +326,6 @@
             <div class="card c3">
                 <div class="heart-circle">
                     <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-                    <div class="heart heart-fly"><img src="/Petliday/icon/heart-red-fill.png" alt=""></div>
                 </div>
                 <a href="pro-pg.php?sid=${a.sid}" class="card-pic w-100">
                     <img src="/Petliday/products/img/prolist${a.sid}.jpg" alt="...">

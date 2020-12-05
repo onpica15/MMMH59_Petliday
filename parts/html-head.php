@@ -16,4 +16,4 @@
   <link rel="stylesheet" href="<?= WEB_ROOT ?>css/nav-style.css">
   <link rel="stylesheet" href="<?= WEB_ROOT ?>css/footer-style.css">
   <link rel="stylesheet" href="<?= WEB_ROOT ?>css/scrolltop-style.css">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />

@@ -43,7 +43,7 @@ background-color: #fff;
     pointer-events: none;
 }
 .share-row{
-    width: 300px;
+    width: 260px;
     height: 230px;
     padding: 30px 30px;
     background-color: #fff;
@@ -64,11 +64,26 @@ background-color: #fff;
 }
 
 .fb,.line-icon,.email,.ig{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
+
+.fb p, .ig p{
+    margin-left: 8px;
+}
+.line-icon p{
+    margin-left: 3px;
+}
+.email p{
+    margin-left: -2px;
+}
+
 .share-pic{
     height: 75px;
+}
+.share-pic p{
+font-size: 14px;
+margin-top: 5px;
 }
 .share-row img{
     width: 100%;
@@ -191,6 +206,7 @@ background-color: #fff;
 #data td{
 border-radius: 3px;
 cursor: pointer;
+box-sizing: border-box;
 }
 
 .input-group-prepend{

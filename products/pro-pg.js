@@ -188,9 +188,9 @@ $('.calendar td').on('click',function(){
     if(checkFull==='已額滿'){
         $(this).removeClass('active');
     }else{
-    $(this).find('td').css('background-color','#fff').removeClass('active');
-    $(this).css('background-color','#ffc072').addClass('active');
-    }  
+    $('#data').find('td').css('background-color','#fff').css('box-shadow','none').removeClass('active');
+    $(this).css('background-color','#ffd096').css('box-shadow','0 0 0 2px #ffb14f inset').addClass('active');
+    } 
 })
 
 
