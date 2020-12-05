@@ -22,10 +22,10 @@ $rows = $pdo->query($sql)->fetch();
     <div class="container-fluid top-green">
         <!-- banner輪播D -->
         <div class="row caro position-relative">
-            <img class="position-absolute" src="/petliday/products/img/pd-caro4.jpg" alt="">
-            <img class="position-absolute" src="/petliday/products/img/pd-caro3.jpg" alt="">
-            <img class="position-absolute" src="/petliday/products/img/pd-caro2.jpg" alt="">
-            <img class="position-absolute" src="/petliday/products/img/pd-caro1.jpg" alt="">
+            <img class="position-absolute" src="/petliday/products/img/pd<?= $rows['sid'] ?>-caro4.jpg" alt="">
+            <img class="position-absolute" src="/petliday/products/img/pd<?= $rows['sid'] ?>-caro3.jpg" alt="">
+            <img class="position-absolute" src="/petliday/products/img/pd<?= $rows['sid'] ?>-caro2.jpg" alt="">
+            <img class="position-absolute" src="/petliday/products/img/pd<?= $rows['sid'] ?>-caro1.jpg" alt="">
             <!--clipPathUnits="objectBoundingBox" transform="scale(0.0019 0.00178)" -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208 563.52" width="500px">
                 <defs>
@@ -75,14 +75,14 @@ $rows = $pdo->query($sql)->fetch();
             <div class="row bread-row t-xs">
                 <a href="<?= WEB_ROOT ?>index/index＿.php">首頁</a> /
                 <a href="<?= WEB_ROOT ?>products/pro-list-ajax.php">行程列表</a> /
-                <a href="<?= WEB_ROOT ?>products/pro-list-ajax.php">北部出發</a> /
-                <a href="<?= WEB_ROOT ?>products/pro-pg.php?sid=1">花東三日遊</a>
+                <a href="<?= WEB_ROOT ?>products/pro-list-ajax.php"><?= $rows['pd_area'] ?></a> /
+                <a href="<?= WEB_ROOT ?>products/pro-pg.php?sid=1"><?= $rows['pd_short'] ?></a>
             </div>
             <!-- 標題row -->
             <div class="row title-row justify-content-between">
                 <div class="title-left">
-                    <p>上山下海玩得夠！｜熱氣球嘉年華＆</p>
-                    <p>SUP體驗＆金針花海 花東三日遊</p>
+                    <p><?= $rows['product_name'] ?></p>
+                    <p><?= $rows['product_name2'] ?></p>
                 </div>
                 <div class="title-right d-flex">
                     <div class="price-wrap mr-3">

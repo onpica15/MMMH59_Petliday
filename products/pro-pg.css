@@ -111,7 +111,7 @@ background-color: #fff;
 
 .heart-top{
     margin: 10px;
-    width: 40px;
+    width: 30px;
     cursor: pointer;
 }
 .heart-top img{
@@ -120,7 +120,7 @@ background-color: #fff;
 }
 .share{
     margin: 10px;
-    width: 40px;
+    width: 30px;
     cursor: pointer;
 }
 .share img{
@@ -854,7 +854,7 @@ font-size: 12px;
     }
     .share{
         margin: 10px;
-        width: 35px;
+        width: 30px;
     }
     .rate-row{
         margin-left: 0;
