@@ -214,7 +214,7 @@
 
           <!-- 登入前 -->
           <?php if (!isset($_SESSION['member_avatar'])) : ?>
-            <li class="nav-item">
+            <li class="nav-item loggin">
               <a class="nav-link brown-color t-m login-text" data-toggle="modal" data-target="#exampleModalCenter">登入/註冊</a>
             </li>
 
@@ -223,7 +223,7 @@
           <!-- 登入後 -->
           <?php if (isset($_SESSION['member_avatar'])) : ?>
 
-            <li class="nav-item  m-1">
+            <li class="nav-item loggin m-1">
               <div class="nav-link d-flex align-items-center" href="#">
                 <div class="navbtn nav-user-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274.17 264.67">

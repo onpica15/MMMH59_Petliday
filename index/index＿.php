@@ -689,8 +689,11 @@
   setInterval(function() {
     index = index + 1;
     (index > 4) ? index = 0: index = index;
-    $('.polaroid-base').eq(index).addClass('up10').siblings().removeClass('up10');;
-  }, 2000);
+    $('.polaroid-base').eq(index).addClass('pickup').siblings().removeClass('up10');
+    setTimeout(() => {
+      $('.polaroid-base').eq(index).addClass('up10').removeClass('pickup');
+    }, 200);
+  }, 1800);
 
   // let index = 0;
   // setInterval(function() {

@@ -12,7 +12,7 @@
         box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px 5px inset;
     }
     .polaroid-base{
-        opacity:.9;
+        /* opacity:.9; */
         transition: .5s;
     }
     .polaroid-figure1 {
@@ -107,18 +107,9 @@
     }
     .up10{
         z-index: 10;
-        opacity: 1;
     }
-    /* .up9{
-        z-index: 9;
+    .pickup{
+        top: -1100px;
+        left: 600px;
     }
-    .up8{
-        z-index: 8;
-    }
-    .up7{
-        z-index: 7;
-    }
-    .up6{
-        z-index: 6;
-    } */
 }

@@ -1,7 +1,7 @@
 // <!-- hot carosel -->
 
     // 熱門輪播 hot carosel
-    let index = 1;
+    
     $('.dots li').first().css('background', '#ffc072');
 
     $('.dots li').click(function() {
@@ -164,23 +164,38 @@
     // $('.heart-circle').on('click', function() {
 //  為了避免js先於ajax返回html內容造成js效果失效，改成父元素接收
 
-// 讓愛心飛飛 function fly-heart heart-fly
 
     $(document).on('click','.heart-circle', function() {
-        console.log('offset',$('.nav-cart-btn').offset());
+        
         let imgSrc = $(this).find('img').attr('src')
         let productSid = $(this).closest('.product-item').attr('data-sid')
-        let flyheart = $(this).find('.heart-fly');
         // console.log(imgSrc);
         if (imgSrc == '/Petliday/icon/heart-red.png') {
             $(this).find('img').attr('src', '/Petliday/icon/heart-red-fill.png');
-            $(this).find('.heart-fly').toggleClass('fly-fly');
             insertWish();
+
+            // 讓愛心飛飛 function heart-fly **********start
+            let fly = $(this).find('.heart')
+            let position = fly.offset();	
+            let heartPosition = $('.loggin').offset();
+            $("body").append('<div class="heart-fly"></div>');
+            let flyHeart = $('.heart-fly');
+            flyHeart.css({'top' : position.top + 'px', "left" : position.left + 'px'});
+            flyHeart.append('<img src="/Petliday/icon/heart-red-fill.png" alt="">');
+            flyHeart.css('width','28px');
+            flyHeart.find('img').css({'width':'100%','object-fit':'contain'});
+            $(flyHeart).fadeIn(500,function(){
+                $(flyHeart).css({'top' : heartPosition.top+40 + 'px', "left" : heartPosition.left+40 + 'px',"opacity":.5})
+            }).delay(1000).fadeIn("slow",function(){
+                $(flyHeart).css('top',heartPosition.top-10 + 'px');
+            });
+
+            setTimeout(function(){$('.heart-fly').remove();}, 1500);
+            // 讓愛心飛飛 function fly-heart **********end
             
         } else {
             $(this).find('img').attr('src', '/Petliday/icon/heart-red.png');
             deleteWish();
-            $(this).find('.heart-fly').toggleClass('fly-fly');
         }
         
         console.log('productSid=',productSid);
@@ -204,19 +219,7 @@
             $.post('dele-wish-api.php',data)
         },'json')
         }
-        // flyheart 愛心飛飛
-        function flyHeart(){
-            // const fh = document.querySelector('.heart')
-            console.log('fly',flyheart.html());
-            flyheart.toggleClass('fly-fly');
-            // flyheart.offset({top:0,left:2000});
-            // setTimeout(() => {
-                // console.log('getBoundingClientRect.top',fh.getBoundingClientRect().top);
-                // fh.getBoundingClientRect().top = '50';
-                // fh.getBoundingClientRect().right = '200';
-            //     flyheart.css('position','fixed').css('top','60px').css('left','1500px').css('z-index','5')
-            // }, 1000);
-        }
+        
     });
     
 // <!-- 卡片hover -->

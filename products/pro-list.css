@@ -226,32 +226,15 @@ color: #00907c;
         object-fit: contain;
     }
     .heart-fly{
-        /* top: 8px;
-        right: 8px; */
-        display: none;
-        transition: .5s ease-in;
-        /* position: fixed; */
         position: absolute;
+        z-index: 999;
+        -webkit-transition: all 1000ms ease-in-out;
+        -moz-transition: all 1000ms ease-in-out;
+        -ms-transition: all 1000ms ease-in-out;
+        -o-transition: all 1000ms ease-in-out;
+        transition: all 1000ms ease-in-out;
     }
-    .fly-fly{
-        /* position: fixed;
-        top: 30px;
-        right: 450px; */
-        display: inline-block;
-        animation: fly 1s ease-in;
-    }
-    @keyframes fly{
-        from{
-            top: 8px;
-            right: 8px;
-            position: absolute;
-        }
-        to{
-        position: fixed;
-        top: -1000px;
-        right: -1550px;
-        }
-    }
+
 
     .card-pic {
         width: 100%;
