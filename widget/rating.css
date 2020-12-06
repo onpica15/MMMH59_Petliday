@@ -21,10 +21,13 @@ body {
     background-color: #148F7C;
     border-radius: 3px 0px 0px 30px;
     cursor: pointer;
+    box-shadow: 1px 0px 3px black;
     /* position: fixed;
     bottom: 25vh;
     right: 0vh; */
 }
+
+
 
 .rating-title span{
     color: #fff;
@@ -49,9 +52,10 @@ body {
 .rating-info{
     width: 200px;
     height: 155px;
-    background-color: #ccc;
+    background-color: #eeeeee;
     border-radius: 3px 0px 0px 8px;
     border-top:10px solid #1c9e8bab;
+    box-shadow: 1px 0px 3px black;
     /* position: fixed;
     bottom: 25vh; */
 }
@@ -147,26 +151,20 @@ body {
 
 /* 完成頁 */
 .rating-success{
-  height: 135px;
+  height: 145px;
+  border-radius: 1px 0px 0px 8px;
 }
 
 .index-rating .rating-success img{
-  width: 32px;
-  height: 32px;
-  padding-bottom: 10px;
+  width: 24px;
+  height: 24px;
+  padding-bottom: 5px;
 }
 
-.index-rating .rating-success .success-text1{
-  color: #3C2E26;
+.rating-success .success-text{
+  font-size: 16px;
   font-weight: 600;
-  margin-right: 15px;
-  margin-top: 15px;
-}
-
-.rating-success .success-text2{
-  color: #3C2E26;
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 10px;
+  padding-top: 30px;
+  margin-bottom: -3px;
 }
 

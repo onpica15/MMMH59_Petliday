@@ -77,9 +77,9 @@
 <?php include __DIR__ . '/no-verified-email.php' ?>
 
 <!-- scroll-top -->
-<div class="scroll-top">
+<!-- <div class="scroll-top">
   <i class="fas fa-chevron-circle-up" style="color: #148F7C;"></i>
-</div>
+</div> -->
 
 
 <!-- 範例 -->
@@ -141,20 +141,20 @@
   })
 
   // scroll-top
-  $(".scroll-top").click(function() {
-    $("html,body").animate({
-      "scrollTop": ""
-    })
-    n = 1
-  })
+  // $(".scroll-top").click(function() {
+  //   $("html,body").animate({
+  //     "scrollTop": ""
+  //   })
+  //   n = 1
+  // })
 
-  $(window).scroll(function() {
-    if ($(window).scrollTop() <= $(".login").offset().top) {
-      $(".scroll-top").css('opacity', '0');
-    } else {
-      $(".scroll-top").css('opacity', '1');
-    }
-  });
+  // $(window).scroll(function() {
+  //   if ($(window).scrollTop() <= $(".login").offset().top) {
+  //     $(".scroll-top").css('opacity', '0');
+  //   } else {
+  //     $(".scroll-top").css('opacity', '1');
+  //   }
+  // });
 
 
 
