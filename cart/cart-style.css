@@ -295,6 +295,13 @@ svg#date-icon {
   padding: 10px 0;
   border-bottom: 1px solid #eee;
 }
+.detail-all {
+  /* padding: 0px 30px 0px 0px; */
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  /* margin-left: 20px;
+  margin-right: 20px; */
+}
 .detail-all h6 {
   margin-bottom: 0;
   margin: 3px;
@@ -343,7 +350,7 @@ svg#date-icon {
 }
 ::placeholder {
   color: #ccc;
-  font-size: 14px;
+  font-size: 16px;
   opacity: 1; /* Firefox */
 }
 /* ----------自治radio-------------------------- */
@@ -430,6 +437,9 @@ svg#date-icon {
   cursor: pointer;
   background-color: #00907c;
 } */
+.coupon-input {
+  margin: 10px;
+}
 .coupon {
   border: 1px solid #ffa02c9a;
   position: relative;
@@ -480,6 +490,10 @@ svg#date-icon {
   margin: 0;
   padding: 0 30px;
   line-height: 44px;
+  /* text-align: center; */
+}
+u {
+  cursor: pointer;
 }
 
 .form-input-btn {
@@ -575,10 +589,11 @@ svg#date-icon {
   top: 45%;
 }
 .cute-iocn {
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  background-color: #eee;
+  width: 180px;
+  height: 180px;
+  /* border-radius: 100%; */
+  background: url(./imgs/3x/finish.png) center center no-repeat;
+  background-size: contain;
 }
 .order-time {
   display: flex;
@@ -631,13 +646,17 @@ svg#date-icon {
 .btn-more:focus {
   outline: none;
 }
-.bone-iocn {
+.bone-icon {
   width: 30px;
+
   margin: 10px;
 }
-.bone-iocn .cls-1222 {
-  fill: #fff;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+.bone-iocn img {
+  /* box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); */
+  width: 100%;
+  /* width: 30px;
+  height: 30px; */
+  object-fit: cover;
 }
 /* .bone-iocn .cls-1222:hover {
   fill: #ffa12c;
@@ -667,6 +686,7 @@ svg#date-icon {
 input:optional {
   font-size: 12px;
 }
+
 .coupon-items {
   /* display: none; */
   /* transition: 0.3s; */
@@ -788,7 +808,150 @@ select.customDropdown {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+.itemTitle {
+  display: inline-block;
+}
+.paw-icon {
+  /* width: 20px;
+  height: 20px; */
+  /* padding: 5px; */
+}
+svg.pawIcon {
+  width: 20px;
+  /* height: 20px; */
+  /* object-fit: fill; */
+}
+.padd {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* .orderradio-btn {
+  display: none;
+}
+.all-bone-box {
+  unicode-bidi: bidi-override;
+  /* unicode-bidi:bidi-override 自動輸寫順序 */
+/* direction: rtl; */
+/* 單個數字、字母瀏覽器不能判斷語言就用rtl預設設定 */
+/* } */
 
+/* .all-bone-box > label {
+  /* float: right; */
+/* display: inline; */
+/* align-self: start; */
+/* margin: 1px; */
+/* position: relative; */
+/* width: 1.8em; */
+/* cursor: pointer; */
+/* } */
+/* 
+.all-bone-box > label:hover,
+.all-bone-box > label:hover ~ label,
+.all-bone-box > input.orderradio-btn:checked ~ label {
+  color: transparent;
+}
+
+.all-bone-box > label:hover:before,
+.all-bone-box > label:hover ~ label:before,
+.all-bone-box > input.orderradio-btn:checked ~ label:before,
+.all-bone-box > input.orderradio-btn:checked ~ label:before {
+  display: block;
+  content: "";
+  fill: red;
+  background-size: 28px;
+
+  /* position: absolute; */
+
+.index-rating .rating-title img {
+  width: 28px;
+  height: 28px;
+  color: #fff;
+  padding-top: 2px;
+}
+
+/* 內層：如何讓骨頭被填色*/
+.rating-info {
+  width: 200px;
+  /* height: 30px;
+  /* background-color: #eeeeee; */
+  /* border-radius: 3px 0px 0px 8px; */
+  /* border-top: 10px solid #1c9e8bab; */
+  /* box-shadow: 1px 0px 3px black; */
+  /* position: fixed;
+  bottom: 25vh; */
+}
+.hide {
+  display: none;
+}
+
+/* .clear {
+  float: none;
+  clear: both;
+} */
+
+.rating-bone {
+  width: 300px;
+  height: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5px;
+  position: relative;
+  unicode-bidi: bidi-override;
+  /* unicode-bidi:bidi-override 自動輸寫順序 */
+  direction: rtl;
+  margin-bottom: 10px;
+  /* 單個數字、字母瀏覽器不能判斷語言就用rtl預設設定 */
+  /* width: 30px; */
+  /* padding: 30px; */
+}
+.radio-icon {
+  width: 44px;
+  height: 44px;
+  padding-left: 25px;
+  padding-right: 25px;
+  /* margin: 40px; */
+}
+
+.radio-icon img {
+  width: 44px;
+  height: 44px;
+
+  object-fit: contain;
+}
+.rating-bone > label {
+  float: right;
+  display: inline;
+  align-self: start;
+  margin: 1px;
+  position: relative;
+  width: 1.8em;
+
+  cursor: pointer;
+}
+
+.rating-bone > label:hover,
+.rating-bone > label:hover ~ label,
+.rating-bone > input.radio-btn:checked ~ label {
+  color: transparent;
+}
+
+.rating-bone > label:hover:before,
+.rating-bone > label:hover ~ label:before,
+.rating-bone > input.radio-btn:checked ~ label:before,
+.rating-bone > input.radio-btn:checked ~ label:before {
+  display: block;
+  content: "";
+  background: url(./imgs/3x/bone-3.png) center center no-repeat;
+  background-size: contain;
+  width: 44px;
+  height: 44px;
+  /* padding: 30px; */
+  position: absolute;
+}
+
+input.radio-btn {
+  display: none;
+}
 /* .brightness {
   filter: brightness(0.1);
 } */
@@ -869,7 +1032,7 @@ select.customDropdown {
     margin-top: 20px;
   }
   .all-step-box {
-    padding: 25px;
+    padding: 10px;
   }
   .all-form-box {
     order: 2;
