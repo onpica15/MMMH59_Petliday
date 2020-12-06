@@ -56,7 +56,7 @@
           <div class="login-other d-flex justify-content-center">
             <a data-toggle="modal" data-target="#register_show" data-dismiss="modal">免費註冊</a>
             <span>｜</span>
-            <a data-toggle="modal" data-target="#errorPassword" data-dismiss="modal" class>忘記密碼？</a>
+            <a data-toggle="modal" data-target="#errorPassword" data-dismiss="modal" class>忘記密碼</a>
           </div>
 
           <!-- 一鍵輸入 -->

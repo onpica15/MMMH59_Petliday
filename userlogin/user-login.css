@@ -110,6 +110,7 @@ button:focus{
 
 .text-or{
     color: #D1D1D1;
+    font-size: 14px;
     position: absolute;
     text-align: center;
     left: 50%;
@@ -278,7 +279,7 @@ button:focus{
 .login-other a{
     color: #555;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .login-other span{
