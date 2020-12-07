@@ -327,7 +327,7 @@ span :before {
     -ms-transform: rotate(-2deg);
   }
 
-  .polaroid-figure {
+  .polaroid-figure1 {
     margin: 3% auto;
     width: 90vw;
     height: 75vh;
@@ -388,6 +388,9 @@ span :before {
   .des-title {
     color: #3c2e26;
   }
+  .des-title h6 {
+    letter-spacing: 1px;
+  }
 
   #destination .container {
     margin-bottom: 16px;
@@ -436,7 +439,7 @@ span :before {
     height: 300px;
     clip-path: circle(50% at 50% 50%);
     margin: 8px auto;
-    background-color: #3c2e26;
+    /* background-color: #3c2e26; */
   }
 
   .tour-card h6 {
@@ -521,13 +524,13 @@ span :before {
 
   .text-wrap {
     top: calc(50% - 100px);
-    left: 80px;
+    left: 75px;
     width: 80%;
   }
 
   .text-wrap2 {
     top: calc(50% - 80px);
-    right: 80px;
+    right: 65px;
     width: 80%;
   }
 

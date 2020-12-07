@@ -194,7 +194,7 @@
 
           </li>
 
-          <li class="nav-item m-1 mr-3">
+          <li class="nav-item m-1 mr-3 d-flex">
             <a class="nav-link" href="<?= WEB_ROOT ?>cart/cart.php">
               <div class="buy-items">
                 <div class="buy-quant"></div>
@@ -214,7 +214,7 @@
 
           <!-- 登入前 -->
           <?php if (!isset($_SESSION['member_avatar'])) : ?>
-            <li class="nav-item">
+            <li class="nav-item loggin">
               <a class="nav-link brown-color t-m login-text" data-toggle="modal" data-target="#exampleModalCenter">登入/註冊</a>
             </li>
 
@@ -223,7 +223,7 @@
           <!-- 登入後 -->
           <?php if (isset($_SESSION['member_avatar'])) : ?>
 
-            <li class="nav-item  m-1">
+            <li class="nav-item loggin m-1">
               <div class="nav-link d-flex align-items-center" href="#">
                 <div class="navbtn nav-user-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274.17 264.67">
@@ -326,16 +326,35 @@
       $('.nav-item-m').toggleClass('nav-item-m-able');
 
     })
+    let count = 0;
+
     const buy_quant = $('.buy-quant');
+
 
     function countCart(cart) {
       let count = 0;
+      if (count = 0) {
+        buy_quant.addClass('add');
+      }
+
       for (let i in cart) {
         count += cart[i].item * 1;
       }
+      
+      if (count > 0) {
+        buy_quant.removeClass('add');
+      }
+
       buy_quant.html(count);
+
       $('span.total-items').html(count + ' 件商品');
+
+      // console.log('quant', count);
+
     }
+
+    countCart()
+
 
     // function additem(cart) {}
 
@@ -350,7 +369,7 @@
 
     $('.nav-right').on('mouseenter', function() {
       $('.cart-hover').css('opacity', '1')
-    })
+    });
     $('.nav-right').on('mouseleave', function() {
       $('.cart-hover').css('opacity', '0')
     })
@@ -367,20 +386,20 @@
       } else {
         $('.scroll-top').css('bottom', '400px');
       }
-    })
+    });
     $('.scroll-top').on('mouseenter', function() {
       $(this).css('opacity', '1')
-    })
+    });
     $('.scroll-top').on('mouseleave', function() {
       $(this).css('opacity', '0.5')
-    })
+    });
     $('.scroll-top').on('click', function() {
       // $(window).scroll(function(){
       //     let nowTop = $(window).scrollTop();
       console.log('butt', $(window).scrollTop())
       $(window).scrollTop(0);
       // })
-    })
+    });
     if (window.matchMedia('(max-width: 425px)').matches) {
       $(window).scroll(function() {
         if ($(window).scrollTop() < 230) {
@@ -394,7 +413,6 @@
       })
     }
     // scrolltop ****************************end
-
 
     // cart list 
     function updateCartList() {
@@ -426,7 +444,7 @@
       div.innerHTML = html;
     }
 
-    updateCartList();
+    // updateCartList();
 
     // ------JS結束 勿刪到-------
   </script>

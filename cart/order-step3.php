@@ -1,5 +1,6 @@
 <?php include __DIR__ . '/../parts/config.php' ?>
 <?php include __DIR__ . '/../parts/html-head.php' ?>
+<?php include __DIR__ . '/../parts/html-script.php' ?>
 <!-- --- css 連結放下面 ----- -->
 <link rel="stylesheet" href="<?= WEB_ROOT ?>cart/cart-style.css">
 
@@ -71,7 +72,7 @@
           <div class="cute-iocn"></div>
         </div>
       </div>
-      <div class="row form-box bb-line">
+      <div class="row form-box bb-line padd">
         <div class="col-12 d-flex flex-column align-content-center">
           <h6 class=" text-gray t-m mb-1 ">聯絡家長資訊:</h6>
           <h6 class=" text-gray t-s mb-2">若訂單有任何變動，主要聯繫人</h6>
@@ -99,16 +100,37 @@
           <div class="col-12 all-step-box all-order-box">
             <div class="row ">
               <div class="all-order-box-in w-100">
-                <div class="col-12 order-box-fin">
-                  <h5 class="text-color t-l mt-1"><?= $i['product_name'] ?></h5>
-                  <div class="detail-box-fin">
-                    <div class="detail-all detail-time d-flex justify-content-between">
-                      <h6 class=" text-gray t-s ">時間：</h6>
-                      <h6 class=" text-gray t-s">2020/08/<?= $i['date'] ?></h6>
+                <div class="col-12 order-box-fin ">
+                  <div class="itemTitle d-flex">
+                    <div class="paw-icon mr-2">
+                      <svg class="pawIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68.08 55.96 " style="width: 15px;">
+                        <defs>
+                          <style>
+                            .cls-paw {
+                              fill: #ffa12c;
+                            }
+                          </style>
+                        </defs>
+                        <path class="cls-paw" d="M51.42,28.23a28.23,28.23,0,0,0-34.75,0C11.86,32,9.1,36.94,9.1,41.66,9.1,50.48,18.65,56,34,56S59,50.48,59,41.66C59,36.94,56.23,32,51.42,28.23Z" />
+                        <path class="cls-paw" d="M34.12,18.59c5.74,0,10.41-4.17,10.41-9.3S39.86,0,34.12,0,23.71,4.17,23.71,9.29,28.38,18.59,34.12,18.59Z" />
+                        <path class="cls-paw" d="M67.51,15.73A11.5,11.5,0,0,0,55.08,8.55,8.76,8.76,0,0,0,49,12.7a8.71,8.71,0,0,0-.53,7.38,11.14,11.14,0,0,0,5,5.77,11.4,11.4,0,0,0,5.69,1.56,10.52,10.52,0,0,0,1.78-.15A8.7,8.7,0,0,0,67,23.11,8.71,8.71,0,0,0,67.51,15.73Z" />
+                        <path class="cls-paw" d="M19.66,20.08a8.71,8.71,0,0,0-.53-7.38A8.76,8.76,0,0,0,13,8.55,11.22,11.22,0,0,0,5.53,10c-5,2.87-7,8.77-4.43,13.15h0a8.7,8.7,0,0,0,6.13,4.15A10.52,10.52,0,0,0,9,27.41a11.4,11.4,0,0,0,5.69-1.56A11.14,11.14,0,0,0,19.66,20.08Z" />
+
+                      </svg>
                     </div>
-                    <div class="detail-all detail-quan d-flex justify-content-between">
+                    <h5 class="text-color t-l mt-1">
+
+                      <?= $i['product_name'] ?>
+                    </h5>
+                  </div>
+                  <div class="detail-box-fin">
+                    <div class="detail-all detail-time d-flex ">
+                      <h6 class=" text-gray t-s">時間：</h6>
+                      <h6 class=" text-gray t-s">2020/12/<?= $i['date'] ?></h6>
+                    </div>
+                    <div class="detail-all detail-quan d-flex ">
                       <h6 class=" text-gray t-s">數量：</h6>
-                      <h6 class=" text-gray t-s"><?= $i['manQ'] ?> x 人 / <?= $i['petQ'] ?> x 犬</h6>
+                      <h6 class=" text-gray t-s"><?= $i['manQ'] ?> x 人 / <?= $i['petQ'] ?> x 寵物</h6>
                     </div>
                   </div>
                   <div class="single-prod-total d-flex justify-content-end bb-line">
@@ -120,25 +142,28 @@
                     <?php foreach ($_SESSION['order']['prod'][$j] as $k => $v) : ?>
                       <!-- 人 迴圈-->
                       <?php if ($k === 'man') : ?>
-                        <div class="col-12 col-lg-4 single-detail-box">
-                          <div class="single-detail">
-                            <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">旅客 1</h3>
-                            <p class="t-xs text-gray mb-0">姓氏
-                              （須與旅遊證件一致）:</p>
-                            <p class="t-s text-color mb-3"><?php print_r($v['Name'])  ?></p>
+                        <?php for ($x = 0; $x < count($v['Name']); $x++) { ?>
+                          <div class="col-12 col-lg-4 single-detail-box">
+                            <div class="single-detail">
+                              <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">旅客 <?php print_r($v['number'][$x]);  ?></h3>
+                              <p class="t-xs text-gray mb-0">姓氏
+                                （須與旅遊證件一致）:</p>
+                              <p class="t-s text-color mb-3"><?php print_r($v['Name'][$x]);  ?></p>
 
-                            <p class="t-xs text-gray mb-0">行程當日聯繫電話:</p>
-                            <p class="t-s text-color mb-3">0900-000-000</p>
+                              <p class="t-xs text-gray mb-0">行程當日聯繫電話:</p>
+                              <p class="t-s text-color mb-3"><?php print_r($v['man-phone'][$x]); ?></p>
 
-                            <p class="t-xs text-gray mb-0">身分證字號（行程保險中使用）:</p>
-                            <p class="t-s text-color mb-3">A0000000000</p>
+                              <p class="t-xs text-gray mb-0">身分證字號（行程保險中使用）:</p>
+                              <p class="t-s text-color mb-3"><?php print_r($v['idCard'][$x]); ?></p>
 
-                            <p class="t-xs text-gray mb-0">出生 年/月/日（行程保險中使用）</p>
+                              <p class="t-xs text-gray mb-0">出生 年/月/日（行程保險中使用）</p>
 
-                            <p class="t-s text-color mb-0 pb-3 bb-line-b">2020- 10-10</p>
+                              <p class="t-s text-color mb-0 pb-3 bb-line-b"><?php print_r($v['birthday'][$x]); ?></p>
+                            </div>
                           </div>
-                        </div>
+                        <?php } ?>
                       <?php endif ?>
+
                       <!-- -----end 人 資料 end----- -->
 
 
@@ -149,7 +174,7 @@
                         <?php for ($x = 0; $x < count($v['petName']); $x++) { ?>
                           <div class="col-12 col-lg-4 single-detail-box">
                             <div class="single-detail">
-                              <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">寵物</h3>
+                              <h3 class="t-m brown-color t-bold bb-line-b pb-2 mb-3">寵物<?php print_r($v['number'][$x]);  ?></h3>
                               <p class="t-xs text-gray mb-0">寶貝稱呼:</p>
                               <p class="t-s text-color mb-3">
 
@@ -189,7 +214,7 @@
         </div>
       </div>
       <div class="row form-box bb-line">
-        <div class="col-12 all-step-box ">
+        <div class="col-12 all-step-box all-bone-box">
           <div class="row form-box-fin  pb-5 another-bg">
 
             <div class="col-12 col-lg-12 d-flex justify-content-center mb-3 ">
@@ -198,36 +223,47 @@
             </div>
 
             <div class="col-12 d-flex justify-content-center mt-3 bone-box">
-              <div class="bone-iocn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.88 43.86">
-                  <path class="cls-1222" d="M15.58,43.86a7.91,7.91,0,0,1-7.93-7.63,7.94,7.94,0,0,1,.59-15.87,8.2,8.2,0,0,1,1.9.31L20.68,10.13A7.95,7.95,0,0,1,36,5.76a8.39,8.39,0,0,1,.3,1.86,8,8,0,0,1,5.29,2.32h0A8,8,0,0,1,33.72,23.2L23.21,33.71a7.92,7.92,0,0,1-7.63,10.15Z" /></svg>
+              <div class="rating-info position-relative">
+                <form>
+                  <div class="rating-bone">
+                    <input id="bone5" name="bone" type="radio" value="5" class="radio-btn hide invisible" />
+                    <label for="bone5" class="radio-icon"><img src="./imgs/3x/bone-2.png" alt=""></label>
+
+                    <input id="bone4" name="bone" type="radio" value="4" class="radio-btn hide invisible" />
+                    <label for="bone4" class="radio-icon"><img src="./imgs/3x/bone-2.png" alt=""></label>
+
+                    <input id="bone3" name="bone" type="radio" value="3" class="radio-btn hide invisible" />
+                    <label for="bone3" class="radio-icon"><img src="./imgs/3x/bone-2.png" alt=""></label>
+
+                    <input id="bone2" name="bone" type="radio" value="2" class="radio-btn hide invisible" />
+                    <label for="bone2" class="radio-icon"><img src="./imgs/3x/bone-2.png" alt=""></label>
+
+                    <input id="bone1" name="bone" type="radio" value="1" class="radio-btn hide invisible" />
+                    <label for="bone1" class="radio-icon"><img src="./imgs/3x/bone-2.png" alt=""></label>
+
+                    <div class="clear"></div>
+                  </div>
+
+                </form>
               </div>
-              <div class="bone-iocn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.88 43.86">
-                  <path class="cls-1222" d="M15.58,43.86a7.91,7.91,0,0,1-7.93-7.63,7.94,7.94,0,0,1,.59-15.87,8.2,8.2,0,0,1,1.9.31L20.68,10.13A7.95,7.95,0,0,1,36,5.76a8.39,8.39,0,0,1,.3,1.86,8,8,0,0,1,5.29,2.32h0A8,8,0,0,1,33.72,23.2L23.21,33.71a7.92,7.92,0,0,1-7.63,10.15Z" /></svg>
-              </div>
-              <div class="bone-iocn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.88 43.86">
-                  <path class="cls-1222" d="M15.58,43.86a7.91,7.91,0,0,1-7.93-7.63,7.94,7.94,0,0,1,.59-15.87,8.2,8.2,0,0,1,1.9.31L20.68,10.13A7.95,7.95,0,0,1,36,5.76a8.39,8.39,0,0,1,.3,1.86,8,8,0,0,1,5.29,2.32h0A8,8,0,0,1,33.72,23.2L23.21,33.71a7.92,7.92,0,0,1-7.63,10.15Z" /></svg>
-              </div>
-              <div class="bone-iocn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.88 43.86">
-                  <path class="cls-1222" d="M15.58,43.86a7.91,7.91,0,0,1-7.93-7.63,7.94,7.94,0,0,1,.59-15.87,8.2,8.2,0,0,1,1.9.31L20.68,10.13A7.95,7.95,0,0,1,36,5.76a8.39,8.39,0,0,1,.3,1.86,8,8,0,0,1,5.29,2.32h0A8,8,0,0,1,33.72,23.2L23.21,33.71a7.92,7.92,0,0,1-7.63,10.15Z" /></svg>
-              </div>
-              <div class="bone-iocn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.88 43.86">
-                  <path class="cls-1222" d="M15.58,43.86a7.91,7.91,0,0,1-7.93-7.63,7.94,7.94,0,0,1,.59-15.87,8.2,8.2,0,0,1,1.9.31L20.68,10.13A7.95,7.95,0,0,1,36,5.76a8.39,8.39,0,0,1,.3,1.86,8,8,0,0,1,5.29,2.32h0A8,8,0,0,1,33.72,23.2L23.21,33.71a7.92,7.92,0,0,1-7.63,10.15Z" /></svg>
-              </div>
+
+
+
+
+
+
+
             </div>
+
             <div class="col-12 d-flex justify-content-center  one-form">
 
               <input id="review" class="form-input form-input-review" type="text" name="review" placeholder="更多流程建議都歡迎與我們分享!">
 
             </div>
             <div class="col-12  mt-3">
-              <a href="./order-step2.php" class="a-style w-100 d-flex justify-content-center">
+              <div class="a-style w-100 d-flex justify-content-center">
                 <button class="btn btn-more-review">送出評論</button>
-              </a>
+              </div>
             </div>
 
           </div>
@@ -251,10 +287,11 @@
 
 
 
+
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
-<?php include __DIR__ . '/../parts/html-script.php' ?>
+
 <script>
   // ------JS開始 以上勿刪-------
 
@@ -272,7 +309,23 @@
     // } {
     //   img.eq(j).attr("src", ".idea/shining.png");
     // }
-  })
+  }) // rating
+
+  $(".index-rating").mouseenter(function() {
+    $(".index-rating").animate({
+      right: "0"
+    });
+    $(".rating-title").show().fadeOut(500);
+  });
+
+  $(".index-rating").mouseleave(function() {
+    $(".index-rating").animate({
+      right: "-200px"
+    });
+    $(".rating-title").show().fadeIn(300);
+  });
+
+
 
 
 

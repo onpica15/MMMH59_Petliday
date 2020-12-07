@@ -74,19 +74,19 @@
     <form>
       <div class="rating-bone">
         <input id="bone5" name="bone" type="radio" value="5" class="radio-btn hide" />
-        <label for="bone5"><img src="./imgs/bone-2.svg" alt=""></label>
+        <label for="bone5"><img src="./imgs/bone-1.svg" alt=""></label>
 
         <input id="bone4" name="bone" type="radio" value="4" class="radio-btn hide" />
-        <label for="bone4"><img src="./imgs/bone-2.svg" alt=""></label>
+        <label for="bone4"><img src="./imgs/bone-1.svg" alt=""></label>
 
         <input id="bone3" name="bone" type="radio" value="3" class="radio-btn hide" />
-        <label for="bone3"><img src="./imgs/bone-2.svg" alt=""></label>
+        <label for="bone3"><img src="./imgs/bone-1.svg" alt=""></label>
 
         <input id="bone2" name="bone" type="radio" value="2" class="radio-btn hide" />
-        <label for="bone2"><img src="./imgs/bone-2.svg" alt=""></label>
+        <label for="bone2"><img src="./imgs/bone-1.svg" alt=""></label>
 
         <input id="bone1" name="bone" type="radio" value="1" class="radio-btn hide" />
-        <label for="bone1"><img src="./imgs/bone-2.svg" alt=""></label>
+        <label for="bone1"><img src="./imgs/bone-1.svg" alt=""></label>
 
         <div class="clear"></div>
       </div>
@@ -103,22 +103,13 @@
 
 
 
-    <div class="rating-success position-absolute w-100" style="top:0;background:#ccc;z-index:-1;opacity:0;transition:.5s">
-      <p class="success-text1"><img src="./imgs/paw.svg" alt="paw"> Thank you</p>
-      <p class="success-text2">您的寶貴回饋<br>是Petliday前進的動力！</p>
+    <div class="rating-success position-absolute w-100" style="top:0;background:#eee;z-index:-1;opacity:0;transition:.5s">
+      <p class="success-text"><img src="./imgs/paw.svg" alt="paw"> Thank you</p>
+      <p>您的寶貴回饋<br>是Petliday前進的動力！</p>
     </div>
 
   </div>
 </div>
-
-
-<!-- scroll_top -->
-<div class="scroll_top">
-  <i class="fas fa-chevron-circle-up" style="color: #148F7C;"></i>
-</div>
-
-
-
 
 
 <!-- ------------------ body結束 ------------------ -->
@@ -129,7 +120,7 @@
 <script>
   // ------JS開始 以上勿刪-------
 
-  // rating
+  // rating 展開設定 ******************************
 
   $(".index-rating").mouseenter(function() {
     $(".index-rating").animate({
@@ -147,20 +138,12 @@
 
   // button送出成功顯示畫面
   $("#rating-btn").on("click", function() {
-    // $(".rating-info2").toggleClass("move")
     $('.rating-success').css('z-index',1).css('opacity',1);
   });
 
 
 
-  // scroll_top
-  $(".scroll_top").click(function() {
-    $("html,body").animate({
-      "scrollTop": ""
-    })
-    n = 1
-  })
-
+  // rating 滑到footer前停住 **********************
   $(function(){
     $(window).scroll(function() {
     //   console.log('$(window).scrollTop()',$(window).scrollTop());

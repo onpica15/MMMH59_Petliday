@@ -169,6 +169,9 @@
         $('#prod' + sid).remove();
         calcTotal();
         // $('span.total-items').text(countCart(data) + '件商品');
+
+
+
       }, 'json');
 
   };
@@ -391,8 +394,11 @@
       // tr.find('td.quantity > select').val(quantity); 
       // tr.find('.prod-price h5').html('$ ' + dallorCommas(price));
       total += price;
+
+
     });
     $('#totleAmount').text('$' + dallorCommas(total))
+
   }
   calcTotal()
 

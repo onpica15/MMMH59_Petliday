@@ -56,7 +56,7 @@
           <div class="login-other d-flex justify-content-center">
             <a data-toggle="modal" data-target="#register_show" data-dismiss="modal">免費註冊</a>
             <span>｜</span>
-            <a data-toggle="modal" data-target="#errorPassword" data-dismiss="modal" class>忘記密碼？</a>
+            <a data-toggle="modal" data-target="#errorPassword" data-dismiss="modal" class>忘記密碼</a>
           </div>
 
           <!-- 一鍵輸入 -->
@@ -77,9 +77,9 @@
 <?php include __DIR__ . '/no-verified-email.php' ?>
 
 <!-- scroll-top -->
-<div class="scroll-top">
+<!-- <div class="scroll-top">
   <i class="fas fa-chevron-circle-up" style="color: #148F7C;"></i>
-</div>
+</div> -->
 
 
 <!-- 範例 -->
@@ -141,20 +141,20 @@
   })
 
   // scroll-top
-  $(".scroll-top").click(function() {
-    $("html,body").animate({
-      "scrollTop": ""
-    })
-    n = 1
-  })
+  // $(".scroll-top").click(function() {
+  //   $("html,body").animate({
+  //     "scrollTop": ""
+  //   })
+  //   n = 1
+  // })
 
-  $(window).scroll(function() {
-    if ($(window).scrollTop() <= $(".login").offset().top) {
-      $(".scroll-top").css('opacity', '0');
-    } else {
-      $(".scroll-top").css('opacity', '1');
-    }
-  });
+  // $(window).scroll(function() {
+  //   if ($(window).scrollTop() <= $(".login").offset().top) {
+  //     $(".scroll-top").css('opacity', '0');
+  //   } else {
+  //     $(".scroll-top").css('opacity', '1');
+  //   }
+  // });
 
 
 

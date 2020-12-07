@@ -117,12 +117,12 @@
             info_bar
               .removeClass('alert-danger')
               .addClass('alert-success')
-              .text('完成新增');
+              .text('註冊成功');
           } else {
             info_bar
               .removeClass('alert-success')
               .addClass('alert-danger')
-              .text(data.error || '新增失敗');
+              .text(data.error || '註冊失敗');
           }
           info_bar.slideDown();
 

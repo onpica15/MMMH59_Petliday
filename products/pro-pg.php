@@ -22,10 +22,10 @@ $rows = $pdo->query($sql)->fetch();
     <div class="container-fluid top-green">
         <!-- banner輪播D -->
         <div class="row caro position-relative">
-            <img class="position-absolute" src="/petliday/products/img/pd-caro4.jpg" alt="">
-            <img class="position-absolute" src="/petliday/products/img/pd-caro3.jpg" alt="">
-            <img class="position-absolute" src="/petliday/products/img/pd-caro2.jpg" alt="">
-            <img class="position-absolute" src="/petliday/products/img/pd-caro1.jpg" alt="">
+            <img class="position-absolute" src="/petliday/products/img/pd<?= $rows['sid'] ?>-caro4.jpg" alt="">
+            <img class="position-absolute" src="/petliday/products/img/pd<?= $rows['sid'] ?>-caro3.jpg" alt="">
+            <img class="position-absolute" src="/petliday/products/img/pd<?= $rows['sid'] ?>-caro2.jpg" alt="">
+            <img class="position-absolute" src="/petliday/products/img/pd<?= $rows['sid'] ?>-caro1.jpg" alt="">
             <!--clipPathUnits="objectBoundingBox" transform="scale(0.0019 0.00178)" -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208 563.52" width="500px">
                 <defs>
@@ -75,14 +75,14 @@ $rows = $pdo->query($sql)->fetch();
             <div class="row bread-row t-xs">
                 <a href="<?= WEB_ROOT ?>index/index＿.php">首頁</a> /
                 <a href="<?= WEB_ROOT ?>products/pro-list-ajax.php">行程列表</a> /
-                <a href="<?= WEB_ROOT ?>products/pro-list-ajax.php">北部出發</a> /
-                <a href="<?= WEB_ROOT ?>products/pro-pg.php?sid=1">花東三日遊</a>
+                <a href="<?= WEB_ROOT ?>products/pro-list-ajax.php"><?= $rows['pd_area'] ?></a> /
+                <a href="<?= WEB_ROOT ?>products/pro-pg.php?sid=1"><?= $rows['pd_short'] ?></a>
             </div>
             <!-- 標題row -->
             <div class="row title-row justify-content-between">
                 <div class="title-left">
-                    <p>上山下海玩得夠！｜熱氣球嘉年華＆</p>
-                    <p>SUP體驗＆金針花海 花東三日遊</p>
+                    <p><?= $rows['product_name'] ?></p>
+                    <p><?= $rows['product_name2'] ?></p>
                 </div>
                 <div class="title-right d-flex">
                     <div class="price-wrap mr-3">
@@ -796,9 +796,6 @@ $rows = $pdo->query($sql)->fetch();
         <div class="container p-0">
             <div class="row align-items-center w-100">
                 <div class="card c3 col-md m-3 p-0">
-                    <div class="heart-circle">
-                        <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-                    </div>
                     <div class="card-pic w-100">
                         <img src="/Petliday/products/img/reco1.jpg" alt="">
                     </div>
@@ -820,9 +817,6 @@ $rows = $pdo->query($sql)->fetch();
                     </p>
                 </div>
                 <div class="card c3 col-md col-sm-12 m-3 p-0">
-                    <div class="heart-circle">
-                        <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-                    </div>
                     <div class="card-pic w-100">
                         <img src="/Petliday/products/img/reco2.jpg" alt="">
                     </div>
@@ -844,9 +838,6 @@ $rows = $pdo->query($sql)->fetch();
                     </p>
                 </div>
                 <div class="card c3 col-md col-sm-12 m-3 p-0">
-                    <div class="heart-circle">
-                        <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-                    </div>
                     <div class="card-pic w-100">
                         <img src="/Petliday/products/img/reco3.jpg" alt="">
                     </div>
@@ -881,9 +872,74 @@ $rows = $pdo->query($sql)->fetch();
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
+<script>
+    const title = document.getElementById('title')
+    const data = document.getElementById('data')
 
-<!-- // ------JS開始 以上誤刪------- -->
-<script src="/petliday/products/calendar.js"></script>
+    const now = new Date()
+
+    const nowY = now.getFullYear()
+    const nowM = now.getMonth() + 1
+
+    const weekList = ['日', '一', '二', '三', '四', '五', '六']
+
+    for (let i = 0; i < weekList.length; i++) {
+        title.innerHTML += `<th class="fw-5">${weekList[i]}</th>`
+    }
+
+    const days = new Date(2020, 12, 0).getDate()
+
+    const weekdayFirst = new Date('2020/12/1').getDay()
+
+    console.log(days, weekdayFirst)
+
+    const numberOfMember = days + weekdayFirst
+
+    const dataTemp = []
+
+    for (let i = 0; i < numberOfMember; i++) {
+        if (i < weekdayFirst) {
+            dataTemp.push('')
+        } else {
+            dataTemp.push(i - weekdayFirst + 1)
+        }
+    }
+    console.log(dataTemp)
+
+    let dataDisplay = '<tr>'
+
+    for (let i = 0; i < dataTemp.length; i++) {
+        // dataDisplay += `<td><p>${dataTemp[i]}</p><p class="green-color t-m">2280</p></td>`
+        // dataDisplay += `<td><p>${dataTemp[i]}</p>`
+
+        // ((i + 3) % 7 === 0|| (i + 4) % 7 === 0 || (i + 5) % 7 === 0 || (i + 6) % 7 === 0||(i) % 7 === 0)
+        if ((i + 2) % 13 === 0 || (i + 5) % 10 === 0) {
+            dataDisplay += `<td><p class="danger-color fw-5">${dataTemp[i]}</p><p class="danger-color"><?= $rows['price_all'] ?></p></td>`
+        } else if ((i + 3) % 11 === 0) {
+            dataDisplay += `<td style="pointer-events:none"><p class="text-gray fw-5">${dataTemp[i]}</p><p class="text-gray t-xs">已額滿</p></td>`
+        } else if ((i + 1) % 7 === 0) {
+            dataDisplay += `<td><p class="fw-5">${dataTemp[i]}</p><p class="green-color"><?= $rows['price_all'] + 500 ?></p></td>`
+            dataDisplay += '</tr><tr>'
+        } else if (i == 0 || i == 1) {
+            dataDisplay += `<td><p class="fw-5">${dataTemp[i]}</p><p class="green-color"></p></td>`
+        } else {
+            dataDisplay += `<td><p class="fw-5">${dataTemp[i]}</p><p class="green-color"><?= $rows['price_all'] ?></p></td>`
+        }
+    }
+    data.innerHTML = dataDisplay
+
+    //測試取得點擊的日期值
+    // $('.calendar td').on('click', function() {
+    //     $('#data').find('td').css('background-color', '#fff');
+    //     $(this).css('background-color', '#ffc072');
+    //     // console.log('this.val()',td.innerHTML);
+    //     console.log('date', $(this).children('p').html());
+    // })
+</script>
+
+<!-- ------JS開始 以上誤刪------- -->
+<!-- <script src="/petliday/products/calendar.js"></script> -->
+
 <script src="/petliday/products/pro-pg.js"></script>
 <!-- // ------JS結束 誤刪到------- -->
 
