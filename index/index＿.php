@@ -178,7 +178,7 @@
 
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
-<!-- 拍立得section -->
+<!-- 拍立得section 電腦版-->
 <section id="hero-polaroid">
   <!-- 3d start -->
   <div class="con3d container-fluid">
@@ -225,6 +225,7 @@
   </div>
 </section>
 
+<!-- 拍立得section 手機版-->
 <section id="hero-polaroid-m float-none" class="weirdpart pb-4">
   <div class="container pr-0">
     <!-- 繩子的部分 -->
@@ -235,7 +236,7 @@
     </div>
     <!-- 拍立得照片的部分 -->
     <div class="row d-flex por-pic-m flex-nowrap mr-0 pt-4 pb-2">
-      <div class="polaroid-base col-4 por-frame-1 d-flex position-relative justify-content-center">
+      <div class="polaroid-base d-flex position-absolute justify-content-center">
         <figure class="position-absolute mt-3">
           <img src="img/pd1.jpg" alt="">
         </figure>
@@ -243,7 +244,7 @@
           <img src="img/signature2.png" alt="">
         </div>
       </div>
-      <div class="polaroid-base col-5 por-frame-2 d-flex position-relative justify-content-center mx-3 p-0">
+      <div class="polaroid-base d-flex position-absolute justify-content-center">
         <figure class="position-absolute mt-3">
           <img src="img/pd2.jpg" alt="">
         </figure>
@@ -251,7 +252,31 @@
           <img src="img/signature2.png" alt="">
         </div>
       </div>
-      <div class="polaroid-base col-4 por-frame-3 d-flex position-relative justify-content-center">
+      <div class="polaroid-base d-flex position-absolute justify-content-center">
+        <figure class="position-absolute mt-3">
+          <img src="img/pd3.jpg" alt="">
+        </figure>
+        <div class="position-absolute sig-m-1">
+          <img src="img/signature2.png" alt="">
+        </div>
+      </div>
+      <div class="polaroid-base d-flex position-absolute justify-content-center">
+        <figure class="position-absolute mt-3">
+          <img src="img/pd3.jpg" alt="">
+        </figure>
+        <div class="position-absolute sig-m-1">
+          <img src="img/signature2.png" alt="">
+        </div>
+      </div>
+      <div class="polaroid-base d-flex position-absolute justify-content-center">
+        <figure class="position-absolute mt-3">
+          <img src="img/pd3.jpg" alt="">
+        </figure>
+        <div class="position-absolute sig-m-1">
+          <img src="img/signature2.png" alt="">
+        </div>
+      </div>
+      <div class="polaroid-base d-flex position-absolute justify-content-center">
         <figure class="position-absolute mt-3">
           <img src="img/pd3.jpg" alt="">
         </figure>
@@ -863,36 +888,17 @@
   });
 </script>
 <!-- // ------JS開始 以上勿刪------- -->
-<!--  -->
+<!-- hero網頁 拍立得 -->
 <script>
   let index = 0;
   setInterval(function() {
     index = index + 1;
     (index > 4) ? index = 0: index = index;
-    $('.polaroid-base').eq(index).addClass('pickup').siblings().removeClass('up10');
+    $('.con3d .polaroid-base').eq(index).addClass('pickup').siblings().removeClass('up10');
     setTimeout(() => {
-      $('.polaroid-base').eq(index).addClass('up10').removeClass('pickup');
+      $('.con3d .polaroid-base').eq(index).addClass('up10').removeClass('pickup');
     }, 200);
   }, 1800);
-
-  // let index = 0;
-  // setInterval(function() {
-  //   index = index + 1;
-  //   (index > 4) ? index = 0: index = index;
-  //   let indexcheck = index + 1;
-  //   (indexcheck > 4) ? (indexcheck = 0) : (indexcheck = indexcheck);
-  //   let indexcheck2 = indexcheck + 1;
-  //   (indexcheck2 > 4) ? (indexcheck2 = 0) : (indexcheck2 = indexcheck2);
-  //   let indexcheck3 = indexcheck2 + 1;
-  //   (indexcheck3 > 4) ? (indexcheck3 = 0) : (indexcheck3 = indexcheck3);
-  //   let indexcheck4 = indexcheck3 + 1;
-  //   (indexcheck4 > 4) ? (indexcheck4 = 0) : (indexcheck4 = indexcheck4);
-  //   $('.polaroid-base').eq(index).addClass('up10').siblings().removeClass('up10 up9 up8 up7 up6');
-  //   $('.polaroid-base').eq(indexcheck).addClass('up9').siblings().removeClass('up10 up9 up8 up7 up6');
-  //   $('.polaroid-base').eq(indexcheck2).addClass('up8').siblings().removeClass('up10 up9 up8 up7 up6');
-  //   $('.polaroid-base').eq(indexcheck3).addClass('up7').siblings().removeClass('up10 up9 up8 up7 up6');
-  //   $('.polaroid-base').eq(indexcheck4).addClass('up6').siblings().removeClass('up10 up9 up8 up7 up6');
-  // }, 1000);
 </script>
 <!-- // hero 3d start -->
 <script>
@@ -916,6 +922,15 @@
   });
 </script>
 <!-- // hero 3d end -->
+<!-- hero手機 拍立得 -->
+<script>
+  let index2 = 0;
+  setInterval(function() {
+    index2 = index2 + 1;
+    (index2 > 6) ? index2 = 0: index2 = index2;
+    $('.por-pic-m .polaroid-base').eq(index2).addClass('col-5 por-frame-2 mx-3 p-0').removeClass('col-4 por-frame-1').siblings().removeClass('col-5 por-frame-2 mx-3 p-0').addClass('col-4 por-frame-1');
+  }, 1000);
+</script>
 
 <!-- // ------JS結束 勿刪到------- -->
 <?php include __DIR__ . '/../parts/html-foot.php' ?>

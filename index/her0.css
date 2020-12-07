@@ -113,3 +113,13 @@
         left: 600px;
     }
 }
+@media (max-width: 450px) {
+    .por-frame-1 {
+        height: 160px;
+        transform: rotate(-5deg);
+        margin-top: -20px;
+    }
+    .weirdpart{
+          height: 80px;
+    }
+}

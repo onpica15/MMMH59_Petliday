@@ -158,6 +158,9 @@ color: #00907c;
 .order select{
     width: 150px;
 }
+.order .form-group{
+    display: flex;
+}
 /* 共用標題 */
 .topic p{
     font-size: 18px;
@@ -362,12 +365,12 @@ color: #00907c;
         .top-pic{
             /* width: 130%; */
             margin-top: 73px;
-            margin-left: 0px;
+            margin-left: 7px;
             transform: scale(1.2);
         }
         .bread-row{
-            margin: 10px 0 0;
-            padding-bottom: 30px;
+            margin: 90px 0 0;
+            padding-bottom: 20px;
         }
         /* 熱門輪播 */
                 /* hot carosel */
@@ -459,6 +462,15 @@ color: #00907c;
         }
         .order{
             margin-top: 20px;
+        }
+        .order .form-group{
+            display: block;
+        }
+        .order label{
+            margin-bottom: 13px;
+        }
+        .order select{
+            width: 320px;
         }
         .p-arrow{
             line-height: 45px;

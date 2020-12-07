@@ -12,6 +12,7 @@
     opacity: .5;
     transition: .5s;
     cursor: pointer;
+    z-index: 20;
 }
 .scroll-top img{
     width: 3vh;

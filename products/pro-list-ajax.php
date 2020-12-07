@@ -344,7 +344,6 @@
                                         </g>
                                     </g>
                                 </svg>
-
                             </div>
                             <div class="rate text-gray t-m">${a.star}</div>
                             <div class="rate-all t-xs ml-2"><u class="text-gray">${a.rate}則評論 </u></div>
