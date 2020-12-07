@@ -311,7 +311,7 @@
     <div class="container">
       <div class="row justify-item-center">
         <div class="logo-sentence col-xl-6 col-10  mx-auto">
-          <img src="img/illustration/petliday.png" alt="">
+          <img src="img/3x/petliday.png" alt="">
         </div>
       </div>
       <div class="row d-flex justify-content-between pet-slogan">
@@ -544,7 +544,7 @@
   </div>
   <!-- 體驗課程卡片 -->
   <!-- 4個一排版本 -->
-  <div class="container mt-5">
+  <div class="container mt-5 pb-5">
     <div class="row align-items-center">
       <!-- 左箭頭 -->
       <a class="arrow m-3">
@@ -734,7 +734,7 @@
   </div>
 </section>
 <!-- 特色日遊section -->
-<section id="depth">
+<section id="depth" class="depth pt-4 pb-4">
   <!-- 腳印標題那部分 -->
   <div class="container my-5">
     <div class="row d-flex flex-start align-items-center title-box">
@@ -862,7 +862,7 @@
 
 </section> -->
 
-<section id="about" class="mt-5">
+<section id="about" class="mt-5 pt-5 pb-3">
   <div class="container ">
     <div class="row">
       <div class="col-12 col-lg-7 mt-4">
