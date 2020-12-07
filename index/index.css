@@ -28,7 +28,7 @@ span :before {
 
 @media (max-width: 450px) {
   * {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
 
   body {

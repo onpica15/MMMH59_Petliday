@@ -231,20 +231,20 @@
     <!-- 繩子的部分 -->
     <div class="row rope">
       <figure>
-        <img src="./img/illustration/rope.png" alt="">
+        <img src="./img/illustration/rope.svg" alt="">
       </figure>
     </div>
     <!-- 拍立得照片的部分 -->
-    <div class="row d-flex por-pic-m flex-nowrap mr-0 pt-4 pb-2">
-      <div class="polaroid-base d-flex position-absolute justify-content-center">
+    <div class="row d-flex por-pic-m flex-nowrap mr-0 pt-3 pb-2">
+      <div class="polaroid-base d-flex position-relative justify-content-center">
         <figure class="position-absolute mt-3">
           <img src="img/pd1.jpg" alt="">
         </figure>
         <div class="position-absolute sig-m-1">
-          <img src="img/signature2.png" alt="">
+          <img src="img/signature1.png" alt="">
         </div>
       </div>
-      <div class="polaroid-base d-flex position-absolute justify-content-center">
+      <div class="polaroid-base d-flex position-relative justify-content-center">
         <figure class="position-absolute mt-3">
           <img src="img/pd2.jpg" alt="">
         </figure>
@@ -252,36 +252,52 @@
           <img src="img/signature2.png" alt="">
         </div>
       </div>
-      <div class="polaroid-base d-flex position-absolute justify-content-center">
+      <div class="polaroid-base d-flex position-relative justify-content-center">
         <figure class="position-absolute mt-3">
           <img src="img/pd3.jpg" alt="">
+        </figure>
+        <div class="position-absolute sig-m-1">
+          <img src="img/signature3.png" alt="">
+        </div>
+      </div>
+      <div class="polaroid-base d-flex position-relative justify-content-center">
+        <figure class="position-absolute mt-3">
+          <img src="img/pd4.jpg" alt="">
+        </figure>
+        <div class="position-absolute sig-m-1">
+          <img src="img/signature4.png" alt="">
+        </div>
+      </div>
+      <div class="polaroid-base d-flex position-relative justify-content-center">
+        <figure class="position-absolute mt-3">
+          <img src="img/pd5.jpg" alt="">
+        </figure>
+        <div class="position-absolute sig-m-1">
+          <img src="img/signature5.png" alt="">
+        </div>
+      </div>
+      <div class="polaroid-base d-flex position-relative justify-content-center">
+        <figure class="position-absolute mt-3">
+          <img src="img/pd6.jpg" alt="">
+        </figure>
+        <div class="position-absolute sig-m-1">
+          <img src="img/signature6.png" alt="">
+        </div>
+      </div>
+      <div class="polaroid-base d-flex position-relative justify-content-center">
+        <figure class="position-absolute mt-3">
+          <img src="img/pd7.jpg" alt="">
         </figure>
         <div class="position-absolute sig-m-1">
           <img src="img/signature2.png" alt="">
         </div>
       </div>
-      <div class="polaroid-base d-flex position-absolute justify-content-center">
+      <div class="polaroid-base d-flex position-relative justify-content-center">
         <figure class="position-absolute mt-3">
-          <img src="img/pd3.jpg" alt="">
+          <img src="img/pd8.jpg" alt="">
         </figure>
         <div class="position-absolute sig-m-1">
-          <img src="img/signature2.png" alt="">
-        </div>
-      </div>
-      <div class="polaroid-base d-flex position-absolute justify-content-center">
-        <figure class="position-absolute mt-3">
-          <img src="img/pd3.jpg" alt="">
-        </figure>
-        <div class="position-absolute sig-m-1">
-          <img src="img/signature2.png" alt="">
-        </div>
-      </div>
-      <div class="polaroid-base d-flex position-absolute justify-content-center">
-        <figure class="position-absolute mt-3">
-          <img src="img/pd3.jpg" alt="">
-        </figure>
-        <div class="position-absolute sig-m-1">
-          <img src="img/signature2.png" alt="">
+          <img src="img/signature4.png" alt="">
         </div>
       </div>
     </div>
@@ -925,11 +941,28 @@
 <!-- hero手機 拍立得 -->
 <script>
   let index2 = 0;
+  let index3 = 0;
   setInterval(function() {
     index2 = index2 + 1;
-    (index2 > 6) ? index2 = 0: index2 = index2;
+    (index2 > 5) ? index2 = 1: index2 = index2;
     $('.por-pic-m .polaroid-base').eq(index2).addClass('col-5 por-frame-2 mx-3 p-0').removeClass('col-4 por-frame-1').siblings().removeClass('col-5 por-frame-2 mx-3 p-0').addClass('col-4 por-frame-1');
-  }, 1000);
+  }, 2000);
+
+  $('.weirdpart .container').delay(2000).fadeIn("slow", function() {
+    setInterval(function() {
+      index3 = index3 + 1;
+      (index3 > 4) ? index3 = 0: index3 = index3;
+      $('.weirdpart .container').css('right', (index3 * 160 + 'px'))
+    }, 2000);
+  });
+
+  // setTimeout(function() {
+  //   setInterval(function() {
+  //     index2 = index2 + 1;
+  //     (index2 > 5) ? index2 = 0: index2 = index2;
+  //     $('.weirdpart .container').css('right', (index2 * 120 + 'px'))
+  //   }, 2000);
+  // }, 2000);
 </script>
 
 <!-- // ------JS結束 勿刪到------- -->

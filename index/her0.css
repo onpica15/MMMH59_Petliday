@@ -1,3 +1,6 @@
+html, body{
+    transition: .5s;
+}
 #hero-polaroid{
     position: relative;
     width: 1920px;
@@ -114,12 +117,32 @@
     }
 }
 @media (max-width: 450px) {
+    .weirdpart {
+        height: 310px;
+        overflow-x: auto;
+    }
+    .weirdpart .container{
+    position: relative;
+    transition: .5s;
+    }
     .por-frame-1 {
         height: 160px;
         transform: rotate(-5deg);
         margin-top: -20px;
     }
-    .weirdpart{
-          height: 80px;
+    .por-frame-2{
+        /* top: 20px; */
+        /* left: 100px; */
+    }
+    .rope figure img{
+        width: 280%;
+    }
+    .rope{
+        position: relative;
+        transition: .5s;
+    }
+    .por-pic-m .polaroid-base{
+        transition: .5s;
+        margin-right:10px;
     }
 }
