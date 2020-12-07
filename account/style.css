@@ -105,9 +105,7 @@ body {
 /* ----------------------------------------- */
 
 /* account-home---------------------------- */
-.del-icon img {
-  height: 100%;
-}
+
 button:focus {
   outline: none;
 }
@@ -373,6 +371,7 @@ button:focus {
   min-height: 90px;
 }
 .color-bar {
+  background-color: #f7f7f7;
   border: 1px solid#9f5d38;
   border-radius: 20px;
 }
@@ -493,6 +492,17 @@ form.is-editing .btn-edit {
   outline: none;
   border: 1px solid #ffd096;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+}
+.label {
+  width: 80px;
+}
+
+.btn-icon {
+  border-radius: 3px;
+  background: #f7f7f7;
+  min-height: 44px;
+  min-width: 44px;
+  border: transparent;
 }
 
 /* order-detail------------------------ */

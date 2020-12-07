@@ -5,9 +5,15 @@ $rows = $stmt->fetchAll();
 ?>
 
 <?php include __DIR__ . '/../parts/html-head.php' ?>
+<?php include __DIR__ . '/../parts/html-script.php' ?>
+
 <!-- --- css 連結放下面 ----- -->
 <link rel="stylesheet" href="<?= WEB_ROOT ?>account/style.css">
-
+<style>
+    small.form-text {
+        color: red;
+    }
+</style>
 
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
@@ -29,9 +35,9 @@ $rows = $stmt->fetchAll();
                         <!-- 會員資料 -->
                         <!-- 連接資料庫 -->
 
-                        <!-- <?php foreach ($rows as $r) : ?>
-                                   
-                                <?php endforeach; ?> -->
+                        <?php foreach ($rows as $r) : ?>
+
+                        <?php endforeach; ?>
 
                         <div class="container mb-3 list-section" id="list-title">
                             <div class="row  mb-3">
@@ -107,7 +113,7 @@ $rows = $stmt->fetchAll();
                                         <div class="form-group row">
                                             <label for="birthday" class="col-sm-2 col-form-label">生日</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control form-input is-disabled" id="birthday" name="birthday" placeholder="年/月/日" value="<?= $r['birthday'] ?>" disabled>
+                                                <input type="date" class="form-control form-input is-disabled" id="birthday" name="birthday" placeholder="年/月/日" value="<?= $r['birthday'] ?>" disabled>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -144,43 +150,52 @@ $rows = $stmt->fetchAll();
                                     </a>
 
                                 </div>
-                                <div class="form-move-down col-12 col-lg-6">
-                                    <div>
-                                        <div class=" d-flex">
-                                            <i class="fas fa-bone title-icon"></i>
-                                            <h6 class="form-title t-l">Qbone</h6>
-                                            <i class="fas fa-bone title-icon"></i>
+                                <form class="col-12 col-lg-8 is-readonly" name="formp" onsubmit="checkForm(); return false;" novalidate>
+                                    <div class="col-lg-8 d-inline-block">
+                                        <div class="form-group d-flex">
+                                            <label for="name" class="col-form-label">小名</label>
+                                            <input type=" text" name="name" id="name" class="form-control form-input is-disabled" disabled>
+                                            <small class="form-text"></small>
+
+                                            <!-- <i class="fas fa-bone title-icon"></i> -->
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="staticEmail" class="col-lg-2 col-form-label">品種</label>
-                                            <div class="col-lg-9">
-                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="柴犬">
-                                            </div>
+                                        <div class="form-group d-flex">
+                                            <label for="breed" class="col-form-label">品種</label>
+                                            <input type="text" name="breed" id="breed" class="form-control form-input is-disabled" disabled>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="staticEmail" class="col-lg-2 col-form-label">年齡</label>
-                                            <div class="col-lg-9">
-                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="1歲">
-                                            </div>
+                                        <div class="form-group d-flex">
+                                            <label for="age" class="col-form-label">年齡</label>
+                                            <input type="text" name="age" id="age" class="form-control form-input is-disabled" disabled>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="staticEmail" class="col-lg-2 col-form-label">生日</label>
-                                            <div class="col-lg-9">
-                                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="2019/09/10">
-                                            </div>
+                                        <div class="form-group d-flex">
+                                            <label for="birthday" class="col-form-label">生日</label>
+                                            <input type="date" name="birthday" id="birthday" class="form-control form-input is-disabled" disabled>
                                         </div>
                                     </div>
-
-                                </div>
-                                <div class="col-12 col-lg-2 d-flex justify-content-around align-items-center" id="page-icon">
-                                    <a href="" class="edit-icon">
-                                        <img src="../icon/edit.svg" alt="">
-                                    </a>
-                                    <a href="" class="del-icon">
-                                        <img src="../icon/trash.svg" alt="">
-                                    </a>
-                                </div>
-
+                                    <!-- 這個可以送出表單<button type="submit" class="btn btn-primary">完成修改</button> -->
+                                    <div class="col-lg-3 " style="display: contents;">
+                                        <button type="button" class="btn-icon btn-default btn-edit js-edit">
+                                            <div class="edit-icon">
+                                                <img src="../icon/edit.svg" alt="">
+                                            </div>
+                                        </button>
+                                        <button type="button" class="btn-icon btn-default btn-save js-save">
+                                            <div class="edit-icon">
+                                                <img src="../icon/success.svg" alt="">
+                                            </div>
+                                        </button>
+                                        <button type="button" class="btn-icon btn-default ">
+                                            <div class="edit-icon">
+                                                <img src="../icon/trash.svg" alt="">
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <!-- 
+                                            <a href="ab-edit.php?sid<?= $r['sid'] ?>" class="edit-icon">
+                                                <img src="../icon/edit.svg" alt="">
+                                            </a>
+                                           -->
+                                </form>
                             </div>
                             <!-- ----------------------------- -->
 
@@ -211,11 +226,11 @@ $rows = $stmt->fetchAll();
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
-<?php include __DIR__ . '/../parts/html-script.php' ?>
 
 <script src="script.js"></script>
 
 <script>
+    // 欄位編及 儲存欄位
     $(document).ready(function() {
         $('.js-edit, .js-save').on('click', function() {
             let $form = $(this).closest('form');
@@ -224,6 +239,24 @@ $rows = $stmt->fetchAll();
             $form.find('input,textarea').prop('disabled', isReadonly);
         });
     });
-    // ------JS結束 勿刪到-------
+
+    // 刪除寵物表單資料
+    // function delete_it(sid) {
+    //     if (confirm(`確定要刪除編號為 ${sid} 的資料嗎?`)) {
+    //         location.href = "ab-del.php?sid=" + sid;
+    //     }
+    // }
+
+    // 定義檢查格式
+    // const name = $('#name'),
+    // age = $('#age'),
+    // info_bar = $('#info_bar')
+
+    // function checkForm() {
+    // name.next().text('');
+    // age.next().text('');
+
+    // let isPass = true;
+    // if (name.val().length < 2) { // isPass=false; // name.next().text('請填寫正確的姓名!'); // } // if (age.val().length < 1) { // isPass=false; // // 設定small這個標籤 // age.next().text('請填寫正確的年齡!'); // } // ajax 用$()包起來$(document.form1)轉換為jquery if (isPass) { $.post('account-pet-insert-api.php', $(document.formp).serialize(), function(data) { console.log(data); // if (data.success) { // info_bar // .removeClass('alert-danger') // .addClass('alert-success') // .text('完成新增'); // } else { // info_bar // .removeClass('alert-success') // .addClass('alert-danger') // .text(data.error || '新增失敗' ); // } // info_bar.slideDown(); // setTimeout(function() { // info_bar.slideUp(); // }, 2000); }, 'json' ) // 傳回來的字串自動轉成 } } // ------JS結束 勿刪到------- 
 </script>
 <?php include __DIR__ . '/../parts/html-foot.php' ?>

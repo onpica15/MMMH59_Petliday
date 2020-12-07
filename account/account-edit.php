@@ -1,5 +1,7 @@
 <?php include __DIR__ . '/../parts/config.php' ?>
 <?php include __DIR__ . '/../parts/html-head.php' ?>
+<?php include __DIR__ . '/../parts/html-script.php' ?>
+
 <!-- --- css 連結放下面 ----- -->
 <link rel="stylesheet" href="<?= WEB_ROOT ?>account/style.css">
 
@@ -40,7 +42,7 @@
                   <img src="./img/edit-hat3.png" alt="">
                 </div>
                 <div class="edit edit-hat">
-                  <img src="./img/edit-hat3.png" alt="">
+                  <img src="./img/edit-hat4.png" alt="">
                 </div>
                 <div class="edit edit-decor">
                   <div class="edit edit-hat">
@@ -56,7 +58,7 @@
                   <img src="./img/edit-decor3.png" alt="">
                 </div>
                 <div class="edit edit-decor">
-                  <img src="./img/edit-decor3.png" alt="">
+                  <img src="./img/edit-decor4.png" alt="">
                 </div>
                 <!-- uploadimg -->
                 <?php
@@ -170,7 +172,7 @@
                       </div>
                       <div class="col selected-border1 d-flex align-items-center">
                         <div class="hat">
-                          <img src="./img/hat3.svg" alt="">
+                          <img src="./img/hat4.svg" alt="">
                         </div>
                       </div>
 
@@ -228,7 +230,7 @@
                       </div>
                       <div class="col selected-border2 d-flex align-items-center">
                         <div class="decor">
-                          <img src="./img/neckless.svg" alt="" style="width: 88px;">
+                          <img src="./img/neckless2.svg" alt="" style="width: 88px;">
                         </div>
                       </div>
 
@@ -310,7 +312,7 @@
                         </div>
                         <div class="col selected-border1 d-flex align-items-center">
                           <div class="hat">
-                            <img src="./img/hat3.svg" alt="">
+                            <img src="./img/hat4.svg" alt="">
                           </div>
                         </div>
 
@@ -347,7 +349,7 @@
                         </div>
                         <div class="col selected-border2 d-flex align-items-center">
                           <div class="decor">
-                            <img src="./img/neckless.svg" alt="">
+                            <img src="./img/neckless2.svg" alt="">
                           </div>
                         </div>
 
@@ -389,7 +391,6 @@
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
-<?php include __DIR__ . '/../parts/html-script.php' ?>
 <script src="script.js"></script>
 
 <script>
