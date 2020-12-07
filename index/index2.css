@@ -99,22 +99,23 @@ span :before {
   .tour-card figure {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     border: 1px solid #eee;
+    object-fit: cover;
+    object-position: center center;
   }
   .tour-card figure img {
-    width: 120%;
-    height: 120%;
+    width: 105%;
+    /* height: 105%; */
     object-fit: cover;
     object-position: center center;
     transition: 0.3s;
   }
   .tour-card figure img:hover {
-    width: 105%;
-    height: 105%;
-    object-position: center center;
+    width: 120%;
+    /* height: 120%; */
+    object-position: 80% 80%;
     object-fit: cover;
-
-    /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); */
-    /* object-fit: cover; */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
   }
   .tour-card h6 {
     line-height: 26px;
@@ -173,7 +174,7 @@ span :before {
   /* .card-pic:hover {
     height: 125px;
     transform: translateY(-50px);
-} */
+  */
 
   .c2 {
     height: 330px;
@@ -184,9 +185,9 @@ span :before {
   }
 
   /* 
-.c2 .card-pic:hover {
+  .c2 .card-pic:hover {
     height: 185px;
-} */
+ */
 
   .c2 .info {
     display: flex;
@@ -203,7 +204,7 @@ span :before {
 
   /* .c4 .card-pic:hover {
     height: 90px;
-} */
+ */
 
   .c4 .heart {
     top: 10px;

@@ -430,7 +430,7 @@
 
       <div class="col-4 tour-card">
         <figure>
-          <img src="./img/pd6.jpg" alt="">
+          <img src="./img/3x/christmas1.png" alt="">
         </figure>
         <!-- 星等、評價、價錢 -->
         <div class="row w-70 mx-auto pb-3 bott-line">
@@ -458,7 +458,7 @@
 
       <div class="col-4 tour-card">
         <figure>
-          <img src="./img/pd6.jpg" alt="">
+          <img src="./img/3x/christmas2.png" alt="">
         </figure>
         <!-- 星等、評價、價錢 -->
         <div class="row w-70 mx-auto pb-3 bott-line">
@@ -485,7 +485,7 @@
       </div>
       <div class="col-4 tour-card">
         <figure>
-          <img src="./img/pd6.jpg" alt="">
+          <img src="./img/3x/christmas3.png" alt="">
         </figure>
         <!-- 星等、評價、價錢 -->
         <div class="row w-70 mx-auto pb-3 bott-line">
