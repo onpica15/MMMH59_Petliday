@@ -107,7 +107,7 @@
             .removeClass('alert-danger')
             .addClass('alert-success')
             .text('登入成功');
-          location.href = 'user-login.php';
+          location.reload();
         } else {
           info_bar
             .removeClass('alert-success')
