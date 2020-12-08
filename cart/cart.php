@@ -124,11 +124,12 @@
           <div class="danger-color t-l mr-3">總計: NT <span class="danger-color t-xl" id="totleAmount"></span> </div>
 
           <!-- <a href="./order-step1.php" class="a-style"> -->
-          <a class="nav-link buy-btn btn  btn-1 btn-2 d-flex align-items-center justify-content-center" data-toggle="modal" data-target="#register_show">
+          <a class="nav-link buy-btn btn  btn-1 btn-2 d-flex align-items-center justify-content-center" >
            結帳
           <!-- </a> -->
           </a>
 
+          <a id="show-reg" data-toggle="modal" data-target="#register_show" hidden> </a>
 
         </div>
 
@@ -467,7 +468,12 @@
     // console.log('AAAAsmQuantity', pQuantity);
   })
   // 要送資料嗎？ -----------------
-  // $('.buy-btn').click(function() {
+  $('.buy-btn').click(function() {
+    <?php if (isset($_SESSION['member_avatar'])) : ?>
+      location.href = "/petliday/cart/order-step1.php"
+    <?php else: ?>
+      $('#show-reg').click();
+    <?php endif; ?>
   //   const combo = $(this);
   //   const tr = $(this).closest('.prod-item').attr('data-sid');
   //   let mQuantity = parseInt($(this).find('.man-box input').val());
@@ -501,7 +507,7 @@
   //   }, 'json');
   //   // console.log('AAAAsmQuantity', mQuantity);
   //   // console.log('AAAAsmQuantity', pQuantity);
-  // })
+  })
 
 
   // ------JS結束 勿刪到-------

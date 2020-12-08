@@ -11,9 +11,9 @@ if(empty($_POST['apply_email'])){
 }
 
 $sql = "INSERT INTO `member_avatar`(
-    `email`, `password`
+    `email`, `password`, `name`
     ) VALUES (
-    ?, ?
+    ?, ?, ?
     )";
     // 外面來的資料一律用問號
 
@@ -21,11 +21,15 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute([
         $_POST['apply_email'], 
         $_POST['apply_password'],
+        "User"
 ]);
 // 以上是真正執行的資料，然後再放到以下stmt裡面
 // 呼叫rowCount看有沒有新增
 if($stmt->rowCount()==1){
     $output['success'] = true;
     $output['error'] = '';
+    $_SESSION['member_avatar']['sid'] = $pdo->lastInsertId();
+    $_SESSION['member_avatar']['email'] = $_POST['apply_email'];
+    $_SESSION['member_avatar']['name'] = "User";
 }
 echo json_encode($output, JSON_UNESCAPED_UNICODE);
