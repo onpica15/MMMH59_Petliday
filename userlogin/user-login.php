@@ -107,7 +107,16 @@
             .removeClass('alert-danger')
             .addClass('alert-success')
             .text('登入成功');
-          location.reload();
+            console.log('location pathname',location.pathname)
+            console.log('location href',location.href)
+
+            if(location.pathname === '/PETLIDAY/index/index%EF%BC%BF.php'){
+              location.reload();
+            }
+            else{
+              
+            }
+          
         } else {
           info_bar
             .removeClass('alert-success')
