@@ -10,7 +10,7 @@
         </div>
         <div class="subscribe col-8 col-lg-4">
           <h6 class="text-gray t-s">立即訂閱獲得最新優惠資訊！</h6>
-          <p class="text-gray t-xs">每週分享寵物資訊，時刻保持最新資訊</p>
+          <p class="text-gray t-xs">分享寵物資訊，時刻保持最新資訊。</p>
         </div>
 
         <div class=" col-10 col-lg-4 ">
