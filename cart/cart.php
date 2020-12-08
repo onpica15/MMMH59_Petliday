@@ -124,7 +124,7 @@
           <div class="danger-color t-l mr-3">總計: NT <span class="danger-color t-xl" id="totleAmount"></span> </div>
 
           <!-- <a href="./order-step1.php" class="a-style"> -->
-          <a class="nav-link buy-btn btn  btn-1 btn-2 d-flex align-items-center justify-content-center" data-toggle="modal" data-target="#exampleModalCenter">
+          <a class="nav-link buy-btn btn  btn-1 btn-2 d-flex align-items-center justify-content-center" data-toggle="modal" data-target="#register_show">
            結帳
           <!-- </a> -->
           </a>
