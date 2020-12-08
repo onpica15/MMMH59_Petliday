@@ -1,6 +1,10 @@
-* {
+/* * { */
   /* outline: 1px solid red; */
-}
+/* } */
+html, body{
+  transition: .5s;
+  scroll-behavior:smooth;
+  }
 
 #nav-bar {
   z-index: 100;

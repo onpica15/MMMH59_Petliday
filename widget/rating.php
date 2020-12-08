@@ -87,12 +87,13 @@
   // rating 滑到footer前停住 **********************
   $(function(){
     $(window).scroll(function() {
+      
     //   console.log('$(window).scrollTop()',$(window).scrollTop());
     //   console.log('footer ',$('footer').offset().top);
     //  console.log('window',$(window).height());
     //   console.log($(window).width())
       if($(window).width() > 992){
-        if($(window).scrollTop() >= 879){
+        if($(window).scrollTop() <= 3100){
           // console.log('hi')
           $('.index-rating').css('position','absolute').css('bottom',$(document).height() -  $('footer').offset().top + 25)
         }
