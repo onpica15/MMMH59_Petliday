@@ -312,12 +312,12 @@
 
     })
 
-    // let mumberBtn = $('.nav-user-btn')
+    let numberBtn = $('.nav-user-btn')
 
-    // $(mumberBtn).on('click', function() {
-    //   console.log('mumberBtn', mumberBtn)
-    //   $('.member-items').toggleClass('able')
-    // })
+    $(numberBtn).on('click', function() {
+      console.log('mumberBtn', numberBtn)
+      $('.member-items').toggleClass('able')
+    })
 
     $('.ham-box').on('click', function() {
       $('.ham-line1').toggleClass('ham-am1');
@@ -340,7 +340,7 @@
       for (let i in cart) {
         count += cart[i].item * 1;
       }
-      
+
       if (count > 0) {
         buy_quant.removeClass('add');
       }
