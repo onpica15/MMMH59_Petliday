@@ -193,7 +193,11 @@ span :before {
   /* 同樂目的地末 */
 
   /* 插圖介紹部分始 */
+  /* .logo-sentence {
+    width: 50%;
+  } */
   .logo-sentence img {
+    /* object-fit: contain; */
     width: 100%;
     height: 100%;
   }
@@ -211,9 +215,10 @@ span :before {
   }
 
   .petliday-fig img {
-    width: 100%;
+    width: 90%;
     height: 100%;
     object-fit: contain;
+    object-position: left;
   }
 
   .pet-slogan {

@@ -1,5 +1,5 @@
 * {
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 .des-card figure img {
@@ -62,7 +62,12 @@ span :before {
   line-height: 1px;
   line-height: 20px;
 }
-
+.change-order-wrap {
+  background: url(./img/3X/bg2.png) top left no-repeat;
+  width: 105%;
+  background-size: contain;
+  z-index: -1;
+}
 /* ------------------------------------ */
 @media (min-width: 1200px) {
   .des-card {
@@ -99,22 +104,23 @@ span :before {
   .tour-card figure {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     border: 1px solid #eee;
+    object-fit: cover;
+    object-position: center center;
   }
   .tour-card figure img {
-    width: 120%;
-    height: 120%;
+    width: 105%;
+    /* height: 105%; */
     object-fit: cover;
     object-position: center center;
     transition: 0.3s;
   }
   .tour-card figure img:hover {
-    width: 105%;
-    height: 105%;
-    object-position: center center;
+    width: 120%;
+    /* height: 120%; */
+    object-position: 80% 80%;
     object-fit: cover;
-
-    /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); */
-    /* object-fit: cover; */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
   }
   .tour-card h6 {
     line-height: 26px;
@@ -173,7 +179,7 @@ span :before {
   /* .card-pic:hover {
     height: 125px;
     transform: translateY(-50px);
-} */
+  */
 
   .c2 {
     height: 330px;
@@ -184,9 +190,9 @@ span :before {
   }
 
   /* 
-.c2 .card-pic:hover {
+  .c2 .card-pic:hover {
     height: 185px;
-} */
+ */
 
   .c2 .info {
     display: flex;
@@ -203,7 +209,7 @@ span :before {
 
   /* .c4 .card-pic:hover {
     height: 90px;
-} */
+ */
 
   .c4 .heart {
     top: 10px;
@@ -226,6 +232,29 @@ span :before {
 
   .rate-all {
     letter-spacing: 0.5px;
+  }
+  .depth {
+    background: url(./img/3X/bg-1.png) top 10% right no-repeat;
+    background-size: 700px;
+
+    /* width: 300px; */
+    background-attachment: fixed;
+  }
+  .logo-sentence {
+    margin-top: 80px;
+    width: 500px;
+    height: 200px;
+  }
+  .logo-sentence img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  .pet-slogan {
+    margin: 0px 0px;
+  }
+  #petliday-wrap .row:last-of-type {
+    margin: 0px 0px;
   }
 }
 
