@@ -97,7 +97,7 @@
 
   function checkForm() {
 
-    $.post('user-login-api.php', {
+    $.post('/PETLIDAY/userlogin/user-login-api.php', {
         email: email.val(),
         password: password.val()
       },
