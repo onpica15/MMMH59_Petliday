@@ -156,22 +156,22 @@
                         <div class="ban ball pick"><i class="fas fa-ban "></i></div>
                       </div>
                       <div class="col selected-border1 d-flex align-items-center">
-                        <div class="hat">
+                        <div class="hat d-flex align-items-center">
                           <img src="./img/hat1.svg" alt="">
                         </div>
                       </div>
                       <div class="col selected-border1 d-flex align-items-center">
-                        <div class="hat">
+                        <div class="hat d-flex align-items-center">
                           <img src="./img/hat2.svg" alt="">
                         </div>
                       </div>
                       <div class="col selected-border1 d-flex align-items-center">
-                        <div class="hat">
+                        <div class="hat d-flex align-items-center">
                           <img src="./img/hat3.svg" alt="">
                         </div>
                       </div>
                       <div class="col selected-border1 d-flex align-items-center">
-                        <div class="hat">
+                        <div class="hat d-flex align-items-center">
                           <img src="./img/hat4.svg" alt="">
                         </div>
                       </div>
@@ -214,22 +214,22 @@
                         <div class="ban ball pick"><i class="fas fa-ban "></i></div>
                       </div>
                       <div class="col selected-border2 d-flex align-items-center">
-                        <div class="decor">
+                        <div class="decor d-flex align-items-center">
                           <img src="./img/bow.svg" alt="">
                         </div>
                       </div>
                       <div class="col selected-border2 d-flex align-items-center">
-                        <div class="decor">
+                        <div class="decor d-flex align-items-center">
                           <img src="./img/glass.svg" alt="">
                         </div>
                       </div>
                       <div class="col selected-border2 d-flex align-items-center">
-                        <div class="decor">
+                        <div class="decor d-flex align-items-center">
                           <img src="./img/neckless.svg" alt="" style="width: 88px;">
                         </div>
                       </div>
                       <div class="col selected-border2 d-flex align-items-center">
-                        <div class="decor">
+                        <div class="decor d-flex align-items-center">
                           <img src="./img/neckless2.svg" alt="" style="width: 88px;">
                         </div>
                       </div>
@@ -453,16 +453,22 @@
       $('.selected-border2.active').removeClass('active').prev().addClass('active')
     }
   })
+  // 當點選clear-all的時候
   $('.clear-all').on('click', function() {
     console.log('hi')
-    if ($('').index = 0) {
-      $('.edit-hat').hide().eq(0).show()
-      $('.edit-decor').hide().eq(0).show()
-    }
-
-
-    // 當點選clear-all的時候
+    $('.edit-hat').hide().eq(0).show()
     // 移除其他人的active
+    $('.selected-border').siblings().removeClass('active')
+    $('.selected-border').eq(0).addClass('active')
+
+    $('.edit-decor').hide().eq(0).show()
+    $('.selected-border1').siblings().removeClass('active')
+    $('.selected-border1').eq(0).addClass('active')
+
+    $('.selected-border2').siblings().removeClass('active')
+    $('.selected-border2').eq(0).addClass('active')
+
+
     // 為fa-ban 加上active(.selected-border1.active.index)
   })
 

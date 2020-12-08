@@ -40,7 +40,7 @@
                                         <i class='fas fa-search'></i>
                                     </div>
                                     <input class="form-control" type="search" placeholder="搜索歷史清單" aria-label="Search">
-                                    <a class="btn-green btn-search" type="submit">go</a>
+                                    <a class="btn-green btn btn-search" type="submit">go</a>
                                 </div>
                             </div>
                         </div>
@@ -51,11 +51,10 @@
                                     <img src="../products/img/pd6.jpg" alt="">
                                 </div>
                                 <div class="col-10 col-lg-6 prod-text d-flex flex-column">
-                                    <h5 class="brown-color t-l title1-m">標題標題標題標題標題標題標題標題題標題</h5>
-                                    <h6 class="t-m title1-m">方案類型:恆春二日遊</h6>
+                                    <h5 class="brown-color t-l title1-m">訂單編號: d0150505</h5>
 
                                     <div class="small-text">
-                                        <h6 class=" text-gray t-s">訂購日期: 2020/08/12 pm 6:00</h6>
+                                        <h6 class=" text-gray t-s">訂購日期: 2020/12/18</h6>
 
                                     </div>
                                 </div>
@@ -71,31 +70,6 @@
 
                         </div>
                         <!-- ----endof prod-box---- -->
-                        <div class="container">
-                            <div class="row prod-box mt-4 d-flex align-items-top">
-                                <div class="prod-img col-2 col-lg-3">
-                                    <img src="../products/img/pd6.jpg" alt="">
-                                </div>
-                                <div class="col-10 col-lg-6 prod-text d-flex flex-column">
-                                    <h5 class="brown-color t-l title1-m">標題標題標題標題標題標題標題標題題標題</h5>
-                                    <h6 class="t-m title1-m">方案類型:恆春二日遊</h6>
-
-                                    <div class="small-text">
-                                        <h6 class=" text-gray t-s">訂購日期: 2020/08/12 pm 6:00</h6>
-
-                                    </div>
-                                </div>
-                                <div class="col-10 col-lg-3 d-flex flex-column ml-auto align-self-end">
-                                    <h5 class="mb-5 ml-auto t-m brown-color prod-price-in">NT$ 3000</h5>
-                                    <h5 class="ml-auto text-gray t-l title1-m">訂單取消</h5>
-                                </div>
-                            </div>
-                            <div class="row justify-content-end">
-                                <button class="btn btn-outline">訂單評論</button>
-                                <a class="btn" href="./account-order-detail.php">訂單明細</a> </div>
-
-                        </div>
-
                     </div>
 
                     <!-- endof list-order 我的訂單 -->
