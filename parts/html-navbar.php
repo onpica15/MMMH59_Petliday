@@ -312,12 +312,12 @@
 
     })
 
-    let mumberBtn = $('.nav-user-btn')
+    // let mumberBtn = $('.nav-user-btn')
 
-    $(mumberBtn).on('click', function() {
-      console.log('mumberBtn', mumberBtn)
-      $('.member-items').toggleClass('able')
-    })
+    // $(mumberBtn).on('click', function() {
+    //   console.log('mumberBtn', mumberBtn)
+    //   $('.member-items').toggleClass('able')
+    // })
 
     $('.ham-box').on('click', function() {
       $('.ham-line1').toggleClass('ham-am1');
