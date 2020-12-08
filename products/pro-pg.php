@@ -247,7 +247,7 @@ $rows = $pdo->query($sql)->fetch();
                         </div>
                     </div>
                     <div class="btn-twin d-flex justify-content-between">
-                        <a class="btn ml-0">加入購物車</a>
+                        <a class="btn ml-0 add-cart-btn">加入購物車</a>
                         <a class="btn mr-0">立即預訂</a>
                     </div>
                 </div>
