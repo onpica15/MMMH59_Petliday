@@ -324,7 +324,7 @@ if ($totalRows != 0) {
         <a class="tag-on" href="">東部出發</a>
     </div>
     <form action="" class="order">
-        <div class="form-group d-flex align-items-center justify-content-end">
+        <div class="form-group align-items-center justify-content-end">
             <label for="exampleFormControlSelect1">排序方式</label>
             <select class="form-control" id="exampleFormControlSelect1">
                 <option>依熱門程度</option>

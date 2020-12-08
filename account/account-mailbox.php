@@ -1,5 +1,7 @@
 <?php include __DIR__ . '/../parts/config.php' ?>
 <?php include __DIR__ . '/../parts/html-head.php' ?>
+<?php include __DIR__ . '/../parts/html-script.php' ?>
+
 <!-- --- css 連結放下面 ----- -->
 <link rel="stylesheet" href="mailbox.css">
 <link rel="stylesheet" href="<?= WEB_ROOT ?>account/style.css">
@@ -204,11 +206,10 @@
 
 
 
-
+<?php include __DIR__ . '/../userlogin/user-login.php' ?>
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
-<?php include __DIR__ . '/../parts/html-script.php' ?>
 <script>
     // ------JS開始 以上勿刪-------
 

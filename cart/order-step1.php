@@ -16,6 +16,7 @@
             <div class="step-title t-m active">
               <span>
                 <svg id="food-icon" class="active" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.03 39.5">
+
                   <path id="Path_443" data-name="Path 443" class="cls-222" d="M36.25,20a19.87,19.87,0,0,0-24.49,0,12.53,12.53,0,0,0-5.34,9.47C6.42,35.63,13.16,39.5,24,39.5s17.59-3.86,17.59-10.08A12.56,12.56,0,0,0,36.25,20Z" />
                   <path id="Path_444" data-name="Path 444" class="cls-222" d="M24.06,13.15A6.6,6.6,0,1,0,16.72,6.6,7,7,0,0,0,24.06,13.15Z" />
                   <path id="Path_445" data-name="Path 445" class="cls-222" d="M47.6,11.14a8.1,8.1,0,0,0-8.77-5.06,6,6,0,0,0-4.69,8.12,7.88,7.88,0,0,0,3.5,4.07,8.05,8.05,0,0,0,4,1.1,7.45,7.45,0,0,0,1.25-.11A6,6,0,0,0,48,12.51a6.54,6.54,0,0,0-.37-1.38Z" />
@@ -93,7 +94,7 @@
                 </div>
                 <div class="col-8 col-lg-6 d-flex flex-column one-form">
                   <label class="text-color t-s label-all " name="mainGender" for="mainGender">稱謂 :&nbsp;&nbsp;<span class="danger-color">*</span></label>
-                  <select class="form-input" name="mainGender" id="mainGender">
+                  <select class="form-input customDropdown" name="mainGender" id="mainGender">
                     <option name="0" value="0">請選擇</option>
                     <option name="man" value="man">先生</option>
                     <option name="woman" value="woman">女士</option>
@@ -133,19 +134,22 @@
                   <div class="row ">
                     <div class="col-12 d-flex align-items-center bb-line">
                       <input id="donateReceipt" class="form-radio custom-control-input" type="radio" name="receipt" checked value="捐贈發票">
-                      <label for="donateReceipt" class="form-radio-label custom-control-label mb-0"><span class=" radio-text t-m text-color">捐贈發票</span></label>
+                      <label for="donateReceipt" class="form-radio-label custom-control-label mb-0"><span class=" radio-text t-m text-color">捐贈發票</span>
+                        <small class="text-gray">捐贈單位：0528中華民國流浪動物花園協會</small></label>
                     </div>
                     <div class="col-12 d-flex align-items-center bb-line">
+                      <input id="receipt2" class="form-radio custom-control-input" type="radio" name="receipt" value="二聯電子發票">
+                      <label class=" radio-text t-m text-color custom-control-label" for="receipt2">二聯電子發票
+                        <small class="text-gray">配合國稅局勸止二聯換開三聯之政策，本公司保留換開發票的權利。</small>
+                      </label>
 
-                      <input id="receipt2" class="form-radio  custom-control-input" type="radio" name="receipt" value="二聯電子發票">
-                      <label for="receipt2 " class="mb-0 custom-control-label"><span class=" radio-text t-m text-color ">二聯電子發票</span></label>
                     </div>
 
                     <div class="col-12 d-flex align-items-center">
-
                       <input id="receipt3" class="form-radio custom-control-input" type="radio" name="receipt" value="三聯電子發票">
-                      <label for="receipt3" classs="mb-0 custom-control-label "><span class=" radio-text t-m text-color">三聯電子發票</span></label>
-
+                      <label class=" radio-text t-m text-color custom-control-label" for="receipt3">三聯電子發票
+                      <small class="text-gray">訂購完成後會於一天內寄送至聯絡人電子信箱。</small>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -173,7 +177,7 @@
                       <label class="radio-text t-m text-color custom-control-label " for="couponYes">我有折扣碼</label>
                     </div>
                     <div class="coupon-items w-100 animation">
-                      <div class="col-12 d-flex align-items-center">
+                      <div class="col-12 d-flex align-items-center coupon-input">
                         <input class="form-input form-input-btn " id="couponNumber" type="text" name="couponNumber" placeholder="請輸入折扣碼" value="">
                         <button type="button" name="couponNumberBtn" class="ml-2 form-input-btn btn ">兌換</button>
                       </div>
@@ -213,13 +217,13 @@
                 <h5 class="t-l prod-price-single danger-color all_total">0</h5>
               </div>
 
-              <div class="pay-btn-box pb-3 ">
+              <div class="pay-btn-box pb-3 pt-2">
                 <!-- href="./order-step2.php" -->
                 <a href="#go-pay" class="a-style w-100 d-flex justify-content-end">
-                  <div class="btn pay-btn d-flex align-items-center" id="pay-btn">繼續結帳</div>
+                  <div class="btn pay-btn d-flex align-items-center justify-content-center " id="pay-btn">繼續結帳</div>
                 </a>
-                <a href="./cart.php" class=" a-style w-100 d-flex justify-content-start">
-                  <div class="btn-outline pay-btn mr-3">回購物車</div>
+                <a href="./cart.php" class=" a-style w-100 d-flex justify-content-start align-content-center">
+                  <div class="btn-outline pay-btn mr-3 d-flex align-items-center justify-content-center">回購物車</div>
                 </a>
               </div>
 
@@ -238,7 +242,20 @@
                 <div class="col-12 col-lg-12">
                   <div class="row ">
                     <div class="col-12 d-flex align-items-center bb-line">
-                      <input id="creditCard " class="form-radio custom-control-input" type="radio" name="payItems" value="creditCard" checked>
+
+                      <input id="creditCard" class="form-radio custom-control-input" type="radio" name="payItems" value="creditCard" checked>
+                      <label class=" radio-text t-m text-color custom-control-label align-items-center d-flex flex-row justify-content-center" for="creditCard">信用卡線上刷卡一次付清
+                        <div class="ml-3 card-icon-items-box" for="creditCard">
+                          <div class=" card-icon-items d-flex ">
+                            <img class="mr-2" src="./imgs/3x/visa@3x.png" alt="">
+                            <img class="mr-2" src="./imgs/3x/master@3x.png" alt="">
+                            <img class="mr-2" src="./imgs/3x/jcb@3x.png" alt="">
+                          </div>
+                        </div>
+                      </label>
+
+
+                      <!-- <input id="creditCard " class="form-radio custom-control-input" type="radio" name="payItems" value="creditCard" checked>
                       <label for="creditCard" class="mb-0 d-flex flex-row justify-content-center align-items-center custom-control-label">
                         <div class="radio-text t-m text-color mt-2 mb-2 mr-3">
                           信用卡線上刷卡一次付清
@@ -250,7 +267,7 @@
                             <img class="mr-2" src="./imgs/3x/jcb@3x.png" alt="">
                           </div>
                         </div>
-                      </label>
+                      </label> -->
                       <br>
 
                     </div>
@@ -313,8 +330,13 @@
 
                     <!-- ------信用卡----  -->
                     <div class="col-12 d-flex align-items-center bb-line">
+                      <!-- <input id="ATM" class="form-radio custom-control-input" type="radio" name="payItems" value="ATM">
+                      <label for="ATM" class="mb-0 custom-control-label"><span class=" radio-text t-m text-color mt-2 mb-2">ATM付款(轉帳/網路線上繳款)：：請於12/19 23:59前完成繳款</span></label> -->
+
                       <input id="ATM" class="form-radio custom-control-input" type="radio" name="payItems" value="ATM">
-                      <label for="ATM" class="mb-0 custom-control-label"><span class=" radio-text t-m text-color mt-2 mb-2">ATM付款(轉帳/網路線上繳款)：：請於12/19 23:59前完成繳款</span></label>
+                      <label class=" radio-text t-m text-color custom-control-label mt-2 mb-2" for="ATM">
+                        ATM付款(轉帳/網路線上繳款)：：請於12/19 23:59前完成繳款
+                      </label>
 
 
                     </div>
@@ -365,7 +387,7 @@
             <div class="col-12 order-box order-box-total">
               <div class="row mt-3">
                 <div class="col-12 col-lg-7 text-gray t-xs ">
-                  <p>點擊“確認結帳”，即表示您已確認訂單無誤以及同意右邊顯示的總金額，且同意 服務條款 | 隱私權政策 | 銀行履約保證 | 退費保障政策。</p>
+                  <p>點擊“確認結帳”，即表示您已確認訂單無誤以及同意右邊顯示的總金額，且同意 <u>服務條款</u> | <u>銀行履約保證</u> | <u>退費保障政策</u>。</p>
                 </div>
 
                 <div class="col-12 col-lg-5 single-prod-total d-flex justify-content-end mb-3 mt-1">
@@ -373,7 +395,7 @@
                   <h5 class="t-l prod-price-single danger-color all_total">NT$ 0</h5>
                 </div>
               </div>
-              <div class="pay-btn-box pb-3 ">
+              <div class="pay-btn-box pb-3 pt-2">
                 <a href="./order-step3.php" class="a-style w-100 d-flex justify-content-end">
                   <div class="btn pay-btn ml-3 " id="confirm-btn">確認結帳</div>
                 </a>
@@ -403,7 +425,7 @@
                   </div>
                   <div class="detail-all detail-quan d-flex justify-content-between">
                     <h6 class=" text-gray t-s">數量：</h6>
-                    <h6 class=" text-gray t-s " data-sid="<?= $i['sid'] ?>" data-man="<?= $i['manQ'] ?>" data-pet="<?= $i['petQ'] ?>"><?= $i['manQ'] ?> x 人 / <?= $i['petQ'] ?> x 犬</h6>
+                    <h6 class=" text-gray t-s " data-sid="<?= $i['sid'] ?>" data-man="<?= $i['manQ'] ?>" data-pet="<?= $i['petQ'] ?>"><?= $i['manQ'] ?> x 人 / <?= $i['petQ'] ?> x 寵物</h6>
                   </div>
                 </div>
                 <div class="single-prod-total d-flex justify-content-end">
@@ -433,23 +455,27 @@
                   </div>
                 </div>
               </div>
+
               <div class="single-prod-total d-flex justify-content-end">
                 <h5 class="brown-color t-m ">總計：</h5>
                 <h5 class="t-m all_total prod-price-single danger-color">0</h5>
               </div>
+
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="justinfo">
-      <input class="justinfo" type="text" name="coupon_t" value="2020WELCOME">
-      <input class="justinfo totle_price" type="text" name="totle_price" value="">
-    </div>
-  </form>
 </div>
 
+<div class="justinfo">
+  <input class="justinfo" type="text" name="coupon_t" value="2020WELCOME">
+  <input class="justinfo totle_price" type="text" name="totle_price" value="">
+</div>
+</form>
+</div>
 
+<!-- <php //include __DIR__ . '/../userlogin/user-login.php' ?> -->
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
@@ -510,6 +536,7 @@
 
     $('.all_total').text('NT$ ' + dallorCommas(total));
     $('.all_total').attr('data-allTotal', total);
+    $('.totle_price').val(parseInt(total));
 
     // $('.coupon-munber').text('')
 
@@ -519,7 +546,7 @@
       $('span.coupon-price').text(' -$ ' + dallorCommas(parseInt(total * 0.2)));
       $('.all_total').attr('data-allTotal', parseInt(total * 0.8));
       $('.all_total').text('NT$ ' + dallorCommas(parseInt(total * 0.8)));
-      $('.totle_price').val((total * 0.8));
+      $('.totle_price').val(parseInt(total * 0.8));
 
       $('.coupon-munber').text('( 2020WELCOME )');
     })
@@ -553,6 +580,7 @@
       dayDisplay += `<div class="col-12 form-box contacts-box" data-sid="${form_sid}" data-type="man" >
               <div class="row fast-btn fast-man${i}">
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1 ">旅客 ${i}</h5>
+                <input  class="justinfo" name="prod[${form_sid}][man][number][] " value="${i}" >
               </div>
 
               <div class="row">
@@ -585,6 +613,7 @@
       dayDisplay_pet += `<div class="col-12 form-box contacts-box" data-sid="${form_sid}" data-type="pet">
       <div class="row fast-btn fast-pet${k}">
        <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1 ">寵物${k}</h5>
+       <input  class="justinfo" name="prod[${form_sid}][pet][number][] " value="${k}" >
       </div>
 
       <div class="row">
@@ -596,9 +625,9 @@
           <label class="text-color t-s label-all " name="petSize" for="petSize">體型： &nbsp;&nbsp;<span class="danger-color">*</span></label>
           <select class="form-input pet-Size${k}" name="prod[${form_sid}][pet][petSize][]">
             <option class="option-style" name="0" value="0">請選擇</option>
-            <option name="lSize" value="lSize">大型犬</option>
-            <option name="MSize" value="MSize">中型犬</option>
-            <option name="SSize" value="SSize">小型犬</option>
+            <option name="lSize" value="大型犬">大型犬</option>
+            <option name="MSize" value="中型犬">中型犬</option>
+            <option name="SSize" value="小型犬">小型犬</option>
           </select>
         </div>
         <div class="col-12 col-lg-12 d-flex flex-column one-form">
@@ -655,24 +684,24 @@
   // ----
   $('.fast-pet4').on('click', function() {
     $('.pet-petName4').val('胡迪');
-    $('.pet-Size4').val('MSize');
+    $('.pet-Size4').val('大型犬');
     $('.pet-notes4').val('無');
   })
 
   $('.fast-pet1').on('click', function() {
     $('.pet-petName1').val('嘿蹦');
-    $('.pet-Size1').val('SSize');
+    $('.pet-Size1').val('小型犬');
     $('.pet-notes1').val('希望能提供推車');
   })
 
   $('.fast-pet2').on('click', function() {
     $('.pet-petName2').val('球球');
-    $('.pet-Size2').val('lSize');
+    $('.pet-Size2').val('中型犬');
     $('.pet-notes2').val('狗狗有皮膚問題，提供的食物需要避免麥類');
   })
   $('.fast-pet3').on('click', function() {
     $('.pet-petName3').val('熊熊');
-    $('.pet-Size3').val('MSize');
+    $('.pet-Size3').val('小型犬');
     $('.pet-notes3').val('寶貝看到同類喜歡吠叫，希望工作人員幫忙一下');
   })
   // ----

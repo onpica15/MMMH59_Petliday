@@ -81,7 +81,7 @@ $rows = $pdo->query($sql)->fetch();
             <!-- 標題row -->
             <div class="row title-row justify-content-between">
                 <div class="title-left">
-                    <p><?= $rows['product_name'] ?></p>
+                    <p><?= $rows['product_name1'] ?></p>
                     <p><?= $rows['product_name2'] ?></p>
                 </div>
                 <div class="title-right d-flex">
@@ -261,12 +261,12 @@ $rows = $pdo->query($sql)->fetch();
             <div class="container">
                 <div class="row cate-fix">
                     <div class="btn-group w-100" role="group" aria-label="Basic example">
-                        <button onclick="location.href='#trip-section'" type="button" class="btn-cate bc1 btn-cate-left pl-4">行程介紹</button>
-                        <button onclick="location.href='#prepare-section'" type="button" class="btn-cate bc2">行前準備</button>
-                        <button onclick="location.href='#intention-section'" type="button" class="btn-cate bc3">注意事項</button>
-                        <button onclick="location.href='#cancel-section'" type="button" class="btn-cate bc4">取消政策</button>
-                        <button onclick="location.href='#rate-section'" type="button" class="btn-cate bc5">行程評價</button>
-                        <button onclick="location.href='#recommand-section'" type="button" class="btn-cate bc6
+                        <button type="button" class="btn-cate bc1 btn-cate-left pl-4">行程介紹</button>
+                        <button type="button" class="btn-cate bc2">行前準備</button>
+                        <button type="button" class="btn-cate bc3">注意事項</button>
+                        <button type="button" class="btn-cate bc4">取消政策</button>
+                        <button type="button" class="btn-cate bc5">行程評價</button>
+                        <button type="button" class="btn-cate bc6
                         btn-cate-right pr-4">推薦行程</button>
                     </div>
                 </div>
@@ -868,7 +868,7 @@ $rows = $pdo->query($sql)->fetch();
 
 </main>
 
-
+<?php include __DIR__ . '/../userlogin/user-login.php' ?>
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->

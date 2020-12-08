@@ -173,7 +173,7 @@ $('.btn-twin').on('click', function() {
 // 全部重選按鈕清除：日期背景.人數.寵物數歸一
 
 $('.top-right').on('click',function(){
-    $('#data').find('td').css('background-color','#fff').removeClass('active');
+    $('#data').find('td').css({'background-color':'#fff','box-shadow':'none'}).removeClass('active');
     $('.change-man input,.change-pet input').val(1);
 })
 
@@ -376,22 +376,22 @@ if (window.matchMedia('(max-width: 425px)').matches) {
         let nowTop = $(this).scrollTop();
         switch (gotoPage){
             case 0:
-                if(nowTop === 2000) isScroll = true;
+                if(nowTop === 1950) isScroll = true;
                 break;
             case 1:
-                if(nowTop === 3518) isScroll = true;
+                if(nowTop === 3380) isScroll = true;
                 break;
             case 2:
-                if(nowTop === 3550) isScroll = true;
+                if(nowTop === 3705) isScroll = true;
                 break;
             case 3:
-                if(nowTop === 7790) isScroll = true;
+                if(nowTop === 4030) isScroll = true;
                 break;
             case 4:
-                if(nowTop === 8460) isScroll = true;
+                if(nowTop === 4285) isScroll = true;
                 break;
             case 5:
-                if(nowTop === 9418) isScroll = true;
+                if(nowTop === 4690) isScroll = true;
                 break;
 
             default:
@@ -428,22 +428,22 @@ if (window.matchMedia('(max-width: 425px)').matches) {
 
         switch (gotoPage){
             case 0:
-                if(nowTop === 1900) isScroll = true;
+                if(nowTop === 1840) isScroll = true;
                 break;
             case 1:
-                if(nowTop === 7045) isScroll = true;
+                if(nowTop === 7140) isScroll = true;
                 break;
             case 2:
-                if(nowTop === 7380) isScroll = true;
+                if(nowTop === 7505) isScroll = true;
                 break;
             case 3:
-                if(nowTop === 7790) isScroll = true;
+                if(nowTop === 7920) isScroll = true;
                 break;
             case 4:
-                if(nowTop === 8460) isScroll = true;
+                if(nowTop === 8450) isScroll = true;
                 break;
             case 5:
-                if(nowTop === 9418) isScroll = true;
+                if(nowTop === 9535) isScroll = true;
                 break;
 
             default:
@@ -571,21 +571,57 @@ if (window.matchMedia('(max-width: 425px)').matches) {
         switch (index){
             case 0:
                 gotoPage = 0;
+                if (window.matchMedia('(max-width: 425px)').matches) {
+                    $(window).scrollTop(1950);
+                }
+                else{
+                    $(window).scrollTop(1840);
+                } 
                 break;
             case 1:
                 gotoPage = 1;
+                if (window.matchMedia('(max-width: 425px)').matches) {
+                    $(window).scrollTop(3380);
+                }
+                else{
+                    $(window).scrollTop(7140);
+                } 
                 break;
             case 2:
                 gotoPage = 2;
+                if (window.matchMedia('(max-width: 425px)').matches) {
+                    $(window).scrollTop(3705);
+                }
+                else{
+                    $(window).scrollTop(7505);
+                } 
                 break;
             case 3:
                 gotoPage = 3;
+                if (window.matchMedia('(max-width: 425px)').matches) {
+                    $(window).scrollTop(4030);
+                }
+                else{
+                    $(window).scrollTop(7920);
+                } 
                 break;
             case 4:
                 gotoPage = 4;
+                if (window.matchMedia('(max-width: 425px)').matches) {
+                    $(window).scrollTop(4285);
+                }
+                else{
+                    $(window).scrollTop(8450);
+                } 
                 break;
             case 5:
                 gotoPage = 5;
+                if (window.matchMedia('(max-width: 425px)').matches) {
+                    $(window).scrollTop(4690);
+                }
+                else{
+                    $(window).scrollTop(9535);
+                } 
                 break;
 
             default:

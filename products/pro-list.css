@@ -158,6 +158,9 @@ color: #00907c;
 .order select{
     width: 150px;
 }
+.order .form-group{
+    display: flex;
+}
 /* 共用標題 */
 .topic p{
     font-size: 18px;
@@ -226,32 +229,15 @@ color: #00907c;
         object-fit: contain;
     }
     .heart-fly{
-        /* top: 8px;
-        right: 8px; */
-        display: none;
-        transition: .5s ease-in;
-        /* position: fixed; */
         position: absolute;
+        z-index: 999;
+        -webkit-transition: all 1000ms ease-in-out;
+        -moz-transition: all 1000ms ease-in-out;
+        -ms-transition: all 1000ms ease-in-out;
+        -o-transition: all 1000ms ease-in-out;
+        transition: all 1000ms ease-in-out;
     }
-    .fly-fly{
-        /* position: fixed;
-        top: 30px;
-        right: 450px; */
-        display: inline-block;
-        animation: fly 1s ease-in;
-    }
-    @keyframes fly{
-        from{
-            top: 8px;
-            right: 8px;
-            position: absolute;
-        }
-        to{
-        position: fixed;
-        top: -1000px;
-        right: -1550px;
-        }
-    }
+
 
     .card-pic {
         width: 100%;
@@ -379,12 +365,12 @@ color: #00907c;
         .top-pic{
             /* width: 130%; */
             margin-top: 73px;
-            margin-left: 0px;
+            margin-left: 7px;
             transform: scale(1.2);
         }
         .bread-row{
-            margin: 10px 0 0;
-            padding-bottom: 30px;
+            margin: 90px 0 0;
+            padding-bottom: 20px;
         }
         /* 熱門輪播 */
                 /* hot carosel */
@@ -476,6 +462,15 @@ color: #00907c;
         }
         .order{
             margin-top: 20px;
+        }
+        .order .form-group{
+            display: block;
+        }
+        .order label{
+            margin-bottom: 13px;
+        }
+        .order select{
+            width: 320px;
         }
         .p-arrow{
             line-height: 45px;

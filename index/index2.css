@@ -1,0 +1,446 @@
+/* * {
+  outline: 1px solid red;
+} */
+a {
+  color: none;
+  text-decoration: none;
+}
+
+.des-card figure img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+  border-radius: 3px;
+}
+.des-title {
+  margin-bottom: 50px;
+}
+span :before {
+  content: "";
+  display: block;
+  background-color: #ffecd4;
+  width: 95%;
+  height: 40%;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  z-index: -1;
+  margin-left: 5px;
+  border-radius: 3px;
+}
+.title-box {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  z-index: 3;
+}
+.title-box h6 {
+  letter-spacing: 1.5px;
+  font-size: 24px;
+  z-index: 3;
+}
+.title-box svg {
+  fill: red;
+}
+.dog-img {
+  width: 250px;
+  padding: 20px;
+  /* height: 100px; */
+}
+.dog-img img {
+  width: 100%;
+  object-fit: contain;
+}
+.chatpic-wrap {
+}
+.about {
+  width: 200px;
+  /* height: 200px; */
+  position: relative;
+}
+.about img {
+  width: 80%;
+  /* height: 100%; */
+  object-fit: contain;
+  /* left: 50%;
+  transform: translateX(-50%); */
+}
+.about-text {
+  line-height: 1px;
+  line-height: 20px;
+}
+.change-order-wrap {
+  background: url(./img/3X/bg2.png) top left no-repeat;
+  /* width: 105%; */
+  width: 100vw;
+  background-size: cover;
+  z-index: -2;
+  overflow-x: hidden;
+}
+.btn-more {
+  line-height: 40px;
+  height: 40px;
+}
+/* ------------------------------------ */
+@media (min-width: 1200px) {
+  .des-card {
+    margin: 10px 10px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    transition: 0.3s;
+  }
+  .des-card figure {
+    width: 90%;
+    /* height: 90%; */
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+
+    /* transform: translateY(-50%); */
+    margin: 0;
+  }
+  .des-card h6 {
+    position: relative;
+    top: 10px;
+    letter-spacing: 2px;
+    text-indent: -2px;
+    font-size: 18px;
+  }
+  .des-card:hover {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: -10px;
+    transition: 0.3s;
+  }
+  .tour-card figure {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid #eee;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .tour-card figure img {
+    width: 105%;
+    /* height: 105%; */
+    object-fit: cover;
+    object-position: center center;
+    transition: 0.3s;
+  }
+  .tour-card figure img:hover {
+    width: 120%;
+    /* height: 120%; */
+    object-position: 80% 80%;
+    object-fit: cover;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+  }
+  .tour-card h6 {
+    line-height: 26px;
+  }
+  .bott-line {
+    border-bottom: 2px solid #ffe0b9;
+  }
+  .cls-3 {
+    fill: #00907c;
+  }
+
+  /* lighr-gray */
+  .cls-4 {
+    fill: #ccc;
+  }
+
+  /* red */
+  .cls-5 {
+    fill: #e03d2d;
+  }
+
+  .card {
+    width: 296px;
+    height: 295px;
+    border: none;
+    box-shadow: 1px 2px 8px rgba(200, 200, 200, 0.5);
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+
+  .card .p {
+    margin-bottom: 6px;
+  }
+
+  .heart {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    opacity: 0.8;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 50%;
+    padding: 6px 8.5px;
+  }
+
+  .card-pic {
+    width: 100%;
+    height: 175px;
+    border-radius: 3px 3px 50px 3px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  /* .card-pic:hover {
+    height: 125px;
+    transform: translateY(-50px);
+  */
+
+  .c2 {
+    height: 330px;
+  }
+
+  .c2 .card-pic {
+    height: 235px;
+  }
+
+  /* 
+  .c2 .card-pic:hover {
+    height: 185px;
+ */
+
+  .c2 .info {
+    display: flex;
+  }
+
+  .c4 {
+    height: 255px;
+  }
+
+  .c4 .card-pic {
+    height: 140px;
+    border-radius: 3px 3px 40px 3px;
+  }
+
+  /* .c4 .card-pic:hover {
+    height: 90px;
+ */
+
+  .c4 .heart {
+    top: 10px;
+    right: 10px;
+  }
+
+  .card-pic img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-text h6 {
+    line-height: 23px;
+  }
+
+  .card-info {
+    opacity: 0;
+    height: 0;
+  }
+
+  .rate-all {
+    letter-spacing: 0.5px;
+  }
+  .depth {
+    background: url(./img/3X/bg-1.png) top 10% right no-repeat;
+    background-size: 700px;
+
+    /* width: 300px; */
+    background-attachment: fixed;
+  }
+  .logo-sentence {
+    margin-top: 80px;
+    width: 500px;
+    height: 200px;
+  }
+  .logo-sentence img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  .pet-slogan {
+    margin: 0px 0px;
+    /* margin-top: 50px; */
+  }
+  #petliday-wrap .row:last-of-type {
+    margin: 0px 0px;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    overflow-x: hidden;
+  }
+  .title-box {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .title-box h6 {
+    letter-spacing: 1.5px;
+    font-size: 18px;
+  }
+  .title-box svg {
+    display: block;
+    z-index: 3;
+  }
+  .card {
+    width: 266px;
+    height: 300px;
+    border: none;
+    box-shadow: 1px 2px 8px rgba(200, 200, 200, 0.5);
+    position: relative;
+    margin: 20px auto !important;
+  }
+
+  .card-pic {
+    width: 100%;
+    height: 175px;
+    border-radius: 3px 3px 40px 3px;
+    overflow: hidden;
+  }
+
+  .card.c2 {
+    height: 240px;
+    margin: 10px !important;
+  }
+
+  .c2 .card-pic {
+    height: 84px;
+  }
+
+  .c2 .info {
+    display: block;
+  }
+
+  .c2 .info-left,
+  .c2 .heart {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .c2 .card-text {
+    font-size: 14px;
+  }
+
+  .c2 p {
+    margin-bottom: 5px;
+  }
+
+  .c4 {
+    height: 300px;
+  }
+
+  .c4 .card-pic {
+    height: 175px;
+  }
+
+  .c4 .heart {
+    top: 10px;
+    right: 10px;
+  }
+
+  .arrow {
+    opacity: 0;
+    position: absolute;
+  }
+  .title-fir-m {
+    padding-top: 100px;
+    overflow-x: scroll;
+  }
+  .title-fir {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  #petliday-wrap {
+    padding-top: 40px;
+  }
+  .des-card h6 {
+    position: relative;
+    top: -30px;
+    letter-spacing: 2px;
+    text-indent: -2px;
+    font-size: 18px;
+  }
+  .all-des-m {
+    /* width: 375px; */
+    overflow-x: scroll;
+  }
+  .des-m-card {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    /* background-color: red; */
+    border-radius: 3px;
+    margin: 10px;
+  }
+  .des-m-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+  .des-m-card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7));
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+  }
+  .change-order-wrap {
+    /* background: url(./img/3X/bg3.png) top left no-repeat; */
+    /* width: 105%; */
+    width: 100vw;
+    background-size: cover;
+    z-index: -2;
+    /* overflow-x: scroll; */
+  }
+  .des-m-title {
+    width: 130px;
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    left: 10px;
+    bottom: 10px;
+    margin-bottom: 0px;
+    line-height: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  .des-m-title2 {
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 0px;
+  }
+  .pet-m-img {
+    width: 350px;
+    height: 250px;
+    /* background-color: red; */
+  }
+  .pet-m-img img {
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .pet-m-box {
+    width: 350px;
+    height: 250px;
+    background-color: fff;
+    border: 1px solid #ffa12c;
+    border-radius: 3px;
+  }
+  .pet-bg-fixd {
+    background: url(./img/3X/bg-m.png) top right no-repeat;
+    /* background-size: 300px;
+    background-attachment: fixed; */
+  }
+  .btn-more {
+    line-height: 44px;
+    height: 44px;
+  }
+}

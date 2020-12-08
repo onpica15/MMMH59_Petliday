@@ -305,7 +305,7 @@
     <div class="row product-row align-items-center">
     </div>
 </div>
-
+<?php include __DIR__ . '/../userlogin/user-login.php' ?>
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
@@ -326,7 +326,6 @@
             <div class="card c3">
                 <div class="heart-circle">
                     <div class="heart"><img src="/Petliday/icon/heart-red.png" alt=""></div>
-                    <div class="heart heart-fly"><img src="/Petliday/icon/heart-red-fill.png" alt=""></div>
                 </div>
                 <a href="pro-pg.php?sid=${a.sid}" class="card-pic w-100">
                     <img src="/Petliday/products/img/prolist${a.sid}.jpg" alt="...">
@@ -345,7 +344,6 @@
                                         </g>
                                     </g>
                                 </svg>
-
                             </div>
                             <div class="rate text-gray t-m">${a.star}</div>
                             <div class="rate-all t-xs ml-2"><u class="text-gray">${a.rate}則評論 </u></div>
