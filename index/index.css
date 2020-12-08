@@ -70,7 +70,7 @@ span :before {
     background-color: #fff;
     transform: rotate(-2deg);
     box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .por-frame-2 {

@@ -209,7 +209,7 @@
 <section id="hero-polaroid-m float-none" class="weirdpart pb-4">
   <div class="container pr-0">
     <!-- 繩子的部分 -->
-    <div class="row rope">
+    <div class="row rope mt-5">
       <figure>
         <img src="./img/illustration/rope.svg" alt="">
       </figure>
@@ -217,6 +217,9 @@
     <!-- 拍立得照片的部分 -->
     <div class="row d-flex por-pic-m flex-nowrap mr-0 pt-3 pb-2">
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd1.jpg" alt="">
         </figure>
@@ -225,6 +228,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd2.jpg" alt="">
         </figure>
@@ -233,6 +239,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd3.jpg" alt="">
         </figure>
@@ -241,6 +250,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd4.jpg" alt="">
         </figure>
@@ -249,6 +261,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd5.jpg" alt="">
         </figure>
@@ -257,6 +272,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd6.jpg" alt="">
         </figure>
@@ -265,6 +283,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd7.jpg" alt="">
         </figure>
@@ -273,6 +294,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd8.jpg" alt="">
         </figure>
@@ -938,7 +962,7 @@
 </section>
 
 
-<?php include __DIR__ . '/../userlogin/user-login.php' ?>
+<!-- </?php include __DIR__ . '/../userlogin/user-login.php' ?> -->
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
@@ -1001,14 +1025,17 @@
   setInterval(function() {
     index2 = index2 + 1;
     (index2 > 5) ? index2 = 1: index2 = index2;
-    $('.por-pic-m .polaroid-base').eq(index2).addClass('col-5 por-frame-2 mx-3 p-0').removeClass('col-4 por-frame-1').siblings().removeClass('col-5 por-frame-2 mx-3 p-0').addClass('col-4 por-frame-1');
+    $('.por-pic-m .polaroid-base').eq(index2).addClass('col-8 por-frame-2 mx-3 p-0').removeClass('col-2 por-frame-1').siblings().removeClass('col-8 por-frame-2 mx-3 p-0').addClass('col-2 por-frame-1');
+    $('.polaroid-base').find('.clip').removeClass('c2')
+    $('.por-pic-m .polaroid-base').eq(index2).find('.clip').addClass('c2');
+
   }, 2000);
 
   $('.weirdpart .container').delay(2000).fadeIn("slow", function() {
     setInterval(function() {
       index3 = index3 + 1;
       (index3 > 4) ? index3 = 0: index3 = index3;
-      $('.weirdpart .container').css('right', (index3 * 160 + 'px'))
+      $('.weirdpart .container').css('right', (index3 * 80 + 'px'))
     }, 2000);
   });
 
@@ -1037,37 +1064,34 @@
 
   // button送出成功顯示畫面
   $("#rating-btn").on("click", function() {
-    $('.rating-success').css('z-index',1).css('opacity',1);
+    $('.rating-success').css('z-index', 1).css('opacity', 1);
   });
 
 
 
   // rating 滑到footer前停住 **********************
-  $(function(){
+  $(function() {
     $(window).scroll(function() {
-    //   console.log('$(window).scrollTop()',$(window).scrollTop());
-    //   console.log('footer ',$('footer').offset().top);
-    //  console.log('window',$(window).height());
-    //   console.log($(window).width())
-      if($(window).width() > 992){
-        if($(window).scrollTop() >= 879){
+      //   console.log('$(window).scrollTop()',$(window).scrollTop());
+      //   console.log('footer ',$('footer').offset().top);
+      //  console.log('window',$(window).height());
+      //   console.log($(window).width())
+      if ($(window).width() > 992) {
+        if ($(window).scrollTop() >= 879) {
           // console.log('hi')
-          $('.index-rating').css('position','absolute').css('bottom',$(document).height() -  $('footer').offset().top + 25)
+          $('.index-rating').css('position', 'absolute').css('bottom', $(document).height() - $('footer').offset().top + 25)
+        } else {
+          $('.index-rating').css('position', 'fixed').css('bottom', 100);
         }
-        else{
-          $('.index-rating').css('position','fixed').css('bottom',100);
+      } else {
+        if ($(window).scrollTop() >= 1000) {
+          // console.log('hi')
+          $('.index-rating').css('position', 'absolute').css('bottom', $(document).height() - $('footer').offset().top + 25)
+        } else {
+          $('.index-rating').css('position', 'fixed').css('bottom', 100);
         }
       }
-      else{
-        if($(window).scrollTop() >= 1000){
-          // console.log('hi')
-          $('.index-rating').css('position','absolute').css('bottom',$(document).height() -  $('footer').offset().top + 25)
-        }
-        else{
-          $('.index-rating').css('position','fixed').css('bottom',100);
-        }
-      }
-      
+
     });
   })
 </script>
