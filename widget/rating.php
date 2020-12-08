@@ -1,72 +1,13 @@
-<?php include __DIR__ . '/../parts/config.php' ?>
-<?php include __DIR__ . '/../parts/html-head.php' ?>
+
 <!-- --- css 連結放下面 ----- -->
-<link rel="stylesheet" href="rating.css">
+<link rel="stylesheet" href="/Petliday/widget/rating.css">
 
-<?php include __DIR__ . '/../parts/html-navbar.php' ?>
+
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
-<div class="container mt-5">
-
-  <h1 class="orange-color t-xxxl bg-color ">Hello!開始開心寫網站 orange-color t-xxxl bg-color</h1>
-  <br>
-  <h6 class="brown-color t-xxl ">毛日 brown-color t-xxl</h6>
-  <br>
-  <h6 class="green-color t-xl">毛日 green-color t-xl</h6>
-  <br>
-  <h6 class="danger-color t-l">毛日 danger-color t-l</h6>
-  <br>
-  <h6 class="text-color t-m">毛日 text-color t-m</h6>
-  <br>
-  <h6 class="text-color t-s">毛日 text-color t-s</h6>
-  <br>
-  <h6 class="text-gray t-xs">毛日 text-gray t-xs</h6>
-
-  <button class="btn">測試 class='btn'</button>
-
-</div>
-<div class="container mt-5">
-
-  <h1 class="orange-color t-xxxl bg-color ">Hello!開始開心寫網站 orange-color t-xxxl bg-color</h1>
-  <br>
-  <h6 class="brown-color t-xxl ">毛日 brown-color t-xxl</h6>
-  <br>
-  <h6 class="green-color t-xl">毛日 green-color t-xl</h6>
-  <br>
-  <h6 class="danger-color t-l">毛日 danger-color t-l</h6>
-  <br>
-  <h6 class="text-color t-m">毛日 text-color t-m</h6>
-  <br>
-  <h6 class="text-color t-s">毛日 text-color t-s</h6>
-  <br>
-  <h6 class="text-gray t-xs">毛日 text-gray t-xs</h6>
-
-  <button class="btn">測試 class='btn'</button>
-
-</div>
-<div class="container mt-5">
-
-  <h1 class="orange-color t-xxxl bg-color ">Hello!開始開心寫網站 orange-color t-xxxl bg-color</h1>
-  <br>
-  <h6 class="brown-color t-xxl ">毛日 brown-color t-xxl</h6>
-  <br>
-  <h6 class="green-color t-xl">毛日 green-color t-xl</h6>
-  <br>
-  <h6 class="danger-color t-l">毛日 danger-color t-l</h6>
-  <br>
-  <h6 class="text-color t-m">毛日 text-color t-m</h6>
-  <br>
-  <h6 class="text-color t-s">毛日 text-color t-s</h6>
-  <br>
-  <h6 class="text-gray t-xs">毛日 text-gray t-xs</h6>
-
-  <button class="btn">測試 class='btn'</button>
-
-</div>
-<!-- 上面的只是範例，別管它！！！ -->
 <!-- rating -->
 <div class="index-rating">
   <div class="rating-title">
-    <span>逛得愉快嗎<img src="./imgs/bone.svg" alt="bone"></span>
+    <span>逛得愉快嗎<img src="/Petliday/widget/imgs/bone.svg" alt="bone"></span>
   </div>
 
   <div class="rating-info position-relative">
@@ -74,19 +15,19 @@
     <form>
       <div class="rating-bone">
         <input id="bone5" name="bone" type="radio" value="5" class="radio-btn hide" />
-        <label for="bone5"><img src="./imgs/bone-1.svg" alt=""></label>
+        <label for="bone5"><img src="/Petliday/widget/imgs/bone-1.svg" alt=""></label>
 
         <input id="bone4" name="bone" type="radio" value="4" class="radio-btn hide" />
-        <label for="bone4"><img src="./imgs/bone-1.svg" alt=""></label>
+        <label for="bone4"><img src="/Petliday/widget/imgs/bone-1.svg" alt=""></label>
 
         <input id="bone3" name="bone" type="radio" value="3" class="radio-btn hide" />
-        <label for="bone3"><img src="./imgs/bone-1.svg" alt=""></label>
+        <label for="bone3"><img src="/Petliday/widget/imgs/bone-1.svg" alt=""></label>
 
         <input id="bone2" name="bone" type="radio" value="2" class="radio-btn hide" />
-        <label for="bone2"><img src="./imgs/bone-1.svg" alt=""></label>
+        <label for="bone2"><img src="/Petliday/widget/imgs/bone-1.svg" alt=""></label>
 
         <input id="bone1" name="bone" type="radio" value="1" class="radio-btn hide" />
-        <label for="bone1"><img src="./imgs/bone-1.svg" alt=""></label>
+        <label for="bone1"><img src="/Petliday/widget/imgs/bone-1.svg" alt=""></label>
 
         <div class="clear"></div>
       </div>
@@ -104,7 +45,7 @@
 
 
     <div class="rating-success position-absolute w-100" style="top:0;background:#eee;z-index:-1;opacity:0;transition:.5s">
-      <p class="success-text"><img src="./imgs/paw.svg" alt="paw"> Thank you</p>
+      <p class="success-text"><img src="/Petliday/widget/imgs/paw.svg" alt="paw"> Thank you</p>
       <p>您的寶貴回饋<br>是Petliday前進的動力！</p>
     </div>
 
@@ -113,9 +54,9 @@
 
 
 <!-- ------------------ body結束 ------------------ -->
-<?php include __DIR__ . '/../parts/html-footer.php' ?>
+
 <!-- ---------------js/jq 開始 ------------------ -->
-<?php include __DIR__ . '/../parts/html-script.php' ?>
+
 
 <script>
   // ------JS開始 以上勿刪-------
@@ -175,5 +116,3 @@
 
   // ------JS結束 勿刪到-------
 </script>
-
-<?php include __DIR__ . '/../parts/html-foot.php' ?>

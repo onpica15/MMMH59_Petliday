@@ -443,6 +443,9 @@ box-sizing: border-box;
     cursor: pointer;
     background-color: #ffd096;
 }
+button:focus{
+    outline: none;
+}
 /* .btn-cate-left{
     border-radius: 0 0 0 80px;
 } */

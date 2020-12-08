@@ -145,4 +145,8 @@ html, body{
         transition: .5s;
         margin-right:10px;
     }
+    .des-wrap{
+        width: 375px;
+        overflow-x: scroll;
+    }
 }

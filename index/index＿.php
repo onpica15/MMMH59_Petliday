@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="her0.css">
 <link rel="stylesheet" href="index2.css">
+
 <style>
   .cls-3 {
     fill: #00907c;
@@ -937,9 +938,7 @@
 </section>
 
 
-
-
-
+<?php include __DIR__ . '/../userlogin/user-login.php' ?>
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
@@ -1020,7 +1019,60 @@
   //     $('.weirdpart .container').css('right', (index2 * 120 + 'px'))
   //   }, 2000);
   // }, 2000);
+  // rating 展開設定 ******************************
+
+  $(".index-rating").mouseenter(function() {
+    $(".index-rating").animate({
+      right: "0"
+    });
+    $(".rating-title").show().fadeOut(500);
+  });
+
+  $(".index-rating").mouseleave(function() {
+    $(".index-rating").animate({
+      right: "-200px"
+    });
+    $(".rating-title").show().fadeIn(300);
+  });
+
+  // button送出成功顯示畫面
+  $("#rating-btn").on("click", function() {
+    $('.rating-success').css('z-index',1).css('opacity',1);
+  });
+
+
+
+  // rating 滑到footer前停住 **********************
+  $(function(){
+    $(window).scroll(function() {
+    //   console.log('$(window).scrollTop()',$(window).scrollTop());
+    //   console.log('footer ',$('footer').offset().top);
+    //  console.log('window',$(window).height());
+    //   console.log($(window).width())
+      if($(window).width() > 992){
+        if($(window).scrollTop() >= 879){
+          // console.log('hi')
+          $('.index-rating').css('position','absolute').css('bottom',$(document).height() -  $('footer').offset().top + 25)
+        }
+        else{
+          $('.index-rating').css('position','fixed').css('bottom',100);
+        }
+      }
+      else{
+        if($(window).scrollTop() >= 1000){
+          // console.log('hi')
+          $('.index-rating').css('position','absolute').css('bottom',$(document).height() -  $('footer').offset().top + 25)
+        }
+        else{
+          $('.index-rating').css('position','fixed').css('bottom',100);
+        }
+      }
+      
+    });
+  })
 </script>
 
 <!-- // ------JS結束 勿刪到------- -->
 <?php include __DIR__ . '/../parts/html-foot.php' ?>
+
+<?php include __DIR__ . '/../widget/rating.php' ?>
