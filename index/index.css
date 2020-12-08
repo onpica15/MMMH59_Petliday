@@ -1,6 +1,9 @@
 /* * {
   outline: auto;
 } */
+body {
+  overflow-x: hidden;
+}
 
 span {
   position: relative;
@@ -369,20 +372,24 @@ span :before {
   }
 
   .petliday-fig {
-    margin: auto;
-    width: 95px;
+    /* margin: auto; */
+    width: 80px;
     height: 95px;
   }
 
   .petliday-fig img {
     object-fit: contain;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
   }
 
   .petliday-title {
     font-size: 16px;
     font-weight: 400;
+    color: #3c2e26;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    /* margin-top: 0px; */
   }
 
   .petliday-content {
