@@ -234,7 +234,7 @@
                     </g>
                   </svg>
                 </div>
-                <a class="nav-link only-pc"><?= $_SESSION['member_avatar']['name'] ?><?= $_SESSION['member_avatar']['sid'] ?></a>
+                <a class="nav-link only-pc"><?= $_SESSION['member_avatar']['name'] ?></a>
                 <div class="member-items only-pc ">
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-profile.php">會員資料</a>
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-order.php">我的訂單</a>
@@ -242,7 +242,7 @@
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-coupon.php">優惠券</a>
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-mailbox.php">會員信箱</a>
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-qa.php">Q & A</a>
-                  <a class="member-item" href="<?= WEB_ROOT ?>userlogin/user-logout2.php" >登出</a>
+                  <a class="member-item" href="<?= WEB_ROOT ?>userlogin/user-logout.php" >登出</a>
 
                 </div>
               </div>

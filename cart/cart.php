@@ -123,8 +123,10 @@
           <div class="prod-items mr-auto t-s">共 <span class="total-items"></span> </div>
           <div class="danger-color t-l mr-3">總計: NT <span class="danger-color t-xl" id="totleAmount"></span> </div>
 
-          <a href="./order-step1.php" class="a-style">
-            <button type="submit" class=" buy-btn btn  btn-1 btn-2 d-flex align-items-center justify-content-center">結帳</button>
+          <!-- <a href="./order-step1.php" class="a-style"> -->
+          <a class="nav-link buy-btn btn  btn-1 btn-2 d-flex align-items-center justify-content-center" data-toggle="modal" data-target="#exampleModalCenter">
+           結帳
+          <!-- </a> -->
           </a>
 
 
@@ -135,7 +137,7 @@
   <?php endif; ?>
 </div>
 
- <!-- <php// include __DIR__ . '/../userlogin/user-login.php' ?>  -->
+<?php include __DIR__ . '/../userlogin/user-login.php' ?> 
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->

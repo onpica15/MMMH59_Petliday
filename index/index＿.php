@@ -939,7 +939,7 @@
 
 
 <?php include __DIR__ . '/../userlogin/user-login.php' ?>
-<?php include __DIR__ . '/../userlogin/user-logout.php' ?>
+
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
