@@ -469,7 +469,7 @@
         </figure>
         <!-- 星等、評價、價錢 -->
         <div class="row w-70 mx-auto pb-3 bott-line">
-          <h6 class="t-l mt-4 my-3">【 聖誕精選行程 】<br>二芭芭拉拉巴拉巴聖芭拉拉巴拉巴聖拉巴聖誕節</h6>
+          <h6 class="t-l mt-4 my-3">【 聖誕節寫真 】<br>超萌裝扮！寵物聖誕攝影</h6>
           <div class=" d-flex align-items-center justify-content-between w-100">
             <div class=" d-flex flex-row align-items-center ">
               <div class="star mr-2 ">
@@ -482,10 +482,10 @@
                   </g>
                 </svg>
               </div>
-              <div class="rate text-gray t-m mb-0">4.9</div>
+              <div class="rate text-gray t-m mb-0">4.5</div>
               <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">78則評論</u></div>
             </div>
-            <div class="pr-2 t-l orange-color">$2680</div>
+            <div class="pr-2 t-l orange-color">$1200</div>
           </div>
         </div>
 
@@ -497,7 +497,7 @@
         </figure>
         <!-- 星等、評價、價錢 -->
         <div class="row w-70 mx-auto pb-3 bott-line">
-          <h6 class="t-l mt-4 my-3">【 聖誕精選行程 】<br>二芭芭拉拉巴拉巴聖芭拉拉巴拉巴聖拉巴聖誕節</h6>
+          <h6 class="t-l mt-4 my-3">【 聖誕節美容 】<br>亮麗豋場！毛小孩也想當網美</h6>
           <div class=" d-flex align-items-center justify-content-between w-100">
             <div class=" d-flex flex-row align-items-center ">
               <div class="star mr-2 ">
@@ -510,10 +510,10 @@
                   </g>
                 </svg>
               </div>
-              <div class="rate text-gray t-m mb-0">4.9</div>
-              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">78則評論</u></div>
+              <div class="rate text-gray t-m mb-0">4.8</div>
+              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">113則評論</u></div>
             </div>
-            <div class="pr-2 t-l orange-color">$2680</div>
+            <div class="pr-2 t-l orange-color">$880</div>
           </div>
         </div>
 
@@ -524,7 +524,7 @@
         </figure>
         <!-- 星等、評價、價錢 -->
         <div class="row w-70 mx-auto pb-3 bott-line">
-          <h6 class="t-l mt-4 my-3">【 聖誕精選行程 】<br>二芭芭拉拉巴拉巴聖芭拉拉巴拉巴聖拉巴聖誕節</h6>
+          <h6 class="t-l mt-4 my-3">【 聖誕節派對 】<br>寶貝聚集！交換禮物玩起來</h6>
           <div class=" d-flex align-items-center justify-content-between w-100">
             <div class=" d-flex flex-row align-items-center ">
               <div class="star mr-2 ">
@@ -538,9 +538,9 @@
                 </svg>
               </div>
               <div class="rate text-gray t-m mb-0">4.9</div>
-              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">78則評論</u></div>
+              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">95則評論</u></div>
             </div>
-            <div class="pr-2 t-l orange-color">$2680</div>
+            <div class="pr-2 t-l orange-color">$1499</div>
           </div>
         </div>
 
@@ -963,6 +963,8 @@
 
 
 <!-- </?php include __DIR__ . '/../userlogin/user-login.php' ?> -->
+<?php include __DIR__ . '/../userlogin/user-login.php' ?>
+<?php include __DIR__ . '/../userlogin/user-logout.php' ?>
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->

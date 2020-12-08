@@ -97,7 +97,7 @@
 
   function checkForm() {
 
-    $.post('user-login-api.php', {
+    $.post('/PETLIDAY/userlogin/user-login-api.php', {
         email: email.val(),
         password: password.val()
       },
@@ -107,7 +107,16 @@
             .removeClass('alert-danger')
             .addClass('alert-success')
             .text('登入成功');
-          location.href = 'user-login.php';
+            console.log('location pathname',location.pathname)
+            console.log('location href',location.href)
+
+            if(location.pathname === '/PETLIDAY/index/index%EF%BC%BF.php'){
+              location.reload();
+            }
+            else{
+              
+            }
+          
         } else {
           info_bar
             .removeClass('alert-success')
