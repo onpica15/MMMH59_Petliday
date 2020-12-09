@@ -16,6 +16,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px 5px inset;
   }
   .polaroid-base {
+    /* opacity:.9; */
     transition: 0.5s;
   }
   .polaroid-figure1 {
@@ -118,8 +119,7 @@ body {
 }
 @media (max-width: 450px) {
   .weirdpart {
-    height: 480px;
-    margin-top:24px;
+    height: 310px;
     overflow-x: auto;
   }
   .weirdpart .container {
@@ -132,51 +132,22 @@ body {
     margin-top: -20px;
   }
   .por-frame-2 {
-    height: 300px;
-    /* width: 250px; */
+    /* top: 20px; */
+    /* left: 100px; */
   }
   .rope figure img {
-    width: 200%;
+    width: 280%;
   }
   .rope {
-    left: -20px;
     position: relative;
     transition: 0.5s;
-    margin-bottom: 40px;
-  }
-  .por-pic-m{
-    position: relative;
-    z-index: 10;
   }
   .por-pic-m .polaroid-base {
     transition: 0.5s;
     margin-right: 10px;
   }
-  .sig-m-1{
-    bottom: 10px;
-  }
   .des-wrap {
     width: 375px;
     overflow-x: scroll;
   }
-
-  .clip.c1{
-    width: 25px;
-    height: 40px;
-    top:-40px;
-    left: 40px;
-    z-index: 50;
-  }
-  .clip.c2{
-    width: 45px;
-    height: 50px;
-    top: -60px;
-    left: 120px;
-    z-index: 50;
-  }
-  .clip1 img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-    }
 }

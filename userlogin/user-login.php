@@ -1,10 +1,11 @@
 
 
+<?php include __DIR__ . '/../parts/html-head.php' ?>
 <!-- --- css 連結放下面 ----- -->
 <style>
 <?php include __DIR__ .  '/../userlogin/user-login.css' ?> 
 </style>
-
+<?php include __DIR__ . '/../parts/html-navbar.php' ?>
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 
 <!-- Model -->
@@ -106,16 +107,7 @@
             .removeClass('alert-danger')
             .addClass('alert-success')
             .text('登入成功');
-            console.log('location pathname',location.pathname)
-            console.log('location href',location.href)
-            
-            if(location.pathname.toLowerCase() === '/petliday/index/index%ef%bc%bf.php'){
-              location.reload();
-            }
-            else if(location.pathname.toLowerCase() === '/petliday/cart/cart.php'){
-              location.href = "/petliday/cart/order-step1.php"
-            }
-          
+          location.reload();
         } else {
           info_bar
             .removeClass('alert-success')

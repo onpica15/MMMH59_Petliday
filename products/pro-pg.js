@@ -161,7 +161,7 @@ $('.btn-twin').on('click', function() {
     
     setTimeout(() => {
         $('.cart-hover').css('opacity', '1')
-    }, 800);
+    }, 500);
     setTimeout(() => {
         $('.cart-hover').css('opacity', '0')
     }, 4000);
@@ -648,18 +648,3 @@ if (window.matchMedia('(max-width: 425px)').matches) {
 
     })
     
-
-    $('.add-cart-btn').on('click',function(){
-        let productCard = $(this);
-        let position = productCard.offset();	
-        let cartPosition = $('.nav-cart-btn').offset();
-        $("body").append('<div class="floating-cart"></div>');		
-        let cart = $('div.floating-cart');
-        cart.css({'top' : position.top + 'px', "left" : position.left + 'px'});
-        productCard.clone().appendTo(cart);
-        let btn = $(cart).find('a.add-cart-btn');
-        $(btn).css({"margin":0,"font-size":"10px","width":"20%","min-height":"22px"})
-        $(cart).fadeIn("slow").css({'top' : cartPosition.top - 10 + 'px', "left" : cartPosition.left + 'px',"opacity":.5});
-        
-        setTimeout(function(){$('div.floating-cart').remove();}, 800);
-    })

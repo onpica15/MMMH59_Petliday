@@ -129,8 +129,7 @@
 
           setTimeout(function() {
             info_bar.slideUp();
-            location.reload();
-          }, 1000);
+          }, 2000);
         }, 'json')
       }
 
