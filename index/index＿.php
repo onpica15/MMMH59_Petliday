@@ -90,12 +90,14 @@
 
   @media(max-width: 400px) {
     .card {
-      width: 330px;
+      width: 250px;
       height: 350px;
       border: none;
       box-shadow: 1px 2px 8px rgba(200, 200, 200, .5);
       position: relative;
       margin: 20px auto !important;
+      /* padding-left: 15px !important;
+      padding-right: 15px !important; */
     }
 
     .card-pic {
@@ -294,33 +296,33 @@
           <img src="img/3x/petliday.png" alt="">
         </div>
       </div>
-      <div class="row d-flex justify-content-between pet-slogan pt-4">
-        <div class="col-xl-4 col-12 d-flex petliday-card justify-content-center align-content-center">
-          <figure class=" petliday-fig mr-2 d-flex align-content-center">
+      <div class="row d-flex justify-content-between pet-slogan pt-4 my-2">
+        <div class="col-xl-4 col-12 d-flex petliday-card justify-content-between px-5 align-content-center my-2">
+          <figure class=" petliday-fig my-2 mr-2 d-flex align-content-center ">
             <img src="./img/illustration/index-dog1.png" alt="">
           </figure>
-          <div class="row petliday-text d-flex flex-column">
-            <p class="petliday-title">放鬆</p>
+          <div class="row petliday-text d-flex flex-column justify-content-center">
+            <p class="petliday-title mb-2">放鬆</p>
             <p class=" petliday-content">多樣的行程安排讓飼主可以和<br>寵物一起在旅行中放鬆</p>
           </div>
         </div>
 
-        <div class="col-xl-4 col-12 d-flex petliday-card justify-content-center">
-          <figure class=" petliday-fig mr-2 d-flex align-content-center">
+        <div class="col-xl-4 col-12 d-flex petliday-card justify-content-between px-5 my-2">
+          <figure class=" petliday-fig my-2 mr-2 d-flex align-content-center">
             <img src="img/illustration/index-dog2.png" alt="">
           </figure>
-          <div class="row d-flex flex-column ">
-            <p class="petliday-title ">一起體驗</p>
-            <p class=" petliday-content">我們搜羅了全台最適合與寵物<br>一起同遊、體驗的景點與活動！</p>
+          <div class="row d-flex flex-column justify-content-center">
+            <p class="petliday-title mb-2">一起體驗</p>
+            <p class=" petliday-content">我們搜羅了全台最適合與寵物<br>同遊、體驗的景點與活動！</p>
           </div>
         </div>
 
-        <div class="col-xl-4 col-12 d-flex petliday-card  justify-content-center align-content-center">
-          <figure class=" petliday-fig mr-2 d-flex align-content-center">
+        <div class="col-xl-4 col-12 d-flex petliday-card justify-content-between px-5 align-content-center my-2">
+          <figure class=" petliday-fig my-2 mr-2 d-flex align-content-center">
             <img src="img/illustration/index-dog3.png" alt="">
           </figure>
-          <div class="row d-flex flex-column">
-            <p class="petliday-title">放心遊</p>
+          <div class="row d-flex flex-column justify-content-center">
+            <p class="petliday-title mb-2">放心遊</p>
             <p class=" petliday-content">多樣的行程安排讓飼主可以和<br>寵物一起在旅行中放鬆</p>
           </div>
         </div>
@@ -1038,37 +1040,34 @@
 
   // button送出成功顯示畫面
   $("#rating-btn").on("click", function() {
-    $('.rating-success').css('z-index',1).css('opacity',1);
+    $('.rating-success').css('z-index', 1).css('opacity', 1);
   });
 
 
 
   // rating 滑到footer前停住 **********************
-  $(function(){
+  $(function() {
     $(window).scroll(function() {
-    //   console.log('$(window).scrollTop()',$(window).scrollTop());
-    //   console.log('footer ',$('footer').offset().top);
-    //  console.log('window',$(window).height());
-    //   console.log($(window).width())
-      if($(window).width() > 992){
-        if($(window).scrollTop() >= 879){
+      //   console.log('$(window).scrollTop()',$(window).scrollTop());
+      //   console.log('footer ',$('footer').offset().top);
+      //  console.log('window',$(window).height());
+      //   console.log($(window).width())
+      if ($(window).width() > 992) {
+        if ($(window).scrollTop() >= 879) {
           // console.log('hi')
-          $('.index-rating').css('position','absolute').css('bottom',$(document).height() -  $('footer').offset().top + 25)
+          $('.index-rating').css('position', 'absolute').css('bottom', $(document).height() - $('footer').offset().top + 25)
+        } else {
+          $('.index-rating').css('position', 'fixed').css('bottom', 100);
         }
-        else{
-          $('.index-rating').css('position','fixed').css('bottom',100);
+      } else {
+        if ($(window).scrollTop() >= 1000) {
+          // console.log('hi')
+          $('.index-rating').css('position', 'absolute').css('bottom', $(document).height() - $('footer').offset().top + 25)
+        } else {
+          $('.index-rating').css('position', 'fixed').css('bottom', 100);
         }
       }
-      else{
-        if($(window).scrollTop() >= 1000){
-          // console.log('hi')
-          $('.index-rating').css('position','absolute').css('bottom',$(document).height() -  $('footer').offset().top + 25)
-        }
-        else{
-          $('.index-rating').css('position','fixed').css('bottom',100);
-        }
-      }
-      
+
     });
   })
 </script>

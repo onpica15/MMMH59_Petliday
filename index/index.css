@@ -218,8 +218,8 @@ span :before {
   }
 
   .petliday-fig img {
-    width: 90%;
-    height: 100%;
+    width: 70px;
+    height: 90px;
     object-fit: contain;
     object-position: left;
   }
@@ -379,8 +379,8 @@ span :before {
 
   .petliday-fig img {
     object-fit: contain;
-    width: 80%;
-    height: 80%;
+    width: 70px;
+    height: 80px;
   }
 
   .petliday-title {
@@ -388,7 +388,8 @@ span :before {
     font-weight: 400;
     color: #3c2e26;
     letter-spacing: 1px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    min-width: 300px;
     /* margin-top: 0px; */
   }
 

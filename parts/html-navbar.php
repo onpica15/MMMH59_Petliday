@@ -224,7 +224,7 @@
           <?php if (isset($_SESSION['member_avatar'])) : ?>
 
             <li class="nav-item loggin m-1">
-              <div class="nav-link d-flex align-items-center" href="#">
+              <div class="nav-link d-flex align-items-center " href="#">
                 <div class="navbtn nav-user-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274.17 264.67">
                     <g id="user-icon_2" data-name="user-icon 2">
@@ -234,7 +234,6 @@
                     </g>
                   </svg>
                 </div>
-                <a class="nav-link only-pc"><?= $_SESSION['member_avatar']['name'] ?></a>
                 <div class="member-items only-pc ">
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-profile.php">會員資料</a>
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-order.php">我的訂單</a>
@@ -312,10 +311,10 @@
 
     })
 
-    let numberBtn = $('.nav-user-btn')
+    let numberBtn5 = $('.nav-user-btn')
 
-    $(numberBtn).on('click', function() {
-      console.log('mumberBtn', numberBtn)
+    $(numberBtn5).on('click', function() {
+      console.log('mumberBtn', numberBtn5)
       $('.member-items').toggleClass('able')
     })
 
