@@ -23,6 +23,7 @@ $rows = $stmt->fetchAll();
     </div>
     <div class="container">
         <div class="row">
+
             <!-- aside-bar 側邊攔 -->
             <?php include __DIR__ . '/../account/account-aside-bar-c.php' ?>
             <!-- endof  aside-bar 側邊攔 -->
@@ -207,9 +208,10 @@ $rows = $stmt->fetchAll();
                 </div>
             </div>
             <!-- endof aside-bar點出的內容 -->
-
+           
         </div>
     </div>
+
 </section>
 
 

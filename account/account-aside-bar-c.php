@@ -15,7 +15,20 @@
                     <!-- </div> -->
 
 
-
+                    <div class="container">
+                        <div class="row">
+                            <div class="dog-img dogdown showimg">
+                                <img src="./img/dogdown.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="dog-img dogup hideimg">
+                                <img src="./img/dogup.png" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -32,4 +45,10 @@
 
                 })
                 // console.log('path ', window.location.pathname)
+                $('.list-group-item').on('click', function() {
+                    console.log('ij')
+                    $('.dogdown').addClass('hideimg').removeClass('showimg')
+                    $('.dogup').addClass('showimg').removeClass('hideimg')
+
+                })
             </script>

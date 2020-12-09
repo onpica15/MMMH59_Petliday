@@ -32,6 +32,28 @@ body {
   border-color: transparent;
   border-image: initial;
 }
+.dog-img {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  z-index: 2;
+  bottom: -60%;
+  left: 20%;
+  transition: ease-in-out;
+}
+.dog-img img {
+  width: 100%;
+}
+.dogup {
+  bottom: -52%;
+  left: 20%;
+}
+.hideimg {
+  opacity: 0;
+}
+.showimg {
+  opacity: 1;
+}
 /* -------------------------------------------------- */
 
 /* aside-bar------------------------------------------ */
