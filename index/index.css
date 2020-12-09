@@ -70,7 +70,7 @@ span :before {
     background-color: #fff;
     transform: rotate(-2deg);
     box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .por-frame-2 {
@@ -218,8 +218,8 @@ span :before {
   }
 
   .petliday-fig img {
-    width: 70px;
-    height: 90px;
+    width: 90%;
+    height: 100%;
     object-fit: contain;
     object-position: left;
   }
@@ -379,8 +379,8 @@ span :before {
 
   .petliday-fig img {
     object-fit: contain;
-    width: 70px;
-    height: 80px;
+    width: 80%;
+    height: 80%;
   }
 
   .petliday-title {
@@ -388,8 +388,7 @@ span :before {
     font-weight: 400;
     color: #3c2e26;
     letter-spacing: 1px;
-    margin-bottom: 0px;
-    min-width: 300px;
+    margin-bottom: 5px;
     /* margin-top: 0px; */
   }
 

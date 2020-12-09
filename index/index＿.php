@@ -90,14 +90,12 @@
 
   @media(max-width: 400px) {
     .card {
-      width: 250px;
+      width: 330px;
       height: 350px;
       border: none;
       box-shadow: 1px 2px 8px rgba(200, 200, 200, .5);
       position: relative;
       margin: 20px auto !important;
-      /* padding-left: 15px !important;
-      padding-right: 15px !important; */
     }
 
     .card-pic {
@@ -211,7 +209,7 @@
 <section id="hero-polaroid-m float-none" class="weirdpart pb-4">
   <div class="container pr-0">
     <!-- 繩子的部分 -->
-    <div class="row rope">
+    <div class="row rope mt-5">
       <figure>
         <img src="./img/illustration/rope.svg" alt="">
       </figure>
@@ -219,6 +217,9 @@
     <!-- 拍立得照片的部分 -->
     <div class="row d-flex por-pic-m flex-nowrap mr-0 pt-3 pb-2">
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd1.jpg" alt="">
         </figure>
@@ -227,6 +228,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd2.jpg" alt="">
         </figure>
@@ -235,6 +239,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd3.jpg" alt="">
         </figure>
@@ -243,6 +250,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd4.jpg" alt="">
         </figure>
@@ -251,6 +261,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd5.jpg" alt="">
         </figure>
@@ -259,6 +272,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd6.jpg" alt="">
         </figure>
@@ -267,6 +283,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd7.jpg" alt="">
         </figure>
@@ -275,6 +294,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd8.jpg" alt="">
         </figure>
@@ -296,33 +318,33 @@
           <img src="img/3x/petliday.png" alt="">
         </div>
       </div>
-      <div class="row d-flex justify-content-between pet-slogan pt-4 my-2">
-        <div class="col-xl-4 col-12 d-flex petliday-card justify-content-between px-5 align-content-center my-2">
-          <figure class=" petliday-fig my-2 mr-2 d-flex align-content-center ">
+      <div class="row d-flex justify-content-between pet-slogan pt-4">
+        <div class="col-xl-4 col-12 d-flex petliday-card justify-content-center align-content-center">
+          <figure class=" petliday-fig mr-2 d-flex align-content-center">
             <img src="./img/illustration/index-dog1.png" alt="">
           </figure>
-          <div class="row petliday-text d-flex flex-column justify-content-center">
-            <p class="petliday-title mb-2">放鬆</p>
+          <div class="row petliday-text d-flex flex-column">
+            <p class="petliday-title">放鬆</p>
             <p class=" petliday-content">多樣的行程安排讓飼主可以和<br>寵物一起在旅行中放鬆</p>
           </div>
         </div>
 
-        <div class="col-xl-4 col-12 d-flex petliday-card justify-content-between px-5 my-2">
-          <figure class=" petliday-fig my-2 mr-2 d-flex align-content-center">
+        <div class="col-xl-4 col-12 d-flex petliday-card justify-content-center">
+          <figure class=" petliday-fig mr-2 d-flex align-content-center">
             <img src="img/illustration/index-dog2.png" alt="">
           </figure>
-          <div class="row d-flex flex-column justify-content-center">
-            <p class="petliday-title mb-2">一起體驗</p>
-            <p class=" petliday-content">我們搜羅了全台最適合與寵物<br>同遊、體驗的景點與活動！</p>
+          <div class="row d-flex flex-column ">
+            <p class="petliday-title ">一起體驗</p>
+            <p class=" petliday-content">我們搜羅了全台最適合與寵物<br>一起同遊、體驗的景點與活動！</p>
           </div>
         </div>
 
-        <div class="col-xl-4 col-12 d-flex petliday-card justify-content-between px-5 align-content-center my-2">
-          <figure class=" petliday-fig my-2 mr-2 d-flex align-content-center">
+        <div class="col-xl-4 col-12 d-flex petliday-card  justify-content-center align-content-center">
+          <figure class=" petliday-fig mr-2 d-flex align-content-center">
             <img src="img/illustration/index-dog3.png" alt="">
           </figure>
-          <div class="row d-flex flex-column justify-content-center">
-            <p class="petliday-title mb-2">放心遊</p>
+          <div class="row d-flex flex-column">
+            <p class="petliday-title">放心遊</p>
             <p class=" petliday-content">多樣的行程安排讓飼主可以和<br>寵物一起在旅行中放鬆</p>
           </div>
         </div>
@@ -940,8 +962,9 @@
 </section>
 
 
+<!-- </?php include __DIR__ . '/../userlogin/user-login.php' ?> -->
 <?php include __DIR__ . '/../userlogin/user-login.php' ?>
-<?php include __DIR__ . '/../userlogin/user-logout.php' ?>
+
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
@@ -1004,14 +1027,17 @@
   setInterval(function() {
     index2 = index2 + 1;
     (index2 > 5) ? index2 = 1: index2 = index2;
-    $('.por-pic-m .polaroid-base').eq(index2).addClass('col-5 por-frame-2 mx-3 p-0').removeClass('col-4 por-frame-1').siblings().removeClass('col-5 por-frame-2 mx-3 p-0').addClass('col-4 por-frame-1');
+    $('.por-pic-m .polaroid-base').eq(index2).addClass('col-8 por-frame-2 mx-3 p-0').removeClass('col-2 por-frame-1').siblings().removeClass('col-8 por-frame-2 mx-3 p-0').addClass('col-2 por-frame-1');
+    $('.polaroid-base').find('.clip').removeClass('c2')
+    $('.por-pic-m .polaroid-base').eq(index2).find('.clip').addClass('c2');
+
   }, 2000);
 
   $('.weirdpart .container').delay(2000).fadeIn("slow", function() {
     setInterval(function() {
       index3 = index3 + 1;
       (index3 > 4) ? index3 = 0: index3 = index3;
-      $('.weirdpart .container').css('right', (index3 * 160 + 'px'))
+      $('.weirdpart .container').css('right', (index3 * 80 + 'px'))
     }, 2000);
   });
 
