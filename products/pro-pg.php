@@ -204,7 +204,7 @@ $rows = $pdo->query($sql)->fetch();
                     <!-- ㄩㄐ版加減數量 start *****************************-->
                     <div class="change-box">
                         <div class="man-box all-box">
-                            <p class="pl-2 pb-2">人數</p>
+                            <p class="pl-2 pb-2">人數 <span class="orange-color ml-2"> $<?= $rows['price_man'] ?>/人</span></p>
                             <div class="change-man d-flex align-items-center" data-price="<?= $rows['price_man'] ?>">
                                 <div class="change-btn sub-btn">
                                     <svg id="sub-man" class="sub-man" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
@@ -217,7 +217,7 @@ $rows = $pdo->query($sql)->fetch();
                             </div>
                         </div>
                         <div class="pet-box all-box">
-                            <p class="pl-2 pb-2">寵物</p>
+                            <p class="pl-2 pb-2">寵物 <span class="orange-color ml-2">$<?= $rows['price_pet'] ?>/寵</span></p>
                             <div class="change-pet d-flex align-items-center" data-price="<?= $rows['price_pet'] ?>">
                                 <div class="change-btn subtr-btn">
                                     <svg id="sub-pet" class="sub-pet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.84 5.1">
@@ -247,7 +247,7 @@ $rows = $pdo->query($sql)->fetch();
                         </div>
                     </div>
                     <div class="btn-twin d-flex justify-content-between">
-                        <a class="btn ml-0 add-cart-btn">加入購物車</a>
+                        <a class="btn ml-0">加入購物車</a>
                         <a class="btn mr-0">立即預訂</a>
                     </div>
                 </div>
@@ -868,7 +868,7 @@ $rows = $pdo->query($sql)->fetch();
 
 </main>
 
-<!-- </?php include __DIR__ . '/../userlogin/user-login.php' ?> -->
+<?php include __DIR__ . '/../userlogin/user-login.php' ?>
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
@@ -915,7 +915,7 @@ $rows = $pdo->query($sql)->fetch();
         // ((i + 3) % 7 === 0|| (i + 4) % 7 === 0 || (i + 5) % 7 === 0 || (i + 6) % 7 === 0||(i) % 7 === 0)
         if ((i + 2) % 13 === 0 || (i + 5) % 10 === 0) {
             dataDisplay += `<td><p class="danger-color fw-5">${dataTemp[i]}</p><p class="danger-color"><?= $rows['price_all'] ?></p></td>`
-        } else if ((i + 3) % 11 === 0) {
+        } else if ((i + 3) % 13 === 0) {
             dataDisplay += `<td style="pointer-events:none"><p class="text-gray fw-5">${dataTemp[i]}</p><p class="text-gray t-xs">已額滿</p></td>`
         } else if ((i + 1) % 7 === 0) {
             dataDisplay += `<td><p class="fw-5">${dataTemp[i]}</p><p class="green-color"><?= $rows['price_all'] + 500 ?></p></td>`

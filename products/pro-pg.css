@@ -1173,12 +1173,3 @@ font-size: 12px;
     }
 }
 
-div.floating-cart {
-    position: absolute;
-    z-index: 2000;
-    -webkit-transition: all 800ms ease-in-out;
-    -moz-transition: all 800ms ease-in-out;
-    -ms-transition: all 800ms ease-in-out;
-    -o-transition: all 800ms ease-in-out;
-    transition: all 800ms ease-in-out;
-}
