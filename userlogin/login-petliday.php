@@ -119,6 +119,7 @@
               .removeClass('alert-danger')
               .addClass('alert-success')
               .text('註冊成功');
+
           } else {
             info_bar
               .removeClass('alert-success')
@@ -129,7 +130,12 @@
 
           setTimeout(function() {
             info_bar.slideUp();
-            location.reload();
+            if(location.pathname.toLowerCase() === '/petliday/cart/cart.php'){
+              location.href = "/petliday/cart/order-step1.php"
+            }
+            else {
+              location.reload();
+            }
           }, 1000);
         }, 'json')
       }
