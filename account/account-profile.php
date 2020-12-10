@@ -1,7 +1,9 @@
 <?php include __DIR__ . '/../parts/config.php';
-$stmt = $pdo->query("SELECT * FROM `member_avatar` WHERE `sid` IN (1)
-");
-$rows = $stmt->fetchAll();
+// $stmt = $pdo->query("SELECT * FROM `member_avatar` WHERE `sid` IN (1)
+// ");
+// $rows = $stmt->fetchAll();
+// echo json_encode($_SESSION);
+
 ?>
 
 <?php include __DIR__ . '/../parts/html-head.php' ?>
@@ -23,7 +25,7 @@ $rows = $stmt->fetchAll();
     </div>
     <div class="container">
         <div class="row">
-
+    
             <!-- aside-bar 側邊攔 -->
             <?php include __DIR__ . '/../account/account-aside-bar-c.php' ?>
             <!-- endof  aside-bar 側邊攔 -->
@@ -36,7 +38,7 @@ $rows = $stmt->fetchAll();
                         <!-- 會員資料 -->
                         <!-- 連接資料庫 -->
 
-                        <?php foreach ($rows as $r) : ?>
+                        
                             <div class="container mb-3 list-section" id="list-title">
                                 <div class="row  mb-3">
                                     <div class="d-flex pt-3 p-4">
@@ -49,7 +51,7 @@ $rows = $stmt->fetchAll();
 
                                         <!-- uploadimg -->
                                         <?php
-                                        require __DIR__ . './processForm.php';
+                                        require __DIR__ . '/processForm.php';
                                         ?>
                                         <!-- <div class="form-group text-center"> -->
                                         <div class="member-img   position-absolute">
@@ -82,7 +84,7 @@ $rows = $stmt->fetchAll();
 
                                         <!-- endof uploadimg -->
                                         <div class="member-id text-center mt-3">
-                                            <p> ID : <?= $r['id'] ?>
+                                            <p> ID : <?= substr($_SESSION['member_avatar']['email'],0, strpos($_SESSION['member_avatar']['email'],'@')) ?>
                                             </p>
                                         </div>
 
@@ -108,7 +110,7 @@ $rows = $stmt->fetchAll();
                                             </div>
                                             <div class="form-group d-flex">
                                                 <label for="email" class="label-w col-form-label">信箱 :</label>
-                                                <input type="email" class="col-lg-6 form-control form-input is-disabled" id="email" name="email" placeholder="例:example@gmail.com" value="<?= $r['email'] ?>" disabled>
+                                                <input type="email" class="col-lg-6 form-control form-input is-disabled" id="email" name="email" placeholder="例:example@gmail.com" value="<?= $_SESSION['member_avatar']['email'] ?>" disabled>
                                             </div>
                                             <div class="row justify-content-end">
                                                 <button type="button" class="btn btn-default btn-edit js-edit">資料修改</button>
@@ -121,7 +123,7 @@ $rows = $stmt->fetchAll();
                                     </div>
                                 </div>
                             </div>
-                        <?php endforeach; ?>
+                        
 
                         <!-- 寵物資料 -->
                         <div class="container mb-3 list-section" id="pet-list">
