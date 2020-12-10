@@ -1,8 +1,4 @@
-<?php include __DIR__ . '/../parts/config.php' ;
-if (!isset($_SESSION['user'])) {
-  header('Location:user-login.php');
-  exit;
-}?>
+<?php include __DIR__ . '/../parts/config.php' ?>
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <?php include __DIR__ . '/../parts/html-script.php' ?>
 <!-- --- css 連結放下面 ----- -->

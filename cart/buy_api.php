@@ -2,12 +2,12 @@
 require __DIR__ . '/../parts/config.php';
 
 
-// if (!isset($_SESSION['user'])) {
-//   echo json_encode([
-//       'error' => '沒登入會員',
-//   ], JSON_UNESCAPED_UNICODE);
-//   exit;
-// }
+if (!isset($_SESSION['member_avatar'])) {
+    echo json_encode([
+        'error' => '沒登入會員',
+    ], JSON_UNESCAPED_UNICODE);
+    exit;
+}
 
 if (empty($_SESSION['cart'])) {
     echo json_encode([
@@ -37,7 +37,7 @@ $o_stmt->execute([
     $_SESSION['order']['phone'],
     $_SESSION['order']['email'],
     $_SESSION['order']['totle_price'],
-    $_SESSION['order']['totle_price'],
+    $_SESSION['member_avatar']['sid'],
 
 ]);
 
@@ -57,13 +57,65 @@ foreach ($_SESSION['cart'] as $i) {
     $d_stmt->execute([
         $order_sid,
         $i['sid'],
-        $i['price_all'],
+        $i['total'],
         $i['manQ'],
         $i['petQ'],
     ]);
 };
 
 $orderDetails_sid = $pdo->lastInsertId();
+
+$m_sql = "INSERT INTO `order-man`(`orderDetailsSid`, `prod-sid`, `Name`, `man-phone`, `idCard`, `birthday`) VALUES(?,?,?,?,?,?)";
+
+$m_stmt = $pdo->prepare($m_sql);
+
+foreach ($_SESSION['cart'] as $j => $i) {
+    foreach ($_SESSION['order']['prod'][$j] as $k => $v) {
+        if ($k === 'man') {
+            for ($x = 0; $x < count($v['Name']); $x++) {
+
+                $m_stmt->execute([
+                    $orderDetails_sid,
+                    $v['prodSid'][$x],
+                    $v['Name'][$x],
+                    $v['man-phone'][$x],
+                    $v['idCard'][$x],
+                    $v['birthday'][$x],
+                ]);
+            };
+        };
+    };
+};
+
+$p_sql = "INSERT INTO `order-pet`(`orderDetailsSid`, `prod-sid`, `petName`, `petSize`, `notes`) VALUES(?,?,?,?,?)";
+
+$p_stmt = $pdo->prepare($p_sql);
+
+foreach ($_SESSION['cart'] as $j => $i) {
+    foreach ($_SESSION['order']['prod'][$j] as $k => $v) {
+        if ($k === 'pet') {
+            for ($x = 0; $x < count($v['petName']); $x++) {
+
+                $p_stmt->execute([
+                    $orderDetails_sid,
+                    $v['prodSid'][$x],
+                    $v['petName'][$x],
+                    $v['petSize'][$x],
+                    $v['notes'][$x],
+
+                ]);
+            };
+        };
+    };
+};
+
+// $orderDetails_sid = $pdo->lastInsertId();
+
+
+
+
+unset($_SESSION['cart']);
+
 
 echo json_encode([
     'success' => true,

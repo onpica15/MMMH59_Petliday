@@ -15,7 +15,8 @@ $petQ = isset($_GET['petQ']) ? intval($_GET['petQ']) : 1;
 $date = isset($_GET['date']) ? intval($_GET['date']) : 1;
 $item = isset($_GET['item']) ? intval($_GET['item']) : 1;
 
-$total = isset($_GET['total']) ? $_GET['total'] : '4280';
+$total = isset($_GET['total1']) ? $_GET['total1'] : '3180';
+
 
 
 switch ($action) {

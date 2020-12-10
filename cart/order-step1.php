@@ -604,6 +604,7 @@
                 <div class="col-12 col-lg-6 d-flex flex-column one-form">
                   <label class="text-color t-s label-all " name="birthday" for="birthday">出生 年/月/日：（行程保險中使用）&nbsp;<span class="danger-color">*</span></label>
                   <input  class="form-input man-birthday${i}" type="date" name="prod[${form_sid}][man][birthday][]" >
+                  <input  class="justinfo" type="text" name="prod[${form_sid}][man][prodSid][]" value="${form_sid}">
                 </div>
               </div>
 
@@ -633,6 +634,7 @@
         <div class="col-12 col-lg-12 d-flex flex-column one-form">
           <label class="text-color t-s label-all " name="notes" for="notes">備註： &nbsp;&nbsp;<span class="danger-color">*</span></label>
           <input class="form-input pet-notes${k}" type="text" name="prod[${form_sid}][pet][notes][]" >
+          <input  class="justinfo" type="text" name="prod[${form_sid}][pet][prodSid][]" value="${form_sid}">
         </div>
       </div>
       </div>`

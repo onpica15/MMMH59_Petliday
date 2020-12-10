@@ -127,14 +127,15 @@ function updateCartList(data) {
 
 $('.btn-twin').on('click', function() {
     const sid = $('.heart-top').attr('data-sid');
-    const manQ = $('#man-quantity').val();
-    const petQ = $('#pet-quantity').val();
+    const manQ = parseInt($('#man-quantity').val());
+    const petQ = parseInt($('#pet-quantity').val());
     const date = $('.calendar .active').children('p').html();
     
     const total = $('.select-price p').html().slice(4);
+    let tr = $('.change-box');
     const manP = parseInt(tr.find('.change-man').attr('data-price'));
     const petP = parseInt(tr.find('.change-pet').attr('data-price'));
-    const total1 = (manQ * manP ) + (petQ * petP);
+    const total1 = parseInt((manQ * manP ) + (petQ * petP));
     
 
     console.log('sid', sid);
@@ -149,7 +150,7 @@ $('.btn-twin').on('click', function() {
         manQ: manQ,
         petQ: petQ,
         date: date,
-        total: total1,
+        total1: total1,
         item: 1,
         action: 'add'
     },

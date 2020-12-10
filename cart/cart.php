@@ -124,7 +124,7 @@
           <div class="danger-color t-l mr-3">總計: NT <span class="danger-color t-xl" id="totleAmount"></span> </div>
 
           <!-- <a href="./order-step1.php" class="a-style"> -->
-          <a class="nav-link buy-btn btn  btn-1 btn-2 d-flex align-items-center justify-content-center" >結帳
+          <a class="nav-link buy-btn btn  btn-1 btn-2 d-flex align-items-center justify-content-center">結帳
           </a>
           <a id="show-reg" data-toggle="modal" data-target="#register_show" hidden> </a>
 
@@ -418,7 +418,7 @@
     const pprice = parseInt($(this).closest('.prod-item').find('.pprice').attr('data-pprice'));
 
     const mprice = parseInt($(this).closest('.prod-item').find('.mprice').attr('data-mprice'));
-    const price = (mQuantity * mprice) + (pQuantity * pprice);
+    const price = parseInt((mQuantity * mprice) + (pQuantity * pprice));
     ('data-quantity');
     // console.log('mQuantity', mQuantity);
     console.log('CCmQuantity', mQuantity)
@@ -435,6 +435,8 @@
       action: 'add',
       manQ: mQuantity,
       petQ: pQuantity,
+      total1: price,
+
     }, function(data) {
       console.log(data.cart);
       // countCart(data);
@@ -468,42 +470,42 @@
   $('.buy-btn').click(function() {
     <?php if (isset($_SESSION['member_avatar'])) : ?>
       location.href = "/petliday/cart/order-step1.php"
-    <?php else: ?>
+    <?php else : ?>
       $('#show-reg').click();
     <?php endif; ?>
-  //   const combo = $(this);
-  //   const tr = $(this).closest('.prod-item').attr('data-sid');
-  //   let mQuantity = parseInt($(this).find('.man-box input').val());
-  //   let pQuantity = parseInt($(this).find('.pet-box input').val());
-  //   // console.log('CCmQuantity', mQuantity)
-  //   // console.log('CCpQuantity', pQuantity)
-  //   const pprice = parseInt($('.prod-item').find('.pprice').attr('data-pprice'));
-  //   const mprice = parseInt($('.prod-item').find('.mprice').attr('data-mprice'));
-  //   const price = (mQuantity * mprice) + (pQuantity * pprice);
-  //   ('data-quantity');
-  //   // console.log('mQuantity', mQuantity);
+    //   const combo = $(this);
+    //   const tr = $(this).closest('.prod-item').attr('data-sid');
+    //   let mQuantity = parseInt($(this).find('.man-box input').val());
+    //   let pQuantity = parseInt($(this).find('.pet-box input').val());
+    //   // console.log('CCmQuantity', mQuantity)
+    //   // console.log('CCpQuantity', pQuantity)
+    //   const pprice = parseInt($('.prod-item').find('.pprice').attr('data-pprice'));
+    //   const mprice = parseInt($('.prod-item').find('.mprice').attr('data-mprice'));
+    //   const price = (mQuantity * mprice) + (pQuantity * pprice);
+    //   ('data-quantity');
+    //   // console.log('mQuantity', mQuantity);
 
-  //   const subButton = $(this).closest('.prod-item').find('.man-box .subIcon');
+    //   const subButton = $(this).closest('.prod-item').find('.man-box .subIcon');
 
-  //   const subButton1 = $(this).closest('.prod-item ').find('.pet-box .subIcon');
-
-
-  //   $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', {
-  //     sid: tr,
-  //     action: 'add',
-  //     manQ: mQuantity,
-  //     petQ: pQuantity,
-  //     price: price,
-
-  //   }, function(data) {
-  //     console.log(data);
-  //     // countCart(data);
+    //   const subButton1 = $(this).closest('.prod-item ').find('.pet-box .subIcon');
 
 
+    //   $.get('<?= WEB_ROOT ?>products/pro-pg-api-ching.php', {
+    //     sid: tr,
+    //     action: 'add',
+    //     manQ: mQuantity,
+    //     petQ: pQuantity,
+    //     price: price,
 
-  //   }, 'json');
-  //   // console.log('AAAAsmQuantity', mQuantity);
-  //   // console.log('AAAAsmQuantity', pQuantity);
+    //   }, function(data) {
+    //     console.log(data);
+    //     // countCart(data);
+
+
+
+    //   }, 'json');
+    //   // console.log('AAAAsmQuantity', mQuantity);
+    //   // console.log('AAAAsmQuantity', pQuantity);
   })
 
 
