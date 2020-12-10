@@ -6,7 +6,7 @@ body {
   position: relative;
   width: 1920px;
   height: 1450px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .pdslogan{
   text-align: center;
@@ -19,7 +19,7 @@ body {
 .pdslogan h1,.pdslogan p{
   color: #f2f2f2;
   letter-spacing: 4px;
-  text-shadow: 10px 10px 50px rgba(0,0,0,.2);
+  text-shadow: 1px 1px 30px rgba(0,0,0,1);
   /* filter:blur(20px);
     -o-filter:blur(20px);
     -ms-filter:blur(20px);
@@ -30,6 +30,19 @@ body {
   /* fz */
 }
 @media (min-width: 1200px) {
+  .search-bar.sbar-hero{
+    width: 480px;
+    height: 60px;
+    border-radius: 30px;
+  }
+  .sbox-hero{
+    width: 480px;
+    margin: 0 auto;
+  }
+  .sbtn-hero{
+    top: 14px;
+    right: 14px;
+  }
   .pf {
     margin: 3% auto;
     width: 90vw;
@@ -40,27 +53,27 @@ body {
     transition: 0.5s;
   }
   .polaroid-figure1 {
-    background: url("./img/banner-img1.jpg") no-repeat;
+    background: url("./img/banner-img1.png") no-repeat;
     background-size: cover;
   }
 
   .polaroid-figure2 {
-    background: url("./img/banner-img2.jpg") no-repeat;
+    background: url("./img/hero5.png") no-repeat;
     background-size: cover;
   }
 
   .polaroid-figure3 {
-    background: url("./img/banner-img3.jpg") no-repeat;
+    background: url("./img/banner-img2.png") no-repeat;
     background-size: cover;
   }
 
   .polaroid-figure4 {
-    background: url("./img/banner-img4.jpg") no-repeat;
+    background: url("./img/hero2.png") no-repeat;
     background-size: cover;
   }
 
   .polaroid-figure5 {
-    background: url("./img/banner-img5.jpg") no-repeat;
+    background: url("./img/hero3.png") no-repeat;
     background-size: cover;
   }
 

@@ -647,4 +647,10 @@ if (window.matchMedia('(max-width: 425px)').matches) {
         }
 
     })
+
+    $('.rate-scroll').scrollLeft(3000);
+    console.log('ho')
+
+
+    
     

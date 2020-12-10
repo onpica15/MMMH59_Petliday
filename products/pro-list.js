@@ -11,6 +11,7 @@
         index = $(this).index();
     });
     $('.ar').click(function() {
+        let index = 0;
         index = index + 1;
         console.log('index1:', index);
         // let nowIndex = (index > 4) ? 0 : index;

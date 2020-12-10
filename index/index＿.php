@@ -163,9 +163,9 @@
 <div class="pdslogan">
     <h1>渡假也要與寶貝一起享樂</h1>
     <p>準備要與毛寶貝去哪放肆玩？</p>
-    <div class="search-box nav-pc" id="search-box">
-      <input type="text" placeholder="想與寶貝去哪玩？" class="search-bar pl-3" id="search-input">
-      <button class="search-btn ">
+    <div class="search-box sbox-hero nav-pc" id="search-box">
+      <input type="text" placeholder="想與寶貝去哪玩？" class="search-bar sbar-hero pl-4" id="search-input">
+      <button class="search-btn sbtn-hero">
         <svg class="" id="search-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352.48 336.07">
           <g>
             <path data-name="Path 144" d="M346.5,301.38l-84.25-83.79h0a142,142,0,1,0-26.4,31l82,81.51a20.3,20.3,0,1,0,28.72-28.71h0Zm-204.23-58a101,101,0,1,1,101-101,101,101,0,0,1-101,101Z" />
