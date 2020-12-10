@@ -130,20 +130,26 @@ $('.btn-twin').on('click', function() {
     const manQ = $('#man-quantity').val();
     const petQ = $('#pet-quantity').val();
     const date = $('.calendar .active').children('p').html();
+    
     const total = $('.select-price p').html().slice(4);
+    const manP = parseInt(tr.find('.change-man').attr('data-price'));
+    const petP = parseInt(tr.find('.change-pet').attr('data-price'));
+    const total1 = (manQ * manP ) + (petQ * petP);
+    
 
     console.log('sid', sid);
     console.log('manQ', manQ);
     console.log('petQ', petQ);
     console.log('date', date);
     console.log('total', total);
+    console.log('total1',total1);
 
     $.get('pro-pg-api.php', {
         sid: sid,
         manQ: manQ,
         petQ: petQ,
         date: date,
-        total: total,
+        total: total1,
         item: 1,
         action: 'add'
     },
