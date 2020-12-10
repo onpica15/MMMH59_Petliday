@@ -397,7 +397,7 @@
               </div>
               <div class="pay-btn-box pb-3 pt-2">
                 <a href="./order-step3.php" class="a-style w-100 d-flex justify-content-end">
-                  <div class="btn pay-btn ml-3 " id="confirm-btn">確認結帳</div>
+                  <div class="btn pay-btn ml-3 " id="confirm-btn" onclick="doBuy()">確認結帳</div>
                 </a>
                 <a href="./cart.php" class=" a-style w-100 d-flex justify-content-start">
                   <div class="btn-outline pay-btn mr-3">回購物車</div>
@@ -1006,6 +1006,21 @@
 
 
 
+
+  //結帳
+  function doBuy() {
+    $.get('buy_api.php', function(data) {
+      if (data.success) {
+        // alert('感謝訂購~');
+        location.href = 'order-step3.php'
+        // location.href('order-step3.php'); // 重新載入頁面
+        // location.href('order-step3.php'); // 重新載入頁面
+      } else {
+        console.log(data);
+      }
+    }, 'json');
+
+  }
 
 
 

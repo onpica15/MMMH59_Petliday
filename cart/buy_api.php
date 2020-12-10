@@ -17,6 +17,7 @@ if (empty($_SESSION['cart'])) {
     ], JSON_UNESCAPED_UNICODE);
     exit;
 }
+
 if (empty($_SESSION['order'])) {
     echo json_encode([
         'code' => 350,
@@ -49,7 +50,7 @@ $order_sid = $pdo->lastInsertId();
 // $total = ($_SESSION['cart']['manQ'] * $_SESSION['cart']['price_man']) + ($_SESSION['cart']['petQ'] * $_SESSION['cart']['price_pet']);
 
 
-$d_sql = "INSERT INTO `order_details`(`order_sid`, `product_sid`, `price_all`, `quantity_man`, `quantity_pet`) VALUES(?,?,?,?,?)";
+$d_sql = "INSERT INTO `order_details`(`order_sid`, `product_sid`, `price_all`, `quantity_man`, `quantity_pet`,`go-date`) VALUES(?,?,?,?,?,?)";
 
 $d_stmt = $pdo->prepare($d_sql);
 
@@ -60,6 +61,7 @@ foreach ($_SESSION['cart'] as $i) {
         $i['total'],
         $i['manQ'],
         $i['petQ'],
+        $i['date'],
     ]);
 };
 
