@@ -109,11 +109,14 @@
             console.log('location pathname',location.pathname)
             console.log('location href',location.href)
             
-            if(location.pathname.toLowerCase() === '/petliday/index/index%ef%bc%bf.php'){
-              location.reload();
-            }
-            else if(location.pathname.toLowerCase() === '/petliday/cart/cart.php'){
+            // if(location.pathname.toLowerCase() === '/petliday/index/index%ef%bc%bf.php'){
+              
+            // }
+            if(location.pathname.toLowerCase() === '/petliday/cart/cart.php'){
               location.href = "/petliday/cart/order-step1.php"
+            }
+            else {
+              location.reload();
             }
           
         } else {
