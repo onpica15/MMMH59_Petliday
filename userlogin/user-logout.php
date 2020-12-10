@@ -3,5 +3,6 @@ session_start();
 // session_destroy();
 
 unset($_SESSION['member_avatar']);
+header('Location: /PETLIDAY/index/index＿.php');
+?>
 
-header('Location: user-login.php');

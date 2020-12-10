@@ -224,7 +224,7 @@
           <?php if (isset($_SESSION['member_avatar'])) : ?>
 
             <li class="nav-item loggin m-1">
-              <div class="nav-link d-flex align-items-center " href="#">
+              <div class="nav-link d-flex align-items-center" href="#">
                 <div class="navbtn nav-user-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274.17 264.67">
                     <g id="user-icon_2" data-name="user-icon 2">
@@ -242,15 +242,12 @@
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-coupon.php">優惠券</a>
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-mailbox.php">會員信箱</a>
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-qa.php">Q & A</a>
-                  <a class="member-item" href="">登出</a>
+                  <a class="member-item" href="<?= WEB_ROOT ?>userlogin/user-logout.php" >登出</a>
+
+                  <input type="text" value="<?= $_SESSION['member_avatar']['sid'] ?>" name="user_sid" hidden>
 
                 </div>
               </div>
-            </li>
-
-            <!-- 登出 -->
-            <li class="nav-item  m-1">
-              <a class="nav-link" href="user-logout.php">登出</a>
             </li>
           <?php endif ?>
         </ul>
@@ -312,12 +309,12 @@
 
     })
 
-    // let mumberBtn = $('.nav-user-btn')
+    var numberBtn = $('.nav-user-btn')
 
-    // $(mumberBtn).on('click', function() {
-    //   console.log('mumberBtn', mumberBtn)
-    //   $('.member-items').toggleClass('able')
-    // })
+    $(numberBtn).on('click', function() {
+      console.log('mumberBtn', numberBtn)
+      $('.member-items').toggleClass('able')
+    })
 
     $('.ham-box').on('click', function() {
       $('.ham-line1').toggleClass('ham-am1');
@@ -326,9 +323,9 @@
       $('.nav-item-m').toggleClass('nav-item-m-able');
 
     })
-    let count = 0;
+    var count = 0;
 
-    const buy_quant = $('.buy-quant');
+    var buy_quant = $('.buy-quant');
 
 
     function countCart(cart) {
@@ -340,7 +337,7 @@
       for (let i in cart) {
         count += cart[i].item * 1;
       }
-      
+
       if (count > 0) {
         buy_quant.removeClass('add');
       }
@@ -442,6 +439,10 @@
       <?php endforeach;  ?>
 
       div.innerHTML = html;
+    }
+
+    function logout(){
+
     }
 
     // updateCartList();
