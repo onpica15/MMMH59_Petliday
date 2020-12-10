@@ -112,7 +112,7 @@
 
 
       if (isPass) {
-        $.post('/PETLIDAY/userlogin/login-petliday-api.php', $(document.apply_form).serialize(), function(data) {
+        $.post('login-petliday-api.php', $(document.apply_form).serialize(), function(data) {
           console.log(data);
           if (data.success) {
             info_bar

@@ -135,7 +135,7 @@
   <?php endif; ?>
 </div>
 
- <!-- <php// include __DIR__ . '/../userlogin/user-login.php' ?>  -->
+<?php include __DIR__ . '/../userlogin/user-login.php' ?>
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->

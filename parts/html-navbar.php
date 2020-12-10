@@ -234,6 +234,7 @@
                     </g>
                   </svg>
                 </div>
+                <a class="nav-link only-pc"><?= $_SESSION['member_avatar']['name'] ?></a>
                 <div class="member-items only-pc ">
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-profile.php">會員資料</a>
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-order.php">我的訂單</a>
@@ -311,12 +312,12 @@
 
     })
 
-    let numberBtn5 = $('.nav-user-btn')
+    // let mumberBtn = $('.nav-user-btn')
 
-    $(numberBtn5).on('click', function() {
-      console.log('mumberBtn', numberBtn5)
-      $('.member-items').toggleClass('able')
-    })
+    // $(mumberBtn).on('click', function() {
+    //   console.log('mumberBtn', mumberBtn)
+    //   $('.member-items').toggleClass('able')
+    // })
 
     $('.ham-box').on('click', function() {
       $('.ham-line1').toggleClass('ham-am1');
@@ -339,7 +340,7 @@
       for (let i in cart) {
         count += cart[i].item * 1;
       }
-
+      
       if (count > 0) {
         buy_quant.removeClass('add');
       }

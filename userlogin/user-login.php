@@ -1,9 +1,7 @@
-
-
 <?php include __DIR__ . '/../parts/html-head.php' ?>
 <!-- --- css 連結放下面 ----- -->
 <style>
-<?php include __DIR__ .  '/../userlogin/user-login.css' ?> 
+  <?php include __DIR__ .  '/../userlogin/user-login.css' ?>
 </style>
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
@@ -14,15 +12,15 @@
 
     <div class="modal-content">
       <div class="login">
-      
+
 
         <form class="login-form" name="login-form" onsubmit="checkForm(); return false;">
-        <div id="info_bar" class="alert alert-danger" role="alert" style="display: none"></div>
-        <button data-dismiss="modal" class="close" style="position:absolute;top:14px;right:0;">
-          <span aria-hidden="true">×</span>
-        </button>
-        
-        
+          <div id="info_bar" class="alert alert-danger" role="alert" style="display: none"></div>
+          <button data-dismiss="modal" class="close" style="position:absolute;top:14px;right:0;">
+            <span aria-hidden="true">×</span>
+          </button>
+
+
           <h2 class="t-xl">使用社群平台帳戶登入</h2>
           <h2 class="t-m">立即登入，隨時給毛孩獨家優惠</h2>
           <div class="login-social d-flex justify-content-center">
@@ -88,7 +86,8 @@
 <!-- ------------------ body結束 ------------------ -->
 
 <!-- ---------------js/jq 開始 ------------------ -->
-<?php // include __DIR__ . '/../parts/html-script.php' ?>
+<?php // include __DIR__ . '/../parts/html-script.php' 
+?>
 <script>
   // ------JS開始 以上勿刪-------
   const email = $('#login-email'),
@@ -97,7 +96,7 @@
 
   function checkForm() {
 
-    $.post('/PETLIDAY/userlogin/user-login-api.php', {
+    $.post('user-login-api.php', {
         email: email.val(),
         password: password.val()
       },

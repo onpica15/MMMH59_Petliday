@@ -162,6 +162,19 @@
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 <!-- 拍立得section 電腦版-->
 <section id="hero-polaroid">
+  <div class="pdslogan">
+    <h1>渡假也要與寶貝一起享樂</h1>
+    <p>準備要與毛寶貝去哪放肆玩？</p>
+    <div class="search-box nav-pc" id="search-box">
+      <input type="text" placeholder="想與寶貝去哪玩？" class="search-bar pl-3" id="search-input">
+      <button class="search-btn ">
+        <svg class="" id="search-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352.48 336.07">
+          <g>
+            <path data-name="Path 144" d="M346.5,301.38l-84.25-83.79h0a142,142,0,1,0-26.4,31l82,81.51a20.3,20.3,0,1,0,28.72-28.71h0Zm-204.23-58a101,101,0,1,1,101-101,101,101,0,0,1-101,101Z" />
+          </g>
+        </svg></button>
+    </div>
+  </div>
   <!-- 3d start -->
   <div class="con3d container-fluid">
     <div class="moving">
@@ -447,62 +460,7 @@
         </figure>
         <!-- 星等、評價、價錢 -->
         <div class="row w-70 mx-auto pb-3 bott-line">
-          <h6 class="t-l mt-4 my-3">【 聖誕節寫真 】<br>超萌裝扮！寵物聖誕攝影</h6>
-          <div class=" d-flex align-items-center justify-content-between w-100">
-            <div class=" d-flex flex-row align-items-center ">
-              <div class="star mr-2 ">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
-                  <defs></defs>
-                  <g id="圖層_2" data-name="圖層 2">
-                    <g id="圖層_1-2" data-name="圖層 1">
-                      <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z"></path>
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <div class="rate text-gray t-m mb-0">4.5</div>
-              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">78則評論</u></div>
-            </div>
-            <div class="pr-2 t-l orange-color">$1200</div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="col-4 tour-card">
-        <figure>
-          <img src="./img/3x/christmas2.png" alt="">
-        </figure>
-        <!-- 星等、評價、價錢 -->
-        <div class="row w-70 mx-auto pb-3 bott-line">
-          <h6 class="t-l mt-4 my-3">【 聖誕節美容 】<br>亮麗豋場！毛小孩也想當網美</h6>
-          <div class=" d-flex align-items-center justify-content-between w-100">
-            <div class=" d-flex flex-row align-items-center ">
-              <div class="star mr-2 ">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
-                  <defs></defs>
-                  <g id="圖層_2" data-name="圖層 2">
-                    <g id="圖層_1-2" data-name="圖層 1">
-                      <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z"></path>
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <div class="rate text-gray t-m mb-0">4.8</div>
-              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">113則評論</u></div>
-            </div>
-            <div class="pr-2 t-l orange-color">$880</div>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-4 tour-card">
-        <figure>
-          <img src="./img/3x/christmas3.png" alt="">
-        </figure>
-        <!-- 星等、評價、價錢 -->
-        <div class="row w-70 mx-auto pb-3 bott-line">
-          <h6 class="t-l mt-4 my-3">【 聖誕節派對 】<br>寶貝聚集！交換禮物玩起來</h6>
+          <h6 class="t-l mt-4 my-3">【 聖誕精選行程 】<br>二芭芭拉拉巴拉巴聖芭拉拉巴拉巴聖拉巴聖誕節</h6>
           <div class=" d-flex align-items-center justify-content-between w-100">
             <div class=" d-flex flex-row align-items-center ">
               <div class="star mr-2 ">
@@ -516,9 +474,64 @@
                 </svg>
               </div>
               <div class="rate text-gray t-m mb-0">4.9</div>
-              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">95則評論</u></div>
+              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">78則評論</u></div>
             </div>
-            <div class="pr-2 t-l orange-color">$1499</div>
+            <div class="pr-2 t-l orange-color">$2680</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-4 tour-card">
+        <figure>
+          <img src="./img/3x/christmas2.png" alt="">
+        </figure>
+        <!-- 星等、評價、價錢 -->
+        <div class="row w-70 mx-auto pb-3 bott-line">
+          <h6 class="t-l mt-4 my-3">【 聖誕精選行程 】<br>二芭芭拉拉巴拉巴聖芭拉拉巴拉巴聖拉巴聖誕節</h6>
+          <div class=" d-flex align-items-center justify-content-between w-100">
+            <div class=" d-flex flex-row align-items-center ">
+              <div class="star mr-2 ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
+                  <defs></defs>
+                  <g id="圖層_2" data-name="圖層 2">
+                    <g id="圖層_1-2" data-name="圖層 1">
+                      <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div class="rate text-gray t-m mb-0">4.9</div>
+              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">78則評論</u></div>
+            </div>
+            <div class="pr-2 t-l orange-color">$2680</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-4 tour-card">
+        <figure>
+          <img src="./img/3x/christmas3.png" alt="">
+        </figure>
+        <!-- 星等、評價、價錢 -->
+        <div class="row w-70 mx-auto pb-3 bott-line">
+          <h6 class="t-l mt-4 my-3">【 聖誕精選行程 】<br>二芭芭拉拉巴拉巴聖芭拉拉巴拉巴聖拉巴聖誕節</h6>
+          <div class=" d-flex align-items-center justify-content-between w-100">
+            <div class=" d-flex flex-row align-items-center ">
+              <div class="star mr-2 ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
+                  <defs></defs>
+                  <g id="圖層_2" data-name="圖層 2">
+                    <g id="圖層_1-2" data-name="圖層 1">
+                      <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div class="rate text-gray t-m mb-0">4.9</div>
+              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">78則評論</u></div>
+            </div>
+            <div class="pr-2 t-l orange-color">$2680</div>
           </div>
         </div>
 
@@ -939,9 +952,8 @@
   </div>
 </section>
 
-
 <?php include __DIR__ . '/../userlogin/user-login.php' ?>
-<?php include __DIR__ . '/../userlogin/user-logout.php' ?>
+
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
