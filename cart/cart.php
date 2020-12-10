@@ -26,7 +26,7 @@
         <div class="col-12 col-lg-3 text-gray t-s only-pc">數量</div>
         <div class="col-2 col-lg-1 text-gray t-s">價格</div>
       </div>
-
+      <!-- 測試 -->
       <!-- ----prod-box---- -->
       <?php foreach ($_SESSION['cart'] as $i) : ?>
         <div class="row prod-box d-flex align-items-center prod-item" data-sid="<?= $i['sid'] ?>" id="prod<?= $i['sid'] ?>">
