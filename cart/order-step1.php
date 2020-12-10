@@ -148,7 +148,7 @@
                     <div class="col-12 d-flex align-items-center">
                       <input id="receipt3" class="form-radio custom-control-input" type="radio" name="receipt" value="三聯電子發票">
                       <label class=" radio-text t-m text-color custom-control-label" for="receipt3">三聯電子發票
-                      <small class="text-gray">訂購完成後會於一天內寄送至聯絡人電子信箱。</small>
+                        <small class="text-gray">訂購完成後會於一天內寄送至聯絡人電子信箱。</small>
                       </label>
                     </div>
                   </div>
@@ -475,7 +475,7 @@
 </form>
 </div>
 
-<?php include __DIR__ . '/../userlogin/user-login.php' ?>
+<!-- </?php include __DIR__ . '/../userlogin/user-login.php' ?> -->
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
