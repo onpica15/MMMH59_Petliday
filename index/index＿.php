@@ -90,14 +90,12 @@
 
   @media(max-width: 400px) {
     .card {
-      width: 250px;
+      width: 330px;
       height: 350px;
       border: none;
       box-shadow: 1px 2px 8px rgba(200, 200, 200, .5);
       position: relative;
       margin: 20px auto !important;
-      /* padding-left: 15px !important;
-      padding-right: 15px !important; */
     }
 
     .card-pic {
@@ -162,7 +160,7 @@
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 <!-- 拍立得section 電腦版-->
 <section id="hero-polaroid">
-  <div class="pdslogan">
+<div class="pdslogan">
     <h1>渡假也要與寶貝一起享樂</h1>
     <p>準備要與毛寶貝去哪放肆玩？</p>
     <div class="search-box nav-pc" id="search-box">
@@ -224,7 +222,7 @@
 <section id="hero-polaroid-m float-none" class="weirdpart pb-4">
   <div class="container pr-0">
     <!-- 繩子的部分 -->
-    <div class="row rope">
+    <div class="row rope mt-5">
       <figure>
         <img src="./img/illustration/rope.svg" alt="">
       </figure>
@@ -232,6 +230,9 @@
     <!-- 拍立得照片的部分 -->
     <div class="row d-flex por-pic-m flex-nowrap mr-0 pt-3 pb-2">
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd1.jpg" alt="">
         </figure>
@@ -240,6 +241,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd2.jpg" alt="">
         </figure>
@@ -248,6 +252,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd3.jpg" alt="">
         </figure>
@@ -256,6 +263,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd4.jpg" alt="">
         </figure>
@@ -264,6 +274,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd5.jpg" alt="">
         </figure>
@@ -272,6 +285,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd6.jpg" alt="">
         </figure>
@@ -280,6 +296,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd7.jpg" alt="">
         </figure>
@@ -288,6 +307,9 @@
         </div>
       </div>
       <div class="polaroid-base d-flex position-relative justify-content-center">
+        <div class="clip c1 position-absolute">
+          <img src="img/illustration/clip.svg" alt="">
+        </div>
         <figure class="position-absolute mt-3">
           <img src="img/pd8.jpg" alt="">
         </figure>
@@ -952,8 +974,8 @@
   </div>
 </section>
 
-<?php include __DIR__ . '/../userlogin/user-login.php' ?>
 
+<?php include __DIR__ . '/../userlogin/user-login.php' ?>
 <!-- ------------------ body結束 ------------------ -->
 <?php include __DIR__ . '/../parts/html-footer.php' ?>
 <!-- ---------------js/jq 開始 ------------------ -->
@@ -1016,14 +1038,17 @@
   setInterval(function() {
     index2 = index2 + 1;
     (index2 > 5) ? index2 = 1: index2 = index2;
-    $('.por-pic-m .polaroid-base').eq(index2).addClass('col-5 por-frame-2 mx-3 p-0').removeClass('col-4 por-frame-1').siblings().removeClass('col-5 por-frame-2 mx-3 p-0').addClass('col-4 por-frame-1');
+    $('.por-pic-m .polaroid-base').eq(index2).addClass('col-8 por-frame-2 mx-3 p-0').removeClass('col-2 por-frame-1').siblings().removeClass('col-8 por-frame-2 mx-3 p-0').addClass('col-2 por-frame-1');
+    $('.polaroid-base').find('.clip').removeClass('c2')
+    $('.por-pic-m .polaroid-base').eq(index2).find('.clip').addClass('c2');
+
   }, 2000);
 
   $('.weirdpart .container').delay(2000).fadeIn("slow", function() {
     setInterval(function() {
       index3 = index3 + 1;
       (index3 > 4) ? index3 = 0: index3 = index3;
-      $('.weirdpart .container').css('right', (index3 * 160 + 'px'))
+      $('.weirdpart .container').css('right', (index3 * 80 + 'px'))
     }, 2000);
   });
 
