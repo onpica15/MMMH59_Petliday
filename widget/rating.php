@@ -85,23 +85,36 @@
 
 
   // rating 滑到footer前停住 **********************
+let footertop = $('footer').offset().top
+
   $(function(){
     $(window).scroll(function() {
+      if ($(window).scrollTop() < 3200) {
+        $('.index-rating').css('opacity', '0');
+      } else if ($(window).scrollTop() > 3200) {
+        console.log('hi')
+        $('.index-rating').css('opacity', '1');
+      
+      }
     //   console.log('$(window).scrollTop()',$(window).scrollTop());
     //   console.log('footer ',$('footer').offset().top);
-    //  console.log('window',$(window).height());
-    //   console.log($(window).width())
+     console.log('window',$(window).height());
+    //  let ratingfixed = ($(window).height())
+    //   console.log('ratingfixed',ratingfixed)
       if($(window).width() > 992){
-        if($(window).scrollTop() >= 879){
-          // console.log('hi')
+        console.log('hi 992')
+        if($(window).scrollTop() >= 5000){
+          console.log('hi absolute')
           $('.index-rating').css('position','absolute').css('bottom',$(document).height() -  $('footer').offset().top + 25)
         }
-        else{
-          $('.index-rating').css('position','fixed').css('bottom',100);
+        else if($(window).scrollTop() < 5000){
+          console.log('hi fixed')
+          $('.index-rating').css('position','fixed').css('bottom',$(document).height() -  footertop+ 25);
+          // $('.index-rating').css('position','fixed').css('bottom',100);
         }
       }
       else{
-        if($(window).scrollTop() >= 1000){
+        if($(window).scrollTop() >= 16050){
           // console.log('hi')
           $('.index-rating').css('position','absolute').css('bottom',$(document).height() -  $('footer').offset().top + 25)
         }
