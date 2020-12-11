@@ -211,7 +211,7 @@ button:focus{
 }
 
 .login-group.success input{
-    border-color: #FFA12C;
+    border-color: #148f7c;
 }
 
 .login-group i{
@@ -228,7 +228,7 @@ button:focus{
 
 .login-group.success i.fa-check-circle{
     visibility: visible;
-    color: #FFA12C; 
+    color: #148f7c; 
 }
 
 .login-group.error small{
