@@ -5,7 +5,7 @@ body {
 #hero-polaroid {
   position: relative;
   width: 1920px;
-  height: 1450px;
+  height: 1250px;
   /* overflow: hidden; */
 }
 .search-box{
@@ -15,7 +15,7 @@ body {
   text-align: center;
   position: absolute;
   width: 100%;
-  top: 550px;
+  top: 450px;
   z-index: 88;
   transition: .5s;
   /* box-shadow: 10px 10px 50px rgba(0,0,0,.2); */
@@ -50,11 +50,13 @@ body {
   .pf {
     margin: 3% auto;
     width: 90vw;
-    height: 75vh;
+    height: 60vh;
     box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px 5px inset;
   }
   .polaroid-base {
     transition: 0.5s;
+    width: 70vw;
+    height: 80vh;
   }
   .polaroid-figure1 {
     background: url("./img/banner-img1.png") no-repeat;
@@ -129,7 +131,7 @@ body {
 
   .con3d {
     width: 60% !important;
-    margin: 0px -140px !important;
+    margin: -80px 90px !important;
   }
 
   .moving {

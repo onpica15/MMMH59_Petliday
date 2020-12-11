@@ -10,8 +10,8 @@
         $('.wrap-img').css('left', -1140 * ($(this).index() + 1));
         index = $(this).index();
     });
+    let index = 0;
     $('.ar').click(function() {
-        let index = 0;
         index = index + 1;
         console.log('index1:', index);
         // let nowIndex = (index > 4) ? 0 : index;
