@@ -57,6 +57,15 @@ body {
 /* -------------------------------------------------- */
 
 /* aside-bar------------------------------------------ */
+.account-icon {
+  width: 22px;
+  height: 100%;
+}
+
+.account-icon-or.active {
+  fill: #ffa12c;
+}
+
 .aside-bar {
   border-radius: 15px;
   background: #fff;
@@ -97,9 +106,12 @@ body {
 .list-group-item.active {
   z-index: 2;
   color: #ffa12c;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   border: rgba(200, 200, 200, 0.5);
   border-left: 3px solid #ffa12c;
+}
+.list-group-text.active {
+  color: #ffa12c;
 }
 @media (max-width: 991.98px) {
   .aside-bar {
