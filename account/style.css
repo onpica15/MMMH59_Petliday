@@ -39,7 +39,6 @@ body {
   z-index: 2;
   bottom: -60%;
   left: 20%;
-  transition: ease-in-out;
 }
 .dog-img img {
   width: 100%;
@@ -50,9 +49,11 @@ body {
 }
 .hideimg {
   opacity: 0;
+  transition: 0.5s;
 }
 .showimg {
   opacity: 1;
+  transition: 0.5s;
 }
 /* -------------------------------------------------- */
 
