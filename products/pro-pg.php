@@ -913,18 +913,31 @@ $rows = $pdo->query($sql)->fetch();
         // dataDisplay += `<td><p>${dataTemp[i]}</p>`
 
         // ((i + 3) % 7 === 0|| (i + 4) % 7 === 0 || (i + 5) % 7 === 0 || (i + 6) % 7 === 0||(i) % 7 === 0)
-        if ((i + 2) % 13 === 0 || (i + 5) % 10 === 0) {
-            dataDisplay += `<td><p class="danger-color fw-5">${dataTemp[i]}</p><p class="danger-color"><?= $rows['price_all'] ?></p></td>`
-        } else if ((i + 3) % 13 === 0) {
-            dataDisplay += `<td style="pointer-events:none"><p class="text-gray fw-5">${dataTemp[i]}</p><p class="text-gray t-xs">已額滿</p></td>`
-        } else if ((i + 1) % 7 === 0) {
-            dataDisplay += `<td><p class="fw-5">${dataTemp[i]}</p><p class="green-color"><?= $rows['price_all'] + 500 ?></p></td>`
-            dataDisplay += '</tr><tr>'
-        } else if (i == 0 || i == 1) {
-            dataDisplay += `<td><p class="fw-5">${dataTemp[i]}</p><p class="green-color"></p></td>`
-        } else {
-            dataDisplay += `<td><p class="fw-5">${dataTemp[i]}</p><p class="green-color"><?= $rows['price_all'] ?></p></td>`
+        if(i > 18){
+                if ((i + 2) % 13 === 0 || (i + 5) % 10 === 0) {
+                dataDisplay += `<td><p class="danger-color fw-5">${dataTemp[i]}</p><p class="danger-color"><?= $rows['price_all'] ?></p></td>`
+            } else if ((i + 3) % 13 === 0) {
+                dataDisplay += `<td style="pointer-events:none"><p class="text-gray fw-5">${dataTemp[i]}</p><p class="text-gray t-xs">已額滿</p></td>`
+            } else if ((i + 1) % 7 === 0) {
+                dataDisplay += `<td><p class="fw-5">${dataTemp[i]}</p><p class="green-color"><?= $rows['price_all'] + 500 ?></p></td>`
+                dataDisplay += '</tr><tr>'}
+            else {
+                dataDisplay += `<td><p class="fw-5">${dataTemp[i]}</p><p class="green-color"><?= $rows['price_all'] ?></p></td>`
+            }
         }
+        else{
+            if((i + 1) % 7 === 0){
+                dataDisplay += `<td style="pointer-events:none"><p class="text-gray fw-5">${dataTemp[i]}</p><p class="text-gray t-xs">已額滿</p></td>`
+                dataDisplay += '</tr><tr>'
+            }
+            else if (i == 0 || i == 1) {
+                dataDisplay += `<td><p class="fw-5">${dataTemp[i]}</p><p class="green-color"></p></td>`
+            } 
+            else{
+                dataDisplay += `<td style="pointer-events:none"><p class="text-gray fw-5">${dataTemp[i]}</p><p class="text-gray t-xs">已額滿</p></td>`
+            }
+        }
+        
     }
     data.innerHTML = dataDisplay
 
