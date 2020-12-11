@@ -164,7 +164,7 @@
     <h1>渡假也要與寶貝一起享樂</h1>
     <p>準備要與毛寶貝去哪放肆玩？</p>
     <div class="search-box sbox-hero">
-      <input type="text" placeholder="想與寶貝去哪玩？" class="search-bar sbar-hero pl-4" id="search-input">
+      <input type="text" placeholder="想與寶貝去哪玩？" class="search-bar sbar-hero pl-4">
       <button class="search-btn sbtn-hero">
         <svg class="" id="search-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352.48 336.07">
           <g>
@@ -998,22 +998,29 @@
 </script>
 <!-- // ------JS開始 以上勿刪------- -->
 <script>
-
+  $('.search-box.nav-pc').css('opacity','0');
   $(window).scroll(function(){
     let nowTop = $(window).scrollTop();
     console.log(nowTop);
-    if(nowTop > 400){
-      $('.pdslogan').css({'opacity':'0','scale':'0.3'});
-      $('.search-box.nav-pc').css('opacity','1');
-    }
-    else{
+    if(nowTop < 400){
       $('.pdslogan').css({'opacity':'1','scale':'1'});
       $('.search-box.nav-pc').css('opacity','0');
     }
+    else{
+      $('.pdslogan').css({'opacity':'0','scale':'0.3'});
+      $('.search-box.nav-pc').css('opacity','1');
+    }
+    // if(nowTop > 400){
+    //   $('.pdslogan').css({'opacity':'0','scale':'0.3'});
+    //   $('.search-box.nav-pc').css('opacity','1');
+    // }
+    // else{
+    //   $('.pdslogan').css({'opacity':'1','scale':'1'});
+    //   $('.search-box.nav-pc').css('opacity','0');
+    // }
   })
-
-
 </script>
+
 <!-- hero網頁 拍立得 -->
 <script>
   let index = 0;

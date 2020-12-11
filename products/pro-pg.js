@@ -521,21 +521,25 @@ if (window.matchMedia('(max-width: 425px)').matches) {
     $('.t1').on('click', function() {
         if ($(this).css('height') === '350px') {
             $(this).css('height', '790px')
+            $(this).find('a').css('transform','rotate(180deg)');
             setTimeout(() => {
                 $(this).find('.hidden').css('opacity','1');
             }, 200);
         } else {
             $(this).css('height', '350px').find('.hidden').css('opacity','0');
+            $(this).find('a').css('transform','none');
         }
     });
     $('.t2, .t3').on('click', function() {
         if ($(this).css('height') === '350px') {
             $(this).css('height', '570px');
+            $(this).find('a').css('transform','rotate(180deg)');
             setTimeout(() => {
                 $(this).find('.hidden').css('opacity','1');
             }, 200);
         } else {
             $(this).css('height', '350px').find('.hidden').css('opacity','0');
+            $(this).find('a').css('transform','none');
         }
     });
 }

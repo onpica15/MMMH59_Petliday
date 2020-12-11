@@ -42,6 +42,7 @@ body {
   .sbox-hero{
     width: 480px;
     margin: 0 auto;
+    position: relative;
   }
   .sbtn-hero{
     top: 14px;
