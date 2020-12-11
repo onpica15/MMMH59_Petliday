@@ -178,7 +178,7 @@
                                     <img src="../products/img/prolist20.jpg" alt="">
                                 </div>
                                 <div class="col-10 col-lg-6 prod-text d-flex flex-column">
-                                    <h5 class="brown-color t-l title1-m">一起奔跑吧｜宜蘭露營 & 夜間觀星行程自由自在舒爽二日遊</h5>
+                                    <h5 class="brown-color t-l title1-m">[ 熱烈招生中 ] 動手做食器 ｜寵物也能一同參與的寵物食器 DIY 活動課程</h5>
                                     <div class="btn-row row">
                                         <button class="btn btn-outline">查看詳情</button>
                                         <a class="btn" href="./account-order-detail.php">加入購物車</a>
@@ -201,10 +201,10 @@
                         <div class="container">
                             <div class="row prod-box mt-4 d-flex align-items-top">
                                 <div class="prod-img col-2 col-lg-3">
-                                    <img src="../products/img/prolist16.jpg" alt="">
+                                    <img src="../products/img/prolist11.jpg" alt="">
                                 </div>
                                 <div class="col-10 col-lg-6 prod-text d-flex flex-column">
-                                    <h5 class="brown-color t-l title1-m">寵物油畫｜與毛孩共同創作還能掛在家裡擺飾一舉兩得｜ Wendy老師授課</h5>
+                                    <h5 class="brown-color t-l title1-m">踏浪星辰露營｜寵物友善豪華露營懶人也能輕鬆體驗花蓮二日遊</h5>
                                     <div class="btn-row row">
                                         <button class="btn btn-outline">查看詳情</button>
                                         <a class="btn" href="./account-order-detail.php">加入購物車</a>

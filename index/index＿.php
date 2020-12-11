@@ -196,21 +196,21 @@
           <figure class="pf polaroid-figure3 col-11 position-absolute">
           </figure>
           <figure class="signature position-absolute">
-            <img src="./img/signature2.png" alt="">
+            <img src="./img/signature3.png" alt="">
           </figure>
         </div>
         <div class="pb4 polaroid-base d-flex position-absolute justify-content-center">
           <figure class="pf polaroid-figure4 col-11 position-absolute">
           </figure>
           <figure class="signature position-absolute">
-            <img src="./img/signature2.png" alt="">
+            <img src="./img/signature4.png" alt="">
           </figure>
         </div>
         <div class="pb5 polaroid-base d-flex position-absolute justify-content-center">
           <figure class="pf polaroid-figure5 col-11 position-absolute">
           </figure>
           <figure class="signature position-absolute">
-            <img src="./img/signature2.png" alt="">
+            <img src="./img/signature5.png" alt="">
           </figure>
         </div>
       </div>
