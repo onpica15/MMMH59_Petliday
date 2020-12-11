@@ -512,10 +512,15 @@ form.is-editing .btn-edit {
 
 .btn-icon {
   border-radius: 3px;
-  background: #f7f7f7;
+  background: #ffffff;
   min-height: 44px;
   min-width: 44px;
   border: transparent;
+  border: 2px solid #3c2e26;
+}
+
+.btn-icon:hover {
+  background: #3c2e2618;
 }
 
 /* order-detail------------------------ */
@@ -525,8 +530,8 @@ form.is-editing .btn-edit {
   padding: 0.5rem;
 }
 
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #ccc !important;
   opacity: 1; /* Firefox */
 }
