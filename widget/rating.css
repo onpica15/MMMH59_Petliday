@@ -12,6 +12,7 @@ body {
     flex-direction: row;
     position: fixed;
     bottom: 100px;
+    opacity: 0;
   }
 
 /* 外層 */

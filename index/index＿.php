@@ -338,7 +338,7 @@
           </figure>
           <div class="row petliday-text d-flex flex-column justify-content-center">
             <p class="petliday-title mb-2">放鬆</p>
-            <p class=" petliday-content">多樣的行程安排讓飼主可以和<br>寵物一起在旅行中放鬆</p>
+            <p class=" petliday-content">多樣的旅遊行程<br>與寵物一起放鬆身心靈</p>
           </div>
         </div>
 
@@ -348,7 +348,7 @@
           </figure>
           <div class="row d-flex flex-column justify-content-center">
             <p class="petliday-title mb-2">一起體驗</p>
-            <p class=" petliday-content">我們搜羅了全台最適合與寵物<br>同遊、體驗的景點與活動！</p>
+            <p class=" petliday-content">全台最友善的課程與景點<br>帶著寵物們一起上山下海</p>
           </div>
         </div>
 
@@ -358,7 +358,7 @@
           </figure>
           <div class="row d-flex flex-column justify-content-center">
             <p class="petliday-title mb-2">放心遊</p>
-            <p class=" petliday-content">多樣的行程安排讓飼主可以和<br>寵物一起在旅行中放鬆</p>
+            <p class=" petliday-content">毛日帶領著您與寵物<br>安心出遊！快樂回家！</p>
           </div>
         </div>
       </div>
@@ -482,7 +482,7 @@
         </figure>
         <!-- 星等、評價、價錢 -->
         <div class="row w-70 mx-auto pb-3 bott-line">
-          <h6 class="t-l mt-4 my-3">【 聖誕精選行程 】<br>二芭芭拉拉巴拉巴聖芭拉拉巴拉巴聖拉巴聖誕節</h6>
+          <h6 class="t-l mt-4 my-3">【 聖誕節寫真 】<br>超萌裝扮！寵物聖誕攝影</h6>
           <div class=" d-flex align-items-center justify-content-between w-100">
             <div class=" d-flex flex-row align-items-center ">
               <div class="star mr-2 ">
@@ -495,10 +495,10 @@
                   </g>
                 </svg>
               </div>
-              <div class="rate text-gray t-m mb-0">4.9</div>
+              <div class="rate text-gray t-m mb-0">4.5</div>
               <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">78則評論</u></div>
             </div>
-            <div class="pr-2 t-l orange-color">$2680</div>
+            <div class="pr-2 t-l orange-color">$1200</div>
           </div>
         </div>
 
@@ -510,7 +510,7 @@
         </figure>
         <!-- 星等、評價、價錢 -->
         <div class="row w-70 mx-auto pb-3 bott-line">
-          <h6 class="t-l mt-4 my-3">【 聖誕精選行程 】<br>二芭芭拉拉巴拉巴聖芭拉拉巴拉巴聖拉巴聖誕節</h6>
+          <h6 class="t-l mt-4 my-3">【 聖誕節美容 】<br>亮麗豋場！毛小孩也想當網美</h6>
           <div class=" d-flex align-items-center justify-content-between w-100">
             <div class=" d-flex flex-row align-items-center ">
               <div class="star mr-2 ">
@@ -523,10 +523,10 @@
                   </g>
                 </svg>
               </div>
-              <div class="rate text-gray t-m mb-0">4.9</div>
-              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">78則評論</u></div>
+              <div class="rate text-gray t-m mb-0">4.8</div>
+              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">113則評論</u></div>
             </div>
-            <div class="pr-2 t-l orange-color">$2680</div>
+            <div class="pr-2 t-l orange-color">$880</div>
           </div>
         </div>
 
@@ -537,7 +537,7 @@
         </figure>
         <!-- 星等、評價、價錢 -->
         <div class="row w-70 mx-auto pb-3 bott-line">
-          <h6 class="t-l mt-4 my-3">【 聖誕精選行程 】<br>二芭芭拉拉巴拉巴聖芭拉拉巴拉巴聖拉巴聖誕節</h6>
+          <h6 class="t-l mt-4 my-3">【 聖誕節派對 】<br>寶貝聚集！交換禮物玩起來</h6>
           <div class=" d-flex align-items-center justify-content-between w-100">
             <div class=" d-flex flex-row align-items-center ">
               <div class="star mr-2 ">
@@ -551,9 +551,9 @@
                 </svg>
               </div>
               <div class="rate text-gray t-m mb-0">4.9</div>
-              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">78則評論</u></div>
+              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">95則評論</u></div>
             </div>
-            <div class="pr-2 t-l orange-color">$2680</div>
+            <div class="pr-2 t-l orange-color">$699</div>
           </div>
         </div>
 
@@ -812,9 +812,10 @@
       <figure class="chatpic-wrap col-6 position-relative">
         <img src="./img/3X/depth-chat1.png" alt="">
         <div class="text-wrap position-absolute">
-          <h6 class="brown-color t-l">體驗深度旅遊</h6>
-          <h6 class="brown-color t-m mb-2">人生。想必大家都能了解旅遊的重要性。既然如此，了解清楚旅遊到底人生。想必大家都能了解旅遊的重要性。既然如此，了解清楚旅遊到底人生。想必大家都能了解旅遊的重要性。既然如此，了解清楚旅遊到底人生。</h6>
-          <button class="btn m-0 float-right mt-3">立即訂購</button>
+          <h6 class="brown-color t-l">寵物壽星派對</h6>
+          <h6 class="brown-color t-m mb-2">生日派對讓寵物備感關愛和重視<br>主人也可以親自製作寵物的生日蛋糕<br>( 蛋糕口味依毛孩所需的營養及需求設計 )</h6>
+          <h6 class="brown-color t-m mb-2">活動給主人帶來的「儀式感」也尤為重要<br>更加深了養寵人與寵物之間的感情</h6>
+          <button class="btn m-0 float-right mt-1">立即訂購</button>
         </div>
       </figure>
     </div>
@@ -824,8 +825,9 @@
       <figure class="chatpic-wrap col-6 position-relative">
         <img src="./img/3X/depth-chat1.png" alt="" style="transform: scaleX(-1)">
         <div class="text-wrap2 position-absolute">
-          <h6 class="brown-color t-l">體驗深度旅遊</h6>
-          <h6 class="brown-color t-m mb-2">人生。想必大家都能了解旅遊的重要性。既然如此，了解清楚旅遊到底人生。想必大家都能了解旅遊的重要性。既然如此，了解清楚旅遊到底人生。想必大家都能了解旅遊的重要性。既然如此，了解清楚旅遊到底人生。</h6>
+          <h6 class="brown-color t-l">上山野餐冒險汪</h6>
+          <h6 class="brown-color t-m mb-2">有與寵物們一起玩大地遊戲的經驗嗎？<br>今年冬季最新企劃，帶著毛孩上山玩樂兼野餐</h6>
+          <h6 class="brown-color t-m mb-2">毛孩與爸媽準備好了嗎<br>準備來場難忘的冒險旅程吧！</h6>
           <button class="btn m-0 float-right mt-3">立即訂購</button>
         </div>
       </figure>
@@ -842,8 +844,9 @@
       <figure class="chatpic-wrap col-6 position-relative">
         <img src="./img/3X/depth-chat1.png" alt="">
         <div class="text-wrap position-absolute">
-          <h6 class="brown-color t-l">體驗深度旅遊</h6>
-          <h6 class="brown-color t-m mb-2">人生。想必大家都能了解旅遊的重要性。既然如此，了解清楚旅遊到底人生。想必大家都能了解旅遊的重要性。既然如此，了解清楚旅遊到底人生。想必大家都能了解旅遊的重要性。既然如此，了解清楚旅遊到底人生。</h6>
+          <h6 class="brown-color t-l">萌寵貴婦下午茶</h6>
+          <h6 class="brown-color t-m mb-2">來場約會吧！獨家限定優惠：<br>二十幾家友善寵物餐廳任意挑選</h6>
+          <h6 class="brown-color t-m mb-2">帶著毛孩朝聖網美聖地<br>享受貴婦般的奢華生活</h6>
           <button class="btn m-0 float-right mt-3">立即訂購</button>
         </div>
       </figure>
@@ -960,7 +963,8 @@
     <div class="row">
       <div class="col-12 col-lg-7 mt-4">
         <h4 class="mb-3 t-xxl mb-3">為什麼選擇Petliday？</h4>
-        <h6 class="t-s text-color about-text">你知道世界上有超過百萬名自由行旅客選擇KKday作為旅遊規劃網站嗎？<br>他們透過KKday找到安全又安心的體驗行程！</h6>
+        <h6 class="t-s text-color about-text">毛日旅行社替飼主省去規劃行程的煩惱<br>安心的帶著毛寶貝一起搭專車、共食和入住友善旅店等。</h6>
+        <h6 class="t-s text-color about-text">也提供寵物多元的課程體驗、旅遊必備新手包與專業團隊諮詢的服務<br>讓旅客有多元的選擇！</h6>
         <a href="<?= WEB_ROOT ?>about/about.php">
           <div class="btn m-0 mt-3 btn-more">認識更多</div>
         </a>
