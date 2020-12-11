@@ -48,7 +48,7 @@ body {
   left: 15%;
 }
 .dog-animation {
-  animation: dogjump 0.5s linear alternate;
+  animation: dogjump 0.5s ease-out alternate;
 }
 @keyframes dogjump {
   0% {
@@ -74,11 +74,42 @@ body {
   width: 22px;
   height: 100%;
 }
+.account-icon.bigger {
+  width: 26px;
+  height: 100%;
+}
 .account-icon-or {
   fill: #3c2e26;
 }
 
-.account-icon-or.active {
+/* .account-icon-or.active {
+  fill: #ffa12c;
+} */
+#account-icon6,
+#account-icon5,
+#account-icon4,
+#account-icon3,
+#account-icon2,
+#account-icon1 {
+  fill: #3c2e26;
+}
+
+#account-icon1.active {
+  fill: #ffa12c;
+}
+#account-icon2.active {
+  fill: #ffa12c;
+}
+#account-icon3.active {
+  fill: #ffa12c;
+}
+#account-icon4.active {
+  fill: #ffa12c;
+}
+#account-icon5.active {
+  fill: #ffa12c;
+}
+#account-icon6.active {
   fill: #ffa12c;
 }
 

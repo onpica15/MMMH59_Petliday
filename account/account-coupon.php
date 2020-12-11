@@ -39,11 +39,9 @@
                                         <input class="form-input form-input-btn " id="couponNumber" type="text" name="couponNumber" placeholder="請輸入折扣碼" value="">
                                         <button type="button" name="couponNumberBtn" class="ml-2 form-input-btn btn ">兌換</button>
                                     </div>
-
                                 </div>
                             </div>
                             <div class="row">
-
                                 <div class="col-12 col-lg-6 mt-4">
                                     <div class="coupon">
                                         <!-- <input class="form-radio coupon-check custom-control-input" type="radio" name="coupon-box" id="coupon-check">
