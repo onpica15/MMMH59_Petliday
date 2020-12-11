@@ -197,7 +197,7 @@
           <li class="nav-item m-1 mr-3 d-flex">
             <a class="nav-link" href="<?= WEB_ROOT ?>cart/cart.php">
               <div class="buy-items">
-                <div class="buy-quant"></div>
+                <div class="buy-quant">0</div>
               </div>
               <div class="navbtn nav-cart-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.29 312.24">
@@ -242,7 +242,7 @@
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-coupon.php">優惠券</a>
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-mailbox.php">會員信箱</a>
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-qa.php">Q & A</a>
-                  <a class="member-item" href="<?= WEB_ROOT ?>userlogin/user-logout.php" >登出</a>
+                  <a class="member-item" href="<?= WEB_ROOT ?>userlogin/user-logout.php">登出</a>
 
                   <input type="text" value="<?= $_SESSION['member_avatar']['sid'] ?>" name="user_sid" hidden>
 
@@ -326,11 +326,13 @@
     var count = 0;
 
     var buy_quant = $('.buy-quant');
+    console.log('buy_quant', buy_quant)
 
 
     function countCart(cart) {
       let count = 0;
-      if (count = 0) {
+
+      if (buy_quant.html() == 0) {
         buy_quant.addClass('add');
       }
 
@@ -338,15 +340,15 @@
         count += cart[i].item * 1;
       }
 
+      buy_quant.html(count);
       if (count > 0) {
+        
         buy_quant.removeClass('add');
       }
 
-      buy_quant.html(count);
-
       $('span.total-items').html(count + ' 件商品');
 
-      // console.log('quant', count);
+      console.log('quant', count);
 
     }
 
@@ -416,6 +418,10 @@
       console.log('updateCartList')
       let div = document.querySelector('.cart-box');
       let html = '';
+      <?php if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = [];
+      } ?>
+
 
       <?php foreach ($_SESSION['cart'] as $c) : ?>
         html += `
@@ -441,7 +447,7 @@
       div.innerHTML = html;
     }
 
-    function logout(){
+    function logout() {
 
     }
 

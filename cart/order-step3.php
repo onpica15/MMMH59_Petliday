@@ -24,20 +24,30 @@ $order_sid = $o_rows['sid'];
 
 //SELECT d.*, p.product_name FROM `order_details` d JOIN `products` p ON p.sid = d.product_sid WHERE d.`order_sid` IN (2020126638) 成功
 
-$d_sql = sprintf("SELECT d.*, p.product_name FROM `order_details` d JOIN `products` p ON p.sid = d.product_sid WHERE d.`order_sid` IN ($order_sid)");
+$d_sql = sprintf("SELECT d.*, p.product_name, p.price_man ,p.price_pet FROM `order_details` d JOIN `products` p ON p.sid = d.product_sid WHERE d.`order_sid` IN ($order_sid)");
 
 $d_rows = $pdo->query($d_sql)->fetchAll();
 
-echo json_encode([
-  // 'success' => true,
-  'new_id' => $member_sid,
-  '$o_sql' => $o_sql,
-  '$o_rows' => $o_rows,
-  '$order_sid' => $order_sid,
-  '$d_rows' => $d_rows,
-  // '$order_sid' => $order_sid,
-], JSON_UNESCAPED_UNICODE);
-exit;
+// $de_rows = $d_rows['sid'];
+// $de_rows = [];
+// foreach ($d_rows as $d) {
+
+//   $de_rows = $d['sid'][$d];
+// }
+
+
+
+// echo json_encode([
+//   // 'success' => true,
+//   'new_id' => $member_sid,
+//   '$o_sql' => $o_sql,
+//   '$o_rows' => $o_rows,
+//   '$order_sid' => $order_sid,
+//   '$d_rows' => $d_rows,
+//   // '$de_rows' => $de_rows,
+//   // '$order_sid' => $order_sid,
+// ], JSON_UNESCAPED_UNICODE);
+// exit;
 
 
 if (empty($o_rows)) {
@@ -116,10 +126,10 @@ if (empty($o_rows)) {
           <h5 class="orange-color t-l title1-m form-title order-title">訂購完成</h5>
         </div>
         <div class="col-12 col-lg-6 d-flex order-time">
-          <p class="order-one text-gray t-xs mb-1">訂購時間: 2020/12/18 <?= $o_rows['order_date'] ?></p>
+          <p class="order-one text-gray t-xs mb-1">訂購時間: <?= $o_rows['order_date'] ?></p>
         </div>
         <div class="col-12 col-lg-12 d-flex justify-content-center mb-3">
-          <p class="order-one text-color t-s mb-1 t-bold">訂單編號: d0150505</p>
+          <p class="order-one text-color t-s mb-1 t-bold">訂單編號: <?= $o_rows['sid'] ?></p>
         </div>
         <div class="col-12 d-flex justify-content-center">
           <div class="cute-iocn"></div>
@@ -148,7 +158,7 @@ if (empty($o_rows)) {
           </div>
         </div>
       </div>
-      <?php foreach ($_SESSION['cart'] as $j => $i) : ?>
+      <?php foreach ($d_rows as $j => $i) : ?>
         <div class="row form-box bb-line orderInfo">
           <div class="col-12 all-step-box all-order-box">
             <div class="row ">
@@ -179,20 +189,22 @@ if (empty($o_rows)) {
                   <div class="detail-box-fin">
                     <div class="detail-all detail-time d-flex ">
                       <h6 class=" text-gray t-s">時間：</h6>
-                      <h6 class=" text-gray t-s">2020/12/<?= $i['date'] ?></h6>
+                      <h6 class=" text-gray t-s">2020/12/<?= $i['go-date'] ?></h6>
                     </div>
                     <div class="detail-all detail-quan d-flex ">
                       <h6 class=" text-gray t-s">數量：</h6>
-                      <h6 class=" text-gray t-s"><?= $i['manQ'] ?> x 人 / <?= $i['petQ'] ?> x 寵物</h6>
+                      <h6 class=" text-gray t-s"><?= $i['quantity_man'] ?> x 人 / <?= $i['quantity_pet'] ?> x 寵物</h6>
                     </div>
                   </div>
                   <div class="single-prod-total d-flex justify-content-end bb-line">
-                    <h5 class="t-m brown-color prod-price-single">NT$ <span class="total-box-item"><?= ($i['manQ'] * $i['price_man'] + $i['petQ'] * $i['price_pet']) ?></span></h5>
+                    <h5 class="t-m brown-color prod-price-single">NT$ <span class="total-box-item"><?= ($i['quantity_man'] * $i['price_man'] + $i['quantity_pet'] * $i['price_pet']) ?></span></h5>
                   </div>
 
                   <div class="row d-flex align-content-stretch">
                     <!-- -----人 資料----- -->
-                    <?php foreach ($_SESSION['order']['prod'][$j] as $k => $v) : ?>
+                    <!-- </?php printf('$i[product_sid]', $i['product_sid']);  ?> -->
+                    <?php foreach ($_SESSION['order']['prod'][$i['product_sid']] as $k => $v) : ?>
+
                       <!-- 人 迴圈-->
                       <?php if ($k === 'man') : ?>
                         <?php for ($x = 0; $x < count($v['Name']); $x++) { ?>
@@ -262,8 +274,8 @@ if (empty($o_rows)) {
       <?php endforeach;  ?>
       <div class="row form-box bb-line">
         <div class="col-12 d-flex justify-content-center">
-          <button class="btn-more">檢視訂單</button>
-          <button class="btn-more">繼續逛逛</button>
+          <button class="btn-more" onclick="toOrder()">檢視訂單</button>
+          <button class="btn-more" onclick="toList()">繼續逛逛</button>
         </div>
       </div>
       <div class="row form-box bb-line">
@@ -378,8 +390,15 @@ if (empty($o_rows)) {
     $(".rating-title").show().fadeIn(300);
   });
 
+  toOrder
 
+  function toOrder() {
+    location.href = '<?= WEB_ROOT ?>account/account-order-detail.php'
+  };
 
+  function toList() {
+    location.href = '<?= WEB_ROOT ?>products/pro-list-ajax.php'
+  }
 
 
   // ------JS結束 勿刪到-------

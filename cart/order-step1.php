@@ -421,7 +421,7 @@
                 <div class="detail-box">
                   <div class="detail-all detail-time d-flex justify-content-between">
                     <h6 class=" text-gray t-s ">時間：</h6>
-                    <h6 class=" text-gray t-s">2020/08/<?= $i['date'] ?></h6>
+                    <h6 class=" text-gray t-s">2020/12/<?= $i['date'] ?></h6>
                   </div>
                   <div class="detail-all detail-quan d-flex justify-content-between">
                     <h6 class=" text-gray t-s">數量：</h6>
@@ -704,7 +704,7 @@
   $('.fast-pet3').on('click', function() {
     $('.pet-petName3').val('熊熊');
     $('.pet-Size3').val('小型犬');
-    $('.pet-notes3').val('寶貝看到同類喜歡吠叫，希望工作人員幫忙一下');
+    $('.pet-notes3').val('寶貝看到同類喜歡吠叫，希望工作人員幫忙');
   })
   // ----
 
