@@ -13,10 +13,18 @@ $o_sql = "SELECT * FROM `order_list` ORDER BY `order_date` DESC LIMIT 0 , 1";
 $o_rows = $pdo->query($o_sql)->fetch();
 // $order_sid = $pdo->lastID();
 
-$order_sid = [];
-$order_sids[] = $o['sid'];
+// $order_sid = $o_rows['sid'];
+// $order_sids[] = $o['sid'];
 
-$d_sql = sprintf("SELECT d.*, p.product_name FROM `order_details` d JOIN `products` p ON p.sid = d.product_sid WHERE d.`order_sid` IN (%s)", implode(',', $order_sids));
+// $order_sid = [];
+// foreach ($o_rows as $o) {
+
+$order_sid = $o_rows['sid'];
+// }
+
+//SELECT d.*, p.product_name FROM `order_details` d JOIN `products` p ON p.sid = d.product_sid WHERE d.`order_sid` IN (2020126638) 成功
+
+$d_sql = sprintf("SELECT d.*, p.product_name FROM `order_details` d JOIN `products` p ON p.sid = d.product_sid WHERE d.`order_sid` IN ($order_sid)");
 
 $d_rows = $pdo->query($d_sql)->fetchAll();
 
@@ -25,6 +33,7 @@ echo json_encode([
   'new_id' => $member_sid,
   '$o_sql' => $o_sql,
   '$o_rows' => $o_rows,
+  '$order_sid' => $order_sid,
   '$d_rows' => $d_rows,
   // '$order_sid' => $order_sid,
 ], JSON_UNESCAPED_UNICODE);
