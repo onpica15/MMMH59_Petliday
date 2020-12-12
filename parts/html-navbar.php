@@ -194,10 +194,10 @@
 
           </li>
 
-          <li class="nav-item m-1 mr-3 d-flex">
+          <li class="nav-item m-1 mr-3 d-flex nav-right">
             <a class="nav-link" href="<?= WEB_ROOT ?>cart/cart.php">
               <div class="buy-items">
-                <div class="buy-quant">0</div>
+                <div class="buy-quant"></div>
               </div>
               <div class="navbtn nav-cart-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.29 312.24">
@@ -323,9 +323,9 @@
       $('.nav-item-m').toggleClass('nav-item-m-able');
 
     })
-    var count = 0;
+    let count = 0;
 
-    var buy_quant = $('.buy-quant');
+    let buy_quant = $('.buy-quant');
     console.log('buy_quant', buy_quant)
 
 
@@ -334,6 +334,7 @@
 
       for (let i in cart) {
         count += cart[i].item * 1;
+
       }
 
       if (count == 0) {
@@ -353,7 +354,7 @@
 
     }
 
-    countCart()
+    // countCart()
 
 
     // function additem(cart) {}
@@ -362,6 +363,7 @@
     $.get('<?= WEB_ROOT ?>products/pro-pg-api.php', function(data) {
       console.log(data);
       countCart(data.cart);
+      console.log('data.cart)', data.cart);
       // countCart(cart)
     }, 'json');
 
@@ -414,15 +416,15 @@
       })
     }
     // scrolltop ****************************end
-
+    <?php if (!isset($_SESSION['cart'])) {
+      $_SESSION['cart'] = [];
+    } ?>
     // cart list 
     function updateCartList() {
       console.log('updateCartList')
       let div = document.querySelector('.cart-box');
       let html = '';
-      <?php if (!isset($_SESSION['cart'])) {
-        $_SESSION['cart'] = [];
-      } ?>
+
 
 
       <?php foreach ($_SESSION['cart'] as $c) : ?>
@@ -453,7 +455,7 @@
 
     }
 
-    // updateCartList();
+    updateCartList();
 
     // ------JS結束 勿刪到-------
   </script>
