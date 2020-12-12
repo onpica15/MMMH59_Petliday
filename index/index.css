@@ -45,8 +45,6 @@ span :before {
     display: none;
   }
 
-  
-
   /* 拍立得部分始 */
   .weirdpart {
     margin-top: 64px;
@@ -168,10 +166,10 @@ span :before {
     height: 15px;
   }
 
-  .des-row {
+  /* .des-row {
     overflow-x: scroll;
     justify-content: start;
-  }
+  } */
 
   .des-card {
     flex-shrink: 0;

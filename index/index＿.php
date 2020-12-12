@@ -348,7 +348,7 @@
           </figure>
           <div class="row d-flex flex-column justify-content-center">
             <p class="petliday-title mb-2">一起體驗</p>
-            <p class=" petliday-content">全台最友善的課程與景點<br>帶著寵物們一起上山下海</p>
+            <p class=" petliday-content">全台最友善的課程景點<br>帶寵物們一起上山下海</p>
           </div>
         </div>
 
@@ -365,7 +365,7 @@
     </div>
   </section>
   <!-- 同樂目的地section -->
-  <section id="destination title-fir-m">
+  <section id="destination ">
     <!-- 腳印標題那部分 -->
     <div class="container my-3">
       <div class="row d-flex flex-start align-items-center title-box">
@@ -391,25 +391,25 @@
       <div class="row des-row flex-nowrap">
         <div class="des-card">
           <figure class="m-0 img-box">
-            <img src="./img/scenery-im2.jpg" alt="">
+            <img src="./img/3x/n.png" alt="">
           </figure>
           <h6 class="green-color t-l text-center">北部旅遊</h6>
         </div>
         <div class="des-card">
           <figure class="m-0">
-            <img src="./img/scenery-im1.jpg" alt="">
+            <img src="./img/3x/w.png" alt="">
           </figure>
           <h6 class="green-color t-l text-center">中部旅遊</h6>
         </div>
         <div class="des-card">
           <figure class="m-0">
-            <img src="./img/scenery-im4.jpg" alt="">
+            <img src="./img/3x/s.png" alt="">
           </figure>
           <h6 class="green-color t-l text-center">南部旅遊</h6>
         </div>
         <div class="des-card">
           <figure class="m-0">
-            <img src="./img/scenery-im3.jpg" alt="">
+            <img src="./img/3x/e.png" alt="">
           </figure>
           <h6 class="des-card-text green-color t-l text-center">東部、離島旅遊</h6>
         </div>
@@ -417,28 +417,28 @@
     </div>
     <!-- 同樂目的地卡片 m -->
     <div class="all-des-m only-m">
-      <div class="container-fluid d-flex des-m-card-wrap">
+      <div class="des-m-card-wrap">
 
         <div class="des-m-card">
-          <img src="./img/3x/christmas1.png" alt="">
+          <img src="./img/3x/n.png" alt="">
           <div class="des-m-card-bg"></div>
           <div class="des-m-title">北部旅遊<br> <span class="des-m-title2">(共32個行程)</span> </div>
         </div>
 
         <div class="des-m-card">
-          <img src="./img/3x/christmas1.png" alt="">
+          <img src="./img/3x/w.png" alt="">
           <div class="des-m-card-bg"></div>
           <div class="des-m-title">中部旅遊<br> <span class="des-m-title2">(共個行程)</span> </div>
         </div>
 
         <div class="des-m-card">
-          <img src="./img/3x/christmas1.png" alt="">
+          <img src="./img/3x/s.png" alt="">
           <div class="des-m-card-bg"></div>
           <div class="des-m-title">南部旅遊<br> <span class="des-m-title2">(共3個行程)</span> </div>
         </div>
 
         <div class="des-m-card">
-          <img src="./img/3x/christmas1.png" alt="">
+          <img src="./img/3x/e.png" alt="">
           <div class="des-m-card-bg"></div>
           <div class="des-m-title">東部、離島旅遊<br> <span class="des-m-title2">(共3個行程)</span> </div>
         </div>
@@ -451,6 +451,7 @@
 
 <!-- 精選行程section -->
 <section id="tour">
+  <div class="tour-m"></div>
   <!-- 腳印標題那部分 -->
   <div class="container my-5">
     <div class="row d-flex flex-start align-items-center title-box">
@@ -889,7 +890,7 @@
       <figure class="chatpic-wrap col-6 position-relative">
         <img src="./img/3X/depth-chat1.png" alt="">
         <div class="text-wrap position-absolute">
-          <h6 class="brown-color t-l">寵物壽星派對</h6>
+          <h6 class="brown-color t-l">◎ 寵物壽星派對</h6>
           <h6 class="brown-color t-m mb-2">生日派對讓寵物備感關愛和重視<br>主人也可以親自製作寵物的生日蛋糕<br>( 蛋糕口味依毛孩所需的營養及需求設計 )</h6>
           <h6 class="brown-color t-m mb-2">活動給主人帶來的「儀式感」也尤為重要<br>更加深了養寵人與寵物之間的感情</h6>
           <button class="btn m-0 float-right mt-1">立即訂購</button>
@@ -902,7 +903,7 @@
       <figure class="chatpic-wrap col-6 position-relative">
         <img src="./img/3X/depth-chat1.png" alt="" style="transform: scaleX(-1)">
         <div class="text-wrap2 position-absolute">
-          <h6 class="brown-color t-l">上山野餐冒險汪</h6>
+          <h6 class="brown-color t-l">◎ 上山野餐冒險汪</h6>
           <h6 class="brown-color t-m mb-2">有與寵物們一起玩大地遊戲的經驗嗎？<br>今年冬季最新企劃，帶著毛孩上山玩樂兼野餐</h6>
           <h6 class="brown-color t-m mb-2">毛孩與爸媽準備好了嗎<br>準備來場難忘的冒險旅程吧！</h6>
           <button class="btn m-0 float-right mt-3">立即訂購</button>
@@ -921,7 +922,7 @@
       <figure class="chatpic-wrap col-6 position-relative">
         <img src="./img/3X/depth-chat1.png" alt="">
         <div class="text-wrap position-absolute">
-          <h6 class="brown-color t-l">萌寵貴婦下午茶</h6>
+          <h6 class="brown-color t-l">◎ 萌寵貴婦下午茶</h6>
           <h6 class="brown-color t-m mb-2">來場約會吧！獨家限定優惠：<br>二十幾家友善寵物餐廳任意挑選</h6>
           <h6 class="brown-color t-m mb-2">帶著毛孩朝聖網美聖地<br>享受貴婦般的奢華生活</h6>
           <button class="btn m-0 float-right mt-3">立即訂購</button>
@@ -959,7 +960,7 @@
         <img src="./img/3X/1.png" alt="">
       </div>
       <div class="col-12 pet-m-box  mb-4">
-        <h4 class="t-l brown-color">寵物壽星派對</h4>
+        <h4 class="t-l brown-color">◎ 寵物壽星派對</h4>
         <h6 class="t-m text-color">生日派對讓寵物備感關愛和重視，
           主人也可以親自製作寵物的生日蛋糕
           ( 蛋糕口味依毛孩所需的營養及需求設計 )，
@@ -975,7 +976,7 @@
         <img src="./img/3X/2.png" alt="">
       </div>
       <div class="col-12 pet-m-box  mb-4">
-        <h4 class="t-l brown-color">上山野餐冒險汪</h4>
+        <h4 class="t-l brown-color">◎ 上山野餐冒險汪</h4>
         <h6 class="t-m text-color">有與寵物們一起玩大地遊戲的經驗嗎？<br>
           今年冬季最新企劃，帶著毛孩上山玩樂兼野餐，
           毛孩與爸媽準備好了嗎，
@@ -990,7 +991,7 @@
         <img src="./img/3X/3.png" alt="">
       </div>
       <div class="col-12 pet-m-box  mb-4">
-        <h4 class="t-l brown-color">萌寵貴婦下午茶</h4>
+        <h4 class="t-l brown-color">◎ 萌寵貴婦下午茶</h4>
         <h6 class="t-m text-color">來場約會吧！獨家限定優惠：<br>
           二十幾家友善寵物餐廳任意挑選<br>
           帶著毛孩朝聖網美聖地<br>

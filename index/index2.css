@@ -69,7 +69,7 @@ span :before {
   line-height: 20px;
 }
 .change-order-wrap {
-  background: url(./img/3X/bg2.png) top left no-repeat;
+  background: url(./img/3X/bg3.png) top left no-repeat;
   /* width: 105%; */
   width: 100vw;
   background-size: cover;
@@ -298,7 +298,7 @@ span :before {
 /* ----------------------------------------------- */
 @media (max-width: 450px) {
   body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
   .title-box {
     margin-top: 50px;
@@ -374,7 +374,7 @@ span :before {
   }
   .title-fir-m {
     padding-top: 100px;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
   }
   .title-fir {
     padding-top: 50px;
@@ -391,8 +391,12 @@ span :before {
     font-size: 18px;
   }
   .all-des-m {
-    /* width: 375px; */
-    overflow-x: scroll;
+    width: 600px;
+    /* overflow-x: scroll !important; */
+    overflow-x: visible;
+  }
+  .des-m-card-wrap {
+    display: flex;
   }
   .des-m-card {
     position: relative;
@@ -443,7 +447,7 @@ span :before {
     margin-bottom: 0px;
   }
   .pet-m-img {
-    width: 350px;
+    width: 370px;
     height: 250px;
     /* background-color: red; */
   }
@@ -455,7 +459,8 @@ span :before {
   .pet-m-box {
     width: 350px;
     /* height: 250px; */
-    background-color: fff;
+    background-color: rgba(255, 255, 255, 0.7);
+
     border: 1px solid #ffa12c;
     border-radius: 3px 3px 30px 3px;
     padding: 30px;
@@ -471,9 +476,9 @@ span :before {
     /* padding-right: 30px; */
   }
   .pet-bg-fixd {
-    background: url(./img/3X/bg-m.png) top right no-repeat;
-    /* background-size: 300px;
-    background-attachment: fixed; */
+    background: url(./img/3X/bg-m.png) right 10px no-repeat;
+    background-size: 300px;
+    background-attachment: fixed;
   }
   .btn-more {
     line-height: 44px;
@@ -523,5 +528,28 @@ span :before {
     margin: 0;
     margin-top: 20px;
     margin-left: auto;
+  }
+  .change-order-wrap {
+    /* position: absolute; */
+    background: url(./img/3X/bg4.png) top left no-repeat;
+    /* width: 105%; */
+    /* width: 100vw; */
+    /* z-index: -2; */
+
+    overflow-x: hidden;
+    /* overflow-y: visible; */
+  }
+  #tour {
+    position: relative;
+  }
+  .tour-m {
+    height: 300px;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+    top: -50px;
+
+    background: url(./img/3X/bg4.png) top left no-repeat;
+    background-size: cover;
   }
 }
