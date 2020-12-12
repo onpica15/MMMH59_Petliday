@@ -74,9 +74,14 @@
               <div class="row">
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">聯絡家長資訊</h5>
                 <h5 class=" col-7 text-gray t-xs mb-2">若訂單有任何變動，主要聯繫人</h5>
-                <div class="col-5 d-flex justify-content-end">
-                  <input type="checkbox" id="autoUpdate" class="" checked></input>
-                  <label for="autoUpdate" class="text-gray t-xs mb-2">同步更新會員資料</label>
+                <div class="col-5 d-flex justify-content-end align-items-center flex-row checkbox-user-pc">
+                  <div class="checkbox-user ">
+                    <input type="checkbox" id="autoUpdate" class="" checked></input>
+                    <label for="autoUpdate" class="text-gray t-xs  autoUpdate"> </label>
+                  </div>
+                  <span class="t-s ml-2">同步更新會員資料</span>
+
+
                 </div>
               </div>
 
@@ -84,7 +89,8 @@
               <div class="row">
                 <div class="col-12 col-lg-6 d-flex flex-column one-form">
                   <label class="text-color t-s label-all" name="mainLastName" for="mainLastName">姓氏：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
-                  <input id="mainLastName" class="form-input form-error" type="text" name="mainLastName" placeholder="例：陳">
+                  <!--  如果錯 form-error -->
+                  <input id="mainLastName" class="form-input " type="text" name="mainLastName" placeholder="例：陳">
                   <small class="form-feedback danger-color t-xs"></small>
                 </div>
                 <div class="col-12 col-lg-6 d-flex flex-column one-form">

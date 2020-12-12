@@ -282,12 +282,15 @@ if (empty($o_rows)) {
         <div class="col-12 all-step-box all-bone-box">
           <div class="row form-box-fin  pb-5 another-bg">
 
-            <div class="col-12 col-lg-12 d-flex justify-content-center mb-3 ">
+            <div class="col-12 d-flex justify-content-center  one-form  order-img justinfo">
+              <img src="imgs/3x/order-1.png" alt="">
+            </div>
 
+            <div class="col-12 col-lg-12 d-flex justify-content-center mb-3  bone-box-title">
               <h5 class="orange-color t-l title1-m form-title order-title">評分訂購流程滿意程度賺積分！</h5>
             </div>
 
-            <div class="col-12 d-flex justify-content-center mt-3 bone-box">
+            <div id="bone-box" class="col-12 mt-3 bone-box">
               <div class="rating-info position-relative">
                 <form>
                   <div class="rating-bone">
@@ -311,13 +314,6 @@ if (empty($o_rows)) {
 
                 </form>
               </div>
-
-
-
-
-
-
-
             </div>
 
             <div class="col-12 d-flex justify-content-center  one-form">
@@ -325,6 +321,9 @@ if (empty($o_rows)) {
               <input id="review" class="form-input form-input-review" type="text" name="review" placeholder="更多流程建議都歡迎與我們分享!">
 
             </div>
+
+
+
             <div class="col-12  mt-3">
               <div class="a-style w-100 d-flex justify-content-center">
                 <button class="btn btn-more-review">送出評論</button>
@@ -399,6 +398,18 @@ if (empty($o_rows)) {
   function toList() {
     location.href = '<?= WEB_ROOT ?>products/pro-list-ajax.php'
   }
+
+
+
+  $('.btn-more-review').click(function() {
+    console.log('hihi')
+    $('h5.form-title').html('感謝評論，預祝與寶貝旅途愉快！').removeClass('orange-color').css(
+      'color', 'brown-color')
+    $('#bone-box').css('display', 'none')
+    $('.form-input-review').css('display', 'none')
+    $('.btn-more-review').css('display', 'none')
+    $('.order-img').removeClass('justinfo').css('padding-top', '60px')
+  })
 
 
   // ------JS結束 勿刪到-------
