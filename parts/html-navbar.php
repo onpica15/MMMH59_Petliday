@@ -4,7 +4,7 @@
 <body>
 
   <header id="nav-bar">
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
       <div class="container">
         <div class="logo-search d-flex">
           <a class="navbar-brand nav-pc" href="<?= WEB_ROOT ?>index/index＿.php">
@@ -223,8 +223,8 @@
           <!-- 登入後 -->
           <?php if (isset($_SESSION['member_avatar'])) : ?>
 
-            <li class="nav-item loggin m-1">
-              <div class="nav-link d-flex align-items-center" href="#">
+            <li class="nav-item loggin ">
+              <div class="nav-link d-flex align-items-center " href="#">
                 <div class="navbtn nav-user-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274.17 264.67">
                     <g id="user-icon_2" data-name="user-icon 2">

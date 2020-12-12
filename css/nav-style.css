@@ -1,10 +1,11 @@
-/* * { */
+* {
   /* outline: 1px solid red; */
-/* } */
-html, body{
-  transition: .5s;
-  scroll-behavior:smooth;
-  }
+}
+html,
+body {
+  transition: 0.5s;
+  scroll-behavior: smooth;
+}
 
 #nav-bar {
   z-index: 100;
@@ -13,6 +14,7 @@ html, body{
   top: 0;
   width: 100vw;
   height: 65px;
+  /* background-color: #fff; */
 }
 .navbar {
   background-color: #fff;
@@ -61,6 +63,8 @@ html, body{
 .nav-cart-btn svg {
   fill: #555;
   transition: 0.2s;
+  position: relative;
+  top: 4px;
 }
 
 .nav-user-btn {
@@ -169,7 +173,7 @@ svg#search-btn-focus {
   color: #fff;
   position: absolute;
   background-color: #e03d2d;
-  top: 5px;
+  top: 7px;
   left: -22px;
   /* transform: translateY(-50%); */
 
