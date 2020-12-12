@@ -91,7 +91,7 @@
   @media(max-width: 400px) {
     .card {
       width: 330px;
-      height: 350px;
+      height: 270px;
       border: none;
       box-shadow: 1px 2px 8px rgba(200, 200, 200, .5);
       position: relative;
@@ -160,7 +160,7 @@
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 <!-- 拍立得section 電腦版-->
 <section id="hero-polaroid">
-<div class="pdslogan">
+  <div class="pdslogan">
     <h1>渡假也要與寶貝一起享樂</h1>
     <p>準備要與毛寶貝去哪放肆玩？</p>
     <div class="search-box sbox-hero">
@@ -476,7 +476,7 @@
   <div class="container tour-cards">
     <div class="row d-flex tour-row flex-nowrap justify-content-center">
 
-      <div class="col-4 tour-card">
+      <div class="col-12 col-lg-4 tour-card">
         <figure>
           <img src="./img/3x/christmas1.png" alt="">
         </figure>
@@ -503,8 +503,7 @@
         </div>
 
       </div>
-
-      <div class="col-4 tour-card">
+      <div class="col-12 col-lg-4 tour-card">
         <figure>
           <img src="./img/3x/christmas2.png" alt="">
         </figure>
@@ -531,7 +530,7 @@
         </div>
 
       </div>
-      <div class="col-4 tour-card">
+      <div class="col-12 col-lg-4 tour-card">
         <figure>
           <img src="./img/3x/christmas3.png" alt="">
         </figure>
@@ -561,9 +560,87 @@
     </div>
   </div>
   <!-- 手機版 -->
-  <div class="container tour-cards-m">
-    <div class="row d-flex tour-row-m justify-content-center">
+  <div class="container tour-cards-m " id="tour-cards-m">
+    <div class="d-flex tour-row-m justify-content-center mb-4">
+      <div class="tour-card-m-img">
 
+        <img src="./img/3x/christmas1.png" alt="">
+
+        <div class="row w-70 mx-auto pb-3 cards-text-m">
+          <h6 class="t-l mt-5 my-3 mx-auto " style="text-align: center; line-height: 26px">【 聖誕節寫真 】<br>超萌裝扮！寵物聖誕攝影</h6>
+          <div class=" d-flex align-items-center justify-content-between  w-100">
+            <div class=" d-flex flex-row align-items-center ">
+              <div class="star mr-2 ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
+                  <defs></defs>
+                  <g id="圖層_2" data-name="圖層 2">
+                    <g id="圖層_1-2" data-name="圖層 1">
+                      <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div class="rate text-gray t-m mb-0">4.5</div>
+              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">78則評論</u></div>
+            </div>
+            <div class="pr-2 t-l orange-color">$1,299</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex tour-row-m justify-content-center mb-4">
+      <div class="tour-card-m-img">
+
+        <img src="./img/3x/christmas2.png" alt="">
+
+        <div class="row w-70 mx-auto pb-3 cards-text-m">
+          <h6 class="t-l mt-5 my-3 mx-auto " style="text-align: center; line-height: 26px">【 聖誕節美容 】<br>亮麗豋場！毛小孩也想當網美</h6>
+          <div class=" d-flex align-items-center justify-content-between  w-100">
+            <div class=" d-flex flex-row align-items-center ">
+              <div class="star mr-2 ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
+                  <defs></defs>
+                  <g id="圖層_2" data-name="圖層 2">
+                    <g id="圖層_1-2" data-name="圖層 1">
+                      <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div class="rate text-gray t-m mb-0">4.8</div>
+              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">113則評論</u></div>
+            </div>
+            <div class="pr-2 t-l orange-color">$880</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex tour-row-m justify-content-center mb-4">
+      <div class="tour-card-m-img">
+
+        <img src="./img/3x/christmas3.png" alt="">
+
+        <div class="row w-70 mx-auto pb-3 cards-text-m">
+          <h6 class="t-l mt-5 my-3 mx-auto " style="text-align: center; line-height: 26px">【 聖誕節派對 】<br>寶貝聚集！交換禮物玩起來</h6>
+          <div class=" d-flex align-items-center justify-content-between  w-100">
+            <div class=" d-flex flex-row align-items-center ">
+              <div class="star mr-2 ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 63.4" width="14px">
+                  <defs></defs>
+                  <g id="圖層_2" data-name="圖層 2">
+                    <g id="圖層_1-2" data-name="圖層 1">
+                      <path class="cls-3" d="M51.47,63.4A3.55,3.55,0,0,1,49.84,63L33.15,54.22,16.45,63a3.49,3.49,0,0,1-5.07-3.69l3.18-18.59L1.06,27.55a3.5,3.5,0,0,1,1.94-6l18.66-2.71L30,2a3.5,3.5,0,0,1,6.28,0l8.35,16.92L63.3,21.58a3.5,3.5,0,0,1,1.94,6L51.74,40.71,54.92,59.3a3.5,3.5,0,0,1-3.45,4.1Z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div class="rate text-gray t-m mb-0">4.9</div>
+              <div class="rate-all t-xs ml-2"><u class="text-gray mb-0">95則評論</u></div>
+            </div>
+            <div class="pr-2 t-l orange-color">$699</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -881,21 +958,51 @@
       <div class="col-12 pet-m-img">
         <img src="./img/3X/1.png" alt="">
       </div>
-      <div class="col-12 pet-m-box  mb-4"></div>
+      <div class="col-12 pet-m-box  mb-4">
+        <h4 class="t-l brown-color">寵物壽星派對</h4>
+        <h6 class="t-m text-color">生日派對讓寵物備感關愛和重視，
+          主人也可以親自製作寵物的生日蛋糕
+          ( 蛋糕口味依毛孩所需的營養及需求設計 )，
+          活動給主人帶來的「儀式感」也尤為重要，
+          更加深了養寵人與寵物之間的感情</h6>
+        <div class="card-btn">
+          <div class="btn card-btn-m">立即訂購</div>
+        </div>
+      </div>
     </div>
     <div class="row">
       <div class="col-12 pet-m-img mt-3 d-flex flex-row-reverse">
         <img src="./img/3X/2.png" alt="">
       </div>
-      <div class="col-12 pet-m-box  mb-4"></div>
+      <div class="col-12 pet-m-box  mb-4">
+        <h4 class="t-l brown-color">上山野餐冒險汪</h4>
+        <h6 class="t-m text-color">有與寵物們一起玩大地遊戲的經驗嗎？<br>
+          今年冬季最新企劃，帶著毛孩上山玩樂兼野餐，
+          毛孩與爸媽準備好了嗎，
+          準備來場難忘的冒險旅程吧！</h6>
+        <div class="card-btn">
+          <div class="btn card-btn-m">立即訂購</div>
+        </div>
+      </div>
     </div>
     <div class="row">
       <div class="col-12 pet-m-img mt-3">
         <img src="./img/3X/3.png" alt="">
       </div>
-      <div class="col-12 pet-m-box  mb-4"></div>
+      <div class="col-12 pet-m-box  mb-4">
+        <h4 class="t-l brown-color">萌寵貴婦下午茶</h4>
+        <h6 class="t-m text-color">來場約會吧！獨家限定優惠：<br>
+          二十幾家友善寵物餐廳任意挑選<br>
+          帶著毛孩朝聖網美聖地<br>
+          享受貴婦般的奢華生活</h6>
+        <div class="card-btn">
+          <div class="btn card-btn-m">立即訂購</div>
+        </div>
+      </div>
     </div>
+
   </div>
+
 
 </section>
 
@@ -1002,17 +1109,22 @@
 </script>
 <!-- // ------JS開始 以上勿刪------- -->
 <script>
-  $('.search-box.nav-pc').css('opacity','0');
-  $(window).scroll(function(){
+  $('.search-box.nav-pc').css('opacity', '0');
+  $(window).scroll(function() {
     let nowTop = $(window).scrollTop();
     console.log(nowTop);
-    if(nowTop < 400){
-      $('.pdslogan').css({'opacity':'1','scale':'1'});
-      $('.search-box.nav-pc').css('opacity','0');
-    }
-    else{
-      $('.pdslogan').css({'opacity':'0','scale':'0.3'});
-      $('.search-box.nav-pc').css('opacity','1');
+    if (nowTop < 400) {
+      $('.pdslogan').css({
+        'opacity': '1',
+        'scale': '1'
+      });
+      $('.search-box.nav-pc').css('opacity', '0');
+    } else {
+      $('.pdslogan').css({
+        'opacity': '0',
+        'scale': '0.3'
+      });
+      $('.search-box.nav-pc').css('opacity', '1');
     }
     // if(nowTop > 400){
     //   $('.pdslogan').css({'opacity':'0','scale':'0.3'});

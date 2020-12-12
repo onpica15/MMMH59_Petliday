@@ -332,19 +332,20 @@
     function countCart(cart) {
       let count = 0;
 
-      if (buy_quant.html() == 0) {
-        buy_quant.addClass('add');
-      }
-
       for (let i in cart) {
         count += cart[i].item * 1;
       }
 
-      buy_quant.html(count);
-      if (count > 0) {
-        
+      if (count == 0) {
+        console.log('hi')
+        console.log('html', count)
+        buy_quant.addClass('add');
+      } else if (count > 0) {
+        console.log('bye')
+        console.log('bye', count)
         buy_quant.removeClass('add');
       }
+      buy_quant.html(count);
 
       $('span.total-items').html(count + ' 件商品');
 
@@ -361,6 +362,7 @@
     $.get('<?= WEB_ROOT ?>products/pro-pg-api.php', function(data) {
       console.log(data);
       countCart(data.cart);
+      // countCart(cart)
     }, 'json');
 
 

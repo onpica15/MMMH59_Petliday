@@ -144,6 +144,7 @@ $('.btn-twin').on('click', function() {
     console.log('date', date);
     console.log('total', total);
     console.log('total1',total1);
+    countCart()
 
     $.get('pro-pg-api.php', {
         sid: sid,
@@ -160,6 +161,7 @@ $('.btn-twin').on('click', function() {
         // countCart(data);
         updateCartList(data);
         const buy_quant = $('.buy-quant');
+        
 
       buy_quant.html(Object.keys(data.cart).length);
       
