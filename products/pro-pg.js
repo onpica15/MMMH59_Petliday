@@ -89,13 +89,14 @@ function calcTotal() {
 // $('.select-price p').text('NTD$ ' + dallorCommas(total));
 
 
-// 加入購物車按鈕按下：cart hover show****************
+// 總金額計算****************
 
 $('.change-btn').on('click',function(){
     calcTotal()
-  
 })
-
+$('.change-box input').on('change',function(){
+    calcTotal()
+})
 //選擇區塊資料丟進session['cart'] start**********************************
 
 function updateCartList(data) {
@@ -182,7 +183,7 @@ $('.btn-twin').on('click', function() {
     }, 500);
     setTimeout(() => {
         $('.cart-hover').css('opacity', '0')
-    }, 4000);
+    }, 6000);
     
 })
 

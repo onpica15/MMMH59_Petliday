@@ -118,6 +118,7 @@ body{
     list-style: none;
     border-radius: 50%;
     margin: 40px 20px;
+    cursor: pointer;
 }
 .trip-select a{
     width: 156px;
@@ -128,6 +129,7 @@ body{
     margin: 8px;
     font-weight: 500;
     letter-spacing: 3px;
+    cursor: pointer;
 }
 .trip-select a:hover{
 text-decoration: none;
@@ -157,6 +159,7 @@ color: #00907c;
 }
 .order select{
     width: 150px;
+    cursor: pointer;
 }
 .order .form-group{
     display: flex;
@@ -223,6 +226,7 @@ color: #00907c;
     }
     .heart{
         width: 18px;
+        cursor: pointer;
     }
     .heart img{
         width: 100%;
@@ -336,6 +340,9 @@ color: #00907c;
     .arrow-page img{
         width: 100%;
         object-fit: contain;
+    }
+    .arrow {
+        cursor: pointer;
     }
 
     /* RWD 425 start */

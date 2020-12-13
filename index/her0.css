@@ -59,6 +59,7 @@ body {
     width: 70vw;
     height: 80vh;
   }
+  /* cursor: pointer; */
   .signature{
     bottom: 0;
     right: -100px;
