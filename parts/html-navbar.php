@@ -214,7 +214,7 @@
 
           <!-- 登入前 -->
           <?php if (!isset($_SESSION['member_avatar'])) : ?>
-            <li class="nav-item loggin">
+            <li class="nav-item loggin d-flex align-items-center">
               <a class="nav-link brown-color t-m login-text" data-toggle="modal" data-target="#exampleModalCenter">登入/註冊</a>
             </li>
 
@@ -223,8 +223,8 @@
           <!-- 登入後 -->
           <?php if (isset($_SESSION['member_avatar'])) : ?>
 
-            <li class="nav-item loggin ">
-              <div class="nav-link d-flex align-items-center " href="#">
+            <li class="nav-item loggin d-flex align-items-center">
+              <div class="nav-link d-flex align-items-center m-0" href="#">
                 <div class="navbtn nav-user-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274.17 264.67">
                     <g id="user-icon_2" data-name="user-icon 2">
@@ -234,7 +234,7 @@
                     </g>
                   </svg>
                 </div>
-                <a class="nav-link only-pc"><?= $_SESSION['member_avatar']['name'] ?></a>
+                <a class="nav-link only-pc p-2"><?= $_SESSION['member_avatar']['name'] ?></a>
                 <div class="member-items only-pc ">
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-profile.php">會員資料</a>
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-order.php">我的訂單</a>
