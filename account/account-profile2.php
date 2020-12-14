@@ -48,7 +48,7 @@ $rows = $stmt->fetchAll();
 
                                         <!-- uploadimg -->
                                         <?php
-                                        require __DIR__ . './processForm.php';
+                                        require __DIR__ . '/processForm.php';
                                         ?>
                                         <!-- <div class="form-group text-center"> -->
                                         <div class="member-img   position-absolute">
