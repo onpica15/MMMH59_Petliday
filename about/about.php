@@ -43,31 +43,31 @@
 <div class="phone-imgs">
     <hero>
         <div class="hero d-block d-sm-none">
-            <img src="./img/about_m_1.png">
+            <img src="./img/about_m_hero.png">
         </div>
     </hero>
 
     <section1>
         <div class="section1 d-block d-sm-none">
-            <img src="./img/about_m_2.png">
+            <img src="./img/about_m_sec1.png">
         </div>
     </section1>
 
     <section2>
         <div class="section2 d-block d-sm-none">
-            <img src="./img/about_m_3.png">
+            <img src="./img/about_m_sec2.png">
         </div>
     </section2>
 
     <section3>
         <div class="section3 d-block d-sm-none">
-            <img src="./img/about_m_4.png">
+            <img src="./img/about_m_sec3.png">
         </div>
     </section3>
 
     <section4>
         <div class="section4 d-block d-sm-none">
-            <img src="./img/about_m_5.png">
+            <img src="./img/about_m_sec4.png">
         </div>
     </section4>
 </div>
