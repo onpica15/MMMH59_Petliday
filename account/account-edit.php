@@ -62,7 +62,7 @@
                 </div>
                 <!-- uploadimg -->
                 <?php
-                require __DIR__ . './processForm.php';
+                require __DIR__ . '/processForm.php';
                 ?>
 
                 <div class="avatar-img">
