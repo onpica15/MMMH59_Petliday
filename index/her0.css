@@ -31,9 +31,9 @@ body {
     -moz-filter:blur(20px);
     -webkit-filter:blur(20px); */
 }
-.pdslogan h1 {
-  /* fz */
-}
+/* .pdslogan h1 {
+  fz
+} */
 @media (min-width: 1200px) {
   .search-bar.sbar-hero {
     width: 480px;
@@ -152,7 +152,7 @@ body {
   .layer {
     padding: 10px;
     box-sizing: border-box;
-    cursor: auto;
+    cursor: default;
     transform-style: preserve-3d;
   }
   .up10 {
