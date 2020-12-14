@@ -2,7 +2,6 @@
   outline: auto;
 } */
 
-
 /* 右半部 */
 /* search-bar */
 .search-bar-m {
@@ -20,7 +19,7 @@
   color: white;
   font-size: 16px;
 }
-.btn-2{
+.btn-2 {
   margin: 20px 36px 0 27px;
 }
 @media (max-width: 991.98px) {
@@ -67,8 +66,9 @@
     margin: 20px 13px 0 13px;
   }
 }
+
 /* 手風琴 */
-.collapsible {
+/* .collapsible {
   color: #444;
   cursor: pointer;
   padding: 18px;
@@ -80,7 +80,7 @@
   margin: 10px auto 0 auto;
   position: relative;
   background-color: #fff;
-}
+} */
 
 /* .active, */
 .collapsible:hover {
@@ -99,6 +99,20 @@
   box-shadow: 0px 2px 10px rgba(200, 200, 200, 0.5);
 }
 @media (min-width: 991.99px) {
+  .collapsible {
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 745px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    margin: 10px auto 0px 40px;
+    position: relative;
+    background-color: #fff;
+  }
+
   i.fa-chevron-down {
     position: absolute;
     top: calc(50% - 10px);
