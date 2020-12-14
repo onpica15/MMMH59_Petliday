@@ -36,9 +36,9 @@
                         <!-- search bar -->
                         <div class="container">
                             <div class="row search-bar-m">
-                                <div class="search-icon-m col-xl-1"></div>
-                                <div class="search-content-m col-xl-9"></div>
-                                <div class="search-btn-m col-xl-2 p-0">搜尋</div>
+                    
+                                <div class="search-content-m col-xl-10"></div>
+                                <div class="search-btn-mm col-xl-2 p-0">搜尋</div>
                             </div>
                         </div>
                         <!-- 2 btns -->
