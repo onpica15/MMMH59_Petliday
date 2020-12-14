@@ -7,6 +7,22 @@
 
 
 <?php include __DIR__ . '/../parts/html-navbar.php' ?>
+
+<?php
+
+$sql = "SELECT `amount` FROM `order_list` ORDER BY `order_list`.`sid` DESC LIMIT 1";
+$output['sql'] = $sql;
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+
+if ($stmt->rowCount() > 0) {
+    $amount = $stmt->fetch()['amount'];
+}
+
+?>
+
+
+
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 <section id="acount">
     <div class="container">
@@ -59,7 +75,7 @@
                                     </div>
                                 </div>
                                 <div class="col-10 col-lg-3 d-flex flex-column ml-auto align-self-end">
-                                    <h5 class="mb-5 ml-auto t-m brown-color prod-price-in">NT$ 3000</h5>
+                                    <h5 class="mb-5 ml-auto t-m brown-color prod-price-in">NT$ <?= $amount ?></h5>
                                     <h5 class="ml-auto green-color t-l title1-m">訂單已完成</h5>
                                 </div>
                             </div>
