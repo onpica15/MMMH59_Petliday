@@ -592,3 +592,8 @@ form.is-editing .btn-edit {
   color: #ccc !important;
   opacity: 1; /* Firefox */
 }
+
+.qrcode {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
