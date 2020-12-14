@@ -159,7 +159,7 @@
               <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>account/account-qa.php">Q & A</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>products/pro-list.php">登出</a>
+              <a class="nav-link item-m item-m-btm" href="<?= WEB_ROOT ?>userlogin/user-logout.php">登出</a>
             </li>
           </ul>
         </div>
