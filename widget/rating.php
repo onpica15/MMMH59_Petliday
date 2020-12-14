@@ -89,28 +89,28 @@ let footertop = $('footer').offset().top
 
   $(function(){
     $(window).scroll(function() {
-      if ($(window).scrollTop() < 3200) {
+      if ($(window).scrollTop() < 2700) {
         $('.index-rating').css('opacity', '0');
-      } else if ($(window).scrollTop() > 3200) {
+      } else if ($(window).scrollTop() > 2700) {
         console.log('hi')
         $('.index-rating').css('opacity', '1');
       
       }
-    //   console.log('$(window).scrollTop()',$(window).scrollTop());
+      console.log('$(window).scrollTop()',$(window).scrollTop());
     //   console.log('footer ',$('footer').offset().top);
      console.log('window',$(window).height());
     //  let ratingfixed = ($(window).height())
     //   console.log('ratingfixed',ratingfixed)
       if($(window).width() > 992){
         // console.log('hi 992')
-        if($(window).scrollTop() >= 5000){
+        if($(window).scrollTop() >= 4350){
           // console.log('hi absolute')
-          $('.index-rating').css('position','absolute').css('bottom',$(document).height() -  $('footer').offset().top + 25)
+          $('.index-rating').css('position','absolute').css('bottom',$(document).height() -  $('footer').offset().top +25)
         }
-        else if($(window).scrollTop() < 5000){
+        else if($(window).scrollTop() < 4350){
           // console.log('hi fixed')
-          $('.index-rating').css('position','fixed').css('bottom',$(document).height() -  footertop+ 25);
-          // $('.index-rating').css('position','fixed').css('bottom',100);
+          // $('.index-rating').css('position','fixed').css('bottom',$(document).height() -  footertop+ 25);
+          $('.index-rating').css('position','fixed').css('bottom',100);
         }
       }
       else{

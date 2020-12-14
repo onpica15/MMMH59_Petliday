@@ -13,7 +13,7 @@ body {
     position: fixed;
     bottom: 100px;
     opacity: 0;
-    transition: 0.5s
+    /* transition: 0.5s; */
   }
 
 /* 外層 */
