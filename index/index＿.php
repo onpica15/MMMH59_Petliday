@@ -428,19 +428,19 @@
         <div class="des-m-card">
           <img src="./img/3x/w.png" alt="">
           <div class="des-m-card-bg"></div>
-          <div class="des-m-title">中部旅遊<br> <span class="des-m-title2">(共個行程)</span> </div>
+          <div class="des-m-title">中部旅遊<br> <span class="des-m-title2">(共48個行程)</span> </div>
         </div>
 
         <div class="des-m-card">
           <img src="./img/3x/s.png" alt="">
           <div class="des-m-card-bg"></div>
-          <div class="des-m-title">南部旅遊<br> <span class="des-m-title2">(共3個行程)</span> </div>
+          <div class="des-m-title">南部旅遊<br> <span class="des-m-title2">(共29個行程)</span> </div>
         </div>
 
         <div class="des-m-card">
           <img src="./img/3x/e.png" alt="">
           <div class="des-m-card-bg"></div>
-          <div class="des-m-title">東部、離島旅遊<br> <span class="des-m-title2">(共3個行程)</span> </div>
+          <div class="des-m-title">東部、離島旅遊<br> <span class="des-m-title2">(共39個行程)</span> </div>
         </div>
 
 

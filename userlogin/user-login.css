@@ -123,7 +123,7 @@ button:focus{
 @media (max-width: 415px) { 
     .login-border{
         width: 320px;
-        margin-left: 35px;
+        margin-left: 20px;
     }
  }
 
@@ -168,10 +168,13 @@ button:focus{
 
 @media (max-width: 415px) { 
     .icon-msg{
-        left: 60px;
+        left: 40px;
+    }
+    .icon-msg1{
+        left: 38px;
     }
     .icon-psd{
-        left: 60px;
+        left: 40px;
     }
  }
 
@@ -201,7 +204,7 @@ button:focus{
 @media (max-width: 415px) { 
     .login-group input{
         width: 300px;
-        margin-left: 50px;
+        margin-left: 28px;
     }
  }
 

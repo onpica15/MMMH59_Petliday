@@ -74,7 +74,7 @@ span :before {
   width: 100vw;
   background-size: cover;
   z-index: -2;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .btn-more {
   line-height: 40px;
@@ -124,7 +124,7 @@ span :before {
   }
   .tour-card figure {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-    border: 1px solid #eee;
+    /* border: 1px solid #eee; */
     object-fit: cover;
     object-position: center center;
   }
@@ -132,16 +132,16 @@ span :before {
     width: 105%;
     /* height: 105%; */
     object-fit: cover;
-    object-position: center center;
+    /* object-position: center center; */
     transition: 0.3s;
   }
   .tour-card figure img:hover {
-    width: 120%;
+    /* width: 120%; */
     /* height: 120%; */
-    object-position: 80% 80%;
-    object-fit: cover;
+    /* object-position: 80% 80%; */
+    /* object-fit: cover; */
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-    object-fit: cover;
+    transform: scale(1.2);
   }
   .tour-card h6 {
     line-height: 26px;
@@ -391,12 +391,14 @@ span :before {
     font-size: 18px;
   }
   .all-des-m {
-    width: 600px;
-    /* overflow-x: scroll !important; */
-    overflow-x: visible;
+    width: 375px;
+    overflow-x: scroll !important;
+    /* overflow-x: visible; */
   }
   .des-m-card-wrap {
+    width: 600px;
     display: flex;
+    /* overflow-x: scroll !important; */
   }
   .des-m-card {
     position: relative;
@@ -536,7 +538,7 @@ span :before {
     /* width: 100vw; */
     /* z-index: -2; */
 
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     /* overflow-y: visible; */
   }
   #tour {
