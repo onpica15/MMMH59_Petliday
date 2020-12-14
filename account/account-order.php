@@ -10,7 +10,7 @@
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 <section id="acount">
     <div class="container">
-        <div class="row my-4"></div>
+        <div class="row my-0 my-lg-4"></div>
     </div>
     <div class="container">
         <div class="row">
@@ -36,10 +36,10 @@
                         <div class="container">
                             <div class="row ml-0">
                                 <div class="col-12 col-lg-6 search align-items-center">
-                                    <div class="icon-search">
+                                    <div class="icon-search" style="position: absolute;">
                                         <i class='fas fa-search'></i>
                                     </div>
-                                    <input class="form-control" type="search" placeholder="搜索歷史清單" aria-label="Search">
+                                    <input class=" form-control" type="search" placeholder="搜索歷史清單" aria-label="Search">
                                     <a class="btn-green btn btn-search" type="submit">go</a>
                                 </div>
                             </div>

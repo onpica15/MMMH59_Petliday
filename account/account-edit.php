@@ -395,7 +395,7 @@
 
 <script>
   // ------JS開始 以上勿刪-------
-
+  // 選擇顏色邊框
   $('.border-btn-next').on('click', function() {
     if ($('.selected-border.active').next().length > 0) {
       console.log('css', $('.selected-border.active').next().find('.ball').css('background-color'))
@@ -456,17 +456,21 @@
   // 當點選clear-all的時候
   $('.clear-all').on('click', function() {
     console.log('hi')
-    $('.edit-hat').hide().eq(0).show()
     // 移除其他人的active
     $('.selected-border').siblings().removeClass('active')
+    // 讓框框只顯示在eq(0)的那個元素上
     $('.selected-border').eq(0).addClass('active')
+    $('#profileDisplay').css('box-shadow', '0 0 0 3px ' + '#fff');
 
-    $('.edit-decor').hide().eq(0).show()
+
     $('.selected-border1').siblings().removeClass('active')
     $('.selected-border1').eq(0).addClass('active')
+    $('.edit-hat').hide().eq(0).show()
 
     $('.selected-border2').siblings().removeClass('active')
     $('.selected-border2').eq(0).addClass('active')
+    $('.edit-decor').hide().eq(0).show()
+
 
 
     // 為fa-ban 加上active(.selected-border1.active.index)

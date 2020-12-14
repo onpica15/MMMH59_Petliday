@@ -6,7 +6,7 @@
                 <div class="menu-bar list-group text-center t-l" id="list-tab" role="tablist">
 
                     <!-- <div class="menu-bar"> -->
-                    <a class="col-4 col-lg-12 list-group-item list-group-item-action d-flex align-items-center justify-content-center" href=" account-profile.php">
+                    <a class="col-4 col-lg-12 list-group-item list-group-item-action d-flex align-items-center justify-content-center active" href=" account-profile.php">
                         <span class="account-icon mr-2 list-group-icon ">
                             <svg id="account-icon1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.67 64.45" class="changeto active">
                                 <path d="M43.79,27.43a16,16,0,1,0-22.63-.23l.63.61C9.1,32.79,0,45.76,0,61a3.5,3.5,0,0,0,3.5,3.5H63.17a3.5,3.5,0,0,0,3.5-3.5C66.67,45.35,57.07,32.12,43.79,27.43ZM32.6,7.12a9,9,0,1,1-9,9A9,9,0,0,1,32.6,7.12ZM7.2,57.45c1.61-14,12.72-24.81,26.14-24.81S57.86,43.49,59.47,57.45Z" />
@@ -112,10 +112,10 @@
 
                 })
                 // console.log('path ', window.location.pathname)
-                $('.list-group-item').on('click', function() {
-                    console.log('ij')
-                    $('.dogdown').addClass('hideimg').removeClass('showimg')
-                    $('.dogup').addClass('showimg').removeClass('hideimg')
+                // $('.list-group-item').on('click', function() {
+                //     console.log('ij')
+                //     $('.dogdown').addClass('hideimg').removeClass('showimg')
+                //     $('.dogup').addClass('showimg').removeClass('hideimg')
 
-                })
+                // })
             </script>

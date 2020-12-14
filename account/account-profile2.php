@@ -19,7 +19,7 @@ $rows = $stmt->fetchAll();
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 <section id="acount">
     <div class="container">
-        <div class="row my-4"></div>
+        <div class="row my-0 my-lg-4"></div>
     </div>
     <div class="container">
         <div class="row">

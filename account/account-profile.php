@@ -21,7 +21,7 @@
 <!-- ------------------ body開始 以上勿刪 ------------------ -->
 <section id="acount">
     <div class="container">
-        <div class="row my-4"></div>
+        <div class="row my-0 my-lg-4"></div>
     </div>
     <div class="container">
         <div class="row">
@@ -144,7 +144,7 @@
                                 </div>
                                 <form class="col-12 col-lg-8 is-readonly mt-small-2" name="formp" onsubmit="checkForm(); return false;" novalidate>
                                     <div class="row">
-                                        <div class="col-lg-8 d-inline-block">
+                                        <div class="col-lg-8 d-inline-block my-4 my-lg-0">
                                             <input type="hidden" name="sid" value="<?= $r['sid'] ?>">
 
                                             <div class="form-group d-flex">

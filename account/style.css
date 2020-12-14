@@ -129,10 +129,6 @@ body {
   margin-bottom: -5px;
 }
 
-#acount {
-  margin-top: 8vh;
-}
-
 .list-section {
   min-height: 300px;
   background-color: #fff;
@@ -161,6 +157,9 @@ body {
   color: #ffa12c;
 }
 @media (max-width: 991.98px) {
+  .dog-img {
+    display: none;
+  }
   .aside-bar {
     position: relative;
     background-color: #f2eee8;
@@ -288,6 +287,9 @@ button:focus {
 }
 
 @media (max-width: 991.98px) {
+  #acount {
+    margin-top: -1vh;
+  }
   .member-img {
     /* position: absolute; */
     top: 0;
@@ -310,7 +312,7 @@ button:focus {
     border-bottom: 1px solid #f2f2f2;
   }
   .pet-card .edit-round {
-    left: 75%;
+    left: 72%;
     top: 90%;
   }
   .form-move-down {
@@ -318,8 +320,6 @@ button:focus {
   }
   .form-title {
     text-align: center;
-  }
-  .mt-small-2 {
   }
 }
 /* ---------------------------- */
@@ -503,6 +503,12 @@ button:focus {
 /* -------------- */
 /* rwd */
 @media (max-width: 991.98px) {
+  .icon-search {
+    z-index: 10;
+    position: absolute;
+    top: 22%;
+    left: 8%;
+  }
   .ball {
     width: 32px;
     height: 32px;
@@ -517,7 +523,10 @@ button:focus {
     color: #aaa;
     font-size: 32px;
   }
-
+  .search .form-control {
+    padding-left: 32px;
+    width: 210px;
+  }
   .bar {
     display: none;
   }
