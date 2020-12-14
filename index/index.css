@@ -166,10 +166,10 @@ span :before {
     height: 15px;
   }
 
-  .des-row {
+  /* .des-row {
     overflow-x: scroll;
     justify-content: start;
-  }
+  } */
 
   .des-card {
     flex-shrink: 0;
@@ -352,8 +352,8 @@ span :before {
   }
 
   .signature img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 90%;
     object-fit: contain;
   }
   /* 拍立得section末 */

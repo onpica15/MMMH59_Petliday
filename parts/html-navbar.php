@@ -4,7 +4,7 @@
 <body>
 
   <header id="nav-bar">
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
       <div class="container">
         <div class="logo-search d-flex">
           <a class="navbar-brand nav-pc" href="<?= WEB_ROOT ?>index/index＿.php">
@@ -194,7 +194,7 @@
 
           </li>
 
-          <li class="nav-item m-1 mr-3 d-flex">
+          <li class="nav-item m-1 mr-3 d-flex nav-right">
             <a class="nav-link" href="<?= WEB_ROOT ?>cart/cart.php">
               <div class="buy-items">
                 <div class="buy-quant"></div>
@@ -214,7 +214,7 @@
 
           <!-- 登入前 -->
           <?php if (!isset($_SESSION['member_avatar'])) : ?>
-            <li class="nav-item loggin">
+            <li class="nav-item loggin d-flex align-items-center">
               <a class="nav-link brown-color t-m login-text" data-toggle="modal" data-target="#exampleModalCenter">登入/註冊</a>
             </li>
 
@@ -223,8 +223,8 @@
           <!-- 登入後 -->
           <?php if (isset($_SESSION['member_avatar'])) : ?>
 
-            <li class="nav-item loggin m-1">
-              <div class="nav-link d-flex align-items-center" href="#">
+            <li class="nav-item loggin d-flex align-items-center">
+              <div class="nav-link d-flex align-items-center m-0" href="#">
                 <div class="navbtn nav-user-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274.17 264.67">
                     <g id="user-icon_2" data-name="user-icon 2">
@@ -234,7 +234,7 @@
                     </g>
                   </svg>
                 </div>
-                <a class="nav-link only-pc"><?= $_SESSION['member_avatar']['name'] ?></a>
+                <a class="nav-link only-pc p-2"><?= $_SESSION['member_avatar']['name'] ?></a>
                 <div class="member-items only-pc ">
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-profile.php">會員資料</a>
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-order.php">我的訂單</a>
@@ -242,7 +242,7 @@
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-coupon.php">優惠券</a>
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-mailbox.php">會員信箱</a>
                   <a class="member-item member-line" href="<?= WEB_ROOT ?>account/account-qa.php">Q & A</a>
-                  <a class="member-item" href="<?= WEB_ROOT ?>userlogin/user-logout.php" >登出</a>
+                  <a class="member-item" href="<?= WEB_ROOT ?>userlogin/user-logout.php">登出</a>
 
                   <input type="text" value="<?= $_SESSION['member_avatar']['sid'] ?>" name="user_sid" hidden>
 
@@ -323,34 +323,38 @@
       $('.nav-item-m').toggleClass('nav-item-m-able');
 
     })
-    var count = 0;
+    let count = 0;
 
-    var buy_quant = $('.buy-quant');
+    let buy_quant = $('.buy-quant');
+    console.log('buy_quant', buy_quant)
 
 
     function countCart(cart) {
       let count = 0;
-      if (count = 0) {
-        buy_quant.addClass('add');
-      }
 
       for (let i in cart) {
         count += cart[i].item * 1;
+
       }
 
-      if (count > 0) {
+      if (count == 0) {
+        console.log('hi')
+        console.log('html', count)
+        buy_quant.addClass('add');
+      } else if (count > 0) {
+        console.log('bye')
+        console.log('bye', count)
         buy_quant.removeClass('add');
       }
-
       buy_quant.html(count);
 
       $('span.total-items').html(count + ' 件商品');
 
-      // console.log('quant', count);
+      console.log('quant', count);
 
     }
 
-    countCart()
+    // countCart()
 
 
     // function additem(cart) {}
@@ -359,6 +363,8 @@
     $.get('<?= WEB_ROOT ?>products/pro-pg-api.php', function(data) {
       console.log(data);
       countCart(data.cart);
+      console.log('data.cart)', data.cart);
+      // countCart(cart)
     }, 'json');
 
 
@@ -410,12 +416,16 @@
       })
     }
     // scrolltop ****************************end
-
+    <?php if (!isset($_SESSION['cart'])) {
+      $_SESSION['cart'] = [];
+    } ?>
     // cart list 
     function updateCartList() {
       console.log('updateCartList')
       let div = document.querySelector('.cart-box');
       let html = '';
+
+
 
       <?php foreach ($_SESSION['cart'] as $c) : ?>
         html += `
@@ -441,11 +451,11 @@
       div.innerHTML = html;
     }
 
-    function logout(){
+    function logout() {
 
     }
 
-    // updateCartList();
+    updateCartList();
 
     // ------JS結束 勿刪到-------
   </script>

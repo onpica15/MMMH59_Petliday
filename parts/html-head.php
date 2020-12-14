@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PetliＤay 毛日｜安心寵物旅遊｜</title>
+  <title>PetliDay 毛日｜安心寵物旅遊｜</title>
   <link rel="Shortcut Icon" type="image/x-icon" href="<?= WEB_ROOT ?>favicon/petliday.ico">
   <link rel="stylesheet" href="<?= WEB_ROOT ?>bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="<?= WEB_ROOT ?>fontawesome/css/all.css">

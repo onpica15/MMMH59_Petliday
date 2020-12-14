@@ -89,13 +89,14 @@ function calcTotal() {
 // $('.select-price p').text('NTD$ ' + dallorCommas(total));
 
 
-// 加入購物車按鈕按下：cart hover show****************
+// 總金額計算****************
 
 $('.change-btn').on('click',function(){
     calcTotal()
-  
 })
-
+$('.change-box input').on('change',function(){
+    calcTotal()
+})
 //選擇區塊資料丟進session['cart'] start**********************************
 
 function updateCartList(data) {
@@ -144,6 +145,7 @@ $('.btn-twin').on('click', function() {
     console.log('date', date);
     console.log('total', total);
     console.log('total1',total1);
+    // countCart()
 
     $.get('pro-pg-api.php', {
         sid: sid,
@@ -155,13 +157,23 @@ $('.btn-twin').on('click', function() {
         action: 'add'
     },
     function(data) {
-        console.log(Object.keys(data.cart).length);
+        console.log( 'buy_quant-length',Object.keys(data.cart).length);
 
-        // countCart(data);
+        countCart(data);
         updateCartList(data);
         const buy_quant = $('.buy-quant');
+        
 
       buy_quant.html(Object.keys(data.cart).length);
+      if (Object.keys(data.cart).length == 0) {
+        // console.log('hi')
+        // console.log('html', count)
+        buy_quant.addClass('add');
+      } else if (Object.keys(data.cart).length > 0) {
+        // console.log('bye')
+        // console.log('bye', count)
+        buy_quant.removeClass('add');
+      }
       
 
     }, 'json');
@@ -171,7 +183,7 @@ $('.btn-twin').on('click', function() {
     }, 500);
     setTimeout(() => {
         $('.cart-hover').css('opacity', '0')
-    }, 4000);
+    }, 6000);
     
 })
 

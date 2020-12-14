@@ -102,19 +102,19 @@ let footertop = $('footer').offset().top
     //  let ratingfixed = ($(window).height())
     //   console.log('ratingfixed',ratingfixed)
       if($(window).width() > 992){
-        console.log('hi 992')
+        // console.log('hi 992')
         if($(window).scrollTop() >= 5000){
-          console.log('hi absolute')
+          // console.log('hi absolute')
           $('.index-rating').css('position','absolute').css('bottom',$(document).height() -  $('footer').offset().top + 25)
         }
         else if($(window).scrollTop() < 5000){
-          console.log('hi fixed')
+          // console.log('hi fixed')
           $('.index-rating').css('position','fixed').css('bottom',$(document).height() -  footertop+ 25);
           // $('.index-rating').css('position','fixed').css('bottom',100);
         }
       }
       else{
-        if($(window).scrollTop() >= 16050){
+        if($(window).scrollTop() >= 6000){
           // console.log('hi')
           $('.index-rating').css('position','absolute').css('bottom',$(document).height() -  $('footer').offset().top + 25)
         }

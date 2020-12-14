@@ -651,7 +651,7 @@ margin: -60px 0 0 700px;
     width: 3000px;
 }
 .rate-scroll{
-    /* animation: rooolling 30s linear; */
+    animation: rooolling 30s linear;
 }
 @keyframes rooolling{
 from{
@@ -793,6 +793,7 @@ to{
     border-radius: 3px 3px 50px 3px;
     overflow: hidden;
     transition: .5s;
+    cursor: pointer;
 }
 
 .card-pic img {

@@ -74,9 +74,14 @@
               <div class="row">
                 <h5 class=" col-12 brown-color t-m title1-m form-title t-bold mb-1">聯絡家長資訊</h5>
                 <h5 class=" col-7 text-gray t-xs mb-2">若訂單有任何變動，主要聯繫人</h5>
-                <div class="col-5 d-flex justify-content-end">
-                  <input type="checkbox" id="autoUpdate" class="" checked></input>
-                  <label for="autoUpdate" class="text-gray t-xs mb-2">同步更新會員資料</label>
+                <div class="col-5 d-flex justify-content-end align-items-center flex-row checkbox-user-pc">
+                  <div class="checkbox-user ">
+                    <input type="checkbox" id="autoUpdate" class="" checked></input>
+                    <label for="autoUpdate" class="text-gray t-xs  autoUpdate"> </label>
+                  </div>
+                  <span class="t-s ml-2">同步更新會員資料</span>
+
+
                 </div>
               </div>
 
@@ -84,7 +89,8 @@
               <div class="row">
                 <div class="col-12 col-lg-6 d-flex flex-column one-form">
                   <label class="text-color t-s label-all" name="mainLastName" for="mainLastName">姓氏：（須與旅遊證件一致）&nbsp;<span class="danger-color">*</span></label>
-                  <input id="mainLastName" class="form-input form-error" type="text" name="mainLastName" placeholder="例：陳">
+                  <!--  如果錯 form-error -->
+                  <input id="mainLastName" class="form-input " type="text" name="mainLastName" placeholder="例：陳">
                   <small class="form-feedback danger-color t-xs"></small>
                 </div>
                 <div class="col-12 col-lg-6 d-flex flex-column one-form">
@@ -421,7 +427,7 @@
                 <div class="detail-box">
                   <div class="detail-all detail-time d-flex justify-content-between">
                     <h6 class=" text-gray t-s ">時間：</h6>
-                    <h6 class=" text-gray t-s">2020/08/<?= $i['date'] ?></h6>
+                    <h6 class=" text-gray t-s">2020/12/<?= $i['date'] ?></h6>
                   </div>
                   <div class="detail-all detail-quan d-flex justify-content-between">
                     <h6 class=" text-gray t-s">數量：</h6>
@@ -704,7 +710,7 @@
   $('.fast-pet3').on('click', function() {
     $('.pet-petName3').val('熊熊');
     $('.pet-Size3').val('小型犬');
-    $('.pet-notes3').val('寶貝看到同類喜歡吠叫，希望工作人員幫忙一下');
+    $('.pet-notes3').val('寶貝看到同類喜歡吠叫，希望工作人員幫忙');
   })
   // ----
 

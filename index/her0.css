@@ -59,9 +59,10 @@ body {
     width: 70vw;
     height: 80vh;
   }
+  /* cursor: pointer; */
   .signature{
     bottom: 0;
-    right: 30px;
+    right: -100px;
   }
   .polaroid-figure1 {
     background: url("./img/banner-img1.png") no-repeat;

@@ -44,8 +44,8 @@
                         <!-- 2 btns -->
                         <div class="container">
                             <div class="row btn-2 justify-content-end text-right">
-                                <a href="#">選取刪除</a>
-                                <a href="#">選取已讀</a>
+                                <a class="text-gray">選取刪除</a>
+                                <a class="text-gray">選取已讀</a>
                             </div>
                         </div>
                         <!-- 手風琴開展部分start -->
