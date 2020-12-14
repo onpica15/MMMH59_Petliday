@@ -235,6 +235,12 @@ a.member-item:hover {
 }
 
 /* --------------------------------------- */
+/* --------------------------------------- */
+/* --------------------------------------- */
+/* --------------------------------------- */
+/* --------------------------------------- */
+/* --------------------------------------- */
+/* --------------------------------------- */
 @media (max-width: 991.98px) {
   .nav-pc {
     display: none;
@@ -250,6 +256,11 @@ a.member-item:hover {
     display: block;
   }
 
+  .user-name {
+    padding-right: 15px !important;
+    padding-left: 5px !important;
+  }
+
   .search-input-m {
     display: none;
   }
@@ -260,6 +271,7 @@ a.member-item:hover {
   .ham-box {
     width: 30px;
     height: 30px;
+    margin: 15px;
   }
   .ham-line {
     position: absolute;
@@ -271,6 +283,7 @@ a.member-item:hover {
     transform: translateY(-50%);
     transition: 0.3s;
   }
+
   .ham-line1 {
     transform: translateY(-400%);
     transition: 0.3s;
@@ -359,6 +372,9 @@ a.member-item:hover {
   }
   a.item-m-btm {
     border-bottom: 1px solid #ffefdc;
+    /* padding: 15px; */
+    display: flex;
+    justify-content: center;
   }
 
   a.item-m:focus {
