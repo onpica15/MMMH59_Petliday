@@ -6,7 +6,7 @@ body {
   position: relative;
   width: 1920px;
   height: 1250px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .search-box {
   transition: 0.5s;

@@ -90,19 +90,19 @@
 <?php // include __DIR__ . '/../parts/html-script.php' ?>
 <script>
   // ------JS開始 以上勿刪-------
-  const email = $('#login-email'),
-    password = $('#password'),
-    info_bar = $('#info_bar');
+  const emailLogin = $('#login-email'),
+    passwordLogin = $('#password'),
+    info_barLogin = $('#info_bar');
 
   function checkForm() {
 
     $.post('/PETLIDAY/userlogin/user-login-api.php', {
-        email: email.val(),
-        password: password.val()
+        email: emailLogin.val(),
+        password: passwordLogin.val()
       },
       function(data) {
         if (data.success) {
-          info_bar
+          info_barLogin
             .removeClass('alert-danger')
             .addClass('alert-success')
             .text('登入成功');
@@ -120,15 +120,15 @@
             }
           
         } else {
-          info_bar
+          info_barLogin
             .removeClass('alert-success')
             .addClass('alert-danger')
             .text('登入失敗');
         }
-        info_bar.slideDown();
+        info_barLogin.slideDown();
 
         setTimeout(function() {
-          info_bar.slideUp();
+          info_barLogin.slideUp();
         }, 2000);
       }, 'json');
   }
@@ -148,6 +148,7 @@
   // 一鍵輸入：正確登入
   $('.input-correct').click(function(event) {
     event.preventDefault();
+    console.log('hi');
     $('#login-email').val('boy123@petliday.com');
     $('#password').val('test123');
   })

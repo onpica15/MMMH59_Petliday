@@ -228,11 +228,11 @@ $('.calendar td').on('click',function(){
 
 // js寫法＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 const manQuantity = document.getElementById('man-quantity')
-const petQuantity = document.getElementById('pet-quantity')
-const addManBtn = document.getElementById('add-man')
-const subManBtn = document.getElementById('sub-man')
-const addPetBtn = document.getElementById('add-pet')
-const subPetBtn = document.getElementById('sub-pet')
+var petQuantity = document.getElementById('pet-quantity')
+var addManBtn = document.getElementById('add-man')
+var subManBtn = document.getElementById('sub-man')
+var addPetBtn = document.getElementById('add-pet')
+var subPetBtn = document.getElementById('sub-pet')
 
   if (manQuantity.value = 1) {
     subManBtn.style = 'background-color:#eee;fill:#ccc';
@@ -282,7 +282,6 @@ const subPetBtn = document.getElementById('sub-pet')
   });
 
   subPetBtn.addEventListener('click', function() {
-    console.log('subPetBtn')
     if (petQuantity.value > 1) {
       petQuantity.value = +petQuantity.value - 1;
       if (petQuantity.value > 1) {
@@ -292,6 +291,36 @@ const subPetBtn = document.getElementById('sub-pet')
     };
     }
   })
+  
+addPetBtn.addEventListener('mouseenter', function() {
+    addPetBtn.style = 'background-color:rgb(171,171,171)';
+  })
+addPetBtn.addEventListener('mouseleave', function() {
+    addPetBtn.style = 'background-color:#ccc';
+  })
+addManBtn.addEventListener('mouseenter', function() {
+    addManBtn.style['background-color'] = 'rgb(171,171,171)';
+  })
+addManBtn.addEventListener('mouseleave', function() {
+    addManBtn.style['background-color'] = '#ccc';
+  })
+
+if (petQuantity.value > 1) {
+  subPetBtn.addEventListener('mouseenter', function() {
+    subPetBtn.style = 'background-color:rgb(171,171,171)';
+  })
+  subPetBtn.addEventListener('mouseleave', function() {
+    subPetBtn.style = 'background-color:#ccc';
+  })
+}
+if (manQuantity.value > 1) {
+  subManBtn.addEventListener('mouseenter', function() {
+    subManBtn.style = 'background-color:rgb(171,171,171)';
+  })
+  subManBtn.addEventListener('mouseleave', function() {
+    subManBtn.style = 'background-color:#ccc';
+  })
+}
 
 // 選擇數量區 ＋− end**********************************
 
@@ -674,6 +703,17 @@ if (window.matchMedia('(max-width: 425px)').matches) {
     $('.rate-scroll').scrollLeft(3000);
     console.log('ho')
 
+// 點擊選擇方案跳到精準位置
 
+$('.intro .select-btn').on('click',function(){
+    $(window).scrollTop(820);
+})
     
+// 行程評價從視窗到位之後才開始跑動畫
+$(window).scroll(function(){
+    let nowTop = $(this).scrollTop()
+    if(nowTop > 8450){
+        $('.rate-scroll').addClass('rate-animation');
+    }
+})
     

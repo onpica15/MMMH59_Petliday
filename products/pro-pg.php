@@ -117,7 +117,8 @@ $rows = $pdo->query($sql)->fetch();
                     <li>第二天：台東都歷部落原鄉體驗+都歷海灘SUP探險</li>
                     <li>第三天：六十石山金針花海+瑞穗農場大地遊戲</li>
                 </ul>
-                <a href="#select-section" class="select-btn ">選擇方案</a>
+                <a class="select-btn">選擇方案</a>
+                <!-- href="#select-section" -->
             </div>
         </div>
         <!-- 選擇方案區塊 -->
@@ -287,7 +288,7 @@ $rows = $pdo->query($sql)->fetch();
                     <p class="topic-line"></p>
                 </div>
                 <div class="day-text-all">
-                    <a href="#page1" class="hide-mb" data-transition="slideup">查看完整行程</a>
+                    <a href="/Petliday/products/pro-pg-mb.php" class="hide-mb" data-transition="slideup">查看完整行程</a>
                     <p class="day-text">第一天：台東熱氣球嘉年華 & 波希米亞露營野餐派對</p>
                     <p class="mt-4 mb-1">09:00 - 09:30 台北火車站(北二門)集合，搭乘專屬Petliday巴士出發</p>
                     <p class="mb-1">16:00 - 18:00 鹿野熱氣球嘉年華，看展球和繫留搭乘</p>

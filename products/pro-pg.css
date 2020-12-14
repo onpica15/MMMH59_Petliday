@@ -324,7 +324,9 @@ box-sizing: border-box;
     align-items: center;
     cursor: pointer;
   }
-  
+  /* .add-man:hover, .sub-man:hover, .add-pet:hover, .sub-pet:hover{
+    background-color: rgb(171, 171, 171);
+  } */
   .add-man {
     width: 30px;
     height: 30px;
@@ -647,10 +649,10 @@ margin: -60px 0 0 700px;
 .rate-number{
     margin-right: 10px;
 }
-.rate-scroll .row{
+.rate-container .row{
     width: 3000px;
 }
-.rate-scroll{
+.rate-animation{
     animation: rooolling 30s linear;
 }
 @keyframes rooolling{
@@ -729,17 +731,19 @@ to{
     margin: -80px 0 0 100px;
 }
 /* scrollbar show start */
-::-webkit-scrollbar {
-    -webkit-appearance: none;
-    height: 12px;
-  }
-  
-::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(0,144,124,.5);
-    box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-}
+@media(min-width:1000px){
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        height: 12px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background-color: rgba(0,144,124,.5);
+        box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+    }
 /* scrollbar show end */
+}
 /* recommand區域 */
 /* 3個一排card css start------------------------------------- */
 .cls-3 {
@@ -846,13 +850,13 @@ font-size: 12px;
     }
     /* 兩個白色卡區 */
     .top-green{
-        height: 2000px;
+        height: 2020px;
     }
     .top-wrap{
     width: 100%;
     }
     .info{
-        height: 530px;
+        height: 560px;
         margin: -100px auto 0;
         padding: 40px 20px;
     }

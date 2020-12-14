@@ -121,8 +121,21 @@
 
 
     function checkFormRegister() {
-      
 
+      if(email.val()==''){
+        isEmailPass = false;
+         $('.form-text').eq(0).text('請輸入您的電子信箱')
+         email.closest('.login-group').removeClass('success')
+         email.closest('.login-group').addClass('error')
+      }
+
+      if(password.val()==''){
+        isPassPass = false;
+        $('.form-text').eq(1).text('請輸入您的密碼')
+        
+        password.closest('.login-group').removeClass('success')
+         password.closest('.login-group').addClass('error')
+      }
 
       if (isEmailPass && isPassPass) {
         $.post('/PETLIDAY/userlogin/login-petliday-api.php', $(document.apply_form).serialize(), function(data) {

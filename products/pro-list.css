@@ -370,10 +370,13 @@ color: #00907c;
     /* 首圖插畫 */
     
         .top-pic{
-            /* width: 130%; */
+            width: 375px;
             margin-top: 73px;
             margin-left: 7px;
             transform: scale(1.2);
+        }
+        .top-pic img{
+            width: 375px;
         }
         .bread-row{
             margin: 90px 0 0;
