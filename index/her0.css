@@ -8,43 +8,44 @@ body {
   height: 1250px;
   /* overflow: hidden; */
 }
-.search-box{
-  transition: .5s;
+.search-box {
+  transition: 0.5s;
 }
-.pdslogan{
+.pdslogan {
   text-align: center;
   position: absolute;
   width: 100%;
   top: 450px;
   z-index: 88;
-  transition: .5s;
+  transition: 0.5s;
   /* box-shadow: 10px 10px 50px rgba(0,0,0,.2); */
 }
-.pdslogan h1,.pdslogan p{
+.pdslogan h1,
+.pdslogan p {
   color: #f2f2f2;
   letter-spacing: 4px;
-  text-shadow: 1px 1px 30px rgba(0,0,0,1);
+  text-shadow: 1px 1px 30px rgba(0, 0, 0, 1);
   /* filter:blur(20px);
     -o-filter:blur(20px);
     -ms-filter:blur(20px);
     -moz-filter:blur(20px);
     -webkit-filter:blur(20px); */
 }
-.pdslogan h1{
+.pdslogan h1 {
   /* fz */
 }
 @media (min-width: 1200px) {
-  .search-bar.sbar-hero{
+  .search-bar.sbar-hero {
     width: 480px;
     height: 60px;
     border-radius: 30px;
   }
-  .sbox-hero{
+  .sbox-hero {
     width: 480px;
     margin: 0 auto;
     position: relative;
   }
-  .sbtn-hero{
+  .sbtn-hero {
     top: 14px;
     right: 14px;
   }
@@ -60,7 +61,7 @@ body {
     height: 80vh;
   }
   /* cursor: pointer; */
-  .signature{
+  .signature {
     bottom: 0;
     right: -100px;
   }
@@ -151,7 +152,7 @@ body {
   .layer {
     padding: 10px;
     box-sizing: border-box;
-    cursor: pointer;
+    cursor: auto;
     transform-style: preserve-3d;
   }
   .up10 {
@@ -165,7 +166,7 @@ body {
 @media (max-width: 450px) {
   .weirdpart {
     height: 480px;
-    margin-top:24px;
+    margin-top: 24px;
     overflow-x: auto;
   }
   .weirdpart .container {
@@ -190,7 +191,7 @@ body {
     transition: 0.5s;
     margin-bottom: 40px;
   }
-  .por-pic-m{
+  .por-pic-m {
     position: relative;
     z-index: 10;
   }
@@ -198,7 +199,7 @@ body {
     transition: 0.5s;
     margin-right: 10px;
   }
-  .sig-m-1{
+  .sig-m-1 {
     bottom: 10px;
   }
   .des-wrap {
@@ -206,23 +207,23 @@ body {
     overflow-x: scroll;
   }
 
-  .clip.c1{
+  .clip.c1 {
     width: 25px;
     height: 40px;
-    top:-40px;
+    top: -40px;
     left: 40px;
     z-index: 50;
   }
-  .clip.c2{
+  .clip.c2 {
     width: 45px;
     height: 50px;
     top: -60px;
     left: 120px;
     z-index: 50;
   }
-  .clip1 img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-    }
+  .clip1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
