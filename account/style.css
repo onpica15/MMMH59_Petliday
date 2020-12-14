@@ -157,7 +157,7 @@ body {
   color: #ffa12c;
 }
 @media (max-width: 991.98px) {
-  .dog-img {
+  .dog-img img {
     display: none;
   }
   .aside-bar {

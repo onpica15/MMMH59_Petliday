@@ -89,7 +89,7 @@
                     </div>
                     <div class="container">
                         <div class="row">
-                            <div class="dog-img grass ">
+                            <div class="dog-img grass">
                                 <img src="./img/grass.png" alt="">
                             </div>
                         </div>
