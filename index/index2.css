@@ -84,6 +84,12 @@ span :before {
   display: none;
   /* overflow-x: scroll; */
 }
+.btn-more {
+  line-height: 44px;
+  height: 44px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 /* ------------------------------------ */
 /* ------------------------------------ */
 /* ------------------------------------ */
@@ -482,10 +488,7 @@ span :before {
     background-size: 300px;
     background-attachment: fixed;
   }
-  .btn-more {
-    line-height: 44px;
-    height: 44px;
-  }
+
   .tour-row-m {
     background-color: #fff;
     border-radius: 5px 30px 5px 5px;

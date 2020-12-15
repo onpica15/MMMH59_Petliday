@@ -1073,7 +1073,7 @@
         <h4 class="mb-3 t-xxl mb-3">為什麼選擇Petliday？</h4>
         <h6 class="t-s text-color about-text">毛日旅行社替飼主省去規劃行程的煩惱<br>安心的帶著毛寶貝一起搭專車、共食和入住友善旅店等。</h6>
         <h6 class="t-s text-color about-text">也提供寵物多元的課程體驗、旅遊必備新手包與專業團隊諮詢的服務<br>讓旅客有多元的選擇！</h6>
-        <a href="<?= WEB_ROOT ?>about/about.php">
+        <a href="<?= WEB_ROOT ?>about/about.php" >
           <div class="btn m-0 mt-3 btn-more">認識更多</div>
         </a>
       </div>
