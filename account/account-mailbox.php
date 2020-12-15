@@ -36,7 +36,7 @@
                         <!-- search bar -->
                         <div class="container">
                             <div class="row search-bar-m">
-                    
+
                                 <div class="search-content-m col-xl-10"></div>
                                 <div class="search-btn-mm col-xl-2 p-0">搜尋</div>
                             </div>
@@ -159,18 +159,17 @@
                                                 小編手把手教您怎麼訂購最划算
                                             </p>
                                             <p class="date">yesterday</p>
-                                            <span>毛孩的兒童節，一起享受微醺假期吧！</span>
+                                            <span>毛孩的兒童節，一起享受童趣假期吧！</span>
                                         </div>
                                         <i class=" fa fa-chevron-down"></i>
                                     </div>
                                     <div class="content">
                                         <p>身為毛小孩和人類寶貝的父母，可不能偏心哦！小孩的兒童節要過，毛小孩也要一起慶祝啦！<br>
-                                            大人的兒童節，一起享受微醺假期吧！<br>
-
-                                            4/15-4/17 限時三天！嘿嘿小編跟你說這次優惠不得了呀～點擊連結看攻略<br>
+                                            大人的兒童節，一起享受童趣假期吧！<br>
+                                            10/15-10/17 限時三天！嘿嘿小編跟你說這次優惠不得了呀～點擊看攻略<br>
                                             台灣訂房四大優惠一次拿 ：小孩子才做選擇，四種優惠我通通要！（以下四大優惠可合併使用唷❤️）<br>
 
-                                            🔥優惠一：指定台灣飯店訂房再送750ml紅/白酒一瓶！<br>
+                                            🔥優惠一：指定台灣飯店訂房再送750g飼料！<br>
                                             🔥優惠二：指定台灣飯店下殺價格<br>
                                             🔥優惠三：訂房折扣碼<br>
                                         </p>
