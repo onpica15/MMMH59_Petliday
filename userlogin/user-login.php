@@ -39,13 +39,13 @@
 
           <div class="login-group input-icon">
             <!-- <label for="email">帳號</label> -->
-            <input type="email" class="form-control" id="login-email" name="email" placeholder="電子信箱" required oninvalid="setCustomValidity('請填寫您的信箱');" oninput="setCustomValidity('');">
+            <input type="email" class="form-control1" id="login-email" name="email" placeholder="電子信箱" required oninvalid="setCustomValidity('請填寫您的信箱');" oninput="setCustomValidity('');">
             <img class="icon-msg" src="/PETLIDAY/userlogin/imgs/mail.svg">
           </div>
 
           <div class="login-group input-icon">
             <!-- <label for="password">密碼</label> -->
-            <input type="password" class="form-control" id="password" name="password" placeholder="密碼" required>
+            <input type="password" class="form-control2" id="password" name="password" placeholder="密碼" required>
             <img class="icon-psd" src="/PETLIDAY/userlogin/imgs/password.svg">
           </div>
 

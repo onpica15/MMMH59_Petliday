@@ -28,7 +28,7 @@
 
     <section3>
         <div class="section3">
-            <img src="./img/about_sec3.png">
+            <img src="./img/about_sec3_v1.png">
         </div>
     </section3>
 

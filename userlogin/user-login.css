@@ -22,7 +22,7 @@ button:focus{
     border-radius: 3px;
     padding-top: 50px;
     /* width: 500px; */
-    height: 550px;
+    height: 580px;
     background-color: rgb(253, 251, 251);
 }
 
@@ -128,7 +128,14 @@ button:focus{
  }
 
 /* 登入from */
-.form-control{
+.form-control1{
+    width: 350px;
+    height: 40px;
+    border: 1px solid #D1D1D1;
+    position: relative;
+}
+
+.form-control2{
     width: 350px;
     height: 40px;
     border: 1px solid #D1D1D1;
@@ -140,7 +147,7 @@ button:focus{
 .icon-msg{
     position: absolute;
     left: 85px;
-    bottom: 14px;
+    bottom: 22px;
     height: 12px;
     margin-right: 50px;
 }
@@ -148,7 +155,7 @@ button:focus{
 .icon-psd{
     position: absolute;
     left: 85px;
-    bottom: 13px;
+    bottom: 21px;
     height: 18px;
     margin-right: 50px;
 }
@@ -162,7 +169,11 @@ button:focus{
     margin-right: 50px;
 }
 
-.input-icon .form-control{
+.input-icon .form-control1{
+    padding-left: 35px;
+}
+
+.input-icon .form-control2{
     padding-left: 35px;
 }
 
@@ -189,8 +200,9 @@ button:focus{
 
 .login-group input{
     margin-top: 20px;
+    margin-bottom: 8px;
     margin-left: 75px;
-    font-size: 0.5rem;
+    font-size: 0.5rem; 
 }
 
 
@@ -220,7 +232,7 @@ button:focus{
 .login-group i{
     position: absolute;
     right: 85px;
-    top: 13px; 
+    top: 32px; 
     visibility: hidden;
 }
 
@@ -241,8 +253,9 @@ button:focus{
 
 .form-text{
     position: absolute;
+    font-size: 14px;
     left: 80px;
-    top: 36px;
+    top: 60px;
     display: block;
     color: #E03D2D; 
     visibility: hidden;

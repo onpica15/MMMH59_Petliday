@@ -30,18 +30,18 @@
 
           <h2 class="t-xl">免費註冊</h2>
 
-          <div class="login-group input-icon">
+          <div class="login-group input-icon one">
             <!-- <label for="account">帳號</label> -->
-            <input type="email" class="form-control" id="apply_email" name="apply_email" placeholder="電子信箱">
+            <input type="email" class="form-control1" id="apply_email" name="apply_email" placeholder="電子信箱">
             <img class="icon-msg" src="/PETLIDAY/userlogin/imgs/mail.svg">
             <i class="fas fa-exclamation-circle"></i>
             <i class="fas fa-check-circle"></i>
             <small class="form-text">請輸入您的電子信箱</small>
           </div>
 
-          <div class="login-group input-icon">
+          <div class="login-group input-icon two">
             <!-- <label for="password">密碼</label> -->
-            <input type="password" class="form-control" id="apply_password" name="apply_password" placeholder="密碼（至少六位數字）">
+            <input type="password" class="form-control2" id="apply_password" name="apply_password" placeholder="密碼（至少六位數字）">
             <img class="icon-psd" src="/PETLIDAY/userlogin/imgs/password.svg">
             <i class="fas fa-exclamation-circle"></i>
             <i class="fas fa-check-circle"></i>
@@ -84,7 +84,7 @@
       // 如果電子信箱為"空值"，就出現「請輸入您的電子信箱」
       if(email.val()==''){
         isEmailPass = false;
-         $('.form-text').eq(0).text('請輸入您的電子信箱')
+         $('.form-text').eq(0).text('請輸入電子信箱')
          email.closest('.login-group').removeClass('success')
          email.closest('.login-group').addClass('error')
       }
@@ -105,10 +105,10 @@
     $('#apply_password').on('keyup change',function(){
       // 如果密碼值小於6
       if(password.val().length === 0){
-        $('.form-text').eq(1).text('請輸入您的密碼')
+        $('.form-text').eq(1).text('請輸入密碼')
       }
       else if (password.val().length < 6) {
-        $('.form-text').eq(1).text('請輸入六位以上的密碼')
+        $('.form-text').eq(1).text('請輸入六位字元以上的密碼')
         isPassPass = false;
          password.closest('.login-group').removeClass('success')
          password.closest('.login-group').addClass('error')
@@ -124,14 +124,14 @@
 
       if(email.val()==''){
         isEmailPass = false;
-         $('.form-text').eq(0).text('請輸入您的電子信箱')
+         $('.form-text').eq(0).text('請輸入電子信箱')
          email.closest('.login-group').removeClass('success')
          email.closest('.login-group').addClass('error')
       }
 
       if(password.val()==''){
         isPassPass = false;
-        $('.form-text').eq(1).text('請輸入您的密碼')
+        $('.form-text').eq(1).text('請輸入密碼')
         
         password.closest('.login-group').removeClass('success')
          password.closest('.login-group').addClass('error')
