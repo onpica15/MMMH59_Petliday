@@ -248,6 +248,12 @@
         $('#sex').val('男');
         $('#phone').val('0908512320');
 
+        // $.post('xxxapi.php',{
+        //     name:'柯基裘',
+        // },)
+
+        $('.user-name').html('柯基裘')
+
     })
     $('.auto-input2').click(function(event) {
         event.preventDefault();
