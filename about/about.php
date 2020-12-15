@@ -34,7 +34,7 @@
 
     <section4>
         <div class="section4">
-            <img src="./img/about_sec4.png">
+            <img src="./img/about_sec4_v1.png">
         </div>
     </section4>
 </div>
