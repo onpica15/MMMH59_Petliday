@@ -91,7 +91,7 @@ $rows = $stmt->fetchAll();
                                         <form class="is-readonly">
                                             <div class="form-group d-flex">
                                                 <label for="name" class="label-w col-form-label">姓名:</label>
-                                                <input type="text" class="col-lg-6 form-control form-input is-disabled" id="name" name="name" placeholder="<?= $r['name'] ?>" value="" disabled>
+                                                <input type="text" class="col-lg-6 form-control form-input is-disabled" id="name" name="name" placeholder="" value="<?= $r['name'] ?>" disabled>
                                             </div>
                                             <div class="form-group d-flex">
                                                 <label for="sex" class="label-w col-form-label">性別:</label>
