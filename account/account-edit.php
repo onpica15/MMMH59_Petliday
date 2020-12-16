@@ -29,7 +29,7 @@
                   <h4 class="t-xxl">修改寵物頭像</h4>
                 </div>
               </div>
-              <div class="row pet-avatar justify-content-center">
+              <div class="row pet-avatar justify-content-center mobile-none">
                 <div class="edit edit-hat">
                 </div>
                 <div class="edit edit-hat">
@@ -184,7 +184,7 @@
               </section>
               <!--endof hat bar -->
               <!-- decor bar -->
-                <section class="bar">
+              <section class="bar">
                 <div class="row title d-flex flex-start align-items-center mt-4 px-3 t-l">
                   <svg class="title-icon m-2" id="paw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68.08 55.96">
                     <defs>
@@ -243,6 +243,51 @@
               <!--endof decor bar -->
 
               <!-- rwd -->
+              <div class="row pet-avatar justify-content-center d-lg-none">
+                <div class="edit edit-hat">
+                </div>
+                <div class="edit edit-hat">
+                  <img src="./img/edit-hat1.png" alt="">
+                </div>
+                <div class="edit edit-hat">
+                  <img src="./img/edit-hat2.png" alt="">
+                </div>
+                <div class="edit edit-hat">
+                  <img src="./img/edit-hat3.png" alt="">
+                </div>
+                <div class="edit edit-hat">
+                  <img src="./img/edit-hat4.png" alt="">
+                </div>
+                <div class="edit edit-decor">
+                  <div class="edit edit-hat">
+                  </div>
+                </div>
+                <div class="edit edit-decor">
+                  <img src="./img/edit-decor1.png" alt="">
+                </div>
+                <div class="edit edit-decor">
+                  <img src="./img/edit-decor2.png" alt="">
+                </div>
+                <div class="edit edit-decor">
+                  <img src="./img/edit-decor3.png" alt="">
+                </div>
+                <div class="edit edit-decor">
+                  <img src="./img/edit-decor4.png" alt="">
+                </div>
+                <!-- uploadimg -->
+                <?php
+                require __DIR__ . '/processForm.php';
+                ?>
+
+                <div class="avatar-img">
+                  <img src="./img/profile-edit2.png" id="profileDisplay" alt="">
+                </div>
+                <button class=" btn-none camera-icon" onclick="triggerClick()">
+                  <img src="../icon/camera.svg" alt="">
+                </button>
+                <input type="file" name="profileImage" onchange="displayImage(this)" id="profileImage" style="display: none;">
+                <!-- endof uploadimg -->
+              </div>
 
               <ul class="nav nav-tabs mx-2 my-4 d-lg-none" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -365,7 +410,7 @@
               <!-- rwd -->
               <div class="row justify-content-center">
                 <button class="btn clear-all">全部清除</button>
-                <a class="btn" href="account-profile2.php">儲存修改</a>
+                <button class="btn" href="account-profile2.php">儲存修改</button>
 
               </div>
             </div>
