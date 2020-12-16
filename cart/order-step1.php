@@ -180,7 +180,7 @@
                     </div>
                     <div class="col-12 d-flex align-items-center">
                       <input id="couponYes" class="form-radio custom-control-input" type="radio" name="coupon" value="我有折扣碼">
-                      <label class="radio-text t-m text-color custom-control-label " for="couponYes">我有折扣碼</label>
+                      <label class="radio-text t-m text-color custom-control-label " for="couponYes">我有折扣碼 <span class="t-s text-gray">（ 1 張未使用）</span> </label>
                     </div>
                     <div class="coupon-items w-100 animation">
                       <div class="col-12 d-flex align-items-center coupon-input">
