@@ -54,10 +54,10 @@
                                 <div class="mail-wrap">
                                     <div class="collapsible coll-box-title row justify-content-start">
                                         <input type="checkbox" class="mx-0" style="height: 20px;">
-                                        <div class="title-wrap col-lg-8 row justify-content-between">
+                                        <div class="title-wrap col-lg-9 row justify-content-between">
                                             <img src="../index/img/logo.png" alt="">
                                             <p>
-                                                12月愛犬入住「寵沐苑」，優惠每晚TWD1,500😍
+                                                12月愛犬入住「寵沐苑」，優惠每晚TWD1,500
                                             </p>
                                             <p class="date">2020-12-15</p>
                                             <span>礁溪最推寵物專屬旅館，即日45起全新營運！</span>

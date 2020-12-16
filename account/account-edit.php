@@ -184,7 +184,7 @@
               </section>
               <!--endof hat bar -->
               <!-- decor bar -->
-              <section class="bar">
+                <section class="bar">
                 <div class="row title d-flex flex-start align-items-center mt-4 px-3 t-l">
                   <svg class="title-icon m-2" id="paw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68.08 55.96">
                     <defs>
@@ -241,6 +241,7 @@
                 </div>
               </section>
               <!--endof decor bar -->
+
               <!-- rwd -->
 
               <ul class="nav nav-tabs mx-2 my-4 d-lg-none" id="myTab" role="tablist">

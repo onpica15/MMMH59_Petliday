@@ -34,7 +34,7 @@
             <div class="col-12 col-lg-9">
                 <div class="tab-content" id="nav-tabContent">
                     <!-- list-profile 會員資料 -->
-                    <div class="tab-pane show active " id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                    <div class=" mobile-none" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
                         <!-- 會員資料 -->
                         <!-- 連接資料庫 -->
 
@@ -204,6 +204,178 @@
                         </div>
                     </div>
                     <!-- endof list-profile -->
+
+                    <!-- rwd -->
+                    <div class="tab-pane show active d-lg-none" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                        <!-- 會員資料 -->
+                        <!-- 連接資料庫 -->
+
+
+                        <div class="container mb-3 list-section" id="list-title">
+                            <div class="row  mb-3">
+                                <div class="d-flex pt-3 p-4">
+                                    <div class="line mr-2"></div>
+                                    <h4 class="t-xxl auto-input">會員資料</h4>
+                                </div>
+                            </div>
+                            <div class="row member-info">
+                                <div class="col-12 col-lg-4 position-relative member-card ">
+
+                                    <!-- uploadimg -->
+                                    <?php
+                                    require __DIR__ . '/processForm.php';
+                                    ?>
+                                    <!-- <div class="form-group text-center"> -->
+                                    <div class="member-img   position-absolute">
+                                        <img src="./img/avatar-2.jpg" id="profileDisplay" alt="">
+                                    </div>
+                                    <button class=" btn-none camera-icon" onclick="triggerClick()">
+                                        <img src="../icon/camera.svg" alt="">
+                                    </button>
+                                    <input type="file" name="profileImage" onchange="displayImage(this)" id="profileImage" style="display: none;">
+                                    <!-- </div> -->
+                                    <!-- 網路上的 -->
+                                    <?php
+                                    // require __DIR__ . './processForm.php';
+                                    ?>
+                                    <!-- <div class="form-group text-center">
+                                        <img src="img/head.png" onclick="triggerClick()" id="profileDisplay">
+                                        <label for="profileTmage">profile image</label>
+                                        <input type="file" name="profileImage" onchange="displayImage(this)" id="profileImage" style="display: none;">
+                                    </div> -->
+                                    <!-- 老師教的 -->
+                                    <!-- <form name="form1" style="display: none">
+                                        <input type="file" name="avatar" accept="image/*" />
+                                    </form>
+
+                                    <button class="btn-none camera-icon" id="save_profile" onclick="field.click()">
+                                        <img src="../icon/camera.svg" alt="">
+                                    </button>
+                                    <img id="myimg" src="" alt="" /> -->
+
+
+                                    <!-- endof uploadimg -->
+                                    <div class="member-id text-center mt-3">
+                                        <p> ID : <?= substr($_SESSION['member_avatar']['email'], 0, strpos($_SESSION['member_avatar']['email'], '@')) ?>
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="col-12 col-lg-8 move-down mt-xs-2">
+
+                                    <form class="is-readonly">
+                                        <div class="form-group d-flex">
+                                            <label for="name" class="label-w col-form-label">姓名:</label>
+                                            <input type="text" class="col-lg-6 form-control form-input is-disabled" id="name" name="name" placeholder="例:派大星" value="柯基裘" disabled>
+                                        </div>
+                                        <div class="form-group d-flex">
+                                            <label for="sex" class="label-w col-form-label">性別:</label>
+                                            <input type="text" class="col-lg-6 form-control form-input is-disabled" id="sex" name="sex" placeholder="男/女" value="男" disabled>
+                                        </div>
+                                        <div class="form-group d-flex">
+                                            <label for="phone" class="label-w col-form-label">電話 :</label></label>
+                                            <input type="phone" class="col-lg-6 form-control form-input is-disabled" id="phone" name="phone" placeholder="例:0908087020" value="0908512320" disabled>
+                                        </div>
+                                        <div class="form-group d-flex">
+                                            <label for="birthday" class="label-w col-form-label">生日 :</label>
+                                            <input type="date" class="col-lg-6 form-control form-input is-disabled" id="birthday" name="birthday" placeholder="年/月/日" value="1995-12-05" disabled>
+                                        </div>
+                                        <div class="form-group d-flex">
+                                            <label for="email" class="label-w col-form-label">信箱 :</label>
+                                            <input type="email" class="col-lg-6 form-control form-input is-disabled" id="email" name="email" placeholder="例:example@gmail.com" value="<?= $_SESSION['member_avatar']['email'] ?>" disabled>
+                                        </div>
+                                        <div class="row justify-content-end">
+                                            <button type="button" class="btn btn-default btn-edit js-edit">資料修改</button>
+                                            <button type="button" class="btn btn-default btn-save js-save">儲存修改</button>
+                                            <button class="btn">密碼更改</button>
+
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- 寵物資料 -->
+                        <div class="container mb-3 list-section" id="pet-list">
+                            <div class="row pt-3 p-4">
+                                <div class="line mr-2"></div>
+                                <h4 class="t-xxl auto-input2">寵物資料</h4>
+                            </div>
+                            <!-- 單筆寵物資料 -->
+                            <div class="row" id="pet-info">
+                                <div class="col-12 col-lg-4 pet-card d-flex justify-content-center pt-3">
+                                    <div class="pet-img">
+                                        <img src="./img/profile-edit1.jpg" alt="">
+                                    </div>
+                                    <a href="./account-edit.php" class="edit-round">
+                                        <img src="./img/edit-round.svg" alt="">
+                                    </a>
+
+                                </div>
+                                <form class="col-12 col-lg-8 is-readonly mt-small-2" name="formp" onsubmit="checkForm(); return false;" novalidate>
+                                    <div class="row">
+                                        <div class="col-lg-8 d-inline-block my-4 my-lg-0">
+                                            <input type="hidden" name="sid" value="<?= $r['sid'] ?>">
+
+                                            <div class="form-group d-flex">
+                                                <label for="name2" class="col-form-label label-w">小名 :</label>
+                                                <input type=" text" name="name2" id="name2" class="form-control form-input is-disabled" value="Qbone" disabled>
+                                                <small class="form-text"></small>
+
+                                                <!-- <i class="fas fa-bone title-icon"></i> -->
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <label for="breed" class="col-form-label label-w">品種 :</label>
+                                                <input type="text" name="breed" id="breed" class="form-control form-input is-disabled" value="柴犬" disabled>
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <label for="age" class="col-form-label label-w">年齡 :</label>
+                                                <input type="text" name="age" id="age" class="form-control form-input is-disabled" value="1歲" disabled>
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <label for="birthday2" class="col-form-label label-w">生日 :</label>
+                                                <input type="date" name="birthday2" id="birthday2" class="form-control form-input is-disabled" value="2019-09-10" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-3 m-auto" style="display: inline-block;">
+                                            <button type="button" class="btn-icon btn-default btn-edit js-edit mr-2">
+                                                <div class="edit-icon">
+                                                    <img src="../icon/edit.svg" alt="">
+                                                </div>
+                                            </button>
+                                            <button type="button" class="btn-icon btn-default btn-save js-save mr-2">
+                                                <div class="edit-icon">
+                                                    <img src="../icon/success.svg" alt="">
+                                                </div>
+                                            </button>
+                                            <button type="button" class="btn-icon btn-default ">
+                                                <div class="edit-icon">
+                                                    <img src="../icon/trash.svg" alt="">
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- 這個可以送出表單<button type="submit" class="btn btn-primary">完成修改</button> -->
+
+
+                                    <!-- 
+                                            <a href="ab-edit.php?sid<?= $r['sid'] ?>" class="edit-icon">
+                                                <img src="../icon/edit.svg" alt="">
+                                            </a>
+                                           -->
+                                </form>
+                            </div>
+                            <!-- ----------------------------- -->
+
+                            <div class="row justify-content-end">
+                                <button class="btn">新增寵物</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end rwd -->
 
 
 

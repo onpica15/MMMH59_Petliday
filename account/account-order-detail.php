@@ -94,7 +94,7 @@ if (empty($o_rows)) {
                     <div class="tab-pane show active " id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
                         <div class="col-12 all-step-box ">
                             <div class="row form-box-fin bb-line pb-5">
-                                <div class="col-12 col-lg-3 qrcode">
+                                <div class="col-12 col-lg-3 qrcode d-flex justify-content-center">
                                     <img src="./img/qrcode.png" alt="">
                                 </div>
                                 <div class="col-12 col-lg-9 mb-4">
