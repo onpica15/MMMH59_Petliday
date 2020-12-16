@@ -94,7 +94,7 @@
                                     <form class="is-readonly">
                                         <div class="form-group d-flex">
                                             <label for="name" class="label-w col-form-label">姓名:</label>
-                                            <input type="text" class="col-lg-6 form-control form-input is-disabled" id="name" name="name" placeholder="例:派大星" value="" disabled>
+                                            <input type="text" class="col-lg-6 form-control form-input is-disabled" id="name" name="name" placeholder="例:派大星" value="<?= $_SESSION['member_avatar']['name'] ?? '' ?>" disabled>
                                         </div>
                                         <div class="form-group d-flex">
                                             <label for="sex" class="label-w col-form-label">性別:</label>
@@ -227,7 +227,7 @@
                                     ?>
                                     <!-- <div class="form-group text-center"> -->
                                     <div class="member-img   position-absolute">
-                                        <img src="./img/avatar-2.jpg" id="profileDisplay" alt="">
+                                        <img src="./img/avatar-1.jpg" id="profileDisplay" alt="">
                                     </div>
                                     <button class=" btn-none camera-icon" onclick="triggerClick()">
                                         <img src="../icon/camera.svg" alt="">
@@ -307,7 +307,7 @@
                             <div class="row" id="pet-info">
                                 <div class="col-12 col-lg-4 pet-card d-flex justify-content-center pt-3">
                                     <div class="pet-img">
-                                        <img src="./img/profile-edit1.jpg" alt="">
+                                        <img src="./img/profile-edit2.png" alt="">
                                     </div>
                                     <a href="./account-edit.php" class="edit-round">
                                         <img src="./img/edit-round.svg" alt="">
@@ -321,22 +321,22 @@
 
                                             <div class="form-group d-flex">
                                                 <label for="name2" class="col-form-label label-w">小名 :</label>
-                                                <input type=" text" name="name2" id="name2" class="form-control form-input is-disabled" value="Qbone" disabled>
+                                                <input type=" text" name="name2" id="name2" class="form-control form-input is-disabled" value="黑糖" disabled>
                                                 <small class="form-text"></small>
 
                                                 <!-- <i class="fas fa-bone title-icon"></i> -->
                                             </div>
                                             <div class="form-group d-flex">
                                                 <label for="breed" class="col-form-label label-w">品種 :</label>
-                                                <input type="text" name="breed" id="breed" class="form-control form-input is-disabled" value="柴犬" disabled>
+                                                <input type="text" name="breed" id="breed" class="form-control form-input is-disabled" value="米克斯" disabled>
                                             </div>
                                             <div class="form-group d-flex">
                                                 <label for="age" class="col-form-label label-w">年齡 :</label>
-                                                <input type="text" name="age" id="age" class="form-control form-input is-disabled" value="1歲" disabled>
+                                                <input type="text" name="age" id="age" class="form-control form-input is-disabled" value="6歲" disabled>
                                             </div>
                                             <div class="form-group d-flex">
                                                 <label for="birthday2" class="col-form-label label-w">生日 :</label>
-                                                <input type="date" name="birthday2" id="birthday2" class="form-control form-input is-disabled" value="2019-09-10" disabled>
+                                                <input type="date" name="birthday2" id="birthday2" class="form-control form-input is-disabled" value="2014-05-05" disabled>
                                             </div>
                                         </div>
                                         <div class="col-12 col-lg-3 m-auto" style="display: inline-block;">
@@ -420,9 +420,9 @@
         $('#sex').val('男');
         $('#phone').val('0908512320');
 
-        // $.post('xxxapi.php',{
-        //     name:'柯基裘',
-        // },)
+        $.post('xxxapi.php',{
+            name:'柯基裘',
+        },)
 
         $('.user-name').html('柯基裘')
 
