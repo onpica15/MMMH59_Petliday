@@ -62,19 +62,47 @@
   // ------JS開始 以上勿刪-------
 
   // rating 展開設定 ******************************
+  
+  // PHP老師的寫法，先宣告
+  /*
+  const index_rating = $(".index-rating");
 
-  $(".index-rating").mouseenter(function() {
+  const myMouseEnter = function(event) {
+    index_rating.off('mouseenter');
+    index_rating.on('mouseleave', myMouseLeave);
+
     $(".index-rating").animate({
       right: "0"
     });
-    $(".rating-title").show().fadeOut(500);
-  });
+  };
 
-  $(".index-rating").mouseleave(function() {
+  const myMouseLeave = function() {
+    // index_rating.off('mouseenter');
+    index_rating.off('mouseleave');
+    index_rating.on('mouseenter', myMouseEnter);
+    
     $(".index-rating").animate({
       right: "-200px"
     });
-    $(".rating-title").show().fadeIn(300);
+
+  index_rating.on('mouseenter', myMouseEnter);
+ */
+ 
+ 
+  $(".index-rating").mouseenter(function(event) {
+    event.stopPropagation();
+    $(".index-rating").animate({
+      right: "0"
+    });
+    //$(".rating-title").show().fadeOut(500);
+  });
+
+  $(".index-rating").mouseleave(function(event) {
+    event.stopPropagation();
+    $(".index-rating").animate({
+      right: "-200px"
+    });
+    //$(".rating-title").show().fadeIn(300);
   });
 
   // button送出成功顯示畫面

@@ -55,7 +55,7 @@ body {
     width: 200px;
     height: 155px;
     background-color: #eeeeee;
-    border-radius: 3px 0px 0px 8px;
+    /* border-radius: 0px 0px 0px 0px; */
     border-top:10px solid #1c9e8bab;
     box-shadow: 1px 0px 3px black;
     /* position: fixed;
@@ -154,7 +154,7 @@ body {
 /* 完成頁 */
 .rating-success{
   height: 145px;
-  border-radius: 1px 0px 0px 8px;
+  /* border-radius: 1px 0px 0px 8px; */
 }
 
 .index-rating .rating-success img{
