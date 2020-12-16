@@ -161,10 +161,10 @@
 <!-- 拍立得section 電腦版-->
 <section id="hero-polaroid">
   <div class="pdslogan">
-    <h1>渡假也要與寶貝一起享樂</h1>
-    <p>準備要與毛寶貝去哪放肆玩？</p>
+    <h1>渡假也要與寵物一起享樂</h1>
+    <p>準備要與寵物寶貝去哪放肆玩？</p>
     <div class="search-box sbox-hero">
-      <input type="text" placeholder="想與寶貝去哪玩？" class="search-bar sbar-hero pl-4">
+      <input type="text" placeholder="想與寵物寶貝去哪玩？" class="search-bar sbar-hero pl-4">
       <button class="search-btn sbtn-hero">
         <svg class="" id="search-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352.48 336.07">
           <g>
@@ -664,7 +664,7 @@
         </g>
       </svg>
       <span>
-        <h6 class="des-title brown-color t-xxl m-0 ml-2">與寶貝一起體驗更多課程</h6>
+        <h6 class="des-title brown-color t-xxl m-0 ml-2">與寵物一起體驗更多課程</h6>
       </span>
     </div>
   </div>
