@@ -67,7 +67,7 @@ if ($stmt->rowCount() > 0) {
                                     <img src="../products/img/pd6.jpg" alt="">
                                 </div>
                                 <div class="col-10 col-lg-6 prod-text d-flex flex-column">
-                                    <h5 class="brown-color t-l title1-m">訂單編號: d0150505</h5>
+                                    <h5 class="brown-color t-l title1-m">訂單編號: 2020128687</h5>
 
                                     <div class="small-text">
                                         <h6 class=" text-gray t-s">訂購日期: 2020/12/18</h6>
