@@ -49,7 +49,7 @@
             </div>
           </a>
           <div class="search-box nav-pc" id="search-box">
-            <input type="text" placeholder="想與寶貝去哪玩？" class="search-bar pl-3" id="search-input">
+            <input type="text" placeholder="想與寵物去哪玩？" class="search-bar pl-3" id="search-input">
             <button class="search-btn ">
               <svg class="" id="search-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352.48 336.07">
                 <g>
@@ -102,7 +102,7 @@
             </div>
           </a>
           <div class="search-box-m search-box nav-m" id="search-box-m">
-            <input type="text" placeholder="想與寶貝去哪玩？" class="search-bar pl-3" id="search-input-m">
+            <input type="text" placeholder="想與寵物去哪玩？" class="search-bar pl-3" id="search-input-m">
             <button class="search-btn ">
               <svg class="" id="search-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352.48 336.07">
                 <g>
