@@ -338,7 +338,7 @@
                       <button class="col-1 col-md-1 btn-prev align-self-center border-btn-prev1"><i class="fas fa-caret-left"></i></button>
 
                       <div class="color-bar d-flex">
-                        <div class="col selected-border1 d-flex align-items-center active">
+                        <div class="col selected-border1 d-flex align-items-center ">
                           <div class="ban ball pick"><i class="fas fa-ban "></i></div>
                         </div>
                         <div class="col selected-border1 d-flex align-items-center">
@@ -356,7 +356,7 @@
                             <img src="./img/hat3.svg" alt="">
                           </div>
                         </div>
-                        <div class="col selected-border1 d-flex align-items-center">
+                        <div class="col selected-border1 d-flex align-items-center active">
                           <div class="hat">
                             <img src="./img/hat4.svg" alt="">
                           </div>
@@ -375,7 +375,7 @@
                       <button class="col col-md-1 btn-prev align-self-center border-btn-prev2"><i class="fas fa-caret-left"></i></button>
 
                       <div class="color-bar d-flex">
-                        <div class="col selected-border2 d-flex align-items-center active">
+                        <div class="col selected-border2 d-flex align-items-center ">
                           <div class="ban ball pick"><i class="fas fa-ban "></i></div>
                         </div>
                         <div class="col selected-border2 d-flex align-items-center">
@@ -393,7 +393,7 @@
                             <img src="./img/neckless.svg" alt="">
                           </div>
                         </div>
-                        <div class="col selected-border2 d-flex align-items-center">
+                        <div class="col selected-border2 d-flex align-items-center active">
                           <div class="decor">
                             <img src="./img/neckless2.svg" alt="">
                           </div>
