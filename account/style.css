@@ -601,4 +601,7 @@ form.is-editing .btn-edit {
   .mobile-none {
     display: none;
   }
+  .btn-mb {
+    padding: 10px;
+  }
 }

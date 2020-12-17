@@ -410,7 +410,7 @@
               <!-- rwd -->
               <div class="row justify-content-center">
                 <button class="btn clear-all">全部清除</button>
-                <button class="btn" href="account-profile2.php">儲存修改</button>
+                <a class="btn btn-mb" href="account-profile2.php">儲存修改</a>
 
               </div>
             </div>
